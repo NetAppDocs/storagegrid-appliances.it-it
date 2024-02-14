@@ -1,0 +1,71 @@
+---
+permalink: sg100-1000/changing-link-configuration-of-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, link configuration, link, configure, configuring, ethernet, port bond mode, port bond, network bond mode, network bond, link speed, vlan tagging, vlan tag 
+summary: 'È possibile modificare la configurazione del collegamento Ethernet dell"appliance di servizi. È possibile modificare la modalità port bond, la modalità network bond e la velocità di collegamento.' 
+---
+= Modificare la configurazione del collegamento di SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare la configurazione del collegamento Ethernet dell'appliance di servizi. È possibile modificare la modalità port bond, la modalità network bond e la velocità di collegamento.
+
+.Prima di iniziare
+* Lo hai fatto link:../commonhardware/placing-appliance-into-maintenance-mode.html["impostare l'apparecchio in modalità di manutenzione"].
+
+
+
+NOTE: In rari casi, l'attivazione della modalità di manutenzione di un'appliance StorageGRID potrebbe rendere l'appliance non disponibile per l'accesso remoto.
+
+.A proposito di questa attività
+Le opzioni per la modifica della configurazione del collegamento Ethernet dell'appliance di servizi includono:
+
+* Modifica di *Port Bond mode* da fisso ad aggregato o da aggregato a fisso
+* Modifica di *Network bond mode* da Active-Backup a LACP o da LACP a Active-Backup
+* Attivazione o disattivazione del tagging VLAN o modifica del valore di un tag VLAN
+* Modifica della velocità di collegamento
+
+
+.Fasi
+. Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura rete* > *Configurazione del collegamento*.
++
+image::../media/link_configuration_option.gif[Configurazione del collegamento]
+
+. Apportare le modifiche desiderate alla configurazione del collegamento.
++
+Per ulteriori informazioni sulle opzioni, vedere link:../installconfig/configuring-network-links.html["Configurare i collegamenti di rete"].
+
+. Una volta selezionate le opzioni desiderate, fare clic su *Save* (Salva).
++
+
+NOTE: La connessione potrebbe andare persa se sono state apportate modifiche alla rete o al collegamento tramite il quale si è connessi. Se non si riesce a riconnettersi entro 1 minuto, immettere nuovamente l'URL del programma di installazione dell'appliance StorageGRID utilizzando uno degli altri indirizzi IP assegnati all'appliance: +
+`*https://_services_appliance_IP_:8443*`
+
+. Apportare le modifiche necessarie agli indirizzi IP dell'appliance.
++
+Se sono state apportate modifiche alle impostazioni della VLAN, la subnet dell'appliance potrebbe essere cambiata. Per modificare gli indirizzi IP dell'appliance, vedere link:../installconfig/setting-ip-configuration.html["Configurare gli indirizzi IP StorageGRID"].
+
+. Selezionare *Configure Networking* > *Ping Test* dal menu.
+. Utilizzare lo strumento Ping Test per verificare la connettività agli indirizzi IP su qualsiasi rete che potrebbe essere stata influenzata dalle modifiche apportate alla configurazione del collegamento durante la configurazione dell'appliance.
++
+Oltre a qualsiasi altro test che si sceglie di eseguire, verificare che sia possibile eseguire il ping dell'indirizzo IP Grid Network del nodo di amministrazione primario e dell'indirizzo IP Grid Network di almeno un altro nodo. Se necessario, tornare alle istruzioni per la configurazione dei collegamenti di rete e correggere eventuali problemi.
+
+. Una volta soddisfatti del corretto funzionamento delle modifiche alla configurazione del collegamento, riavviare il nodo. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare una delle seguenti opzioni:
++
+** Selezionare *Riavvia in StorageGRID* per riavviare il controller con il nodo che si ricongiunge alla griglia. Selezionare questa opzione se si è terminato di lavorare in modalità di manutenzione e si è pronti per ripristinare il normale funzionamento del nodo.
+** Selezionare *Reboot into Maintenance Mode* (Riavvia in modalità di manutenzione) per riavviare il controller con il nodo in modalità di manutenzione. (Questa opzione è disponibile solo quando il controller è in modalità di manutenzione). Selezionare questa opzione se sono necessarie ulteriori operazioni di manutenzione sul nodo prima di ricongiungersi alla griglia.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il controller in modalità di manutenzione]
+
++
+Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina *NODES* dovrebbe visualizzare uno stato normale (icona con segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+
++
+image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+
+
+
+

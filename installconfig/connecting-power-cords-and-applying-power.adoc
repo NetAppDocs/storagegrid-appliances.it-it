@@ -1,0 +1,112 @@
+---
+permalink: installconfig/connecting-power-cords-and-applying-power.html 
+sidebar: sidebar 
+keywords: storagegrid, wire, wiring, cabling, cable, Connecting, connect, power cords, power, applying power, apply power, turn on, power up, ac, ac power 
+summary: 'Dopo aver collegato i cavi di rete, è possibile alimentare l"apparecchio.' 
+---
+= Collegare i cavi di alimentazione e collegare l'alimentazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver collegato i cavi di rete, è possibile alimentare un'appliance, un controller o uno shelf di espansione.
+
+[role="tabbed-block"]
+====
+.SG100 e SG1000
+--
+.Fasi
+. Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione dell'apparecchio.
+. Collegare questi due cavi di alimentazione a due diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Se il pulsante di accensione sulla parte anteriore dell'apparecchio non è illuminato in blu, premerlo per accendere l'apparecchio.
++
+Non premere di nuovo il pulsante di alimentazione durante il processo di accensione.
+
+. In caso di errori, correggere eventuali problemi.
+. Se rimosso, collegate il pannello anteriore all'apparecchio.
+
+
+--
+.SG5700
+--
+.Prima di iniziare
+Entrambi gli interruttori di alimentazione dell'apparecchio devono essere spenti prima di collegare l'alimentazione.
+
+
+CAUTION: *Rischio di scosse elettriche* -- prima di collegare i cavi di alimentazione, assicurarsi che i due interruttori di alimentazione dell'apparecchio siano spenti.
+
+.Fasi
+. Verificare che i due interruttori di alimentazione dell'apparecchio siano spenti.
+. Collegare i due cavi di alimentazione all'apparecchio.
+. Collegare i due cavi di alimentazione a diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Accendere i due interruttori di alimentazione dell'apparecchio.
++
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione.
+** Le ventole sono molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
+
+
+. Dopo l'avvio dei controller, controllare i display a sette segmenti.
+
+
+--
+.SG6000
+--
+.Fasi
+. Verificare che entrambi i controller nello shelf dello storage controller siano disattivati.
++
+
+CAUTION: *Rischio di scosse elettriche* -- prima di collegare i cavi di alimentazione, assicurarsi che gli interruttori di alimentazione di ciascuno dei due controller storage siano spenti.
+
+. Se si dispone di shelf di espansione, verificare che entrambi gli interruttori di alimentazione IOM siano spenti.
++
+
+CAUTION: *Rischio di scosse elettriche* -- prima di collegare i cavi di alimentazione, assicurarsi che i due interruttori di alimentazione per ciascuno degli shelf di espansione siano spenti.
+
+. Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione del controller SG6000-CN.
+. Collegare questi due cavi di alimentazione a due diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione nello shelf dello storage controller.
+. Se si dispone di shelf di espansione, collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione di ogni shelf di espansione.
+. Collegare i due cavi di alimentazione in ogni shelf di storage (inclusi gli shelf di espansione opzionali) a due diverse PDU nell'armadio o nel rack.
+. Se il pulsante di accensione sulla parte anteriore del controller SG6000-CN non è attualmente illuminato in blu, premere il pulsante per accendere il controller.
++
+Non premere di nuovo il pulsante di alimentazione durante il processo di accensione.
+
+. Accendere i due interruttori di alimentazione sul retro dello shelf dello storage controller. Se si dispone di shelf di espansione, accendere i due interruttori di alimentazione per ogni shelf.
++
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione.
+** Le ventole dello shelf del controller di storage e gli shelf di espansione opzionali potrebbero essere molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
+
+
+. Dopo l'avvio dei componenti, controllarne lo stato.
++
+** Controllare il display a sette segmenti sul retro di ciascun controller di storage. Per ulteriori informazioni, consultare l'articolo relativo alla visualizzazione dei codici di stato dell'avvio.
+** Verificare che il pulsante di accensione sulla parte anteriore del controller SG6000-CN sia acceso.
+
+
+. In caso di errori, correggere eventuali problemi.
+. Collegare il pannello anteriore al controller SG6000-CN, se rimosso.
+
+
+--
+.SG6100
+--
+.Fasi
+. Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione dell'apparecchio.
+. Collegare questi due cavi di alimentazione a due diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Se il pulsante di alimentazione sulla parte anteriore dell'apparecchio SG6100-CN non è illuminato in blu, premete il pulsante per accendere l'apparecchio.
++
+Non premere di nuovo il pulsante di alimentazione durante il processo di accensione.
+
++
+Il LED sull'alimentatore deve essere acceso in verde senza lampeggiare.
+
+. In caso di errori, correggere eventuali problemi.
+. Se rimosso, collegate il pannello anteriore all'apparecchio.
+
+
+--
+====
+.Informazioni correlate
+link:viewing-status-indicators.html["Visualizzare gli indicatori di stato"]

@@ -1,0 +1,626 @@
+---
+permalink: installconfig/hardware-description-sg6000.html 
+sidebar: sidebar 
+keywords: sg6000, sg6060, sg6060x, storage appliance 
+summary: Le appliance StorageGRID SG6060 e SG6060X includono un controller di calcolo e uno shelf di storage controller che contiene due storage controller e 60 dischi. 
+---
+= Appliance SG6060 e SG6060X: Panoramica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le appliance StorageGRID SG6060 e SG6060X includono un controller di calcolo e uno shelf di storage controller che contiene due storage controller e 60 dischi.
+
+In alternativa, è possibile aggiungere shelf di espansione da 60 dischi a entrambe le appliance. Non esistono differenze di specifiche o di funzionalità tra SG6060 e SG6060X, ad eccezione della posizione delle porte di interconnessione sul controller storage.
+
+
+
+== Componenti SG6060 e SG6060X
+
+Le appliance SG6060 e SG6060X includono i seguenti componenti:
+
+Controller di calcolo:: Il controller SG6000-CN è un server a un rack (1U) che include:
++
+--
+* 40 core (80 thread)
+* 192 GB DI RAM
+* Fino a 4 × 25 Gbps di larghezza di banda Ethernet aggregata
+* Interconnessione Fibre Channel (FC) da 4 × 16 Gbps
+* Baseboard Management Controller (BMC) che semplifica la gestione dell'hardware
+* Alimentatori ridondanti
+
+
+--
+Shelf dello storage controller:: Lo shelf del controller e-Series E2860 (storage array) è uno shelf 4U che include:
++
+--
+* Due controller della serie E2800 (configurazione duplex) per il supporto del failover del controller di storage
++
+** SG6060 contiene i controller di storage E2800A
+** SG6060X contiene controller storage E2800B
+
+
+* Shelf di dischi a cinque cassetti in grado di contenere sessanta dischi da 3.5 pollici (2 dischi a stato solido o SSD e 58 dischi NL-SAS)
+* Alimentatori e ventole ridondanti
+
+
+--
+Opzionale: Shelf di espansione dello storage:: Ogni appliance SG6060 e SG6060X può disporre di uno o due shelf di espansione per un totale di 180 unità (due di queste unità sono riservate per la cache di lettura e-Series).
++
+--
+*Nota:* gli shelf di espansione possono essere installati durante l'implementazione iniziale o aggiunti successivamente.
+
+L'enclosure della e-Series DE460C è uno shelf 4U che include:
+
+* Due moduli di input/output (IOM)
+* Cinque cassetti, ciascuno contenente 12 unità NL-SAS, per un totale di 60 unità
+* Alimentatori e ventole ridondanti
+
+
+--
+
+
+
+
+== Schemi SG6060 e SG6060X
+
+I fronti di SG6060 e SG6060X sono identici.
+
+
+
+=== Vista frontale di SG6060 o SG6060X
+
+Questa figura mostra la parte anteriore di SG6060 o SG6060X, che include un controller di calcolo 1U e uno shelf 4U contenente due controller di storage e 60 dischi in cinque cassetti.
+
+image::../media/sg6060_front_view_with_and_without_bezels.gif[Vista frontale di SG6060]
+
+[cols="1a,2a"]
+|===
+| Didascalia | Descrizione 
+
+
+ a| 
+1
+ a| 
+Controller di calcolo SG6000-CN con pannello anteriore
+
+
+
+ a| 
+2
+ a| 
+Shelf del controller E2860 con pannello anteriore (lo shelf di espansione opzionale appare identico)
+
+
+
+ a| 
+3
+ a| 
+Controller di calcolo SG6000-CN con pannello anteriore rimosso
+
+
+
+ a| 
+4
+ a| 
+Shelf del controller E2860 con pannello anteriore rimosso (lo shelf di espansione opzionale appare identico)
+
+|===
+
+
+=== SG6060 Vista posteriore
+
+Questa figura mostra il retro del sistema SG6060, inclusi controller di calcolo e storage, ventole e alimentatori.
+
+image::../media/sg6060_rear_view.gif[Vista posteriore di SG6060]
+
+[cols="1a,2a"]
+|===
+| Didascalia | Descrizione 
+
+
+ a| 
+1
+ a| 
+Alimentatore (1 di 2) per il controller di calcolo SG6000-CN
+
+
+
+ a| 
+2
+ a| 
+Connettori per controller di calcolo SG6000-CN
+
+
+
+ a| 
+3
+ a| 
+Ventola (1 di 2) per shelf di controller E2860
+
+
+
+ a| 
+4
+ a| 
+Storage controller e-Series E2800A (1 di 2) e connettori
+
+
+
+ a| 
+5
+ a| 
+Alimentatore (1 di 2) per shelf di controller E2860
+
+|===
+
+
+=== SG6060X Vista posteriore
+
+Questa figura mostra il retro del sistema SG6060X.
+
+image::../media/sg6060x_rear_view.gif[SG6060x Vista posteriore]
+
+[cols="1a,2a"]
+|===
+| Didascalia | Descrizione 
+
+
+ a| 
+1
+ a| 
+Alimentatore (1 di 2) per il controller di calcolo SG6000-CN
+
+
+
+ a| 
+2
+ a| 
+Connettori per controller di calcolo SG6000-CN
+
+
+
+ a| 
+3
+ a| 
+Ventola (1 di 2) per shelf di controller E2860
+
+
+
+ a| 
+4
+ a| 
+Storage controller e-Series E2800B (1 di 2) e connettori
+
+
+
+ a| 
+5
+ a| 
+Alimentatore (1 di 2) per shelf di controller E2860
+
+|===
+
+
+=== Shelf di espansione
+
+Questa figura mostra il retro dello shelf di espansione opzionale per SG6060 e SG6060X, inclusi i moduli di input/output (IOM), le ventole e gli alimentatori. Ciascun SG6060 può essere installato con uno o due shelf di espansione, che possono essere inclusi nell'installazione iniziale o aggiunti successivamente.
+
+image::../media/de460c_expansion_shelf_rear_view.gif[Ripiano di espansione posteriore]
+
+[cols="1a,2a"]
+|===
+| Didascalia | Descrizione 
+
+
+ a| 
+1
+ a| 
+Ventola (1 di 2) per shelf di espansione
+
+
+
+ a| 
+2
+ a| 
+IOM (1 di 2) per shelf di espansione
+
+
+
+ a| 
+3
+ a| 
+Alimentatore (1 di 2) per shelf di espansione
+
+|===
+
+
+== Controller SG6000
+
+Ciascun modello di appliance StorageGRID SG6000 include un controller di calcolo SG6000-CN in un'enclosure 1U e controller di storage duplex e-Series in un'enclosure 2U o 4U, a seconda del modello. Consulta i diagrammi per saperne di più su ciascun tipo di controller.
+
+
+
+=== Controller di calcolo SG6000-CN
+
+* Fornisce risorse di calcolo per l'appliance.
+* Include il programma di installazione dell'appliance StorageGRID.
++
+
+NOTE: Il software StorageGRID non è preinstallato sull'appliance. Questo software viene recuperato dal nodo di amministrazione quando si implementa l'appliance.
+
+* Può connettersi a tutte e tre le reti StorageGRID, incluse la rete griglia, la rete amministrativa e la rete client.
+* Si connette ai controller di storage e-Series e funziona come iniziatore.
+
+
+
+
+==== Connettori SG6000-CN
+
+image::../media/sg6000_cn_rear_connectors.gif[Connettori posteriori SG6000-CN]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di interconnessione 1-4
+ a| 
+Fibre Channel (FC) da 16 GB/s, con ottica integrata
+ a| 
+Collegare il controller SG6000-CN ai controller E2800 (due connessioni a ciascun controller E2800).
+
+
+
+ a| 
+2
+ a| 
+Porte di rete 1-4
+ a| 
+10 GbE o 25 GbE, in base al tipo di ricetrasmettitore via cavo o SFP, alla velocità dello switch e alla velocità di collegamento configurata
+ a| 
+Connettersi alla rete griglia e alla rete client per StorageGRID.
+
+
+
+ a| 
+3
+ a| 
+Porta di gestione BMC
+ a| 
+1 GbE (RJ-45)
+ a| 
+Connettersi al controller di gestione della scheda base SG6000-CN.
+
+
+
+ a| 
+4
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* VGA
+* Seriale, 115200 8-N-1
+* USB
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+5
+ a| 
+Admin Network port (porta di rete amministratore) 1
+ a| 
+1 GbE (RJ-45)
+ a| 
+Collegare l'SG6000-CN alla rete di amministrazione per StorageGRID.
+
+
+
+ a| 
+6
+ a| 
+Admin Network Port (porta di rete amministratore) 2
+ a| 
+1 GbE (RJ-45)
+ a| 
+Opzioni:
+
+* Collegamento con la porta di gestione 1 per una connessione ridondante alla rete di amministrazione per StorageGRID.
+* Lasciare la connessione non cablata e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
+* Durante l'installazione, utilizzare la porta 2 per la configurazione IP se gli indirizzi IP assegnati da DHCP non sono disponibili.
+
+
+|===
+
+
+=== SGF6024: Storage controller EF570
+
+* Due controller per il supporto del failover.
+* Gestire lo storage dei dati sui dischi.
+* Funziona come controller standard e-Series in una configurazione duplex.
+* Includere il software SANtricity OS (firmware del controller).
+* Include Gestione di sistema di SANtricity per il monitoraggio dell'hardware di storage e la gestione degli avvisi, la funzione AutoSupport e la funzione di protezione del disco.
+* Connettersi al controller SG6000-CN e fornire l'accesso allo storage flash.
+
+
+
+
+==== Connettori EF570
+
+image::../media/ef570_rear_connectors.gif[EF570 connettori posteriori]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di interconnessione 1 e 2
+ a| 
+SFP ottico FC da 16 GB/s.
+ a| 
+Collegare ciascuna delle EF570 unità di controllo alla centralina SG6000-CN.
+
+Sono presenti quattro collegamenti alla centralina SG6000-CN (due da ogni EF570).
+
+
+
+ a| 
+2
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* Porta seriale RJ-45
+* Porta seriale micro USB
+* Porta USB
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+3
+ a| 
+Porte di espansione del disco
+ a| 
+SAS 12 GB/s.
+ a| 
+Non utilizzato. L'appliance SGF6024 non supporta shelf di dischi di espansione.
+
+
+
+ a| 
+4
+ a| 
+Porte di gestione 1 e 2
+ a| 
+Ethernet da 1 GB (RJ-45)
+ a| 
+* La porta 1 si connette alla rete da cui si accede a Gestione sistema SANtricity da un browser.
+* La porta 2 è riservata al supporto tecnico.
+
+
+|===
+
+
+=== SG6060 e SG6060X: Storage controller E2800
+
+* Due controller per il supporto del failover.
+* Gestire lo storage dei dati sui dischi.
+* Funziona come controller standard e-Series in una configurazione duplex.
+* Includere il software SANtricity OS (firmware del controller).
+* Include Gestione di sistema di SANtricity per il monitoraggio dell'hardware di storage e la gestione degli avvisi, la funzione AutoSupport e la funzione di protezione del disco.
+* Connettersi al controller SG6000-CN e fornire l'accesso allo storage.
+
+
+SG6060 e SG6060X utilizzano i controller di storage E2800.
+
+[cols="1a,2a,2a"]
+|===
+| Appliance | Controller | Controller HIC 
+
+
+ a| 
+SG6060
+ a| 
+Due storage controller E2800A
+ a| 
+Nessuno
+
+
+
+ a| 
+SG6060X
+ a| 
+Due storage controller E2800B
+ a| 
+HIC a quattro porte
+
+|===
+I controller di storage E2800A e E2800B sono identici nelle specifiche e nelle funzioni, ad eccezione della posizione delle porte di interconnessione.
+
+
+CAUTION: Non utilizzate E2800A e E2800B nello stesso apparecchio.
+
+
+
+==== Connettori E2800A
+
+image::../media/e2800_controller_with_callouts.gif[Connettori sulla centralina E2800A]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di interconnessione 1 e 2
+ a| 
+SFP ottico FC da 16 GB/s.
+ a| 
+Collegare ciascuna delle E2800A unità di controllo alla centralina SG6000-CN.
+
+Sono disponibili quattro collegamenti al controller SG6000-CN (due da ciascun E2800A).
+
+
+
+ a| 
+2
+ a| 
+Porte di gestione 1 e 2
+ a| 
+Ethernet da 1 GB (RJ-45)
+ a| 
+* Opzioni porta 1:
++
+** Connettersi a una rete di gestione per abilitare l'accesso TCP/IP diretto a Gestione di sistema SANtricity
+** Lasciare scollegato per salvare la porta e l'indirizzo IP dello switch.  Accedere a Gestore di sistema SANtricity utilizzando le interfacce utente del programma di installazione di Grid Manager o Storage Grid Appliance.
+
+
+
+
+*Nota*: Alcune funzionalità SANtricity opzionali, come ad esempio la sincronizzazione NTP per ottenere timestamp dei registri precisi, non sono disponibili quando si sceglie di lasciare la porta 1 non cablata.
+
+*Nota*: StorageGRID 11.5 o superiore e SANtricity 11.70 o superiore sono necessari quando si lascia la porta 1 non cablata.
+
+* La porta 2 è riservata al supporto tecnico.
+
+
+
+
+ a| 
+3
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* Porta seriale RJ-45
+* Porta seriale micro USB
+* Porta USB
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+4
+ a| 
+Porte di espansione 1 e 2 dei dischi
+ a| 
+SAS 12 GB/s.
+ a| 
+Collegare le porte alle porte di espansione del disco sugli IOM nello shelf di espansione.
+
+|===
+
+
+==== Connettori E2800B
+
+image::../media/e2800B_controller_with_callouts.gif[Connettori sulla centralina E2800B]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di interconnessione 1 e 2
+ a| 
+SFP ottico FC da 16 GB/s.
+ a| 
+Collegare ciascuna delle E2800B unità di controllo alla centralina SG6000-CN.
+
+Sono presenti quattro collegamenti alla centralina SG6000-CN (due da ogni E2800B).
+
+
+
+ a| 
+2
+ a| 
+Porte di gestione 1 e 2
+ a| 
+Ethernet da 1 GB (RJ-45)
+ a| 
+* Opzioni porta 1:
++
+** Connettersi a una rete di gestione per abilitare l'accesso TCP/IP diretto a Gestione di sistema SANtricity
+** Lasciare scollegato per salvare la porta e l'indirizzo IP dello switch.  Accedere a Gestore di sistema SANtricity utilizzando le interfacce utente del programma di installazione di Grid Manager o Storage Grid Appliance.
+
+
+
+
+*Nota*: Alcune funzionalità SANtricity opzionali, come ad esempio la sincronizzazione NTP per ottenere timestamp dei registri precisi, non sono disponibili quando si sceglie di lasciare la porta 1 non cablata.
+
+*Nota*: StorageGRID 11.5 o superiore e SANtricity 11.70 o superiore sono necessari quando si lascia la porta 1 non cablata.
+
+* La porta 2 è riservata al supporto tecnico.
+
+
+
+
+ a| 
+3
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* Porta seriale RJ-45
+* Porta seriale micro USB
+* Porta USB
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+4
+ a| 
+Porte di espansione 1 e 2 dei dischi
+ a| 
+SAS 12 GB/s.
+ a| 
+Collegare le porte alle porte di espansione del disco sugli IOM nello shelf di espansione.
+
+|===
+
+
+=== SG6060 e SG6060X: IOM per shelf di espansione opzionali
+
+Lo shelf di espansione contiene due moduli di input/output (IOM) che si collegano ai controller di storage o ad altri shelf di espansione.
+
+
+
+==== Connettori IOM
+
+image::../media/iom_connectors.gif[IOM posteriore]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di espansione del disco 1-4
+ a| 
+SAS 12 GB/s.
+ a| 
+Collegare ciascuna porta ai controller di storage o allo shelf di espansione aggiuntivo (se presente).
+
+|===

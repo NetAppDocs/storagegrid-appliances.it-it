@@ -1,0 +1,52 @@
+---
+permalink: sg6000/replacing-power-supply-in-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing, installation 
+summary: Il controller SG6000-CN dispone di due alimentatori per la ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per garantire che il controller di calcolo disponga di alimentazione ridondante. 
+---
+= Sostituire l'alimentatore del controller SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il controller SG6000-CN dispone di due alimentatori per la ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per garantire che il controller di calcolo disponga di alimentazione ridondante.
+
+
+NOTE: Entrambi gli alimentatori devono avere lo stesso wattaggio. Se è necessario sostituire entrambi gli alimentatori, vedere link:replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html["Sostituzione di entrambi gli alimentatori nel controller SG6000-CN"].
+
+.Prima di iniziare
+* L'alimentatore sostitutivo è stato disimballato.
+* Il controller in cui si sta sostituendo l'alimentatore del data center è stato fisicamente posizionato.
++
+link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+
+* Hai confermato che l'altro alimentatore è installato e funzionante.
+
+
+.A proposito di questa attività
+La figura mostra le due unità di alimentazione del controller SG6000-CN, accessibili dal retro del controller.
+
+image::../media/sg6000_cn_power_supplies.gif[Retro di SG6000-CN con due alimentatori]
+
+.Fasi
+. Scollegare il cavo di alimentazione dall'alimentatore.
+. Sollevare la maniglia della camma.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Sollevare la maniglia della camma per rimuovere l'alimentatore SG6000-CN]
+
+. Premere il fermo blu ed estrarre l'alimentatore.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Rimuovere l'alimentatore SG6000-CN]
+
+. Inserire l'alimentatore sostitutivo nello chassis.
++
+Assicurarsi che il fermo blu si trovi sul lato destro quando si inserisce l'unità.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Inserire l'alimentatore in SG6000-CN]
+
+. Spingere la maniglia della camma verso il basso per fissare l'alimentatore.
+. Collegare il cavo di alimentazione all'alimentatore e verificare che il LED verde si accendo.
+

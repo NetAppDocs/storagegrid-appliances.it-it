@@ -1,0 +1,17 @@
+---
+section: commonhardware
+title: Gestire la configurazione dell'appliance
+entries:
+- title: Panoramica
+  pdf-filename: Mantenere la configurazione dell'appliance (tutti i nodi)
+  url: "/commonhardware/index.html"
+- title: Impostare l'apparecchio in modalità di manutenzione
+  url: "/commonhardware/placing-appliance-into-maintenance-mode.html"
+- title: Modificare l'impostazione MTU
+  url: "/commonhardware/changing-mtu-setting.html"
+- title: Controllare la configurazione del server DNS
+  url: "/commonhardware/checking-dns-server-configuration.html"
+- title: Aggiornare i riferimenti degli indirizzi MAC
+  url: "/commonhardware/locate-mac-address.html"
+- title: Monitorare la crittografia dei nodi in modalità di manutenzione
+  url: "/commonhardware/monitoring-node-encryption-in-maintenance-mode.html"

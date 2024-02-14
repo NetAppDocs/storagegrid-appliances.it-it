@@ -1,0 +1,84 @@
+---
+permalink: installconfig/setting-up-email-notifications-for-alerts.html 
+sidebar: sidebar 
+keywords: email, notifications, alerts, set up, setup, configure, configuration, bmc 
+summary: 'Se si desidera che le notifiche e-mail vengano inviate quando si verificano avvisi, utilizzare l"interfaccia BMC per configurare le impostazioni SMTP, gli utenti, le destinazioni LAN, i criteri di avviso e i filtri degli eventi.' 
+---
+= Impostare le notifiche e-mail per gli avvisi BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si desidera che le notifiche e-mail vengano inviate quando si verificano avvisi, utilizzare l'interfaccia BMC per configurare le impostazioni SMTP, gli utenti, le destinazioni LAN, i criteri di avviso e i filtri degli eventi.
+
+
+NOTE: Le impostazioni BMC eseguite con questa procedura potrebbero non essere mantenute se il controller SG6000-CN o l'appliance di servizi si guasta e deve essere sostituita. Assicurarsi di disporre di una registrazione di tutte le impostazioni applicate, in modo che possano essere riapplicate facilmente dopo la sostituzione dell'hardware, se necessario.
+
+.Prima di iniziare
+Sai come accedere alla dashboard BMC.
+
+.A proposito di questa attività
+Nell'interfaccia BMC, utilizzare le opzioni *Impostazioni SMTP*, *Gestione utente* e *Platform Event Filters* nella pagina Impostazioni per configurare le notifiche e-mail.
+
+image::../media/bmc_settings_menu.png[Menu Impostazioni BMC]
+
+.Fasi
+. link:configuring-snmp-settings-for-bmc.html["Configurare le impostazioni SNMP per BMC"].
++
+.. Selezionare *Impostazioni* > *Impostazioni SMTP*.
+.. Per l'ID e-mail mittente, immettere un indirizzo e-mail valido.
++
+Questo indirizzo e-mail viene fornito come indirizzo di origine quando il BMC invia il messaggio e-mail.
+
+
+
+. Impostare gli utenti per la ricezione degli avvisi.
++
+.. Dalla dashboard BMC, selezionare *Impostazioni* > *Gestione utenti*.
+.. Aggiungere almeno un utente per ricevere le notifiche di avviso.
++
+L'indirizzo e-mail configurato per un utente è l'indirizzo a cui il BMC invia le notifiche di avviso. Ad esempio, è possibile aggiungere un utente generico, ad esempio "`notification-user,`" e utilizzare l'indirizzo e-mail di una lista di distribuzione e-mail del team di supporto tecnico.
+
+
+
+. Configurare la destinazione LAN per gli avvisi.
++
+.. Selezionare *Impostazioni* > *Platform Event Filters* > *Destinazioni LAN*.
+.. Configurare almeno una destinazione LAN.
++
+*** Selezionare *Email* come tipo di destinazione.
+*** Per BMC Username (Nome utente BMC), selezionare un nome utente aggiunto in precedenza.
+*** Se sono stati aggiunti più utenti e si desidera che tutti ricevano e-mail di notifica, aggiungere una destinazione LAN per ciascun utente.
+
+
+.. Invia un avviso di test.
+
+
+. Configurare le policy di avviso in modo da definire quando e dove inviare gli avvisi da BMC.
++
+.. Selezionare *Impostazioni* > *Platform Event Filters* > *Alert Policies*.
+.. Configurare almeno un criterio di avviso per ciascuna destinazione LAN.
++
+*** Per numero gruppo di criteri, selezionare *1*.
+*** Per azione policy, selezionare *Invia sempre avviso a questa destinazione*.
+*** Per il canale LAN, selezionare *1*.
+*** In Destination Selector (selettore di destinazione), selezionare la destinazione LAN per il criterio.
+
+
+
+
+. Configurare i filtri degli eventi per indirizzare gli avvisi per diversi tipi di eventi agli utenti appropriati.
++
+.. Selezionare *Impostazioni* > *Platform Event Filters* > *Event Filters*.
+.. Per il numero gruppo di criteri di avviso, immettere *1*.
+.. Creare filtri per ogni evento di cui si desidera che venga inviata una notifica al gruppo di criteri di avviso.
++
+*** È possibile creare filtri per eventi per azioni di alimentazione, eventi specifici dei sensori o tutti gli eventi.
+*** In caso di dubbi sugli eventi da monitorare, selezionare *tutti i sensori* per tipo di sensore e *tutti gli eventi* per Opzioni evento. Se si ricevono notifiche indesiderate, è possibile modificare le selezioni in un secondo momento.
+
+
+
+
+

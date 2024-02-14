@@ -1,0 +1,51 @@
+---
+permalink: installconfig/sg6060-installing-drives.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
+summary: Dopo aver installato lo shelf da 60 dischi in un cabinet o rack, installare tutti i 60 dischi nello shelf. La spedizione per lo shelf del controller E2860 include due unità SSD, che è necessario installare nel cassetto superiore dello shelf del controller. Ogni shelf di espansione opzionale include 60 dischi HDD e nessun disco SSD. 
+---
+= Installare i dischi (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver installato lo shelf da 60 dischi in un cabinet o rack, installare tutti i 60 dischi nello shelf. La spedizione per lo shelf del controller E2860 include due unità SSD, che è necessario installare nel cassetto superiore dello shelf del controller. Ogni shelf di espansione opzionale include 60 dischi HDD e nessun disco SSD.
+
+.Prima di iniziare
+Nel cabinet o nel rack è stato installato lo shelf del controller E2860 o gli shelf di espansione opzionali (uno o due).
+
+
+CAUTION: Per evitare di danneggiare l'hardware, non spostare mai lo shelf se sono installati i dischi. Rimuovere tutti i dischi prima di spostare lo shelf.
+
+.Fasi
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Rimuovere le unità dalla confezione.
+. Rilasciare le leve sul cassetto superiore e far scorrere il cassetto verso l'esterno utilizzando le leve.
+. Individuare le due unità SSD.
++
+
+NOTE: Gli shelf di espansione non utilizzano unità SSD.
+
+. Sollevare ciascuna maniglia del disco in posizione verticale.
+. Installare le due unità SSD negli slot 0 e 1 (i primi due slot lungo il lato sinistro del cassetto).
+. Posizionare delicatamente ciascun disco nel relativo slot e abbassare la maniglia sollevata fino a quando non scatta in posizione.
++
+image::../media/install_drives_in_e2860.gif[Installare i dischi]
+
+. Installare 10 unità HDD nel cassetto superiore.
+. Far scorrere il cassetto verso l'interno premendo al centro e chiudendo delicatamente entrambe le leve.
++
+
+CAUTION: Interrompere la pressione del cassetto in caso di inceppamento. Utilizzare le leve di rilascio nella parte anteriore del cassetto per far scorrere il cassetto all'indietro. Quindi, reinserire con cautela il cassetto nell'alloggiamento.
+
+. Ripetere questa procedura per installare le unità HDD negli altri quattro cassetti.
++
+
+NOTE: Per garantire il corretto funzionamento, è necessario installare tutti e 60 i dischi.
+
+. Fissare il pannello anteriore allo scaffale.
+. Se si dispone di shelf di espansione, ripetere questa procedura per installare 12 unità HDD in ciascun cassetto di ogni shelf di espansione.
+. Seguire le istruzioni per l'installazione di SG6000-CN in un cabinet o in un rack.
+

@@ -1,0 +1,71 @@
+---
+permalink: sg100-1000/replacing-drive-in-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: 'Gli SSD nell"appliance di servizi contengono il sistema operativo StorageGRID. Inoltre, quando l"appliance è configurata come nodo di amministrazione, gli SSD contengono anche registri di audit, metriche e tabelle di database. I dischi vengono mirrorati utilizzando RAID1 per la ridondanza. Se uno dei dischi si guasta, è necessario sostituirlo il prima possibile per garantire la ridondanza.' 
+---
+= Sostituire l'unità in SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli SSD nell'appliance di servizi contengono il sistema operativo StorageGRID. Inoltre, quando l'appliance è configurata come nodo di amministrazione, gli SSD contengono anche registri di audit, metriche e tabelle di database. I dischi vengono mirrorati utilizzando RAID1 per la ridondanza. Se uno dei dischi si guasta, è necessario sostituirlo il prima possibile per garantire la ridondanza.
+
+.Prima di iniziare
+* Lo hai fatto link:locating-controller-in-data-center.html["posizionato fisicamente l'apparecchio"].
+* È stato verificato quale unità ha rilevato un guasto notando che il LED sinistro lampeggia in ambra.
++
+I due SSD sono posizionati negli slot come mostrato nel diagramma seguente:
+
++
+image::../media/drive_locations_sg1000_front_with_ssds.png[Posizioni delle unità]
+
++
+
+CAUTION: Se si rimuove il disco funzionante, si disattiva il nodo dell'appliance. Consultare le informazioni relative alla visualizzazione degli indicatori di stato per verificare l'errore.
+
+* È stato ottenuto il disco sostitutivo.
+* Hai ottenuto una protezione ESD adeguata.
+
+
+.Fasi
+. Verificare che il LED sinistro del disco da sostituire sia di colore ambra lampeggiante. Se è stato segnalato un problema al disco in Grid Manager o BMC UI, HDD02 o HDD2 fare riferimento al disco nello slot superiore, mentre HDD03 o HDD3 si riferiscono al disco nello slot inferiore.
++
+È inoltre possibile utilizzare Grid Manager per monitorare lo stato degli SSD. Selezionare *NODI*. Quindi selezionare `*Appliance Node*` > *hardware*. In caso di guasto di un disco, il campo Storage RAID Mode (modalità RAID storage) contiene un messaggio relativo al disco guasto.
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Disimballare l'unità sostitutiva e appoggiarla su una superficie piana e priva di elettricità statica vicino all'apparecchio.
++
+Conservare tutti i materiali di imballaggio.
+
+. Premere il pulsante di rilascio sul disco guasto.
++
+image::../media/h600s_driveremoval.gif[Rimozione del disco]
+
++
+La maniglia delle molle del disco si apre parzialmente e il disco si libera dallo slot.
+
+. Aprire la maniglia, estrarre l'unità e posizionarla su una superficie piana e priva di scariche elettrostatiche.
+. Premere il pulsante di rilascio sull'unità sostitutiva prima di inserirla nello slot.
++
+Le molle del dispositivo di chiusura si aprono.
+
++
+image::../media/h600s_driveinstall.gif[Installazione del disco]
+
+. Inserire l'unità sostitutiva nello slot, quindi chiudere la maniglia dell'unità.
++
+
+CAUTION: Non esercitare una forza eccessiva durante la chiusura della maniglia.
+
++
+Quando l'unità è completamente inserita, si sente uno scatto.
+
++
+Il disco viene automaticamente ricostruito con dati mirrorati dal disco in funzione. È possibile controllare lo stato della ricostruzione utilizzando Grid Manager. Selezionare *NODI*. Quindi selezionare `*Appliance Node*` > *hardware*. Il campo Storage RAID Mode (modalità RAID storage) contiene un messaggio "`rebuilding`" (costruzione) fino a quando il disco non viene completamente ricostruito.
+
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

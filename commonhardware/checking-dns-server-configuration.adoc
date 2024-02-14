@@ -1,0 +1,65 @@
+---
+permalink: commonhardware/checking-dns-server-configuration.html 
+sidebar: sidebar 
+keywords: DNS, server, servers, check, checking, change, changing, modify, modifying, modification 
+summary: 'È possibile controllare e modificare temporaneamente i server DNS attualmente in uso dal nodo dell"appliance.' 
+---
+= Controllare la configurazione del server DNS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile controllare e modificare temporaneamente i server DNS attualmente in uso dal nodo dell'appliance.
+
+.Prima di iniziare
+L'apparecchio è stato utilizzato link:../commonhardware/placing-appliance-into-maintenance-mode.html["modalità di manutenzione attivata"].
+
+.A proposito di questa attività
+Potrebbe essere necessario modificare le impostazioni del server DNS se un'appliance crittografata non riesce a connettersi al server di gestione delle chiavi (KMS) o al cluster KMS perché il nome host per il KMS è stato specificato come nome di dominio anziché come indirizzo IP. Le modifiche apportate alle impostazioni DNS dell'appliance sono temporanee e vengono perse quando si esce dalla modalità di manutenzione. Per rendere permanenti queste modifiche, specificare i server DNS in Grid Manager (*MANUTENZIONE* > *rete* > *server DNS*).
+
+* Le modifiche temporanee alla configurazione DNS sono necessarie solo per le appliance crittografate con nodo in cui il server KMS viene definito utilizzando un nome di dominio completo, invece di un indirizzo IP, per il nome host.
+* Quando un'appliance crittografata con nodo si connette a un KMS utilizzando un nome di dominio, deve connettersi a uno dei server DNS definiti per la griglia. Uno di questi server DNS converte quindi il nome di dominio in un indirizzo IP.
+* Se il nodo non riesce a raggiungere un server DNS per la griglia, o se sono state modificate le impostazioni DNS a livello di griglia quando un nodo appliance crittografato con nodo era offline, il nodo non è in grado di connettersi al KMS. I dati crittografati sull'appliance non possono essere decifrati fino a quando il problema DNS non viene risolto.
+
+
+Per risolvere un problema DNS che impedisce la connessione KMS, specificare l'indirizzo IP di uno o più server DNS nel programma di installazione dell'appliance StorageGRID. Queste impostazioni DNS temporanee consentono all'appliance di connettersi al KMS e decrittare i dati sul nodo.
+
+Ad esempio, se il server DNS per la griglia cambia mentre un nodo crittografato era offline, il nodo non sarà in grado di raggiungere il KMS quando torna in linea, perché utilizza ancora i valori DNS precedenti. L'immissione del nuovo indirizzo IP del server DNS nel programma di installazione dell'appliance StorageGRID consente a una connessione KMS temporanea di decrittare i dati del nodo.
+
+.Fasi
+. Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura rete* > *Configurazione DNS*.
+. Verificare che i server DNS specificati siano corretti.
++
+image::../media/dns_configuration.png[Configurazione DNS]
+
+. Se necessario, modificare i server DNS.
++
+
+NOTE: Le modifiche apportate alle impostazioni DNS sono temporanee e vengono perse quando si esce dalla modalità di manutenzione.
+
+. Quando si è soddisfatti delle impostazioni DNS temporanee, selezionare *Save* (Salva).
++
+Il nodo utilizza le impostazioni del server DNS specificate in questa pagina per riconnettersi al KMS, consentendo la decrittografia dei dati sul nodo.
+
+. Una volta decifrati i dati del nodo, riavviare il nodo. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare una delle seguenti opzioni:
++
+** Selezionare *Riavvia in StorageGRID* per riavviare il controller con il nodo che si ricongiunge alla griglia. Selezionare questa opzione se si è terminato di lavorare in modalità di manutenzione e si è pronti per ripristinare il normale funzionamento del nodo.
+** Selezionare *Reboot into Maintenance Mode* (Riavvia in modalità di manutenzione) per riavviare il controller con il nodo in modalità di manutenzione. (Questa opzione è disponibile solo quando il controller è in modalità di manutenzione). Selezionare questa opzione se sono necessarie ulteriori operazioni di manutenzione sul nodo prima di ricongiungersi alla griglia.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il controller in modalità di manutenzione]
+
++
+
+NOTE: Quando il nodo viene riavviato e ricongiunge la griglia, utilizza i server DNS di tutto il sistema elencati in Grid Manager. Dopo aver ricongiunguto la griglia, l'appliance non utilizzerà più i server DNS temporanei specificati nel programma di installazione dell'appliance StorageGRID mentre l'appliance era in modalità di manutenzione.
+
++
+Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina *NODES* dovrebbe visualizzare uno stato normale (icona con segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+
++
+image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+
+
+
+

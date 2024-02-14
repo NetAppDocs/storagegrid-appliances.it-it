@@ -1,0 +1,39 @@
+---
+permalink: installconfig/reviewing-appliance-network-connections.html 
+sidebar: sidebar 
+keywords: network connections, appliance, grid, admin, client, bmc, management 
+summary: 'Prima di installare l"appliance StorageGRID, è necessario conoscere le reti che è possibile collegare all"appliance.' 
+---
+= Tipi di rete StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare l'appliance StorageGRID, è necessario conoscere le reti che è possibile collegare all'appliance e il modo in cui vengono utilizzate le porte di ciascun controller. I requisiti di rete di StorageGRID sono spiegati in modo completo nella https://docs.netapp.com/us-en/storagegrid-118/network/index.html["Linee guida per il networking"^].
+
+Fare riferimento alle istruzioni dell'apparecchio per determinare le informazioni necessarie:
+
+* link:gathering-installation-information-sg100-and-sg1000.html["SG100 e SG1000"]
+* link:gathering-installation-information-sg5700.html["SG5700"]
+* link:gathering-installation-information-sg6000.html["SG6000"]
+* link:gathering-installation-information-sg6100.html["SG6100"]
+
+
+In alternativa, puoi collaborare con il tuo consulente NetApp Professional Services per utilizzare lo strumento NetApp ConfigBuilder per ottimizzare e automatizzare le fasi di configurazione. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
+
+Quando si implementa un'appliance StorageGRID come nodo in un sistema StorageGRID, è possibile collegarla alle seguenti reti:
+
+* *Grid Network per StorageGRID*: La Grid Network viene utilizzata per tutto il traffico StorageGRID interno. Fornisce connettività tra tutti i nodi della rete, in tutti i siti e le subnet. La rete grid è obbligatoria.
+* *Rete amministrativa per StorageGRID*: La rete amministrativa è una rete chiusa utilizzata per l'amministrazione e la manutenzione del sistema. La rete di amministrazione è in genere una rete privata e non deve essere instradabile tra i siti. La rete di amministrazione è opzionale.
+* *Rete client per StorageGRID:* la rete client è una rete aperta utilizzata per fornire l'accesso alle applicazioni client, tra cui S3 e Swift. La rete client fornisce l'accesso del protocollo client alla griglia, in modo che la rete griglia possa essere isolata e protetta. È possibile configurare la rete client in modo che sia possibile accedere all'appliance tramite questa rete utilizzando solo le porte che si sceglie di aprire. La rete client è opzionale.
+* *Rete di gestione per SANtricity* (opzionale per le appliance di storage, non necessaria per il SG6100): Questa rete fornisce accesso a Gestione di sistema di SANtricity, consentendo di monitorare e gestire i componenti hardware nell'appliance e nello shelf del controller di storage. Questa rete di gestione può essere la stessa della rete di amministrazione per StorageGRID o può essere una rete di gestione indipendente.
+* *BMC Management Network* (opzionale per SG100, SG1000, SG6000 e SG6100): Questa rete fornisce l'accesso al controller di gestione della scheda di base negli appliance SG100, SG1000, SG6000 e SG6100 consentendo di monitorare e gestire i componenti hardware dell'appliance. Questa rete di gestione può essere la stessa della rete di amministrazione per StorageGRID o può essere una rete di gestione indipendente.
++
+Se la rete di gestione BMC opzionale non è connessa, alcune procedure di supporto e manutenzione saranno più difficili da eseguire. È possibile lasciare la rete di gestione BMC non connessa, tranne quando necessario per scopi di supporto.
+
+
+
+
+NOTE: Per informazioni dettagliate sulle reti StorageGRID, consultare https://docs.netapp.com/us-en/storagegrid-118/network/storagegrid-network-types.html["Tipi di rete StorageGRID"^].

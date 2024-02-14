@@ -1,0 +1,133 @@
+---
+permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
+sidebar: sidebar 
+keywords: kms, key management server, monitor, monitoring, status, encryption 
+summary: 'Se è stata attivata la crittografia dei nodi per l"appliance durante l"installazione, è possibile monitorare lo stato di crittografia dei nodi di ciascun nodo dell"appliance, inclusi i dettagli relativi allo stato di crittografia dei nodi e al server di gestione delle chiavi (KMS).' 
+---
+= Monitorare la crittografia dei nodi in modalità di manutenzione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se è stata attivata la crittografia dei nodi per l'appliance durante l'installazione, è possibile monitorare lo stato di crittografia dei nodi di ciascun nodo dell'appliance, inclusi i dettagli dello stato di crittografia dei nodi e del server di gestione delle chiavi (KMS).
+
+Vedere https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurare i server di gestione delle chiavi"^] Per informazioni sull'implementazione di KMS per appliance StorageGRID.
+
+.Prima di iniziare
+* È stata attivata la crittografia dei nodi per l'appliance durante l'installazione. Non è possibile attivare la crittografia dei nodi dopo l'installazione dell'appliance.
+* Lo hai fatto link:../commonhardware/placing-appliance-into-maintenance-mode.html["impostare l'apparecchio in modalità di manutenzione"].
+
+
+.Fasi
+. Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia del nodo*.
++
+image::../media/fde_monitor_in_maint_mode.png[CONFIGURAZIONE chiara DI KMS]
+
++
+La pagina Node Encryption include tre sezioni:
+
++
+** Encryption Status (Stato crittografia) indica se la crittografia del nodo è attivata o disattivata per l'appliance.
+** Key Management Server Details (Dettagli server di gestione delle chiavi): Mostra le informazioni sul KMS utilizzato per crittografare l'appliance. È possibile espandere le sezioni del certificato del server e del client per visualizzare i dettagli e lo stato del certificato.
++
+*** Per risolvere i problemi relativi ai certificati stessi, ad esempio il rinnovo dei certificati scaduti, consultare la https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Istruzioni per la configurazione di KMS"^].
+*** Se si verificano problemi imprevisti durante la connessione agli host KMS, verificare che link:../commonhardware/checking-dns-server-configuration.html["I server DNS sono corretti"] e questo link:../installconfig/configuring-network-links.html["la rete dell'appliance è configurata correttamente"].
+*** Se non si riesce a risolvere i problemi relativi al certificato, contattare il supporto tecnico.
+
+
+** Cancella chiave KMS disattiva la crittografia dei nodi per l'appliance, rimuove l'associazione tra l'appliance e il server di gestione delle chiavi configurato per il sito StorageGRID ed elimina tutti i dati dall'appliance. È necessario <<Cancellare la configurazione del server di gestione delle chiavi,Cancellare la chiave KMS>> Prima di installare l'appliance in un altro sistema StorageGRID.
++
+
+CAUTION: La cancellazione della configurazione KMS elimina i dati dall'appliance, rendendoli inaccessibili in modo permanente. Questi dati non sono ripristinabili.
+
+
+
+. Una volta terminato il controllo dello stato di crittografia del nodo, riavviare il nodo. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare una delle seguenti opzioni:
++
+** Selezionare *Riavvia in StorageGRID* per riavviare il controller con il nodo che si ricongiunge alla griglia. Selezionare questa opzione se si è terminato di lavorare in modalità di manutenzione e si è pronti per ripristinare il normale funzionamento del nodo.
+** Selezionare *Reboot into Maintenance Mode* (Riavvia in modalità di manutenzione) per riavviare il controller con il nodo in modalità di manutenzione. (Questa opzione è disponibile solo quando il controller è in modalità di manutenzione). Selezionare questa opzione se sono necessarie ulteriori operazioni di manutenzione sul nodo prima di ricongiungersi alla griglia.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il controller in modalità di manutenzione]
+
++
+Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina *NODES* dovrebbe visualizzare uno stato normale (icona con segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+
++
+image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+
+
+
+
+
+
+
+== Cancellare la configurazione del server di gestione delle chiavi
+
+La cancellazione della configurazione del server di gestione delle chiavi (KMS) disattiva la crittografia dei nodi sull'appliance. Dopo aver cancellato la configurazione KMS, i dati dell'appliance vengono cancellati in modo permanente e non sono più accessibili. Questi dati non sono ripristinabili.
+
+.Prima di iniziare
+Se è necessario conservare i dati sull'appliance, è necessario eseguire una procedura di decommissionamento del nodo o clonare il nodo prima di cancellare la configurazione KMS.
+
+
+CAUTION: Una volta cancellato il KMS, i dati dell'appliance verranno cancellati in modo permanente e non più accessibili. Questi dati non sono ripristinabili.
+
+https://docs.netapp.com/us-en/storagegrid-118/maintain/grid-node-decommissioning.html["Decommissionare il nodo"^] Per spostare i dati in esso contenuti in altri nodi in StorageGRID.
+
+.A proposito di questa attività
+La cancellazione della configurazione KMS dell'appliance disattiva la crittografia dei nodi, rimuovendo l'associazione tra il nodo dell'appliance e la configurazione KMS per il sito StorageGRID. I dati sull'appliance vengono quindi cancellati e l'appliance viene lasciata in uno stato pre-installato. Questo processo non può essere invertito.
+
+È necessario cancellare la configurazione KMS:
+
+* Prima di installare l'appliance in un altro sistema StorageGRID, che non utilizza un KMS o che utilizza un KMS diverso.
++
+
+CAUTION: Non cancellare la configurazione KMS se si intende reinstallare un nodo appliance in un sistema StorageGRID che utilizza la stessa chiave KMS.
+
+* Prima di poter ripristinare e reinstallare un nodo in cui la configurazione KMS è stata persa e la chiave KMS non è ripristinabile.
+* Prima di restituire qualsiasi apparecchio precedentemente in uso presso il sito.
+* Dopo la disattivazione di un'appliance con crittografia del nodo attivata.
+
+
+
+CAUTION: Decommissionare l'appliance prima di eliminare il KMS per spostare i dati in altri nodi del sistema StorageGRID. L'eliminazione di KMS prima dello smantellamento dell'appliance comporta la perdita di dati e potrebbe rendere l'appliance inutilizzabile.
+
+.Fasi
+. Aprire un browser e inserire uno degli indirizzi IP del controller di elaborazione dell'appliance.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
++
+Viene visualizzata la pagina iniziale del programma di installazione dell'appliance StorageGRID.
+
+. Selezionare *Configura hardware* > *crittografia nodo*.
++
+
+CAUTION: Se la configurazione KMS viene cancellata, i dati sull'appliance verranno eliminati in modo permanente. Questi dati non sono ripristinabili.
+
+. Nella parte inferiore della finestra, selezionare *Clear KMS Key and Delete Data* (Cancella chiave KMS e Elimina dati).
+. Se si è certi di voler cancellare la configurazione KMS, digitare `*clear*` Nella finestra di dialogo di avviso, selezionare *Clear KMS Key and Delete Data* (Cancella chiave KMS e Elimina dati).
++
+La chiave di crittografia KMS e tutti i dati vengono cancellati dal nodo e l'appliance viene riavviata. Questa operazione può richiedere fino a 20 minuti.
+
+. Aprire un browser e inserire uno degli indirizzi IP del controller di elaborazione dell'appliance. +
+`*https://_Controller_IP_:8443*`
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
++
+Viene visualizzata la pagina iniziale del programma di installazione dell'appliance StorageGRID.
+
+. Selezionare *Configura hardware* > *crittografia nodo*.
+. Verificare che la crittografia del nodo sia disattivata e che le informazioni relative a chiave e certificato in *Key Management Server Details* e *Clear KMS Key and Delete Data* Control siano rimosse dalla finestra.
++
+La crittografia del nodo non può essere riattivata sull'appliance fino a quando non viene reinstallata in una griglia.
+
+
+
+.Al termine
+Dopo aver riavviato l'appliance e aver verificato che il sistema KMS è stato cancellato e che l'appliance si trova in uno stato di preinstallazione, è possibile rimuoverlo fisicamente dal sistema StorageGRID. Vedere https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["istruzioni per la preparazione dell'apparecchio per la reinstallazione"^].

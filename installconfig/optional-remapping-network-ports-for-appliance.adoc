@@ -1,0 +1,38 @@
+---
+permalink: installconfig/optional-remapping-network-ports-for-appliance.html 
+sidebar: sidebar 
+keywords: remap appliance ports, network, internal to external port mapping 
+summary: È possibile, in via opzionale, rimappare le porte interne di un nodo appliance a porte esterne diverse. Ad esempio, potrebbe essere necessario rimappare le porte a causa di un problema di firewall. 
+---
+= Opzionale: Consente di rimappare le porte di rete per l'appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile, in via opzionale, rimappare le porte interne di un nodo appliance a porte esterne diverse. Ad esempio, potrebbe essere necessario rimappare le porte a causa di un problema di firewall.
+
+.Prima di iniziare
+* In precedenza è stato effettuato l'accesso al programma di installazione dell'appliance StorageGRID.
+
+
+.A proposito di questa attività
+Non è possibile utilizzare le porte rimappate per gli endpoint del bilanciamento del carico. Se è necessario rimuovere una porta rimappata, seguire la procedura descritta in https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Rimuovere i rimap delle porte"^].
+
+.Fasi
+. Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura rete* > *Porte di rimappamento*.
++
+Viene visualizzata la pagina Remap Port (porta Remap).
+
+. Dalla casella a discesa *Network* (rete), selezionare la rete per la porta che si desidera rimappare: Grid, Admin o Client.
+. Dalla casella di riepilogo *Protocol* (protocollo), selezionare il protocollo IP: TCP o UDP.
+. Dalla casella a discesa *Remap Direction* (direzione rimappamento), selezionare la direzione del traffico che si desidera rimappare per questa porta: Inbound (in entrata), Outbound (in uscita) o Bi-directional (bidirezionale).
+. Per *Original Port* (porta originale), immettere il numero della porta che si desidera rimappare.
+. Per *Mapped-to Port*, inserire il numero della porta che si desidera utilizzare.
+. Selezionare *Aggiungi regola*.
++
+La nuova mappatura delle porte viene aggiunta alla tabella e il remapping ha effetto immediato.
+
+. Per rimuovere una mappatura delle porte, selezionare il pulsante di opzione della regola che si desidera rimuovere e selezionare *Remove Selected Rule* (Rimuovi regola selezionata).
+

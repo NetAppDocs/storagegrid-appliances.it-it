@@ -1,0 +1,232 @@
+---
+permalink: installconfig/setting-ip-configuration.html 
+sidebar: sidebar 
+keywords: configure, setup, set up, IP, IP address 
+summary: 'Il programma di installazione dell"appliance StorageGRID consente di configurare gli indirizzi IP e le informazioni di routing utilizzati per l"appliance di servizi o il nodo di storage dell"appliance nelle reti StorageGRID Grid, Admin e Client.' 
+---
+= Configurare gli indirizzi IP StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il programma di installazione dell'appliance StorageGRID consente di configurare gli indirizzi IP e le informazioni di routing utilizzati per l'appliance di servizi o il nodo di storage dell'appliance nelle reti StorageGRID Grid, Admin e Client.
+
+Se si utilizza ConfigBuilder per generare un file JSON, è possibile configurare automaticamente gli indirizzi IP. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
+
+.A proposito di questa attività
+È necessario assegnare un indirizzo IP statico all'appliance su ciascuna rete connessa o un lease permanente per l'indirizzo sul server DHCP.
+
+Per modificare la configurazione del collegamento, consultare le istruzioni seguenti:
+
+* link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG100 o SG1000"]
+* link:../sg5700/changing-link-configuration-of-e5700sg-controller.html["Modificare la configurazione del collegamento del controller E5700SG"]
+* link:../sg6000/changing-link-configuration-of-sg6000-cn-controller.html["Modificare la configurazione del collegamento della centralina SG6000-CN"]
+* link:../sg6100/changing-link-configuration-of-sgf6112-appliance.html["Modificare la configurazione del collegamento dell'appliance SG6100"]
+
+
+.Fasi
+. Nel programma di installazione dell'appliance StorageGRID, selezionare *Configura rete* > *Configurazione IP*.
++
+Viene visualizzata la pagina IP Configuration (Configurazione IP).
+
+. Per configurare Grid Network, selezionare *Static* o *DHCP* nella sezione *Grid Network* della pagina.
+. Se si seleziona *Static*, attenersi alla seguente procedura per configurare la rete di rete:
++
+.. Inserire l'indirizzo IPv4 statico utilizzando la notazione CIDR.
+.. Accedere al gateway.
++
+Se la rete non dispone di un gateway, immettere nuovamente lo stesso indirizzo IPv4 statico.
+
+.. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.
++
+
+CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla porta dello switch a cui è connesso il nodo. In caso contrario, potrebbero verificarsi problemi di performance di rete o perdita di pacchetti.
+
++
+
+NOTE: Per ottenere le migliori performance di rete, tutti i nodi devono essere configurati con valori MTU simili sulle interfacce Grid Network. L'avviso *Grid Network MTU mismatch* (mancata corrispondenza MTU rete griglia) viene attivato se si verifica una differenza significativa nelle impostazioni MTU per Grid Network su singoli nodi. I valori MTU non devono essere uguali per tutti i tipi di rete.
+
+.. Fare clic su *Save* (Salva).
++
+Quando si modifica l'indirizzo IP, anche il gateway e l'elenco delle subnet potrebbero cambiare.
+
++
+Se si perde la connessione al programma di installazione dell'appliance StorageGRID, immettere nuovamente l'URL utilizzando il nuovo indirizzo IP statico appena assegnato. Ad esempio, +
+`*https://_appliance_IP_:8443*`
+
+.. Verificare che l'elenco delle subnet Grid Network sia corretto.
++
+Se si dispone di subnet Grid, è necessario il gateway Grid Network. Tutte le subnet della griglia specificate devono essere raggiungibili tramite questo gateway. Queste subnet della rete di griglia devono essere definite anche nell'elenco subnet della rete di griglia sul nodo di amministrazione primario quando si avvia l'installazione di StorageGRID.
+
++
+
+NOTE: Il percorso predefinito non è elencato. Se la rete client non è attivata, il percorso predefinito utilizzerà il gateway Grid Network.
+
++
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
+*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+
+
+.. Fare clic su *Save* (Salva).
+
+
+. Se è stato selezionato *DHCP*, attenersi alla seguente procedura per configurare Grid Network:
++
+.. Dopo aver selezionato il pulsante di opzione *DHCP*, fare clic su *Save* (Salva).
++
+I campi *IPv4 Address*, *Gateway* e *subnet* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.
+
++
+Il browser Web viene reindirizzato automaticamente al nuovo indirizzo IP del programma di installazione dell'appliance StorageGRID.
+
+.. Verificare che l'elenco delle subnet Grid Network sia corretto.
++
+Se si dispone di subnet Grid, è necessario il gateway Grid Network. Tutte le subnet della griglia specificate devono essere raggiungibili tramite questo gateway. Queste subnet della rete di griglia devono essere definite anche nell'elenco subnet della rete di griglia sul nodo di amministrazione primario quando si avvia l'installazione di StorageGRID.
+
++
+
+NOTE: Il percorso predefinito non è elencato. Se la rete client non è attivata, il percorso predefinito utilizzerà il gateway Grid Network.
+
++
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
+*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+
+
+.. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.
++
+
+CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla porta dello switch a cui è connesso il nodo. In caso contrario, potrebbero verificarsi problemi di performance di rete o perdita di pacchetti.
+
++
+
+NOTE: Per ottenere le migliori performance di rete, tutti i nodi devono essere configurati con valori MTU simili sulle interfacce Grid Network. L'avviso *Grid Network MTU mismatch* (mancata corrispondenza MTU rete griglia) viene attivato se si verifica una differenza significativa nelle impostazioni MTU per Grid Network su singoli nodi. I valori MTU non devono essere uguali per tutti i tipi di rete.
+
+.. Fare clic su *Save* (Salva).
+
+
+. Per configurare la rete amministrativa, selezionare *Static* o *DHCP* nella sezione *Admin Network* della pagina.
++
+
+NOTE: Per configurare la rete amministrativa, attivare la rete amministrativa nella pagina link Configuration (Configurazione collegamento).
+
++
+image::../media/admin_network_static.png[IP di rete amministratore]
+
+. Se si seleziona *Static*, attenersi alla seguente procedura per configurare la rete amministrativa:
++
+.. Inserire l'indirizzo IPv4 statico, utilizzando la notazione CIDR, per la porta di gestione 1 sull'appliance.
++
+La porta di gestione 1 si trova a sinistra delle due porte RJ45 da 1 GbE sul lato destro dell'appliance.
+
+.. Accedere al gateway.
++
+Se la rete non dispone di un gateway, immettere nuovamente lo stesso indirizzo IPv4 statico.
+
+.. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.
++
+
+CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla porta dello switch a cui è connesso il nodo. In caso contrario, potrebbero verificarsi problemi di performance di rete o perdita di pacchetti.
+
+.. Fare clic su *Save* (Salva).
++
+Quando si modifica l'indirizzo IP, anche il gateway e l'elenco delle subnet potrebbero cambiare.
+
++
+Se si perde la connessione al programma di installazione dell'appliance StorageGRID, immettere nuovamente l'URL utilizzando il nuovo indirizzo IP statico appena assegnato. Ad esempio, +
+`*https://_appliance_:8443*`
+
+.. Verificare che l'elenco delle subnet Admin Network sia corretto.
++
+Verificare che tutte le subnet possano essere raggiunte utilizzando il gateway fornito.
+
++
+
+NOTE: Non è possibile eseguire il percorso predefinito per utilizzare il gateway Admin Network.
+
++
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
+*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+
+
+.. Fare clic su *Save* (Salva).
+
+
+. Se è stato selezionato *DHCP*, attenersi alla seguente procedura per configurare la rete amministrativa:
++
+.. Dopo aver selezionato il pulsante di opzione *DHCP*, fare clic su *Save* (Salva).
++
+I campi *IPv4 Address*, *Gateway* e *subnet* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.
+
++
+Il browser Web viene reindirizzato automaticamente al nuovo indirizzo IP del programma di installazione dell'appliance StorageGRID.
+
+.. Verificare che l'elenco delle subnet Admin Network sia corretto.
++
+Verificare che tutte le subnet possano essere raggiunte utilizzando il gateway fornito.
+
++
+
+NOTE: Non è possibile eseguire il percorso predefinito per utilizzare il gateway Admin Network.
+
++
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
+*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+
+
+.. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.
++
+
+CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla porta dello switch a cui è connesso il nodo. In caso contrario, potrebbero verificarsi problemi di performance di rete o perdita di pacchetti.
+
+.. Fare clic su *Save* (Salva).
+
+
+. Per configurare la rete client, selezionare *Static* o *DHCP* nella sezione *Client Network* della pagina.
++
+
+NOTE: Per configurare la rete client, attivare la rete client nella pagina link Configuration (Configurazione collegamento).
+
++
+image::../media/client_network_static.png[IP di rete del client]
+
+. Se si seleziona *Static* (statico), attenersi alla seguente procedura per configurare la rete client:
++
+.. Inserire l'indirizzo IPv4 statico utilizzando la notazione CIDR.
+.. Fare clic su *Save* (Salva).
+.. Verificare che l'indirizzo IP del gateway di rete client sia corretto.
++
+
+NOTE: Se la rete client è attivata, viene visualizzato il percorso predefinito. Il percorso predefinito utilizza il gateway di rete client e non può essere spostato in un'altra interfaccia mentre la rete client è attivata.
+
+.. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.
++
+
+CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla porta dello switch a cui è connesso il nodo. In caso contrario, potrebbero verificarsi problemi di performance di rete o perdita di pacchetti.
+
+.. Fare clic su *Save* (Salva).
+
+
+. Se si seleziona *DHCP*, seguire questa procedura per configurare la rete client:
++
+.. Dopo aver selezionato il pulsante di opzione *DHCP*, fare clic su *Save* (Salva).
++
+I campi *IPv4 Address* e *Gateway* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.
+
++
+Il browser Web viene reindirizzato automaticamente al nuovo indirizzo IP del programma di installazione dell'appliance StorageGRID.
+
+.. Verificare che il gateway sia corretto.
++
+
+NOTE: Se la rete client è attivata, viene visualizzato il percorso predefinito. Il percorso predefinito utilizza il gateway di rete client e non può essere spostato in un'altra interfaccia mentre la rete client è attivata.
+
+.. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.
++
+
+CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla porta dello switch a cui è connesso il nodo. In caso contrario, potrebbero verificarsi problemi di performance di rete o perdita di pacchetti.
+
+
+
+

@@ -1,0 +1,25 @@
+---
+indexpage:
+  tiles:
+  - title: Procedure eseguite di frequente
+    links:
+    - title: Attivare o disattivare il LED di posizione
+      url: "../sg100-1000/turning-controller-identify-led-on-and-off.html"
+    - title: Individuare l'appliance nel data center
+      url: "../sg100-1000/locating-controller-in-data-center.html"
+    - title: Spegnere l'apparecchio
+      url: "../sg100-1000/shut-down-sg100-and-sg1000.html"
+    - title: Modificare la configurazione del collegamento
+      url: "../sg100-1000/changing-link-configuration-of-services-appliance.html"
+  - title: Procedure rack
+    links:
+    - title: Sostituire l'apparecchio
+      url: "../sg100-1000/replacing-services-appliance.html"
+  - title: Procedure hardware
+    links:
+    - title: Sostituire l'alimentatore
+      url: "../sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+    - title: Sostituire la ventola
+      url: "../sg100-1000/replacing-fan-in-services-appliance.html"
+    - title: Sostituire l'unità
+      url: "../sg100-1000/replacing-drive-in-services-appliance.html"

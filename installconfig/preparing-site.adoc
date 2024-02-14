@@ -1,0 +1,270 @@
+---
+permalink: installconfig/preparing-site.html 
+sidebar: sidebar 
+keywords: site prep, site preparation, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
+summary: 'Prima di installare l"apparecchio, assicurarsi che il sito e l"armadietto o il rack che si intende utilizzare soddisfino le specifiche di un"appliance StorageGRID.' 
+---
+= Preparare il sito
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare l'apparecchio, assicurarsi che il sito e l'armadietto o il rack che si intende utilizzare soddisfino le specifiche di un'appliance StorageGRID.
+
+.Fasi
+. Verificare che il sito soddisfi i requisiti di temperatura, umidità, intervallo di altitudine, flusso d'aria, dissipazione del calore, cablaggio, alimentazione e messa a terra. Vedere https://hwu.netapp.com["NetApp Hardware Universe"^] per ulteriori informazioni.
+. Verificare che la tensione di alimentazione CA sia corretta:
++
+[cols="1a,1a"]
+|===
+| Modello | Requisito 
+
+
+ a| 
+SG100 e SG1000
+ a| 
+Da 120 a 240 V CA
+
+
+
+ a| 
+SG5760
+ a| 
+240 volt CA
+
+
+
+ a| 
+SGF6024
+ a| 
+120 V CA
+
+
+
+ a| 
+SG6060
+ a| 
+240 volt CA
+
+
+
+ a| 
+SGF6112
+ a| 
+Da 100 a 240 volt CA
+
+|===
+. Procurarsi un cabinet da 19" (48.3 cm) o un rack per gli scaffali delle seguenti dimensioni (senza cavi).
++
+[role="tabbed-block"]
+====
+.SG100 e SG1000
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Altezza | Larghezza | Profondità | Peso massimo 
+
+
+ a| 
+1,70 poll.
+
+(4,32 cm)
+ a| 
+17,32 poll.
+
+(44,0 cm)
+ a| 
+32,0 poll.
+
+(81,3 cm)
+ a| 
+39 libbre
+
+(17,7 kg)
+
+|===
+--
+.SG5700
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modello di appliance | Altezza | Larghezza | Profondità | Peso massimo 
+
+
+ a| 
+SG5712
+
+(12 dischi)
+ a| 
+3,41 poll.
+
+(8,68 cm)
+ a| 
+17,6 poll.
+
+(44,7 cm)
+ a| 
+21,1 poll.
+
+(53,6 cm)
+ a| 
+63.9 libbre
+
+(29.0 kg)
+
+
+
+ a| 
+SG5760
+
+(60 dischi)
+ a| 
+6,87 poll.
+
+(17,46 cm)
+ a| 
+17,66 poll.
+
+(44,86 cm)
+ a| 
+38,25 poll.
+
+(97,16 cm)
+ a| 
+250 libbre
+
+(113 kg)
+
+|===
+--
+.SG6000
+--
+[cols="2a,1a,1a,1a,1a"]
+|===
+| Tipo di shelf | Altezza | Larghezza | Profondità | Peso massimo 
+
+
+ a| 
+Shelf di controller E2860 (SG6060)
+ a| 
+6,87 poll.
+
+(17,46 cm)
+ a| 
+17,66 poll.
+
+(44,86 cm)
+ a| 
+38,25 poll.
+
+(97,16 cm)
+ a| 
+250 libbre
+
+(113 kg)
+
+
+
+ a| 
+Shelf di espansione (SG6060) - opzionale
+ a| 
+6,87 poll.
+
+(17,46 cm)
+ a| 
+17,66 poll.
+
+(44,86 cm)
+ a| 
+38,25 poll.
+
+(97,16 cm)
+ a| 
+250 libbre
+
+(113 kg)
+
+
+
+ a| 
+Shelf di controller EF570 (SGF6024)
+ a| 
+3,35 poll.
+
+(8,50 cm)
+ a| 
+17,66 poll.
+
+(44,86 cm)
+ a| 
+19,00 poll.
+
+(48,26 cm)
+ a| 
+51.74 libbre
+
+(23,47 kg)
+
+
+
+ a| 
+Controller di calcolo SG6000-CN
+ a| 
+1,70 poll.
+
+(4,32 cm)
+ a| 
+17,32 poll.
+
+(44,0 cm)
+ a| 
+32,0 poll.
+
+(81,3 cm)
+ a| 
+39 libbre
+
+(17,7 kg)
+
+|===
+--
+.SG6100
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Altezza | Larghezza | Profondità | Peso massimo 
+
+
+ a| 
+1,70 poll.
+
+(4,31 cm)
+ a| 
+18,98 poll.
+
+(48,2 cm)
+ a| 
+33,11 poll.
+
+(84,1 cm)
+ a| 
+43,83 libbre
+
+(19,88 kg)
+
+|===
+--
+====
+. Decidere dove installare l'appliance.
++
+
+CAUTION: Quando si installa lo shelf del controller E2860 o gli shelf di espansione opzionali, installare l'hardware dal basso verso la parte superiore del rack o dell'armadio per evitare che l'apparecchiatura si ribalti. Per assicurarsi che l'apparecchiatura più pesante si trovi nella parte inferiore del cabinet o del rack, installare il controller SG6000-CN sopra lo shelf del controller E2860 e gli shelf di espansione.
+
++
+
+NOTE: Prima di effettuare l'installazione, verificare che i cavi ottici da 0,5 m forniti con un'appliance SG6000, o i cavi forniti, siano sufficientemente lunghi per il layout pianificato.
+
+. Installare gli switch di rete necessari. Vedere link:https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp"^] per informazioni sulla compatibilità.
+

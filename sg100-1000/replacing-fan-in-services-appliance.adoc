@@ -1,0 +1,85 @@
+---
+permalink: sg100-1000/replacing-fan-in-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, fan, remove, removing, removal, install, installing, installation 
+summary: 'L"appliance di servizi è dotata di otto ventole di raffreddamento. Se una delle ventole si guasta, è necessario sostituirla il prima possibile per assicurarsi che l"apparecchio sia raffreddato correttamente.' 
+---
+= Sostituire la ventola in SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance di servizi è dotata di otto ventole di raffreddamento. Se una delle ventole si guasta, è necessario sostituirla il prima possibile per assicurarsi che l'apparecchio sia raffreddato correttamente.
+
+.Prima di iniziare
+* La ventola sostitutiva è stata disimballata.
+* Lo hai fatto link:locating-controller-in-data-center.html["posizionato fisicamente l'apparecchio"].
+* Hai confermato che le altre ventole sono installate e in esecuzione.
+
+
+.A proposito di questa attività
+Il nodo dell'appliance non sarà accessibile durante la sostituzione della ventola.
+
+La fotografia mostra una ventola per l'appliance di servizi. Le ventole di raffreddamento sono accessibili dopo aver aperto il coperchio superiore dell'apparecchio.
+
+
+NOTE: Ciascuna delle due unità di alimentazione contiene anche una ventola. Queste ventole non sono incluse in questa procedura.
+
+image::../media/fan_fru.png[FRU della ventola]
+
+.Fasi
+. Spegnere l'apparecchio.
++
+.. Accedere al nodo Grid:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Spegnere l'appliance di servizi: +
+`*shutdown -h now*`
+
+
+. Utilizzare uno dei due metodi per verificare che l'alimentazione dell'appliance di servizi sia spenta:
++
+** Il LED dell'indicatore di alimentazione sulla parte anteriore dell'apparecchio è spento.
+** La pagina Power Control dell'interfaccia BMC indica che l'appliance è spenta.
+
+
+. Estraete l'apparecchio dal rack.
+. Sollevare il dispositivo di chiusura sul coperchio superiore e rimuovere il coperchio dall'apparecchio.
+. Individuare la ventola guasta.
++
+image::../media/fan_location.png[Ubicazione ventole]
+
+. Estrarre la ventola guasta dal telaio.
++
+image::../media/fan_removal.png[Rimozione della ventola]
+
+. Far scorrere la ventola sostitutiva nello slot aperto dello chassis.
++
+Allineare il bordo della ventola con il perno di guida. Il perno è cerchiato nella fotografia.
+
++
+image::../media/fan_guide_pin.png[Pin della guida della ventola]
+
+. Premere con decisione il connettore della ventola nella scheda a circuito stampato.
++
+image::../media/fan_connector_check.png[Controllo del connettore della ventola]
+
+. Riposizionate il coperchio superiore sull'apparecchio e premete il dispositivo di chiusura per fissare il coperchio in posizione.
+. Accendere l'apparecchio e monitorare i LED del controller e i codici di avvio.
++
+Utilizzare l'interfaccia BMC per monitorare lo stato di avvio.
+
+. Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

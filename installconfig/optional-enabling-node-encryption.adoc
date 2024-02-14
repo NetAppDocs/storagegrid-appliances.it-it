@@ -1,0 +1,246 @@
+---
+permalink: installconfig/optional-enabling-node-encryption.html 
+sidebar: sidebar 
+keywords: node encryption, encryption, kms, key management server, drive encryption, self-encrypting drives, sed, full-disk encryption, fde 
+summary: 'È possibile attivare la crittografia a livello di nodo e di disco per proteggere i dischi dell"appliance da perdite fisiche o rimozione dal sito.' 
+---
+= Opzionale: Abilitare la crittografia del nodo o del disco
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile attivare la crittografia a livello di nodo e di disco per proteggere i dischi dell'appliance da perdite fisiche o rimozione dal sito.
+
+* <<Abilitare la crittografia del nodo,Crittografia dei nodi>> utilizza la crittografia software per proteggere tutti i dischi nell'appliance. Non richiede hardware di azionamento speciale. La crittografia dei nodi viene eseguita dal software di appliance utilizzando chiavi gestite da un server KMS (Key Management Server) esterno.
+* <<Attiva la crittografia delle unità,Crittografia dischi>> Utilizza la crittografia hardware per proteggere i dischi con crittografia automatica (SED), noti anche come dischi full-disk Encryption (FED), inclusi i dischi che soddisfano i requisiti FIPS (Federal Information Processing Standard). La crittografia del disco viene eseguita in ogni disco utilizzando le chiavi di crittografia gestite da un gestore delle chiavi StorageGRID.
+
+
+È possibile eseguire entrambi i livelli di crittografia sulle unità supportate per una maggiore protezione.
+
+Vedere https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^] Per informazioni su tutti i metodi di crittografia disponibili per i dispositivi StorageGRID.
+
+
+
+== Abilitare la crittografia del nodo
+
+Se si attiva la crittografia dei nodi, i dischi dell'appliance possono essere protetti mediante crittografia KMS (Secure Key Management Server) contro la perdita fisica o la rimozione dal sito. È necessario selezionare e attivare la crittografia dei nodi durante l'installazione dell'appliance. Non è possibile disattivare la crittografia del nodo dopo l'avvio del processo di crittografia KMS.
+
+Se si utilizza ConfigBuilder per generare un file JSON, è possibile attivare automaticamente la crittografia del nodo. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
+
+.Prima di iniziare
+Esaminare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurazione di KMS"^].
+
+.A proposito di questa attività
+Un'appliance con crittografia dei nodi abilitata si connette al server di gestione delle chiavi (KMS) esterno configurato per il sito StorageGRID. Ogni KMS (o cluster KMS) gestisce le chiavi di crittografia per tutti i nodi appliance del sito. Queste chiavi crittografano e decrittare i dati su ciascun disco di un'appliance che ha attivato la crittografia dei nodi.
+
+È possibile configurare un KMS in Grid Manager prima o dopo l'installazione dell'appliance in StorageGRID. Per ulteriori informazioni, consultare le informazioni relative a KMS e alla configurazione dell'appliance nelle istruzioni per l'amministrazione di StorageGRID.
+
+* Se viene configurato un KMS prima di installare l'appliance, la crittografia controllata da KMS inizia quando si attiva la crittografia dei nodi sull'appliance e la si aggiunge a un sito StorageGRID in cui è configurato KMS.
+* Se un KMS non viene configurato prima dell'installazione dell'appliance, la crittografia controllata da KMS viene eseguita su ogni appliance che ha attivato la crittografia del nodo non appena un KMS viene configurato e disponibile per il sito che contiene il nodo dell'appliance.
+
+
+
+CAUTION: Quando si installa un appliance con la crittografia dei nodi attivata, viene assegnata una chiave temporanea. I dati sull'appliance non sono protetti finché l'appliance non viene collegata al sistema di gestione delle chiavi (KMS) e non viene impostata una chiave di sicurezza KMS. Vedere https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html["Panoramica della configurazione dell'appliance KMS"^] per ulteriori informazioni.
+
+Senza la chiave KMS necessaria per decrittare il disco, i dati sull'appliance non possono essere recuperati e vengono effettivamente persi. Questo accade quando non è possibile recuperare la chiave di decrittografia dal KMS. La chiave diventa inaccessibile se un cliente cancella la configurazione del KMS, scade una chiave KMS, la connessione al KMS viene persa o l'appliance viene rimossa dal sistema StorageGRID in cui sono installate le chiavi KMS.
+
+.Fasi
+. Aprire un browser e inserire uno degli indirizzi IP del controller di elaborazione dell'appliance.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
++
+Viene visualizzata la pagina iniziale del programma di installazione dell'appliance StorageGRID.
+
++
+
+CAUTION: Dopo aver crittografato l'appliance con una chiave KMS, i dischi dell'appliance non possono essere decifrati senza utilizzare la stessa chiave KMS.
+
+. Selezionare *Configura hardware* > *crittografia nodo*.
++
+image::../media/kms_fde_enabled.png[KMS FDE attivato]
+
+. Selezionare *Enable node Encryption* (attiva crittografia nodo).
++
+Prima dell'installazione dell'appliance, è possibile deselezionare l'opzione *Enable node Encryption* (attiva crittografia del nodo) senza rischi di perdita di dati. All'avvio dell'installazione, il nodo appliance accede alle chiavi di crittografia KMS nel sistema StorageGRID e avvia la crittografia del disco. Non è possibile disattivare la crittografia dei nodi dopo l'installazione dell'appliance.
+
++
+
+CAUTION: Dopo aver aggiunto un'appliance con crittografia dei nodi abilitata a un sito StorageGRID con KMS, non è possibile interrompere l'utilizzo della crittografia KMS per il nodo.
+
+. Selezionare *Salva*.
+. Implementa l'appliance come nodo nel tuo sistema StorageGRID.
++
+La crittografia controllata DA KMS inizia quando l'appliance accede alle chiavi KMS configurate per il sito StorageGRID. Il programma di installazione visualizza messaggi di avanzamento durante il processo di crittografia KMS, che potrebbero richiedere alcuni minuti a seconda del numero di volumi di dischi nell'appliance.
+
++
+
+NOTE: Le appliance vengono inizialmente configurate con una chiave di crittografia casuale non KMS assegnata a ciascun volume di disco. I dischi vengono crittografati utilizzando questa chiave di crittografia temporanea, che non è sicura, fino a quando l'appliance che ha attivato la crittografia dei nodi non accede alle chiavi KMS configurate per il sito StorageGRID.
+
+
+
+.Al termine
+È possibile visualizzare lo stato della crittografia del nodo, i dettagli KMS e i certificati in uso quando il nodo dell'appliance è in modalità di manutenzione. Vedere link:../commonhardware/monitoring-node-encryption-in-maintenance-mode.html["Monitorare la crittografia dei nodi in modalità di manutenzione"] per informazioni.
+
+
+
+== Crittografia dischi
+
+La crittografia del disco viene gestita sull'hardware del disco con crittografia automatica (SED) durante i processi di scrittura e lettura. L'accesso ai dati su queste unità è controllato da una passphrase definita dall'utente. La crittografia del disco è usata per i dischi a stato solido (SSD) a collegamento diretto che sono utilizzati per il caching nelle appliance StorageGRID.
+
+I SED crittografati si bloccano automaticamente quando l'appliance viene spenta o quando l'unità viene rimossa dall'appliance. Un SED crittografato rimane bloccato dopo il ripristino dell'alimentazione fino all'immissione della passphrase corretta. Per consentire l'accesso ai dischi senza reinserire manualmente la passphrase, la passphrase viene memorizzata nell'appliance StorageGRID per sbloccare i dischi crittografati che rimangono nell'appliance al riavvio dell'appliance. Le unità crittografate con una passphrase SED sono accessibili a chiunque conosca la passphrase.
+
+La crittografia dei dischi non si applica ai dischi gestiti da SANtricity. Se si dispone di un'appliance StorageGRID con SED e controller SANtricity, è possibile abilitare la sicurezza delle unità in link:../installconfig/accessing-and-configuring-santricity-system-manager.html["Gestore di sistema di SANtricity"].
+
+È possibile abilitare la crittografia dei dischi durante l'installazione iniziale dell'appliance prima di caricare Grid Manager. È inoltre possibile attivare la crittografia dei nodi o modificare la passphrase impostando l'appliance in modalità di manutenzione.
+
+.Prima di iniziare
+Esaminare le informazioni su https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^].
+
+.A proposito di questa attività
+Quando la crittografia dell'unità viene inizialmente attivata, viene impostata una passphrase. Se un nodo di elaborazione viene sostituito o se un SED crittografato viene spostato in un nuovo nodo di elaborazione, è necessario immettere nuovamente la passphrase manualmente.
+
+
+CAUTION: Assicurarsi di memorizzare la passphrase di crittografia dell'unità in un luogo sicuro. Non è possibile accedere ai SED crittografati senza inserire manualmente la stessa passphrase se il SED è installato in un'altra appliance StorageGRID.
+
+
+
+=== Attiva la crittografia delle unità
+
+. Accedere al programma di installazione dell'appliance StorageGRID.
++
+** Durante l'installazione iniziale dell'appliance, aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione dell'appliance.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
+** Per un'appliance StorageGRID esistente, link:../commonhardware/placing-appliance-into-maintenance-mode.html["mettete l'apparecchio in modalità di manutenzione"].
+
+
+. Nella pagina iniziale del programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia unità*.
+. Selezionare *Abilita crittografia unità*.
++
+
+CAUTION: Dopo aver attivato la crittografia dell'unità e aver impostato la passphrase, le unità SED vengono crittografate tramite hardware. Non è possibile accedere al contenuto dell'unità senza utilizzare la stessa passphrase.
+
+. Selezionare *Salva*.
++
+Una volta crittografata l'unità, vengono visualizzate le informazioni sulla passphrase dell'unità.
+
++
+
+NOTE: Quando un'unità viene inizialmente crittografata, la passphrase viene impostata su un valore vuoto predefinito e il testo della passphrase corrente indica "predefinito (non sicuro)". Sebbene i dati su questo disco siano crittografati, è possibile accedervi senza immettere una passphrase fino a quando non viene impostata una passphrase univoca.
+
+. Immettere una passphrase univoca per l'accesso all'unità crittografata, quindi immettere nuovamente la passphrase per confermarla. La password deve contenere almeno 8 e non più di 32 caratteri.
+. Immettere il testo di visualizzazione della passphrase che consenta di richiamare la passphrase.
++
+Salvare la passphrase e il testo visualizzato nella passphrase in un luogo sicuro, ad esempio un'applicazione di gestione delle password.
+
+. Selezionare *Salva*.
+
+
+
+
+=== Visualizzare lo stato della crittografia dell'unità
+
+. link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
+. Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia unità*.
+
+
+
+
+=== Accedere a un'unità crittografata
+
+È necessario immettere la passphrase per accedere a un disco crittografato dopo la sostituzione del nodo di elaborazione o dopo lo spostamento di un disco in un nuovo nodo di elaborazione.
+
+. Accedere al programma di installazione dell'appliance StorageGRID.
++
+** Aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione del dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
+
+
+. Dal programma di installazione dell'appliance StorageGRID, selezionare il collegamento *crittografia unità* nel banner di avviso.
+. Immettere la passphrase di crittografia dell'unità precedentemente impostata in *Nuova passphrase* e *Ripeti nuova passphrase*.
++
+
+NOTE: Se si immettono valori per la passphrase e la passphrase e il testo visualizzato non corrispondono ai valori immessi in precedenza, l'autenticazione dell'unità non viene eseguita correttamente. È necessario riavviare l'apparecchio e immettere la passphrase e il testo di visualizzazione corretti.
+
+. Immettere il testo di visualizzazione della passphrase precedentemente impostato in *testo di visualizzazione della nuova passphrase*.
+. Selezionare *Salva*.
++
+I banner di avvertenza non vengono più visualizzati quando le unità sono sbloccate.
+
+. Tornare alla pagina iniziale del programma di installazione dell'appliance StorageGRID e selezionare *Riavvia* nel banner della sezione Installazione per riavviare il nodo di elaborazione e accedere alle unità crittografate.
+
+
+
+
+=== Modificare la passphrase di crittografia dell'unità
+
+. Accedere al programma di installazione dell'appliance StorageGRID.
++
+** Aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione del dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
+
+
+. Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia unità*.
+. Immettere una nuova passphrase univoca per l'accesso all'unità, quindi immettere nuovamente la passphrase per confermarla. La password deve contenere almeno 8 e non più di 32 caratteri.
++
+
+NOTE: Per poter modificare la passphrase di crittografia dell'unità, è necessario aver già effettuato l'autenticazione con l'accesso all'unità.
+
+. Immettere il testo di visualizzazione della passphrase che consenta di richiamare la passphrase.
+. Selezionare *Salva*.
++
+
+CAUTION: Dopo aver impostato una nuova passphrase, le unità crittografate non possono essere decrittografate senza utilizzare la nuova passphrase e il testo di visualizzazione della passphrase.
+
+. Salvare il testo visualizzato della nuova passphrase e della passphrase in un luogo sicuro, ad esempio un'applicazione di gestione delle password.
+
+
+
+
+=== Disattivare la crittografia delle unità
+
+. Accedere al programma di installazione dell'appliance StorageGRID.
++
+** Aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione del dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
+
+
+. Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia unità*.
+. Deselezionare *Abilita crittografia unità*.
+. Per cancellare tutti i dati dell'unità quando la crittografia dell'unità è disattivata, selezionare *Cancella tutti i dati sulle unità.*
++
+
+NOTE: L'opzione di eliminazione dei dati è disponibile solo dal programma di installazione dell'appliance StorageGRID prima che l'appliance venga aggiunta alla griglia. Non è possibile accedere a questa opzione quando si accede al programma di installazione dell'appliance StorageGRID dalla modalità di manutenzione.
+
+. Selezionare *Salva*.
+
+
+Il contenuto dell'unità non viene crittografato o cancellato crittograficamente, la passphrase di crittografia viene cancellata e i SED sono ora accessibili senza una passphrase.

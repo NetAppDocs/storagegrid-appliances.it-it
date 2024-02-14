@@ -1,0 +1,43 @@
+---
+permalink: sg6100/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100 storage appliance, SGF6112 storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: 'Potrebbe essere necessario eseguire le procedure di manutenzione dell"apparecchio. In questa sezione sono riportate le procedure specifiche per la manutenzione dell"apparecchio SG6100.' 
+---
+= Manutenzione dell'appliance SG6100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario eseguire le procedure di manutenzione dell'apparecchio. In questa sezione sono riportate le procedure specifiche per la manutenzione dell'apparecchio SG6100.
+
+Le procedure descritte in questa sezione presuppongono che l'appliance sia già stata implementata come nodo di storage in un sistema StorageGRID.
+
+*Le procedure di manutenzione della configurazione* vengono eseguite utilizzando l'Appliance Installer, Grid Manager o l'interfaccia BMC. Queste procedure includono:
+
+* link:turning-sgf6112-identify-led-on-and-off.html["Accendere e spegnere il LED di identificazione dell'appliance"]
+* link:locating-sgf6112-in-data-center.html["Individuare l'appliance nel data center"]
+* link:power-sgf6112-off-on.html["Spegnere l'apparecchio"]
+* link:changing-link-configuration-of-sgf6112-appliance.html["Modificare la configurazione del collegamento dell'appliance"]
+
+
+*Le procedure di manutenzione hardware* richiedono la manipolazione fisica di componenti specifici di SGF6112.
+
+
+
+== Aggiornamento del firmware del disco
+
+Il firmware dei dischi di SGF6112 viene controllato automaticamente ogni volta che si riavvia l'appliance. Se necessario, il firmware viene aggiornato automaticamente alla versione prevista dalla release corrente di StorageGRID. In genere, gli aggiornamenti del firmware si verificano durante gli aggiornamenti del software StorageGRID. Gli eventuali aggiornamenti del firmware del disco necessari per le versioni StorageGRID esistenti verranno inclusi nelle hotfix. Seguire le istruzioni fornite con ogni hotfix per assicurarsi che l'aggiornamento venga applicato a tutti i dischi che potrebbero trarne beneficio.
+
+
+NOTE: Per la manutenzione dell'appliance SGF6112 non è necessario Gestione di sistema di SANtricity.
+
+
+
+== Procedure generali di manutenzione
+
+Vedere link:../commonhardware/index.html["Procedure di manutenzione comuni"] per le procedure identiche per tutte le appliance, ad esempio l'applicazione di una correzione rapida, il ripristino di un nodo o di un sito e la manutenzione della rete.
+
+Vedere link:../installconfig/configuring-hardware.html["Configurare l'hardware dell'appliance"] per le procedure di manutenzione dell'appliance eseguite anche durante l'installazione e la configurazione iniziale dell'appliance.

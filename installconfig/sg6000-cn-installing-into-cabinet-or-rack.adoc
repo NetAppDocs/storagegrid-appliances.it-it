@@ -1,0 +1,44 @@
+---
+permalink: installconfig/sg6000-cn-installing-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, rail, rails 
+summary: Installare un set di guide per il controller SG6000-CN nel cabinet o nel rack, quindi far scorrere il controller sulle guide. 
+---
+= Installazione del controller SG6000-CN (SG6060 e SG6024)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Installare un set di guide per il controller SG6000-CN nel cabinet o nel rack, quindi far scorrere il controller sulle guide.
+
+.Prima di iniziare
+* Hai esaminato il documento Safety Notices incluso nella confezione e compreso le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Le istruzioni sono fornite con il kit di guide.
+* Sono stati installati lo shelf e i dischi del controller E2860 o lo shelf del controller EF570.
+
+
+.Fasi
+. Seguire attentamente le istruzioni del kit di guide per installare le guide nel cabinet o nel rack.
+. Sulle due guide installate nell'armadietto o nel rack, estendere le parti mobili delle guide fino a udire uno scatto.
++
+image::../media/rails_extended_out.gif[Guide SG6000]
+
+. Inserire il controller SG6000-CN nelle guide.
+. Far scorrere il controller nel cabinet o nel rack.
++
+Se non è possibile spostare ulteriormente il controller, tirare i fermi blu su entrambi i lati dello chassis per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 scorrevole sulle guide]
+
++
+
+NOTE: Non collegare il pannello anteriore fino a quando non si accende il controller.
+
+. Serrare le viti di fissaggio sul pannello anteriore del controller per fissare il controller nel rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Viti di fissaggio del rack SG6060]
+
+

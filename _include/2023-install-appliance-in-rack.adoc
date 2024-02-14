@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+.Prima di iniziare
+* È stato esaminato il documento Avvisi di sicurezza incluso nella confezione e si sono comprese le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Le istruzioni sono fornite con il kit di guide.
+
+
+.Fasi
+. Seguire attentamente le istruzioni del kit di guide per installare le guide nel cabinet o nel rack.
+. Sulle due guide installate nell'armadietto o nel rack, estendere le parti mobili delle guide fino a udire uno scatto.
++
+image::../media/rails_extended_out.gif[Guide dell'apparecchio estese]
+
+. Inserite l'apparecchio nelle guide.
+. Far scorrere l'apparecchio nell'armadietto o nel rack.
++
+Se non è possibile spostare ulteriormente l'apparecchio, tirare i fermi blu su entrambi i lati del telaio per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[Apparecchio scorrevole su guide]
+
+. Stringere le viti di fissaggio sul pannello anteriore dell'apparecchio per fissare l'apparecchio al rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Viti di fissaggio del rack dell'apparecchio]
+
++
+
+NOTE: Non inserite la mascherina anteriore prima di aver acceso l'apparecchio.
+
+

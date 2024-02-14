@@ -1,0 +1,30 @@
+---
+permalink: sg5700/upgrading-santricity-os-on-storage-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
+summary: 'Per garantire un funzionamento ottimale dello storage controller, è necessario eseguire l"aggiornamento alla versione di manutenzione più recente del sistema operativo SANtricity che sia qualificato per l"appliance StorageGRID.' 
+---
+= Upgrade del sistema operativo SANtricity sullo storage controller SG5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per garantire un funzionamento ottimale dello storage controller, è necessario eseguire l'aggiornamento alla versione di manutenzione più recente del sistema operativo SANtricity che sia qualificato per l'appliance StorageGRID.
+
+Consultare https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp (IMT)"^] per determinare la versione da utilizzare.
+
+Scaricare il nuovo file del software SANtricity OS da https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^].
+
+Utilizzare una delle seguenti procedure in base alla versione di SANtricity OS attualmente installata:
+
+* Se lo storage controller utilizza SANtricity OS 08.42.20.00 (11.42) o versione successiva, utilizzare Grid Manager per eseguire l'aggiornamento.
++
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html["Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando Grid Manager"]
+
+* Se lo storage controller utilizza una versione di SANtricity OS precedente alla 08.42.20.00 (11.42), utilizzare la modalità di manutenzione per eseguire l'aggiornamento.
++
+link:upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html["Aggiornare il sistema operativo SANtricity sul controller E2800 utilizzando la modalità di manutenzione"]
+
+

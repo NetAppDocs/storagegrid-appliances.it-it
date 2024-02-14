@@ -1,0 +1,96 @@
+---
+permalink: sg6100/manage-drives-tab.html 
+sidebar: sidebar 
+keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
+summary: 'È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire le attività di risoluzione dei problemi e manutenzione sulle unità dell"appliance SGF6112.' 
+---
+= Utilizzare la scheda Gestisci unità
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire le attività di risoluzione dei problemi e manutenzione sulle unità dell'appliance SGF6112.
+
+.Prima di iniziare
+* Hai effettuato l'accesso a Grid Manager utilizzando un https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/web-browser-requirements.html["browser web supportato"^].
+
+
+.A proposito di questa attività
+Se si dispone di un apparecchio SGF6112 e di uno dei due https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/admin-group-permissions.html["Autorizzazione di accesso root o amministratore dell'appliance di storage"], Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.
+
+La scheda Gestisci unità contiene le seguenti visualizzazioni:
+
+Layout:: Layout delle unità per lo storage dei dati nell'appliance. Selezionare un'unità per visualizzare i dettagli dell'unità.
++
+--
+image:../media/manage_drives_tab.png["Visualizzazione del layout della scheda Gestisci unità"]
+
+--
+Tabella:: Elenca le informazioni per ciascuna unità. Selezionare un'unità per visualizzare i dettagli dell'unità.
++
+--
+image:../media/manage_drives_tab_table.png["Scheda Gestisci unità, vista Tabella"]
+
+--
+Dettagli dell'unità:: Riepilogo per ciascuna unità. Selezionare il pulsante di attività appropriato, come descritto nei passaggi seguenti.
++
+--
+image:../media/manage_drives_tab_details.png["Scheda Gestisci unità Dettagli unità"]
+
+--
+
+
+
+
+== Accendere o spegnere la spia del localizzatore
+
+Per individuare fisicamente un'unità nell'apparecchio:
+
+. Da Grid Manager, selezionare *NODI* > *_data center_*.
+. Selezionare *_appliance storage node_* > *Manage drives* > *Layout* > *_drive_*.
++
+Viene visualizzato il pannello dei dettagli dell'unità.
+
+. Selezionare *Turn Locator light on* (attiva luce localizzatore).
++
+** Icona di una lampadina image:../media/icon_drive-light-bulb.png["lampadina luce di guida"] viene visualizzato per l'unità.
+** Un LED giallo lampeggia sull'unità fisica.
+
+
+. Se si desidera disattivare la spia del localizzatore, selezionare *Disattiva luce localizzatore*.
+
+
+
+
+== [[logicamente-replace-drive]]sostituire logicamente l'unità
+
+Se è necessario ricostruire o reinizializzare un'unità nell'appliance di archiviazione:
+
+. Da Grid Manager, selezionare *NODI* > *_data center_*.
+. Selezionare *_appliance storage node_* > *Manage drives* > *Layout* > *_drive_*.
++
+Viene visualizzato il pannello dei dettagli dell'unità.
+
+. Selezionare *logicamente Sostituisci*.
++
+Nel pannello dei dettagli dell'unità, lo stato dell'unità indica _ricostruzione_. La ricostruzione di un'unità potrebbe richiedere fino a 5 minuti.
+
+
+
+
+
+== Disco guasto
+
+Per la risoluzione dei problemi, è possibile "guastare" manualmente un'unità che si sospetta sia difettosa. Il sistema verrà quindi eseguito senza tale unità.
+
+. Da Grid Manager, selezionare *NODI* > *_data center_*.
+. Selezionare *_appliance storage node_* > *Manage drives* > *Layout* > *_drive_*.
++
+Viene visualizzato il pannello dei dettagli dell'unità.
+
+. Selezionare *errore unità*.
+
+
+Dopo aver guastato un'unità, è necessario sostituirla fisicamente o. <<logically-replace-drive,sostituire logicamente l'unità>>.

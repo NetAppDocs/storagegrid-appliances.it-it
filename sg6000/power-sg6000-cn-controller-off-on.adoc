@@ -1,0 +1,189 @@
+---
+permalink: sg6000/power-sg6000-cn-controller-off-on.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, power off, turn off, shut off, shutdown, shut down, sg6000-cn, controller, power on, turn on, start 
+summary: È possibile spegnere il controller SG6000-CN e riaccenderlo per eseguire la manutenzione. 
+---
+= Spegnere e riaccendere il controller SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile spegnere il controller SG6000-CN e riaccenderlo per eseguire la manutenzione.
+
+
+
+== Spegnere il controller SG6000-CN
+
+Spegnere il controller SG6000-CN per eseguire la manutenzione dell'hardware.
+
+.Prima di iniziare
+* Il controller SG6000-CN è stato fisicamente posizionato e richiede manutenzione nel data center. Vedere link:locating-controller-in-data-center.html["Individuare il controller nel data center"].
+
+
+.A proposito di questa attività
+Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di storage siano collegati alla rete prima di spegnere il controller o spegnere il controller durante una finestra di manutenzione programmata quando sono accettabili periodi di interruzione del servizio. Consultare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
+
+
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario spegnere il controller durante una finestra di manutenzione pianificata. In caso contrario, è possibile che l'accesso a tali oggetti venga temporaneamente perso durante questa procedura. +
+Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di vita delle informazioni.
+
+.Fasi
+. Spegnere il controller SG6000-CN.
++
+
+CAUTION: È necessario eseguire uno spegnimento controllato dell'apparecchio immettendo i comandi specificati di seguito. È consigliabile eseguire un arresto controllato quando possibile per evitare avvisi non necessari, garantire la disponibilità di registri completi ed evitare interruzioni del servizio.
+
++
+.. Se non hai ancora effettuato l'accesso al nodo grid, effettua l'accesso utilizzando putty o un altro client ssh:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Spegnere la centralina SG6000-CN: +
+`*shutdown -h now*`
++
+Il completamento di questo comando potrebbe richiedere fino a 10 minuti.
+
+
+
+. Utilizzare uno dei seguenti metodi per verificare che il controller SG6000-CN sia spento:
++
+** Controllare il LED di alimentazione blu sulla parte anteriore del controller e verificare che sia spento.
++
+image::../media/sg6060_front_panel_power_led_off.jpg[LED di alimentazione del pannello anteriore SG6060 - spento]
+
+** Controllare i LED verdi di entrambi gli alimentatori sul retro del controller e verificare che lampeggino regolarmente (circa un lampeggio al secondo).
++
+image::../media/sg6060_rear_panel_power_led_on.jpg[LED di alimentazione del pannello posteriore SG6060]
+
+** Utilizzare l'interfaccia BMC del controller:
++
+... Accedere all'interfaccia BMC del controller.
++
+link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC"]
+
+... Selezionare *Power Control*.
+... Verificare che le azioni risparmio energia indichi che l'host è attualmente spento.
++
+image::../media/bmc_power_control_page_controller_off.png[Pagina BMC Power Control - controller disattivato]
+
+
+
+
+
+
+
+
+
+== Accendere il controller SG6000-CN e verificarne il funzionamento
+
+Accendere il controller dopo aver completato la manutenzione.
+
+.Prima di iniziare
+* Il controller è stato installato in un cabinet o rack e sono stati collegati i cavi di alimentazione e dati.
++
+link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html["Reinstallare il controller SG6000-CN nel cabinet o nel rack"]
+
+* Il controller è stato fisicamente posizionato nel data center.
++
+link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+
+
+
+.Fasi
+. Accendere il controller SG6000-CN e monitorare i LED del controller e i codici di avvio utilizzando uno dei seguenti metodi:
++
+** Premere l'interruttore di alimentazione sulla parte anteriore del controller.
++
+image::../media/sg6060_front_panel_power_led_off.jpg[LED di alimentazione del pannello anteriore SG6060 - spento]
+
+** Utilizzare l'interfaccia BMC del controller:
++
+... Accedere all'interfaccia BMC del controller.
++
+link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC"]
+
+... Selezionare *Power Control*.
+... Selezionare *Power on Server*, quindi selezionare *Perform Action* (Esegui azione).
++
+image::../media/sg6060_power_on_from_bmc.png[Accendere il controller da BMC]
+
++
+Utilizzare l'interfaccia BMC per monitorare lo stato di avvio.
+
+
+
+
+
+. Verificare che il controller dell'appliance venga visualizzato in Grid Manager e senza avvisi.
++
+La visualizzazione del controller in Grid Manager potrebbe richiedere fino a 20 minuti.
+
+. Verificare che il nuovo controller SG6000-CN sia completamente operativo:
++
+.. Accedere al nodo grid utilizzando putty o un altro client ssh:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Immettere il seguente comando e verificare che restituisca l'output previsto: +
+`cat /sys/class/fc_host/*/port_state`
++
+Output previsto:
+
++
+[listing]
+----
+Online
+Online
+Online
+Online
+----
++
+Se l'output previsto non viene restituito, contattare il supporto tecnico.
+
+.. Immettere il seguente comando e verificare che restituisca l'output previsto: +
+`cat /sys/class/fc_host/*/speed`
++
+Output previsto:
+
++
+[listing]
+----
+16 Gbit
+16 Gbit
+16 Gbit
+16 Gbit
+----
++
+Se l'output previsto non viene restituito, contattare il supporto tecnico.
+
+.. Dalla pagina Nodes (nodi) di Grid Manager, assicurarsi che il nodo appliance sia connesso alla griglia e non presenti avvisi.
++
+
+CAUTION: Non scollegare un altro nodo appliance a meno che l'appliance non sia dotata di un'icona verde.
+
+
+
+. Opzionale: Installare il pannello anteriore, se è stato rimosso.
+
+
+.Informazioni correlate
+* link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html#remove-sg6000-cn-controller-from-cabinet-or-rack["Rimuovere il controller SG6000-CN dal cabinet o dal rack"]
+* link:../installconfig/viewing-status-indicators.html["Visualizzare gli indicatori di stato"]
+

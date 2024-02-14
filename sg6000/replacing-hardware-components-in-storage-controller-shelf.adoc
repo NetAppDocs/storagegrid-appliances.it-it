@@ -1,0 +1,76 @@
+---
+permalink: sg6000/replacing-hardware-components-in-storage-controller-shelf.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, storage controller shelf, Battery, Drive, Power canister, power supply, Fan canister, fan, Drive drawer 
+summary: Se si verifica un problema hardware, potrebbe essere necessario sostituire un componente nello shelf dello storage controller. 
+---
+= Sostituisci i componenti hardware nello shelf dello storage controller SG6000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si verifica un problema hardware, potrebbe essere necessario sostituire un componente nello shelf dello storage controller.
+
+.Prima di iniziare
+* Si dispone della procedura di sostituzione dell'hardware e-Series.
+* L'appliance di storage è stata fisicamente posizionata in cui si stanno sostituendo i componenti hardware dello shelf nel data center.
++
+link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+
+
+
+.A proposito di questa attività
+Per sostituire la batteria nel controller di storage, consultare la procedura riportata nelle istruzioni per link:replacing-storage-controller-sg6000.html["sostituzione di un controller di storage"]. Queste istruzioni descrivono come rimuovere un controller dall'appliance, rimuovere la batteria dal controller, installare la batteria e sostituire il controller.
+
+Per istruzioni relative alle altre FRU (Field Replaceable Unit) negli shelf dei controller, accedere a. http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedure e-Series per la manutenzione del sistema"^].
+
+[cols="1a,3a"]
+|===
+| FRU | Vedere le istruzioni 
+
+
+ a| 
+Batteria
+ a| 
+StorageGRID (queste istruzioni): Sostituzione di un controller di storage
+
+
+
+ a| 
+Disco
+ a| 
+E-Series:
+
+* Sostituire l'unità (60 dischi)
+* Sostituire l'unità (12 o 24 dischi)
+
+
+
+
+ a| 
+Filtro a carboni attivi
+ a| 
+E-Series
+
+* Sostituire il filtro a carboni attivi (60 dischi)
+* Sostituire l'alimentatore (12 o 24 dischi)
+
+
+
+
+ a| 
+Contenitore della ventola (solo shelf da 60 dischi)
+ a| 
+E-Series: Sostituire il contenitore della ventola (60 dischi)
+
+
+
+ a| 
+Cassetto unità (solo shelf da 60 dischi)
+ a| 
+E-Series: Sostituire il cassetto dell'unità (60 dischi)
+
+|===
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

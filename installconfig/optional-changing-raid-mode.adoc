@@ -1,0 +1,79 @@
+---
+permalink: installconfig/optional-changing-raid-mode.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, raid, raid mode, change, changing, modify, DDP, ddp16, RAID 6 
+summary: 'Su alcuni modelli di appliance, è possibile passare a una modalità RAID diversa sull"appliance per soddisfare i requisiti di storage e ripristino. È possibile modificare la modalità solo prima di implementare il nodo di storage dell"appliance.' 
+---
+= Opzionale: Modifica della modalità RAID (SG5760 e SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Su alcuni modelli di appliance, è possibile passare a una modalità RAID diversa sull'appliance per soddisfare i requisiti di storage e ripristino. È possibile modificare la modalità solo prima di implementare il nodo di storage dell'appliance.
+
+Se si utilizza ConfigBuilder per generare un file JSON, è possibile modificare automaticamente la modalità RAID. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
+
+.A proposito di questa attività
+Se supportato dall'appliance, è possibile scegliere una delle seguenti opzioni di configurazione del volume:
+
+* *Dynamic Disk Pools (DDP)*: Questa modalità utilizza due unità di parità ogni otto unità dati. Questa è la modalità predefinita e consigliata per tutti gli appliance. Rispetto a RAID 6, DDP offre migliori prestazioni di sistema, tempi di ricostruzione ridotti dopo guasti al disco e facilità di gestione. DDP offre anche la protezione contro le perdite di cassetto nelle appliance SG5760.
++
+
+NOTE: DDP non fornisce la protezione contro la perdita di cassetto nelle appliance SG6060 a causa dei due SSD. La protezione dalle perdite dei cassetti è efficace in tutti gli shelf di espansione aggiunti a un SG6060.
+
+* *DDP16*: Questa modalità utilizza due unità di parità ogni 16 unità dati, il che comporta una maggiore efficienza dello storage rispetto al DDP. Rispetto a RAID 6, il sistema DDP16 offre migliori performance di sistema, tempi di ricostruzione ridotti dopo guasti al disco, facilità di gestione ed efficienza dello storage paragonabile. Per utilizzare la modalità DDP16, la configurazione deve contenere almeno 20 dischi. Il DDP16 non fornisce la protezione contro le perdite di cassetto.
+* *RAID6*: Questa modalità utilizza due unità di parità per ogni 16 o più unità dati. Si tratta di uno schema di protezione hardware che utilizza strisce di parità su ciascun disco e consente due guasti del disco all'interno del set RAID prima che i dati vengano persi. Per utilizzare la modalità RAID 6, la configurazione deve contenere almeno 20 dischi. Sebbene RAID 6 possa aumentare l'efficienza dello storage dell'appliance rispetto a DDP, non è consigliato per la maggior parte degli ambienti StorageGRID.
+
+
+
+CAUTION: Se alcuni volumi sono già stati configurati o se StorageGRID è stato installato in precedenza, la modifica della modalità RAID comporta la rimozione e la sostituzione dei volumi. Tutti i dati presenti su tali volumi andranno persi.
+
+[role="tabbed-block"]
+====
+.SG5760
+--
+.Prima di iniziare
+* Hai un SG5760 con 60 dischi. Se si dispone di un SG5712, è necessario utilizzare la modalità DDP predefinita.
+* Si sta utilizzando qualsiasi client in grado di connettersi a StorageGRID.
+* Il client dispone di un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+
+
+.Fasi
+. Utilizzando il laptop di assistenza, aprire un browser Web e accedere al programma di installazione dell'appliance StorageGRID: +
+`*https://_E5700SG_Controller_IP_:8443*`
++
+Dove `_E5700SG_Controller_IP_` Indica uno degli indirizzi IP del controller E5700SG.
+
+. Selezionare *Advanced* (Avanzate) > *RAID Mode* (modalità RAID).
+. Nella pagina *Configure RAID Mode* (Configura modalità RAID), selezionare la modalità RAID desiderata dall'elenco a discesa Mode (modalità).
+. Fare clic su *Save* (Salva).
+
+
+--
+.SG6000
+--
+.Prima di iniziare
+* Si sta utilizzando qualsiasi client in grado di connettersi a StorageGRID.
+* Il client dispone di un  https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+
+
+.Fasi
+. Aprire un browser e inserire uno degli indirizzi IP del controller di elaborazione dell'appliance.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
+
++
+Viene visualizzata la pagina iniziale del programma di installazione dell'appliance StorageGRID.
+
+. Selezionare *Advanced* (Avanzate) > *RAID Mode* (modalità RAID).
+. Nella pagina *Configure RAID Mode* (Configura modalità RAID), selezionare la modalità RAID desiderata dall'elenco a discesa Mode (modalità).
+. Fare clic su *Save* (Salva).
+
+
+--
+====

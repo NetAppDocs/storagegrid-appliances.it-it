@@ -1,0 +1,744 @@
+---
+permalink: installconfig/troubleshooting-hardware-installation.html 
+sidebar: sidebar 
+keywords: 'storage node, storage appliance, troubleshoot, troubleshooting, hardware, install, installation, sg6000, storage node, storage appliance, boot codes, boot-up codes, start codes, codes, boot, start, sg6000-cn, error codes, errors, error, codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection, unable to connect, no connection, Expansion, shelves, don"t appear, Appliance Installer, missing, not shown, synchronize, synchronizing, synchronization, SANtricity OS Software, santricity' 
+summary: 'In caso di problemi durante l"installazione, potrebbe essere utile consultare le informazioni per la risoluzione dei problemi relativi alla configurazione dell"hardware e alla connettività.' 
+---
+= Risoluzione dei problemi di installazione hardware (SG5700 o SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di problemi durante l'installazione, potrebbe essere utile consultare le informazioni per la risoluzione dei problemi relativi alla configurazione dell'hardware e alla connettività.
+
+
+
+== Visualizzazione dei codici di avvio (controller SG6000-CN)
+
+Quando si alimenta l'appliance, il BMC registra una serie di codici di avvio per il controller SG6000-CN. È possibile visualizzare questi codici in diversi modi.
+
+.Prima di iniziare
+* Sai come fare link:accessing-bmc-interface.html["Accedere al dashboard BMC"].
+* Se si desidera utilizzare Serial-over-LAN (Sol), si ha esperienza nell'utilizzo delle applicazioni della console IPMI Sol.
+
+
+.Fasi
+. Selezionare uno dei seguenti metodi per visualizzare i codici di avvio del controller dell'appliance e raccogliere l'apparecchiatura richiesta.
++
+[cols="1a,2a"]
+|===
+| Metodo | Attrezzatura necessaria 
+
+
+ a| 
+Console VGA
+ a| 
+** Monitor con supporto VGA
+** Cavo VGA
+
+
+
+
+ a| 
+KVM
+ a| 
+** Cavo RJ-45
+
+
+
+
+ a| 
+Porta seriale
+ a| 
+** CAVO seriale DB-9
+** Terminale seriale virtuale
+
+
+
+
+ a| 
+SOL
+ a| 
+** Terminale seriale virtuale
+
+
+|===
+. Se si utilizza una console VGA, attenersi alla seguente procedura:
++
+.. Collegare un monitor VGA alla porta VGA sul retro dell'apparecchio.
+.. Visualizzare i codici visualizzati sul monitor.
+
+
+. Se si utilizza BMC KVM, attenersi alla seguente procedura:
++
+.. Connettersi alla porta di gestione BMC e accedere all'interfaccia Web BMC.
+.. Selezionare *telecomando*.
+.. Avviare il KVM.
+.. Visualizzare i codici sul monitor virtuale.
+
+
+. Se si utilizza una porta seriale e un terminale, attenersi alla seguente procedura:
++
+.. Collegare alla porta seriale DB-9 sul retro dell'appliance.
+.. Utilizzare le impostazioni `115200 8-N-1`.
+.. Visualizzare i codici stampati sul terminale seriale.
+
+
+. Se si utilizza Sol, attenersi alla seguente procedura:
++
+.. Connettersi a IPMI Sol utilizzando l'indirizzo IP BMC e le credenziali di accesso.
++
+`ipmitool -I lanplus -H _BMC_Port_IP_ -U root -P _Password_ sol activate`
+
+.. Visualizzare i codici sul terminale seriale virtuale.
+
+
+. Utilizza la tabella per cercare i codici dell'apparecchio.
++
+[cols="1a,3a"]
+|===
+| Codice | Indica 
+
+
+ a| 
+CIAO
+ a| 
+Lo script di boot master è stato avviato.
+
+
+
+ a| 
+HP
+ a| 
+Il sistema sta verificando se il firmware della scheda di interfaccia di rete (NIC) deve essere aggiornato.
+
+
+
+ a| 
+RB
+ a| 
+Il sistema viene riavviato dopo l'applicazione degli aggiornamenti del firmware.
+
+
+
+ a| 
+FP
+ a| 
+I controlli di aggiornamento del firmware del sottosistema hardware sono stati completati. Avvio dei servizi di comunicazione tra controller in corso.
+
+
+
+ a| 
+LUI
+ a| 
+Solo per un nodo di storage dell'appliance:
+
+Il sistema è in attesa di connettività con i controller di storage e di sincronizzazione con il sistema operativo SANtricity.
+
+*Nota:* se la procedura di avvio non procede oltre questa fase, eseguire le seguenti operazioni:
+
+.. Verificare che i quattro cavi di interconnessione tra il controller SG6000-CN e i due controller storage siano collegati correttamente.
+.. Se necessario, sostituire uno o più cavi e riprovare.
+.. Se il problema persiste, contattare il supporto tecnico.
+
+
+
+
+ a| 
+HC
+ a| 
+Il sistema sta verificando la presenza di dati di installazione di StorageGRID.
+
+
+
+ a| 
+HO
+ a| 
+Il programma di installazione dell'appliance StorageGRID è in esecuzione.
+
+
+
+ a| 
+HA
+ a| 
+StorageGRID è in esecuzione.
+
+|===
+
+
+
+
+== Visualizzazione dei codici di errore (controller SG6000-CN)
+
+Se si verifica un errore hardware durante l'avvio del controller SG6000-CN, il BMC registra un codice di errore. Se necessario, è possibile visualizzare questi codici di errore utilizzando l'interfaccia BMC, quindi collaborare con il supporto tecnico per risolvere il problema.
+
+.Prima di iniziare
+* Sai come fare link:accessing-bmc-interface.html["Accedere al dashboard BMC"].
+
+
+.Fasi
+. Dalla dashboard BMC, selezionare *BIOS POST Code* (Codice POST BIOS).
+. Esaminare le informazioni visualizzate per il codice corrente e il codice precedente.
++
+Se viene visualizzato uno dei seguenti codici di errore, collaborare con il supporto tecnico per risolvere il problema.
+
++
+[cols="1a,3a"]
+|===
+| Codice | Indica 
+
+
+ a| 
+0x0E
+ a| 
+Microcodice non trovato
+
+
+
+ a| 
+0x0F
+ a| 
+Microcodice non caricato
+
+
+
+ a| 
+0x50
+ a| 
+Errore di inizializzazione della memoria. Tipo di memoria non valido o velocità della memoria incompatibile.
+
+
+
+ a| 
+0x51
+ a| 
+Errore di inizializzazione della memoria. Lettura SPD non riuscita.
+
+
+
+ a| 
+0x52
+ a| 
+Errore di inizializzazione della memoria. Le dimensioni della memoria non sono valide o i moduli di memoria non corrispondono.
+
+
+
+ a| 
+0x53
+ a| 
+Errore di inizializzazione della memoria. Nessuna memoria utilizzabile rilevata.
+
+
+
+ a| 
+0x54
+ a| 
+Errore di inizializzazione della memoria non specificato
+
+
+
+ a| 
+0x55
+ a| 
+Memoria non installata
+
+
+
+ a| 
+0x56
+ a| 
+Tipo di CPU o velocità non validi
+
+
+
+ a| 
+0x57
+ a| 
+Mancata corrispondenza della CPU
+
+
+
+ a| 
+0x58
+ a| 
+Test automatico della CPU non riuscito o possibile errore della cache della CPU
+
+
+
+ a| 
+0x59
+ a| 
+Il microcodice della CPU non è stato trovato o l'aggiornamento del microcodice non è riuscito
+
+
+
+ a| 
+0x5A
+ a| 
+Errore CPU interno
+
+
+
+ a| 
+0x5B
+ a| 
+Reset PPI is not available (Ripristina PPI non disponibile)
+
+
+
+ a| 
+0x5C
+ a| 
+Test automatico BMC fase PEI non riuscito
+
+
+
+ a| 
+0xD0
+ a| 
+Errore di inizializzazione della CPU
+
+
+
+ a| 
+0xD1
+ a| 
+Errore di inizializzazione North Bridge
+
+
+
+ a| 
+0xD2
+ a| 
+Errore di inizializzazione del South Bridge
+
+
+
+ a| 
+0xd3
+ a| 
+Alcuni protocolli architettonici non sono disponibili
+
+
+
+ a| 
+0xD4
+ a| 
+Errore di allocazione delle risorse PCI. Risorse esaurite.
+
+
+
+ a| 
+0xD5
+ a| 
+Spazio non disponibile per la Option ROM legacy
+
+
+
+ a| 
+0xD6
+ a| 
+Nessun dispositivo di output della console trovato
+
+
+
+ a| 
+0xD7
+ a| 
+Nessun dispositivo di input console trovato
+
+
+
+ a| 
+0xD8
+ a| 
+Password non valida
+
+
+
+ a| 
+0xD9
+ a| 
+Errore durante il caricamento dell'opzione di avvio (errore restituito da LoadImage)
+
+
+
+ a| 
+0xDA
+ a| 
+Opzione di boot non riuscita (errore restituito da startimage)
+
+
+
+ a| 
+0xDB
+ a| 
+Aggiornamento flash non riuscito
+
+
+
+ a| 
+0xDC
+ a| 
+Il protocollo di reset non è disponibile
+
+
+
+ a| 
+0xDD
+ a| 
+Errore di autotest BMC fase DXE
+
+
+
+ a| 
+0xE8
+ a| 
+MRC: ERR_NO_MEMORY
+
+
+
+ a| 
+0xE9
+ a| 
+MRC: ERR_LT_LOCK
+
+
+
+ a| 
+0xEA
+ a| 
+MRC: ERR_DDR_INIT
+
+
+
+ a| 
+0xEB
+ a| 
+MRC: ERR_MEM_TEST
+
+
+
+ a| 
+0xEC
+ a| 
+MRC: ERR_VENDOR_SPECIFIC
+
+
+
+ a| 
+0xED
+ a| 
+MRC: ERR_DIMM_COMPAT
+
+
+
+ a| 
+0xEE
+ a| 
+MRC: ERR_MRC_COMPATIBILITY
+
+
+
+ a| 
+0 x EF
+ a| 
+MRC: ERR_MRC_STRUCT
+
+
+
+ a| 
+0xF0
+ a| 
+MRC: ERR_SET_VDD
+
+
+
+ a| 
+0xF1
+ a| 
+MRC: BUFFER ERR_IOT_MEM
+
+
+
+ a| 
+0xF2
+ a| 
+MRC: ERR_RC_INTERNAL
+
+
+
+ a| 
+0xF3
+ a| 
+MRC: ERR_INVALID_REG_ACCESS
+
+
+
+ a| 
+0xF4
+ a| 
+MRC: ERR_SET_MC_FREQ
+
+
+
+ a| 
+0xF5
+ a| 
+MRC: ERR_READ_MC_FREQ
+
+
+
+ a| 
+0x70
+ a| 
+MRC: ERR_DIMM_CHANNEL
+
+
+
+ a| 
+0x74
+ a| 
+MRC: ERR_BIST_CHECK
+
+
+
+ a| 
+0xF6
+ a| 
+MRC: ERR_SMBUS
+
+
+
+ a| 
+0xF7
+ a| 
+MRC: ERR_PCU
+
+
+
+ a| 
+0xF8
+ a| 
+MRC: ERR_NGN
+
+
+
+ a| 
+0xF9
+ a| 
+MRC: ERR_INTERLEAVE_FAILURE
+
+|===
+
+
+
+
+== La configurazione dell'hardware sembra bloccarsi (SG6000 o SG5700)
+
+Il programma di installazione dell'appliance StorageGRID potrebbe non essere disponibile se gli errori hardware o di cablaggio impediscono ai controller di storage o al controller dell'appliance di completare l'elaborazione di avvio.
+
+.Fasi
+[role="tabbed-block"]
+====
+.SG5700
+--
+. link:viewing-status-indicators.html["Osservare i codici sui SG5700 display a sette segmenti."]
++
+Durante l'inizializzazione dell'hardware durante l'accensione, i due display a sette segmenti mostrano una sequenza di codici. Quando l'hardware viene avviato correttamente, i display a sette segmenti mostrano codici diversi per ciascun controller.
+
+. Esaminare i codici sul display a sette segmenti della centralina E5700SG.
++
+
+NOTE: L'installazione e il provisioning richiedono tempo. Alcune fasi di installazione non riportano aggiornamenti al programma di installazione dell'appliance StorageGRID per alcuni minuti.
+
++
+Se si verifica un errore, il display a sette segmenti fa lampeggiare una sequenza, ad esempio HE.
+
+. Per comprendere il significato di questi codici, consulta le seguenti risorse:
++
+[cols="1a,2a"]
+|===
+| Controller | Riferimento 
+
+
+ a| 
+Controller E5700SG
+ a| 
+** "`sindicatori di stato sul controller E5700SG`"
+** "`errore: Errore di sincronizzazione con il software SANtricity OS`"
+
+
+
+
+ a| 
+Controller E2800
+ a| 
+https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["_Guida al monitoraggio dei sistemi E5700 e E2800_"^]
+
+*Nota:* i codici descritti per il controller e-Series E5700 non si applicano al controller E5700SG dell'appliance.
+
+|===
+. Se il problema persiste, contattare il supporto tecnico.
+
+
+--
+.SG6000
+--
+. Per i controller storage, osservare i codici sui display a sette segmenti.
++
+Durante l'inizializzazione dell'hardware durante l'accensione, i due display a sette segmenti mostrano una sequenza di codici. Quando l'hardware viene avviato correttamente, vengono visualizzati entrambi i display a sette segmenti `99`.
+
+. Esaminare i LED sul controller SG6000-CN e i codici di avvio e di errore visualizzati nel BMC.
+. Se hai bisogno di aiuto per risolvere un problema, contatta il supporto tecnico.
+
+
+--
+====
+
+
+== Problemi di connessione (SG5700 o SG6000)
+
+In caso di problemi di connessione durante l'installazione dell'appliance StorageGRID, eseguire le azioni correttive elencate.
+
+
+
+=== Impossibile connettersi all'appliance SG6000
+
+Se non è possibile connettersi all'appliance, potrebbe esserci un problema di rete o l'installazione dell'hardware potrebbe non essere stata completata correttamente.
+
+.Fasi
+. Se non si riesce a connettersi a Gestore di sistema di SANtricity:
++
+.. Provare a eseguire il ping dell'appliance utilizzando l'indirizzo IP di uno dei controller di storage della rete di gestione per Gestione di sistema di SANtricity: +
+`*ping _Storage_Controller_IP_*`
+.. Se il comando ping non risponde, verificare di utilizzare l'indirizzo IP corretto.
++
+Utilizzare l'indirizzo IP per la porta di gestione 1 su uno dei controller di storage.
+
+.. Se l'indirizzo IP è corretto, controllare il cablaggio dell'appliance e la configurazione di rete.
++
+Se il problema persiste, contattare il supporto tecnico.
+
+.. Se il ping ha avuto esito positivo, aprire un browser Web.
+.. Immettere l'URL per Gestore di sistema SANtricity: +
+`*https://_Storage_Controller_IP_*`
++
+Viene visualizzata la pagina di accesso per Gestione sistema di SANtricity.
+
+
+
+. Se non è possibile connettersi al controller SG6000-CN:
++
+.. Provare a eseguire il ping del dispositivo utilizzando l'indirizzo IP per il controller SG6000-CN: +
+`*ping _SG6000-CN_Controller_IP_*`
+.. Se il comando ping non risponde, verificare di utilizzare l'indirizzo IP corretto.
++
+È possibile utilizzare l'indirizzo IP del dispositivo su Grid Network, Admin Network o Client Network.
+
+.. Se l'indirizzo IP è corretto, controllare il cablaggio dell'appliance, i ricetrasmettitori SFP e la configurazione di rete.
+.. Se è disponibile l'accesso fisico a SG6000-CN, è possibile utilizzare una connessione diretta all'IP link-local permanente `169.254.0.1` controllare la configurazione di rete del controller e aggiornarla se necessario. Per istruzioni dettagliate, vedere il passaggio 2 nella link:accessing-storagegrid-appliance-installer.html["Accesso al programma di installazione dell'appliance StorageGRID"].
++
+Se il problema persiste, contattare il supporto tecnico.
+
+.. Se il ping ha avuto esito positivo, aprire un browser Web.
+.. Inserire l'URL del programma di installazione dell'appliance StorageGRID: +
+`*https://_SG6000-CN_Controller_IP_:8443*`
++
+Viene visualizzata la pagina iniziale.
+
+
+
+
+
+
+
+=== Gli shelf di espansione SG6060 non vengono visualizzati in Appliance Installer
+
+Se sono stati installati shelf di espansione per SG6060 e non vengono visualizzati nel programma di installazione dell'appliance StorageGRID, verificare che gli shelf siano stati installati e accesi completamente.
+
+.A proposito di questa attività
+È possibile verificare che gli shelf di espansione siano collegati all'appliance visualizzando le seguenti informazioni nel programma di installazione dell'appliance StorageGRID:
+
+* La pagina *Home* contiene un messaggio sugli shelf di espansione.
++
+image::../media/expansion_shelf_home_page_msg.png[Shelf di espansione Msg]
+
+* La pagina *Advanced* > *RAID Mode* indica in base al numero di dischi se l'appliance include o meno shelf di espansione. Ad esempio, nella schermata seguente, vengono visualizzati due SSD e 178 HDD. Un SG6060 con due shelf di espansione contiene 180 dischi in totale.
+
+
+image::../media/expansion_shelves_shown_by_num_of_drives.png[Numero di dischi]
+
+Se le pagine del programma di installazione dell'appliance StorageGRID non indicano la presenza di shelf di espansione, seguire questa procedura.
+
+.Fasi
+. Verificare che tutti i cavi necessari siano collegati correttamente. Vedere link:cabling-appliance.html["Apparecchio via cavo"].
+. Verificare di aver acceso gli shelf di espansione. Vedere link:connecting-power-cords-and-applying-power.html["Collegare i cavi di alimentazione e applicare l'alimentazione (SG6000)"].
+. Se hai bisogno di aiuto per risolvere un problema, contatta il supporto tecnico.
+
+
+
+
+=== Impossibile connettersi all'apparecchio SG5700
+
+Se non è possibile connettersi all'appliance, potrebbe esserci un problema di rete o l'installazione dell'hardware potrebbe non essere stata completata correttamente.
+
+.Fasi
+. Se non si riesce a connettersi a Gestore di sistema di SANtricity:
++
+.. Provare a eseguire il ping dell'appliance utilizzando l'indirizzo IP del controller E2800 sulla rete di gestione per Gestore di sistema SANtricity: +
+`*ping _E2800_Controller_IP_*`
+.. Se il comando ping non risponde, verificare di utilizzare l'indirizzo IP corretto.
++
+Utilizzare l'indirizzo IP per la porta di gestione 1 sul controller E2800.
+
+.. Se l'indirizzo IP è corretto, controllare il cablaggio dell'appliance e la configurazione di rete.
++
+Se il problema persiste, contattare il supporto tecnico.
+
+.. Se il ping ha avuto esito positivo, aprire un browser Web.
+.. Immettere l'URL per Gestore di sistema SANtricity: +
+`*https://_E2800_Controller_IP_*`
++
+Viene visualizzata la pagina di accesso per Gestione sistema di SANtricity.
+
+
+
+. Se non si riesce a connettersi al controller E5700SG:
++
+.. Provare a eseguire il ping dell'appliance utilizzando l'indirizzo IP del controller E5700SG: +
+`*ping _E5700SG_Controller_IP_*`
+.. Se il comando ping non risponde, verificare di utilizzare l'indirizzo IP corretto.
++
+È possibile utilizzare l'indirizzo IP del dispositivo su Grid Network, Admin Network o Client Network.
+
+.. Se l'indirizzo IP è corretto, controllare il cablaggio dell'appliance, i ricetrasmettitori SFP e la configurazione di rete.
++
+Se il problema persiste, contattare il supporto tecnico.
+
+.. Se il ping ha avuto esito positivo, aprire un browser Web.
+.. Inserire l'URL del programma di installazione dell'appliance StorageGRID: +
+`*https://_E5700SG_Controller_IP_:8443*`
++
+Viene visualizzata la pagina iniziale.
+
+
+
+
+
+
+
+== Errore HE: Errore di sincronizzazione con il software SANtricity OS (SG5700)
+
+Se il programma di installazione dell'appliance StorageGRID non riesce a eseguire la sincronizzazione con il software SANtricity OS, sul display a sette segmenti del controller di calcolo viene visualizzato un codice di errore HE.
+
+.A proposito di questa attività
+Se viene visualizzato un codice di errore HE, eseguire questa azione correttiva.
+
+.Fasi
+. Verificare l'integrità dei due cavi di interconnessione SAS e verificare che siano collegati correttamente.
+. Se necessario, sostituire uno o entrambi i cavi e riprovare.
+. Se il problema persiste, contattare il supporto tecnico.
+

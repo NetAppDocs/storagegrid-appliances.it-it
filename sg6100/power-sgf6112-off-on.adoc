@@ -1,0 +1,118 @@
+---
+permalink: sg6100/power-sgf6112-off-on.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6112, power off, turn off, shut off, shutdown, shut down, power on, turn on, start 
+summary: 'È possibile spegnere l"apparecchio SGF6112 e riaccenderlo per eseguire la manutenzione.' 
+---
+= Spegnere e riaccendere l'apparecchio SGF6112
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile spegnere l'apparecchio SGF6112 e riaccenderlo per eseguire la manutenzione.
+
+
+
+== Spegnere l'appliance SGF6112
+
+Spegnere l'appliance per eseguire la manutenzione dell'hardware.
+
+.Prima di iniziare
+* Lo hai fatto link:locating-sgf6112-in-data-center.html["posizionato fisicamente l'apparecchio"].
+
+
+.A proposito di questa attività
+Per evitare interruzioni del servizio, spegnere l'apparecchio durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili.
+
+.Fasi
+. Spegnere l'apparecchio:
++
+
+CAUTION: È necessario eseguire uno spegnimento controllato dell'apparecchio immettendo i comandi specificati di seguito. È consigliabile eseguire un arresto controllato quando possibile per evitare avvisi non necessari, garantire la disponibilità di registri completi ed evitare interruzioni del servizio.
+
++
+.. Se non hai ancora effettuato l'accesso al nodo grid, effettua l'accesso utilizzando putty o un altro client ssh:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Spegnere l'apparecchio: +
+`*shutdown -h now*`
++
+Il completamento di questo comando potrebbe richiedere fino a 10 minuti.
+
+
+
+. Utilizzare uno dei seguenti metodi per verificare che l'apparecchio sia spento:
++
+** Controllare il LED di alimentazione sulla parte anteriore dell'apparecchio e verificare che sia spento.
+** Controllare la pagina Power Control dell'interfaccia BMC per verificare che l'apparecchio sia spento.
+
+
+
+
+
+
+== Accendere SGF6112 e verificarne il funzionamento
+
+Accendere il controller dopo aver completato la manutenzione.
+
+.Prima di iniziare
+* Lo hai fatto link:reinstalling-sgf6112-into-cabinet-or-rack.html["installato il controller in un armadietto o in un rack"] e collegati i cavi dati e di alimentazione.
+* Lo hai fatto link:locating-sgf6112-in-data-center.html["posizione fisica del controller nel data center"].
+
+
+.Fasi
+. Accendere l'apparecchio.
++
+Potrebbe essere necessario rimuovere il pannello per accedere all'interruttore di alimentazione; in tal caso, ricordarsi di reinstallarlo in seguito.
+
+. Monitorare i LED del controller e i codici di avvio utilizzando uno dei seguenti metodi:
++
+** Premere l'interruttore di alimentazione sulla parte anteriore del controller.
+** Utilizzare l'interfaccia BMC del controller:
++
+... link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC del controller"].
+... Selezionare *Power Control*.
+... Selezionare *accensione*, quindi selezionare *Esegui azione*.
++
+image::../media/sgf6112_power_on_from_bmc.png[Accendere l'appliance da BMC]
+
++
+Utilizzare l'interfaccia BMC per monitorare lo stato di avvio.
+
+
+
+
+
+. Verificare che il controller dell'appliance venga visualizzato in Grid Manager e senza avvisi.
++
+La visualizzazione del controller in Grid Manager potrebbe richiedere fino a 20 minuti.
+
++
+
+CAUTION: Non scollegare un altro nodo appliance a meno che l'appliance non sia dotata di un'icona verde.
+
+. Verificare che la nuova appliance sia completamente operativa effettuando l'accesso al nodo grid utilizzando putty o un altro client ssh:
++
+.. Immettere il seguente comando: `ssh _Appliance_IP_`
+.. Immettere la password elencata in `Passwords.txt` file.
+.. Immettere il seguente comando per passare a root: `su -`
+.. Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+
+
+.Informazioni correlate
+link:../installconfig/viewing-status-indicators.html["Visualizzare gli indicatori di stato"]

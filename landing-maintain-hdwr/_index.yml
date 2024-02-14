@@ -1,0 +1,33 @@
+---
+indexpage:
+  tiles:
+  - title: Procedure eseguite di frequente
+    links:
+    - title: Impostare l'apparecchio in modalità di manutenzione
+      url: "../commonhardware/placing-appliance-into-maintenance-mode.html"
+    - title: Modificare l'impostazione MTU
+      url: "../commonhardware/changing-mtu-setting.html"
+    - title: Controllare la configurazione DNS
+      url: "../commonhardware/checking-dns-server-configuration.html"
+    - title: Update MAC address (Aggiorna indirizzo MAC)
+      url: "../commonhardware/locate-mac-address.html"
+    - title: Monitoraggio della crittografia dei nodi
+      url: "../commonhardware/monitoring-node-encryption-in-maintenance-mode.html"
+  - title: Cloning dei nodi
+    links:
+    - title: Requisiti di cloning dei nodi
+      url: "../commonhardware/considerations-and-requirements-for-appliance-node-cloning.html"
+    - title: Nodo appliance clone
+      url: "../commonhardware/appliance-node-cloning-procedure.html"
+  - title: Manutenzione specifica dell'appliance
+    links:
+    - title: SG1000 e SG100
+      url: "../landing-maintain-sg1000-100/index.html"
+    - title: SG5600
+      url: "../sg5600/index.html"
+    - title: SG5700
+      url: "../landing-maintain-sg5700/index.html"
+    - title: SG6000
+      url: "../landing-maintain-sg6000/index.html"
+    - title: SG6100
+      url: "../landing-maintain-sgf6112/index.html"

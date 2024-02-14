@@ -1,0 +1,117 @@
+---
+permalink: sg100-1000/replacing-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, remove, removing, removal, install, installing, installation 
+summary: 'Potrebbe essere necessario sostituire l"apparecchio se non funziona in modo ottimale o se si è guastato.' 
+---
+= Sostituire un SG100 o un SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire l'apparecchio se non funziona in modo ottimale o se si è guastato.
+
+.Prima di iniziare
+* Si dispone di un apparecchio sostitutivo con lo stesso codice prodotto dell'apparecchio che si sta sostituendo.
+* Sono presenti etichette per identificare ciascun cavo collegato all'apparecchio.
+* Lo hai fatto link:locating-controller-in-data-center.html["posizionato fisicamente l'apparecchio"].
+
+
+.A proposito di questa attività
+Il nodo StorageGRID non sarà accessibile durante la sostituzione dell'appliance. Se l'apparecchio funziona a sufficienza, è possibile eseguire uno spegnimento controllato all'inizio di questa procedura.
+
+
+NOTE: Se si sostituisce l'appliance prima di installare il software StorageGRID, potrebbe non essere possibile accedere al programma di installazione dell'appliance StorageGRID subito dopo aver completato questa procedura. Sebbene sia possibile accedere al programma di installazione dell'appliance StorageGRID da altri host sulla stessa sottorete dell'appliance, non è possibile accedervi da host su altre subnet. Questa condizione dovrebbe risolversi automaticamente entro 15 minuti (in caso di timeout di qualsiasi voce della cache ARP per l'appliance originale), oppure è possibile cancellare immediatamente la condizione cancellando manualmente le vecchie voci della cache ARP dal router o dal gateway locale.
+
+.Fasi
+. Visualizzare le configurazioni correnti dell'appliance e registrarle.
++
+.. Accedere all'apparecchio da sostituire:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Inserire: `*run-host-command ipmitool lan print*` Per visualizzare le configurazioni BMC correnti per l'appliance.
+
+
+. Spegnere l'apparecchio: `shutdown -h now`
+. Se una delle interfacce di rete di questo dispositivo StorageGRID è configurata per DHCP, potrebbe essere necessario aggiornare le assegnazioni permanenti del lease DHCP sui server DHCP per fare riferimento agli indirizzi MAC del dispositivo sostitutivo. L'aggiornamento garantisce che all'appliance siano assegnati gli indirizzi IP previsti. Vedere link:../commonhardware/locate-mac-address.html["Aggiornare i riferimenti degli indirizzi MAC"].
+. Rimuovere e sostituire l'apparecchio:
++
+.. Etichettare i cavi, quindi scollegare i cavi e i ricetrasmettitori di rete.
++
+
+NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+.. Rimuovere l'apparecchio guasto dal cabinet o dal rack.
+.. Trasferire i due alimentatori, le otto ventole di raffreddamento e le due unità SSD dall'appliance guasta all'appliance sostitutiva.
++
+I due SSD sono posizionati negli slot come mostrato nel diagramma seguente:
+
++
+image::../media/drive_locations_sg1000_front_with_ssds.png[Posizioni delle unità]
+
++
+HDD02 o HDD2 si riferiscono all'unità nello slot superiore e HDD03 o HDD3 all'unità nello slot inferiore.
+
++
+Seguire le istruzioni fornite per la sostituzione di questi componenti.
+
+.. Installare l'appliance sostitutiva nell'armadio o nel rack.
+.. Sostituire i cavi e i ricetrasmettitori ottici.
+.. Accendere l'apparecchio e attendere che si unisca nuovamente alla rete.
+.. Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
+
+
+. Accedere all'appliance sostituita:
++
+.. Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+.. Immettere la password elencata in `Passwords.txt` file.
+.. Immettere il seguente comando per passare a root: `su -`
+.. Immettere la password elencata in `Passwords.txt` file.
+
+
+. Ripristinare la connettività di rete BMC per l'appliance sostituita. Sono disponibili due opzioni:
++
+** Utilizzare IP statico, netmask e gateway
+** Utilizzare DHCP per ottenere un IP, una netmask e un gateway
++
+... Per ripristinare la configurazione BMC in modo che utilizzi un IP statico, una netmask e un gateway, immettere i seguenti comandi:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Per ripristinare la configurazione BMC in modo che utilizzi DHCP per ottenere un IP, una netmask e un gateway, immettere il seguente comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Dopo aver ripristinato la connettività di rete BMC, connettersi all'interfaccia BMC per controllare e ripristinare eventuali configurazioni BMC personalizzate aggiuntive applicate. Ad esempio, è necessario confermare le impostazioni per le destinazioni dei messaggi trap SNMP e le notifiche e-mail. Vedere link:../installconfig/configuring-bmc-interface.html["Configurare l'interfaccia BMC"].
+. Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+
+.Informazioni correlate
+link:../installconfig/viewing-status-indicators.html["Visualizzare gli indicatori di stato"]
+
+link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Visualizzare i codici di avvio dell'appliance"]

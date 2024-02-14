@@ -1,0 +1,55 @@
+---
+permalink: installconfig/installing-hardware-sg6000.html 
+sidebar: sidebar 
+keywords: install, sg6000, sg6060, sgf6024, expansion shelf, cabinet, rack, drives 
+summary: Per i modelli SG6060 e SGF6024, installare le guide nel cabinet o nel rack e far scorrere lo shelf del controller, gli eventuali shelf di espansione e il controller di calcolo sulle guide. Per il sistema SG6060, non installare i dischi in ogni shelf fino a quando non vengono installati gli shelf. 
+---
+= Installazione nell'armadietto o nel rack (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per i modelli SG6060 e SGF6024, installare le guide nel cabinet o nel rack e far scorrere lo shelf del controller, gli eventuali shelf di espansione e il controller di calcolo sulle guide. Per il modello SG6060, non installare i dischi in ogni shelf fino a quando non vengono installati gli shelf.
+
+[cols="1a,2a,2a"]
+|===
+| Modello | Installare | Per informazioni 
+
+
+ a| 
+SG6060
+ a| 
+shelf di controller da 60 dischi e qualsiasi shelf di espansione da 60 dischi
+ a| 
+link:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html["Installare shelf da 60 dischi"]
+
+
+
+ a| 
+SG6060
+ a| 
+60 dischi in ogni shelf
+ a| 
+link:sg6060-installing-drives.html["Installare i dischi"]
+
+
+
+ a| 
+SGF6024
+ a| 
+shelf di controller da 24 dischi
+ a| 
+link:sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html["Installare shelf da 24 dischi"]
+
+
+
+ a| 
+SG6060 e SGF6024
+ a| 
+Controller di calcolo SG6000-CN
+ a| 
+link:sg6000-cn-installing-into-cabinet-or-rack.html["Installare il controller SG6000-CN"]
+
+|===

@@ -1,0 +1,99 @@
+---
+permalink: commonhardware/how-appliance-node-cloning-works.html 
+sidebar: sidebar 
+keywords: storagegrid, appliance node cloning, appliance node clone 
+summary: 'È possibile clonare un nodo appliance in StorageGRID per utilizzare un"appliance di progettazione più recente o con funzionalità avanzate. La clonazione trasferisce tutte le informazioni sul nodo esistente alla nuova appliance, fornisce un processo di aggiornamento dell"hardware semplice da eseguire e fornisce un"alternativa alla disattivazione e all"espansione per la sostituzione delle appliance.' 
+---
+= Cloning del nodo dell'appliance: Panoramica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile clonare un nodo appliance in StorageGRID per utilizzare un'appliance di progettazione più recente o con funzionalità avanzate. La clonazione trasferisce tutte le informazioni sul nodo esistente alla nuova appliance, fornisce un processo di aggiornamento dell'hardware semplice da eseguire e fornisce un'alternativa alla disattivazione e all'espansione per la sostituzione delle appliance.
+
+La clonazione dei nodi dell'appliance consente di sostituire facilmente un nodo (origine) dell'appliance esistente nella griglia con un'appliance compatibile (destinazione) che fa parte dello stesso sito StorageGRID logico. Il processo trasferisce tutti i dati alla nuova appliance, mettendola in servizio per sostituire il nodo della vecchia appliance e lasciandola in uno stato pre-installato.
+
+
+
+== Perché clonare un nodo appliance?
+
+È possibile clonare un nodo appliance se è necessario:
+
+* Sostituire le appliance che stanno per terminare il ciclo di vita.
+* Aggiorna i nodi esistenti per sfruttare la tecnologia delle appliance migliorata.
+* Aumenta la capacità dello storage grid senza modificare il numero di nodi di storage nel sistema StorageGRID.
+* Migliorare l'efficienza dello storage, ad esempio cambiando la modalità RAID da DDP-8 a DDP-16 o RAID-6.
+* Implementare in modo efficiente la crittografia dei nodi per consentire l'utilizzo di server di gestione delle chiavi (KMS) esterni.
+
+
+
+
+== Quale rete StorageGRID viene utilizzata?
+
+La clonazione trasferisce i dati dal nodo di origine direttamente all'appliance di destinazione su una qualsiasi delle tre reti StorageGRID. In genere viene utilizzata la rete Grid, ma è anche possibile utilizzare la rete Admin o la rete Client se l'appliance di origine è collegata a queste reti. Scegliere la rete da utilizzare per clonare il traffico che offre le migliori prestazioni di trasferimento dei dati senza compromettere le prestazioni della rete StorageGRID o la disponibilità dei dati.
+
+Quando si installa l'appliance sostitutiva, è necessario specificare gli indirizzi IP temporanei per la connessione StorageGRID e il trasferimento dei dati. Poiché l'appliance sostitutiva fa parte delle stesse reti del nodo dell'appliance che sostituisce, è necessario specificare gli indirizzi IP temporanei per ciascuna di queste reti sull'appliance sostitutiva.
+
+
+
+== Compatibilità con le appliance di destinazione
+
+Le appliance sostitutive devono essere dello stesso tipo del nodo di origine che stanno sostituendo ed entrambe devono far parte dello stesso sito logico StorageGRID.
+
+* Un'appliance di servizi sostitutiva può essere diversa dal nodo di amministrazione o dal nodo gateway che sta sostituendo.
++
+** È possibile clonare un'appliance del nodo di origine SG100 su un'appliance di destinazione dei servizi SG1000 per offrire maggiori funzionalità al nodo di amministrazione o al nodo gateway.
+** È possibile clonare un'appliance del nodo di origine SG1000 su un'appliance di destinazione dei servizi SG100 per ridistribuire SG1000 per un'applicazione più impegnativa.
++
+Ad esempio, se un'appliance SG1000 di nodi di origine viene utilizzata come nodo di amministrazione e si desidera utilizzarla come nodo di bilanciamento del carico dedicato.
+
+** La sostituzione di un'appliance di nodo di origine SG1000 con un'appliance di destinazione dei servizi SG100 riduce la velocità massima delle porte di rete da 100 GbE a 25 GbE.
+** I dispositivi di servizi hanno connettori di rete diversi. La modifica del tipo di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
+
+
+* Un'appliance di storage sostitutiva deve avere una capacità superiore a quella del nodo di storage che sta sostituendo.
++
+** Se l'appliance di storage di destinazione ha lo stesso numero di dischi del nodo di origine, i dischi dell'appliance di destinazione devono avere una capacità maggiore (in TB).
+** Se si intende utilizzare la stessa modalità RAID sul nodo di destinazione utilizzata sul nodo di origine, In caso di una modalità RAID meno efficiente in termini di storage (ad esempio, passando da RAID 6 a DDP), i dischi dell'appliance di destinazione devono essere più grandi (in TB) rispetto ai dischi dell'appliance di origine.
+** Se il numero di dischi standard installati in un'appliance di storage di destinazione è inferiore al numero di dischi nel nodo di origine, a causa dell'installazione di dischi a stato solido (SSD), la capacità di storage complessiva dei dischi standard nell'appliance di destinazione (in TB) Deve superare la capacità totale delle unità funzionali di tutti i dischi nel nodo di storage di origine.
++
+Ad esempio, quando si esegue la clonazione di un'appliance Storage Node di origine SG5760 con 60 unità in un'appliance di destinazione SG6060 con 58 unità standard, è necessario installare unità più grandi nell'appliance di destinazione SG6060 prima di eseguire la clonazione per mantenere la capacità di storage. (I due slot per dischi contenenti SSD nell'appliance di destinazione non sono inclusi nella capacità di storage dell'appliance totale).
+
++
+Tuttavia, se un'appliance di nodi di origine SG5760 da 60 dischi viene configurata con i pool di dischi dinamici SANtricity DDP-8, la configurazione di un'appliance di destinazione SG6060 da 58 dischi con le stesse dimensioni con DDP-16 potrebbe rendere l'appliance SG6060 una destinazione clona valida grazie alla sua efficienza dello storage migliorata.
+
++
+È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *Storage* dell'appliance.
+
+
+
+
+
+
+
+== Quali informazioni non vengono clonate?
+
+Le seguenti configurazioni dell'appliance non vengono trasferite all'appliance sostitutiva durante la clonazione. È necessario configurarli durante la configurazione iniziale dell'appliance sostitutiva.
+
+* Interfaccia BMC
+* Collegamenti di rete
+* Stato di crittografia del nodo
+* Gestore di sistema SANtricity (per nodi di storage)
+* Modalità RAID (per nodi di storage)
+
+
+
+
+== Quali problemi impediscono la clonazione?
+
+Se durante la clonazione si verifica uno dei seguenti problemi, il processo di clonazione si interrompe e viene generato un messaggio di errore:
+
+* Configurazione di rete errata
+* Mancanza di connettività tra le appliance di origine e di destinazione
+* Incompatibilità tra appliance di origine e di destinazione
+* Per i nodi di storage, un'appliance sostitutiva con capacità insufficiente
+
+
+Per continuare, è necessario risolvere ciascun problema.

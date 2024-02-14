@@ -1,0 +1,54 @@
+---
+permalink: sg100-1000/shut-down-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
+summary: 'Spegnere l"appliance di servizi per eseguire la manutenzione dell"hardware.' 
+---
+= Spegnere SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Spegnere l'appliance di servizi per eseguire la manutenzione dell'hardware.
+
+.Prima di iniziare
+* Hai fisicamente link:locating-controller-in-data-center.html["che si trova l'appliance per i servizi"] necessità di manutenzione nel data center.
+
+
+.A proposito di questa attività
+Per evitare interruzioni del servizio, arrestare l'appliance Services durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili.
+
+.Fasi
+. Spegnere l'apparecchio:
++
+
+CAUTION: È necessario eseguire uno spegnimento controllato dell'apparecchio immettendo i comandi specificati di seguito. È consigliabile eseguire un arresto controllato quando possibile per evitare avvisi non necessari, garantire la disponibilità di registri completi ed evitare interruzioni del servizio.
+
++
+.. Se non hai ancora effettuato l'accesso al nodo grid, effettua l'accesso utilizzando putty o un altro client ssh:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Spegnere l'appliance di servizi: +
+`*shutdown -h now*`
++
+Il completamento di questo comando potrebbe richiedere fino a 10 minuti.
+
+
+
+. Utilizzare uno dei seguenti metodi per verificare che l'apparecchio sia spento:
++
+** Controllare il LED di alimentazione sulla parte anteriore dell'apparecchio e verificare che sia spento.
+** Controllare la pagina Power Control dell'interfaccia BMC per verificare che l'apparecchio sia spento.
+
+
+

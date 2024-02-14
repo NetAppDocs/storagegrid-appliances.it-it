@@ -1,0 +1,226 @@
+---
+permalink: installconfig/hardware-description-sg100-and-1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
+summary: 'L"appliance di servizi StorageGRID SG100 e l"appliance di servizi SG1000 possono operare come nodo gateway e come nodo amministratore per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).' 
+---
+= Appliance SG100 e SG1000: Panoramica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance di servizi StorageGRID SG100 e l'appliance di servizi SG1000 possono operare come nodo gateway e come nodo amministratore per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).
+
+
+
+== Caratteristiche dell'appliance
+
+Entrambi i modelli di appliance di servizi offrono le seguenti funzionalità:
+
+* Funzioni nodo gateway o nodo amministratore per un sistema StorageGRID.
+* Il programma di installazione dell'appliance StorageGRID per semplificare l'implementazione e la configurazione dei nodi.
+* Una volta implementato, può accedere al software StorageGRID da un nodo di amministrazione esistente o dal software scaricato su un disco locale. Per semplificare ulteriormente il processo di implementazione, una versione recente del software viene precaricata sull'appliance durante la produzione.
+* Un BMC (Baseboard Management Controller) per il monitoraggio e la diagnosi di alcuni componenti hardware dell'appliance.
+* La possibilità di connettersi a tutte e tre le reti StorageGRID, tra cui la rete di rete, la rete amministrativa e la rete client:
++
+** SG100 supporta fino a quattro connessioni a 10 o 25 GbE alla rete grid e alla rete client.
+** SG1000 supporta fino a quattro connessioni a 10, 25, 40 o 100 GbE alla rete grid e alla rete client.
+
+
+
+
+
+
+== Diagrammi SG100 e SG1000
+
+Questa figura mostra la parte anteriore di SG100 e SG1000 con il pannello rimosso. Dalla parte anteriore, i due apparecchi sono identici, ad eccezione del nome del prodotto sul pannello.
+
+image::../media/sg1000_front_with_ssds.png[Anteriore con SSD SG100 e SG1000]
+
+I due dischi a stato solido (SSD), indicati dal contorno arancione, possono essere utilizzati per la memorizzazione del sistema operativo StorageGRID e sono mirrorati utilizzando RAID 1 per la ridondanza. Quando l'appliance di servizi SG100 o SG1000 è configurata come nodo di amministrazione, questi dischi vengono utilizzati per memorizzare registri di audit, metriche e tabelle di database.
+
+Gli slot rimanenti sono vuoti.
+
+
+
+== Connettori SG100
+
+Questa figura mostra i connettori sul retro del SG100.
+
+image::../media/sg100_rear_connectors.png[Connettori posteriori SG100]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di rete 1-4
+ a| 
+10/25-GbE, basato sul tipo di ricetrasmettitore via cavo o SFP (sono supportati i moduli SFP28 e SFP+), la velocità dello switch e la velocità di collegamento configurata
+ a| 
+Connettersi alla rete griglia e alla rete client per StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Porta di gestione BMC
+ a| 
+1 GbE (RJ-45)
+ a| 
+Connettersi al controller di gestione della scheda base dell'appliance.
+
+
+
+ a| 
+3
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* VGA
+* Seriale, 115200 8-N-1
+* USB
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+4
+ a| 
+Admin Network port (porta di rete amministratore) 1
+ a| 
+1 GbE (RJ-45)
+ a| 
+Collegare l'appliance alla rete di amministrazione per StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Admin Network Port (porta di rete amministratore) 2
+ a| 
+1 GbE (RJ-45)
+ a| 
+Opzioni:
+
+* Collegamento con la porta di gestione 1 per una connessione ridondante alla rete di amministrazione per StorageGRID.
+* Lasciare disconnesso e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
+* Durante l'installazione, utilizzare la porta 2 per la configurazione IP se gli indirizzi IP assegnati da DHCP non sono disponibili.
+
+
+|===
+
+
+== Connettori SG1000
+
+Questa figura mostra i connettori sul retro del SG1000.
+
+image::../media/sg1000_rear_connectors.png[Connettori posteriori SG1000]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di rete 1-4
+ a| 
+10/25/40/100-GbE, in base al tipo di cavo o ricetrasmettitore, alla velocità dello switch e alla velocità di collegamento configurata. QSFP28 e QSFP+ (40/100GbE) sono supportati in modo nativo e i ricetrasmettitori SFP28/SFP+ possono essere utilizzati con un QSA (venduto separatamente) per utilizzare velocità 10/25GbE.
+ a| 
+Connettersi alla rete griglia e alla rete client per StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Porta di gestione BMC
+ a| 
+1 GbE (RJ-45)
+ a| 
+Connettersi al controller di gestione della scheda base dell'appliance.
+
+
+
+ a| 
+3
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* VGA
+* Seriale, 115200 8-N-1
+* USB
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+4
+ a| 
+Admin Network port (porta di rete amministratore) 1
+ a| 
+1 GbE (RJ-45)
+ a| 
+Collegare l'appliance alla rete di amministrazione per StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Admin Network Port (porta di rete amministratore) 2
+ a| 
+1 GbE (RJ-45)
+ a| 
+Opzioni:
+
+* Collegamento con la porta di gestione 1 per una connessione ridondante alla rete di amministrazione per StorageGRID.
+* Lasciare disconnesso e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
+* Durante l'installazione, utilizzare la porta 2 per la configurazione IP se gli indirizzi IP assegnati da DHCP non sono disponibili.
+
+
+|===
+
+
+== Applicazioni SG100 e SG1000
+
+È possibile configurare le appliance dei servizi StorageGRID in vari modi per fornire servizi gateway e ridondanza di alcuni servizi di amministrazione grid.
+
+Le appliance possono essere implementate nei seguenti modi:
+
+* Aggiungere a una griglia nuova o esistente come nodo gateway
+* Aggiungere a una nuova griglia come nodo di amministrazione primario o non primario o a una griglia esistente come nodo di amministrazione non primario
+* Operare contemporaneamente come nodo gateway e nodo amministratore (primario o non primario)
+
+
+L'appliance facilita l'utilizzo di gruppi ad alta disponibilità (ha) e il bilanciamento intelligente del carico per le connessioni dei percorsi dati S3 o Swift.
+
+I seguenti esempi descrivono come massimizzare le funzionalità dell'appliance:
+
+* Utilizzare due appliance SG100 o due SG1000 per fornire servizi gateway configurandoli come nodi gateway.
++
+
+NOTE: Non implementare le appliance di servizio SG100 e SG1000 nello stesso sito. Potrebbero verificarsi performance imprevedibili.
+
+* Utilizza due appliance SG100 o due SG1000 per fornire la ridondanza di alcuni servizi di amministrazione della griglia. A tale scopo, configurare ogni appliance come nodi di amministrazione.
+* Utilizza due appliance SG100 o due SG1000 per fornire servizi di bilanciamento del carico e di configurazione del traffico ad alta disponibilità accessibili tramite uno o più indirizzi IP virtuali. A tale scopo, configurare le appliance come qualsiasi combinazione di nodi Admin o Gateway e aggiungere entrambi i nodi allo stesso gruppo ha.
++
+
+NOTE: Se si utilizzano nodi Admin e nodi Gateway nello stesso gruppo ha, la porta solo nodo Admin non eseguirà il failover. Consultare le istruzioni per https://docs.netapp.com/us-en/storagegrid-118/admin/configure-high-availability-group.html["Configurazione dei gruppi ha"^].
+
+
+
+Se utilizzati con le appliance di storage StorageGRID, sia SG100 che SG1000 consentono l'implementazione di grid solo appliance senza dipendenze da hypervisor esterni o hardware di calcolo.

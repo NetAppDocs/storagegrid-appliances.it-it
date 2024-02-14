@@ -1,0 +1,52 @@
+---
+permalink: sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, i/o module, input/output module, power supply, fan, 60-drive expansion shelf, expansion shelf 
+summary: Potrebbe essere necessario sostituire un modulo di input/output, un alimentatore o una ventola nello shelf di espansione. 
+---
+= Sostituzione dei componenti hardware nello shelf di espansione opzionale a SG6000 60 dischi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire un modulo di input/output, un alimentatore o una ventola nello shelf di espansione.
+
+.Prima di iniziare
+* Si dispone della procedura di sostituzione dell'hardware e-Series.
+* L'appliance di storage è stata fisicamente posizionata in cui si stanno sostituendo i componenti hardware dello shelf di espansione nel data center.
++
+link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+
+
+
+.A proposito di questa attività
+Per sostituire un modulo di input/output (IOM) in uno shelf di espansione da 60 dischi, consultare le istruzioni per link:replacing-storage-controller-sg6000.html["sostituzione di un controller di storage"].
+
+Per sostituire un alimentatore o una ventola in uno shelf di espansione da 60 dischi, accedere alle procedure e-Series per la manutenzione dell'hardware da 60 dischi.
+
+|===
+| FRU | Consultare le istruzioni e-Series per 
+
+
+ a| 
+Modulo di ingresso/uscita (IOM)
+ a| 
+Sostituzione di un IOM
+
+
+
+ a| 
+Filtro a carboni attivi
+ a| 
+Sostituire il filtro a carboni attivi (60 dischi)
+
+
+
+ a| 
+Filtro della ventola
+ a| 
+Sostituire il filtro a carboni attivi della ventola (60 dischi)
+
+|===

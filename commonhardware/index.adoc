@@ -1,0 +1,45 @@
+---
+permalink: commonhardware/index.html 
+sidebar: sidebar 
+keywords: maintain overview, maintenance overview, about maintain, about maintenance 
+summary: Seguire queste istruzioni per eseguire la manutenzione del sistema StorageGRID. 
+---
+= Procedure comuni per la manutenzione dei nodi: Panoramica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Seguire queste istruzioni per eseguire la manutenzione del sistema StorageGRID.
+
+
+
+== A proposito di queste istruzioni
+
+Queste istruzioni descrivono le procedure comuni a tutti i nodi, ad esempio come applicare una correzione rapida del software, ripristinare i nodi della griglia, ripristinare un sito guasto, decommissionare i nodi della griglia o un intero sito, eseguire la manutenzione della rete, eseguire le procedure di manutenzione del middleware e a livello di host ed eseguire le procedure dei nodi della griglia.
+
+
+NOTE: In queste istruzioni, "`Linux'" si riferisce a una distribuzione di Red Hat® Enterprise Linux®, Ubuntu® o Debian®. Utilizzare https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp (IMT)"^] per ottenere un elenco delle versioni supportate.
+
+
+
+== Prima di iniziare
+
+* Hai una vasta conoscenza del sistema StorageGRID.
+* Hai esaminato la topologia del sistema StorageGRID e hai compreso la configurazione della griglia.
+* Si comprende che è necessario seguire tutte le istruzioni con precisione e prestare attenzione a tutte le avvertenze.
+* Comprendete che le procedure di manutenzione non descritte non sono supportate o richiedono un intervento di assistenza.
+
+
+
+
+== Procedure di manutenzione per le appliance
+
+Le procedure di manutenzione specifiche per ciascun tipo di appliance StorageGRID sono riportate nelle sezioni relative alla manutenzione dell'appliance:
+
+* link:../sg6100/index.html["Manutenzione dell'appliance SG6100"]
+* link:../sg6000/index.html["Manutenzione dell'appliance SG6000"]
+* link:../sg5700/index.html["Manutenzione dell'appliance SG5700"]
+* link:../sg100-1000/index.html["Manutenzione delle appliance SG100 e SG1000"]
+

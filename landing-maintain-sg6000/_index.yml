@@ -1,0 +1,39 @@
+---
+indexpage:
+  tiles:
+  - title: Procedure eseguite di frequente
+    links:
+    - title: Attivare o disattivare il LED di posizione
+      url: "../sg6000/turning-controller-identify-led-on-and-off.html"
+    - title: Individuare l'appliance nel data center
+      url: "../sg6000/locating-controller-in-data-center.html"
+    - title: Spegnere e riaccendere l'apparecchio
+      url: "../sg6000/power-sg6000-cn-controller-off-on.html"
+    - title: Modificare la configurazione del collegamento
+      url: "../sg6000/changing-link-configuration-of-sg6000-cn-controller.html"
+    - title: Upgrade SANtricity (Aggiorna server)
+      url: "../sg6000/upgrading-santricity-os-on-storage-controllers.html"
+    - title: Aggiornare il firmware del disco
+      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Procedure rack
+    links:
+    - title: Sostituire il controller nel rack
+      url: "../sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html"
+    - title: Aggiunta di shelf di espansione
+      url: "../sg6000/adding-expansion-shelf-to-deployed-sg6060.html"
+  - title: Procedure hardware
+    links:
+    - title: Sostituire il coperchio del controller
+      url: "../sg6000/reinstalling-sg6000-cn-controller-cover.html"
+    - title: Sostituire il controller storage
+      url: "../sg6000/replacing-storage-controller-sg6000.html"
+    - title: Sostituzione dei componenti dello storage controller
+      url: "../sg6000/replacing-hardware-components-in-storage-controller-shelf.html"
+    - title: Sostituzione dei componenti dello shelf di espansione a 60 dischi
+      url: "../sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html"
+    - title: Sostituire la centralina SG6000-CN
+      url: "../sg6000/replacing-sg6000-cn-controller.html"
+    - title: Sostituire l'alimentatore
+      url: "../sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
+    - title: Sostituire l'HBA Fibre Channel
+      url: "../sg6000/reinstalling-fibre-channel-hba.html"

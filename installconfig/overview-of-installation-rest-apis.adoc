@@ -1,0 +1,62 @@
+---
+permalink: installconfig/overview-of-installation-rest-apis.html 
+sidebar: sidebar 
+keywords: installation REST API, REST API, installation REST APIs, REST APIs, Appliance Installer API, Appliance Installer APIs, Install API, Install APIs, Installer API, Installer APIs, Installation API, Installation APIs, api, apis 
+summary: 'StorageGRID fornisce due API REST per eseguire le attività di installazione: L"API di installazione di StorageGRID e l"API di installazione di appliance StorageGRID.' 
+---
+= Panoramica delle API REST di installazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+StorageGRID fornisce due API REST per eseguire le attività di installazione: L'API di installazione di StorageGRID e l'API di installazione di appliance StorageGRID.
+
+Entrambe le API utilizzano la piattaforma API open source Swagger per fornire la documentazione API. Swagger consente agli sviluppatori e ai non sviluppatori di interagire con l'API in un'interfaccia utente che illustra il modo in cui l'API risponde a parametri e opzioni. La presente documentazione presuppone che l'utente abbia familiarità con le tecnologie Web standard e il formato dati JSON.
+
+
+CAUTION: Tutte le operazioni API eseguite utilizzando la pagina web API Docs sono operazioni live. Fare attenzione a non creare, aggiornare o eliminare per errore i dati di configurazione o altri dati.
+
+Ogni comando REST API include l'URL dell'API, un'azione HTTP, qualsiasi parametro URL richiesto o opzionale e una risposta API prevista.
+
+
+
+== API di installazione StorageGRID
+
+L'API di installazione di StorageGRID è disponibile solo quando si configura inizialmente il sistema StorageGRID e se è necessario eseguire un ripristino primario del nodo di amministrazione. È possibile accedere all'API di installazione tramite HTTPS da Grid Manager.
+
+Per accedere alla documentazione API, accedere alla pagina Web di installazione nel nodo di amministrazione principale e selezionare *Guida* > *documentazione API* dalla barra dei menu.
+
+L'API di installazione di StorageGRID include le seguenti sezioni:
+
+* *Config*: Operazioni relative alla release del prodotto e alle versioni dell'API. È possibile elencare la versione di release del prodotto e le principali versioni dell'API supportate da tale release.
+* *Grid*: Operazioni di configurazione a livello di griglia. È possibile ottenere e aggiornare le impostazioni della griglia, inclusi i dettagli della griglia, le subnet Grid Network, le password della griglia e gli indirizzi IP dei server NTP e DNS.
+* *Nodi*: Operazioni di configurazione a livello di nodo. È possibile recuperare un elenco di nodi griglia, eliminare un nodo griglia, configurare un nodo griglia, visualizzare un nodo griglia e ripristinare la configurazione di un nodo griglia.
+* *Provision*: Operazioni di provisioning. È possibile avviare l'operazione di provisioning e visualizzare lo stato dell'operazione di provisioning.
+* *Recovery*: Operazioni di recovery primarie del nodo di amministrazione. È possibile ripristinare le informazioni, caricare il pacchetto di ripristino, avviare il ripristino e visualizzare lo stato dell'operazione di ripristino.
+* *Recovery-package*: Operazioni per il download del Recovery Package.
+* *Siti*: Operazioni di configurazione a livello di sito. È possibile creare, visualizzare, eliminare e modificare un sito.
+
+
+
+
+== API di installazione dell'appliance StorageGRID
+
+È possibile accedere all'API del programma di installazione dell'appliance StorageGRID tramite HTTPS da `_Controller_IP_:8443`.
+
+Per accedere alla documentazione API, accedere al programma di installazione dell'appliance StorageGRID e selezionare *Guida* > *documenti API* dalla barra dei menu.
+
+L'API di installazione dell'appliance StorageGRID include le seguenti sezioni:
+
+* *Clone*: Operazioni per configurare e controllare la clonazione del nodo.
+* *Encryption*: Operazioni per gestire la crittografia e visualizzare lo stato della crittografia.
+* *Hardware config*: Operazioni per configurare le impostazioni di sistema sull'hardware collegato.
+* *Installazione*: Operazioni per avviare l'installazione dell'appliance e monitorare lo stato dell'installazione.
+* *Rete*: Operazioni relative alla configurazione di rete, amministrazione e client per un'appliance StorageGRID e le impostazioni delle porte dell'appliance.
+* *Setup*: Operazioni utili per la configurazione iniziale dell'appliance, incluse richieste di informazioni sul sistema e aggiornamento dell'IP del nodo di amministrazione primario.
+* *Support*: Operazioni per riavviare il controller e ottenere i log.
+* *Update-config*: Operazioni per aggiornare la configurazione dell'appliance StorageGRID.
+* *Upgrade*: Operazioni relative all'aggiornamento del firmware dell'appliance.
+* *Uploadsg*: Operazioni per il caricamento dei file di installazione di StorageGRID.
+

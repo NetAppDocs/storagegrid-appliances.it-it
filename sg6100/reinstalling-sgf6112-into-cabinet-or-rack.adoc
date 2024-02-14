@@ -1,0 +1,84 @@
+---
+permalink: sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6112, storage node, storage appliance, install, installing, installation, cabinet, rack 
+summary: 'Rimuovere l"unità SGF6112 da un cabinet o rack per accedere al coperchio superiore o per spostare l"apparecchio in una posizione diversa, quindi reinstallare l"apparecchio in un cabinet o rack una volta completata la manutenzione dell"hardware.' 
+---
+= Spostare SGF6112 in un cabinet o in un rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rimuovere l'unità SGF6112 da un cabinet o rack per accedere al coperchio superiore o per spostare l'apparecchio in una posizione diversa, quindi reinstallare l'apparecchio in un cabinet o rack una volta completata la manutenzione dell'hardware.
+
+
+
+== Rimuovere SGF6112 dal cabinet o dal rack
+
+.Prima di iniziare
+* Sono presenti etichette per identificare ciascun cavo collegato a SGF6112.
+* Lo hai fatto link:locating-sgf6112-in-data-center.html["Situato fisicamente il SGF6112"] dove si eseguono interventi di manutenzione nel data center,
+* Lo hai fatto link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Spegnere il SGF6112"].
++
+
+CAUTION: Non spegnere l'apparecchio utilizzando l'interruttore di alimentazione.
+
+
+
+.Fasi
+. Etichettare e scollegare i cavi di alimentazione dell'apparecchio.
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Etichettare e scollegare i cavi dati dell'appliance e i ricetrasmettitori SFP+ o SFP28.
++
+
+NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Allentare le due viti di fissaggio sul pannello anteriore dell'apparecchio.
++
+image::../media/sg6060_rack_retaining_screws.png[SGF6112 viti di fissaggio del rack]
+
+. Far scorrere l'unità SGF6112 in avanti per estrarla dal rack fino a quando le guide di montaggio non sono completamente estese e i fermi su entrambi i lati scattano.
++
+Il coperchio superiore dell'apparecchio è accessibile.
+
+. Opzionale: Se si sta rimuovendo completamente l'apparecchio dall'armadietto o dal rack, seguire le istruzioni del kit di guide per rimuovere l'apparecchio dalle guide.
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+
+
+
+== Reinstallare SGF6112 nell'armadio o nel rack
+
+.Prima di iniziare
+Lo hai fatto link:reinstalling-sgf6112-cover.html["reinstallato il coperchio dell'apparecchio"].
+
+.Fasi
+. Premere la guida blu per rilasciare contemporaneamente entrambe le guide del rack e far scorrere l'unità SGF6112 nel rack fino a posizionarla completamente.
++
+Se non è possibile spostare ulteriormente il controller, tirare i fermi blu su entrambi i lati dello chassis per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 scorrevole sulle guide]
+
++
+
+NOTE: Non collegare il pannello anteriore fino a quando non si accende il controller.
+
+. Serrare le viti di fissaggio sul pannello anteriore del controller per fissare il controller nel rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Viti di fissaggio del rack SG6060]
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. link:../installconfig/cabling-appliance.html["Ricollegare i cavi dati del controller e i ricetrasmettitori SFP+ o SFP28"].
++
+
+NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Ricollegare i cavi di alimentazione del controller"].
+
+
+.Al termine
+link:powering-on-sgf6112-and-verifying-operation.html["Riavviare l'apparecchio"].

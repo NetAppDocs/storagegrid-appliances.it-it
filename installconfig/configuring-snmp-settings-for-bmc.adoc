@@ -1,0 +1,40 @@
+---
+permalink: installconfig/configuring-snmp-settings-for-bmc.html 
+sidebar: sidebar 
+keywords: SNMP, configure, setup, set up 
+summary: 'Se si ha familiarità con la configurazione di SNMP per l"hardware, è possibile utilizzare l"interfaccia BMC per configurare le impostazioni SNMP per le appliance SG6100, SG6000 e servizi. È possibile fornire stringhe di comunità sicure, attivare la trap SNMP e specificare fino a cinque destinazioni SNMP.' 
+---
+= Configurare le impostazioni SNMP per BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si ha familiarità con la configurazione di SNMP per l'hardware, è possibile utilizzare l'interfaccia BMC per configurare le impostazioni SNMP per le appliance SG6100, SG6000 e servizi. È possibile fornire stringhe di comunità sicure, attivare la trap SNMP e specificare fino a cinque destinazioni SNMP.
+
+.Prima di iniziare
+* Sai come accedere alla dashboard BMC.
+* Hai esperienza nella configurazione delle impostazioni SNMP per le apparecchiature SNMPv1-v2c.
+
+
+
+NOTE: Le impostazioni BMC eseguite con questa procedura potrebbero non essere mantenute in caso di guasto dell'appliance e devono essere sostituite.  Assicurarsi di disporre di una registrazione di tutte le impostazioni applicate, in modo che possano essere riapplicate facilmente dopo la sostituzione dell'hardware, se necessario.
+
+.Fasi
+. Dalla dashboard BMC, selezionare *Impostazioni* > *Impostazioni SNMP*.
+. Nella pagina SNMP Settings (Impostazioni SNMP), selezionare *Enable SNMP V1/V2* (attiva SNMP V1/V2*), quindi fornire una stringa di comunità di sola lettura e una stringa di comunità di lettura/scrittura.
++
+La stringa di comunità di sola lettura è simile a un ID utente o a una password. Modificare questo valore per impedire agli intrusi di ottenere informazioni sulla configurazione di rete. La stringa di comunità Read-Write protegge il dispositivo da modifiche non autorizzate.
+
+. Facoltativamente, selezionare *Enable Trap* (attiva trap) e inserire le informazioni richieste.
++
+
+NOTE: Inserire l'IP di destinazione per ogni trap SNMP utilizzando un indirizzo IP. I nomi DNS non sono supportati.
+
++
+Attivare i trap se si desidera che l'appliance invii notifiche immediate a una console SNMP quando si trova in uno stato anomalo. A seconda del dispositivo, i trap possono indicare guasti hardware di vari componenti, condizioni di collegamento up/down, superamento delle soglie di temperatura o traffico elevato.
+
+. Facoltativamente, fare clic su *Send Test Trap* (Invia trap di test) per verificare le impostazioni.
+. Se le impostazioni sono corrette, fare clic su *Salva*.
+

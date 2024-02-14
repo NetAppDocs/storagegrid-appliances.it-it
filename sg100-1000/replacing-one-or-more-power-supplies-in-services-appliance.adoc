@@ -1,0 +1,70 @@
+---
+permalink: sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
+summary: 'L"appliance di servizi dispone di due alimentatori per la ridondanza. Se uno degli alimentatori si guasta, è necessario sostituirlo il prima possibile per assicurarsi che l"apparecchio disponga di un"alimentazione ridondante. Entrambi gli alimentatori che operano nel controller devono essere dello stesso modello e dello stesso wattaggio.' 
+---
+= Sostituire uno o entrambi gli alimentatori di SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance di servizi dispone di due alimentatori per la ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per garantire che il controller di calcolo disponga di alimentazione ridondante. Entrambi gli alimentatori che operano nel controller devono essere dello stesso modello e dello stesso wattaggio.
+
+.Prima di iniziare
+* Lo hai fatto link:locating-controller-in-data-center.html["il controller si trova fisicamente"] con l'alimentatore da sostituire.
+* Se si sta sostituendo un solo alimentatore:
++
+** L'alimentatore sostitutivo è stato disimballato e si è assicurato che sia dello stesso modello e wattaggio dell'alimentatore che si sta sostituendo.
+** Hai confermato che l'altro alimentatore è installato e funzionante.
+
+
+* Se si stanno sostituendo entrambi gli alimentatori contemporaneamente:
++
+** Le unità di alimentazione sostitutive sono state disimballate e si sono assicurate che siano dello stesso modello e della stessa potenza.
+
+
+
+
+.A proposito di questa attività
+La figura mostra le due unità di alimentazione per SG100, accessibili dal retro dell'apparecchio.
+
+image::../media/sg1000_power_supplies.png[Retro di SG100 con due alimentatori]
+
+
+NOTE: Gli alimentatori del sistema SG1000 sono identici.
+
+.Fasi
+. Se si sostituisce un solo alimentatore, non è necessario spegnere l'apparecchio. Accedere alla <<Unplug_the_power_cord,Scollegare il cavo di alimentazione>> fase. Se si stanno sostituendo entrambi gli alimentatori contemporaneamente, prima di scollegare i cavi di alimentazione procedere come segue:
++
+.. link:shut-down-sg100-and-sg1000.html["Spegnere l'apparecchio"].
+
+
+. [[scollega_il_cavo_di_alimentazione, start=2]]scollegare il cavo di alimentazione da ogni alimentatore da sostituire.
+. Sollevare la maniglia della camma sul primo materiale di consumo da sostituire.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Sollevare la maniglia della camma per rimuovere l'alimentatore SG6000-CN]
+
+. Premere il fermo blu ed estrarre l'alimentatore.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Rimozione di un alimentatore SG6000-CN]
+
+. Con il fermo blu a destra, far scorrere l'alimentatore sostitutivo nel telaio.
++
+
+NOTE: Entrambi gli alimentatori devono essere dello stesso modello e dello stesso wattaggio.
+
++
+Assicurarsi che il fermo blu si trovi sul lato destro quando si inserisce l'unità sostitutiva.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Inserimento dell'alimentatore in SG6000-CN]
+
+. Spingere la maniglia della camma verso il basso per fissare l'alimentatore sostitutivo.
+. Se si stanno sostituendo entrambi gli alimentatori, ripetere i passi da 2 a 6 per sostituire il secondo alimentatore.
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Collegare i cavi di alimentazione alle unità sostituite e collegare l'alimentazione"].
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

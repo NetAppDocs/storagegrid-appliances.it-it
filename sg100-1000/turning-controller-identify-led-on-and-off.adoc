@@ -1,0 +1,42 @@
+---
+permalink: sg100-1000/turning-controller-identify-led-on-and-off.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, locate, find, locating, finding, identify, blue led, blue light 
+summary: 'Il LED blu di identificazione sulla parte anteriore e posteriore del controller può essere acceso per facilitare l"individuazione dell"appliance in un data center.' 
+---
+= Accendere e spegnere il LED di identificazione SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il LED blu di identificazione sulla parte anteriore e posteriore del controller può essere acceso per facilitare l'individuazione dell'appliance in un data center.
+
+.Prima di iniziare
+Si dispone dell'indirizzo IP BMC del controller che si desidera identificare.
+
+.Fasi
+. Accedere all'interfaccia BMC dell'appliance.
+. Selezionare *Server Identify* (identificazione server).
++
+Viene selezionato lo stato corrente del LED di identificazione.
+
+. Selezionare *ON* o *OFF*, quindi selezionare *Esegui azione*.
++
+Quando si seleziona *ON*, i LED blu di identificazione si illuminano nella parte anteriore (mostrata in figura) e posteriore dell'apparecchio.
+
++
+image::../media/sg6060_front_panel_service_led_on.jpg[LED di identificazione anteriore - acceso]
+
++
+
+NOTE: Se sul controller è installato un pannello, potrebbe essere difficile vedere il LED di identificazione anteriore.
+
+. Accendere e spegnere il LED secondo necessità.
+
+
+.Informazioni correlate
+link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+
+link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC"]

@@ -1,0 +1,66 @@
+---
+permalink: commonhardware/considerations-and-requirements-for-appliance-node-cloning.html 
+sidebar: sidebar 
+keywords: storagegrid, clone appliance node, cloning appliance node 
+summary: Prima di clonare un nodo appliance, è necessario comprendere le considerazioni e i requisiti. 
+---
+= Considerazioni e requisiti per la clonazione del nodo dell'appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di clonare un nodo appliance, è necessario comprendere le considerazioni e i requisiti.
+
+
+
+== Requisiti hardware per l'appliance sostitutiva
+
+Assicurarsi che l'apparecchio sostitutivo soddisfi i seguenti criteri:
+
+* Il nodo di origine (appliance da sostituire) e l'appliance di destinazione (nuova) devono essere dello stesso tipo di appliance:
++
+** È possibile clonare solo un'appliance Admin Node o un'appliance Gateway Node su una nuova appliance di servizi.
+** È possibile clonare un'appliance Storage Node solo su una nuova appliance di storage.
+
+
+* Per le appliance Admin Node o Gateway Node, l'appliance del nodo di origine e l'appliance di destinazione non devono necessariamente essere dello stesso tipo di appliance; tuttavia, la modifica del tipo di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
++
+Ad esempio, è possibile sostituire un'appliance a nodi SG1000 con un SG100 o un'appliance SG100 con un'appliance SG1000.
+
+* Per le appliance Storage Node, l'appliance del nodo di origine e l'appliance di destinazione non devono necessariamente essere dello stesso tipo di appliance; tuttavia, l'appliance di destinazione deve avere una capacità di storage superiore a quella dell'appliance di origine.
++
+Ad esempio, è possibile sostituire un'appliance a nodi SG5700 con un'appliance SG6000.
+
+
+
+Contatta il tuo rappresentante commerciale StorageGRID per assistenza nella scelta di appliance sostitutive compatibili per clonare nodi di appliance specifici nella tua installazione StorageGRID.
+
+
+
+== Preparare la clonazione di un nodo appliance
+
+Prima di clonare un nodo appliance, è necessario disporre delle seguenti informazioni:
+
+* Richiedere all'amministratore di rete un indirizzo IP temporaneo per Grid Network da utilizzare con l'appliance di destinazione durante l'installazione iniziale. Se il nodo di origine appartiene a una rete Admin Network o Client Network, ottenere indirizzi IP temporanei per queste reti.
++
+Gli indirizzi IP temporanei si trovano normalmente sulla stessa subnet dell'appliance del nodo di origine clonata e non sono necessari al termine della clonazione. Per stabilire una connessione di clonazione, le appliance di origine e di destinazione devono essere collegate al nodo di amministrazione principale di StorageGRID.
+
+* Determinare quale rete utilizzare per clonare il traffico di trasferimento dei dati in grado di fornire le migliori prestazioni di trasferimento dei dati senza compromettere le prestazioni della rete StorageGRID o la disponibilità dei dati.
++
+
+NOTE: L'utilizzo della rete di amministrazione 1-GbE per il trasferimento dei dati dei cloni comporta un rallentamento della clonazione.
+
+* Determinare se la crittografia del nodo utilizzando un server di gestione delle chiavi (KMS) verrà utilizzata sull'appliance di destinazione, in modo da poter attivare la crittografia del nodo durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. È possibile verificare se la crittografia del nodo è attivata sul nodo dell'appliance di origine, come descritto in link:../installconfig/optional-enabling-node-encryption.html["abilitazione della crittografia del nodo"].
++
+Il nodo di origine e l'appliance di destinazione possono avere diverse impostazioni di crittografia del nodo. La decrittografia e la crittografia dei dati vengono eseguite automaticamente durante il trasferimento dei dati e quando il nodo di destinazione viene riavviato e si unisce alla griglia.
+
+* Determinare se la modalità RAID sull'appliance di destinazione deve essere modificata rispetto all'impostazione predefinita, in modo da poter specificare queste informazioni durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *Storage* dell'appliance.
++
+Il nodo di origine e l'appliance di destinazione possono avere impostazioni RAID diverse.
+
+* Pianificare un tempo sufficiente per completare il processo di clonazione del nodo. Potrebbero essere necessari diversi giorni per trasferire i dati da un nodo di storage operativo a un'appliance di destinazione. Pianifica la clonazione in un momento che minimizza l'impatto sul tuo business.
+* È necessario clonare un solo nodo appliance alla volta. La clonazione può impedire l'esecuzione contemporanea di altre funzioni di manutenzione di StorageGRID.
+* Dopo aver clonato un nodo appliance, è possibile utilizzare l'appliance di origine che è stata restituita in uno stato pre-installazione come destinazione per clonare un'altra appliance di nodi compatibile.
+

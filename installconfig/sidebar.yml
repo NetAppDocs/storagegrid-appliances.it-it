@@ -1,0 +1,126 @@
+---
+section: installconfig
+title: Installare l'appliance
+url: "/landing-appl-install/index.html"
+entries:
+- title: Avvio rapido
+  pdf-filename: Installare l'hardware dell'appliance StorageGRID
+  url: "/installconfig/index.html"
+- title: Preparazione per l'installazione
+  url: "/landing-install-prep/index.html"
+  entries:
+  - title: Preparare il sito
+    url: "/installconfig/preparing-site.html"
+  - title: Disimballare le scatole
+    url: "/installconfig/unpacking-boxes.html"
+  - title: Procurarsi attrezzature e strumenti aggiuntivi
+    url: "/installconfig/obtaining-additional-equipment-and-tools.html"
+  - title: Raccogliere informazioni sulla rete
+    entries:
+    - title: Tipi di rete StorageGRID
+      url: "/installconfig/reviewing-appliance-network-connections.html"
+    - title: SG100 e SG1000
+      url: "/installconfig/gathering-installation-information-sg100-and-sg1000.html"
+    - title: SG5700
+      url: "/installconfig/gathering-installation-information-sg5700.html"
+    - title: SG6000
+      url: "/installconfig/gathering-installation-information-sg6000.html"
+    - title: SG6100
+      url: "/installconfig/gathering-installation-information-sg6100.html"
+- title: Automazione dell'installazione e della configurazione delle appliance
+  url: "/installconfig/automating-appliance-installation-and-configuration.html"
+- title: Automatizzare la configurazione di StorageGRID
+  url: "/installconfig/automating-configuration-of-storagegrid.html"
+- title: Panoramica delle API REST di installazione
+  url: "/installconfig/overview-of-installation-rest-apis.html"
+- title: Installare l'hardware dell'appliance
+  url: "/landing-install-hdwr/index.html"
+  entries:
+  - title: Registrare l'hardware
+    url: "/installconfig/registering-hardware.html"
+  - title: Installazione nell'armadio o nel rack
+    entries:
+    - title: SG100 e SG1000
+      url: "/installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html"
+    - title: SG5700
+      url: "/installconfig/installing-appliance-in-cabinet-or-rack-sg5700.html"
+    - title: SG6000
+      entries:
+      - title: Panoramica
+        pdf-filename: Installare SG6000 nell'armadio o nel rack
+        url: "/installconfig/installing-hardware-sg6000.html"
+      - title: Installare shelf da 60 dischi (SG6060)
+        url: "/installconfig/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html"
+      - title: Installare i dischi (SG6060)
+        url: "/installconfig/sg6060-installing-drives.html"
+      - title: Installazione di shelf da 24 dischi (SGF6024)
+        url: "/installconfig/sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html"
+      - title: Installare la centralina SG6000-CN (SG6024 e SG6060)
+        url: "/installconfig/sg6000-cn-installing-into-cabinet-or-rack.html"
+    - title: SG6100
+      url: "/installconfig/installing-appliance-in-cabinet-or-rack-sgf6112.html"
+  - title: Apparecchio via cavo
+    url: "/installconfig/cabling-appliance.html"
+  - title: Collegare e collegare l'alimentazione
+    url: "/installconfig/connecting-power-cords-and-applying-power.html"
+  - title: Visualizzare gli indicatori e i codici di stato
+    url: "/installconfig/viewing-status-indicators.html"
+- title: Configurare l'hardware
+  entries:
+  - title: Panoramica
+    url: "/installconfig/configuring-hardware.html"
+  - title: Configurare le connessioni StorageGRID
+    entries:
+    - title: Accedere al programma di installazione dell'appliance StorageGRID
+      url: "/installconfig/accessing-storagegrid-appliance-installer.html"
+    - title: Verificare e aggiornare la versione del programma di installazione dell'appliance
+        StorageGRID
+      url: "/installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html"
+    - title: Configurare i collegamenti di rete
+      url: "/installconfig/configuring-network-links.html"
+    - title: Configurare gli indirizzi IP StorageGRID
+      url: "/installconfig/setting-ip-configuration.html"
+    - title: Verificare le connessioni di rete
+      url: "/installconfig/verifying-network-connections.html"
+    - title: Verificare le connessioni di rete a livello di porta
+      url: "/installconfig/verifying-port-level-network-connections.html"
+  - title: Configurazione di Gestione di sistema SANtricity (SG5700 e SG6000)
+    url: "/installconfig/accessing-and-configuring-santricity-system-manager.html"
+  - title: Configurare l'interfaccia BMC (SG100, SG1000, SG6000 e SG6100)
+    entries:
+    - title: Panoramica
+      url: "/installconfig/configuring-bmc-interface.html"
+    - title: Modificare la password root
+      url: "/installconfig/changing-root-password-for-bmc-interface.html"
+    - title: Impostare l'indirizzo IP per la porta di gestione BMC
+      url: "/installconfig/setting-ip-address-for-bmc-management-port.html"
+    - title: Accedere all'interfaccia BMC
+      url: "/installconfig/accessing-bmc-interface.html"
+    - title: Configurare le impostazioni SNMP
+      url: "/installconfig/configuring-snmp-settings-for-bmc.html"
+    - title: Impostare le notifiche via email
+      url: "/installconfig/setting-up-email-notifications-for-alerts.html"
+  - title: 'Opzionale: Abilitare la crittografia del nodo o del disco'
+    url: "/installconfig/optional-enabling-node-encryption.html"
+  - title: 'Opzionale: Modifica della modalità RAID (SG5760 e SG6000)'
+    url: "/installconfig/optional-changing-raid-mode.html"
+  - title: 'Opzionale: Rimappare le porte di rete'
+    url: "/installconfig/optional-remapping-network-ports-for-appliance.html"
+- title: Implementare il nodo appliance
+  url: "/landing-deploy-appliance/index.html"
+  entries:
+  - title: Implementare l'appliance Storage Node
+    url: "/installconfig/deploying-appliance-storage-node.html"
+  - title: Implementare il nodo dell'appliance di servizi
+    url: "/installconfig/deploying-services-appliance-node.html"
+  - title: Installazione dell'appliance di monitoraggio
+    url: "/installconfig/monitoring-appliance-installation.html"
+  - title: Riavviare l'appliance mentre è in esecuzione il programma di installazione
+      dell'appliance StorageGRID
+    url: "/installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html"
+  - title: Risoluzione dei problemi di installazione (SG100 e SG1000)
+    url: "/installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html"
+  - title: Risoluzione dei problemi di installazione (SG5700 o SG6000)
+    url: "/installconfig/troubleshooting-hardware-installation.html"
+  - title: Risoluzione dei problemi di installazione (SG6100)
+    url: "/installconfig/troubleshooting-hardware-installation-sg6100.html"

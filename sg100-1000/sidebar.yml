@@ -1,0 +1,30 @@
+---
+section: sg100-1000
+title: Gestire l'hardware di SG100 ed SG1000
+url: "/landing-maintain-sg1000-100/index.html"
+entries:
+- title: Panoramica
+  pdf-filename: Manutenzione dell'hardware SG100 e SG1000
+  url: "/sg100-1000/index.html"
+- title: Procedure di configurazione della manutenzione
+  pdf-filename: Procedure di configurazione della manutenzione - SG100 e SG1000
+  entries:
+  - title: Attivare e disattivare il LED di identificazione
+    url: "/sg100-1000/turning-controller-identify-led-on-and-off.html"
+  - title: Individuare il controller nel data center
+    url: "/sg100-1000/locating-controller-in-data-center.html"
+  - title: Spegnere l'apparecchio
+    url: "/sg100-1000/shut-down-sg100-and-sg1000.html"
+  - title: Modificare la configurazione del collegamento
+    url: "/sg100-1000/changing-link-configuration-of-services-appliance.html"
+- title: Procedure hardware
+  pdf-filename: Procedure hardware - SG100 e SG1000
+  entries:
+  - title: Sostituire uno o entrambi gli alimentatori
+    url: "/sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+  - title: Sostituire la ventola
+    url: "/sg100-1000/replacing-fan-in-services-appliance.html"
+  - title: Sostituire l'unità
+    url: "/sg100-1000/replacing-drive-in-services-appliance.html"
+  - title: Sostituire l'apparecchio
+    url: "/sg100-1000/replacing-services-appliance.html"

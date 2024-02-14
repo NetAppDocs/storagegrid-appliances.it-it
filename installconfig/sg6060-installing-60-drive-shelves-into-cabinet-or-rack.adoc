@@ -1,0 +1,63 @@
+---
+permalink: installconfig/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
+summary: Installare un set di guide per lo shelf del controller E2860 nel cabinet o nel rack, quindi far scorrere lo shelf del controller sulle guide. Se si installano shelf di espansione a 60 dischi, si applica la stessa procedura. 
+---
+= Installare shelf da 60 dischi (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Installare un set di guide per lo shelf del controller E2860 nel cabinet o nel rack, quindi far scorrere lo shelf del controller sulle guide. Se si installano shelf di espansione a 60 dischi, si applica la stessa procedura.
+
+.Prima di iniziare
+* Hai esaminato il documento Safety Notices incluso nella confezione e compreso le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Le istruzioni sono fornite con il kit di guide.
+
+
+
+CAUTION: Ogni shelf da 60 dischi pesa circa 60 kg (132 lb) senza unità installate. Per spostare in sicurezza lo scaffale sono necessarie quattro persone o un sollevatore meccanico.
+
+
+CAUTION: Per evitare di danneggiare l'hardware, non spostare mai lo shelf se sono installati i dischi. Rimuovere tutti i dischi prima di spostare lo shelf.
+
+
+CAUTION: Quando si installa lo shelf del controller E2860 o gli shelf di espansione opzionali, installare l'hardware dal basso verso la parte superiore del rack o dell'armadio per evitare che l'apparecchiatura si ribalti. Per assicurarsi che l'apparecchiatura più pesante si trovi nella parte inferiore del cabinet o del rack, installare il controller SG6000-CN sopra lo shelf del controller E2860 e gli shelf di espansione.
+
+
+NOTE: Prima di eseguire l'installazione, verificare che i cavi ottici da 0,5 m forniti con l'apparecchio o i cavi forniti siano sufficientemente lunghi per il layout pianificato.
+
+.Fasi
+. Seguire attentamente le istruzioni del kit di guide per installare le guide nel cabinet o nel rack.
++
+Per gli armadi a foro quadrato, installare prima i dadi della gabbia in dotazione per fissare la parte anteriore e posteriore del ripiano con le viti.
+
+. Rimuovete la confezione esterna dell'apparecchio. Quindi, piegare verso il basso le alette della scatola interna.
+. Se si solleva l'apparecchio manualmente, collegare le quattro maniglie ai lati del telaio.
++
+Spingere verso l'alto ciascuna maniglia fino a farla scattare in posizione.
+
++
+image::../media/lift_handles.gif[Sollevare le maniglie]
+
+. Posizionare il retro del ripiano (l'estremità con i connettori) sulle guide.
+. Sostenendo lo shelf dal basso, farlo scorrere nel cabinet. Se si utilizzano le maniglie, utilizzare i fermi per pollice per staccare una maniglia alla volta mentre si fa scorrere lo scaffale.
++
+Per rimuovere le maniglie, tirare indietro il fermo di rilascio, spingere verso il basso, quindi allontanarlo dallo scaffale.
+
+. Fissare lo shelf alla parte anteriore del cabinet.
++
+Inserire le viti nel primo e nel terzo foro dalla parte superiore del ripiano su entrambi i lati.
+
+. Fissare lo shelf alla parte posteriore del cabinet.
++
+Posizionare due staffe posteriori su ciascun lato della sezione posteriore superiore del ripiano. Inserire le viti nel primo e nel terzo foro di ciascuna staffa.
+
++
+image::../media/mount_hardware.gif[Montare l'hardware]
+
+. Ripetere questa procedura per tutti gli shelf di espansione.
+

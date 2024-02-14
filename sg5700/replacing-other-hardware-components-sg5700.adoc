@@ -1,0 +1,83 @@
+---
+permalink: sg5700/replacing-other-hardware-components-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, controller battery, battery, drive, fan, power supply 
+summary: 'Potrebbe essere necessario sostituire la batteria, l"unità, la ventola o l"alimentatore del controller nell"appliance StorageGRID.' 
+---
+= Sostituire gli altri componenti hardware nel SG5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire la batteria, l'unità, la ventola o l'alimentatore del controller nell'appliance StorageGRID.
+
+.Prima di iniziare
+* Si dispone della procedura di sostituzione dell'hardware e-Series.
+* L'apparecchio è stato utilizzato link:../commonhardware/placing-appliance-into-maintenance-mode.html["in modalità di manutenzione"] se la procedura di sostituzione dei componenti richiede lo spegnimento dell'apparecchio.
+
+
+.A proposito di questa attività
+Per sostituire la batteria nel controller E2800, vedere le istruzioni in queste istruzioni per link:replacing-e2800-controller.html["Sostituzione della centralina E2800"]. Queste istruzioni descrivono come rimuovere il controller dall'appliance, rimuovere la batteria dal controller, installare la batteria e sostituire il controller.
+
+Per sostituire un'unità, un contenitore della ventola, un contenitore della ventola, un contenitore dell'alimentazione o un cassetto dell'unità nell'appliance, accedere al http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedure e-Series per la manutenzione dell'hardware E2800"^].
+
+
+
+== Istruzioni per la sostituzione dei componenti SG5712
+
+[cols="1a,3a"]
+|===
+| FRU | Consultare le istruzioni e-Series per 
+
+
+ a| 
+Disco
+ a| 
+Sostituzione di un disco negli shelf E2800 a 12 o 24 dischi
+
+
+
+ a| 
+Filtro a carboni attivi della ventola di alimentazione
+ a| 
+Sostituzione di un contenitore della ventola di alimentazione negli shelf E2800
+
+|===
+
+
+== SG5760 istruzioni per la sostituzione dei componenti
+
+[cols="1a,3a"]
+|===
+| FRU | Consultare le istruzioni e-Series per 
+
+
+ a| 
+Disco
+ a| 
+Sostituzione di un disco negli shelf E2860
+
+
+
+ a| 
+Filtro a carboni attivi
+ a| 
+Sostituzione di un contenitore di alimentazione negli shelf E2860
+
+
+
+ a| 
+Filtro della ventola
+ a| 
+Sostituzione di un contenitore della ventola negli shelf E2860
+
+
+
+ a| 
+Cassetto dell'unità
+ a| 
+Sostituzione di un cassetto per dischi negli shelf E2860
+
+|===

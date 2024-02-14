@@ -1,0 +1,45 @@
+---
+permalink: installconfig/verifying-network-connections.html 
+sidebar: sidebar 
+keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, mtu, test, testing 
+summary: 'Verificare che sia possibile accedere alle reti StorageGRID utilizzate dall"appliance. Per convalidare il routing attraverso i gateway di rete, è necessario verificare la connettività tra il programma di installazione dell"appliance StorageGRID e gli indirizzi IP su diverse subnet. È inoltre possibile verificare l"impostazione MTU.' 
+---
+= Verificare le connessioni di rete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verificare che sia possibile accedere alle reti StorageGRID utilizzate dall'appliance. Per convalidare il routing attraverso i gateway di rete, è necessario verificare la connettività tra il programma di installazione dell'appliance StorageGRID e gli indirizzi IP su diverse subnet. È inoltre possibile verificare l'impostazione MTU.
+
+.Fasi
+. Dalla barra dei menu del programma di installazione dell'appliance StorageGRID, fare clic su *Configura rete* > *Test ping e MTU*.
++
+Viene visualizzata la pagina Ping and MTU Test (Test Ping e MTU).
+
++
+image::../media/ping_test_start.png[Opzione di test ping e MTU nel programma di installazione dell'appliance StorageGRID]
+
+. Dalla casella a discesa *Network* (rete), selezionare la rete che si desidera testare: Grid (rete), Admin (Amministratore) o Client (Client).
+. Inserire l'indirizzo IPv4 o il nome di dominio completo (FQDN) per un host su tale rete.
++
+Ad esempio, è possibile eseguire il ping del gateway sulla rete o sul nodo di amministrazione primario.
+
+. Facoltativamente, selezionare la casella di controllo *Test MTU* per verificare l'impostazione MTU per l'intero percorso attraverso la rete verso la destinazione.
++
+Ad esempio, è possibile verificare il percorso tra il nodo dell'appliance e un nodo di un altro sito.
+
+. Fare clic su *Test Connectivity* (verifica connettività).
++
+Se la connessione di rete è valida, viene visualizzato il messaggio "Test ping superato", con l'output del comando ping elencato.
+
++
+image::../media/ping_test_passed.png[Risultati del test ping nel programma di installazione dell'appliance StorageGRID webscale]
+
+
+
+.Informazioni correlate
+* link:configuring-network-links.html["Configurare i collegamenti di rete"]
+* link:../commonhardware/changing-mtu-setting.html["Modificare l'impostazione MTU"]
+

@@ -1,0 +1,135 @@
+---
+permalink: commonhardware/appliance-node-cloning-procedure.html 
+sidebar: sidebar 
+keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
+summary: 'Il processo di cloning potrebbe richiedere diversi giorni per trasferire i dati tra il nodo di origine (appliance da sostituire) e l"appliance di destinazione.' 
+---
+= Nodo appliance clone
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il processo di clonazione potrebbe richiedere diversi giorni per trasferire i dati tra il nodo di origine (appliance da sostituire) e l'appliance di destinazione (nuova).
+
+.Prima di iniziare
+* L'appliance di destinazione compatibile è stata installata in un cabinet o rack, sono stati collegati tutti i cavi e l'alimentazione è stata applicata.
+* È stato verificato che la versione del programma di installazione dell'appliance StorageGRID sul dispositivo sostitutivo corrisponda alla versione software del sistema StorageGRID, aggiornando e scaricando il firmware del programma di installazione dell'appliance StorageGRID, se necessario.
+* L'appliance di destinazione è stata configurata, inclusa la configurazione delle connessioni StorageGRID, di Gestore di sistema SANtricity (solo appliance di storage) e dell'interfaccia BMC.
++
+** Quando si configurano le connessioni StorageGRID, utilizzare gli indirizzi IP temporanei.
+** Quando si configurano i collegamenti di rete, utilizzare la configurazione finale del collegamento.
+
+
+
+
+
+NOTE: Lasciare aperto il programma di installazione dell'appliance StorageGRID dopo aver completato la configurazione iniziale dell'appliance di destinazione. Una volta avviato il processo di clonazione del nodo, viene visualizzata nuovamente la pagina del programma di installazione dell'appliance di destinazione.
+
+* Se si desidera, è stata attivata la crittografia dei nodi per l'appliance di destinazione.
+* Se si desidera, è stata impostata la modalità RAID per l'appliance di destinazione (solo per le appliance di storage).
+* Hai esaminato il link:considerations-and-requirements-for-appliance-node-cloning.html["considerazioni e requisiti per la clonazione del nodo dell'appliance"].
+
+
+Per mantenere le performance di rete e la disponibilità dei dati di StorageGRID, è necessario clonare un solo nodo appliance alla volta.
+
+.Fasi
+. link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare il nodo di origine che si desidera clonare in modalità di manutenzione"].
+. Dal programma di installazione dell'appliance StorageGRID nel nodo di origine, nella sezione Installazione della home page, selezionare *attiva clonazione*.
++
+La sezione Primary Admin Node Connection viene sostituita con la sezione Clone target node Connection.
+
++
+image::../media/clone_peer_node_connection_section.png[Clonare la sezione di connessione del nodo di destinazione]
+
+. Per *Clone target node IP*, immettere l'indirizzo IP temporaneo assegnato al nodo di destinazione per la rete da utilizzare per il traffico di trasferimento dati clone, quindi selezionare *Save* (Salva).
++
+In genere, si inserisce l'indirizzo IP per Grid Network, ma se si desidera utilizzare una rete diversa per il traffico di trasferimento dati clone, immettere l'indirizzo IP del nodo di destinazione su tale rete.
+
++
+
+NOTE: L'utilizzo della rete di amministrazione 1-GbE per il trasferimento dei dati dei cloni comporta un rallentamento della clonazione.
+
++
+Dopo aver configurato e validato l'appliance di destinazione, nella sezione Installazione, sul nodo di origine viene attivato *Avvia clonazione*.
+
++
+Se si verificano problemi che impediscono la clonazione, *Avvia clonazione* non è abilitato e i problemi da risolvere vengono elencati come *Stato connessione*. Questi problemi sono elencati nella home page del programma di installazione dell'appliance StorageGRID del nodo di origine e dell'appliance di destinazione. Viene visualizzato un solo problema alla volta e lo stato si aggiorna automaticamente quando cambiano le condizioni. Risolvi tutti i problemi di clonazione per attivare *Avvia clonazione*.
+
++
+Quando l'opzione *Avvia clonazione* è attivata, lo stato *corrente* indica la rete StorageGRID selezionata per la clonazione del traffico, insieme alle informazioni sull'utilizzo della connessione di rete. Vedere link:considerations-and-requirements-for-appliance-node-cloning.html["Considerazioni e requisiti per la clonazione del nodo dell'appliance"].
+
+. Selezionare *Avvia clonazione* sul nodo di origine.
+. Monitorare l'avanzamento della clonazione utilizzando il programma di installazione dell'appliance StorageGRID sul nodo di origine o di destinazione.
++
+Il programma di installazione dell'appliance StorageGRID sui nodi di origine e di destinazione indica lo stesso stato.
+
++
+image::../media/cloning_progress.png[Progresso della clonazione]
+
++
+La pagina Monitor Cloning fornisce informazioni dettagliate sui progressi di ciascuna fase del processo di cloning:
+
++
+** *Stabilire una relazione di peering dei cloni* mostra l'avanzamento dell'impostazione e della configurazione della clonazione.
+** *Clone another node from this node* (Clona un altro nodo da questo nodo) mostra lo stato di avanzamento del trasferimento dei dati. (Questa parte del processo di cloning può richiedere diversi giorni).
+** *Attivare il nodo clonato e lasciarlo offline* indica l'avanzamento del trasferimento del controllo al nodo di destinazione e il posizionamento del nodo di origine in uno stato pre-installazione, una volta completato il trasferimento dei dati.
+
+
+. Se è necessario terminare il processo di cloning e ripristinare il nodo di origine prima del completamento della clonazione, sul nodo di origine accedere alla home page del programma di installazione dell'appliance StorageGRID e selezionare *Avanzate* > *Riavvia controller*, quindi selezionare *Riavvia in StorageGRID*.
++
+Se il processo di cloning viene terminato:
+
++
+** Il nodo di origine esce dalla modalità di manutenzione e si ricongiunge a StorageGRID.
+** Il nodo di destinazione rimane in stato pre-installazione.
+Per riavviare la clonazione del nodo di origine, riavviare il processo di clonazione dal passaggio 1.
+
+
+
+
+Al termine della clonazione:
+
+* I nodi di origine e di destinazione scambiano gli indirizzi IP:
++
+** Il nodo di destinazione ora utilizza gli indirizzi IP originariamente assegnati al nodo di origine per le reti Grid, Admin e Client.
+** Il nodo di origine ora utilizza l'indirizzo IP temporaneo inizialmente assegnato al nodo di destinazione.
+
+
+* Il nodo di destinazione esce dalla modalità di manutenzione e si unisce a StorageGRID, sostituendo il nodo di origine.
+* L'appliance di origine si trova in uno stato preinstallato, come se fosse già stato installato https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["preparato per la reinstallazione"^].
+
+
+
+NOTE: Se l'appliance non si riconnette alla griglia, accedere alla home page del programma di installazione dell'appliance StorageGRID relativa al nodo di origine, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare *Riavvia in modalità di manutenzione*. Dopo il riavvio del nodo di origine in modalità di manutenzione, ripetere la procedura di cloning del nodo.
+
+* I dati dell'utente rimangono sull'appliance di origine come opzione di ripristino se si verifica un problema imprevisto con il nodo di destinazione. Una volta che il nodo di destinazione ha raggiunto StorageGRID, i dati dell'utente sull'appliance di origine sono obsoleti e non sono più necessari.
++
+I dati utente obsoleti vengono sovrascritti quando si installa o si espande l'appliance di origine come nuovo nodo in un'altra griglia.
+
++
+È inoltre possibile ripristinare la configurazione del controller sull'appliance di origine per rendere inaccessibili questi dati:
+
++
+.. Aprire link:../installconfig/accessing-storagegrid-appliance-installer.html["Programma di installazione dell'appliance StorageGRID"] Per l'appliance di origine che utilizza l'indirizzo IP temporaneo inizialmente assegnato al nodo di destinazione.
+.. Selezionare *Guida* > *Strumenti di supporto e debug*.
+.. Selezionare *Reset Storage Controller Configuration* (Ripristina configurazione controller storage).
++
+
+NOTE: Se necessario, contattare il supporto tecnico per assistenza nella reimpostazione della configurazione del controller dello storage.
+
++
+
+NOTE: La sovrascrittura dei dati o il ripristino della configurazione del controller rendono difficile o impossibile il recupero dei dati obsoleti; tuttavia, nessuno dei due metodi rimuove in modo sicuro i dati dall'appliance di origine. Se è necessaria una cancellazione sicura, utilizzare uno strumento o un servizio di cancellazione dei dati per rimuovere in modo permanente e sicuro i dati dall'appliance di origine.
+
+
+
+
+
+È possibile:
+
+* Utilizzare l'appliance di origine come destinazione per ulteriori operazioni di cloning: Non è richiesta alcuna configurazione aggiuntiva. A questo dispositivo è già stato assegnato l'indirizzo IP temporaneo specificato originariamente per la destinazione del primo clone.
+* Installare e configurare l'appliance di origine come nuovo nodo dell'appliance.
+* Smaltire l'apparecchio di origine se non viene più utilizzato con StorageGRID.
+

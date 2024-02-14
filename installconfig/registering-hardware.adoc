@@ -1,0 +1,58 @@
+---
+permalink: installconfig/registering-hardware.html 
+sidebar: sidebar 
+keywords: register, registering, registration, support 
+summary: 'La registrazione dell"hardware dell"appliance offre vantaggi di supporto.' 
+---
+= Registrare l'hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La registrazione dell'hardware dell'appliance offre vantaggi di supporto.
+
+.Fasi
+. Individuare il numero di serie dello chassis dell'appliance. Per le appliance SG6000, il numero di serie dello chassis si trova sullo shelf dello storage controller.
++
+Il numero si trova sulla distinta di imballaggio, nell'e-mail di conferma o sull'apparecchio dopo averlo disimballato.
+
++
+image::../media/appliance_label.gif[Etichetta con numero di serie]
+
++
+
+NOTE: Sull'appliance di storage SG6000 sono presenti diversi numeri di serie. Il numero di serie sullo shelf dello storage controller è quello che deve essere registrato e utilizzato se si contatta l'assistenza o il supporto per l'appliance SG6000.
+
+. Visitare il sito del supporto NetApp all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Determinare se è necessario registrare l'hardware:
++
+[cols="1a,2a"]
+|===
+| Se sei un... | Attenersi alla procedura descritta di seguito... 
+
+
+ a| 
+Cliente NetApp esistente
+ a| 
+.. Accedi con il tuo nome utente e la password.
+.. Selezionare *prodotti* > *prodotti*.
+.. Verificare che il nuovo numero di serie sia elencato.
+.. In caso contrario, seguire le istruzioni per i nuovi clienti NetApp.
+
+
+
+
+ a| 
+Nuovo cliente NetApp
+ a| 
+.. Fare clic su *Registrati ora* e creare un account.
+.. Selezionare *prodotti* > *Registra prodotti*.
+.. Inserire il numero di serie del prodotto e i dettagli richiesti.
+
+
+Una volta approvata la registrazione, è possibile scaricare il software richiesto. Il processo di approvazione potrebbe richiedere fino a 24 ore.
+
+|===
+

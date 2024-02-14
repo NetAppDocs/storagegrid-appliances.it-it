@@ -1,0 +1,41 @@
+---
+permalink: sg100-1000/locating-controller-in-data-center.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, locate, find, locating, finding, identify, blue led, blue light 
+summary: 'Individuare il controller in modo da poter eseguire la manutenzione o gli aggiornamenti dell"hardware.' 
+---
+= Individua SG100 TB o SG1000 PB di dati nel data center
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Individuare il controller in modo da poter eseguire la manutenzione o gli aggiornamenti dell'hardware.
+
+.Prima di iniziare
+* Hai determinato quale controller richiede manutenzione.
+* (Facoltativo) per individuare il controller nel data center, link:turning-controller-identify-led-on-and-off.html["Accendere il LED blu di identificazione"].
+
+
+.Fasi
+. Individuare il controller che richiede manutenzione nel data center.
++
+** Verificare che il LED di identificazione sia acceso di colore blu nella parte anteriore o posteriore del controller.
++
+Il LED di identificazione anteriore si trova dietro il pannello anteriore del controller e potrebbe essere difficile vedere se il pannello è installato.
+
++
+image::../media/sg6060_front_panel_service_led_on.jpg[LED di identificazione anteriore - acceso]
+
+** Controllare le etichette applicate sulla parte anteriore di ciascuna centralina per individuare il codice del ricambio corrispondente.
+
+
+. Rimuovere il pannello anteriore del controller, se installato, per accedere ai comandi e agli indicatori del pannello anteriore.
+. Opzionale: link:turning-controller-identify-led-on-and-off.html["Spegnere il LED blu di identificazione"] se è stato utilizzato per individuare il controller.
++
+** Premere l'interruttore di identificazione LED sul pannello anteriore del controller.
+** Utilizzare l'interfaccia BMC del controller.
+
+
+

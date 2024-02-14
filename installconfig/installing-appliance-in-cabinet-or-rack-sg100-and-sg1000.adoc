@@ -1,0 +1,39 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installing, installation, cabinet, rack, rail, rails 
+summary: 'Installare un set di guide per l"apparecchio nel cabinet o nel rack, quindi far scorrere l"apparecchio sulle guide.' 
+---
+= Installazione in cabinet o rack (SG100 e SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Installare un set di guide per l'apparecchio nel cabinet o nel rack, quindi far scorrere l'apparecchio sulle guide.
+
+.Prima di iniziare
+* Hai esaminato il documento Safety Notices incluso nella confezione e compreso le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Le istruzioni sono fornite con il kit di guide.
+
+
+.Fasi
+. Seguire attentamente le istruzioni del kit di guide per installare le guide nel cabinet o nel rack.
+. Sulle due guide installate nell'armadietto o nel rack, estendere le parti mobili delle guide fino a udire uno scatto.
++
+image::../media/rails_extended_out.gif[Guide SG100 e SG 1000]
+
+. Inserite l'apparecchio nelle guide.
+. Far scorrere l'apparecchio nell'armadietto o nel rack.
++
+Se non è possibile spostare ulteriormente l'apparecchio, tirare i fermi blu su entrambi i lati del telaio per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG 100 e SG1000 scorrevoli sulle guide]
+
++
+
+NOTE: Non inserite la mascherina anteriore prima di aver acceso l'apparecchio.
+
+
