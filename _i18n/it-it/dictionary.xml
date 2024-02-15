@@ -4229,4 +4229,5 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="36312847d9ed62c091364066df9b573f" category="sidebar">Sostituire i componenti hardware nello shelf dello storage controller</block>
   <block id="297057bf431ff214cf5fb064c5a836ac" category="sidebar">Sostituire i componenti hardware nello shelf di espansione opzionale da 60 dischi</block>
   <block id="6e59386fb6d09c0b4945ad4afa8a4092" category="sidebar">Sostituire l'HBA Fibre Channel nel controller SG6000-CN</block>
+  <block id="46621f49f52b2e7735202aeadc8627bc" category="paragraph"><block ref="46621f49f52b2e7735202aeadc8627bc" category="inline-link-rx"></block></block>
 </blocks>
