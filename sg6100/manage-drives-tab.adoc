@@ -14,11 +14,11 @@ summary: 'È possibile utilizzare la scheda Gestisci unità in Grid Manager per 
 È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire le attività di risoluzione dei problemi e manutenzione sulle unità dell'appliance SGF6112.
 
 .Prima di iniziare
-* Hai effettuato l'accesso a Grid Manager utilizzando un https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/web-browser-requirements.html["browser web supportato"^].
+* Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
 
 
 .A proposito di questa attività
-Se si dispone di un apparecchio SGF6112 e di uno dei due https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/admin-group-permissions.html["Autorizzazione di accesso root o amministratore dell'appliance di storage"], Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.
+Se si dispone di un apparecchio SGF6112 e di uno dei due https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Autorizzazione di accesso root o amministratore dell'appliance di storage"], Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.
 
 La scheda Gestisci unità contiene le seguenti visualizzazioni:
 

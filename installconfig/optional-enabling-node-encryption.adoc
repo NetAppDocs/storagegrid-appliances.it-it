@@ -19,7 +19,7 @@ summary: 'È possibile attivare la crittografia a livello di nodo e di disco per
 
 È possibile eseguire entrambi i livelli di crittografia sulle unità supportate per una maggiore protezione.
 
-Vedere https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^] Per informazioni su tutti i metodi di crittografia disponibili per i dispositivi StorageGRID.
+Vedere https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^] Per informazioni su tutti i metodi di crittografia disponibili per i dispositivi StorageGRID.
 
 
 
@@ -100,7 +100,7 @@ La crittografia dei dischi non si applica ai dischi gestiti da SANtricity. Se si
 È possibile abilitare la crittografia dei dischi durante l'installazione iniziale dell'appliance prima di caricare Grid Manager. È inoltre possibile attivare la crittografia dei nodi o modificare la passphrase impostando l'appliance in modalità di manutenzione.
 
 .Prima di iniziare
-Esaminare le informazioni su https://review.docs.netapp.com/us-en/storagegrid-118_main/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^].
+Esaminare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^].
 
 .A proposito di questa attività
 Quando la crittografia dell'unità viene inizialmente attivata, viene impostata una passphrase. Se un nodo di elaborazione viene sostituito o se un SED crittografato viene spostato in un nuovo nodo di elaborazione, è necessario immettere nuovamente la passphrase manualmente.
