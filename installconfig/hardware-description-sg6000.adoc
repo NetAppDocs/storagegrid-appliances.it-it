@@ -559,7 +559,7 @@ Ethernet da 1 GB (RJ-45)
 * Opzioni porta 1:
 +
 ** Connettersi a una rete di gestione per abilitare l'accesso TCP/IP diretto a Gestione di sistema SANtricity
-** Lasciare scollegato per salvare la porta e l'indirizzo IP dello switch.  Accedere a Gestore di sistema SANtricity utilizzando le interfacce utente del programma di installazione di Grid Manager o Storage Grid Appliance.
+** Lasciare scollegato per salvare la porta e l'indirizzo IP dello switch. Accedere a Gestore di sistema SANtricity utilizzando le interfacce utente del programma di installazione di Grid Manager o Storage Grid Appliance.
 
 
 

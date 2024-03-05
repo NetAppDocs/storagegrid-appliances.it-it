@@ -2773,8 +2773,6 @@ I dischi vengono aggiornati in parallelo quando l'appliance è in modalità di m
   <block id="bba366c7647bbe1d5257439c4c705de2" category="list-text">Se i numeri seriali non corrispondono, selezionare un nodo diverso dalla vista ad albero.</block>
   <block id="b5ede840d77243156ecf58a68049831a" category="list-text">Dopo aver individuato il nodo in cui è necessario sostituire il componente, annotare l'indirizzo IP BMC dell'appliance elencato nella sezione appliance StorageGRID.</block>
   <block id="ed14a9b16ba1bf2269212f09e6a7d6d2" category="paragraph">Per individuare l'appliance nel data center, è possibile utilizzare l'indirizzo IP BMC per attivare il LED di identificazione dell'appliance.</block>
-  <block id="3265f1a32d767d5d4a8eee12e6317c69" category="doc">Spostare la batteria sul nuovo controller</block>
-  <block id="d708815fa74d85cd087786cef2ab1cd6" category="list-text">Rimuovere la batteria dal controller guasto e installarla nel controller sostitutivo:</block>
   <block id="e764e0e5854c6f45b3f893be8ea63ed7" category="list-text">Verificare che il LED verde all'interno del controller (tra la batteria e i DIMM) sia spento.</block>
   <block id="997a0d6eac5c38e607fa8951b2a2b74c" category="paragraph">Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.</block>
   <block id="8fea29345b9eb8aa445923cdf359f5ba" category="image-alt">LED verde su E2800</block>
@@ -2999,7 +2997,6 @@ Dopo aver completato l'aggiornamento corrente, scaricare il file SANtricity OS c
   <block id="94a49ae35398530df80646bb544513f0" category="paragraph">Quando si seleziona *ON*, i LED blu di identificazione si illuminano sulla parte anteriore (in figura) e posteriore dell'apparecchio.</block>
   <block id="9004fc2719e98443b495c432e10ffb2e" category="paragraph">Il LED di identificazione posteriore si trova al centro dell'apparecchio sotto lo slot Micro-SD.</block>
   <block id="f57d0dae24c14fe0b57a6cf0e4aa9b52" category="list-text">Accendere e spegnere i LED di identificazione secondo necessità.</block>
-  <block id="a3c54240889d795a785f54b21112d1b7" category="doc">Rimuovere il controller</block>
   <block id="b45afbec52f534783a03eff995ab7c60" category="list-text">Rimuovere il controller dall'apparecchio:</block>
   <block id="cf53429bbb1adc08633a9a45088a58f5" category="list-text">Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.</block>
   <block id="901be424bced93384bed30ffebbad97d" category="list-text">Etichettare i cavi, quindi scollegarli.</block>
@@ -3021,13 +3018,8 @@ Dopo aver completato l'aggiornamento corrente, scaricare il file SANtricity OS c
   <block id="91c692d2e5b928a44446baeb67e25a50" category="paragraph">HIC a 4 porte</block>
   <block id="52748a4020101685ab95f44d89b7ce8c" category="paragraph">La scheda HIC (host Interface Card) a 4 porte. Questa scheda deve essere spostata nel nuovo controller quando si esegue la sostituzione.</block>
   <block id="8028710d01a41ca2ea84072e77d7385b" category="paragraph">*Nota*: Il controller E2800A non dispone di un HIC.</block>
-  <block id="67d5b6933ccbaf5b0a5fbedd2e53d3c4" category="doc">Spostare HIC sul nuovo controller, se necessario</block>
-  <block id="f98925abc6cb4377ae64ff1ac4820659" category="list-text">Se il controller guasto include una scheda di interfaccia host (HIC), spostare l'HIC dal controller guasto al controller sostitutivo.</block>
   <block id="c8efe06bb7eee5e4d90e049e86bf65dc" category="paragraph">Un HIC separato viene utilizzato solo per il controller E2800B. L'HIC è montato sulla scheda del controller principale e include due connettori SPF.</block>
   <block id="3974b35b2cf021e8db213f0104048701" category="admonition">Le illustrazioni di questa procedura mostrano un HIC a 2 porte. L'HIC del controller potrebbe avere un numero di porte diverso.</block>
-  <block id="269cafd6c8073deeb85a9bd332a74947" category="inline-xref">Spostare l'HIC dal controller guasto al controller sostitutivo</block>
-  <block id="963c2eb9efcfeefa0eda5318bcdf4900" category="list-text">Se il controller non dispone di un HIC (E2800A), sostituire il coperchio del controller. Se il controller dispone di un HIC (E2800B), passare a. <block ref="45559081ecf57b0c388c65e5f8f80079" category="inline-xref-macro-rx"></block>.</block>
-  <block id="35b8298e26bba9285059b47bb9a4eeab" category="list-text">[[Move_the_HIC_to_the_replacement_controller]]se dotato di HIC, spostare l'HIC dal controller guasto al controller sostitutivo.</block>
   <block id="1abae1b2ca77419d27f9d38b1a5ce79e" category="list-text">Rimuovere eventuali SFP dall'HIC.</block>
   <block id="260b692edc8c35ec0a94e0a66944afbf" category="list-text">Utilizzando un cacciavite Phillips n. 1, rimuovere le viti che fissano la mascherina HIC al controller.</block>
   <block id="c1191295734430664731c130f36d12d6" category="paragraph">Sono presenti quattro viti: Una sulla parte superiore, una laterale e due sulla parte anteriore.</block>
@@ -3591,7 +3583,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="65499790690d2c454fcef420d0986cd2" category="list-text">Si dispone di un controller sostitutivo con lo stesso numero di parte del controller che si sta sostituendo.</block>
   <block id="6df8f1985e7a6f402e722600a5f522af" category="admonition">Non fare affidamento sulle istruzioni e-Series per sostituire un controller nell'appliance StorageGRID, perché le procedure non sono le stesse.</block>
   <block id="2bb86ccc72619207d683e45635d07991" category="list-text">Sono presenti etichette per identificare ciascun cavo collegato al controller.</block>
-  <block id="fe4e9e2834367a1bf8d2c51578f417e3" category="list-text">Se tutti i dischi sono protetti, è stata esaminata la procedura descritta nella procedura di sostituzione del controller simplex serie E2800, Che includono il download e l'installazione di Gestione di sistema e-Series SANtricity dal sito di supporto NetApp e l'utilizzo della finestra di gestione aziendale (EMW) per sbloccare le unità protette dopo la sostituzione del controller.</block>
   <block id="822f3e8582776cbafa8007c1adb5ec11" category="admonition">Non sarà possibile utilizzare l'apparecchio fino a quando non si sbloccano i dischi con la chiave salvata.</block>
   <block id="b865bb98d9b0550e0a993612bafda00d" category="list-text">È necessario disporre di autorizzazioni di accesso specifiche.</block>
   <block id="8ff1ab4da14b392126e0be753ff139ad" category="list-text">È necessario accedere a Grid Manager utilizzando un<block ref="a18f1d7592d98ae161543980d36b8697" category="inline-link-rx"></block>.</block>
@@ -3602,14 +3593,8 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="94f8e078397fb87116b6f9abde423938" category="paragraph">Il nodo di storage dell'appliance non sarà accessibile quando si sostituisce il controller. Se il controller della serie E2800 funziona a sufficienza, è possibile <block ref="b3dcbd550feb67c7e16c70bc63f72e18" category="inline-link-macro-rx"></block>.</block>
   <block id="752e2b22735dd0a3dc51389142f82b7a" category="paragraph">Quando si sostituisce un controller, è necessario rimuovere la batteria dal controller originale e installarlo nel controller sostitutivo. In alcuni casi, potrebbe essere necessario rimuovere la scheda di interfaccia host dal controller originale e installarla nel controller sostitutivo.</block>
   <block id="9ce903ec97f42a702063374b8f9558b5" category="admonition">I controller di storage nella maggior parte dei modelli di appliance non includono schede di interfaccia host (HIC).</block>
-  <block id="74ddc706cc279e81e96ba2d0f0b7e327" category="paragraph">Questa attività comprende le seguenti parti:</block>
   <block id="f8199556cf6a62ca9268aa50c99b34a1" category="list-text">Preparatevi</block>
-  <block id="db138738f11a6c56c06b54240b38df1d" category="list-text">Portare il controller offline</block>
-  <block id="abf8f13bdb84c7122ff9a72d14501969" category="list-text">Rimuovere il controller</block>
-  <block id="176958306106ed587f1ed281973576da" category="list-text">Spostare la batteria sul nuovo controller</block>
-  <block id="44f0502a4e12ff4c7b2a8e29ddf1240f" category="list-text">Sostituire il controller</block>
   <block id="c1873ea87bdf996ede9990c97f3270e4" category="list-text">Seguire le istruzioni della procedura di sostituzione del controller E2800 per prepararsi a rimuovere il controller.</block>
-  <block id="55c892922ea20ac558136aea5a263d6a" category="paragraph">Per eseguire questa procedura, utilizzare Gestione di sistema di SANtricity.</block>
   <block id="2ecfec7bfa276afdd11c54d5abaab7fa" category="list-text">Prendere nota della versione del software SANtricity OS attualmente installata sul controller.</block>
   <block id="b8813be0069959617e6f40c3a22df0fc" category="list-text">Prendere nota della versione DI NVSRAM attualmente installata.</block>
   <block id="ba155e9172d5994c57e93fb656141227" category="list-text">Se la funzione Drive Security è attivata, assicurarsi che esista una chiave salvata e di conoscere la password richiesta per l'installazione.</block>
@@ -3618,7 +3603,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="7a96ab4cc5d58598488f7e2fdcea9df9" category="paragraph">Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione.</block>
   <block id="fd4061a4924f1e0bf98462757a83fc33" category="list-text">Raccogliere i dati di supporto per l'appliance.</block>
   <block id="d5b7c4e4db51ddcf44d5c764d7d12dec" category="admonition">La raccolta dei dati di supporto prima e dopo la sostituzione di un componente consente di inviare una serie completa di registri al supporto tecnico se la sostituzione non risolve il problema.</block>
-  <block id="da397caaa5e3712e133c0d13d60aa55f" category="section-title">Portare il controller offline</block>
   <block id="1c473716429e7b086c508d4d989b6460" category="list-text">Se l'appliance StorageGRID è in esecuzione in un sistema StorageGRID, <block ref="b3dcbd550feb67c7e16c70bc63f72e18" category="inline-link-macro-rx"></block>.</block>
   <block id="b479d08d9995967f3e39eb8f8dda7580" category="list-text">Se il controller E2800 funziona a sufficienza per consentire un arresto controllato, verificare che tutte le operazioni siano state completate.</block>
   <block id="01d4dba33c39acfee6527a2ef4d297b1" category="list-text">Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.</block>
@@ -4228,5 +4212,29 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="46621f49f52b2e7735202aeadc8627bc" category="paragraph"><block ref="46621f49f52b2e7735202aeadc8627bc" category="inline-link-rx"></block></block>
   <block id="39822573479d4d01c9fc52445e6f90d4" category="paragraph">Vedere<block ref="182f5524fe0d353d40aacb3022a6d00c" category="inline-link-rx"></block> Per informazioni su tutti i metodi di crittografia disponibili per i dispositivi StorageGRID.</block>
   <block id="38863f5650b2800fa51be4d3a390b203" category="paragraph">Esaminare le informazioni su<block ref="182f5524fe0d353d40aacb3022a6d00c" category="inline-link-rx"></block>.</block>
-  <block id="00480567d9c91f7b7ba44e21f754f737" category="paragraph">Se si dispone di un apparecchio SGF6112 e di uno dei due<block ref="646dc3cd3bd62a6be1690aac96e1dd08" category="inline-link-rx"></block>, Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.</block>
+  <block id="8982aaa194b18d24402b49fbe219e3e5" category="list-text">Lasciare scollegato per salvare la porta e l'indirizzo IP dello switch. Accedere a Gestore di sistema SANtricity utilizzando le interfacce utente del programma di installazione di Grid Manager o Storage Grid Appliance.</block>
+  <block id="c114b6896b71306b6ff5217eebf1d7eb" category="doc">Passo 4: Spostare la batteria sulla nuova centralina</block>
+  <block id="eed22a946ecb2d3652178906c8adb5c5" category="paragraph">Rimuovere la batteria dalla centralina guasta e installarla nella centralina sostitutiva.</block>
+  <block id="a9c0cea0fa970dd78f5c9b732ed7af82" category="doc">Passo 3: Rimuovere la centralina</block>
+  <block id="73c449311895c44cdc2cb9f82f1d86a8" category="paragraph">Rimuovere il controller guasto dall'appliance.</block>
+  <block id="41cead6208beaab4753fef7eb16b7b3d" category="doc">Fase 5: Spostare l'HIC sulla nuova centralina, se necessario</block>
+  <block id="52cea5d7c14ce5a1a352ae36b02fc89c" category="paragraph">Se la centralina guasta include un HIC, spostare l'HIC dalla centralina guasta alla centralina sostitutiva.</block>
+  <block id="f2323bfac4b2b6c0bed61a2782d7b2a3" category="open-title">E2800A</block>
+  <block id="c7c61e2e49b4848eb04ef9166c62112e" category="paragraph">Una centralina E2800A non dispone di un HIC.</block>
+  <block id="66e02a6be1542a6c5ab5b6e835ace031" category="inline-xref">Fase 6: Sostituire la centralina</block>
+  <block id="bee477a851e07f638eb69240b1b317bc" category="paragraph">Riposizionare il coperchio della centralina E2800A e passare a. <block ref="4bd98407e7ac018ef33f15dc5a2ef6d6" category="inline-xref-macro-rx"></block></block>
+  <block id="b186f28a62d42b7cdd50516610c1e839" category="open-title">E2800B</block>
+  <block id="477f610d0d161e316a6f06600c56252b" category="paragraph">Spostare l'HIC dalla centralina E2800B guasta alla centralina sostitutiva.</block>
+  <block id="bfc87e4ee97496c70a38995efddf5be3" category="paragraph">Se si dispone di un apparecchio SGF6112 e di uno dei due<block ref="5540729631f9c458d692d5b76bbc9b38" category="inline-link-rx"></block>, Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.</block>
+  <block id="b8325740c6f1fdf42bd83d726c080c9a" category="inline-link">Procedura di sostituzione del controller simplex serie E2800</block>
+  <block id="0f31bf890cf0f06d20912d7da5d50990" category="list-text">Se tutte le unità sono protette, è stata esaminata la procedura descritta nella<block ref="ab9bcc1613fce025138f2bd863db4580" category="inline-link-rx"></block>, Che includono il download e l'installazione di Gestore di sistema SANtricity e-Series dal sito di supporto NetApp e quindi l'utilizzo della finestra Gestione aziendale (EMW) per sbloccare i dischi protetti dopo la sostituzione del controller.</block>
+  <block id="16cd89923af48ed14de009bdd8e2993f" category="section-title">Passo 1: Preparazione per la rimozione del controller</block>
+  <block id="f187670d0aad1013a9fbfc3c71bf760e" category="paragraph">Utilizzare Gestione di sistema di SANtricity per eseguire le seguenti operazioni.</block>
+  <block id="c5a54dca8b6ca77546f4cc165d0d11a4" category="section-title">Passaggio 2: Portare il controller offline</block>
+  <block id="89fb5d48855149ae02912143426f3adc" category="paragraph">Portare il controller fuori linea e verificare che tutte le operazioni siano state completate.</block>
+  <block id="14dc8bb572f0f111ffb3d882de64812c" category="list-text">Spegnere il ripiano del controller.</block>
+  <block id="b2f9b08b9c77fd0d4c43b02ecac55483" category="paragraph">Installare la centralina sostitutiva e verificare che sia stata ricollegata alla griglia.</block>
+  <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Alimentazione sullo shelf del controller.</block>
+  <block id="944f002f126d9f60a7abfb7abb8b19a6" category="section-title">Fase 1: Preparare la centralina sostitutiva</block>
+  <block id="7dc8820948fbd0653bf70cd43dd02d4c" category="paragraph">Prepararsi a rimuovere il controller guasto e a portarlo offline.</block>
 </blocks>

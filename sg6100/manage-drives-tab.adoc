@@ -18,7 +18,7 @@ summary: 'È possibile utilizzare la scheda Gestisci unità in Grid Manager per 
 
 
 .A proposito di questa attività
-Se si dispone di un apparecchio SGF6112 e di uno dei due https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Autorizzazione di accesso root o amministratore dell'appliance di storage"], Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.
+Se si dispone di un apparecchio SGF6112 e di uno dei due https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Autorizzazione di accesso root o amministratore dell'appliance di storage"^], Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.
 
 La scheda Gestisci unità contiene le seguenti visualizzazioni:
 

@@ -1,15 +1,15 @@
-= Spostare la batteria sul nuovo controller
+= Passo 4: Spostare la batteria sulla nuova centralina
 :allow-uri-read: 
 
 
 
 
-== Spostare la batteria sul nuovo controller
+== Passo 4: Spostare la batteria sulla nuova centralina
+
+Rimuovere la batteria dalla centralina guasta e installarla nella centralina sostitutiva.
 
 .Fasi
-. Rimuovere la batteria dal controller guasto e installarla nel controller sostitutivo:
-+
-.. Verificare che il LED verde all'interno del controller (tra la batteria e i DIMM) sia spento.
+. Verificare che il LED verde all'interno del controller (tra la batteria e i DIMM) sia spento.
 +
 Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
 
@@ -35,8 +35,8 @@ LED cache interna attiva
 Batteria
 
 |===
-.. Individuare il dispositivo di chiusura blu della batteria.
-.. Sganciare la batteria spingendo il dispositivo di chiusura verso il basso e allontanandolo dal controller.
+. Individuare il dispositivo di chiusura blu della batteria.
+. Sganciare la batteria spingendo il dispositivo di chiusura verso il basso e allontanandolo dal controller.
 +
 image::../media/e2800_remove_battery.gif[Dispositivo di chiusura della batteria]
 
@@ -59,32 +59,30 @@ Dispositivo di chiusura a scatto della batteria
 Batteria
 
 |===
-.. Sollevare la batteria ed estrarla dal controller.
-.. Rimuovere il coperchio dal controller sostitutivo.
-.. Orientare il controller sostitutivo in modo che lo slot della batteria sia rivolto verso di sé.
-.. Inserire la batteria nel controller inclinandola leggermente verso il basso.
+. Sollevare la batteria ed estrarla dal controller.
+. Rimuovere il coperchio dal controller sostitutivo.
+. Orientare il controller sostitutivo in modo che lo slot della batteria sia rivolto verso di sé.
+. Inserire la batteria nel controller inclinandola leggermente verso il basso.
 +
 Inserire la flangia metallica nella parte anteriore della batteria nello slot sul fondo del controller e far scorrere la parte superiore della batteria sotto il piccolo perno di allineamento sul lato sinistro del controller.
 
-.. Spostare il dispositivo di chiusura della batteria verso l'alto per fissare la batteria.
+. Spostare il dispositivo di chiusura della batteria verso l'alto per fissare la batteria.
 +
 Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
 
-.. Capovolgere il controller per verificare che la batteria sia installata correttamente.
+. Capovolgere il controller per verificare che la batteria sia installata correttamente.
 +
 
 CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte anteriore della batteria deve essere inserita completamente nello slot del controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, causando danni.
 
 +
-*** *Esatto -- la flangia metallica della batteria è completamente inserita nello slot del controller:*
+** *Esatto -- la flangia metallica della batteria è completamente inserita nello slot del controller:*
 +
 image::../media/e2800_battery_flange_ok.gif[Flangia della batteria corretta]
 
-*** *Errato -- la flangia metallica della batteria non è inserita nello slot del controller:*
+** *Errato -- la flangia metallica della batteria non è inserita nello slot del controller:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Flangia della batteria non corretta]
-
-
 
 
 

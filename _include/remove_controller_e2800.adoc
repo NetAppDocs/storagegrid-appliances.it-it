@@ -1,28 +1,26 @@
-= Rimuovere il controller
+= Passo 3: Rimuovere la centralina
 :allow-uri-read: 
 
 
 
 
-== Rimuovere il controller
+== Passo 3: Rimuovere la centralina
+
+Rimuovere il controller guasto dall'appliance.
 
 .Fasi
-. Rimuovere il controller dall'apparecchio:
-+
-.. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
-.. Etichettare i cavi, quindi scollegarli.
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare i cavi, quindi scollegarli.
 +
 
 NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
 
-.. Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura della camma fino a rilasciarlo, quindi aprire l'impugnatura della camma verso destra.
-.. Estrarre il controller dall'apparecchio con due mani e la maniglia della camma.
+. Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura della camma fino a rilasciarlo, quindi aprire l'impugnatura della camma verso destra.
+. Estrarre il controller dall'apparecchio con due mani e la maniglia della camma.
 +
 
 CAUTION: Utilizzare sempre due mani per sostenere il peso del controller.
 
-.. Posizionare il controller su una superficie piana e priva di scariche elettrostatiche con il coperchio rimovibile rivolto verso l'alto.
-.. Rimuovere il coperchio premendo verso il basso il pulsante e facendo scorrere il coperchio verso l'esterno.
-
-
+. Posizionare il controller su una superficie piana e priva di scariche elettrostatiche con il coperchio rimovibile rivolto verso l'alto.
+. Rimuovere il coperchio premendo verso il basso il pulsante e facendo scorrere il coperchio verso l'esterno.
 
