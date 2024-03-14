@@ -1,0 +1,3353 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head class="at-element-marker">
+  <title>Automatizzare la configurazione di StorageGRID</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Automatizzare la configurazione di StorageGRID" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/it-it/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+	<meta property="og:description" content="Dopo aver installato e configurato i nodi di rete, è possibile automatizzare la configurazione del sistema StorageGRID." />
+  <meta property="og:image" content="https://docs.netapp.com/it-it/storagegrid-appliances/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Dopo aver installato e configurato i nodi di rete, è possibile automatizzare la configurazione del sistema StorageGRID.">
+  <meta name="keywords" content=" automate, automating, automation, automatic, configuration, configure"><!-- Icons -->
+  <link rel="icon" href="/it-it/storagegrid-appliances/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/it-it/storagegrid-appliances/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/it-it/storagegrid-appliances/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/it-it/storagegrid-appliances/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/it-it/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/it-it/storagegrid-appliances/js/na-search.js'></script><script src='/it-it/storagegrid-appliances/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/it-it/storagegrid-appliances/js/custom-dropdown.js'></script>
+  <script src='/it-it/storagegrid-appliances/js/FileSaver.min.js'></script>
+  <script src='/it-it/storagegrid-appliances/js/jszip-utils.min.js'></script>
+  <script src='/it-it/storagegrid-appliances/js/jszip.min.js'></script><script src='/it-it/storagegrid-appliances/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/it-it/storagegrid-appliances/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/it">
+                <image id="ie-header-logo" src="/it-it/storagegrid-appliances/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/it/support-and-training/documentation/">Documenti</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/it-it/storagegrid-appliances/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">Italiano</span>
+                    <img src="/it-it/storagegrid-appliances/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/it-it/storagegrid-appliances/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/it-it/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/it-it/storagegrid-appliances/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">Tutto NetApp</span>
+                    <img src="/it-it/storagegrid-appliances/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/it-it/storagegrid-appliances/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">Supporto</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">Knowledge Base</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/it/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">Training</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/it-it/storagegrid-appliances/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/it-it/storagegrid-appliances/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">Tutti i documenti</a>
+    </li>
+    
+    
+
+    
+    <li class="">
+      <a href="https://docs.netapp.com/it-it/storagegrid-family/">
+        StorageGRID documentation
+      </a>
+    </li>
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/it-it/storagegrid-appliances/">-->
+      StorageGRID Appliances
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/it-it/storagegrid-appliances/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/it-it/storagegrid-appliances/search.html" 
+        data-type="widget"
+        data-placeholder="Esplora la documentazione"
+        data-no-results-found="Nessun risultato per {query}"
+        data-did-you-mean="Cerca {suggestion}."
+        data-no-results-found-did-you-mean="Nessun risultato per {query}. Intendi {suggestion}?"
+        data-results-found="{hitCount} risultati trovati"
+        data-error-message="Si è verificato un errore. Riprova."
+        data-error-reset="Reimposta ricerca"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documentazione sull'appliance StorageGRID"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/storagegrid-appliances/index.html">
+        Documentazione sull'appliance StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Documentazione del software StorageGRID"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/storagegrid-documentation.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/storagegrid-appliances/storagegrid-documentation.html">
+        Documentazione del software StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Inizia subito"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-learn-hdwr/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/storagegrid-appliances/landing-learn-hdwr/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Inizia subito</div>-->
+         Inizia subito
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Novità per le apparecchiature"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/whats-new-appliances.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/whats-new-appliances.html">
+        Novità per le apparecchiature
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Ulteriori informazioni sulle appliance StorageGRID"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Ulteriori informazioni sulle appliance StorageGRID</div>-->
+         Ulteriori informazioni sulle appliance StorageGRID
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Appliance di servizi SG100 e SG1000"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/hardware-description-sg100-and-1000.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/hardware-description-sg100-and-1000.html">
+        Appliance di servizi SG100 e SG1000
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG5700 appliance di storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/hardware-description-sg5700.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/hardware-description-sg5700.html">
+        SG5700 appliance di storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Appliance di storage SG6000"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/hardware-description-sg6000.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/hardware-description-sg6000.html">
+        Appliance di storage SG6000
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG6100 appliance di storage"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/hardware-description-sg6100.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/hardware-description-sg6100.html">
+        SG6100 appliance di storage
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare l'appliance"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-appl-install/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/storagegrid-appliances/landing-appl-install/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Installare l'appliance</div>-->
+         Installare l'appliance
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare l'hardware dell'appliance StorageGRID"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/installconfig/index.html">
+        Avvio rapido
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Preparazione per l'installazione"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-install-prep/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/landing-install-prep/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Preparazione per l'installazione</div>-->
+         Preparazione per l'installazione
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Preparare il sito"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/preparing-site.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/preparing-site.html">
+        Preparare il sito
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Disimballare le scatole"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/unpacking-boxes.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/unpacking-boxes.html">
+        Disimballare le scatole
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procurarsi attrezzature e strumenti aggiuntivi"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/obtaining-additional-equipment-and-tools.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/obtaining-additional-equipment-and-tools.html">
+        Procurarsi attrezzature e strumenti aggiuntivi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Raccogliere informazioni sulla rete"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Raccogliere informazioni sulla rete</div>-->
+         Raccogliere informazioni sulla rete
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Tipi di rete StorageGRID"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/reviewing-appliance-network-connections.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/reviewing-appliance-network-connections.html">
+        Tipi di rete StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG100 e SG1000"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/gathering-installation-information-sg100-and-sg1000.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/gathering-installation-information-sg100-and-sg1000.html">
+        SG100 e SG1000
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG5700"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/gathering-installation-information-sg5700.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/gathering-installation-information-sg5700.html">
+        SG5700
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG6000"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/gathering-installation-information-sg6000.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/gathering-installation-information-sg6000.html">
+        SG6000
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG6100"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/gathering-installation-information-sg6100.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/gathering-installation-information-sg6100.html">
+        SG6100
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Automazione dell'installazione e della configurazione delle appliance"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/automating-appliance-installation-and-configuration.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/installconfig/automating-appliance-installation-and-configuration.html">
+        Automazione dell'installazione e della configurazione delle appliance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Automatizzare la configurazione di StorageGRID"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/automating-configuration-of-storagegrid.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html">
+        Automatizzare la configurazione di StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica delle API REST di installazione"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/overview-of-installation-rest-apis.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/installconfig/overview-of-installation-rest-apis.html">
+        Panoramica delle API REST di installazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare l'hardware dell'appliance"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-install-hdwr/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/landing-install-hdwr/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Installare l'hardware dell'appliance</div>-->
+         Installare l'hardware dell'appliance
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Registrare l'hardware"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/registering-hardware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/registering-hardware.html">
+        Registrare l'hardware
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione nell'armadio o nel rack"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Installazione nell'armadio o nel rack</div>-->
+         Installazione nell'armadio o nel rack
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG100 e SG1000"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html">
+        SG100 e SG1000
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG5700"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/installing-appliance-in-cabinet-or-rack-sg5700.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/installing-appliance-in-cabinet-or-rack-sg5700.html">
+        SG5700
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG6000"
+      data-li-level="4" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-4  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> SG6000</div>-->
+         SG6000
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare SG6000 nell'armadio o nel rack"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/installing-hardware-sg6000.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/installconfig/installing-hardware-sg6000.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare shelf da 60 dischi (SG6060)"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/installconfig/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html">
+        Installare shelf da 60 dischi (SG6060)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare i dischi (SG6060)"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/sg6060-installing-drives.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/installconfig/sg6060-installing-drives.html">
+        Installare i dischi (SG6060)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione di shelf da 24 dischi (SGF6024)"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/installconfig/sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html">
+        Installazione di shelf da 24 dischi (SGF6024)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installare la centralina SG6000-CN (SG6024 e SG6060)"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/sg6000-cn-installing-into-cabinet-or-rack.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/installconfig/sg6000-cn-installing-into-cabinet-or-rack.html">
+        Installare la centralina SG6000-CN (SG6024 e SG6060)
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG6100"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/installing-appliance-in-cabinet-or-rack-sgf6112.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/installing-appliance-in-cabinet-or-rack-sgf6112.html">
+        SG6100
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Apparecchio via cavo"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/cabling-appliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/cabling-appliance.html">
+        Apparecchio via cavo
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Collegare e collegare l'alimentazione"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/connecting-power-cords-and-applying-power.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/connecting-power-cords-and-applying-power.html">
+        Collegare e collegare l'alimentazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Visualizzare gli indicatori e i codici di stato"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/viewing-status-indicators.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/viewing-status-indicators.html">
+        Visualizzare gli indicatori e i codici di stato
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare l'hardware"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Configurare l'hardware</div>-->
+         Configurare l'hardware
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/configuring-hardware.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/configuring-hardware.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare le connessioni StorageGRID"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Configurare le connessioni StorageGRID</div>-->
+         Configurare le connessioni StorageGRID
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accedere al programma di installazione dell'appliance StorageGRID"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/accessing-storagegrid-appliance-installer.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/accessing-storagegrid-appliance-installer.html">
+        Accedere al programma di installazione dell'appliance StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare e aggiornare la versione del programma di installazione dell'appliance StorageGRID"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html">
+        Verificare e aggiornare la versione del programma di installazione dell'appliance StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare i collegamenti di rete"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/configuring-network-links.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/configuring-network-links.html">
+        Configurare i collegamenti di rete
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare gli indirizzi IP StorageGRID"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/setting-ip-configuration.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/setting-ip-configuration.html">
+        Configurare gli indirizzi IP StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare le connessioni di rete"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/verifying-network-connections.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/verifying-network-connections.html">
+        Verificare le connessioni di rete
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare le connessioni di rete a livello di porta"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/verifying-port-level-network-connections.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/verifying-port-level-network-connections.html">
+        Verificare le connessioni di rete a livello di porta
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurazione di Gestione di sistema SANtricity (SG5700 e SG6000)"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/accessing-and-configuring-santricity-system-manager.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/accessing-and-configuring-santricity-system-manager.html">
+        Configurazione di Gestione di sistema SANtricity (SG5700 e SG6000)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare l'interfaccia BMC (SG100, SG1000, SG6000 e SG6100)"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Configurare l'interfaccia BMC (SG100, SG1000, SG6000 e SG6100)</div>-->
+         Configurare l'interfaccia BMC (SG100, SG1000, SG6000 e SG6100)
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Panoramica"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/configuring-bmc-interface.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/configuring-bmc-interface.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la password root"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/changing-root-password-for-bmc-interface.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/changing-root-password-for-bmc-interface.html">
+        Modificare la password root
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostare l'indirizzo IP per la porta di gestione BMC"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/setting-ip-address-for-bmc-management-port.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/setting-ip-address-for-bmc-management-port.html">
+        Impostare l'indirizzo IP per la porta di gestione BMC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accedere all'interfaccia BMC"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/accessing-bmc-interface.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/accessing-bmc-interface.html">
+        Accedere all'interfaccia BMC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Configurare le impostazioni SNMP"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/configuring-snmp-settings-for-bmc.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/configuring-snmp-settings-for-bmc.html">
+        Configurare le impostazioni SNMP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostare le notifiche via email"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/setting-up-email-notifications-for-alerts.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/installconfig/setting-up-email-notifications-for-alerts.html">
+        Impostare le notifiche via email
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Opzionale: Abilitare la crittografia del nodo o del disco"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/optional-enabling-node-encryption.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/optional-enabling-node-encryption.html">
+        Opzionale: Abilitare la crittografia del nodo o del disco
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Opzionale: Modifica della modalità RAID (SG5760 e SG6000)"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/optional-changing-raid-mode.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/optional-changing-raid-mode.html">
+        Opzionale: Modifica della modalità RAID (SG5760 e SG6000)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Opzionale: Rimappare le porte di rete"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/optional-remapping-network-ports-for-appliance.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/optional-remapping-network-ports-for-appliance.html">
+        Opzionale: Rimappare le porte di rete
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare il nodo appliance"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-deploy-appliance/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/landing-deploy-appliance/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Implementare il nodo appliance</div>-->
+         Implementare il nodo appliance
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare l'appliance Storage Node"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/deploying-appliance-storage-node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/deploying-appliance-storage-node.html">
+        Implementare l'appliance Storage Node
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Implementare il nodo dell'appliance di servizi"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/deploying-services-appliance-node.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/deploying-services-appliance-node.html">
+        Implementare il nodo dell'appliance di servizi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Installazione dell'appliance di monitoraggio"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/monitoring-appliance-installation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/monitoring-appliance-installation.html">
+        Installazione dell'appliance di monitoraggio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riavviare l'appliance mentre è in esecuzione il programma di installazione dell'appliance StorageGRID"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html">
+        Riavviare l'appliance mentre è in esecuzione il programma di installazione dell'appliance StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi di installazione (SG100 e SG1000)"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html">
+        Risoluzione dei problemi di installazione (SG100 e SG1000)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi di installazione (SG5700 o SG6000)"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/troubleshooting-hardware-installation.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/troubleshooting-hardware-installation.html">
+        Risoluzione dei problemi di installazione (SG5700 o SG6000)
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Risoluzione dei problemi di installazione (SG6100)"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/installconfig/troubleshooting-hardware-installation-sg6100.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/installconfig/troubleshooting-hardware-installation-sg6100.html">
+        Risoluzione dei problemi di installazione (SG6100)
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire l'hardware dell'appliance"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-maintain-hdwr/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/storagegrid-appliances/landing-maintain-hdwr/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Gestire l'hardware dell'appliance</div>-->
+         Gestire l'hardware dell'appliance
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire la configurazione dell'appliance"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Gestire la configurazione dell'appliance</div>-->
+         Gestire la configurazione dell'appliance
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Mantenere la configurazione dell'appliance (tutti i nodi)"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/index.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/index.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Impostare l'apparecchio in modalità di manutenzione"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/placing-appliance-into-maintenance-mode.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/placing-appliance-into-maintenance-mode.html">
+        Impostare l'apparecchio in modalità di manutenzione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare l'impostazione MTU"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/changing-mtu-setting.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/changing-mtu-setting.html">
+        Modificare l'impostazione MTU
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Controllare la configurazione del server DNS"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/checking-dns-server-configuration.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/checking-dns-server-configuration.html">
+        Controllare la configurazione del server DNS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare i riferimenti degli indirizzi MAC"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/locate-mac-address.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/locate-mac-address.html">
+        Aggiornare i riferimenti degli indirizzi MAC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Monitorare la crittografia dei nodi in modalità di manutenzione"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/monitoring-node-encryption-in-maintenance-mode.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/monitoring-node-encryption-in-maintenance-mode.html">
+        Monitorare la crittografia dei nodi in modalità di manutenzione
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloning del nodo dell'appliance"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Cloning del nodo dell'appliance</div>-->
+         Cloning del nodo dell'appliance
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Cloning del nodo dell'appliance"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/how-appliance-node-cloning-works.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/how-appliance-node-cloning-works.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Considerazioni e requisiti per la clonazione del nodo dell'appliance"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/considerations-and-requirements-for-appliance-node-cloning.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/considerations-and-requirements-for-appliance-node-cloning.html">
+        Considerazioni e requisiti per la clonazione del nodo dell'appliance
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Nodo appliance clone"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/commonhardware/appliance-node-cloning-procedure.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/commonhardware/appliance-node-cloning-procedure.html">
+        Nodo appliance clone
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Gestire l'hardware di SG100 ed SG1000"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-maintain-sg1000-100/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/landing-maintain-sg1000-100/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Gestire l'hardware di SG100 ed SG1000</div>-->
+         Gestire l'hardware di SG100 ed SG1000
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manutenzione dell'hardware SG100 e SG1000"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/index.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/sg100-1000/index.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure di configurazione della manutenzione - SG100 e SG1000"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure di configurazione della manutenzione</div>-->
+         Procedure di configurazione della manutenzione
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Attivare e disattivare il LED di identificazione"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/turning-controller-identify-led-on-and-off.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/turning-controller-identify-led-on-and-off.html">
+        Attivare e disattivare il LED di identificazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Individuare il controller nel data center"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/locating-controller-in-data-center.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/locating-controller-in-data-center.html">
+        Individuare il controller nel data center
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Spegnere l'apparecchio"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/shut-down-sg100-and-sg1000.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/shut-down-sg100-and-sg1000.html">
+        Spegnere l'apparecchio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la configurazione del collegamento"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/changing-link-configuration-of-services-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/changing-link-configuration-of-services-appliance.html">
+        Modificare la configurazione del collegamento
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure hardware - SG100 e SG1000"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure hardware</div>-->
+         Procedure hardware
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire uno o entrambi gli alimentatori"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html">
+        Sostituire uno o entrambi gli alimentatori
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire la ventola"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/replacing-fan-in-services-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/replacing-fan-in-services-appliance.html">
+        Sostituire la ventola
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire l'unità"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/replacing-drive-in-services-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/replacing-drive-in-services-appliance.html">
+        Sostituire l'unità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire l'apparecchio"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg100-1000/replacing-services-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg100-1000/replacing-services-appliance.html">
+        Sostituire l'apparecchio
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manutenzione dell'hardware SG5600"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manutenzione dell'hardware SG5600</div>-->
+         Manutenzione dell'hardware SG5600
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="manutenzione dell'hardware di sg6100"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5600/index.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/sg5600/index.html">
+        Panoramica
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manutenzione dell'hardware SG5700"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-maintain-sg5700/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/landing-maintain-sg5700/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manutenzione dell'hardware SG5700</div>-->
+         Manutenzione dell'hardware SG5700
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manutenzione dell'hardware SG5700"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/index.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/sg5700/index.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure di configurazione della manutenzione - SG5700"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure di configurazione della manutenzione</div>-->
+         Procedure di configurazione della manutenzione
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare il sistema operativo SANtricity sul controller di storage"
+      data-li-level="4" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/upgrading-santricity-os-on-storage-controller.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg5700/upgrading-santricity-os-on-storage-controller.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Aggiornare il sistema operativo SANtricity sul controller di storage</div>-->
+         Aggiornare il sistema operativo SANtricity sul controller di storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando Grid Manager"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html">
+        Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando Grid Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare il sistema operativo SANtricity sul controller E2800 utilizzando la modalità di manutenzione"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html">
+        Aggiornare il sistema operativo SANtricity sul controller E2800 utilizzando la modalità di manutenzione
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare il firmware del disco utilizzando Gestione di sistema di SANtricity"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/upgrading-drive-firmware-using-santricity-system-manager.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg5700/upgrading-drive-firmware-using-santricity-system-manager.html">
+        Aggiornare il firmware del disco utilizzando Gestione di sistema di SANtricity
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la configurazione del collegamento del controller E5700SG"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/changing-link-configuration-of-e5700sg-controller.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg5700/changing-link-configuration-of-e5700sg-controller.html">
+        Modificare la configurazione del collegamento del controller E5700SG
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure hardware - SG5700"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure hardware</div>-->
+         Procedure hardware
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituzione dello storage controller E2800"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/replacing-e2800-controller.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg5700/replacing-e2800-controller.html">
+        Sostituzione dello storage controller E2800
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituzione del compute controller E5700SG"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/replacing-e5700sg-controller.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg5700/replacing-e5700sg-controller.html">
+        Sostituzione del compute controller E5700SG
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire gli altri componenti hardware"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg5700/replacing-other-hardware-components-sg5700.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg5700/replacing-other-hardware-components-sg5700.html">
+        Sostituire gli altri componenti hardware
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manutenzione dell'hardware SG6000"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-maintain-sg6000/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/landing-maintain-sg6000/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manutenzione dell'hardware SG6000</div>-->
+         Manutenzione dell'hardware SG6000
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG6000 interventi di manutenzione hardware"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/index.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/sg6000/index.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure di configurazione della manutenzione - SG6000"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure di configurazione della manutenzione</div>-->
+         Procedure di configurazione della manutenzione
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare il sistema operativo SANtricity sui controller di storage"
+      data-li-level="4" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/upgrading-santricity-os-on-storage-controllers.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/upgrading-santricity-os-on-storage-controllers.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Aggiornare il sistema operativo SANtricity sui controller di storage</div>-->
+         Aggiornare il sistema operativo SANtricity sui controller di storage
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando Grid Manager"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/sg6000/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html">
+        Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando Grid Manager
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare il sistema operativo SANtricity sui controller di storage utilizzando la modalità di manutenzione"
+      data-li-level="5#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html" 
+    ><a class="ie-sidebar-menuitem-5 " href="/it-it/storagegrid-appliances/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html">
+        Aggiornare il sistema operativo SANtricity sui controller di storage utilizzando la modalità di manutenzione
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiornare il firmware del disco utilizzando Gestione di sistema di SANtricity"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/upgrading-drive-firmware-using-santricity-system-manager.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/upgrading-drive-firmware-using-santricity-system-manager.html">
+        Aggiornare il firmware del disco utilizzando Gestione di sistema di SANtricity
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Accendere e spegnere il LED di identificazione del controller"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/turning-controller-identify-led-on-and-off.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/turning-controller-identify-led-on-and-off.html">
+        Accendere e spegnere il LED di identificazione del controller
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Individuare il controller nel data center"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/locating-controller-in-data-center.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/locating-controller-in-data-center.html">
+        Individuare il controller nel data center
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Spegnere e riaccendere il controller"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/power-sg6000-cn-controller-off-on.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/power-sg6000-cn-controller-off-on.html">
+        Spegnere e riaccendere il controller
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la configurazione del collegamento della centralina SG6000-CN"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/changing-link-configuration-of-sg6000-cn-controller.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/changing-link-configuration-of-sg6000-cn-controller.html">
+        Modificare la configurazione del collegamento della centralina SG6000-CN
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure hardware - SG6000"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure hardware</div>-->
+         Procedure hardware
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Aggiunta di shelf di espansione a SG6060 implementato"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/adding-expansion-shelf-to-deployed-sg6060.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/adding-expansion-shelf-to-deployed-sg6060.html">
+        Aggiunta di shelf di espansione a SG6060 implementato
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire il controller storage"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/replacing-storage-controller-sg6000.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/replacing-storage-controller-sg6000.html">
+        Sostituire il controller storage
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire i componenti hardware nello shelf dello storage controller"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/replacing-hardware-components-in-storage-controller-shelf.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/replacing-hardware-components-in-storage-controller-shelf.html">
+        Sostituire i componenti hardware nello shelf dello storage controller
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire i componenti hardware nello shelf di espansione opzionale da 60 dischi"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html">
+        Sostituire i componenti hardware nello shelf di espansione opzionale da 60 dischi
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire la centralina SG6000-CN"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/replacing-sg6000-cn-controller.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/replacing-sg6000-cn-controller.html">
+        Sostituire la centralina SG6000-CN
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire uno o entrambi gli alimentatori del controller SG6000-CN"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html">
+        Sostituire uno o entrambi gli alimentatori del controller SG6000-CN
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire il controller nel rack"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html">
+        Sostituire il controller nel rack
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire il coperchio del controller"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/reinstalling-sg6000-cn-controller-cover.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/reinstalling-sg6000-cn-controller-cover.html">
+        Sostituire il coperchio del controller
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire l'HBA Fibre Channel nel controller SG6000-CN"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6000/reinstalling-fibre-channel-hba.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6000/reinstalling-fibre-channel-hba.html">
+        Sostituire l'HBA Fibre Channel nel controller SG6000-CN
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Manutenzione dell'hardware SG6100"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/landing-maintain-sgf6112/index.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/it-it/storagegrid-appliances/landing-maintain-sgf6112/index.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Manutenzione dell'hardware SG6100</div>-->
+         Manutenzione dell'hardware SG6100
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SG6100 interventi di manutenzione hardware"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/index.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/it-it/storagegrid-appliances/sg6100/index.html">
+        Panoramica
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure di manutenzione della configurazione - SG6100"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure di manutenzione della configurazione</div>-->
+         Procedure di manutenzione della configurazione
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Utilizzare la scheda Gestisci unità"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/manage-drives-tab.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/manage-drives-tab.html">
+        Utilizzare la scheda Gestisci unità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Attivare e disattivare il LED di identificazione"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/turning-sgf6112-identify-led-on-and-off.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/turning-sgf6112-identify-led-on-and-off.html">
+        Attivare e disattivare il LED di identificazione
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Individuare l'appliance nel data center"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/locating-sgf6112-in-data-center.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/locating-sgf6112-in-data-center.html">
+        Individuare l'appliance nel data center
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Spegnete e riaccendete l'apparecchio"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/power-sgf6112-off-on.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/power-sgf6112-off-on.html">
+        Spegnete e riaccendete l'apparecchio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Modificare la configurazione del collegamento"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/changing-link-configuration-of-sgf6112-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/changing-link-configuration-of-sgf6112-appliance.html">
+        Modificare la configurazione del collegamento
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Procedure di manutenzione hardware - SG6100"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/it-it/storagegrid-appliances/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/it-it/storagegrid-appliances/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> Procedure di manutenzione dell'hardware</div>-->
+         Procedure di manutenzione dell'hardware
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Verificare il componente da sostituire"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/verify-component-to-replace.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/verify-component-to-replace.html">
+        Verificare il componente da sostituire
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire uno o più alimentatori"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html">
+        Sostituire uno o più alimentatori
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire la ventola"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/replacing-fan-in-sgf6112.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/replacing-fan-in-sgf6112.html">
+        Sostituire la ventola
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire l'unità"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/replacing-drive-in-sgf6112.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/replacing-drive-in-sgf6112.html">
+        Sostituire l'unità
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire la scheda NIC"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/replace-nic-in-sgf6112.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/replace-nic-in-sgf6112.html">
+        Sostituire la scheda NIC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire la batteria CMOS"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/replace-cmos-in-sgf6112.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/replace-cmos-in-sgf6112.html">
+        Sostituire la batteria CMOS
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Riposizionare il coperchio"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/reinstalling-sgf6112-cover.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/reinstalling-sgf6112-cover.html">
+        Riposizionare il coperchio
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Sostituire l'appliance SGF6112"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/replacing-sgf6112-appliance.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/replacing-sgf6112-appliance.html">
+        Sostituire l'appliance SGF6112
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Spostare SGF6112 nel rack"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/it-it/storagegrid-appliances/sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html">
+        Spostare SGF6112 nel rack
+      </a></li></ul></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Abilitare StorageGRID"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/storagegrid-enable.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/storagegrid-appliances/storagegrid-enable.html">
+        Abilitare StorageGRID
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Note legali"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/installconfig/automating-configuration-of-storagegrid.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/it-it/storagegrid-appliances/legal-notices.html">
+        Note legali
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/it-it/storagegrid-appliances"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/it-it/storagegrid-appliances"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/it-it/storagegrid-appliances/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> La versione in lingua italiana fornita proviene da una traduzione automatica. Per eventuali incoerenze, fare riferimento alla versione in lingua inglese. </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">Automatizzare la configurazione di StorageGRID</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2024-02-14 20:25:05 +0000">02/14/2024</time>
+        
+    
+    
+        <span>Collaboratori
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/it-it/storagegrid-appliances/images/discuss-sm.svg" alt="" class="github-icon" />Suggerisci modifiche</span>
+        <img src="/it-it/storagegrid-appliances/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/it-it/storagegrid-appliances/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/storagegrid-appliances.it-it/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/it-it/storagegrid-appliances/installconfig/automating-configuration-of-storagegrid.html&page-title=Automatizzare la configurazione di StorageGRID" class="page-nav-contribute-link" role="button">Richiedi modifiche alla documentazione</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/storagegrid-appliances/blob/main/installconfig/automating-configuration-of-storagegrid.adoc" class="page-nav-contribute-link" role="button">Modifica questa pagina</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >Scopri come collaborare</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/it-it/storagegrid-appliances/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/it-it/storagegrid-appliances/pdfs/fullsite-sidebar/Documentazione_sull_appliance_StorageGRID.pdf" >
+                    <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>PDF del sito di questa documentazione</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Inizia_subito.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Inizia subito
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Ulteriori_informazioni_sulle_appliance_StorageGRID.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Ulteriori informazioni sulle appliance StorageGRID
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Installare_l_appliance.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Installare l'appliance
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Preparazione_per_l_installazione.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Preparazione per l'installazione
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Raccogliere_informazioni_sulla_rete.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Raccogliere informazioni sulla rete
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Installare_l_hardware_dell_appliance.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Installare l'hardware dell'appliance
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Installazione_nell_armadio_o_nel_rack.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Installazione nell'armadio o nel rack
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/SG6000.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            SG6000
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Configurare_l_hardware.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Configurare l'hardware
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Configurare_le_connessioni_StorageGRID.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Configurare le connessioni StorageGRID
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Configurare_l_interfaccia_BMC__SG100__SG1000__SG6000_e_SG6100_.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Configurare l'interfaccia BMC (SG100, SG1000, SG6000 e SG6100)
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Implementare_il_nodo_appliance.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Implementare il nodo appliance
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Gestire_l_hardware_dell_appliance.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Gestire l'hardware dell'appliance
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Gestire_la_configurazione_dell_appliance.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Gestire la configurazione dell'appliance
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Cloning_del_nodo_dell_appliance.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Cloning del nodo dell'appliance
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Gestire_l_hardware_di_SG100_ed_SG1000.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Gestire l'hardware di SG100 ed SG1000
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_di_configurazione_della_manutenzione___SG100_e_SG1000.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure di configurazione della manutenzione
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_hardware___SG100_e_SG1000.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure hardware
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Manutenzione_dell_hardware_SG5600.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manutenzione dell'hardware SG5600
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Manutenzione_dell_hardware_SG5700.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manutenzione dell'hardware SG5700
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_di_configurazione_della_manutenzione___SG5700.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure di configurazione della manutenzione
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Aggiornare_il_sistema_operativo_SANtricity_sul_controller_di_storage.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Aggiornare il sistema operativo SANtricity sul controller di storage
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_hardware___SG5700.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure hardware
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Manutenzione_dell_hardware_SG6000.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manutenzione dell'hardware SG6000
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_di_configurazione_della_manutenzione___SG6000.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure di configurazione della manutenzione
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Aggiornare_il_sistema_operativo_SANtricity_sui_controller_di_storage.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Aggiornare il sistema operativo SANtricity sui controller di storage
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_hardware___SG6000.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure hardware
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Manutenzione_dell_hardware_SG6100.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Manutenzione dell'hardware SG6100
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_di_manutenzione_della_configurazione___SG6100.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure di manutenzione della configurazione
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/it-it/storagegrid-appliances/pdfs/sidebar/Procedure_di_manutenzione_hardware___SG6100.pdf" 
+            
+          >
+            <img src="/it-it/storagegrid-appliances/images/pdf-icon.png" alt="" width="16" height="16"/>
+            Procedure di manutenzione dell'hardware
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/it-it/storagegrid-appliances/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>Raccolta di documenti PDF separati<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div class="paragraph lead">
+<p>Dopo aver installato e configurato i nodi di rete, è possibile automatizzare la configurazione del sistema StorageGRID.</p>
+</div>
+<div class="ulist">
+<div class="title">Prima di iniziare</div>
+<ul>
+<li>
+<p>Si conosce la posizione dei seguenti file dall'archivio di installazione.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Nome file</th>
+<th class="tableblock halign-left valign-top">Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>configure-storagegrid.py</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Script Python utilizzato per automatizzare la configurazione</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>configure-storagegrid.sample.json</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>File di configurazione di esempio da utilizzare con lo script</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>configure-storagegrid.blank.json</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>File di configurazione vuoto da utilizzare con lo script</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>È stato creato un <code>configure-storagegrid.json</code> file di configurazione. Per creare questo file, è possibile modificare il file di configurazione di esempio (<code>configure-storagegrid.sample.json</code>) o il file di configurazione vuoto (<code>configure-storagegrid.blank.json</code>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">A proposito di questa attività</div>
+<p>È possibile utilizzare <code>configure-storagegrid.py</code> Script Python e il <code>configure-storagegrid.json</code> File di configurazione per automatizzare la configurazione del sistema StorageGRID.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/storagegrid-appliances/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+È inoltre possibile configurare il sistema utilizzando <a href="https://docs.netapp.com/us-en/storagegrid-118/primer/exploring-grid-manager.html" target="_blank" rel="noopener">"Grid Manager"</a> o il <a href="overview-of-installation-rest-apis.html">"API di installazione"</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Fasi</div>
+<ol class="arabic">
+<li>
+<p>Accedere alla macchina Linux in uso per eseguire lo script Python.</p>
+</li>
+<li>
+<p>Passare alla directory in cui è stato estratto l'archivio di installazione.</p>
+<div class="paragraph">
+<p>Ad esempio:<br>
+<code>cd StorageGRID-Webscale-<em>version/platform</em></code></p>
+</div>
+<div class="paragraph">
+<p>dove <code><em>platform</em></code> è <code>debs</code>, <code>rpms</code>, o. <code>vsphere</code>.</p>
+</div>
+</li>
+<li>
+<p>Eseguire lo script Python e utilizzare il file di configurazione creato.</p>
+<div class="paragraph">
+<p>Ad esempio:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./configure-storagegrid.py ./configure-storagegrid.json --start-install</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title">Al termine</div>
+<p>Un pacchetto di ripristino <code>.zip</code> il file viene generato durante il processo di configurazione e scaricato nella directory in cui si esegue il processo di installazione e configurazione. È necessario eseguire il backup del file del pacchetto di ripristino in modo da poter ripristinare il sistema StorageGRID in caso di guasto di uno o più nodi della griglia. Ad esempio, copiarla in una posizione di rete sicura e di backup e in una posizione di cloud storage sicura.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/storagegrid-appliances/images/caution.svg" alt="Avvertenza">
+</td>
+<td class="content">
+Il file del pacchetto di ripristino deve essere protetto perché contiene chiavi di crittografia e password che possono essere utilizzate per ottenere dati dal sistema StorageGRID.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Se si specifica che devono essere generate password casuali, è necessario estrarre <code>Passwords.txt</code> E cercare le password necessarie per accedere al sistema StorageGRID.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>######################################################################
+##### The StorageGRID "recovery package" has been downloaded as: #####
+#####           ./sgws-recovery-package-994078-rev1.zip          #####
+#####   Safeguard this file as it will be needed in case of a    #####
+#####                 StorageGRID node recovery.                 #####
+######################################################################</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Il sistema StorageGRID viene installato e configurato quando viene visualizzato un messaggio di conferma.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>StorageGRID has been configured and installed.</pre>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/it-it/storagegrid-appliances/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/it-it/storagegrid-appliances/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">In questa pagina</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">Condizioni per l'utilizzo</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Direttiva sulla privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Direttiva sui cookie</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Impostazioni cookie</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">Invia feedback su questa pagina</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/it-it/storagegrid-appliances/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/it-it/storagegrid-appliances/js/prism.js'></script>
+      <script type="text/javascript" src='/it-it/storagegrid-appliances/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/it-it/storagegrid-appliances/js/ie-tabbed-blocks.js'></script>
+    <script src='/it-it/storagegrid-appliances/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
