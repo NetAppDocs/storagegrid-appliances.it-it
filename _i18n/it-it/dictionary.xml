@@ -2984,7 +2984,6 @@ Dopo aver completato l'aggiornamento corrente, scaricare il file SANtricity OS c
   <block id="f9df26f43e7cbb8a8facb5017b47ccbe" category="list-text">Individuare il perno guida sulla scheda di sistema.</block>
   <block id="e2ca2c1368ac8b9d1d8e5571f1857efd" category="image-alt">Perno guida sulla scheda di sistema per il gruppo riser a due slot</block>
   <block id="f456f175997595ccbac05b05c7dbc0d8" category="inline-link-macro">immettere la passphrase di crittografia dell'unità</block>
-  <block id="2961ad31d988fa2e014040d6361c363e" category="list-text">Se l'appliance sostituita ha abilitato la crittografia del disco per le unità SED, è necessario <block ref="8ca8505552d3e0acf0b7c638e20906f9" category="inline-link-macro-rx"></block> per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.</block>
   <block id="46f19b3ee8dedf83d42c3a4ff5d0c6bb" category="list-text">Se l'appliance sostituita utilizzava un server di gestione delle chiavi (KMS) per gestire le chiavi di crittografia per la crittografia dei nodi, potrebbe essere necessaria una configurazione aggiuntiva prima che il nodo possa unirsi al grid. Se il nodo non si unisce automaticamente alla griglia, assicurarsi che queste impostazioni di configurazione siano state trasferite alla nuova appliance e configurare manualmente le impostazioni che non hanno la configurazione prevista:</block>
   <block id="7deed07135df9d94ea323d9469e424d3" category="list-text"><block ref="7deed07135df9d94ea323d9469e424d3" category="inline-link-macro-rx"></block></block>
   <block id="5d5e7579cc415f2940c02cee9b12c42d" category="inline-link">Configurare la crittografia dei nodi per l'appliance</block>
@@ -3388,7 +3387,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="fadc88cd0b2f17c2130cb8814db82929" category="inline-link-macro">Installare l'apparecchio sostitutivo nell'armadietto o nel rack</block>
   <block id="a4c24c1e4a12470715433d6f6a22590b" category="list-text"><block ref="e863dd214d46a90fc51854e24b3dd0fd" category="inline-link-macro-rx"></block>.</block>
   <block id="05af8dc3b0588fc5c9ecb2b6c178bee0" category="list-text">Accendere l'apparecchio.</block>
-  <block id="94be36ec44c8318cfab0eec6871e7823" category="list-text">Se l'appliance sostituita ha abilitato la crittografia dell'unità hardware per le unità SED, è necessario <block ref="8ca8505552d3e0acf0b7c638e20906f9" category="inline-link-macro-rx"></block> per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.</block>
   <block id="4245635d62a9242eb35a7e4ec5a56abd" category="list-text">Attendete che l'apparecchio si unisca nuovamente alla griglia. Se l'appliance non si ricongiungerà alla griglia, seguire le istruzioni riportate nella home page del programma di installazione dell'appliance StorageGRID per risolvere eventuali problemi.</block>
   <block id="a7c99d1b44c3cfef060bab2387eba42e" category="admonition">Per evitare la perdita di dati se il programma di installazione dell'appliance indica la necessità di apportare modifiche fisiche all'hardware, ad esempio lo spostamento dei dischi in slot diversi, spegnere l'appliance prima di apportare modifiche all'hardware.</block>
   <block id="ca2048aa7418bfc8c45e3193b5be5e0d" category="paragraph"><block ref="ca2048aa7418bfc8c45e3193b5be5e0d" category="inline-link-macro-rx"></block></block>
@@ -4237,4 +4235,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Alimentazione sullo shelf del controller.</block>
   <block id="944f002f126d9f60a7abfb7abb8b19a6" category="section-title">Fase 1: Preparare la centralina sostitutiva</block>
   <block id="7dc8820948fbd0653bf70cd43dd02d4c" category="paragraph">Prepararsi a rimuovere il controller guasto e a portarlo offline.</block>
+  <block id="eb10eb07d3a38a1d82d1975eb3a3c409" category="list-text">Se l'appliance sostituita ha abilitato la crittografia dell'unità hardware per le unità SED, è necessario <block ref="f97e47907b7e5dda63e0ea22475313d7" category="inline-link-macro-rx"></block> per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.</block>
+  <block id="b01853030b7f0a28704ab7f8c1c35ee8" category="list-text">Se l'appliance sostituita ha abilitato la crittografia del disco per le unità SED, è necessario <block ref="f97e47907b7e5dda63e0ea22475313d7" category="inline-link-macro-rx"></block> per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.</block>
 </blocks>

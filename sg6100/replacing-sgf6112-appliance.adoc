@@ -163,7 +163,7 @@ CAUTION: Se si desidera conservare i dati sui dischi, assicurarsi di inserire i 
 
 
 . Accendere l'apparecchio.
-. Se l'appliance sostituita ha abilitato la crittografia dell'unità hardware per le unità SED, è necessario link:optional-enabling-node-encryption.html#access-an-encrypted-drive["immettere la passphrase di crittografia dell'unità"] per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.
+. Se l'appliance sostituita ha abilitato la crittografia dell'unità hardware per le unità SED, è necessario link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["immettere la passphrase di crittografia dell'unità"] per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.
 . Attendete che l'apparecchio si unisca nuovamente alla griglia. Se l'appliance non si ricongiungerà alla griglia, seguire le istruzioni riportate nella home page del programma di installazione dell'appliance StorageGRID per risolvere eventuali problemi.
 +
 
