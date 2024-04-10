@@ -59,6 +59,9 @@ NOTE: I controller di storage nella maggior parte dei modelli di appliance non i
 
 == Fase 1: Preparare la centralina sostitutiva
 
+Preparare il controller E2800A o E2800B sostitutivo.
+
+.Fasi
 . Disimballare il nuovo controller e impostarlo su una superficie piana e priva di elettricità statica.
 +
 Conservare il materiale di imballaggio da utilizzare per la spedizione del controller guasto.
@@ -255,7 +258,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Flangia della batteria non corre
 
 == Fase 5: Spostare l'HIC sulla nuova centralina, se necessario
 
-Se la centralina guasta include un HIC, spostare l'HIC dalla centralina guasta alla centralina sostitutiva.
+Se il controller guasto include una scheda di interfaccia host (HIC), spostare l'HIC dal controller guasto al controller sostitutivo.
 
 Un HIC separato viene utilizzato solo per il controller E2800B. L'HIC è montato sulla scheda del controller principale e include due connettori SPF.
 

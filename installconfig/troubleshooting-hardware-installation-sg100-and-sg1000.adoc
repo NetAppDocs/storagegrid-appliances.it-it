@@ -90,7 +90,11 @@ SOL
 +
 .. Connettersi a IPMI Sol utilizzando l'indirizzo IP BMC e le credenziali di accesso.
 +
-`ipmitool -I lanplus -H _BMC_Port_IP_ -U root -P _Password_ sol activate`
+`ipmitool -I lanplus -H _BMC_Port_IP_ -U admin -P _Password_ sol activate`
+
++
+
+NOTE: In alcuni casi il nome utente predefinito potrebbe essere `root` invece di `admin`.
 
 .. Visualizzare i codici sul terminale seriale virtuale.
 

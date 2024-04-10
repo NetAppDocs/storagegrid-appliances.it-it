@@ -19,7 +19,15 @@ entries:
         utilizzando la modalità di manutenzione
       url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html"
   - title: Aggiornare il firmware del disco utilizzando Gestione di sistema di SANtricity
-    url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+    entries:
+    - title: Aggiornare il firmware dell'unità SG6000 utilizzando Gestione di sistema
+        di SANtricity utilizzando il metodo online
+      url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Aggiornare il firmware delle unità SG6000 utilizzando Gestione di sistema
+        di SANtricity utilizzando il metodo offline
+      url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
+    - title: Risolvere gli errori di aggiornamento del firmware del disco
+      url: "/sg6000/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
   - title: Accendere e spegnere il LED di identificazione del controller
     url: "/sg6000/turning-controller-identify-led-on-and-off.html"
   - title: Individuare il controller nel data center

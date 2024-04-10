@@ -6,7 +6,7 @@
 
 == Fase 5: Spostare l'HIC sulla nuova centralina, se necessario
 
-Se la centralina guasta include un HIC, spostare l'HIC dalla centralina guasta alla centralina sostitutiva.
+Se il controller guasto include una scheda di interfaccia host (HIC), spostare l'HIC dal controller guasto al controller sostitutivo.
 
 Un HIC separato viene utilizzato solo per il controller E2800B. L'HIC è montato sulla scheda del controller principale e include due connettori SPF.
 
