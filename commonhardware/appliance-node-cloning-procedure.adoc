@@ -63,7 +63,7 @@ Quando l'opzione *Avvia clonazione* è attivata, lo stato *corrente* indica la r
 . Selezionare *Avvia clonazione* sul nodo di origine.
 . Monitorare l'avanzamento della clonazione utilizzando il programma di installazione dell'appliance StorageGRID sul nodo di origine o di destinazione.
 +
-Il programma di installazione dell'appliance StorageGRID sui nodi di origine e di destinazione indica lo stesso stato.
+Il programma di installazione dell'appliance StorageGRID su entrambi i nodi di origine e destinazione indica uno stato simile.
 
 +
 image::../media/cloning_progress.png[Progresso della clonazione]
@@ -102,9 +102,9 @@ Al termine della clonazione:
 
 
 
-NOTE: Se l'appliance non si riconnette alla griglia, accedere alla home page del programma di installazione dell'appliance StorageGRID relativa al nodo di origine, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare *Riavvia in modalità di manutenzione*. Dopo il riavvio del nodo di origine in modalità di manutenzione, ripetere la procedura di cloning del nodo.
+NOTE: Se il dispositivo di destinazione non si inserisce nella griglia, andare alla pagina iniziale del programma di installazione del dispositivo StorageGRID per il nodo di origine, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare *Riavvia in modalità manutenzione*. Dopo il riavvio del nodo di origine in modalità di manutenzione, ripetere la procedura di cloning del nodo.
 
-* I dati dell'utente rimangono sull'appliance di origine come opzione di ripristino se si verifica un problema imprevisto con il nodo di destinazione. Una volta che il nodo di destinazione ha raggiunto StorageGRID, i dati dell'utente sull'appliance di origine sono obsoleti e non sono più necessari.
+* I dati dell'utente rimangono sull'appliance di origine come opzione di ripristino se si verifica un problema imprevisto con il nodo di destinazione. Dopo che il nodo di destinazione è entrato con successo in StorageGRID, i dati dell'utente sull'appliance di origine sono obsoleti e non sono più necessari.
 +
 I dati utente obsoleti vengono sovrascritti quando si installa o si espande l'appliance di origine come nuovo nodo in un'altra griglia.
 

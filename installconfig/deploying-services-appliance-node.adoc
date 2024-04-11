@@ -49,7 +49,7 @@ Il nome del nodo viene assegnato al nodo dell'appliance nel sistema StorageGRID.
 +
 .. Scarica l'archivio di installazione:
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Download NetApp: StorageGRID"^]
 
 .. Estrarre l'archivio.
 .. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *carica software StorageGRID*.
@@ -57,10 +57,7 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/dow
 +
 image::../media/appliance_installer_rmv_current_software.png[Appliance Installer - Rimuovi il software corrente]
 
-.. Fare clic su *Browse* per il pacchetto software scaricato ed estratto, quindi fare clic su *Browse* per il file checksum.
-+
-image::../media/appliance_installer_upload_sg_software.png[Appliance Installer - caricare il software SG]
-
+.. Fare clic su *Sfoglia* per il pacchetto software scaricato ed estratto. Selezionare `storagegrid-webscale-images-_version_.deb` pacchetto.
 .. Selezionare *Home* per tornare alla pagina iniziale.
 
 
@@ -103,7 +100,7 @@ Per installare StorageGRID su un nodo dell'appliance di servizi:
 * Specificare o confermare l'indirizzo IP del nodo Admin primario e il nome del nodo appliance.
 * Avviare l'installazione e attendere che il software sia installato.
 +
-Durante le attività di installazione dell'appliance Gateway Node, l'installazione viene interrotta. Per riprendere l'installazione, accedi a Grid Manager, approva tutti i nodi della griglia e completa il processo di installazione di StorageGRID. L'installazione di un nodo amministrativo non primario non richiede l'approvazione dell'utente.
+Durante le attività di installazione dell'appliance Gateway Node, l'installazione viene interrotta. Per riprendere l'installazione, accedi a Grid Manager, approva tutti i nodi della griglia e completa il processo di installazione di StorageGRID.
 
 
 
@@ -162,7 +159,7 @@ Il nome visualizzato qui corrisponde al nome di sistema del nodo dell'appliance.
 +
 .. Scarica l'archivio di installazione:
 +
-https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^]
+https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab["Download NetApp: StorageGRID"^]
 
 .. Estrarre l'archivio.
 .. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *carica software StorageGRID*.
@@ -170,10 +167,7 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/dow
 +
 image::../media/appliance_installer_rmv_current_software.png[Appliance Installer - Rimuovi il software corrente]
 
-.. Fare clic su *Browse* per il pacchetto software scaricato ed estratto, quindi fare clic su *Browse* per il file checksum.
-+
-image::../media/appliance_installer_upload_sg_software.png[Appliance Installer - caricare il software SG]
-
+.. Fare clic su *Sfoglia* per il pacchetto software scaricato ed estratto. Selezionare `storagegrid-webscale-images-_version_.deb` pacchetto.
 .. Selezionare *Home* per tornare alla pagina iniziale.
 
 
@@ -183,10 +177,7 @@ Se il pulsante *Avvia installazione* non è attivato, potrebbe essere necessario
 
 . Dalla home page del programma di installazione dell'appliance StorageGRID, fare clic su *Avvia installazione*.
 +
-image::../media/appliance_installer_services_appliance_non_pan.png[Pagina iniziale del programma di installazione dell'appliance - Installazione del nodo di amministrazione non primario]
-
-+
-Lo stato corrente cambia in "`Installation is in Progress`" (Installazione in corso) e viene visualizzata la pagina Monitor Installation (Installazione monitor).
+Lo stato corrente cambia in "`Installazione in corso,''" e in link:../installconfig/monitoring-appliance-installation.html["Pagina Installazione monitor"] viene visualizzato.
 
 +
 

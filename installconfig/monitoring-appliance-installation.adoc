@@ -55,6 +55,8 @@ Facendo clic su *Install* (Installa) da Grid Manager, viene completata la fase 3
 
 
 
+Al termine di tutte le fasi di installazione, chiudere la finestra.
+
 --
 .Appliance di servizi
 --
@@ -86,22 +88,24 @@ In questa fase, il programma di installazione copia l'immagine del sistema opera
 
 . Continuare a monitorare l'avanzamento dell'installazione fino a quando non si verifica una delle seguenti procedure:
 +
-** Per tutti i nodi appliance, ad eccezione del nodo di amministrazione principale, la fase Installa StorageGRID viene interrotta e sulla console integrata viene visualizzato un messaggio che richiede di approvare questo nodo sul nodo di amministrazione utilizzando Gestione griglia. Passare alla fase successiva.
+** Per tutti i nodi di appliance, ad eccezione del nodo amministrativo primario, la fase Installa StorageGRID viene sospesa e viene visualizzato un messaggio sulla console incorporata, che richiede di approvare questo nodo sul nodo amministrativo utilizzando https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Grid Manager"^]. Passare alla fase successiva.
 ** Per l'installazione di Admin Node primario dell'appliance, non è necessario approvare il nodo. L'apparecchio viene riavviato. È possibile saltare la fase successiva.
 +
 
-NOTE: Durante l'installazione di un nodo di amministrazione primario dell'appliance, viene visualizzata una quinta fase (vedere la schermata di esempio che mostra quattro fasi). Se la quinta fase è in corso per più di 10 minuti, aggiornare la pagina Web manualmente.
+NOTE: Durante l'installazione di un nodo amministrativo primario dell'appliance, viene visualizzata una quinta fase per caricare il programma di installazione StorageGRID (la schermata di esempio mostra solo le prime quattro fasi). Se il caricamento del programma di installazione di StorageGRID (quinta fase) è in corso per più di 10 minuti, aggiornare manualmente la pagina Web.
 
 +
 image::../media/monitor_installation_install_sgws.gif[Questa immagine viene spiegata dal testo circostante.]
 
 
 
-. Accedere al gestore della griglia del nodo Amministratore principale, approvare il nodo della griglia in sospeso e completare il processo di installazione di StorageGRID.
+. https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Accedere a Grid Manager"^] Del nodo Amministratore primario, approvare il nodo griglia in sospeso e completare il processo di installazione di StorageGRID.
 +
 Facendo clic su *Install* (Installa) da Grid Manager, viene completata la fase 3 e viene avviata la fase 4, *Finalize Installation* (completamento dell'installazione). Al termine della fase 4, l'appliance viene riavviato.
 
 
+
+Al termine di tutte le fasi di installazione, chiudere la finestra.
 
 --
 ====

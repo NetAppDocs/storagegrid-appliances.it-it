@@ -34,7 +34,7 @@ Per implementare un nodo di storage dell'appliance in un sistema StorageGRID, ac
 
 
 
-NOTE: Se è necessario implementare più nodi appliance contemporaneamente, è possibile automatizzare il processo di installazione utilizzando `configure-sga.py` Script di installazione dell'appliance.
+NOTE: Se è necessario implementare più nodi di appliance contemporaneamente, è possibile automatizzare il processo di installazione utilizzando il collegamento:./installconfig/automaticing-appliance-installation-and-Configuration.html#automatize-with-configure-sga-py-script[`configure-sga.py` Script di installazione dell'appliance].
 
 * Se si sta eseguendo un'operazione di espansione o ripristino, seguire le istruzioni appropriate:
 +
@@ -101,7 +101,7 @@ link:../commonhardware/appliance-node-cloning-procedure.html["procedura di cloni
 
 . Dalla home page del programma di installazione dell'appliance StorageGRID, fare clic su *Avvia installazione*.
 +
-Lo stato corrente cambia in "`Installation is in Progress`" (Installazione in corso) e viene visualizzata la pagina Monitor Installation (Installazione monitor).
+Lo stato corrente cambia in "`Installazione in corso,''" e in link:../installconfig/monitoring-appliance-installation.html["Pagina Installazione monitor"] viene visualizzato.
 
 +
 
@@ -110,6 +110,6 @@ NOTE: Per accedere manualmente alla pagina Installazione monitor, fare clic su *
 . Se la griglia include più nodi storage dell'appliance, ripetere questi passaggi per ogni appliance.
 +
 
-NOTE: Se è necessario implementare più nodi storage di appliance contemporaneamente, è possibile automatizzare il processo di installazione utilizzando `configure-sga.py` Script di installazione dell'appliance.
+NOTE: Se è necessario implementare più nodi di storage di appliance contemporaneamente, è possibile automatizzare il processo di installazione utilizzando il collegamento:./installconfig/automaticing-appliance-installation-and-Configuration.html#automatizza-with-configure-sga-py-script[`configure-sga.py` Script di installazione dell'appliance].
 
 

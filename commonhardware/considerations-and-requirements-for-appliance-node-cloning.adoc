@@ -25,13 +25,21 @@ Assicurarsi che l'apparecchio sostitutivo soddisfi i seguenti criteri:
 ** È possibile clonare un'appliance Storage Node solo su una nuova appliance di storage.
 
 
-* Per le appliance Admin Node o Gateway Node, l'appliance del nodo di origine e l'appliance di destinazione non devono necessariamente essere dello stesso tipo di appliance; tuttavia, la modifica del tipo di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
+* Per le appliance nodo amministrativo o nodo gateway, l'appliance del nodo di origine e l'appliance di destinazione non devono necessariamente essere dello stesso modello di appliance; tuttavia, la modifica del modello di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
 +
 Ad esempio, è possibile sostituire un'appliance a nodi SG1000 con un SG100 o un'appliance SG100 con un'appliance SG1000.
 
-* Per le appliance Storage Node, l'appliance del nodo di origine e l'appliance di destinazione non devono necessariamente essere dello stesso tipo di appliance; tuttavia, l'appliance di destinazione deve avere una capacità di storage superiore a quella dell'appliance di origine.
+* Per le appliance Storage Node, l'appliance del nodo di origine e l'appliance di destinazione non devono necessariamente essere dello stesso tipo di appliance; tuttavia:
++
+** L'appliance di destinazione deve avere una maggiore capacità di storage rispetto all'appliance di origine.
 +
 Ad esempio, è possibile sostituire un'appliance a nodi SG5700 con un'appliance SG6000.
+
+** L'appliance di destinazione deve avere un numero uguale o maggiore di volumi di storage a oggetti rispetto all'appliance di origine.
++
+Ad esempio, non è possibile sostituire un'appliance SG6000 nodi (volumi di oggetti 16 GB) con un'appliance SGF6112 (volumi di oggetti 12 GB).
+
+
 
 
 
@@ -56,7 +64,7 @@ NOTE: L'utilizzo della rete di amministrazione 1-GbE per il trasferimento dei da
 +
 Il nodo di origine e l'appliance di destinazione possono avere diverse impostazioni di crittografia del nodo. La decrittografia e la crittografia dei dati vengono eseguite automaticamente durante il trasferimento dei dati e quando il nodo di destinazione viene riavviato e si unisce alla griglia.
 
-* Determinare se la modalità RAID sull'appliance di destinazione deve essere modificata rispetto all'impostazione predefinita, in modo da poter specificare queste informazioni durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *Storage* dell'appliance.
+* Determinare se la modalità RAID sull'appliance di destinazione deve essere modificata rispetto all'impostazione predefinita, in modo da poter specificare queste informazioni durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *hardware* per l'apparecchio.
 +
 Il nodo di origine e l'appliance di destinazione possono avere impostazioni RAID diverse.
 
