@@ -41,5 +41,6 @@ Le procedure di manutenzione specifiche per ciascun tipo di appliance StorageGRI
 * link:../sg6100/index.html["Manutenzione dell'appliance SG6100"]
 * link:../sg6000/index.html["Manutenzione dell'appliance SG6000"]
 * link:../sg5700/index.html["Manutenzione dell'appliance SG5700"]
+* link:../sg110-1100/index.html["Manutenzione di appliance SG110 e SG1100"]
 * link:../sg100-1000/index.html["Manutenzione delle appliance SG100 e SG1000"]
 

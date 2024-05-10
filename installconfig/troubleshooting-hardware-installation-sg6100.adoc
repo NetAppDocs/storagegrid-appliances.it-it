@@ -533,7 +533,7 @@ Il programma di installazione dell'appliance StorageGRID potrebbe non essere dis
 
 == Problemi di connessione
 
-Se non è possibile connettersi all'appliance di servizi, potrebbe esserci un problema di rete o l'installazione dell'hardware potrebbe non essere stata completata correttamente.
+Se non è possibile connettersi all'appliance, potrebbe esserci un problema di rete o l'installazione dell'hardware potrebbe non essere stata completata correttamente.
 
 .Fasi
 . Provare a eseguire il ping dell'appliance utilizzando l'indirizzo IP dell'appliance: +

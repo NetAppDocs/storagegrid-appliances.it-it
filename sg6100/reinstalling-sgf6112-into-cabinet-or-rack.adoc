@@ -81,4 +81,4 @@ NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o
 
 
 .Al termine
-link:powering-on-sgf6112-and-verifying-operation.html["Riavviare l'apparecchio"].
+link:power-sgf6112-off-on.html#power-on-sgf6112-and-verify-operation["Riavviare l'apparecchio"].

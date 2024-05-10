@@ -14,7 +14,9 @@ summary: 'È possibile accedere all"interfaccia BMC utilizzando l"indirizzo DHCP
 È possibile accedere all'interfaccia BMC utilizzando l'indirizzo DHCP o l'indirizzo IP statico per la porta di gestione BMC sui seguenti modelli di appliance:
 
 * SG100
+* SG110
 * SG1000
+* SG1100
 * SG6000
 * SG6100
 
@@ -30,9 +32,19 @@ summary: 'È possibile accedere all"interfaccia BMC utilizzando l"indirizzo DHCP
 image::../media/sg100_bmc_management_port.png[SG100 porta di gestione BMC]
 
 --
+.SG110
+--
+image::../media/sgf6112_cn_bmc_management_port.png[Porta di gestione BMC SG110]
+
+--
 .SG1000
 --
 image::../media/sg1000_bmc_management_port.png[Porta di gestione BMC SG1000]
+
+--
+.SG1100
+--
+image::../media/sg1100_bmc_management_port.png[Porta di gestione BMC SG1100]
 
 --
 .SG6000

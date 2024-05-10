@@ -50,6 +50,47 @@ image::../media/power_cords.gif[Cavi di alimentazione]
 
 
 --
+.SG110 e SG1100
+--
+* *Hardware*
++
+SG110 o SG1100::
++
+--
+image::../media/sgf6112_front_with_ssds.png[Azionamenti anteriori di appliance SG110 e SG1100]
+
+--
+Kit di guide con istruzioni::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+Pannello anteriore::
++
+--
+image::../media/sgf_6112_front_bezel.png[Pannello anteriore]
+
+--
+
+
+* *Cavi di alimentazione*
++
+
+TIP: Il cabinet potrebbe essere dotato di cavi di alimentazione speciali utilizzati al posto dei cavi di alimentazione forniti con l'apparecchio.
+
++
+Due cavi di alimentazione per il tuo paese::
++
+--
+image::../media/power_cords.gif[Cavi di alimentazione]
+
+--
+
+
+
+
+--
 .SG5700
 --
 * *Hardware*

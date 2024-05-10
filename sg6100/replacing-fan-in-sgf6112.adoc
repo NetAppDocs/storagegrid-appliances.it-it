@@ -38,13 +38,13 @@ La fotografia mostra una ventola per l'apparecchio. Il connettore elettrico vien
 
 NOTE: Ciascuna delle due unità di alimentazione contiene anche una ventola. Le ventole dell'alimentatore non sono incluse in questa procedura.
 
-image::../media/sgf6112_fan_fru.png[FRU della ventola SGF6112]
+image::../media/sgf6112_fan_fru.png[FRU della ventola]
 
 .Fasi
 . Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
 . Individuare la ventola da sostituire.
 +
-Le otto ventole si trovano nelle seguenti posizioni nello chassis (metà anteriore di SGF6112 con coperchio superiore rimosso in figura):
+Le otto ventole si trovano nelle seguenti posizioni nello chassis (in figura è mostrata la metà anteriore dell'apparecchio StorageGRID con il coperchio superiore rimosso):
 
 +
 image::../media/SGF6112-fan-locations.png[Posizioni delle ventole]

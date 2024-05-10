@@ -6,8 +6,8 @@ entries:
 - title: Panoramica
   pdf-filename: SG6100 interventi di manutenzione hardware
   url: "/sg6100/index.html"
-- title: Procedure di manutenzione della configurazione
-  pdf-filename: Procedure di manutenzione della configurazione - SG6100
+- title: Procedure di configurazione della manutenzione
+  pdf-filename: Procedure di configurazione della manutenzione - SG6100
   entries:
   - title: Utilizzare la scheda Gestisci unità
     url: "/sg6100/manage-drives-tab.html"

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: BMC, baseboard management controller, configure, setup, set up 
 summary: 'L"interfaccia utente per il controller di gestione della scheda di base \(BMC\) sull"appliance SG6100, SG6000 o Services fornisce informazioni sullo stato dell"hardware e consente di configurare le impostazioni SNMP e altre opzioni per le appliance.' 
 ---
-= Interfaccia BMC: Panoramica (SG100, SG1000, SG6000 e SG6100)
+= INTERFACCIA BMC: PANORAMICA (SG100, SG110, SG1000, SG1100, SG6000, e SG6100)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

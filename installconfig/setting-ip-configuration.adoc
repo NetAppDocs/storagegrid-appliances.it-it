@@ -21,6 +21,7 @@ Se si utilizza ConfigBuilder per generare un file JSON, è possibile configurare
 Per modificare la configurazione del collegamento, consultare le istruzioni seguenti:
 
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG100 o SG1000"]
+* link:../sg110-1100/changing-link-configuration-of-services-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG110 o SG1100"]
 * link:../sg5700/changing-link-configuration-of-e5700sg-controller.html["Modificare la configurazione del collegamento del controller E5700SG"]
 * link:../sg6000/changing-link-configuration-of-sg6000-cn-controller.html["Modificare la configurazione del collegamento della centralina SG6000-CN"]
 * link:../sg6100/changing-link-configuration-of-sgf6112-appliance.html["Modificare la configurazione del collegamento dell'appliance SG6100"]

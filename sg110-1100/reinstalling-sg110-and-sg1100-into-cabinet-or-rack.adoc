@@ -1,0 +1,86 @@
+---
+permalink: sg110-1100/reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, admin node, admin appliance, install, installing, installation, cabinet, rack 
+summary: 'Rimuovere il dispositivo SG110 o SG1100 da un armadietto o da un rack per accedere al coperchio superiore o per spostare l"apparecchio in una posizione diversa, quindi reinstallarlo in un armadietto o in un rack al termine della manutenzione hardware.' 
+---
+= Riposizionare SG110 e SG1100 nel cabinet o nel rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rimuovere il dispositivo SG110 o SG1100 da un armadietto o da un rack per accedere al coperchio superiore o per spostare l'apparecchio in una posizione diversa, quindi reinstallarlo in un armadietto o in un rack al termine della manutenzione hardware.
+
+
+
+== Rimuovere SG110 o SG1100 dal cabinet o dal rack
+
+.Prima di iniziare
+* Sono presenti etichette per identificare ciascun cavo collegato a SG110 o SG1100.
+* Lo hai fatto link:locating-sg110-and-sg1100-in-data-center.html["Situato fisicamente il SG110 o SG1100"] dove si eseguono interventi di manutenzione nel data center,
+* Lo hai fatto link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Spegnere SG110 o SG1100"].
++
+
+CAUTION: Non spegnere l'apparecchio utilizzando l'interruttore di alimentazione.
+
+
+
+.Fasi
+. Etichettare e scollegare i cavi di alimentazione dell'apparecchio.
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Etichettare e scollegare i cavi dati dell'appliance e i ricetrasmettitori SFP+ o SFP28.
++
+
+IMPORTANT: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Allentare le due viti di fissaggio sul pannello anteriore dell'apparecchio.
++
+image::../media/sg6060_rack_retaining_screws.png[SG110 o SG1100 viti di fissaggio del rack]
+
+. Far scorrere il SG110 o SG1100 in avanti fuori dal rack fino a quando le guide di montaggio non sono completamente estese e i fermi su entrambi i lati non scattano.
++
+Il coperchio superiore dell'apparecchio è accessibile.
+
+. Opzionale: Se si sta rimuovendo completamente l'apparecchio dall'armadietto o dal rack, seguire le istruzioni del kit di guide per rimuovere l'apparecchio dalle guide.
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+
+
+
+== Reinstallare SG110 o SG1100 nell'armadietto o nel rack
+
+.Prima di iniziare
+Il coperchio dell'apparecchio è stato reinstallato.
+
+link:reinstalling-sg110-and-sg1100-cover.html["Reinstallare il coperchio SG110 o SG1100"]
+
+.Fasi
+. Premere contemporaneamente la guida blu per sbloccare entrambe le guide del rack e far scorrere SG110 o SG1100 nel rack fino a insediarlo completamente.
++
+Se non è possibile spostare ulteriormente il controller, tirare i fermi blu su entrambi i lati dello chassis per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG110 o SG1100 scorrevoli su rotaie]
+
++
+
+NOTE: Non collegare il pannello anteriore fino a quando non si accende il controller.
+
+. Serrare le viti di fissaggio sul pannello anteriore del controller per fissare il controller nel rack.
++
+image::../media/sg6060_rack_retaining_screws.png[SG110 o SG1100 viti di fissaggio del rack]
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. link:../installconfig/cabling-appliance.html["Ricollegare i cavi dati del controller e i ricetrasmettitori SFP+ o SFP28"].
++
+
+IMPORTANT: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Ricollegare i cavi di alimentazione del controller"].
+
+
+.Al termine
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Riavviare l'apparecchio"].

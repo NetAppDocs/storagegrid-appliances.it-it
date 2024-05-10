@@ -43,7 +43,9 @@ Per SG6000 e SG5700, è possibile configurare Gestore di sistema di SANtricity. 
 Le seguenti appliance dispongono di un'interfaccia BMC che deve essere configurata:
 
 * SG100
+* SG110
 * SG1000
+* SG1100
 * SG6000
 * SG6100
 
@@ -61,7 +63,7 @@ Le seguenti appliance dispongono di un'interfaccia BMC che deve essere configura
 
 * Appliance di servizi
 +
-** Accedere all'interfaccia BMC per SG100 o SG1000
+** Accedere all'interfaccia BMC per SG100, SG110, SG1000 e SG1100
 
 
 

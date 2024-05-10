@@ -30,6 +30,13 @@ Da 120 a 240 V CA
 
 
  a| 
+SG110 e SG1100
+ a| 
+Da 100 a 240 volt CA
+
+
+
+ a| 
 SG5760
  a| 
 240 volt CA
@@ -83,6 +90,32 @@ Da 100 a 240 volt CA
 39 libbre
 
 (17,7 kg)
+
+|===
+--
+.SG110 e SG1100
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Altezza | Larghezza | Profondità | Peso massimo 
+
+
+ a| 
+1,70 poll.
+
+(4,31 cm)
+ a| 
+18,98 poll.
+
+(48,2 cm)
+ a| 
+33,11 poll.
+
+(84,1 cm)
+ a| 
+43,83 libbre
+
+(19,88 kg)
 
 |===
 --

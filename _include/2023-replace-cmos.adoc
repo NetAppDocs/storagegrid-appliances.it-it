@@ -46,7 +46,7 @@ Installare la batteria CMOS sostitutiva nello zoccolo della scheda di sistema.
 +
 image::../media/sgf6112_two-slot-riser_alignment_hole.png[Foro di allineamento sul complessivo montante grande]
 
-. Individuare il perno guida sulla scheda di sistema.
+. Individuare il pin della guida sulla scheda di sistema
 +
 image::../media/sgf6112_two-slot-riser_guide-pin.png[Perno guida sulla scheda di sistema per il gruppo riser a due slot]
 
@@ -68,7 +68,7 @@ image::../media/sgf6112_two-slot-riser_guide-pin.png[Perno guida sulla scheda di
 .. Immettere la password elencata in `Passwords.txt` file.
 
 
-. Ripristinare la connettività di rete BMC per l'appliance utilizzando una delle seguenti opzioni:
+. Ripristinare la connettività di rete BMC per l'appliance. Sono disponibili due opzioni:
 +
 ** Utilizzare IP statico, netmask e gateway
 ** Utilizzare DHCP per ottenere un IP, una netmask e un gateway

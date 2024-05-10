@@ -1,0 +1,228 @@
+---
+permalink: installconfig/hardware-description-sg110-and-1100.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
+summary: 'L"appliance di servizi StorageGRID SG110 e l"appliance di servizi SG1100 possono funzionare come nodo gateway e come nodo amministrativo per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).' 
+---
+= Appliance SG110 e SG1100: Panoramica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance di servizi StorageGRID SG110 e l'appliance di servizi SG1100 possono funzionare come nodo gateway e come nodo amministrativo per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).
+
+
+
+== Caratteristiche dell'appliance
+
+Entrambi i modelli di appliance di servizi offrono le seguenti funzionalità:
+
+* Funzioni nodo gateway o nodo amministratore per un sistema StorageGRID.
+* Il programma di installazione dell'appliance StorageGRID per semplificare l'implementazione e la configurazione dei nodi.
+* Una volta implementato, può accedere al software StorageGRID da un nodo di amministrazione esistente o dal software scaricato su un disco locale. Per semplificare ulteriormente il processo di implementazione, una versione recente del software viene precaricata sull'appliance durante la produzione.
+* Un BMC (Baseboard Management Controller) per il monitoraggio e la diagnosi di alcuni componenti hardware dell'appliance.
+* La possibilità di connettersi a tutte e tre le reti StorageGRID, tra cui la rete di rete, la rete amministrativa e la rete client:
++
+** SG110 supporta fino a quattro connessioni 10 o 25 GbE alla rete Grid e alla rete client.
+** Il modello SG1100 supporta fino a quattro connessioni 10, 25, 40 o 100 GbE alla rete Grid e alla rete client.
+
+
+
+
+
+
+== Schemi SG110 e SG1100
+
+Questa figura mostra la parte anteriore di SG110 e SG1100 con il frontalino rimosso. Dalla parte anteriore, i due apparecchi sono identici, ad eccezione del nome del prodotto sul pannello.
+
+image::../media/sg1100_front_with_ssds.png[Parte anteriore con SSD SG110 e SG1100]
+
+I due dischi a stato solido (SSD), indicati dal contorno arancione, vengono utilizzati per memorizzare il sistema operativo StorageGRID e vengono mirrorati utilizzando RAID 1 per la ridondanza. Quando l'appliance per servizi SG110 o SG1100 è configurata come nodo amministrativo, queste unità possono essere utilizzate per memorizzare registri di controllo, metriche e tabelle di database.
+
+Gli slot rimanenti sono vuoti.
+
+
+
+== Connettori SG110
+
+La figura mostra la parte posteriore del sistema SG110, incluse le porte, le ventole e gli alimentatori.
+
+image::../media/sg110_rear_view.png[Connettori posteriori SG110]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di rete 1-4
+ a| 
+10/25-GbE, basato sul tipo di ricetrasmettitore via cavo o SFP (sono supportati i moduli SFP28 e SFP+), la velocità dello switch e la velocità di collegamento configurata
+ a| 
+Connettersi alla rete griglia e alla rete client per StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Porta di gestione BMC
+ a| 
+1 GbE (RJ-45)
+ a| 
+Connettersi al controller di gestione della scheda base dell'appliance.
+
+
+
+ a| 
+3
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* VGA
+* USB
+* Porta per console micro-USB
+* Modulo slot micro-SD
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+4
+ a| 
+Admin Network port (porta di rete amministratore) 1
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Collegare l'appliance alla rete di amministrazione per StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Admin Network Port (porta di rete amministratore) 2
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Opzioni:
+
+* Collegamento con la porta di gestione 1 per una connessione ridondante alla rete di amministrazione per StorageGRID.
+* Lasciare disconnesso e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
+* Durante l'installazione, utilizzare la porta 2 per la configurazione IP se gli indirizzi IP assegnati da DHCP non sono disponibili.
+
+
+|===
+
+
+== Connettori SG1100
+
+Questa figura mostra i connettori sul retro del SG1100.
+
+image::../media/sg1100_rear_view.png[Connettori posteriori SG1100]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Didascalia | Porta | Tipo | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Porte di rete 1-4
+ a| 
+10/25/40/100-GbE, in base al tipo di cavo o ricetrasmettitore, alla velocità dello switch e alla velocità di collegamento configurata. QSFP56 (limitato a 100GbE GbE/porta), QSFP28 (100GbE GbE) e QSFP+ (40GbE GbE) sono supportati a livello nativo. È possibile utilizzare i ricetrasmettitori SFP+ (10GbE) o SFP28 (25GbE) opzionali con una QSA (venduta separatamente).
+ a| 
+Connettersi alla rete griglia e alla rete client per StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Porta di gestione BMC
+ a| 
+1 GbE (RJ-45)
+ a| 
+Connettersi al controller di gestione della scheda base dell'appliance.
+
+
+
+ a| 
+3
+ a| 
+Porte di supporto e diagnostica
+ a| 
+* VGA
+* USB
+* Porta per console micro-USB
+* Modulo slot micro-SD
+
+ a| 
+Riservato per l'utilizzo del supporto tecnico.
+
+
+
+ a| 
+4
+ a| 
+Admin Network port (porta di rete amministratore) 1
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Collegare l'appliance alla rete di amministrazione per StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Admin Network Port (porta di rete amministratore) 2
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Opzioni:
+
+* Collegamento con la porta di gestione 1 per una connessione ridondante alla rete di amministrazione per StorageGRID.
+* Lasciare disconnesso e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
+* Durante l'installazione, utilizzare la porta 2 per la configurazione IP se gli indirizzi IP assegnati da DHCP non sono disponibili.
+
+
+|===
+
+
+== Applicazioni SG110 e SG1100
+
+È possibile configurare le appliance dei servizi StorageGRID in vari modi per fornire servizi gateway e ridondanza di alcuni servizi di amministrazione grid.
+
+Le appliance possono essere implementate nei seguenti modi:
+
+* Aggiungere a una griglia nuova o esistente come nodo gateway
+* Aggiungere a una nuova griglia come nodo di amministrazione primario o non primario o a una griglia esistente come nodo di amministrazione non primario
+* Operare contemporaneamente come nodo gateway e nodo amministratore (primario o non primario)
+
+
+L'appliance facilita l'utilizzo di gruppi ad alta disponibilità (ha) e il bilanciamento intelligente del carico per le connessioni dei percorsi dati S3 o Swift.
+
+I seguenti esempi descrivono come massimizzare le funzionalità dell'appliance:
+
+* Utilizzare due appliance SG110 o due appliance SG1100 per fornire servizi gateway configurandoli come nodi gateway.
++
+
+IMPORTANT: Non installare le appliance per i servizi SG110 e SG1100 nello stesso sito. Potrebbero verificarsi performance imprevedibili.
+
+* Utilizzare due dispositivi SG110 o due dispositivi SG1100 per fornire ridondanza di alcuni servizi di amministrazione della rete. A tale scopo, configurare ogni appliance come nodi di amministrazione.
+* Utilizza due appliance SG110 o due appliance SG1100 per fornire servizi di bilanciamento del carico e regolazione del traffico altamente disponibili, accessibili tramite uno o più indirizzi IP virtuali. A tale scopo, configurare le appliance come qualsiasi combinazione di nodi Admin o Gateway e aggiungere entrambi i nodi allo stesso gruppo ha.
++
+
+IMPORTANT: Se si utilizzano nodi Admin e nodi Gateway nello stesso gruppo ha, la porta solo nodo Admin non eseguirà il failover. Consultare le istruzioni per https://docs.netapp.com/us-en/storagegrid-118/admin/configure-high-availability-group.html["Configurazione dei gruppi ha"^].
+
+
+
+Se utilizzate con le appliance di storage StorageGRID, sia le appliance per i servizi SG110 che SG1100 consentono l'implementazione di grid solo per appliance, senza dipendenze da hypervisor esterni o hardware di calcolo.

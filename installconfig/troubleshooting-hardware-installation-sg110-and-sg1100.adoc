@@ -1,0 +1,556 @@
+---
+permalink: installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, bmc, error codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection 
+summary: 'In caso di problemi durante l"installazione, potrebbe essere utile consultare le informazioni per la risoluzione dei problemi relativi alla configurazione dell"hardware e alla connettività.' 
+---
+= Risoluzione dei problemi di installazione hardware (SG110 e SG1100)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di problemi durante l'installazione, potrebbe essere utile consultare le informazioni per la risoluzione dei problemi relativi alla configurazione dell'hardware e alla connettività.
+
+
+
+== Visualizzare i codici di avvio
+
+Quando si alimenta l'appliance, il BMC registra una serie di codici di avvio. È possibile visualizzare questi codici su una console grafica collegata alla porta di gestione BMC.
+
+.Prima di iniziare
+* Sai come fare link:accessing-bmc-interface.html["Accedere al dashboard BMC"].
+* Se si desidera utilizzare Serial-over-LAN (Sol), si ha esperienza nell'utilizzo delle applicazioni della console IPMI Sol.
+
+
+.Fasi
+. Selezionare uno dei seguenti metodi per visualizzare i codici di avvio del controller dell'appliance e raccogliere l'apparecchiatura richiesta.
++
+[cols="1a,2a"]
+|===
+| Metodo | Attrezzatura necessaria 
+
+
+ a| 
+Console VGA
+ a| 
+** Monitor con supporto VGA
+** Cavo VGA
+
+
+
+
+ a| 
+KVM
+ a| 
+** Cavo RJ-45
+
+
+
+
+ a| 
+Porta seriale
+ a| 
+** CAVO seriale DB-9
+** Terminale seriale virtuale
+
+
+
+
+ a| 
+SOL
+ a| 
+** Terminale seriale virtuale
+
+
+|===
+. Se si utilizza una console VGA, attenersi alla seguente procedura:
++
+.. Collegare un monitor VGA alla porta VGA sul retro dell'apparecchio.
+.. Visualizzare i codici visualizzati sul monitor.
+
+
+. Se si utilizza BMC KVM, attenersi alla seguente procedura:
++
+.. Connettersi alla porta di gestione BMC e accedere all'interfaccia Web BMC.
+.. Selezionare *telecomando*.
+.. Avviare il KVM.
+.. Visualizzare i codici sul monitor virtuale.
+
+
+. Se si utilizza una porta seriale e un terminale, attenersi alla seguente procedura:
++
+.. Collegare alla porta USB seriale sul retro dell'apparecchio.
+.. Utilizzare le impostazioni `115200 8-N-1`.
+.. Visualizzare i codici stampati sul terminale seriale.
+
+
+. Se si utilizza Sol, attenersi alla seguente procedura:
++
+.. Connettersi a IPMI Sol utilizzando l'indirizzo IP BMC e le credenziali di accesso.
++
+`ipmitool -I lanplus -H _BMC_Port_IP_ -U admin -P _Password_ sol activate`
+
+.. Visualizzare i codici sul terminale seriale virtuale.
+
+
+. Utilizza la tabella per cercare i codici dell'apparecchio.
++
+[cols="1a,3a"]
+|===
+| Codice | Indica 
+
+
+ a| 
+CIAO
+ a| 
+Lo script di boot master è stato avviato.
+
+
+
+ a| 
+HP
+ a| 
+Il sistema sta verificando se il firmware della scheda di interfaccia di rete (NIC) deve essere aggiornato.
+
+
+
+ a| 
+RB
+ a| 
+Il sistema viene riavviato dopo l'applicazione degli aggiornamenti del firmware.
+
+
+
+ a| 
+FP
+ a| 
+I controlli di aggiornamento del firmware del sottosistema hardware sono stati completati. Avvio dei servizi di comunicazione tra controller in corso.
+
+
+
+ a| 
+HC
+ a| 
+Il sistema sta verificando la presenza di dati di installazione di StorageGRID.
+
+
+
+ a| 
+HO
+ a| 
+L'appliance StorageGRID è in esecuzione.
+
+
+
+ a| 
+HA
+ a| 
+StorageGRID è in esecuzione.
+
+|===
+
+
+
+
+== Visualizzare i codici di errore
+
+Se si verifica un errore hardware durante l'avvio dell'appliance, BMC registra un codice di errore. Se necessario, è possibile visualizzare questi codici di errore utilizzando l'interfaccia BMC, quindi collaborare con il supporto tecnico per risolvere il problema.
+
+.Prima di iniziare
+* Sai come fare link:accessing-bmc-interface.html["Accedere al dashboard BMC"].
+
+
+.Fasi
+. Dalla dashboard BMC, selezionare *BIOS POST Code* (Codice POST BIOS).
+. Esaminare le informazioni visualizzate per il codice corrente e il codice precedente.
++
+Se viene visualizzato uno dei seguenti codici di errore, collaborare con il supporto tecnico per risolvere il problema.
+
++
+[cols="1a,3a"]
+|===
+| Codice | Indica 
+
+
+ a| 
+0x0E
+ a| 
+Microcodice non trovato
+
+
+
+ a| 
+0x0F
+ a| 
+Microcodice non caricato
+
+
+
+ a| 
+0x50
+ a| 
+Errore di inizializzazione della memoria. Tipo di memoria non valido o velocità della memoria incompatibile.
+
+
+
+ a| 
+0x51
+ a| 
+Errore di inizializzazione della memoria. Lettura SPD non riuscita.
+
+
+
+ a| 
+0x52
+ a| 
+Errore di inizializzazione della memoria. Le dimensioni della memoria non sono valide o i moduli di memoria non corrispondono.
+
+
+
+ a| 
+0x53
+ a| 
+Errore di inizializzazione della memoria. Nessuna memoria utilizzabile rilevata.
+
+
+
+ a| 
+0x54
+ a| 
+Errore di inizializzazione della memoria non specificato
+
+
+
+ a| 
+0x55
+ a| 
+Memoria non installata
+
+
+
+ a| 
+0x56
+ a| 
+Tipo di CPU o velocità non validi
+
+
+
+ a| 
+0x57
+ a| 
+Mancata corrispondenza della CPU
+
+
+
+ a| 
+0x58
+ a| 
+Test automatico della CPU non riuscito o possibile errore della cache della CPU
+
+
+
+ a| 
+0x59
+ a| 
+Il microcodice della CPU non è stato trovato o l'aggiornamento del microcodice non è riuscito
+
+
+
+ a| 
+0x5A
+ a| 
+Errore CPU interno
+
+
+
+ a| 
+0x5B
+ a| 
+Reset PPI is not available (Ripristina PPI non disponibile)
+
+
+
+ a| 
+0x5C
+ a| 
+Test automatico BMC fase PEI non riuscito
+
+
+
+ a| 
+0xD0
+ a| 
+Errore di inizializzazione della CPU
+
+
+
+ a| 
+0xD1
+ a| 
+Errore di inizializzazione North Bridge
+
+
+
+ a| 
+0xD2
+ a| 
+Errore di inizializzazione del South Bridge
+
+
+
+ a| 
+0xd3
+ a| 
+Alcuni protocolli architettonici non sono disponibili
+
+
+
+ a| 
+0xD4
+ a| 
+Errore di allocazione delle risorse PCI. Risorse esaurite.
+
+
+
+ a| 
+0xD5
+ a| 
+Spazio non disponibile per la Option ROM legacy
+
+
+
+ a| 
+0xD6
+ a| 
+Nessun dispositivo di output della console trovato
+
+
+
+ a| 
+0xD7
+ a| 
+Nessun dispositivo di input console trovato
+
+
+
+ a| 
+0xD8
+ a| 
+Password non valida
+
+
+
+ a| 
+0xD9
+ a| 
+Errore durante il caricamento dell'opzione di avvio (errore restituito da LoadImage)
+
+
+
+ a| 
+0xDA
+ a| 
+Opzione di boot non riuscita (errore restituito da startimage)
+
+
+
+ a| 
+0xDB
+ a| 
+Aggiornamento flash non riuscito
+
+
+
+ a| 
+0xDC
+ a| 
+Il protocollo di reset non è disponibile
+
+
+
+ a| 
+0xDD
+ a| 
+Errore di autotest BMC fase DXE
+
+
+
+ a| 
+0xE8
+ a| 
+MRC: ERR_NO_MEMORY
+
+
+
+ a| 
+0xE9
+ a| 
+MRC: ERR_LT_LOCK
+
+
+
+ a| 
+0xEA
+ a| 
+MRC: ERR_DDR_INIT
+
+
+
+ a| 
+0xEB
+ a| 
+MRC: ERR_MEM_TEST
+
+
+
+ a| 
+0xEC
+ a| 
+MRC: ERR_VENDOR_SPECIFIC
+
+
+
+ a| 
+0xED
+ a| 
+MRC: ERR_DIMM_COMPAT
+
+
+
+ a| 
+0xEE
+ a| 
+MRC: ERR_MRC_COMPATIBILITY
+
+
+
+ a| 
+0 x EF
+ a| 
+MRC: ERR_MRC_STRUCT
+
+
+
+ a| 
+0xF0
+ a| 
+MRC: ERR_SET_VDD
+
+
+
+ a| 
+0xF1
+ a| 
+MRC: BUFFER ERR_IOT_MEM
+
+
+
+ a| 
+0xF2
+ a| 
+MRC: ERR_RC_INTERNAL
+
+
+
+ a| 
+0xF3
+ a| 
+MRC: ERR_INVALID_REG_ACCESS
+
+
+
+ a| 
+0xF4
+ a| 
+MRC: ERR_SET_MC_FREQ
+
+
+
+ a| 
+0xF5
+ a| 
+MRC: ERR_READ_MC_FREQ
+
+
+
+ a| 
+0x70
+ a| 
+MRC: ERR_DIMM_CHANNEL
+
+
+
+ a| 
+0x74
+ a| 
+MRC: ERR_BIST_CHECK
+
+
+
+ a| 
+0xF6
+ a| 
+MRC: ERR_SMBUS
+
+
+
+ a| 
+0xF7
+ a| 
+MRC: ERR_PCU
+
+
+
+ a| 
+0xF8
+ a| 
+MRC: ERR_NGN
+
+
+
+ a| 
+0xF9
+ a| 
+MRC: ERR_INTERLEAVE_FAILURE
+
+|===
+
+
+
+
+== L'installazione dell'hardware sembra bloccarsi
+
+Il programma di installazione dell'appliance StorageGRID potrebbe non essere disponibile se errori hardware o di cablaggio impediscono all'appliance di completare l'elaborazione di avvio.
+
+.Fasi
+. Esaminare i LED dell'apparecchio e i codici di avvio e di errore visualizzati nel BMC.
+. Se hai bisogno di aiuto per risolvere un problema, contatta il supporto tecnico.
+
+
+
+
+== Problemi di connessione
+
+Se non è possibile connettersi all'appliance di servizi, potrebbe esserci un problema di rete o l'installazione dell'hardware potrebbe non essere stata completata correttamente.
+
+.Fasi
+. Provare a eseguire il ping dell'appliance utilizzando l'indirizzo IP dell'appliance: +
+`*ping _appliance_IP_*`
+. Se il comando ping non risponde, verificare di utilizzare l'indirizzo IP corretto.
++
+È possibile utilizzare l'indirizzo IP del dispositivo su Grid Network, Admin Network o Client Network.
+
+. Se l'indirizzo IP è corretto, controllare il cablaggio dell'appliance, i ricetrasmettitori QSFP o SFP e la configurazione di rete.
+. Se è disponibile l'accesso fisico all'appliance, è possibile utilizzare una connessione diretta all'IP link-local permanente `169.254.0.1` controllare la configurazione di rete del controller e aggiornarla se necessario. Per istruzioni dettagliate, vedere il passaggio 2 nella link:accessing-storagegrid-appliance-installer.html["Accedere al programma di installazione dell'appliance StorageGRID"].
++
+Se il problema persiste, contattare il supporto tecnico.
+
+. Se il ping ha avuto esito positivo, aprire un browser Web.
+. Inserire l'URL del programma di installazione dell'appliance StorageGRID: +
+`*https://_appliances_controller_IP_:8443*`
++
+Viene visualizzata la pagina iniziale.
+
+

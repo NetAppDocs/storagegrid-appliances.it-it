@@ -39,6 +39,7 @@ NOTE: Il criterio hash di trasmissione LACP è layer2+3.
 Le figure e le tabelle riepilogano le opzioni per la modalità port bond e la modalità network bond per ciascun appliance. Per ulteriori informazioni, vedere quanto segue:
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modalità Port bond (SG1000 e SG100)"]
+* link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modalità Port bond (SG1100 e SG110)"]
 * link:gathering-installation-information-sg5700.html#port-bond-modes["Modalità Port bond (E5700SG)"]
 * link:gathering-installation-information-sg6000.html#port-bond-modes["Modalità Port Bond (SG6000-CN)"]
 * link:gathering-installation-information-sg6100.html#port-bond-modes["Modalità di port bond (SGF6112)"]
@@ -172,6 +173,137 @@ image::../media/sg1000_bonded_management_ports.png[Porte di rete dell'amministra
 SG100:
 
 image::../media/sg100_bonded_management_ports.png[Admin Network Ports Bonded SG100]
+
+--
+
+
+--
+.SG110 e SG1100
+--
+Modalità Fixed port bond (predefinita)::
++
+--
+Le figure mostrano come le quattro porte di rete su SG1100 o SG110 sono collegate in modalità di collegamento a porta fissa (configurazione predefinita).
+
+SG1100:
+
+image::../media/sg1100_fixed_port.png[Modalità Bond a SG1100 porte fisse]
+
+SG110:
+
+image::../media/sgf6112_fixed_port.png[Modalità Bond a SG110 porte fisse]
+
+[cols="1a,3a"]
+|===
+| Didascalia | Quali porte sono collegate 
+
+
+ a| 
+C.
+ a| 
+Le porte 1 e 3 sono collegate tra loro per la rete client, se viene utilizzata questa rete.
+
+
+
+ a| 
+G
+ a| 
+Le porte 2 e 4 sono collegate tra loro per la rete Grid.
+
+|===
+La tabella riassume le opzioni per la configurazione delle quattro porte di rete. Se si desidera utilizzare un'impostazione non predefinita, è necessario configurare le impostazioni nella pagina di configurazione del collegamento.
+
+[cols="1a,2a,2a"]
+|===
+| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+
+
+ a| 
+Active-Backup (impostazione predefinita)
+ a| 
+* Le porte 2 e 4 utilizzano un bond di backup attivo per Grid Network.
+* Le porte 1 e 3 non vengono utilizzate.
+* Un tag VLAN è opzionale.
+
+ a| 
+* Le porte 2 e 4 utilizzano un bond di backup attivo per Grid Network.
+* Le porte 1 e 3 utilizzano un bond di backup attivo per la rete client.
+* I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+* Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
+* Le porte 1 e 3 non vengono utilizzate.
+* Un tag VLAN è opzionale.
+
+ a| 
+* Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
+* Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
+* I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+
+
+|===
+--
+Modalità aggregate port bond::
++
+--
+Queste figure mostrano come le quattro porte di rete sono collegate in modalità aggregate port bond.
+
+SG1100:
+
+image::../media/sg1100_aggregate_ports.png[Modalità Bond porta aggregata SG1100]
+
+SG110:
+
+image::../media/sgf6112_aggregate_ports.png[Modalità Bond porta aggregata SG110]
+
+[cols="1a,3a"]
+|===
+| Didascalia | Quali porte sono collegate 
+
+
+ a| 
+1
+ a| 
+Tutte e quattro le porte sono raggruppate in un unico collegamento LACP, consentendo l'utilizzo di tutte le porte per il traffico Grid Network e Client Network.
+
+|===
+La tabella riassume le opzioni per la configurazione delle porte di rete. Se si desidera utilizzare un'impostazione non predefinita, è necessario configurare le impostazioni nella pagina di configurazione del collegamento.
+
+[cols="1a,2a,2a"]
+|===
+| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+
+
+ a| 
+Solo LACP (802.3ad)
+ a| 
+* Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
+* Un singolo tag VLAN identifica i pacchetti Grid Network.
+
+ a| 
+* Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
+* Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+
+
+|===
+--
+Modalità bond di rete Active-Backup per le porte di gestione::
++
+--
+Queste figure mostrano come le due porte di gestione 1-GbE sulle appliance sono collegate in modalità bond di rete Active-Backup per la rete di amministrazione.
+
+SG1100:
+
+image::../media/sg1100_bonded_management_ports.png[Porte di rete dell'amministratore collegate SG1100]
+
+SG110:
+
+image::../media/sgf6112_bonded_management_ports.png[Porte di rete dell'amministratore collegate SG110]
 
 --
 

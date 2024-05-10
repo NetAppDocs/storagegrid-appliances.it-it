@@ -29,6 +29,23 @@ Non premere di nuovo il pulsante di alimentazione durante il processo di accensi
 
 
 --
+.SG110 e SG1100
+--
+.Fasi
+. Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione dell'apparecchio.
+. Collegare questi due cavi di alimentazione a due diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Se il pulsante di accensione sulla parte anteriore dell'apparecchio non è illuminato in blu, premerlo per accendere l'apparecchio.
++
+Non premere di nuovo il pulsante di alimentazione durante il processo di accensione.
+
++
+Il LED sull'alimentatore deve essere acceso in verde senza lampeggiare.
+
+. In caso di errori, correggere eventuali problemi.
+. Se rimosso, collegate il pannello anteriore all'apparecchio.
+
+
+--
 .SG5700
 --
 .Prima di iniziare
@@ -95,7 +112,7 @@ Non premere di nuovo il pulsante di alimentazione durante il processo di accensi
 .Fasi
 . Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione dell'apparecchio.
 . Collegare questi due cavi di alimentazione a due diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
-. Se il pulsante di alimentazione sulla parte anteriore dell'apparecchio SG6100-CN non è illuminato in blu, premete il pulsante per accendere l'apparecchio.
+. Se il pulsante di accensione sulla parte anteriore dell'apparecchio non è illuminato in blu, premerlo per accendere l'apparecchio.
 +
 Non premere di nuovo il pulsante di alimentazione durante il processo di accensione.
 

@@ -34,9 +34,19 @@ Per accedere inizialmente al programma di installazione dell'appliance StorageGR
 image::../media/sg100_admin_network_port.png[Admin Network Port (porta di rete amministrativa) su SG100]
 
 --
+.SG110
+--
+image::../media/sg6100_admin_network_port.png[Porta di rete Admin sul SG110]
+
+--
 .SG1000
 --
 image::../media/sg1000_admin_network_port.png[Porta di rete Admin sul SG1000]
+
+--
+.SG1100
+--
+image::../media/sg1100_admin_network_port.png[Porta di rete Admin sul SG1100]
 
 --
 .E5700SG
@@ -105,11 +115,25 @@ Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra de
 image::../media/sg100_link_local_port.png[Connessione SG100 link-Local]
 
 --
+.SG110
+--
+Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance, utilizzando un cavo Ethernet.
+
+image::../media/sg6100_link_local_port.png[SG110 collegamento locale]
+
+--
 .SG1000
 --
 Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance di servizi, utilizzando un cavo Ethernet.
 
 image::../media/sg1000_link_local_port.png[SG1000 collegamento locale]
+
+--
+.SG1100
+--
+Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance, utilizzando un cavo Ethernet.
+
+image::../media/sg1100_link_local_port.png[SG1100 collegamento locale]
 
 --
 .E5700SG

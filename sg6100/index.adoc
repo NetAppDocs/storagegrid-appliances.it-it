@@ -15,7 +15,7 @@ Potrebbe essere necessario eseguire le procedure di manutenzione dell'apparecchi
 
 Le procedure descritte in questa sezione presuppongono che l'appliance sia già stata implementata come nodo di storage in un sistema StorageGRID.
 
-*Le procedure di manutenzione della configurazione* vengono eseguite utilizzando l'Appliance Installer, Grid Manager o l'interfaccia BMC. Queste procedure includono:
+Le *procedure di configurazione manutenzione* vengono eseguite utilizzando l'Installazione appliance, Grid Manager o l'interfaccia BMC. Queste procedure includono:
 
 * link:turning-sgf6112-identify-led-on-and-off.html["Accendere e spegnere il LED di identificazione dell'appliance"]
 * link:locating-sgf6112-in-data-center.html["Individuare l'appliance nel data center"]

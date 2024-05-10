@@ -1,0 +1,177 @@
+---
+permalink: sg110-1100/replace-nic-in-sg110-and-sg1100.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, admin node, admin appliance, replacing, replace, NIC, network interface card 
+summary: 'Potrebbe essere necessario sostituire una scheda di interfaccia di rete \(NIC\) in SG110 o SG1100 se non funziona in modo ottimale o se non funziona correttamente.' 
+---
+= Sostituire la scheda NIC in un SG110 o SG1100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) di SG110 o SG1100 se non funziona correttamente o se presenta un guasto.
+
+Utilizzare queste procedure per:
+
+* Rimuovere la scheda NIC
+* Reinstallare la scheda NIC
+
+
+
+
+== Rimuovere la scheda NIC
+
+.Prima di iniziare
+* Si dispone della scheda NIC sostitutiva corretta.
+* È stato determinato il link:verify-component-to-replace.html["Posizione della scheda di rete da sostituire"].
+* Lo hai fatto link:locating-sg110-and-sg1100-in-data-center.html["Situato fisicamente l'apparecchio SG110 o SG1100"] Dove si sta sostituendo la scheda NIC nel centro dati.
++
+
+NOTE: R link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["spegnimento controllato dell'apparecchio"] è necessario prima di rimuovere l'apparecchio dal rack.
+
+* Tutti i cavi sono stati scollegati e. link:reinstalling-sg110-and-sg1100-cover.html["rimuovere il coperchio dell'apparecchio"].
+
+
+.A proposito di questa attività
+Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di archiviazione siano collegati alla rete prima di avviare la sostituzione della scheda di interfaccia di rete (NIC) o sostituire la scheda durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Consultare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
+
+
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire la scheda NIC durante una finestra di manutenzione pianificata. In caso contrario, è possibile che l'accesso a tali oggetti venga temporaneamente perso durante questa procedura. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
+
+.Fasi
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Individuare il gruppo di montaggio che contiene la scheda NIC sul retro dell'apparecchio.
++
+Le tre schede NIC dell'apparecchio si trovano in due gruppi di montaggio nelle posizioni indicate nella fotografia (retro dell'apparecchio con coperchio superiore rimosso in figura):
+
++
+image::../media/sgf6112-nic-positions.jpg[Posizioni NIC]
+
++
+[cols="1a,2a,4a"]
+|===
+|  | Nome del dispositivo o della parte | Descrizione 
+
+
+ a| 
+1
+ a| 
+hic1/hic2
+ a| 
+Porte di rete Ethernet 10/25-GbE nel gruppo riser a due porte
+
+
+
+ a| 
+2
+ a| 
+mtc1/mtc2
+ a| 
+Porte di gestione 1/10GBase-T nel gruppo riser a due porte
+
+
+
+ a| 
+3
+ a| 
+hic3/hic4
+ a| 
+Porte di rete Ethernet 10/25-GbE nel gruppo riser a una porta
+
+
+
+ a| 
+4
+ a| 
+Gruppo riser a due slot
+ a| 
+Supporto per una delle schede di rete 10/25-GbE e 1/10GBase-T.
+
+
+
+ a| 
+5
+ a| 
+Gruppo riser a uno slot
+ a| 
+Supporto per una delle schede di rete 10/25-GbE
+
+|===
+. Afferrare il gruppo riser con la scheda NIC guasta attraverso i fori blu e sollevarla con cautela verso l'alto. Spostare il gruppo riser verso la parte anteriore dello chassis mentre lo si solleva per consentire ai connettori esterni delle schede NIC installate di liberare lo chassis.
+. Posizionare il riser su una superficie antistatica piana con il lato del telaio metallico rivolto verso il basso per accedere alle schede di rete.
++
+** *Gruppo riser a due slot con due NIC*
++
+image::../media/two-slot-assembly-sgf6112.png[Due schede NIC nel gruppo riser a due slot]
+
+** *Gruppo riser a uno slot con una scheda NIC*
++
+image::../media/one-slot-assembly-sgf6112.png[NIC nel gruppo riser a uno slot]
+
+
+
+. Aprire il fermo blu (cerchiato) sulla scheda di rete da sostituire e rimuovere con cautela la scheda di rete dal gruppo di montaggio. Far oscillare leggermente la scheda di rete per rimuovere la scheda di rete dal connettore. Non esercitare una forza eccessiva.
+. Posizionare la scheda NIC su una superficie antistatica piana.
+
+
+
+
+== Reinstallare la scheda NIC
+
+Installare la scheda NIC sostitutiva nella stessa posizione di quella rimossa.
+
+.Prima di iniziare
+* Si dispone della scheda NIC sostitutiva corretta.
+* La scheda NIC esistente non funzionante è stata rimossa.
+
+
+.Fasi
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Rimuovere la scheda di rete sostitutiva dalla confezione.
+. Se si sta sostituendo una delle schede NIC nel gruppo riser a due slot, procedere come indicato di seguito:
++
+.. Assicurarsi che il fermo blu sia in posizione aperta.
+.. Allineare la scheda di rete al relativo connettore sul gruppo di montaggio. Premere con cautela la scheda NIC nel connettore finché non è completamente inserita, come mostrato nella foto, quindi chiudere il fermo blu.
++
+image::../media/two-slot-assembly-sgf6112.png[Due schede NIC nel gruppo riser a due slot]
+
+.. Individuare il foro di allineamento sul gruppo riser a due slot (cerchiato) che si allinea con un perno guida sulla scheda di sistema per garantire il corretto posizionamento del gruppo riser.
++
+image::../media/sgf6112_two-slot-riser_alignment_hole.png[Foro di allineamento sul complessivo montante grande]
+
+.. Individuare il pin della guida sulla scheda di sistema
++
+image::../media/sgf6112_two-slot-riser_guide-pin.png[Perno guida per gruppo riser a due slot]
+
+.. Posizionare il gruppo riser nello chassis, assicurandosi che sia allineato con il connettore sulla scheda di sistema e con il pin guida.
+.. Premere con cautela il gruppo riser a due slot in posizione lungo la linea centrale, accanto ai fori blu, fino a posizionarlo completamente.
+
+
+. Se si sta sostituendo la scheda NIC nel gruppo riser a uno slot, procedere come indicato di seguito:
++
+.. Assicurarsi che il fermo blu sia in posizione aperta.
+.. Allineare la scheda di rete al relativo connettore sul gruppo di montaggio. Premere con cautela la scheda NIC nel connettore fino a posizionarla completamente, come mostrato nella fotografia, quindi chiudere il fermo blu.
++
+image::../media/one-slot-assembly-sgf6112.png[NIC nel gruppo riser a uno slot]
+
+.. Individuare il foro di allineamento sul gruppo riser a uno slot (cerchiato) che si allinea con un perno guida sulla scheda di sistema per garantire il corretto posizionamento del gruppo riser.
++
+image::../media/sgf6112_one-slot-riser_alignment_hole.png[Foro di allineamento sul gruppo riser a uno slot]
+
+.. Individuare il pin della guida sulla scheda di sistema
++
+image::../media/sgf6112_one-slot-riser_system-pin.png[Perno guida sul gruppo riser a uno slot]
+
+.. Posizionare il gruppo riser a uno slot nello chassis, assicurandosi che sia allineato con il connettore sulla scheda di sistema e con il pin guida.
+.. Premere con cautela il gruppo riser a uno slot lungo la linea centrale, accanto ai fori blu, fino a posizionarlo completamente.
+
+
+. Rimuovere i cappucci di protezione dalle porte NIC in cui verranno reinstallati i cavi.
+
+
+.Al termine
+Se non si dispone di altre procedure di manutenzione da eseguire nell'apparecchio, reinstallare il coperchio dell'apparecchio, riposizionare l'apparecchio nel rack, collegare i cavi e alimentare.
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

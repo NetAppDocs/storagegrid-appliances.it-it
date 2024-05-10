@@ -27,9 +27,19 @@ Se si utilizza ConfigBuilder per generare un file JSON, è possibile configurare
 image::../media/sg100_bmc_management_port.png[SG100 porta di gestione BMC]
 
 --
+.SG110
+--
+image::../media/sgf6112_cn_bmc_management_port.png[Porta di gestione BMC SG110]
+
+--
 .SG1000
 --
 image::../media/sg1000_bmc_management_port.png[Porta di gestione BMC SG1000]
+
+--
+.SG1100
+--
+image::../media/sg1100_bmc_management_port.png[Porta di gestione BMC SG1100]
 
 --
 .SG6000

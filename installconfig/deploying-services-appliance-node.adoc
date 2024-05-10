@@ -1,7 +1,7 @@
 ---
 permalink: installconfig/deploying-services-appliance-node.html 
 sidebar: sidebar 
-keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
+keywords: storagegrid, sg110, sg1100, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
 summary: 'È possibile implementare un"appliance di servizi come nodo di amministrazione primario, nodo di amministrazione non primario o nodo gateway. Tutte le appliance di servizi possono funzionare contemporaneamente come nodi gateway e nodi amministrativi \(primari o non primari\).' 
 ---
 = Implementare il nodo dell'appliance di servizi
@@ -105,7 +105,7 @@ Durante le attività di installazione dell'appliance Gateway Node, l'installazio
 
 
 
-NOTE: Non installare appliance per i servizi SG100 e SG1000 nello stesso sito. Potrebbero verificarsi performance imprevedibili.
+IMPORTANT: L'utilizzo di appliance per servizi con livelli di performance diversi nello stesso sito, ad esempio SG100 o SG110 con SG1000 o SG1100, può causare risultati imprevedibili e incoerenti quando si utilizzano diversi nodi in un gruppo ad alta disponibilità o quando si esegue il bilanciamento del carico dei client tra più appliance di servizi.
 
 
 NOTE: Se è necessario implementare più nodi appliance contemporaneamente, è possibile automatizzare il processo di installazione. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].

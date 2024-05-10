@@ -1,0 +1,71 @@
+---
+permalink: sg110-1100/verify-component-to-replace.html 
+sidebar: sidebar 
+keywords: sg110, sg1100 
+summary: 'In caso di dubbi sul componente hardware da sostituire nell"appliance, completare questa procedura per identificare il componente e la posizione dell"appliance nel data center.' 
+---
+= Verificare il componente da sostituire in SG110 o SG1100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In caso di dubbi sul componente hardware da sostituire nell'appliance, completare questa procedura per identificare il componente e la posizione dell'appliance nel data center.
+
+.Prima di iniziare
+* Si dispone del numero di serie dell'appliance di storage in cui è necessario sostituire il componente.
+* Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+
+
+.A proposito di questa attività
+Utilizzare questa procedura per identificare l'apparecchio con l'hardware guasto e quali dei componenti hardware sostituibili non funzionano correttamente. I componenti che potrebbero essere identificati per la sostituzione includono:
+
+* Alimentatori
+* Ventole
+* Unità a stato solido (SSD)
+* Schede di interfaccia di rete (NIC)
+* Batteria CMOS
+
+
+.Fasi
+. Identificare il componente guasto e il nome dell'appliance in cui è installato.
++
+.. In Grid Manager, selezionare *ALERTS* > *Current*.
++
+Viene visualizzata la pagina Avvisi.
+
+.. Selezionare l'avviso per visualizzare i dettagli dell'avviso.
++
+
+NOTE: Selezionare l'avviso, non l'intestazione di un gruppo di avvisi.
+
+.. Registrare il nome del nodo e l'etichetta identificativa univoca del componente guasto.
++
+image::../media/nic-alert-sgf6112.jpg[Avviso con ID componente]
+
+
+
+. Identificare il telaio con il componente che deve essere sostituito.
++
+.. Da Grid Manager, selezionare *NODES*.
+.. Dalla tabella della pagina Nodes (nodi), selezionare il nome del nodo di storage dell'appliance con il componente guasto.
+.. Selezionare la scheda *hardware*.
++
+Controllare il numero di serie del controller di calcolo nella sezione dell'appliance StorageGRID. Verificare che il numero di serie corrisponda al numero di serie del dispositivo di storage in cui si sta sostituendo il componente. Se il numero di serie corrisponde, è stato trovato l'apparecchio corretto.
+
++
+*** Se la sezione dell'appliance StorageGRID in Gestione griglia non viene visualizzata, il nodo selezionato non è un'appliance StorageGRID. Selezionare un nodo diverso dalla vista ad albero.
+*** Se i numeri seriali non corrispondono, selezionare un nodo diverso dalla vista ad albero.
+
+
+
+
+. Dopo aver individuato il nodo in cui è necessario sostituire il componente, annotare l'indirizzo IP BMC dell'appliance elencato nella sezione appliance StorageGRID.
++
+Per individuare l'appliance nel data center, è possibile utilizzare l'indirizzo IP BMC per attivare il LED di identificazione dell'appliance.
+
+
+
+.Informazioni correlate
+link:turning-sg110-and-sg1100-identify-led-on-and-off.html["Accendere il LED di identificazione dell'apparecchio"]

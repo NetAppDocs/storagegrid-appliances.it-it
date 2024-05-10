@@ -1,0 +1,69 @@
+---
+permalink: sg110-1100/replacing-drive-in-sg110-and-sg1100.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Le appliance per i servizi SG110 e SG1100 contengono due dischi SSD. I dischi vengono mirrorati utilizzando RAID1 per la ridondanza. Se uno dei dischi si guasta, è necessario sostituirlo il prima possibile per garantire la ridondanza. 
+---
+= Sostituisci le unità nel SG110 o SG1100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le appliance per i servizi SG110 e SG1100 contengono due dischi SSD. I dischi vengono mirrorati utilizzando RAID1 per la ridondanza. Se uno dei dischi si guasta, è necessario sostituirlo il prima possibile per garantire la ridondanza.
+
+.Prima di iniziare
+* Lo hai fatto link:locating-sg110-and-sg1100-in-data-center.html["posizionato fisicamente l'apparecchio"].
+* Hai verificato quale disco ha avuto un guasto notando che il LED sinistro del disco è di colore ambra fisso o utilizzando Grid Manager per link:verify-component-to-replace.html["visualizzare l'avviso causato dal disco guasto"].
++
+
+IMPORTANT: Consultare le informazioni relative alla visualizzazione degli indicatori di stato per verificare l'errore.
+
+* È stato ottenuto il disco sostitutivo.
+* Hai ottenuto una protezione ESD adeguata.
+
+
+.Fasi
+. Verificare che il LED di errore sinistro dell'unità sia di colore ambra o utilizzare l'ID dello slot dell'unità visualizzato nell'avviso per individuare l'unità.
++
+Le unità si trovano nelle seguenti posizioni nello chassis (parte anteriore dello chassis con il pannello rimosso in figura):
+
+
+
+image::../media/sg1100_front_with_ssds.png[Posizioni di guida SG110 e SG1100]
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Disimballare l'unità sostitutiva e appoggiarla su una superficie piana e priva di elettricità statica vicino all'apparecchio.
++
+Conservare tutti i materiali di imballaggio.
+
+. Premere il pulsante di rilascio sul disco guasto.
++
+image::../media/h600s_driveremoval.gif[Rimozione del disco]
+
++
+La maniglia delle molle del disco si apre parzialmente e il disco si libera dallo slot.
+
+. Aprire la maniglia, estrarre l'unità e posizionarla su una superficie piana e priva di scariche elettrostatiche.
+. Premere il pulsante di rilascio sull'unità sostitutiva prima di inserirla nello slot.
++
+Le molle del dispositivo di chiusura si aprono.
+
++
+image::../media/h600s_driveinstall.gif[Installazione del disco]
+
+. Inserire l'unità sostitutiva nello slot, quindi chiudere la maniglia dell'unità.
++
+
+IMPORTANT: Non esercitare una forza eccessiva durante la chiusura della maniglia.
+
++
+Quando l'unità è completamente inserita, si sente uno scatto.
+
++
+L'unità sostituita viene ricostruita automaticamente con dati speculari dall'unità di lavoro.  È possibile controllare lo stato della ricostruzione utilizzando Grid Manager. Andare a *NODI* > `*Appliance Node*` > *hardware*. Il campo Storage RAID Mode (modalità Storage RAID) contiene un messaggio di "ricostruzione" fino a quando l'unità non viene completamente ricostruita.
+
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

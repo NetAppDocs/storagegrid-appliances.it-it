@@ -44,11 +44,14 @@ Le appliance sostitutive devono essere dello stesso tipo del nodo di origine che
 
 * Un'appliance di servizi sostitutiva può essere diversa dal nodo di amministrazione o dal nodo gateway che sta sostituendo.
 +
-** È possibile clonare un'appliance del nodo di origine SG100 su un'appliance di destinazione dei servizi SG1000 per offrire maggiori funzionalità al nodo di amministrazione o al nodo gateway.
-** È possibile clonare un'appliance del nodo di origine SG1000 su un'appliance di destinazione dei servizi SG100 per ridistribuire SG1000 per un'applicazione più impegnativa.
+** Puoi clonare un'appliance con nodi di origine SG100 su un'appliance con destinazione dei servizi SG110, SG1000 o SG1100. La clonazione di SG100 in un'appliance di destinazione dei servizi SG1000 o SG1100 offre una maggiore capacità al nodo amministrativo o al nodo gateway.
+** È possibile clonare un'appliance con nodo di origine SG110 in una destinazione di appliance con servizi SG1100 per fornire una maggiore funzionalità al nodo amministrativo o al nodo gateway.
+** Puoi clonare un'appliance con nodi di origine SG1000 su un'appliance con destinazione dei servizi SG100, SG110 o SG1100. Il cloning di SG1000 in un'appliance di destinazione dei servizi SG100 o SG110 consente di ridistribuire SG1000 per un'applicazione più complessa.
+** Puoi clonare un'appliance con nodi di origine SG1100 in un'appliance con destinazione dei servizi SG110 per reimplementare SG1100 in un'applicazione più complessa.
 +
-Ad esempio, se un'appliance SG1000 di nodi di origine viene utilizzata come nodo di amministrazione e si desidera utilizzarla come nodo di bilanciamento del carico dedicato.
+Ad esempio, se un'appliance con nodo di origine SG1100 o SG1000 viene utilizzata come nodo amministrativo e si desidera utilizzarla come nodo di bilanciamento del carico dedicato.
 
+** La sostituzione di un'appliance con nodo di origine SG1100 con un'appliance di destinazione dei servizi SG110 riduce la velocità massima delle porte di rete da 100-GbE a 25-GbE.
 ** La sostituzione di un'appliance di nodo di origine SG1000 con un'appliance di destinazione dei servizi SG100 riduce la velocità massima delle porte di rete da 100 GbE a 25 GbE.
 ** I dispositivi di servizi hanno connettori di rete diversi. La modifica del tipo di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
 

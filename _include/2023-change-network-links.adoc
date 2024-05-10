@@ -17,7 +17,8 @@ Per ulteriori informazioni sulle opzioni, vedere link:../installconfig/configuri
 
 +
 
-NOTE: Le modifiche alla configurazione IP apportate mentre l'appliance è in modalità di manutenzione non vengono applicate all'ambiente StorageGRID installato. Eseguire il collegamento:../maintain/changing-nodes-network-configuration.html[`change-ip` Command] dopo aver riavviato l'appliance in StorageGRID.
+NOTE: Le modifiche alla configurazione IP apportate mentre l'appliance è in modalità di manutenzione non vengono applicate all'ambiente StorageGRID installato. Eseguire
+[`change-ip` Command] dopo aver riavviato l'appliance in StorageGRID.
 
 . Una volta selezionate le opzioni desiderate, fare clic su *Save* (Salva).
 +

@@ -39,7 +39,7 @@ Questa figura mostra la parte anteriore di SG100 e SG1000 con il pannello rimoss
 
 image::../media/sg1000_front_with_ssds.png[Anteriore con SSD SG100 e SG1000]
 
-I due dischi a stato solido (SSD), indicati dal contorno arancione, possono essere utilizzati per la memorizzazione del sistema operativo StorageGRID e sono mirrorati utilizzando RAID 1 per la ridondanza. Quando l'appliance di servizi SG100 o SG1000 è configurata come nodo di amministrazione, questi dischi vengono utilizzati per memorizzare registri di audit, metriche e tabelle di database.
+I due dischi a stato solido (SSD), indicati dal contorno arancione, vengono utilizzati per memorizzare il sistema operativo StorageGRID e vengono mirrorati utilizzando RAID 1 per la ridondanza. Quando l'appliance per servizi SG100 o SG1000 è configurata come nodo amministrativo, queste unità possono essere utilizzate per memorizzare registri di controllo, metriche e tabelle di database.
 
 Gli slot rimanenti sono vuoti.
 

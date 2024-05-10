@@ -95,6 +95,44 @@ Cavi Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
 
 
 --
+.SG110 e SG1100
+--
+Per installare e configurare l'hardware SG110 e SG1100 sono necessarie le seguenti apparecchiature aggiuntive.
+
+Cavi ottici e ricetrasmettitori::
++
+--
+* Cavi, da 1 a 4 di:
++
+** Twinax/rame
+** Fibra ottica
+
+
+* Ricetrasmettitori/adattatori, da 1 a 4 di ciascuno, in base alla velocità di collegamento (velocità miste non supportate):
++
+** SG110:
++
+*** SFP+ da 10 GbE
+*** SFP28 a 25 GbE
+
+
+** SG1100:
++
+*** Adattatore 10-GbE da QSFP a SFP (QSA) e SFP+
+*** Adattatore 25-GbE QSFP-SFP (QSA) e SFP28
+*** QSFP+ da 40 GbE
+*** 100-GbE QFSP28
+
+
+
+
+
+
+--
+Cavi Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+
+
+--
 .SG5700
 --
 Per installare e configurare l'hardware SG5700 sono necessarie le seguenti apparecchiature aggiuntive.
