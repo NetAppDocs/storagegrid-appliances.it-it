@@ -668,6 +668,95 @@ L'installazione o la comunicazione con il controller E2800 non è riuscita.
 
 
 --
+.SG5800
+--
+I controller dell'appliance includono indicatori che consentono di determinare lo stato del controller dell'appliance:
+
+* <<status_indicators_SG5800_controller,Indicatori di stato sul controller SG5800>>
+* <<general_boot_codes_sg5800,Codici generali di boot>>
+* <<boot_codes_SG5800_controller,SG5800 codici di avvio della centralina>>
+* <<error_codes_SG5800_controller,SG5800 codici di errore della centralina>>
+
+
+Utilizzare queste informazioni per ottenere assistenza link:troubleshooting-hardware-installation.html["Risolvere i problemi di installazione dell'hardware SG5800"].
+
+[[status_indicators_SG5800_controller]]
+Indicatori di stato sul controller SG5800::
++
+--
+Dopo l'avvio del programma di installazione dell'appliance StorageGRID, è necessario esaminare periodicamente gli indicatori di stato sul controller SG5800.
+
+La figura seguente mostra gli indicatori di stato sul controller SG5800.
+
+image::../media/sg5800_leds.png[Indicatori di stato sul controller SG5800]
+
+[cols="1a,2a,2a"]
+|===
+| Didascalia | Display | Descrizione 
+
+
+ a| 
+1
+ a| 
+LED di attenzione
+ a| 
+Ambra: Il controller è guasto e richiede l'attenzione dell'operatore oppure lo script di installazione non è stato trovato.
+
+OFF: Il controller funziona normalmente.
+
+
+
+ a| 
+2
+ a| 
+LED di attenzione della porta di espansione
+ a| 
+Ambra: Questi LED sono sempre di colore ambra (nessun collegamento stabilito) perché l'appliance non utilizza le porte di espansione.
+
+
+
+ a| 
+3
+ a| 
+LED di stato del collegamento della porta host
+ a| 
+Verde: Il collegamento è attivo.
+
+OFF: Il collegamento non è attivo.
+
+
+
+ a| 
+4
+ a| 
+LED di stato del collegamento Ethernet
+ a| 
+Verde: Viene stabilito un collegamento.
+
+OFF: Nessun collegamento stabilito.
+
+
+
+ a| 
+5
+ a| 
+LED di attività Ethernet
+ a| 
+Verde: Il collegamento tra la porta di gestione e il dispositivo a cui è collegata (ad esempio uno switch Ethernet) è attivo.
+
+OFF: Non è presente alcun collegamento tra il controller e il dispositivo collegato.
+
+Verde lampeggiante: È presente un'attività Ethernet.
+
+|===
+--
+
+
+.Informazioni correlate
+* https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^]
+
+
+--
 .SG6000
 --
 I controller appliance SG6000 includono indicatori che consentono di determinare lo stato del controller dell'appliance:
@@ -809,7 +898,7 @@ Utilizzare queste informazioni per ottenere assistenza link:troubleshooting-hard
 Indicatori e pulsanti dell'apparecchio::
 +
 --
-La figura seguente mostra gli indicatori e i pulsanti sull'apparecchio SGF6112.
+La figura seguente mostra gli indicatori e i pulsanti sui dispositivi SG6100.
 
 image::../media/sgf6112_front_indicators.png[Indicatori anteriori - SGF6112]
 
@@ -871,7 +960,7 @@ LED di stato
  a| 
 PFR
  a| 
-Questa spia non viene utilizzata dall'apparecchio SGF6112 e rimane spenta.
+Questa luce non viene utilizzata dagli apparecchi SG6100 e rimane spenta.
 
 |===
 --
@@ -898,7 +987,7 @@ Per visualizzare i codici di avvio e di errore, link:accessing-bmc-interface.htm
 Indicatori SSD::
 +
 --
-La figura seguente mostra gli indicatori SSD sull'appliance SGF6112.
+La figura seguente mostra gli indicatori SSD sull'appliance SGF6112 o SG6160.
 
 image::../media/ssd_indicators.png[Indicatori SSD]
 
@@ -917,7 +1006,7 @@ Stato/guasto del disco
 * OFF: Slot vuoto
 
 
-*Nota:* se un nuovo SSD funzionante viene inserito in un nodo SGF6112 StorageGRID funzionante, i LED sull'SSD dovrebbero lampeggiare inizialmente, ma smettere di lampeggiare non appena il sistema rileva che il disco ha una capacità sufficiente e che è funzionante.
+*Nota:* se una nuova unità SSD funzionante viene inserita in un nodo SGF6112 o SG6160 StorageGRID funzionante, i LED sull'unità SSD dovrebbero lampeggiare inizialmente, ma smettono di lampeggiare non appena il sistema determina che l'unità ha sufficiente capacità ed è funzionante.
 
 
 
@@ -930,6 +1019,10 @@ Blu (lampeggiante): Accesso all'unità in corso
 
 |===
 --
+
+
+.Informazioni correlate
+* https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^]
 
 
 --

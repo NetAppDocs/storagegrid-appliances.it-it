@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
 summary: 'È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire le attività di risoluzione dei problemi e manutenzione sulle unità dell"appliance SGF6112.' 
 ---
-= Utilizzare la scheda Gestisci unità
+= Utilizzare la scheda Gestisci unità (SGF6112)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -3,6 +3,10 @@ indexpage:
   tiles:
   - title: Procedure eseguite di frequente
     links:
+    - title: Aggiornamento SANtricity (SG6160)
+      url: "../sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html"
+    - title: Aggiornamento del firmware dei dischi (SG6160)
+      url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager.html"
     - title: Attivare o disattivare il LED di posizione
       url: "../sg6100/turning-sgf6112-identify-led-on-and-off.html"
     - title: Individuare l'appliance nel data center
@@ -17,19 +21,45 @@ indexpage:
     links:
     - title: Sostituire l'appliance SGF6112
       url: "../sg6100/replacing-sgf6112-appliance.html"
+    - title: Sostituire la centralina SG6100-CN (SG6160)
+      url: "../sg6100/replacing-sg6100-cn-controller.html"
+    - title: Sostituzione del controller dello storage (SG6160)
+      url: "../sg6100/replace-controller-e4000-duplex.html"
     - title: Riposizionare SGF6112 in un rack
       url: "../sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html"
+    - title: Spostare SG6100-CN in un rack
+      url: "../sg6100/reinstalling-sg6100-cn-controller-into-cabinet-or-rack.html"
   - title: Procedure hardware
     links:
     - title: Riposizionare il coperchio
       url: "../sg6100/reinstalling-sgf6112-cover.html"
     - title: Sostituire l'alimentatore
       url: "../sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html"
-    - title: Sostituire la ventola
+    - title: Sostituzione dell'alimentatore negli shelf dello storage controller o
+        negli shelf di espansione (SG6160)
+      url: "/sg6100/replace-6100-cn-power-canister.html"
+    - title: Sostituire la ventola in SGF6112 o SG6100-CN (SG6160)
       url: "../sg6100/replacing-fan-in-sgf6112.html"
-    - title: Sostituire l'unità
+    - title: Sostituzione della ventola in uno shelf di storage controller o in uno
+        shelf di espansione (SG6160)
+      url: "../sg6100/replace-e4000-fan-canister.html"
+    - title: Sostituire l'unità in SGF6112
       url: "../sg6100/replacing-drive-in-sgf6112.html"
-    - title: Sostituire la scheda NIC
-      url: "../sg6100/replace-nic-in-sgf6112.html"
+    - title: Sostituire l'unità in SG6100-CN
+      url: "../sg6100/replace-drive-sg6100-cn.html"
+    - title: Sostituzione del disco nello shelf dello storage controller o nello shelf
+        di espansione (SG6160)
+      url: "../sg6100/replace-6160-drives-60.html"
+    - title: Sostituire la scheda NIC interna (SGF6112 e SG6160)
+      url: "/sg6100/replace-nic-in-sgf6112.html"
+    - title: Sostituire la scheda NIC esterna (SG6160)
+      url: "/sg6100/replace-ocp-nic-in-sg6100-cn.html"
+    - title: Sostituire i moduli DIMM (SG6160)
+      url: "/sg6100/replace-dimms-e4000.html"
+    - title: Sostituire le batterie (SG6160)
+      url: "/sg6100/replace-battery-e4000.html"
+    - title: Riposizionare il coperchio
     - title: Sostituire la batteria CMOS
       url: "../sg6100/replace-cmos-in-sgf6112.html"
+    - title: Aggiungi shelf di espansione alla piattaforma SG6160 implementata
+      url: "../sg6100/adding-expansion-shelf-to-deployed-sg6160.html"

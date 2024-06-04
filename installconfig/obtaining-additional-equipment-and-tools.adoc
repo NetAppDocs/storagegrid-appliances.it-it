@@ -149,6 +149,23 @@ Cavi Ethernet:: Sollevatore meccanizzato per SG5760
 
 
 --
+.SG5800
+--
+Per installare e configurare l'hardware SG5800 sono necessarie le seguenti apparecchiature aggiuntive.
+
+Cavi e transceiver SFP::
++
+--
+* Cavi per le porte 10/25-GbE che si intende utilizzare
+* Opzionale: Ricetrasmettitori SFP28 se si desidera utilizzare la velocità di collegamento 25-GbE e si dispone di cavi ottici
+* Opzionale: Ricetrasmettitori SFP+ se si desidera utilizzare la velocità di collegamento 10-GbE e si dispone di cavi ottici
+
+
+--
+Cavi Ethernet:: Sollevatore meccanizzato per SG5860
+
+
+--
 .SG6000
 --
 Per installare e configurare l'hardware SG6000 sono necessarie le seguenti apparecchiature aggiuntive.
@@ -178,9 +195,9 @@ Strumenti opzionali:: Sollevatore meccanizzato per shelf da 60 dischi
 --
 .SG6100
 --
-Per installare e configurare l'hardware SGF6112, sono necessarie le seguenti apparecchiature aggiuntive.
+Per installare e configurare l'hardware SG6100 sono necessarie le seguenti apparecchiature aggiuntive.
 
-Cavi ottici e ricetrasmettitori::
+Cavi e transceiver::
 +
 --
 * Cavi, da 1 a 4 di:
@@ -189,16 +206,18 @@ Cavi ottici e ricetrasmettitori::
 ** Fibra ottica
 
 
-* Ricetrasmettitori/adattatori, da 1 a 4 di ciascuno, in base alla velocità di collegamento (velocità miste non supportate):
+* Ricetrasmettitori/adattatori, da 1 a 8 di ciascuno, in base alla velocità di collegamento (velocità miste non supportate):
 +
 ** SFP+ da 10 GbE
 ** SFP28 a 25 GbE
+** 100-GbE QSFP28
 
 
 
 
 --
 Cavi Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+Strumenti opzionali:: Sollevatore meccanizzato per shelf da 60 dischi
 
 
 --

@@ -23,7 +23,7 @@ Le *procedure di configurazione manutenzione* vengono eseguite utilizzando l'Ins
 * link:changing-link-configuration-of-sgf6112-appliance.html["Modificare la configurazione del collegamento dell'appliance"]
 
 
-*Le procedure di manutenzione hardware* richiedono la manipolazione fisica di componenti specifici di SGF6112.
+*Le procedure di manutenzione dell'hardware* richiedono la manipolazione fisica di specifici componenti SGF6112 o SG6160.
 
 
 

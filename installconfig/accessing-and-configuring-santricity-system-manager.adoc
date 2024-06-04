@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, SANtricity System Manager, SANtricity, System Manager, configure, configuring, setup, set up, setting up, access, accessing, E-Series AutoSupport, autosupport, configure, configuring, setup, set up, setting up, access, accessing, hardware, status, diagnostic, environment drives, drive, temperature, IP, IP address, management port, Appliance Installer 
 summary: 'È possibile utilizzare Gestore di sistema di SANtricity per monitorare lo stato dei controller di storage, dei dischi di storage e di altri componenti hardware nello shelf del controller di storage. È inoltre possibile configurare un proxy per e-Series AutoSupport che consente di inviare messaggi AutoSupport dall"appliance senza utilizzare la porta di gestione.' 
 ---
-= Configurazione di Gestore di sistema SANtricity (SG6000 e SG5700)
+= Configurazione di Gestione di sistema SANtricity (SG6160, SG6000, SG5700 e SG5800)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

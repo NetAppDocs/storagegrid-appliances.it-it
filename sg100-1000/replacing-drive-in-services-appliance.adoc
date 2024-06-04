@@ -31,7 +31,7 @@ CAUTION: Se si rimuove il disco funzionante, si disattiva il nodo dell'appliance
 
 
 .Fasi
-. Verificare che il LED sinistro del disco da sostituire sia di colore ambra lampeggiante. Se è stato segnalato un problema al disco in Grid Manager o BMC UI, HDD02 o HDD2 fare riferimento al disco nello slot superiore, mentre HDD03 o HDD3 si riferiscono al disco nello slot inferiore.
+. Verificare che il LED sinistro del disco da sostituire sia di colore ambra lampeggiante. Se è stato segnalato un problema di unità nell'interfaccia utente di Grid Manager o BMC, HDD02 o HDD2 si riferiscono all'unità nello slot superiore e HDD03 o HDD3 si riferiscono all'unità nello slot inferiore.
 +
 È inoltre possibile utilizzare Grid Manager per monitorare lo stato degli SSD. Selezionare *NODI*. Quindi selezionare `*Appliance Node*` > *hardware*. In caso di guasto di un disco, il campo Storage RAID Mode (modalità RAID storage) contiene un messaggio relativo al disco guasto.
 

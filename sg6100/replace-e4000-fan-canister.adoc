@@ -1,0 +1,126 @@
+---
+permalink: sg6100/replace-e4000-fan-canister.html 
+sidebar: sidebar 
+keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
+summary: Rivedere i tipi e i requisiti del filtro a carboni attivi E4000. 
+---
+= Sostituzione del contenitore della ventola nello shelf dello storage controller o nello shelf di espansione (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire il filtro a carboni attivi della ventola in un modello SG6160.
+
+.A proposito di questa attività
+Ogni shelf di controller da 60 dischi o shelf di dischi include due contenitori per ventole. In caso di guasto di un contenitore della ventola, sostituirlo il prima possibile per garantire che il ripiano sia adeguatamente raffreddato.
+
+
+CAUTION: *Possibili danni all'apparecchiatura* -- se si esegue questa procedura con l'alimentazione accesa, è necessario completarla entro 30 minuti per evitare il rischio di surriscaldamento dell'apparecchiatura.
+
+.Prima di iniziare
+* Accedere alla scheda Gestore di sistema di SANtricity della pagina dei nodi per i nodi elencati nell'avviso che ha notificato il guasto della ventola. Utilizzando l'interfaccia utente di SANtricity presentata in questa scheda, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con il filtro a carboni attivi della ventola e selezionare *Ricontrolla* dal guru del ripristino per assicurarsi che non sia necessario risolvere prima altri elementi.
+* Controllare che il LED di attenzione ambra sul filtro della ventola sia acceso, a indicare che la ventola è guasta. Contattare il supporto tecnico per l'assistenza se entrambi i contenitori delle ventole dell'apparecchio sono accesi i LED di attenzione color ambra.
+* Assicurarsi di disporre di quanto segue:
++
+** Un filtro a carboni attivi (ventola) di ricambio supportato per il modello di appliance in uso.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+
+
+
+
+
+
+== Fase 1: Preparazione alla sostituzione del filtro a carboni attivi della ventola
+
+Preparare la sostituzione del contenitore della ventola raccogliendo i dati di supporto sull'apparecchio e individuando il componente guasto.
+
+.Fasi
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *Centro assistenza > Diagnostica*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Da Gestore di sistema di SANtricity, determinare quale filtro a carboni attivi della ventola si è guastato.
++
+.. Selezionare *hardware*.
+.. Guardare la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] A destra degli elenchi a discesa *ripiano* per determinare quale dispositivo presenta il filtro della ventola guasto.
++
+In caso di guasto di un componente, questa icona è rossa.
+
+.. Quando trovate l'apparecchio con un'icona rossa, selezionate *Mostra retro dello scaffale*.
+.. Selezionare il filtro a carboni attivi della ventola o l'icona rossa della ventola.
+.. Nella scheda *ventole*, controllare gli stati dei contenitori delle ventole per determinare quale filtro a carboni attivi deve essere sostituito.
++
+Un componente con stato *Failed* deve essere sostituito.
+
++
+
+NOTE: Se il secondo filtro a carboni attivi della ventola dell'apparecchio non ha lo stato *ottimale*, non tentare di sostituire a caldo il filtro a carboni attivi della ventola guasto. Contattare invece il supporto tecnico per assistenza.
+
+
+
++
+È inoltre possibile trovare informazioni sul contenitore della ventola guasto nell'area Details (Dettagli) del Recovery Guru oppure consultare il registro eventi in Support (supporto) e Filter by Component Type (filtro per tipo di componente).
+
+. Dal retro dello storage array, osservare i LED di attenzione per individuare il contenitore della ventola da rimuovere.
++
+È necessario sostituire il filtro a carboni attivi della ventola con il LED attenzione acceso.
+
+
+
+
+
+== Fase 2: Rimuovere il filtro a carboni attivi della ventola guasto e installarne uno nuovo
+
+Rimuovere un contenitore della ventola guasto in modo da poterlo sostituire con uno nuovo.
+
+
+CAUTION: Se non si spegne l'alimentazione dello storage array, assicurarsi di rimuovere e sostituire il contenitore della ventola entro 30 minuti per evitare il surriscaldamento del sistema.
+
+.Fasi
+. Disimballare il nuovo contenitore della ventola e posizionarlo su una superficie piana vicino all'apparecchio.
++
+Conservare tutto il materiale di imballaggio da utilizzare quando si restituisce la ventola guasta.
+
+. Premere la linguetta arancione per rilasciare la maniglia del filtro a carboni attivi della ventola.
+. Utilizzare la maniglia del contenitore della ventola per estrarre il contenitore della ventola dall'apparecchio.
+. Inserire completamente il contenitore della ventola di ricambio nell'apparecchio, quindi spostare la maniglia del contenitore della ventola fino a quando non si blocca con la linguetta arancione.
+
+
+
+
+== Fase 3: Sostituzione completa del filtro a carboni attivi della ventola
+
+Verificare che il nuovo filtro a carboni attivi della ventola funzioni correttamente, raccogliere i dati di supporto e riprendere le normali operazioni.
+
+.Fasi
+. Controllare il LED di attenzione ambra sul nuovo filtro a carboni attivi della ventola.
++
+
+NOTE: Dopo aver sostituito il filtro a carboni attivi della ventola, il LED attenzione rimane acceso (ambra fisso) mentre il firmware verifica che il filtro a carboni attivi della ventola sia stato installato correttamente. Il LED si spegne al termine del processo.
+
+. Dal guru del ripristino in Gestione sistema di SANtricity, selezionare *ricontrollare* per assicurarsi che il problema sia stato risolto.
+. Se viene ancora segnalato un guasto al filtro a carboni attivi della ventola, ripetere le operazioni descritte in <<Fase 2: Rimuovere il filtro a carboni attivi della ventola guasto e installarne uno nuovo>>. Se il problema persiste, contattare il supporto tecnico.
+. Rimuovere la protezione antistatica.
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *Centro assistenza > Diagnostica*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+
+
+.Quali sono le prossime novità?
+La sostituzione del filtro a carboni attivi della ventola è completata. È possibile riprendere le normali operazioni.

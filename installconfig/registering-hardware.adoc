@@ -25,7 +25,7 @@ image::../media/appliance_label.gif[Etichetta con numero di serie]
 
 NOTE: Sull'appliance di storage SG6000 sono presenti diversi numeri di serie. Il numero di serie sullo shelf dello storage controller è quello che deve essere registrato e utilizzato se si contatta l'assistenza o il supporto per l'appliance SG6000.
 
-. Visitare il sito del supporto NetApp all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Accedere alla http://mysupport.netapp.com/["Sito di supporto NetApp"^].
 . Determinare se è necessario registrare l'hardware:
 +
 [cols="1a,2a"]

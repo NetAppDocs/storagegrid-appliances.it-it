@@ -1,0 +1,20 @@
+---
+permalink: sg5800/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Manutenzione dell'appliance SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario aggiornare il software del sistema operativo SANtricity sul controller E4000, modificare la configurazione del collegamento Ethernet del controller SG5800, sostituire il controller E4000 o il controller SG5800 o sostituire componenti specifici. Le procedure descritte in questa sezione presuppongono che l'appliance sia già stata implementata come nodo di storage in un sistema StorageGRID.
+
+In questa sezione sono riportate le procedure specifiche per la manutenzione dell'apparecchio SG5800.
+
+Vedere link:../commonhardware/index.html["Procedure comuni"] per le procedure di manutenzione utilizzate da tutti gli appliance.
+
+Vedere link:../installconfig/configuring-hardware.html["Configurare l'hardware"] per le procedure di manutenzione eseguite anche durante l'installazione e la configurazione iniziale dell'appliance.

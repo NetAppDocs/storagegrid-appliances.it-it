@@ -18,6 +18,7 @@ Fare riferimento alle istruzioni dell'apparecchio per determinare le informazion
 * link:gathering-installation-information-sg100-and-sg1000.html["SG100 e SG1000"]
 * link:gathering-installation-information-sg110-and-sg1100.html["SG110 e SG1100"]
 * link:gathering-installation-information-sg5700.html["SG5700"]
+* link:gathering-installation-information-sg5800.html["SG5800"]
 * link:gathering-installation-information-sg6000.html["SG6000"]
 * link:gathering-installation-information-sg6100.html["SG6100"]
 

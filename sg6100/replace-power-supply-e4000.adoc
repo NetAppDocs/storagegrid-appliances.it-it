@@ -1,0 +1,166 @@
+---
+permalink: sg6100/replace-power-supply.html 
+sidebar: sidebar 
+keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
+summary: Rivedere i tipi e i requisiti del filtro a carboni attivi E4000. 
+---
+= Sostituzione dell'alimentatore negli shelf del controller di storage (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un alimentatore in un E4000.
+
+.A proposito di questa attività
+Se si prevede di sostituire un alimentatore, tenere presenti i seguenti requisiti.
+
+* È necessario disporre di un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
++
+
+NOTE: Non mischiare le PSU dei diversi tipi di tensione. Sostituire sempre come per come.
+
+
+
+.Prima di iniziare
+* Esaminare i dettagli nel Recovery Guru per confermare che si è verificato un problema con l'alimentatore. Selezionare *ricontrollare* dal Recovery Guru per assicurarsi che nessun altro elemento debba essere affrontato per primo.
+* Verificare che il LED di attenzione ambra sull'alimentatore sia acceso, a indicare che l'alimentatore o la ventola integrata sono guasti. Contattare il supporto tecnico per assistenza se entrambi gli alimentatori dello shelf hanno i LED di attenzione ambra accesi.
+* Assicurarsi di disporre di quanto segue:
++
+** Un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Accesso a Gestione sistema SANtricity:
++
+*** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+*** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
+
+
+
+
+
+
+
+
+== Fase 1: Preparazione alla sostituzione dell'alimentatore
+
+Preparare la sostituzione di un alimentatore in uno shelf o uno shelf di controller da 12 o 24 dischi.
+
+.Fasi
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *supporto > Support Center > Diagnostica*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Da Gestore di sistema di SANtricity, determinare quale alimentatore si è guastato.
++
+Queste informazioni sono disponibili nell'area Details (Dettagli) del Recovery Guru o nelle informazioni visualizzate per lo shelf.
+
++
+.. Selezionare *hardware*.
+.. Guarda la potenza image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] e la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Icone a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.
++
+In caso di guasto di un componente, una o entrambe queste icone sono rosse.
+
+.. Quando trovi lo shelf con un'icona rossa, seleziona *Mostra retro dello shelf*.
+.. Selezionare uno degli alimentatori.
+.. Nelle schede *alimentatori* e *ventole*, controllare gli stati dei contenitori delle ventole di alimentazione, degli alimentatori e delle ventole per determinare quale alimentatore deve essere sostituito.
++
+Un componente con stato *Failed* deve essere sostituito.
+
++
+
+CAUTION: Se il secondo contenitore dell'alimentatore nello shelf non ha lo stato *ottimale*, non tentare di sostituire a caldo l'alimentatore guasto. Contattare invece il supporto tecnico per assistenza.
+
+
+
+. Dal retro dello storage array, osservare i LED di attenzione per individuare l'alimentatore da rimuovere.
++
+È necessario sostituire l'alimentatore con il LED attenzione acceso.
+
+
+
+
+
+== Fase 2: Rimuovere l'alimentatore guasto
+
+Rimuovere un alimentatore guasto per poterlo sostituire con uno nuovo.
+
+.Fasi
+. Disimballare il nuovo alimentatore e posizionare il nuovo alimentatore su una superficie piana vicino allo shelf del disco.
++
+Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce l'alimentatore guasto.
+
+. Spegnere l'alimentatore e scollegare i cavi di alimentazione:
++
+.. Spegnere l'interruttore di alimentazione dell'alimentatore.
+.. Aprire il fermo del cavo di alimentazione, quindi scollegare il cavo di alimentazione dall'alimentatore.
+.. Scollegare il cavo di alimentazione dalla presa di corrente.
+
+
+. Premere il fermo sulla maniglia della camma dell'alimentatore, quindi aprire la maniglia della camma per rilasciare completamente l'alimentatore dal piano intermedio.
+. Utilizzare la maniglia della camma per estrarre l'alimentatore dal sistema.
++
+
+CAUTION: Quando si rimuove un alimentatore, utilizzare sempre due mani per sostenerne il peso.
+
+
+
+
+
+== Fase 3: Installare un nuovo alimentatore
+
+Installare un nuovo alimentatore per sostituire quello guasto.
+
+.Fasi
+. Assicurarsi che l'interruttore di accensione/spegnimento del nuovo alimentatore sia in posizione *Off*.
+. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nello chassis del sistema, quindi spingere delicatamente l'alimentatore nello chassis utilizzando la maniglia della camma.
++
+Gli alimentatori sono dotati di chiavi e possono essere installati in un solo modo.
+
++
+
+CAUTION: Non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema, poiché si potrebbe danneggiare il connettore.
+
+. Chiudere la maniglia della camma in modo che il fermo scatti in posizione di blocco e l'alimentatore sia inserito completamente.
+. Ricollegare il cablaggio dell'alimentatore:
++
+.. Ricollegare il cavo di alimentazione all'alimentatore e alla fonte di alimentazione.
+.. Fissare il cavo di alimentazione all'alimentatore utilizzando il relativo fermo.
+
+
+. Accendere il nuovo contenitore dell'alimentatore.
+
+
+
+
+== Fase 4: Sostituzione completa dell'alimentatore
+
+Verificare che il nuovo alimentatore funzioni correttamente, raccogliere i dati di supporto e riprendere le normali operazioni.
+
+.Fasi
+. Sul nuovo alimentatore, verificare che il LED di alimentazione verde sia acceso e che il LED di attenzione ambra sia spento.
+. Dal guru del ripristino in Gestione sistema di SANtricity, selezionare *ricontrollare* per assicurarsi che il problema sia stato risolto.
+. Se il problema persiste, ripetere la procedura descritta in <<Fase 2: Rimuovere l'alimentatore guasto>>e in <<Fase 3: Installare un nuovo alimentatore>>. Se il problema persiste, contattare il supporto tecnico.
+. Rimuovere la protezione antistatica.
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *supporto > Support Center > Diagnostica*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+
+
+.Quali sono le prossime novità?
+La sostituzione dell'alimentatore è completata. È possibile riprendere le normali operazioni.

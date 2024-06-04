@@ -1,0 +1,271 @@
+---
+permalink: sg5800/replace-dimms-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Sostituire i DIMM in E4000 (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un modulo DIMM nel E4000 se si è verificato un errore.
+
+.A proposito di questa attività
+Per sostituire un DIMM, verificare le dimensioni della cache del controller, posizionare il controller offline, rimuovere il controller, rimuovere i DIMM e installare i nuovi DIMM nel controller. Quindi, è possibile riportare il controller online e verificare che lo storage array funzioni correttamente.
+
+Il nodo di archiviazione dell'appliance potrebbe non essere accessibile quando si sostituisce il controller. Se il controller della serie E4000 funziona a sufficienza, è possibile link:../commonhardware/placing-appliance-into-maintenance-mode.html["Portare la centralina SG5800 in modalità di manutenzione"].
+
+.Prima di iniziare
+* Assicurarsi di disporre di quanto segue:
++
+** Un DIMM sostitutivo.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Un'area di lavoro piana e priva di elettricità statica.
+** Etichette per identificare ciascun cavo collegato al contenitore del controller.
+
+
+* Accesso a Gestione sistema SANtricity:
++
+** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
++
+
+NOTE: Durante alcuni passaggi di questa procedura, potrebbe non essere possibile accedere a Gestore di sistema di SANtricity utilizzando Gestione griglia. Se il controller SG5800 viene spento, sarà necessario accedere a Gestione sistema SANtricity utilizzando il browser.
+
+** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
+
+
+
+
+
+
+== Fase 1: Determinare se è necessario sostituire un DIMM
+
+Verificare le dimensioni della cache del controller prima di sostituire i DIMM.
+
+.Fasi
+. Accedere al profilo Storage Array per il controller. Da Gestione di sistema di SANtricity, andare a *supporto* › *Centro assistenza*. Dalla pagina Support Resources (risorse di supporto), selezionare *Storage Array Profile* (Profilo array di storage).
+. Scorrere verso il basso o utilizzare il campo Search (Cerca) per individuare le informazioni *Data cache Module* (modulo cache dati).
+. Se è presente un DIMM guasto o un DIMM che riporta *modulo cache dati* come non ottimale, annotare la posizione del DIMM e continuare a sostituire i DIMM sul controller.
+
+
+
+
+== Fase 2: Spegnere lo shelf del controller
+
+Spegnere il controller in modo da poter rimuovere e sostituire i DIMM in modo sicuro.
+
+.Fasi
+. Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una memoria non corrispondente e per assicurarsi che non siano prima necessari altri elementi.
+. Nell'area Details (Dettagli) del Recovery Guru, determinare quale DIMM sostituire.
+. Eseguire il backup del database di configurazione dello storage array utilizzando SANtricity System Manager.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare *Support › Support Center › Diagnostics*.
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-
+<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Spegnere il controller SG5800.
++
+.. Accedere al nodo Grid:
++
+... Immettere il seguente comando: `ssh admin@grid_node_IP`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Arrestare il controller SG5800:
++
+*`shutdown -h now`*
+
+.. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active sul retro del controller E4000 è acceso quando i dati memorizzati nella cache devono essere scritti sulle unità. Attendere che il LED si spenga.
+
+
+
+. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
+. Confermare che tutte le operazioni sono state completate prima di passare alla fase successiva.
+. Spegnere entrambi gli interruttori di alimentazione sullo shelf del controller.
+. Attendere che tutti i LED sullo shelf del controller si spenga.
+
+
+
+
+== Fase 3: Rimuovere il contenitore della centralina
+
+Rimuovere il filtro a carboni attivi della centralina dal sistema, quindi rimuovere il coperchio del filtro a carboni attivi della centralina.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i SFP (se necessario) dal contenitore del controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del contenitore del controller.
+. Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla piastra centrale, quindi, con due mani, estrarre il contenitore della centralina dal telaio.
+. Capovolgere il contenitore della centralina e collocarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Aprire il coperchio del contenitore della centralina.]
+
+
+
+
+
+== Fase 4: Sostituire i DIMM
+
+Individuare il modulo DIMM all'interno del controller, rimuoverlo e sostituirlo.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Prima di sostituire i componenti del sistema, è necessario eseguire un arresto pulito del sistema per evitare la perdita di dati non scritti nella memoria non volatile (NVMEM). Il LED si trova sul retro del contenitore del controller.
+. Se il LED NVMEM non lampeggia, NVMEM non contiene alcun contenuto; è possibile saltare i passaggi seguenti e passare all'attività successiva di questa procedura.
+. Se il LED NVMEM lampeggia, sono presenti dati in NVMEM ed è necessario scollegare la batteria per cancellare la memoria:
++
+.. Rimuovere la batteria dal contenitore della centralina premendo il pulsante blu sul lato del contenitore della centralina.
+.. Far scorrere la batteria verso l'alto finché non si libera dalle staffe di supporto, quindi estrarre la batteria dal contenitore della centralina.
+.. Individuare il cavo della batteria, premere il fermaglio sulla spina della batteria per sganciare il fermaglio di blocco dalla presa, quindi scollegare il cavo della batteria dalla presa.
+.. Verificare che il LED NVMEM non sia più acceso.
+.. Ricollegare il connettore della batteria e controllare nuovamente il LED sul retro del controller.
+.. Scollegare il cavo della batteria.
+
+
+. Individuare i moduli DIMM sul contenitore del controller.
+. Prendere nota dell'orientamento e della posizione del DIMM nello zoccolo in modo da poter inserire il DIMM sostitutivo con l'orientamento corretto.
+. Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo, quindi estrarre il modulo DIMM dallo slot.
++
+Il DIMM ruota leggermente verso l'alto.
+
+. Ruotare il modulo DIMM fino in fondo, quindi estrarlo dallo zoccolo.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Rimuovere i moduli DIMM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icona legenda 01]
+| Schede di espulsione DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[icona legenda 02]
+| DIMM 
+|===
+. Rimuovere il modulo DIMM di ricambio dalla confezione antistatica, tenerlo per gli angoli e allinearlo allo slot.
++
+La tacca tra i pin del DIMM deve allinearsi con la linguetta dello zoccolo.
+
+. Inserire il DIMM nello slot.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+. Spingere con cautela, ma con decisione, il bordo superiore del DIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del DIMM.
+. Ricollegare la batteria:
++
+.. Collegare la batteria.
+.. Assicurarsi che la spina sia bloccata nella presa di alimentazione della batteria sulla scheda madre.
+.. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.
+.. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
+
+
+. Rimontare il coperchio del contenitore della centralina.
+
+
+
+
+== Fase 5: Reinstallare il contenitore della centralina
+
+Rimontare il contenitore della centralina nel telaio.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Se non è già stato fatto, sostituire il coperchio sul contenitore della centralina.
+. Capovolgere il contenitore della centralina e allineare l'estremità con l'apertura nel telaio.
+. Spingere delicatamente il contenitore della centralina a metà corsa nel sistema. Allineare l'estremità del contenitore della centralina con l'apertura nel telaio, quindi spingere delicatamente il contenitore della centralina a metà corsa nel sistema.
++
+
+NOTE: Non inserire completamente il contenitore della centralina nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
+. Completare la reinstallazione del contenitore della centralina:
++
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il contenitore del controller fino a quando non raggiunge la parte interna e non è completamente insediato, quindi chiudere la maniglia della camma in posizione bloccata.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il contenitore della centralina nel telaio per evitare di danneggiare i connettori.
+
++
+Il controller inizia ad avviarsi non appena viene inserito nello chassis.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+
+
+. Accendere entrambi gli interruttori di alimentazione sullo shelf del controller.
+
+
+
+
+== Fase 6: Completare la sostituzione dei DIMM
+
+Posizionare il controller online, raccogliere i dati di supporto e riprendere le operazioni.
+
+.Fasi
+. All'avvio del controller, controllare i LED del controller.
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando il controller torna in linea, verificare che il suo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
+NOTA: Se non è possibile risolvere il problema, contattare l'assistenza tecnica.
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina *nodi* visualizzi uno stato normale (segno di spunta verde a sinistra del nome del nodo) per il nodo dell'appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
++
+
+NOTE: Potrebbero essere necessari 20 minuti dall'accensione degli interruttori di alimentazione a quando il nodo si ricongiunge alla griglia e visualizza uno stato normale in Grid Manager."
+
+

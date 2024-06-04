@@ -14,15 +14,14 @@ summary: 'Per i controller storage che attualmente utilizzano SANtricity OS 08.4
 Per i controller di storage che attualmente utilizzano SANtricity OS 08.42.20.00 (11.42) o versione successiva, è necessario utilizzare Grid Manager per applicare un aggiornamento.
 
 .Prima di iniziare
-* Si è consultato il https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp (IMT)"^] Per confermare che la versione di SANtricity OS utilizzata per l'aggiornamento è compatibile con l'appliance.
+* Se non è stata ottenuta la versione di SANtricity OS da cui si desidera eseguire l'aggiornamento https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^], è stata effettuata la consultazione https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^] o il https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp (IMT)"^] Per confermare che la versione di SANtricity OS utilizzata per l'aggiornamento è compatibile con l'appliance.
 * Hai il https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Autorizzazione di manutenzione o di accesso root"^].
 * Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
 * Si dispone della passphrase di provisioning.
-* Hai accesso a. https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^].
 
 
 .A proposito di questa attività
-Non è possibile eseguire altri aggiornamenti software (aggiornamento del software StorageGRID o hotfix) fino a quando non viene completato il processo di aggiornamento del sistema operativo SANtricity. Se si tenta di avviare una correzione rapida o un aggiornamento del software StorageGRID prima che il processo di aggiornamento del sistema operativo SANtricity sia terminato, si viene reindirizzati alla pagina di aggiornamento del sistema operativo SANtricity.
+Non è possibile eseguire altri aggiornamenti software (aggiornamento software StorageGRID o hotfix) mentre è in corso un aggiornamento del sistema operativo SANtricity. Se si tenta di avviare una correzione rapida o un aggiornamento del software StorageGRID prima che il processo di aggiornamento del sistema operativo SANtricity sia terminato, si viene reindirizzati alla pagina di aggiornamento del sistema operativo SANtricity.
 
 La procedura non sarà completa fino a quando l'aggiornamento del sistema operativo SANtricity non sarà stato applicato correttamente a tutti i nodi applicabili selezionati per l'aggiornamento. Potrebbero essere necessari più di 30 minuti per caricare il sistema operativo SANtricity su ciascun nodo (in sequenza) e fino a 90 minuti per riavviare ogni appliance di storage StorageGRID. Tutti i nodi della griglia che non utilizzano SANtricity OS non saranno interessati da questa procedura.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112, locate, find, locating, finding, identify, blue led, blue light 
 summary: 'Il LED blu di identificazione sulla parte anteriore dell"apparecchio può essere acceso per facilitare la localizzazione dell"apparecchio in un data center.' 
 ---
-= Accendere e spegnere il LED di identificazione dell'apparecchio SGF6112
+= Accendere e spegnere il LED di identificazione dell'apparecchio SGF6112 o del controller SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

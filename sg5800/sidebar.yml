@@ -1,0 +1,57 @@
+---
+section: sg5800
+title: Manutenzione dell'hardware SG5800
+url: "/landing-maintain-sg5800/index.html"
+entries:
+- title: Panoramica
+  pdf-filename: SG5800 interventi di manutenzione hardware
+  url: "/sg5800/index.html"
+- title: Procedure di configurazione della manutenzione
+  pdf-filename: Procedure di configurazione della manutenzione - SG5800
+  entries:
+  - title: Aggiornare il sistema operativo SANtricity sul controller di storage
+    url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
+    entries:
+    - title: Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando
+        Grid Manager
+      url: "/sg5800/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html"
+    - title: Aggiornare il sistema operativo SANtricity sul controller E4000 usando
+        la modalità di manutenzione
+      url: "/sg5800/upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html"
+  - title: Aggiornare il firmware del disco utilizzando Gestione di sistema di SANtricity
+    entries:
+    - title: Aggiornare il firmware delle unità SG5800 utilizzando il metodo online
+        Gestione sistema di SANtricity
+      url: "/sg5800/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Aggiornare il firmware delle unità SG5800 utilizzando il metodo offline
+        di Gestione sistema di SANtricity
+      url: "/sg5800/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
+    - title: Risolvere gli errori di aggiornamento del firmware del disco
+      url: "/sg5800/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Modificare la configurazione del collegamento del controller SG5800
+    url: "/sg5800/changing-link-configuration-of-sg5800-controller.html"
+- title: Procedure hardware
+  pdf-filename: Procedure hardware - SG5800
+  entries:
+  - title: Sostituire la centralina SG5800
+    url: "/sg5800/replace-controller-sg5800.html"
+  - title: Sostituire la centralina E4000
+    url: "/sg5800/replace-controller-e4000-simplex.html"
+  - title: Sostituire la ventola (SG5860)
+    url: "/sg5800/replace-fan-canister.html"
+  - title: Sostituire l'alimentatore (SG5812)
+    url: "/sg5800/replace-power-supply.html"
+  - title: Sostituire il filtro a carboni attivi (SG5860)
+    url: "/sg5800/replace-power-canister.html"
+  - title: Sostituire le batterie
+    url: "/sg5800/replace-battery-e4000.html"
+  - title: Sostituire i DIMM
+    url: "/sg5800/replace-dimms-e4000.html"
+  - title: Sostituire i dischi
+    entries:
+    - title: Panoramica e requisiti
+      url: "/sg5800/replace-drive-e4000.html"
+    - title: SG5812
+      url: "/sg5800/replace-drives-12-24.html"
+    - title: SG5860
+      url: "/sg5800/replace-drives-60.html"

@@ -1,0 +1,155 @@
+---
+permalink: sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: Il firmware del disco viene aggiornato per assicurarsi di disporre delle funzionalità più recenti e delle correzioni dei bug. 
+---
+= Aggiornamento del firmware delle unità SG6100 tramite Gestione sistema SANtricity con metodo offline (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzare il metodo offline di Gestione di sistema di SANtricity per aggiornare il firmware sulle unità dell'appliance per assicurarsi di disporre di tutte le funzioni e delle correzioni di bug più recenti.
+
+
+NOTE: Questa procedura *non* si applica agli SSD NVMe nel SG6100-CN, che vengono aggiornati durante gli aggiornamenti del software StorageGRID. Solo le unità del E4000 possono essere aggiornate utilizzando questa procedura.
+
+.Prima di iniziare
+* Lo stato dell'appliance di storage è ottimale.
+* Tutti i dischi hanno uno stato ottimale.
+* Lo hai fatto link:../commonhardware/placing-appliance-into-maintenance-mode.html["Attivazione della modalità di manutenzione dell'appliance StorageGRID"].
++
+
+NOTE: Mentre l'appliance è in modalità di manutenzione, l'attività i/o (input/output) dello storage controller viene interrotta per rendere sicure le operazioni di storage che provocano interruzioni.
+
+
+
+
+CAUTION: Non aggiornare il firmware del disco su più appliance StorageGRID alla volta. In caso affermativo, i dati potrebbero non essere disponibili, a seconda del modello di implementazione e della policy ILM.
+
+.A proposito di questa attività
+I dischi vengono aggiornati in parallelo quando l'appliance è in modalità di manutenzione. Se il pool o il gruppo di volumi non supporta la ridondanza o è danneggiato, è necessario utilizzare il metodo offline per aggiornare il firmware dell'unità. È consigliabile utilizzare il metodo offline per qualsiasi disco associato alla cache di lettura flash o per qualsiasi pool o gruppo di volumi attualmente degradato. Il metodo offline aggiorna il firmware solo quando tutte le attività i/o vengono interrotte sui dischi da aggiornare. Per interrompere l'attività di i/o, impostare il nodo in modalità di manutenzione.
+
+Il metodo offline è più veloce del metodo online e sarà molto più veloce quando molti dischi di una singola appliance necessitano di aggiornamenti. Tuttavia, richiede che i nodi siano fuori servizio, il che potrebbe richiedere la pianificazione di una finestra di manutenzione e il monitoraggio dell'avanzamento. Scegli il metodo più adatto alle tue procedure operative e il numero di dischi da aggiornare.
+
+.Fasi
+. Verificare che l'apparecchio sia in posizione link:../commonhardware/placing-appliance-into-maintenance-mode.html["modalità di manutenzione"].
+. Accedere a Gestore di sistema di SANtricity utilizzando uno dei seguenti metodi:
++
+** Utilizzare il programma di installazione dell'appliance StorageGRID e selezionare *Avanzate* > *Gestore di sistema SANtricity*
+** Utilizzare il Gestore griglia e selezionare *NODI* > *_nodo di storage_* > *Gestore di sistema SANtricity*
+** Utilizza Gestione sistema di SANtricity navigando all'IP dello storage controller:
++
+`*https://_Storage_Controller_IP_*`
+
+
+
+. Se necessario, immettere il nome utente e la password dell'amministratore del gestore di sistema di SANtricity.
+. Verificare la versione del firmware del disco attualmente installata nell'appliance di storage:
++
+.. Da Gestione sistemi SANtricity, selezionare *SUPPORTO* > *Centro di aggiornamento*.
+.. In Drive firmware upgrade (aggiornamento firmware disco), selezionare *Begin Upgrade* (Avvia aggiornamento).
++
+La pagina Upgrade Drive firmware (Aggiorna firmware unità) visualizza i file del firmware del disco attualmente installati.
+
+.. Annotare le revisioni del firmware del disco e gli identificatori del disco correnti nella colonna firmware del disco corrente.
++
+image::../media/storagegrid_update_drive_firmware.png[Aggiornare il firmware del disco]
+
++
+In questo esempio:
+
++
+*** La revisione del firmware del disco è *MS02*.
+*** L'identificatore del disco è *KPM51VUG800G*.
+
+
+.. Selezionare *View drives* (Visualizza unità) nella colonna Associated Drives (unità associate) per visualizzare la posizione in cui queste unità sono installate nell'appliance di storage.
+.. Chiudere la finestra Upgrade Drive firmware (Aggiorna firmware unità).
+
+
+. Scaricare e preparare l'aggiornamento del firmware del disco disponibile:
++
+.. In Drive firmware upgrade (aggiornamento firmware disco), selezionare *NetApp Support* (supporto NetApp).
+.. Nel NetApp Support Site, selezionare la scheda *Downloads*, quindi selezionare *e-Series Disk Drive firmware*.
++
+Viene visualizzata la pagina e-Series Disk firmware (firmware disco e-Series).
+
+.. Cercare ciascun *Drive Identifier* installato nell'appliance di storage e verificare che ciascun identificatore di unità disponga della versione firmware più recente.
++
+*** Se la revisione del firmware non è un collegamento, l'identificatore del disco ha la revisione del firmware più recente.
+*** Se per un identificatore di unità sono elencati uno o più codici prodotto, è disponibile un aggiornamento del firmware per questi dischi. È possibile selezionare qualsiasi collegamento per scaricare il file del firmware.
++
+image::../media/storagegrid_drive_firmware_download.png[Pagina firmware disco e-Series]
+
+
+
+.. Se viene elencata una revisione del firmware successiva, selezionare il collegamento nella sezione firmware Rev. (Rev. Firmware) (Download) per scaricare un `.zip` archivio contenente il file del firmware.
+.. Estrarre (decomprimere) i file di archivio del firmware del disco scaricati dal sito del supporto.
+
+
+. Installare l'aggiornamento del firmware del disco:
++
+.. Da Gestione sistemi SANtricity, sotto aggiornamento firmware disco, selezionare *Avvia aggiornamento*.
+.. Selezionare *Browse* (Sfoglia) e selezionare i nuovi file del firmware del disco scaricati dal sito di supporto.
++
+I file del firmware del disco hanno un nome file simile a. `D_HUC101212CSS600_30602291_MS01_2800_0002.dlp`.
+
++
+È possibile selezionare fino a quattro file del firmware del disco, uno alla volta. Se più di un file del firmware del disco è compatibile con lo stesso disco, viene visualizzato un errore di conflitto del file. Decidere quale file del firmware del disco utilizzare per l'aggiornamento e rimuovere l'altro.
+
+.. Selezionare *Avanti*.
++
+*Select Drives* elenca i dischi che è possibile aggiornare con i file del firmware selezionati.
+
++
+Vengono visualizzati solo i dischi compatibili.
+
++
+Il firmware selezionato per l'unità viene visualizzato nella colonna *firmware proposto*. Se è necessario modificare questo firmware, selezionare *Indietro*.
+
+.. Selezionare *Aggiorna tutte le unità offline (parallela)* — Aggiorna le unità che possono supportare il download del firmware solo quando tutte le attività di i/o vengono interrotte su qualsiasi volume che utilizza le unità.
++
+
+CAUTION: Prima di utilizzare questo metodo, è necessario impostare l'apparecchio in modalità di manutenzione. Utilizzare il metodo *Offline* per aggiornare il firmware del disco.
+
++
+
+CAUTION: Se si desidera utilizzare l'aggiornamento offline (parallelo), non procedere a meno che non si sia certi che l'appliance sia in modalità di manutenzione. La mancata attivazione della modalità di manutenzione dell'appliance prima dell'avvio di un aggiornamento offline del firmware del disco potrebbe causare la perdita di dati.
+
+.. Nella prima colonna della tabella, selezionare il disco o i dischi che si desidera aggiornare.
++
+La procedura consigliata consiste nell'aggiornare tutti i dischi dello stesso modello alla stessa revisione del firmware.
+
+.. Selezionare *Start* e confermare che si desidera eseguire l'aggiornamento.
++
+Per interrompere l'aggiornamento, selezionare *Stop*. Tutti i download del firmware attualmente in corso sono stati completati. Tutti i download del firmware non avviati vengono annullati.
+
++
+
+CAUTION: L'interruzione dell'aggiornamento del firmware del disco potrebbe causare la perdita di dati o la mancata disponibilità dei dischi.
+
+.. (Facoltativo) per visualizzare un elenco degli aggiornamenti, selezionare *Save Log* (Salva registro).
++
+Il file di log viene salvato nella cartella downloads del browser con il nome `latest-upgrade-log-timestamp.txt`.
+
++
+link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html["Se necessario, risolvere gli errori di aggiornamento del firmware del driver"].
+
+
+
+. Una volta completata correttamente la procedura, eseguire eventuali procedure di manutenzione aggiuntive mentre il nodo si trova in modalità di manutenzione. Al termine dell'operazione, o se si verificano errori e si desidera ricominciare, accedere al programma di installazione dell'appliance StorageGRID e selezionare *Avanzate* > *Riavvia controller*. Quindi selezionare una delle seguenti opzioni:
++
+** *Riavvia in StorageGRID*.
+** *Riavviare in modalità di manutenzione*. Riavviare il controller e mantenere il nodo in modalità di manutenzione. Selezionare questa opzione se si sono riscontrati errori durante la procedura e si desidera ricominciare. Al termine del riavvio del nodo in modalità di manutenzione, riavviare dalla fase appropriata della procedura che ha avuto esito negativo.
++
+Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina Nodes (nodi) dovrebbe visualizzare uno stato normale (icona con segno di spunta verde) image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+
++
+image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+
+
+
+

@@ -25,6 +25,8 @@ entries:
       url: "/installconfig/gathering-installation-information-sg110-and-sg1100.html"
     - title: SG5700
       url: "/installconfig/gathering-installation-information-sg5700.html"
+    - title: SG5800
+      url: "/installconfig/gathering-installation-information-sg5800.html"
     - title: SG6000
       url: "/installconfig/gathering-installation-information-sg6000.html"
     - title: SG6100
@@ -48,6 +50,8 @@ entries:
       url: "/installconfig/installing-appliance-in-cabinet-or-rack-sg110-and-sg1100.html"
     - title: SG5700
       url: "/installconfig/installing-appliance-in-cabinet-or-rack-sg5700.html"
+    - title: SG5800
+      url: "/installconfig/installing-appliance-in-cabinet-or-rack-sg5800.html"
     - title: SG6000
       entries:
       - title: Panoramica
@@ -62,7 +66,13 @@ entries:
       - title: Installare la centralina SG6000-CN (SG6024 e SG6060)
         url: "/installconfig/sg6000-cn-installing-into-cabinet-or-rack.html"
     - title: SG6100
-      url: "/installconfig/installing-appliance-in-cabinet-or-rack-sgf6112.html"
+      entries:
+      - title: Installazione di shelf da 60 dischi (SG6160)
+        url: "/installconfig/sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html"
+      - title: Installazione di shelf da 12 dischi (SGF6112)
+        url: "/installconfig/installing-appliance-in-cabinet-or-rack-sgf6112.html"
+      - title: Installare la centralina SG6100-CN (SG6160)
+        url: "/installconfig/sg6100-cn-installing-into-cabinet-or-rack.html"
   - title: Apparecchio via cavo
     url: "/installconfig/cabling-appliance.html"
   - title: Collegare e collegare l'alimentazione
@@ -88,7 +98,8 @@ entries:
       url: "/installconfig/verifying-network-connections.html"
     - title: Verificare le connessioni di rete a livello di porta
       url: "/installconfig/verifying-port-level-network-connections.html"
-  - title: Configurazione di Gestione di sistema SANtricity (SG5700 e SG6000)
+  - title: Configurazione di Gestione di sistema SANtricity (SG5700, SG5800, SG6000
+      e SG6100)
     url: "/installconfig/accessing-and-configuring-santricity-system-manager.html"
   - title: CONFIGURARE L'INTERFACCIA BMC (SG100, SG110, SG1000, SG1100, SG6000, e
       SG6100)
@@ -107,7 +118,7 @@ entries:
       url: "/installconfig/setting-up-email-notifications-for-alerts.html"
   - title: 'Opzionale: Abilitare la crittografia del nodo o del disco'
     url: "/installconfig/optional-enabling-node-encryption.html"
-  - title: 'Opzionale: Modifica della modalità RAID (SG5760 e SG6000)'
+  - title: 'Opzionale: Modifica della modalità RAID (SG5760, SG5860, SG6000 e SG6160)'
     url: "/installconfig/optional-changing-raid-mode.html"
   - title: 'Opzionale: Rimappare le porte di rete'
     url: "/installconfig/optional-remapping-network-ports-for-appliance.html"
@@ -129,5 +140,5 @@ entries:
     url: "/installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html"
   - title: Risoluzione dei problemi di installazione (SG5700 o SG6000)
     url: "/installconfig/troubleshooting-hardware-installation.html"
-  - title: Risoluzione dei problemi di installazione (SG6100)
+  - title: Risoluzione dei problemi di installazione (SG5800 o SG6100)
     url: "/installconfig/troubleshooting-hardware-installation-sg6100.html"

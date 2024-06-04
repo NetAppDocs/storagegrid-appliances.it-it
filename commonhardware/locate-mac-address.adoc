@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, mac, mac address 
 summary: 'In alcuni casi potrebbe essere necessario aggiornare i riferimenti degli indirizzi MAC dopo la sostituzione di un"appliance.' 
 ---
-= Aggiornare i riferimenti degli indirizzi MAC
+= Aggiornamento dei riferimenti agli indirizzi MAC (SG100, SG1000, SGF6024 e SG6060)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

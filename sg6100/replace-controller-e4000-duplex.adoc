@@ -1,0 +1,323 @@
+---
+permalink: sg6100/replace-controller-e4000-duplex.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Sostituire lo storage controller E4000 (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire un controller E4000 se non funziona in modo ottimale o se è guasto.
+
+.Prima di iniziare
+* Si dispone di un controller sostitutivo con lo stesso numero di parte del controller che si sta sostituendo.
+* Sono presenti etichette per identificare ciascun cavo collegato al controller.
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
+* Hai un cacciavite Phillips n. 1.
+* L'appliance di storage in cui si sta sostituendo il controller nel data center è stata fisicamente posizionata.
+
+
+
+NOTE: Non fare affidamento sulle istruzioni e-Series per sostituire un controller nell'appliance StorageGRID, perché le procedure non sono le stesse.
+
+.A proposito di questa attività
+È possibile determinare se si dispone di un controller guasto in due modi:
+
+* Un avviso di Grid Manager indica una condizione di errore dello storage controller e il responsabile del ripristino (o il responsabile del sistema di SANtricity) chiede di sostituire il controller.
+* Il LED di attenzione ambra sul controller è acceso, a indicare che il controller è guasto.
++
+
+NOTE: Se entrambi i controller dello shelf hanno i LED di attenzione accesi, contattare il supporto tecnico per assistenza.
+
+
+
+Se l'appliance contiene due controller di storage, è possibile sostituire uno dei controller mentre l'appliance è accesa ed esegue operazioni di lettura/scrittura, a condizione che siano soddisfatte le seguenti condizioni:
+
+* Il secondo controller nello shelf ha uno stato ottimale.
+* Il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione sistema di SANtricity visualizza *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
+
+
+
+NOTE: Se possibile, impostare l'apparecchio in modalità di manutenzione per questa procedura di sostituzione per ridurre al minimo l'impatto potenziale di errori o guasti imprevisti.
+
+
+NOTE: Se il secondo controller nello shelf non ha uno stato ottimale o se il Recovery Guru indica che non è possibile rimuovere il controller, contattare il supporto tecnico.
+
+
+
+== Fase 1: Preparare la centralina sostitutiva
+
+Preparare la centralina E4000 sostitutiva.
+
+.Fasi
+. Disimballare il nuovo controller e impostarlo su una superficie piana e priva di elettricità statica.
++
+Conservare il materiale di imballaggio da utilizzare per la spedizione del controller guasto.
+
+. Individuare le etichette dell'indirizzo MAC e del numero di parte FRU sul retro del controller sostitutivo.
+
+
+
+
+== Passaggio 2: Portare il controller offline
+
+Prepararsi a rimuovere il controller guasto e a portarlo offline. È possibile utilizzare Gestione di sistema di SANtricity per eseguire questa procedura.
+
+.Fasi
+. Verificare che il numero di parte sostitutivo del controller guasto sia lo stesso del numero di parte FRU del controller sostitutivo.
++
+Quando un controller presenta un guasto e deve essere sostituito, il codice del ricambio viene visualizzato nell'area Details (Dettagli) del Recovery Guru. Se è necessario trovare questo numero manualmente, consultare la scheda *base* del controller.
+
++
+
+CAUTION: *Possibile perdita di accesso ai dati e n. 8212;* se i due codici ricambio non sono gli stessi, non tentare questa procedura.
+
+. Eseguire il backup del database di configurazione.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+. Raccogliere i dati di supporto per l'appliance.
++
+
+NOTE: La raccolta dei dati di supporto prima e dopo la sostituzione di un componente consente di inviare una serie completa di registri al supporto tecnico se la sostituzione non risolve il problema.
+
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. *Selezionare Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
+
+
+. Portare offline il controller che si intende sostituire.
+
+
+
+
+== Fase 3: Rimuovere il contenitore della centralina
+
+Rimuovere un contenitore del controller.
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla piastra centrale, quindi, con due mani, estrarre il contenitore della centralina dal telaio.
+. Posizionare il controller su una superficie piana e priva di scariche elettrostatiche con il coperchio rimovibile rivolto verso l'alto.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
+
+
+
+
+== Fase 4: Determinare le parti da trasferire alla centralina sostitutiva
+
+Il controller sostitutivo potrebbe essere fornito con componenti preinstallati. Determinare quali parti devono essere trasferite al contenitore della centralina di ricambio.
+
+. Posizionare il controller sostitutivo su una superficie piana e priva di elettricità statica con il coperchio rimovibile rivolto verso l'alto.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
+. Determinare se il controller sostitutivo contiene una batteria e/o DIMM. In caso contrario, reinstallare il coperchio del controller e passare a. <<step8_replace_controller,Fase 8: Sostituire la centralina>>. Altrimenti:
++
+** Se il controller sostitutivo non include una batteria o un modulo DIMM, passare a. <<step5_remove_battery,Fase 5: Rimuovere la batteria>>.
+** Se il controller sostitutivo include una batteria ma non un modulo DIMM, passare a. <<step6_remove_dimm,Fase 6: Spostare i DIMM>>.
+
+
+
+
+
+
+== Fase 5: Rimuovere la batteria
+
+Rimuovere la batteria dalla centralina danneggiata e installarla nella centralina di sostituzione, se necessario.
+
+.Fasi
+. Rimuovere la batteria dal contenitore della centralina:
++
+.. Premere il pulsante blu sul lato del contenitore della centralina.
+.. Far scorrere la batteria verso l'alto finché non si libera dalle staffe di supporto, quindi estrarre la batteria dal contenitore della centralina.
+.. Scollegare la spina della batteria premendo il fermaglio posto sulla parte anteriore della spina della batteria per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Rimuovere la batteria NVMEM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icona legenda 01]
+| Linguetta di rilascio della batteria 
+
+
+ a| 
+image::../media/legend_icon_02.png[icona legenda 02]
+| Connettore di alimentazione della batteria 
+|===
+
+
+. Spostare la batteria sul contenitore della centralina di ricambio e montarla:
++
+.. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera, ma non collegarla. Si collegherà quando gli altri componenti verranno spostati nel contenitore della centralina di ricambio.
+
+
+. Se il controller sostitutivo dispone di moduli DIMM preinstallati, passare a. <<step7_install_battery,Fase 7: Installare la batteria>>. In caso contrario, passare alla fase successiva.
+
+
+
+
+== Fase 6: Spostare i DIMM
+
+Rimuovere i moduli DIMM dal contenitore del controller danneggiato e installarli nel contenitore del controller sostitutivo.
+
+.Fasi
+. Individuare i moduli DIMM sul contenitore del controller.
++
+
+NOTE: Annotare la posizione del DIMM negli zoccoli in modo da poter inserire il DIMM nella stessa posizione nel contenitore del controller sostitutivo e con l'orientamento corretto.
+Rimuovere i moduli DIMM dal contenitore del controller danneggiato:
+
++
+.. Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo DIMM.
++
+Il DIMM ruota leggermente verso l'alto.
+
+.. Ruotare il modulo DIMM fino in fondo, quindi estrarlo dallo zoccolo.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Rimuovere i moduli DIMM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icona legenda 01]
+| Schede di espulsione DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[icona legenda 02]
+| DIMM 
+|===
+
+
+. Verificare che la batteria non sia collegata al contenitore della centralina di ricambio.
+. Installare i DIMM nel controller sostitutivo nello stesso punto in cui si trovavano nel controller compromesso:
++
+.. Spingere con cautela, ma con decisione, il bordo superiore del DIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del DIMM.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+
+
+. Ripetere questa procedura per l'altro DIMM.
+. Se la centralina sostitutiva è dotata di una batteria preinstallata, passare a. <<step8_replace_controller,Fase 8: Sostituire la centralina>>. In caso contrario, passare alla fase successiva.
+
+
+
+
+== Fase 7: Installare la batteria
+
+Installare la batteria nel contenitore del controller di ricambio.
+
+.Fasi
+. Inserire nuovamente la spina batteria nella presa sul contenitore della centralina.
++
+Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.
+
+. Allineamento della batteria con le staffe di supporto sulla parete laterale in lamiera.
+. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
+. Rimontare il coperchio del contenitore della centralina e bloccarlo in posizione.
+
+
+
+
+== Fase 8: Sostituire la centralina
+
+Installare il controller sostitutivo e verificare che il nodo sia rientrato nella griglia.
+
+.Fasi
+. Installare il controller sostitutivo nell'appliance.
++
+.. Capovolgere il controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
+.. Con la maniglia della camma in posizione aperta, far scorrere il controller fino in fondo nell'apparecchio.
+.. Spostare la maniglia della camma verso sinistra per bloccare il controller in posizione.
+.. Sostituire i cavi.
+.. Se il controller originale utilizzava DHCP per l'indirizzo IP, individuare l'indirizzo MAC sull'etichetta sul retro del controller sostitutivo. Chiedere all'amministratore di rete di associare il DNS/rete e l'indirizzo IP del controller rimosso con l'indirizzo MAC del controller sostitutivo.
++
+
+NOTE: Se il controller originale non ha utilizzato DHCP per l'indirizzo IP, il nuovo controller adotterà l'indirizzo IP del controller rimosso.
+
+
+
+. Portare il controller online utilizzando Gestione di sistema di SANtricity:
++
+.. Selezionare *hardware*.
+.. Se la figura mostra le unità, selezionare *Controller e componenti*.
+.. Selezionare il controller che si desidera mettere in linea.
+.. Selezionare *Place Online* (Esegui online) dal menu di scelta rapida e confermare che si desidera eseguire l'operazione.
+
+
+. All'avvio del controller, controllare i LED del controller.
++
+** Il LED di attenzione ambra sul controller si accende e poi si spegne, a meno che non si verifichi un errore.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando il controller torna in linea, verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Se necessario, ridistribuire tutti i volumi al proprietario preferito utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *archiviazione › volumi*.
+.. Selezionare *More › redistribuisci volumi*.
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Se l'apparecchio è stato impostato in modalità di manutenzione durante questa procedura, uscire dalla modalità di manutenzione e attendere il riavvio del nodo e riconnettersi alla griglia. Questo processo può richiedere fino a 20 minuti. Quindi, in Grid Manager, verificare che la pagina dei nodi visualizzi uno stato normale (icona con un segno di spunta verde) image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
++
+image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+
+
+
+.Quali sono le prossime novità?
+La sostituzione del controller è completata. È possibile riprendere le normali operazioni.
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

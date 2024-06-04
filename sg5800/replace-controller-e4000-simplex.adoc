@@ -1,0 +1,391 @@
+---
+permalink: sg5800/replace-controller-e4000-simplex.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, storage node, storage appliance, Replacing, replace, e4000, controller, remove, removing, removal, install, installing, installation 
+summary: Potrebbe essere necessario sostituire il controller E4000 se non funziona in modo ottimale o se è guasto. 
+---
+= Sostituire la centralina E4000 (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire il controller E4000 se non funziona in modo ottimale o se è guasto.
+
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
+* Un controller sostitutivo con lo stesso numero di parte del controller che si sta sostituendo.
++
+
+NOTE: Non fare affidamento sulle istruzioni e-Series per sostituire un controller nell'appliance StorageGRID, perché le procedure non sono le stesse.
+
+* Un braccialetto antistatico o sono state prese precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al controller.
+* Autorizzazioni di accesso specifiche.
+* È necessario accedere a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* Accesso a Gestione sistema SANtricity:
++
+** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
+
+
+
+
+.A proposito di questa attività
+È possibile determinare se si dispone di un contenitore del controller guasto in due modi:
+
+* Un avviso di Grid Manager indica un guasto allo storage controller e il responsabile del ripristino (o il responsabile del sistema di SANtricity) indica la sostituzione del controller.
+* Il LED di attenzione ambra sul controller è acceso, a indicare che il controller è guasto.
+
+
+Il nodo di storage dell'appliance non sarà accessibile quando si sostituisce il controller. Se il controller della serie E4000 funziona a sufficienza, è possibile link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio SG5800 in modalità di manutenzione"].
+
+
+
+== Fase 1: Preparazione alla sostituzione del controller
+
+Preparare la sostituzione di un contenitore di controller salvando la chiave di sicurezza del disco, eseguendo il backup della configurazione e raccogliendo i dati di supporto. Quindi, è possibile interrompere le operazioni di i/o dell'host e spegnere lo shelf del controller.
+
+.Fasi
+. Se possibile, prendere nota della versione del software SANtricity OS attualmente installata sul controller. Aprire Gestione di sistema di SANtricity e selezionare *supporto › Centro di aggiornamento › Visualizza inventario software e firmware*.
+. Prendere nota della versione di NVSRAM attualmente installata.
+. Se la funzione Drive Security è attivata, assicurarsi che esista una chiave salvata e di conoscere la password richiesta per l'installazione.
++
+
+CAUTION: *Possibile perdita di accesso ai dati* — se tutte le unità nell'array di archiviazione sono abilitate per la protezione, il nuovo controller non sarà in grado di accedere all'array di archiviazione fino a quando non si sbloccano le unità protette utilizzando l'interfaccia CLI. Per ulteriori informazioni sull'interfaccia CLI, consultare la https://docs.netapp.com/us-en/e-series-cli/index.html["Documentazione di e-series"].
+
++
+Per salvare la chiave (potrebbe non essere possibile, a seconda dello stato del controller):
+
++
+.. Da Gestione di sistema di SANtricity, selezionare *Impostazioni › sistema*.
+.. In *Drive Security key management* (Gestione chiavi di sicurezza unità), selezionare *Backup Key* (chiave di backup).
+.. Nei campi *Definisci password/Inserisci nuova password*, immettere e confermare una password per questa copia di backup.
+.. Fare clic su *Backup*.
+.. Registrare le informazioni sulla chiave in una posizione sicura, quindi fare clic su *Chiudi*.
+
+
+. Eseguire il backup del database di configurazione dello storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... *Selezionare Support › Support Center › Diagnostics*.
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** In alternativa, è possibile eseguire il backup del database di configurazione utilizzando il seguente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. *Selezionare Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+
+
+== Passo 2: Mettere il controller offline
+
+Portare il controller fuori linea e verificare che tutte le operazioni siano state completate.
+
+.Fasi
+. Se l'appliance StorageGRID è in esecuzione in un sistema StorageGRID, link:../commonhardware/placing-appliance-into-maintenance-mode.html["mettete l'apparecchio in modalità di manutenzione"].
+. Se la centralina E4000 funziona in modo sufficiente per consentire un arresto controllato, verificare che tutte le operazioni siano state completate.
++
+.. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active (cache attiva) sul retro del controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
+
+.. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
+.. Confermare che tutte le operazioni sono state completate prima di passare alla fase successiva.
+
+
+. Spegnere entrambi gli interruttori di alimentazione sullo shelf del controller.
+. Attendere che tutti i LED sullo shelf del controller si spenga.
+
+
+
+
+== Fase 3: Rimuovere il contenitore della centralina E4000
+
+Rimuovere un filtro a carboni attivi della centralina E4000.
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla piastra centrale, quindi, con due mani, estrarre il contenitore della centralina dal telaio.
+. Posizionare il controller su una superficie piana e priva di scariche elettrostatiche con il coperchio rimovibile rivolto verso l'alto.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
+
+
+
+
+== Fase 4: Determinare le parti da trasferire alla centralina sostitutiva
+
+Il controller sostitutivo potrebbe essere fornito con componenti preinstallati. Determinare quali parti devono essere trasferite al contenitore della centralina di ricambio.
+
+. Posizionare il controller sostitutivo su una superficie piana e priva di elettricità statica con il coperchio rimovibile rivolto verso l'alto.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
+. Determinare se il controller sostitutivo contiene una batteria e/o DIMM. In caso contrario, reinstallare il coperchio del controller e passare a. <<step8_replace_controller,Fase 8: Sostituire la centralina>>. Altrimenti:
++
+** Se il controller sostitutivo non include una batteria o un modulo DIMM, passare a. <<step5_remove_battery,Fase 5: Rimuovere la batteria>>.
+** Se il controller sostitutivo include una batteria ma non un modulo DIMM, passare a. <<step6_remove_dimm,Fase 6: Spostare i DIMM>>.
+
+
+
+
+
+
+== Fase 5: Rimuovere la batteria
+
+Rimuovere la batteria dalla centralina danneggiata e installarla nella centralina di ricambio.
+
+.Fasi
+. Rimuovere la batteria dal contenitore della centralina:
++
+.. Premere il pulsante blu sul lato del contenitore della centralina.
+.. Far scorrere la batteria verso l'alto finché non si libera dalle staffe di supporto, quindi estrarre la batteria dal contenitore della centralina.
+.. Scollegare la spina della batteria premendo il fermaglio posto sulla parte anteriore della spina della batteria per sganciarla dalla presa, quindi scollegare il cavo della batteria dalla presa.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Rimuovere la batteria NVMEM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icona legenda 01]
+| Linguetta di rilascio della batteria 
+
+
+ a| 
+image::../media/legend_icon_02.png[icona legenda 02]
+| Connettore di alimentazione della batteria 
+|===
+
+
+. Spostare la batteria sul contenitore della centralina di ricambio:
++
+.. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera, ma non collegarla. Si collegherà quando gli altri componenti verranno spostati nel contenitore della centralina di ricambio.
+
+
+. Se il controller sostitutivo dispone di moduli DIMM preinstallati, passare a. <<step7_install_battery,Fase 7: Installare la batteria>>. In caso contrario, passare alla fase successiva.
+
+
+
+
+== Fase 6: Spostare i DIMM
+
+Rimuovere i moduli DIMM dal contenitore del controller danneggiato e installarli nel contenitore del controller sostitutivo.
+
+.Fasi
+. Individuare i moduli DIMM sul contenitore del controller.
++
+
+NOTE: Annotare la posizione del DIMM negli zoccoli in modo da poter inserire il DIMM nella stessa posizione nel contenitore del controller sostitutivo e con l'orientamento corretto.
+Rimuovere i moduli DIMM dal contenitore del controller danneggiato:
+
++
+.. Estrarre il modulo DIMM dal relativo slot spingendo lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo DIMM.
++
+Il DIMM ruota leggermente verso l'alto.
+
+.. Ruotare il modulo DIMM fino in fondo, quindi estrarlo dallo zoccolo.
++
+
+NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Rimuovere i moduli DIMM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icona legenda 01]
+| Schede di espulsione DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[icona legenda 02]
+| DIMM 
+|===
+
+
+. Verificare che la batteria non sia collegata al contenitore della centralina di ricambio.
+. Installare i DIMM nel controller sostitutivo nello stesso punto in cui si trovavano nel controller compromesso:
++
+.. Spingere con cautela, ma con decisione, il bordo superiore del DIMM fino a quando le linguette dell'espulsore non scattano in posizione sulle tacche alle estremità del DIMM.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+
+
+. Ripetere questa procedura per l'altro DIMM.
+. Se la centralina sostitutiva è dotata di una batteria preinstallata, passare a. <<step8_replace_controller,Fase 8: Sostituire la centralina>>. In caso contrario, passare alla fase successiva.
+
+
+
+
+== Fase 7: Installare la batteria
+
+Installare la batteria nel contenitore del controller di ricambio.
+
+.Fasi
+. Inserire nuovamente la spina batteria nella presa sul contenitore della centralina.
++
+Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.
+
+. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.
+. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
+. Rimontare il coperchio del contenitore della centralina e bloccarlo in posizione.
+
+
+
+
+== Fase 8: Sostituire la centralina
+
+Installare il controller sostitutivo e verificare che il nodo sia rientrato nella griglia.
+
+.Fasi
+. Installare il controller sostitutivo nell'appliance.
++
+.. Capovolgere il controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
+.. Con la maniglia della camma in posizione aperta, far scorrere il controller fino in fondo nell'apparecchio.
+.. Spostare la maniglia della camma verso sinistra per bloccare il controller in posizione.
+.. Sostituire i cavi.
+.. Alimentazione sullo shelf del controller.
+.. Attendere il riavvio del controller E4000.
+.. Determinare come assegnare un indirizzo IP al controller sostitutivo.
++
+
+NOTE: La procedura per l'assegnazione di un indirizzo IP al controller sostitutivo dipende dal fatto che la porta di gestione sia stata collegata a una rete con un server DHCP e che tutte le unità siano protette.
+
++
+Se la porta di gestione 1 è connessa a una rete con un server DHCP, il nuovo controller otterrà il proprio indirizzo IP dal server DHCP. Questo valore potrebbe essere diverso dall'indirizzo IP del controller originale.
+
+
+
+. Se lo storage array dispone di dischi sicuri, importare la chiave di sicurezza del disco; in caso contrario, passare alla fase successiva. Seguire la procedura appropriata riportata di seguito per un array di storage con tutti i dischi sicuri o una combinazione di dischi sicuri e non sicuri.
++
+
+NOTE: _Dischi non sicuri_ sono dischi non assegnati, dischi hot spare globali o dischi che fanno parte di un gruppo di volumi o di un pool non protetti dalla funzione Drive Security. Le unità sicure sono unità che fanno parte di un gruppo di volumi o pool di dischi protetti utilizzando Drive Security.
+
++
+** *Solo dischi protetti (non dischi non sicuri)*:
++
+... Accedere all'interfaccia a riga di comando (CLI) dello storage array. Per ulteriori informazioni sull'interfaccia CLI, consultare la https://docs.netapp.com/us-en/e-series-cli/index.html["Documentazione di e-series"].
+... Caricare l'NVSRAM simplex appropriato sul controller.
++
+Ad esempio: `download storageArray NVSRAM file=\"N4000-881834-SG4.dlp\" forceDownload=TRUE;`
+
+... Confermare che il controller sia *ottimale* dopo aver caricato NVSRAM simplex.
+... Se si utilizza la gestione esterna delle chiavi di protezione, https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["impostare la gestione esterna delle chiavi sul controller"].
+... Se si utilizza la gestione della chiave di protezione interna, immettere il seguente comando per importare la chiave di protezione:
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+dove:
+
++
+**** `C:/file.slk` rappresenta il percorso della directory e il nome della chiave di sicurezza del disco
+**** `passPhrase` È la password necessaria per sbloccare il file dopo l'importazione della chiave di sicurezza, il controller si riavvia e il nuovo controller adotta le impostazioni salvate per l'array di storage.
+
+
+... Passare alla fase successiva per verificare che il nuovo controller sia ottimale.
+
+
+** *Combinazione di dischi sicuri e non sicuri*:
++
+... Raccogliere il bundle di supporto e aprire il profilo dello storage array.
+... Individuare e registrare tutte le posizioni delle unità non sicure, che si trovano nel pacchetto di supporto.
+... Spegnere il sistema.
+... Rimuovere le unità non sicure.
+... Sostituire il controller.
+... Accendere il sistema e attendere che il display a sette segmenti visualizzi il numero del vassoio.
+... Da Gestione di sistema di SANtricity, selezionare *Impostazioni › sistema*.
+... Nella sezione Security Key Management (Gestione chiave di sicurezza), selezionare *Create/Change Key* (Crea/Cambia chiave) per creare una nuova chiave di sicurezza.
+... Selezionare *Unlock Secure Drives* per importare la chiave di sicurezza salvata.
+... Eseguire `set allDrives nativeState` Comando CLI.
+... Il controller si riavvia automaticamente.
+... Attendere che il controller si avvii e che il display a sette segmenti visualizzi il numero del vassoio o un L5 lampeggiante.
+... Spegnere il sistema.
+... Reinstallare le unità non sicure.
+... Ripristinare il controller utilizzando Gestione di sistema di SANtricity.
+... Accendere il sistema e attendere che il display a sette segmenti visualizzi il numero del vassoio.
+... Passare alla fase successiva per verificare che il nuovo controller sia ottimale.
+
+
+
+
+. Se durante questa procedura l'apparecchio è stato impostato in modalità di manutenzione, riportarlo in modalità di funzionamento normale. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare *Riavvia in StorageGRID*.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il controller in modalità di manutenzione]
+
+. Durante il riavvio, monitorare lo stato del nodo per determinare quando si è riconentrato nella griglia.
++
+L'apparecchio si riavvia e si ricongiunge alla griglia. Questo processo può richiedere fino a 20 minuti.
+
+. Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina Nodes (nodi) visualizzi uno stato normale (icona con segno di spunta verde) image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
++
+image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+
+. Da Gestore di sistema di SANtricity, verificare che il nuovo controller sia ottimale.
++
+.. Selezionare *hardware*.
+.. Per lo shelf del controller, selezionare *Mostra retro dello shelf*.
+.. Selezionare il contenitore del controller sostituito.
+.. Selezionare *Visualizza impostazioni*.
+.. Verificare che lo stato * del controller sia ottimale.
+.. Se lo stato non è ottimale, evidenziare il controller e selezionare *posiziona online*.
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

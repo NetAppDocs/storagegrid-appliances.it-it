@@ -68,6 +68,27 @@ CAUTION: *Rischio di scosse elettriche* -- prima di collegare i cavi di alimenta
 
 
 --
+.SG5800
+--
+.Prima di iniziare
+Entrambi gli interruttori di alimentazione dell'apparecchio devono essere spenti prima di collegare l'alimentazione.
+
+
+CAUTION: *Rischio di scosse elettriche* -- prima di collegare i cavi di alimentazione, assicurarsi che i due interruttori di alimentazione dell'apparecchio siano spenti.
+
+.Fasi
+. Verificare che i due interruttori di alimentazione dell'apparecchio siano spenti.
+. Collegare i due cavi di alimentazione all'apparecchio.
+. Collegare i due cavi di alimentazione a diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Accendere i due interruttori di alimentazione dell'apparecchio.
++
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione.
+** Le ventole sono molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
+
+
+
+
+--
 .SG6000
 --
 .Fasi
@@ -109,18 +130,49 @@ Non premere di nuovo il pulsante di alimentazione durante il processo di accensi
 --
 .SG6100
 --
+*SGF6112*:
+
 .Fasi
 . Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione dell'apparecchio.
 . Collegare questi due cavi di alimentazione a due diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
 . Se il pulsante di accensione sulla parte anteriore dell'apparecchio non è illuminato in blu, premerlo per accendere l'apparecchio.
+. Non premere di nuovo il pulsante di alimentazione durante il processo di accensione.
+. Il LED sull'alimentatore deve essere acceso in verde senza lampeggiare.
+. In caso di errori, correggere eventuali problemi.
+. Se rimosso, collegate il pannello anteriore all'apparecchio.
+
+
+*SG6160*:
+
+.Fasi
+. Verificare che entrambi i controller nello shelf dello storage controller siano disattivati.
++
+
+CAUTION: *Rischio di scosse elettriche* -- prima di collegare i cavi di alimentazione, assicurarsi che gli interruttori di alimentazione di ciascuno dei due controller storage siano spenti.
+
+. Se si dispone di shelf di espansione, verificare che entrambi gli interruttori di alimentazione IOM siano spenti.
++
+
+CAUTION: *Rischio di scosse elettriche* -- prima di collegare i cavi di alimentazione, assicurarsi che i due interruttori di alimentazione per ciascuno degli shelf di espansione siano spenti.
+
+. Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione del controller SG6100-CN.
+. Collegare questi due cavi di alimentazione a due diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione nello shelf dello storage controller.
+. Se si dispone di shelf di espansione, collegare un cavo di alimentazione a ciascuna delle due unità di alimentazione di ogni shelf di espansione.
+. Collegare i due cavi di alimentazione in ogni shelf di storage (inclusi gli shelf di espansione opzionali) a due diverse PDU nell'armadio o nel rack.
+. Se il pulsante di accensione sulla parte anteriore del controller SG6100-CN non è illuminato in blu, premere il pulsante per accendere il controller.
 +
 Non premere di nuovo il pulsante di alimentazione durante il processo di accensione.
 
+. Accendere i due interruttori di alimentazione sul retro dello shelf dello storage controller. Se si dispone di shelf di espansione, accendere i due interruttori di alimentazione per ogni shelf.
 +
-Il LED sull'alimentatore deve essere acceso in verde senza lampeggiare.
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione.
+** Le ventole dello shelf del controller di storage e gli shelf di espansione opzionali potrebbero essere molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
 
+
+. Dopo l'avvio dei componenti, verificare che il pulsante di accensione sulla parte anteriore del controller SG6100-CN sia acceso.
 . In caso di errori, correggere eventuali problemi.
-. Se rimosso, collegate il pannello anteriore all'apparecchio.
+. Collegare il frontalino alla centralina SG6100-CN, se rimossa.
 
 
 --

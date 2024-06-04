@@ -1,0 +1,93 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg5800.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, sg5812, sg5860, install, cabinet, rack, rails, drives 
+summary: 'Installare una serie di guide nell"armadietto o nel rack, quindi far scorrere l"apparecchio sulle guide. Se si dispone di un sistema SG5760, installare le unità dopo l"installazione dell"apparecchio.' 
+---
+= Installazione nell'armadietto o nel rack (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Installare una serie di guide nell'armadietto o nel rack, quindi far scorrere l'apparecchio sulle guide. Se si dispone di un SG5860, installare le unità dopo aver installato l'apparecchio.
+
+.Prima di iniziare
+* Hai esaminato il https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"^] documento incluso nella confezione e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Le istruzioni sono fornite con il kit di guide.
+
+
+
+
+== Installare SG5812
+
+Per installare un'appliance SG5812 in un rack o in un cabinet, procedere come segue.
+
+
+CAUTION: Per spostare in modo sicuro il SG5812 sono necessarie due persone o un sollevatore meccanizzato.
+
+
+CAUTION: Installare l'hardware dalla parte inferiore del rack, dell'armadio o del rack per evitare che l'apparecchiatura si ribalti.
+
+.Fasi
+. Seguire le istruzioni del kit di guide per installare le guide.
+. Posizionate il retro dell'apparecchio (l'estremità con i connettori) sulle guide.
+. Far scorrere con cautela l'apparecchio completamente all'interno del cabinet o del rack.
+. Fissare l'apparecchio all'armadietto o al rack come indicato nelle istruzioni del kit di guide.
+. Fissare il pannello anteriore.
+
+
+
+
+== Installare SG5860
+
+Per installare un'appliance SG5860 ed eventuali shelf di espansione in un rack o in un cabinet, procedere come segue.
+
+
+CAUTION: Installare l'hardware dalla parte inferiore del rack, dell'armadio o del rack per evitare che l'apparecchiatura si ribalti.
+
+
+CAUTION: Sono necessarie quattro persone o un sollevatore meccanizzato per spostare in sicurezza un SG5860 vuoto.
+
+
+CAUTION: Per evitare di danneggiare l'hardware, non spostare mai un SG5860 se le unità sono installate. Rimuovere tutti i dischi prima di spostare lo shelf.
+
+.Fasi
+. Seguire le istruzioni del kit di guide per installare le guide nel cabinet o nel rack.
+. Preparazione allo spostamento dell'apparecchio:
++
+.. Rimuovere la confezione esterna.
+.. Piegare verso il basso le alette della scatola interna.
+.. Se si solleva manualmente il SG5860, collegare le quattro maniglie ai lati del telaio.
++
+Rimuovete queste maniglie mentre fate scorrere l'apparecchio sulle guide.
+
+
+
+. Se il cabinet ha fori quadrati, installare i dadi della gabbia in modo da poter fissare la parte anteriore e posteriore del ripiano con le viti.
+. Posizionate il retro dell'apparecchio (l'estremità con i connettori) sulle guide.
+. Sostenendo l'apparecchio dalla parte inferiore, farlo scorrere nel rack o nell'armadietto.
++
+Utilizzare i fermi per pollice per staccare le maniglie mentre si fa scorrere l'apparecchio.
+
+. Fissare l'apparecchio alla parte anteriore del rack inserendo due viti nel primo e nel terzo foro (partendo dall'alto) su ciascun lato.
+. Fissare l'apparecchio alla parte posteriore del rack o dell'armadietto con le staffe.
+. Installare 12 dischi in ciascuno dei cinque cassetti.
++
+Per garantire il corretto funzionamento, è necessario installare tutti e 60 i dischi.
+
++
+.. Indossare il braccialetto ESD e rimuovere le unità dalla confezione.
+.. Rilasciare le leve sul cassetto superiore e far scorrere il cassetto verso l'esterno utilizzando le leve.
+.. Sollevare la maniglia dell'unità in verticale e allineare i pulsanti dell'unità con le tacche del cassetto.
++
+image::../media/appliance_drive_insertion.gif[Installare il disco nell'appliance da 60 dischi]
+
+.. Premendo delicatamente sulla parte superiore dell'unità, ruotare la maniglia verso il basso fino a quando l'unità non scatta in posizione.
+.. Dopo aver installato le prime 12 unità, far scorrere nuovamente il cassetto spingendo al centro e chiudendo delicatamente entrambe le leve.
+.. Ripetere questa procedura per gli altri quattro cassetti.
+
+
+. Inserire il frontalino, se presente.
+

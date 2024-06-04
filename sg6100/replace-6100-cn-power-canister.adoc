@@ -1,0 +1,146 @@
+---
+permalink: sg6100/replace-6100-cn-power-canister.html 
+sidebar: sidebar 
+keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
+summary: 'Sostituire uno shelf di controller da 60 dischi o uno shelf di dischi, che include due contenitori di alimentazione per la ridondanza dell"alimentazione.' 
+---
+= Sostituzione del contenitore di alimentazione in shelf o shelf di espansione dello storage controller (SG6160)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi sostituire un contenitore di alimentazione in uno shelf di storage controller SG6160 o in uno shelf di espansione (DE460C).
+
+.A proposito di questa attività
+Ogni shelf di controller da 60 dischi o shelf di dischi include due contenitori di alimentazione per la ridondanza dell'alimentazione. In caso di guasto di un contenitore di alimentazione, sostituirlo il prima possibile per assicurarsi che lo shelf disponga di una fonte di alimentazione ridondante.
+
+È possibile sostituire un contenitore di alimentazione mentre lo storage array è acceso ed esegue operazioni di i/o host, Finché il secondo contenitore di alimentazione nello shelf ha uno stato ottimale e il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione di sistema di SANtricity visualizza *Sì*.
+
+Durante l'esecuzione di questa attività, l'altro contenitore di alimentazione alimenta entrambe le ventole per garantire che l'apparecchiatura non si surriscaldi.
+
+.Prima di iniziare
+* Accedere alla scheda Gestore di sistema di SANtricity della pagina dei nodi per i nodi elencati nell'avviso che ha notificato il guasto del PSU. Utilizzando l'interfaccia utente di SANtricity presentata in questa scheda, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con il filtro a carboni attivi e selezionare *Ricontrolla* dal guru del ripristino per assicurarsi che non sia necessario risolvere prima altri elementi.
+* Controllare che il LED di attenzione ambra sul filtro a carboni attivi sia acceso, a indicare che il filtro a carboni attivi è guasto. Contattare il supporto tecnico per assistenza se entrambi i contenitori di alimentazione presenti nello shelf hanno i LED di attenzione color ambra accesi.
+* Assicurarsi di disporre di quanto segue:
++
+** Un contenitore di alimentazione sostitutivo supportato per il modello di shelf di controller o di dischi.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+
+
+
+
+
+
+== Fase 1: Preparazione alla sostituzione del contenitore di alimentazione
+
+Preparare la sostituzione di un contenitore di alimentazione in uno shelf di controller da 60 dischi o in uno shelf di dischi.
+
+.Fasi
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Da Gestore di sistema di SANtricity, determinare quale contenitore di alimentazione si è guastato.
++
+.. Selezionare *hardware*.
+.. Guarda la potenza image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] A destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta il contenitore di alimentazione guasto.
++
+In caso di guasto di un componente, questa icona è rossa.
+
+.. Quando trovi lo shelf con un'icona rossa, seleziona *Mostra retro dello shelf*.
+.. Selezionare il filtro a carboni attivi o l'icona di alimentazione rossa.
+.. Nella scheda *alimentatori*, controllare gli stati dei contenitori di alimentazione per determinare quale contenitore di alimentazione deve essere sostituito.
++
+Un componente con stato *Failed* deve essere sostituito.
+
++
+
+CAUTION: Se il secondo contenitore di alimentazione nello shelf non ha lo stato *ottimale*, non tentare di sostituire a caldo il contenitore di alimentazione guasto. Contattare invece il supporto tecnico per assistenza.
+
++
+
+NOTE: È inoltre possibile trovare informazioni sul contenitore di alimentazione guasto nell'area Details (Dettagli) del Recovery Guru, rivedere le informazioni visualizzate per lo shelf o consultare il registro eventi in Support (supporto) e Filter by Component Type (filtro per tipo di componente).
+
+
+
+. Dal retro dello storage array, osservare i LED di attenzione per individuare il contenitore di alimentazione da rimuovere.
++
+È necessario sostituire il filtro a carboni attivi con il LED attenzione acceso.
+
+
+
+
+
+== Fase 2: Rimuovere il contenitore di alimentazione guasto
+
+Rimuovere un contenitore di alimentazione guasto in modo da poterlo sostituire con uno nuovo.
+
+.Fasi
+. Protezione antistatica.
+. Disimballare il nuovo contenitore di alimentazione e riutilizzarlo su una superficie piana vicino allo scaffale.
++
+Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce il contenitore di alimentazione guasto.
+
+. Spegnere l'interruttore di alimentazione del contenitore di alimentazione da rimuovere.
+. Aprire il fermo del cavo di alimentazione del contenitore che si desidera rimuovere, quindi scollegare il cavo di alimentazione dal contenitore.
+. Premere il dispositivo di chiusura arancione sulla maniglia della camma del filtro a carboni attivi, quindi aprire la maniglia della camma per rilasciare completamente il filtro a carboni attivi dal piano intermedio.
+. Utilizzare la maniglia della camma per far scorrere il contenitore di alimentazione fuori dallo scaffale.
++
+
+CAUTION: Quando si rimuove un filtro a carboni attivi, utilizzare sempre due mani per sostenerne il peso.
+
+
+
+
+
+== Fase 3: Installare un nuovo filtro a carboni attivi
+
+Installare un nuovo filtro a carboni attivi per sostituire quello guasto.
+
+.Fasi
+. Assicurarsi che l'interruttore on/off del nuovo contenitore di alimentazione sia in posizione off.
+. Con entrambe le mani, sostenere e allineare i bordi del contenitore di alimentazione con l'apertura nel telaio del sistema, quindi spingere delicatamente il contenitore di alimentazione nel telaio utilizzando la maniglia della camma fino a bloccarlo in posizione.
++
+
+CAUTION: Non esercitare una forza eccessiva quando si fa scorrere il contenitore di alimentazione nel sistema per evitare di danneggiare il connettore.
+
+. Chiudere la maniglia della camma in modo che il dispositivo di chiusura scatti nella posizione di blocco e che il contenitore dell'alimentazione sia completamente inserito.
+. Ricollegare il cavo di alimentazione al contenitore di alimentazione e fissarlo al contenitore utilizzando il fermo del cavo di alimentazione.
+. Accendere il nuovo contenitore di alimentazione.
+
+
+
+
+== Fase 4: Sostituzione completa del filtro a carboni attivi
+
+Verificare che il nuovo power taniche funzioni correttamente, raccogliere i dati di supporto e riprendere le normali operazioni.
+
+.Fasi
+. Sul nuovo contenitore di alimentazione, verificare che il LED di alimentazione verde sia acceso e che il LED di attenzione ambra sia spento.
+. Dal guru del ripristino in Gestione sistema di SANtricity, selezionare *ricontrollare* per assicurarsi che il problema sia stato risolto.
+. Se viene ancora segnalato un guasto al contenitore di alimentazione, ripetere i passi descritti in <<Fase 2: Rimuovere il contenitore di alimentazione guasto>> e in <<Fase 3: Installare un nuovo filtro a carboni attivi>>. Se il problema persiste, contattare il supporto tecnico.
+. Rimuovere la protezione antistatica.
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+
+
+.Quali sono le prossime novità?
+La sostituzione del filtro a carboni attivi è stata completata. È possibile riprendere le normali operazioni.

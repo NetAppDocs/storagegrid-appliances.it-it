@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, power off, turn off, shut off, shutdown, shut down, power on, turn on, start 
 summary: 'È possibile spegnere l"apparecchio SGF6112 e riaccenderlo per eseguire la manutenzione.' 
 ---
-= Spegnere e riaccendere l'apparecchio SGF6112
+= Spegnere e riaccendere l'apparecchio SGF6112 o il controller SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile spegnere l'apparecchio SGF6112 e riaccenderlo per eseguire la manutenzione.
+È possibile spegnere l'appliance SGF6112 o il controller SG6100-CN e riaccenderli per eseguire la manutenzione.
 
 
 
-== Spegnere l'appliance SGF6112
+== Spegnere l'apparecchio SGF6112 o il controller SG6100-CN
 
 Spegnere l'appliance per eseguire la manutenzione dell'hardware.
 
@@ -61,7 +61,7 @@ Il completamento di questo comando potrebbe richiedere fino a 10 minuti.
 
 
 
-== Accendere SGF6112 e verificarne il funzionamento
+== Accendere SGF6112 o SG6100-CN e verificare il funzionamento
 
 Accendere il controller dopo aver completato la manutenzione.
 
@@ -71,14 +71,13 @@ Accendere il controller dopo aver completato la manutenzione.
 
 
 .Fasi
-. Accendere l'apparecchio.
+. Accendere l'apparecchio:
++
+** Opzione 1: Premere l'interruttore di alimentazione sulla parte anteriore del controller.
 +
 Potrebbe essere necessario rimuovere il pannello per accedere all'interruttore di alimentazione; in tal caso, ricordarsi di reinstallarlo in seguito.
 
-. Monitorare i LED del controller e i codici di avvio utilizzando uno dei seguenti metodi:
-+
-** Premere l'interruttore di alimentazione sulla parte anteriore del controller.
-** Utilizzare l'interfaccia BMC del controller:
+** Opzione 2: Utilizzare l'interfaccia BMC del controller:
 +
 ... link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC del controller"].
 ... Selezionare *Power Control*.

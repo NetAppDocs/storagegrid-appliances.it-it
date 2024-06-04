@@ -15,7 +15,7 @@ Il processo di clonazione potrebbe richiedere diversi giorni per trasferire i da
 
 .Prima di iniziare
 * L'appliance di destinazione compatibile è stata installata in un cabinet o rack, sono stati collegati tutti i cavi e l'alimentazione è stata applicata.
-* È stato verificato che la versione del programma di installazione dell'appliance StorageGRID sul dispositivo sostitutivo corrisponda alla versione software del sistema StorageGRID, aggiornando e scaricando il firmware del programma di installazione dell'appliance StorageGRID, se necessario.
+* È stato verificato che la versione del programma di installazione dell'appliance StorageGRID sul dispositivo sostitutivo corrisponde alla versione software del sistema StorageGRID, se necessario, aggiornando o effettuando il downgrade del firmware del programma di installazione dell'appliance StorageGRID.
 * L'appliance di destinazione è stata configurata, inclusa la configurazione delle connessioni StorageGRID, di Gestore di sistema SANtricity (solo appliance di storage) e dell'interfaccia BMC.
 +
 ** Quando si configurano le connessioni StorageGRID, utilizzare gli indirizzi IP temporanei.

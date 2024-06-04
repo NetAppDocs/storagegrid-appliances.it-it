@@ -1,0 +1,273 @@
+---
+permalink: sg6100/replace-battery-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Sostituzione della batteria nello shelf del controller di archiviazione (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario sostituire la batteria interessata nel controller E4000 se il guru del ripristino in Gestione sistema SANtricity indica lo stato "batteria guasta" o "Sostituzione batteria richiesta". Per proteggere i dati, la batteria deve essere sostituita il prima possibile.
+
+Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una batteria e per assicurarsi che non siano prima necessari altri elementi da risolvere.
+
+.Prima di iniziare
+Se si intende sostituire una batteria guasta, è necessario disporre di:
+
+* Una batteria sostitutiva.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Accesso a Gestione sistema SANtricity:
++
+** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
+
+
+* Verificare che non siano in uso volumi o che su tutti gli host che utilizzano questi volumi sia installato un driver multipath.
+
+
+
+
+== Fase 1: Preparazione alla sostituzione della batteria
+
+È necessario mettere il controller interessato fuori linea in modo da poter rimuovere in sicurezza la batteria guasta. Il controller che non si sta mettendo offline deve essere in linea (nello stato ottimale).
+
+.Fasi
+. Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una batteria e per assicurarsi che non siano prima necessari altri elementi da risolvere.
+. Dall'area Details (Dettagli) del Recovery Guru, determinare quale batteria sostituire.
+. Eseguire il backup del database di configurazione dello storage array utilizzando SANtricity System Manager.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare *Support › Support Center › Diagnostics*.
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** In alternativa, è possibile eseguire il backup del database di configurazione utilizzando il seguente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
+. Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome support-data.7z.
+
+
+
+. Se il controller non è già offline, portalo offline usando Gestione di sistema di SANtricity.
++
+** Da Gestore di sistema di SANtricity:
++
+... Selezionare *hardware*.
+... Se la figura mostra i dischi, selezionare *Mostra retro dello shelf* per visualizzare i controller.
+... Selezionare il controller che si desidera mettere offline.
+... Dal menu di scelta rapida, selezionare *posiziona offline* e confermare che si desidera eseguire l'operazione.
++
+
+NOTE: Se si accede a Gestore di sistema di SANtricity utilizzando il controller che si sta tentando di mettere offline, viene visualizzato il messaggio Gestione di sistema di SANtricity non disponibile. Selezionare *connessione a una connessione di rete alternativa* per accedere automaticamente a Gestione di sistema SANtricity utilizzando l'altro controller.
+
+
+
+** In alternativa, è possibile disattivare i controller utilizzando i seguenti comandi CLI:
++
+*Per il controller A*: `set controller [a] availability=offline`
+
++
+*Per la centralina B*: `set controller [b] availability=offline`
+
+
+
+. Attendere che Gestione di sistema di SANtricity aggiorni lo stato del controller su offline.
+. Selezionare *Riconnetti* dal Recovery Guru e confermare che il campo *OK per rimuovere* nell'area *Dettagli* sia *Sì*. Ciò indica che è sicuro procedere alla rimozione del contenitore della centralina.
+
+
+
+
+== Fase 2: Rimuovere il contenitore della centralina E4000
+
+È necessario rimuovere il contenitore del controller dallo shelf del controller, in modo da poter rimuovere la batteria.
+
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+
+
+.Fasi
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Se le porte host sul contenitore del controller utilizzano ricetrasmettitori SFP+, lasciarli installati.
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
+. Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla scheda di collegamento interna, quindi, con due mani, estrarre il contenitore della centralina a metà del telaio.
+
+
+
+
+== Fase 3: Installare la nuova batteria
+
+È necessario rimuovere la batteria guasta e sostituirla.
+
+.Fasi
+. Disimballare la nuova batteria e collocarla su una superficie piana e priva di elettricità statica.
++
+
+NOTE: Per rispettare le normative IATA in materia di sicurezza, le batterie sostitutive vengono spedite con uno stato di carica (SoC) pari o inferiore al 30%. Quando si riattiva l'alimentazione, tenere presente che il caching in scrittura non viene ripristinato fino a quando la batteria sostitutiva non viene completamente caricata e non viene completato il ciclo di apprendimento iniziale.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il contenitore della centralina dal telaio.
+. Capovolgere il contenitore della centralina e collocarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Aprire il coperchio del modulo controller.]
+
+. Individuare la batteria nel contenitore della centralina.
+. Rimuovere la batteria guasta dal contenitore della centralina:
++
+.. Premere il pulsante blu sul lato del contenitore della centralina.
+.. Far scorrere la batteria verso l'alto finché non si libera dalle staffe di supporto, quindi estrarre la batteria dal contenitore della centralina.
+.. Scollegare la batteria dal contenitore della centralina.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Rimuovere la batteria NVMEM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icona legenda 01]
+| Linguetta di rilascio della batteria 
+
+
+ a| 
+image::../media/legend_icon_02.png[icona legenda 02]
+| Connettore di alimentazione della batteria 
+|===
+
+
+. Rimuovere la batteria sostitutiva dalla confezione. Installare la batteria sostitutiva:
++
+.. Inserire nuovamente la spina batteria nella presa sul contenitore della centralina.
++
+Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.
+
+.. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.
+.. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
+
+
+. Rimontare il coperchio del contenitore della centralina e bloccarlo in posizione.
+
+
+
+
+== Fase 4: Reinstallare il contenitore del controller
+
+Dopo aver sostituito i componenti nel contenitore della centralina, reinstallarlo nel telaio.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Se non è già stato fatto, sostituire il coperchio sul contenitore della centralina.
+. Capovolgere il contenitore della centralina e allineare l'estremità con l'apertura nel telaio.
+. Allineare l'estremità del contenitore della centralina con l'apertura nel telaio, quindi spingere delicatamente il contenitore della centralina a metà corsa nel sistema.
++
+
+NOTE: Non inserire completamente il contenitore della centralina nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
+. Completare la reinstallazione del contenitore della centralina:
++
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il contenitore del controller fino a quando non raggiunge la parte interna e non è completamente insediato, quindi chiudere la maniglia della camma in posizione bloccata.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il contenitore della centralina nel telaio per evitare di danneggiare i connettori.
+
++
+Il controller inizia ad avviarsi non appena viene inserito nello chassis.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+
+
+
+
+
+
+== Fase 5: Completare la sostituzione della batteria
+
+Posizionare il controller online.
+
+.Fasi
+. Portare il controller online utilizzando Gestione di sistema di SANtricity.
++
+** Da Gestore di sistema di SANtricity:
++
+... Selezionare *hardware*.
+... Se la figura mostra i dischi, selezionare *Mostra retro dello shelf*.
+... Selezionare il controller che si desidera mettere in linea.
+... Selezionare *Place Online* (Esegui online) dal menu di scelta rapida e confermare che si desidera eseguire l'operazione.
++
+Il sistema mette il controller in linea.
+
+
+
+** In alternativa, è possibile ripristinare il controller online utilizzando i seguenti comandi CLI:
++
+*Per il controller A*: `set controller [a] availability=online`;
+
++
+*Per la centralina B*: `set controller [b] availability=online`;
+
+
+
+. Quando il controller è di nuovo in linea, controllare i LED di attenzione dello shelf del controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che la batteria e il contenitore del controller siano installati correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller e la batteria.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+Se necessario, raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
+
+. Verificare che tutti i volumi siano stati restituiti al proprietario preferito.
++
+.. Selezionare *archiviazione › volumi*. Dalla pagina *tutti i volumi*, verificare che i volumi siano distribuiti ai proprietari preferiti. Selezionare *Altro › Cambia proprietà* per visualizzare i proprietari di volumi.
+.. Se tutti i volumi sono di proprietà del proprietario preferito, passare al punto 4.
+.. Se nessuno dei volumi viene restituito, è necessario restituire manualmente i volumi. Vai a *More › redistribuisci volumi*.
+.. Se solo alcuni dei volumi vengono restituiti ai proprietari preferiti dopo la distribuzione automatica o manuale, è necessario controllare il Recovery Guru per verificare la presenza di problemi di connettività host.
+.. Se non è presente Recovery Guru o se, dopo aver seguito i passaggi del Recovery Guru, i volumi non vengono ancora restituiti ai proprietari preferiti, contattare l'assistenza.
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare Raccogli dati di supporto.
+.. Fare clic su Collect.
++
+Il file viene salvato nella cartella Download del browser con il nome support-data.7z.
+
+
+
+
+
+.Quali sono le prossime novità?
+La sostituzione della batteria è completata. È possibile riprendere le normali operazioni.

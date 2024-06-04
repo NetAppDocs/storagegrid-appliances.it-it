@@ -34,7 +34,7 @@ A seconda dei tipi di appliance da configurare, potrebbe essere necessaria una c
 
 === Gestore di sistema di SANtricity
 
-Per SG6000 e SG5700, è possibile configurare Gestore di sistema di SANtricity. Il software SANtricity viene utilizzato per monitorare l'hardware di queste appliance.
+Per i modelli SG6160, SG6000, SG5800 e SG5700, è possibile configurare Gestione di sistema di SANtricity. Il software SANtricity viene utilizzato per monitorare l'hardware di queste appliance.
 
 
 
@@ -56,9 +56,9 @@ Le seguenti appliance dispongono di un'interfaccia BMC che deve essere configura
 
 * Appliance di storage
 +
-** Configurare Gestione di sistema SANtricity (SG5700 e SG6000) il software che verrà utilizzato per monitorare l'hardware
+** Configurare Gestione di sistema di SANtricity (SG5700, SG5800, SG6000 e SG6100) il software che verrà utilizzato per monitorare l'hardware
 ** Modificare la modalità RAID
-** Accedere all'interfaccia BMC per il controller SG6000-CN
+** Accedere all'interfaccia BMC per il controller SG6000-CN o SG6100-CN
 
 
 * Appliance di servizi

@@ -1,0 +1,254 @@
+---
+permalink: sg5800/replace-battery-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Sostituire la batteria in E4000 (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se il gestore di rete invia un avviso in caso di guasto della batteria del controller di storage, devi sostituire la batteria interessata nel controller E4000 o se il guru del ripristino in Gestione di sistema di SANtricity indica lo stato "batteria guasta" o "Sostituzione batteria richiesta". Per proteggere i dati, la batteria deve essere sostituita il prima possibile.
+
+Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una batteria e per assicurarsi che non siano prima necessari altri elementi da risolvere.
+
+.Prima di iniziare
+Se si intende sostituire una batteria guasta, è necessario disporre di:
+
+* Una batteria sostitutiva.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Accesso a Gestione sistema SANtricity:
++
+** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
+
+
+
+
+
+
+== Fase 1: Preparazione alla sostituzione della batteria
+
+Spegnere il ripiano del controller in modo da poter rimuovere in sicurezza la batteria guasta.
+
+.Fasi
+. Eseguire il backup del database di configurazione dello storage array utilizzando SANtricity System Manager.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare *Support › Support Center › Diagnostics*.
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** In alternativa, è possibile eseguire il backup del database di configurazione utilizzando il seguente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Spegnere il controller SG5800.
++
+.. Accedere al nodo Grid:
++
+... Immettere il seguente comando: `ssh admin@grid_node_IP`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Arrestare il controller SG5800:
++
+*`shutdown -h now`*
+
+.. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active sul retro del controller E4000 è acceso quando i dati memorizzati nella cache devono essere scritti sulle unità. Attendere che il LED si spenga.
+
+
+
+. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
+. Confermare che tutte le operazioni sono state completate prima di passare alla fase successiva.
+. Spegnere entrambi gli interruttori di alimentazione sullo shelf del controller.
+. Attendere che tutti i LED sullo shelf del controller si spenga.
+
+
+
+
+== Fase 2: Rimuovere il contenitore della centralina E4000
+
+È necessario rimuovere il contenitore del controller dallo shelf del controller, in modo da poter rimuovere la batteria.
+
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+
+
+.Fasi
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Se le porte host sul contenitore del controller utilizzano ricetrasmettitori SFP+, lasciarli installati.
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
+. Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla scheda di collegamento interna, quindi, con due mani, estrarre il contenitore della centralina a metà del telaio.
+
+
+
+
+== Fase 3: Installare la nuova batteria
+
+È necessario rimuovere la batteria guasta e sostituirla.
+
+.Fasi
+. Disimballare la nuova batteria e collocarla su una superficie piana e priva di elettricità statica.
++
+
+NOTE: Per rispettare le normative IATA in materia di sicurezza, le batterie sostitutive vengono spedite con uno stato di carica (SoC) pari o inferiore al 30%. Quando si riattiva l'alimentazione, tenere presente che il caching in scrittura non viene ripristinato fino a quando la batteria sostitutiva non viene completamente caricata e non viene completato il ciclo di apprendimento iniziale.
+
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere il contenitore della centralina dal telaio.
+. Capovolgere il contenitore della centralina e collocarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Aprire il coperchio del modulo controller.]
+
+. Individuare la batteria nel contenitore della centralina.
+. Rimuovere la batteria guasta dal contenitore della centralina:
++
+.. Premere il pulsante blu sul lato del contenitore della centralina.
+.. Far scorrere la batteria verso l'alto finché non si libera dalle staffe di supporto, quindi estrarre la batteria dal contenitore della centralina.
+.. Scollegare la batteria dal contenitore della centralina.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Rimuovere la batteria NVMEM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[icona legenda 01]
+| Linguetta di rilascio della batteria 
+
+
+ a| 
+image::../media/legend_icon_02.png[icona legenda 02]
+| Connettore di alimentazione della batteria 
+|===
+
+
+. Rimuovere la batteria sostitutiva dalla confezione. Installare la batteria sostitutiva:
++
+.. Inserire nuovamente la spina batteria nella presa sul contenitore della centralina.
++
+Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda madre.
+
+.. Allineare la batteria alle staffe di supporto sulla parete laterale in lamiera.
+.. Far scorrere la batteria verso il basso fino a quando il dispositivo di chiusura della batteria non si aggancia e scatta nell'apertura sulla parete laterale.
+
+
+. Rimontare il coperchio del contenitore della centralina e bloccarlo in posizione.
+
+
+
+
+== Fase 4: Reinstallare il contenitore del controller
+
+Dopo aver sostituito i componenti nel contenitore della centralina, reinstallarlo nel telaio.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Se non è già stato fatto, sostituire il coperchio sul contenitore della centralina.
+. Capovolgere il contenitore della centralina e allineare l'estremità con l'apertura nel telaio.
+. Allineare l'estremità del contenitore della centralina con l'apertura nel telaio, quindi spingere delicatamente il contenitore della centralina a metà corsa nel sistema.
++
+
+NOTE: Non inserire completamente il contenitore della centralina nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
+. Completare la reinstallazione del contenitore della centralina:
++
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il contenitore del controller fino a quando non raggiunge la parte interna e non è completamente insediato, quindi chiudere la maniglia della camma in posizione bloccata.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il contenitore della centralina nel telaio per evitare di danneggiare i connettori.
+
++
+Il controller inizia ad avviarsi non appena viene inserito nello chassis.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+
+
+
+
+
+
+== Fase 5: Completare la sostituzione della batteria
+
+Accendere il controller.
+
+.Fasi
+. Accendere i due interruttori di alimentazione sul retro dello shelf del controller.
++
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione, che in genere richiede 90 secondi o meno.
+** Le ventole di ogni shelf sono molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
+
+
+. Quando il controller è di nuovo in linea, controllare i LED di attenzione dello shelf del controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che la batteria e il contenitore del controller siano installati correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller e la batteria.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+Se necessario, raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare Raccogli dati di supporto.
+.. Fare clic su Collect.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina *nodi* visualizzi uno stato normale (segno di spunta verde a sinistra del nome del nodo) per il nodo dell'appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
++
+
+NOTE: Potrebbero essere necessari 20 minuti dall'accensione degli interruttori di alimentazione a quando il nodo si ricongiunge alla griglia e visualizza uno stato normale in Grid Manager."
+
+
+
+.Quali sono le prossime novità?
+La sostituzione della batteria è completata. È possibile riprendere le normali operazioni.

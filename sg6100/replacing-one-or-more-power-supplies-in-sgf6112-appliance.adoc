@@ -2,16 +2,16 @@
 permalink: sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, sgf6112, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
-summary: 'Le appliance della serie SG6100 sono dotate di due alimentatori per la ridondanza. Se uno degli alimentatori si guasta, è necessario sostituirlo il prima possibile per assicurarsi che l"apparecchio disponga di un"alimentazione ridondante. Entrambi gli alimentatori che funzionano nell"apparecchio devono essere dello stesso modello e dello stesso wattaggio.' 
+summary: 'L"appliance SGF6112 e il nodo di calcolo SG6100-CN dispongono di due alimentatori per la ridondanza. Se uno degli alimentatori si guasta, è necessario sostituirlo il prima possibile per assicurarsi che l"apparecchio disponga di un"alimentazione ridondante. Entrambi gli alimentatori che funzionano nell"apparecchio devono essere dello stesso modello e dello stesso wattaggio.' 
 ---
-= Sostituire uno o entrambi gli alimentatori del SGF6112
+= Sostituire uno o entrambi gli alimentatori del SGF6112 o del SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-L'appliance SGF6112 dispone di due alimentatori per la ridondanza. Se uno degli alimentatori si guasta, è necessario sostituirlo il prima possibile per assicurarsi che l'apparecchio disponga di un'alimentazione ridondante. Entrambi gli alimentatori che funzionano nell'apparecchio devono essere dello stesso modello e dello stesso wattaggio.
+L'appliance SGF6112 e il nodo di calcolo SG6100-CN dispongono di due alimentatori per la ridondanza. Se uno degli alimentatori si guasta, è necessario sostituirlo il prima possibile per assicurarsi che l'apparecchio disponga di un'alimentazione ridondante. Entrambi gli alimentatori che funzionano nell'apparecchio devono essere dello stesso modello e dello stesso wattaggio.
 
 .Prima di iniziare
 * Lo hai fatto link:locating-sgf6112-in-data-center.html["posizionato fisicamente l'apparecchio"] con l'alimentatore da sostituire.
@@ -30,9 +30,9 @@ L'appliance SGF6112 dispone di due alimentatori per la ridondanza. Se uno degli 
 
 
 .A proposito di questa attività
-La figura mostra le due unità di alimentazione per SGF6112. Gli alimentatori sono accessibili dal retro dell'apparecchio.
+La figura mostra le due unità di alimentazione per l'appliance SGF6112 o il nodo di calcolo SG6100-CN. Gli alimentatori sono accessibili dal retro dell'apparecchio.
 
-image::../media/sgf6112_power_supplies.png[Retro di SGF6112 con due alimentatori]
+image::../media/sgf6112_power_supplies.png[Retro di SGF6112 o SG6100-CN con due alimentatori]
 
 .Fasi
 . Se si sostituisce un solo alimentatore, non è necessario spegnere l'apparecchio. Accedere alla <<Unplug_the_power_cord,Scollegare il cavo di alimentazione>> fase. Se si stanno sostituendo entrambi gli alimentatori contemporaneamente, prima di scollegare i cavi di alimentazione procedere come segue:
@@ -40,7 +40,7 @@ image::../media/sgf6112_power_supplies.png[Retro di SGF6112 con due alimentatori
 .. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Spegnere l'apparecchio"].
 +
 
-CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto e si stanno sostituendo entrambi gli alimentatori contemporaneamente, è necessario sostituire gli alimentatori durante una finestra di manutenzione programmata. In caso contrario, è possibile che l'accesso a tali oggetti venga temporaneamente perso durante questa procedura. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto e si stanno sostituendo entrambi gli alimentatori contemporaneamente, è necessario sostituire gli alimentatori durante una finestra di manutenzione programmata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
 
 
 

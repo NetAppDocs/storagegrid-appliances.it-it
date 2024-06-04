@@ -326,7 +326,7 @@ Porte di espansione del disco
  a| 
 SAS 12 GB/s.
  a| 
-Non utilizzato. Le appliance StorageGRID non supportano shelf di dischi di espansione.
+Non utilizzato.
 
 
 
@@ -421,7 +421,7 @@ Ethernet da 1 GB (RJ-45)
 * Opzioni porta 1:
 +
 ** Connettersi a una rete di gestione per abilitare l'accesso TCP/IP diretto a Gestione di sistema SANtricity
-** Lasciare scollegato per salvare la porta e l'indirizzo IP dello switch.  Accedere a Gestore di sistema SANtricity utilizzando le interfacce utente del programma di installazione di Grid Manager o Storage Grid Appliance.
+** Lasciare scollegato per salvare la porta e l'indirizzo IP dello switch.  Accedere a Gestore di sistema di SANtricity utilizzando il gestore di griglie o il programma di installazione del dispositivo di griglia di archiviazione.
 
 
 

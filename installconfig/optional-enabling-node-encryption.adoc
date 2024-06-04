@@ -91,7 +91,14 @@ NOTE: Le appliance vengono inizialmente configurate con una chiave di crittograf
 
 == Crittografia dischi
 
-La crittografia del disco viene gestita sull'hardware del disco con crittografia automatica (SED) durante i processi di scrittura e lettura. L'accesso ai dati su queste unità è controllato da una passphrase definita dall'utente. La crittografia del disco è usata per i dischi a stato solido (SSD) a collegamento diretto che sono utilizzati per il caching nelle appliance StorageGRID.
+La crittografia del disco viene gestita sull'hardware del disco con crittografia automatica (SED) durante i processi di scrittura e lettura. L'accesso ai dati su queste unità è controllato da una passphrase definita dall'utente.
+
+La crittografia dell'unità può essere utilizzata per qualsiasi unità SSD SED installata in un'unità SG100, SG1000, SG110, SG1100, SGF6112, o SG6100-CN nodo di calcolo o controller.
+
+* Per le appliance per i servizi, gli SSD sono i dischi root del nodo.
+* In un controller SG6100-CN, gli SSD vengono utilizzati per il caching.
+* In un sistema SGF6112, gli SSD sono i dischi root del nodo e vengono utilizzati per lo storage primario dei dati degli oggetti.
+
 
 I SED crittografati si bloccano automaticamente quando l'appliance viene spenta o quando l'unità viene rimossa dall'appliance. Un SED crittografato rimane bloccato dopo il ripristino dell'alimentazione fino all'immissione della passphrase corretta. Per consentire l'accesso ai dischi senza reinserire manualmente la passphrase, la passphrase viene memorizzata nell'appliance StorageGRID per sbloccare i dischi crittografati che rimangono nell'appliance al riavvio dell'appliance. Le unità crittografate con una passphrase SED sono accessibili a chiunque conosca la passphrase.
 

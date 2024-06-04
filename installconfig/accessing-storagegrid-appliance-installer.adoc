@@ -74,9 +74,19 @@ NOTE: Se non è stato possibile assegnare un indirizzo IP utilizzando DHCP, vien
 
 
 --
+.SG5800
+--
+image::../media/sg5800_admin_network_port.png[Porta di rete Admin sul controller SG5800]
+
+--
 .SG6000-CN
 --
 image::../media/sg6000_cn_admin_network_port.png[Admin Network port sul controller SG6000-CN]
+
+--
+.SG6100-CN
+--
+image::../media/sg6100_cn_admin_network_port.png[Admin Network port sul controller SG6000-CN]
 
 --
 .SGF6112
@@ -143,11 +153,25 @@ Collegare il laptop di servizio alla porta di gestione 2 del controller E5700SG,
 image::../media/e5700sg_mgmt_port_2.gif[Posizione della porta di gestione 2 sul controller E5700SG]
 
 --
+.SG5800
+--
+Collegare il laptop di assistenza alla porta di gestione 1 sul controller SG5800, utilizzando un cavo Ethernet.
+
+image::../media/sg5800_mgmt_port.png[Posizione della porta di gestione 1 sul controller SG5800]
+
+--
 .SG6000-CN
 --
 Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra del controller SG6000-CN utilizzando un cavo Ethernet.
 
 image::../media/sg6000_cn_link_local_port.png[Posizione della porta di gestione per SG6000-CN]
+
+--
+.SG6100-CN
+--
+Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra del controller SG6100-CN, utilizzando un cavo Ethernet.
+
+image::../media/sg6100_cn_link_local_port.png[Ubicazione della porta di gestione per SG6100-CN]
 
 --
 .SGF6112

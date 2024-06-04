@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sgf6112 
 summary: 'In caso di dubbi sul componente hardware da sostituire nell"appliance, completare questa procedura per identificare il componente e la posizione dell"appliance nel data center.' 
 ---
-= Verificare il componente da sostituire in SGF6112
+= Verificare il componente da sostituire in SGF6112 o SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

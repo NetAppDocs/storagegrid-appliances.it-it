@@ -166,6 +166,80 @@ image::../media/fc_cable_and_sfp.gif[Cavi ottici e SFP]
 
 
 --
+.SG5800
+--
+* *Hardware*
++
+Appliance SG5812 con 12 dischi installati::
++
+--
+image::../media/de212c_table_size.gif[Appliance SG5812 2U]
+
+--
+Appliance SG5860 senza dischi installati::
++
+--
+image::../media/de460c_table_size.gif[Appliance SG5860 4U]
+
+--
+Pannello anteriore dell'apparecchio::
++
+--
+image::../media/sg5700_front_bezels.gif[Cornici di SG5812 e SG5860]
+
+
+NOTE: Le cornici potrebbero avere un aspetto diverso.
+
+--
+Kit di guide con istruzioni::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+SG5860: Sessanta dischi NL-SAS::
++
+--
+image::../media/sg5760_drive.gif[Disco]
+
+--
+SG5860: Maniglie::
++
+--
+image::../media/handles.gif[SG5860 maniglie]
+
+--
+SG5860: Staffe posteriori e dadi a gabbia per l'installazione su rack a foro quadrato::
++
+--
+image::../media/back_brackets_table_size.gif[Staffe posteriori e dadi a gabbia per SG5860]
+
+--
+
+
+* *Cavi e connettori*
++
+
+TIP: Il cabinet potrebbe essere dotato di cavi di alimentazione speciali utilizzati al posto dei cavi di alimentazione forniti con l'apparecchio.
+
++
+Due cavi di alimentazione per il tuo paese::
++
+--
+image::../media/power_cords.gif[Cavi di alimentazione]
+
+--
+Due cavi 25GbE SFP28 per l'interconnessione del controller (iSCSI)::
++
+--
+image::../media/sg5800_25gbe_sfp28_cable.png[25GbE SFP28 cavi]
+
+--
+
+
+
+
+--
 .SG6000
 --
 * *Hardware SG6060*
@@ -323,7 +397,108 @@ image::../media/sas_cable.gif[Cavi SAS]
 --
 .SG6100
 --
-* *Hardware*
+* *Hardware SG6160*
++
+Centralina SG6100-CN::
++
+--
+image::../media/sg6000_cn_front_without_bezel.gif[Centralina SG6100-CN]
+
+--
+Shelf del controller E4000 senza dischi installati::
++
+--
+image::../media/de460c_table_size.gif[Appliance SG5860 4U]
+
+--
+Due cornici anteriori::
++
+--
+image::../media/sg6000_front_bezels_for_table.gif[Cornici anteriori]
+
+
+NOTE: Le cornici potrebbero avere un aspetto diverso.
+
+--
+Due kit di guide con istruzioni::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+Dischi NL-SAS da 60 TB::
++
+--
+image::../media/sg5760_drive.gif[Disco]
+
+--
+Quattro maniglie::
++
+--
+image::../media/handles.gif[SG5860 maniglie]
+
+--
+Staffe posteriori e dadi a gabbia per l'installazione in rack a foro quadrato::
++
+--
+image::../media/back_brackets_table_size.gif[Staffe posteriori e dadi a gabbia per SG5860]
+
+--
+Un cavo di interconnessione breakout da 100 GbE a 4x25GbE::
++
+--
+image::../media/sg6100_4x25gbe_spf28_cable.png[Cavo breakout da 100 GbE a 4x25GbE]
+
+--
+Quattro cavi di alimentazione per il tuo paese::
++
+--
+image::../media/power_cords.gif[Cavi di alimentazione]
+
+--
+
+
+* *SG6160 ripiano di espansione*
++
+Shelf di espansione senza dischi installati::
++
+--
+image::../media/de460c_table_size.gif[Appliance SG5860 4U]
+
+--
+Pannello anteriore::
++
+--
+image::../media/front_bezel_for_table_de460c.gif[Pannello anteriore DE460C]
+
+--
+Dischi NL-SAS da 60 TB::
++
+--
+image::../media/sg5760_drive.gif[Disco]
+
+--
+Un kit di guide con istruzioni::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+Quattro maniglie::
++
+--
+image::../media/handles.gif[SG5860 maniglie]
+
+--
+Staffe posteriori e dadi a gabbia per l'installazione in rack a foro quadrato::
++
+--
+image::../media/back_brackets_table_size.gif[Staffe posteriori e dadi a gabbia per SG5860]
+
+--
+
+
+* *Hardware SGF6112*
 +
 SGF6112::
 +

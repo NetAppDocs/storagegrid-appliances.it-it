@@ -1,0 +1,56 @@
+---
+permalink: sg5800/replace-drive-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Prima di sostituire un"unità E4000, esaminare i requisiti e le considerazioni.' 
+---
+= Sostituire la panoramica dell'unità SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire un'unità in un SG5812 o SG5860, rivedere i requisiti e le considerazioni.
+
+
+
+== Gestione dei dischi
+
+Le unità dell'apparecchio sono fragili. Una gestione errata del disco è la causa principale del guasto del disco.
+
+Attenersi alle seguenti regole per evitare di danneggiare le unità dello storage array:
+
+* Prevenzione delle scariche elettrostatiche (ESD):
++
+** Tenere l'unità nella busta ESD fino a quando non si è pronti per l'installazione.
+** Non inserire utensili metallici o coltelli nel sacchetto ESD.
++
+Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici.
+
+** Conservare il sacchetto ESD e il materiale di imballaggio nel caso in cui sia necessario restituire un'unità in un secondo momento.
+** Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata dello chassis dell'enclosure di storage.
++
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del cabinet di storage prima di maneggiare il disco.
+
+
+
+* Gestire i dischi con attenzione:
++
+** Utilizzare sempre due mani per rimuovere, installare o trasportare un disco.
+** Non forzare mai un'unità in uno shelf e esercitare una pressione leggera e decisa per inserire completamente il dispositivo di chiusura dell'unità.
+** Posizionare i dischi su superfici imbottite e non impilare mai i dischi uno sopra l'altro.
+** Non urtare i dischi contro altre superfici.
+** Prima di rimuovere un'unità da uno shelf, sganciare la maniglia e attendere 30 secondi affinché l'unità si spenda.
+** Utilizzare sempre imballaggi approvati per la spedizione delle unità.
+
+
+* Evitare i campi magnetici:
++
+** Tenere le unità lontano da dispositivi magnetici.
++
+I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.
+
+
+
+

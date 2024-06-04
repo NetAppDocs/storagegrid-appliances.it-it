@@ -1,0 +1,82 @@
+---
+permalink: sg5800/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, troubleshoot, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: 'Risolvete gli errori che possono verificarsi quando utilizzate Gestione sistema di SANtricity per aggiornare il firmware delle unità dell"appliance.' 
+---
+= Risolvere gli errori di aggiornamento del firmware del disco SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Risolvete gli errori che possono verificarsi quando utilizzate Gestione sistema di SANtricity per aggiornare il firmware delle unità dell'appliance.
+
+* *Dischi assegnati non riusciti*
++
+** Un motivo del guasto potrebbe essere che il disco non dispone della firma appropriata. Assicurarsi che il disco interessato sia un disco autorizzato. Per ulteriori informazioni, contatta il supporto tecnico.
+** Quando si sostituisce un'unità, assicurarsi che la capacità dell'unità sostitutiva sia uguale o superiore a quella dell'unità che si sta sostituendo.
+** È possibile sostituire il disco guasto mentre lo storage array riceve i/O.
+
+
+* *Controllare lo storage array*
++
+** Assicurarsi che a ciascun controller sia stato assegnato un indirizzo IP.
+** Assicurarsi che tutti i cavi collegati al controller non siano danneggiati.
+** Assicurarsi che tutti i cavi siano collegati saldamente.
+
+
+* *Dischi hot spare integrati*
++
+Questa condizione di errore deve essere corretta prima di poter aggiornare il firmware.
+
+* *Gruppi di volumi incompleti*
++
+Se uno o più gruppi di volumi o pool di dischi sono incompleti, è necessario correggere questa condizione di errore prima di poter aggiornare il firmware.
+
+* *Operazioni esclusive (diverse dai supporti in background/scansione di parità) attualmente in esecuzione su qualsiasi gruppo di volumi*
++
+Se sono in corso una o più operazioni esclusive, queste devono essere completate prima di poter aggiornare il firmware. Utilizzare System Manager per monitorare l'avanzamento delle operazioni.
+
+* *Volumi mancanti*
++
+È necessario correggere la condizione del volume mancante prima di poter aggiornare il firmware.
+
+* *Uno dei controller in uno stato diverso da quello ottimale*
++
+Uno dei controller degli array di storage richiede attenzione. Questa condizione deve essere corretta prima di poter aggiornare il firmware.
+
+* *Informazioni sulla partizione dello storage non corrispondenti tra i grafici a oggetti controller*
++
+Si è verificato un errore durante la convalida dei dati sui controller. Contattare il supporto tecnico per risolvere il problema.
+
+* *SPM Verify Database Controller Check fails* (verifica controller database SPM non riuscita)
++
+Si è verificato un errore nel database di mappatura delle partizioni di storage su un controller. Contattare il supporto tecnico per risolvere il problema.
+
+* *Configuration Database Validation (convalida del database di configurazione) (se supportata dalla versione del controller dello storage array)*
++
+Si è verificato un errore del database di configurazione su un controller. Contattare il supporto tecnico per risolvere il problema.
+
+* *Controlli correlati a MEL*
++
+Contattare il supporto tecnico per risolvere il problema.
+
+* *Negli ultimi 7 giorni sono stati segnalati più di 10 eventi DDE Informational o MEL critici*
++
+Contattare il supporto tecnico per risolvere il problema.
+
+* *Negli ultimi 7 giorni sono stati segnalati più di 2 eventi critici MEL di pagina 2C*
++
+Contattare il supporto tecnico per risolvere il problema.
+
+* *Negli ultimi 7 giorni sono stati segnalati più di 2 eventi MEL critici su Drive Channel degradati*
++
+Contattare il supporto tecnico per risolvere il problema.
+
+* *Più di 4 voci MEL critiche negli ultimi 7 giorni*
++
+Contattare il supporto tecnico per risolvere il problema.
+
+

@@ -1,0 +1,67 @@
+---
+permalink: sg6100/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6160.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6160, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: 'Per i controller storage che attualmente utilizzano SANtricity OS precedente alla 08.42.20.00 (11.42), è necessario utilizzare la procedura della modalità di manutenzione per applicare un aggiornamento.' 
+---
+= Upgrade del sistema operativo SANtricity sullo storage controller SG6160 usando la modalità di manutenzione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare la modalità di manutenzione per aggiornare il sistema operativo SANtricity sul controller SG6160.
+
+Per i controller storage che attualmente utilizzano SANtricity OS precedente alla 08.42.20.00 (11.42), è necessario utilizzare la procedura della modalità di manutenzione per applicare un aggiornamento.
+
+
+NOTE: Per gli storage controller che attualmente utilizzano un sistema operativo SANtricity più recente della versione 08.42.20.00 (11,42), si consiglia di farlo link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Utilizzare Grid Manager per applicare un aggiornamento"]. Tuttavia, è possibile utilizzare la procedura della modalità di manutenzione se si preferisce o se è stato richiesto dal supporto tecnico.
+
+.Prima di iniziare
+* Si è consultato il https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp (IMT)"^] Per confermare che la versione di SANtricity OS utilizzata per l'aggiornamento è compatibile con l'appliance.
+* È necessario posizionare il controller SG6160 in link:../commonhardware/placing-appliance-into-maintenance-mode.html["modalità di manutenzione"], Che arresta tutto l'i/o ai controller di archiviazione E4000.
++
+
+NOTE: In rari casi, l'attivazione della modalità di manutenzione di un'appliance StorageGRID potrebbe rendere l'appliance non disponibile per l'accesso remoto.
+
+
+
+.A proposito di questa attività
+Non aggiornare il sistema operativo SANtricity o NVSRAM nello storage controller di più appliance StorageGRID alla volta.
+
+
+CAUTION: L'aggiornamento di più appliance StorageGRID alla volta potrebbe causare l'indisponibilità dei dati, a seconda del modello di implementazione e delle policy ILM.
+
+.Fasi
+. Verificare che l'apparecchio sia in posizione link:../commonhardware/placing-appliance-into-maintenance-mode.html["modalità di manutenzione"].
+. Da un laptop di assistenza, accedere a Gestore di sistema di SANtricity ed effettuare l'accesso.
+. Scaricare il nuovo file del software SANtricity OS e IL file NVSRAM sul client di gestione.
++
+
+CAUTION: L'NVSRAM è specifico dell'appliance StorageGRID. Non utilizzare IL download STANDARD DI NVSRAM.
+
+. Per aggiornare il firmware e NVSRAM, seguire le istruzioni contenute nella _Guida all'aggiornamento del sistema operativo SANtricity_ o nella Guida in linea di Gestore di sistema SANtricity.
++
+
+NOTE: Attivare immediatamente i file di aggiornamento. Non rinviare l'attivazione.
+
+. Se questa procedura è stata completata correttamente e si dispone di procedure aggiuntive da eseguire mentre il nodo è in modalità di manutenzione, eseguirle ora. Al termine dell'operazione, o se si verificano errori e si desidera ricominciare, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare una delle seguenti opzioni:
++
+** Selezionare *Riavvia in StorageGRID*
+** Selezionare *Reboot into Maintenance Mode* (Riavvia in modalità di manutenzione) per riavviare il controller con il nodo in modalità di manutenzione.  Selezionare questa opzione se si verificano errori durante la procedura e si desidera ricominciare.  Al termine del riavvio del nodo in modalità di manutenzione, riavviare dalla fase appropriata della procedura che ha avuto esito negativo.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il controller in modalità di manutenzione]
+
++
+Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina Nodes (nodi) dovrebbe visualizzare uno stato normale (icona con segno di spunta verde) image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+
++
+image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+
+
+
+
+
+.Informazioni correlate
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando Grid Manager"]

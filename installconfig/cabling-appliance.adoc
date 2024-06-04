@@ -80,7 +80,7 @@ Admin Network Port (porta di rete amministrativa) sull'appliance (indicata con P
  a| 
 1 GbE (RJ-45)
 
-*Importante:* questa porta funziona solo a 1000 BaseT/full e non supporta velocità da 10 o 100 megabit.
+*Attenzione:* questa porta funziona solo a 1000 BaseT/Full e non supporta velocità di 10 o 100 megabit.
  a| 
 Collega l'appliance alla rete amministrativa per StorageGRID.
 
@@ -92,7 +92,7 @@ Porta RJ-45 più a destra dell'appliance
  a| 
 1 GbE (RJ-45)
 
-*Importante:* questa porta funziona solo a 1000 BaseT/full e non supporta velocità da 10 o 100 megabit.
+*Attenzione:* questa porta funziona solo a 1000 BaseT/Full e non supporta velocità di 10 o 100 megabit.
  a| 
 * Può essere collegato alla porta di gestione 1 se si desidera una connessione ridondante alla rete di amministrazione.
 * Può essere lasciato disconnesso e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
@@ -578,6 +578,156 @@ Grid Network
 
 
 --
+.SG5800
+--
+I due controller vengono collegati tra loro, le porte di gestione su ciascun controller e le porte 10/25-GbE sul controller SG5800 vengono collegate alla rete Grid e alla rete client opzionale per StorageGRID.
+
+.Prima di iniziare
+* Sono stati disimballati i seguenti componenti, inclusi nell'apparecchio:
++
+** Due cavi di alimentazione.
+** Due cavi per le porte di interconnessione iSCSI sui controller.
+
+
+* Sono stati ottenuti i seguenti elementi, non inclusi nell'apparecchio:
++
+** Da uno a quattro cavi ottici o in rame per le porte 10/25-GbE che si intende utilizzare.
+** Da uno a otto ricetrasmettitori SFP+, se si intende utilizzare cavi ottici e velocità di collegamento 10-GbE.
+** Da uno a otto ricetrasmettitori SFP28, se si intende utilizzare cavi ottici e velocità di collegamento 25-GbE.
+** Cavi Ethernet per il collegamento delle porte di gestione.
+
+
+
+
+
+CAUTION: *Rischio di esposizione alle radiazioni laser* -- non smontare o rimuovere alcuna parte di un ricetrasmettitore SFP. L'utente potrebbe essere esposto alle radiazioni laser.
+
+.A proposito di questa attività
+Le figure mostrano i due controller nel SG5860, con il controller di storage serie E4000 nella parte superiore e il controller SG5800 nella parte inferiore. Nel sistema SG5812, il controller di archiviazione della serie E4000 si trova a sinistra del controller SG5800, visto dal retro.
+
+SG5860 connessioni:
+
+image::../media/sg5860_connections.png[Collegamenti sull'appliance SG5860]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Didascalia | Porta | Tipo di porta | Utilizzare 
+
+
+ a| 
+1
+ a| 
+Due porte di interconnessione su ciascun controller
+ a| 
+25GbE GB iSCSI (SFP28)
+ a| 
+Collegare tra loro i due controller.
+
+
+
+ a| 
+2
+ a| 
+Porta di gestione 1 sul controller della serie E4000
+ a| 
+1 GbE (RJ-45)
+ a| 
+Si connette alla rete da cui si accede a Gestore di sistema di SANtricity. È possibile utilizzare la rete di amministrazione per StorageGRID o una rete di gestione indipendente.
+
+
+
+ a| 
+3
+ a| 
+Porta di gestione 1 sul controller SG5800
+ a| 
+1 GbE (RJ-45)
+ a| 
+Collega il controller SG5800 alla rete di amministrazione per StorageGRID.
+
+
+
+ a| 
+4
+ a| 
+Porte 10/25-GbE 1-4 sul controller SG5800
+ a| 
+10 GbE o 25 GbE
+ a| 
+Connettersi alla rete griglia e alla rete client per StorageGRID. Vedere link:gathering-installation-information-sg5800.html#port-bond-modes["Modalità di collegamento porte (controller SG5800)"].
+
+|===
+.Fasi
+. Collegare il controller E4000 al controller SG5800 utilizzando i due cavi in dotazione.
++
+[cols="1a,1a"]
+|===
+| Connetti questa porta... | A questa porta... 
+
+
+ a| 
+Porta di interconnessione 1 sul controller E4000
+ a| 
+Porta di interconnessione 1 sul controller SG5800
+
+
+
+ a| 
+Porta di interconnessione 2 sul controller E4000
+ a| 
+Porta di interconnessione 2 sul controller SG5800
+
+|===
+. In alternativa, collegare la porta di gestione 1 (P1) sul controller E4000 (la porta RJ-45 sulla sinistra) alla rete di gestione per SANtricity System Manager utilizzando un cavo Ethernet.
+. Se si intende utilizzare la rete amministrativa per StorageGRID, collegare la porta di gestione 1 del controller SG5800 (la porta RJ-45 a sinistra) alla rete amministrativa, utilizzando un cavo Ethernet.
+. Collegare le porte 10/25-GbE del controller SG5800 agli switch di rete appropriati, utilizzando cavi in rame o cavi ottici e ricetrasmettitori SFP+ o SFP28.
++
+
+NOTE: Installare i ricetrasmettitori SFP+ se si prevede di utilizzare velocità di collegamento a 10 GbE. Installare i ricetrasmettitori SFP28 se si intende utilizzare velocità di collegamento 25 GbE.
+
++
+** Sui modelli che supportano la negoziazione automatica come opzione di velocità della porta, se è selezionata la modalità di bonding porta fissa, è possibile eseguire le porte dedicate alla rete StorageGRID Grid a una velocità diversa rispetto alle porte dedicate alla rete client.
+** Sui modelli che non supportano la negoziazione automatica come opzione di velocità della porta, tutte e quattro le porte di rete devono utilizzare la stessa velocità di collegamento.
+** Se si prevede di utilizzare la modalità Fixed Port Bond (connessione porta fissa) (impostazione predefinita), collegare le porte alla rete StorageGRID e alle reti client, come mostrato nella tabella.
++
+[cols="1a,1a"]
+|===
+| Porta | Si connette a... 
+
+
+ a| 
+Porta 1
+ a| 
+Rete client (opzionale)
+
+
+
+ a| 
+Porta 2
+ a| 
+Grid Network
+
+
+
+ a| 
+Porta 3
+ a| 
+Rete client (opzionale)
+
+
+
+ a| 
+Porta 4
+ a| 
+Grid Network
+
+|===
+** Se si intende utilizzare la modalità aggregate port bond, collegare una o più porte di rete a uno o più switch. È necessario collegare almeno due delle quattro porte per evitare un singolo punto di errore. Se si utilizzano più switch per un singolo collegamento LACP, gli switch devono supportare MLAG o equivalente.
+
+
+
+
+--
 .SG6000
 --
 I controller storage vengono collegati al controller SG6000-CN, le porte di gestione di tutti e tre i controller e le porte di rete del controller SG6000-CN vengono collegate alla rete di rete e alla rete client opzionale per StorageGRID.
@@ -681,7 +831,7 @@ Admin Network port (porta di rete amministrativa) sul controller SG6000-CN (indi
  a| 
 1 GbE (RJ-45)
 
-*Importante:* questa porta funziona solo a 1000 BaseT/full e non supporta velocità da 10 o 100 megabit.
+*Attenzione:* questa porta funziona solo a 1000 BaseT/Full e non supporta velocità di 10 o 100 megabit.
  a| 
 Consente di collegare il controller SG6000-CN alla rete di amministrazione per StorageGRID.
 
@@ -693,7 +843,7 @@ Porta RJ-45 più a destra sul controller SG6000-CN
  a| 
 1 GbE (RJ-45)
 
-*Importante:* questa porta funziona solo a 1000 BaseT/full e non supporta velocità da 10 o 100 megabit.
+*Attenzione:* questa porta funziona solo a 1000 BaseT/Full e non supporta velocità di 10 o 100 megabit.
  a| 
 * Può essere collegato alla porta di gestione 1 se si desidera una connessione ridondante alla rete di amministrazione.
 * Può essere lasciato non cablato e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
@@ -789,11 +939,17 @@ Non utilizzare la porta di gestione 2 (P2) sui controller storage (la porta RJ-4
 La porta di gestione dell'appliance viene collegata al laptop di servizio e le porte di rete dell'appliance vengono collegate alla rete di rete e alla rete client opzionale per StorageGRID.
 
 .Prima di iniziare
-* Si dispone di un cavo Ethernet RJ-45 per il collegamento della porta di gestione.
+* Solo SG6160: Il cavo breakout da 100GbE a 4x25GbE fornito con l'appliance consente di collegare i due controller di archiviazione al controller SG6100-CN.
+* Si dispone di cavi Ethernet RJ-45:
++
+** Cavo RJ-45 per il collegamento della porta di gestione.
+** Solo SG6160: Fino a quattro cavi Ethernet RJ-45 aggiuntivi per le porte opzionali che si prevede di utilizzare, tra cui la seconda porta Admin e la porta BMC su SG6100-CN, e le porte di manutenzione su ciascuno dei due controller E4000.
+
+
 * Per le porte di rete è disponibile una delle seguenti opzioni. Questi elementi non sono forniti con l'apparecchio.
 +
 ** Da uno a quattro cavi twinax per il collegamento delle quattro porte di rete.
-** Da uno a quattro ricetrasmettitori SFP+ o SFP28 se si intende utilizzare cavi ottici per le porte.
+** Da uno a otto ricetrasmettitori SFP+ o SFP28 se si prevede di utilizzare cavi ottici per le porte.
 
 
 
@@ -802,9 +958,15 @@ La porta di gestione dell'appliance viene collegata al laptop di servizio e le p
 CAUTION: *Rischio di esposizione alle radiazioni laser* -- non smontare o rimuovere alcuna parte di un ricetrasmettitore SFP. L'utente potrebbe essere esposto alle radiazioni laser.
 
 .A proposito di questa attività
-Le seguenti figure mostrano le porte sul retro di SGF6112.
+Le figure seguenti mostrano le porte sul retro del SGF6112 e i tre controller nell'appliance SG6160. L'appliance SG6160 include un controller di calcolo SG6100-CN nella parte superiore e due controller di storage E4000 nella parte inferiore.
+
+SGF6112 connessioni:
 
 image::../media/sgf6112_connections.png[SGF6112 connettori posteriori]
+
+SG6160 connessioni:
+
+image::../media/sg6100_e4000_connections.png[Collegamenti da SG6100-CN a E4000]
 
 [cols="1a,2a,2a,3a"]
 |===
@@ -828,7 +990,7 @@ Si connette alla rete da cui si accede all'interfaccia BMC.
 Quattro porte di rete 10/25-GbE sull'appliance
  a| 
  a| 
-Connettersi alla rete griglia e alla rete client per StorageGRID. Vedere link:gathering-installation-information-sg6100.html#port-bond-modes["Modalità di port bond (SGF6112)"]
+Connettersi alla rete griglia e alla rete client per StorageGRID. Vedere link:gathering-installation-information-sg6100.html#port-bond-modes["Modalità Port bond (SG6100)"]
 
 
 
@@ -837,7 +999,7 @@ Connettersi alla rete griglia e alla rete client per StorageGRID. Vedere link:ga
  a| 
 Admin Network Port (porta di rete amministrativa) sull'appliance (indicata con P1 in figura)
  a| 
-1 GbE (RJ-45)
+1/10-GbE (RJ-45)
 
 *Importante:* questa porta funziona solo a 1/10-GbE (RJ-45) e non supporta velocità da 100 megabit.
  a| 
@@ -849,14 +1011,48 @@ Collega l'appliance alla rete amministrativa per StorageGRID.
  a| 
 Porta RJ-45 più a destra dell'appliance
  a| 
-1 GbE (RJ-45)
+1/10-GbE (RJ-45)
 
-*Importante:* questa porta funziona solo a 1/10-GbE (RJ-45) e non supporta velocità da 100 megabit.
+*Attenzione:* questa porta funziona solo a 1/10-GbE (RJ-45) e non supporta velocità a 100 megabit.
  a| 
 * Può essere collegato alla porta di gestione 1 se si desidera una connessione ridondante alla rete di amministrazione.
 * Può essere lasciato disconnesso e disponibile per l'accesso locale temporaneo (IP 169.254.0.1).
 * Durante l'installazione, può essere utilizzato per collegare l'appliance a un laptop di assistenza se gli indirizzi IP assegnati da DHCP non sono disponibili.
 
+
+
+
+ a| 
+4 TB (solo SG6160)
+ a| 
+Cinque porte di connessione in totale
+ a| 
+* Una porta 100GbE su SG6100-CN
+* Due porte 10 GbE/25GbE GbE su ciascuno storage controller
+
+ a| 
+Collegare ogni storage controller al controller SG6100-CN.
+
+
+
+ a| 
+5 TB (solo SG6160)
+ a| 
+Porta di gestione 1 su ciascun controller di storage
+ a| 
+1 GbE (RJ-45)
+ a| 
+Si connette alla rete da cui si accede a Gestore di sistema di SANtricity.
+
+
+
+ a| 
+ a| 
+Porta di gestione 2 su ciascun storage controller
+ a| 
+1 GbE (RJ-45)
+ a| 
+Si connette alla rete da cui si accede a Gestore di sistema di SANtricity.
 
 |===
 .Fasi
@@ -864,11 +1060,12 @@ Porta RJ-45 più a destra dell'appliance
 +
 Sebbene questa connessione sia opzionale, si consiglia di facilitare il supporto.
 
+. Collegare le due porte di interconnessione di ciascun controller di storage alla porta 100GbE del controller SG6100-CN, utilizzando un cavo da 100-GbE GSFP28 a 4x25-GbE SFP28.
 . Collegare le porte di rete dell'appliance agli switch di rete appropriati, utilizzando cavi twinax o cavi ottici e ricetrasmettitori.
 +
 [cols="2a,2a"]
 |===
-| Velocità di collegamento SGF6112 (GbE) | Attrezzatura necessaria 
+| Velocità di collegamento (GbE) | Attrezzatura necessaria 
 
 
  a| 
@@ -885,8 +1082,7 @@ Ricetrasmettitore SFP28
 
 |===
 +
-** Sui modelli che supportano la negoziazione automatica come opzione di velocità della porta, se è selezionata la modalità di bonding porta fissa, è possibile eseguire le porte dedicate alla rete StorageGRID Grid a una velocità diversa rispetto alle porte dedicate alla rete client.
-** Sui modelli che non supportano la negoziazione automatica come opzione di velocità della porta, tutte e quattro le porte di rete devono utilizzare la stessa velocità di collegamento.
+** Le porte di rete Grid e Client possono essere eseguite a velocità diverse solo se è stata selezionata la funzione di negoziazione automatica come velocità di collegamento e se è stata selezionata la modalità di connessione fissa come modalità di connessione alla porta. In caso contrario, tutte e quattro le porte funzioneranno alla stessa velocità.
 ** Se si prevede di utilizzare la modalità Fixed Port Bond (connessione porta fissa) (impostazione predefinita), collegare le porte alla rete StorageGRID e alle reti client, come mostrato nella tabella.
 +
 [cols="1a,2a"]
