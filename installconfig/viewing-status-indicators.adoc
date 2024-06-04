@@ -670,17 +670,8 @@ L'installazione o la comunicazione con il controller E2800 non è riuscita.
 --
 .SG5800
 --
-I controller dell'appliance includono indicatori che consentono di determinare lo stato del controller dell'appliance:
+I controller dell'apparecchio includono indicatori che consentono di determinare lo stato del controller dell'apparecchio. Utilizzare queste informazioni per ottenere assistenza link:troubleshooting-hardware-installation.html["Risolvere i problemi di installazione dell'hardware SG5800"].
 
-* <<status_indicators_SG5800_controller,Indicatori di stato sul controller SG5800>>
-* <<general_boot_codes_sg5800,Codici generali di boot>>
-* <<boot_codes_SG5800_controller,SG5800 codici di avvio della centralina>>
-* <<error_codes_SG5800_controller,SG5800 codici di errore della centralina>>
-
-
-Utilizzare queste informazioni per ottenere assistenza link:troubleshooting-hardware-installation.html["Risolvere i problemi di installazione dell'hardware SG5800"].
-
-[[status_indicators_SG5800_controller]]
 Indicatori di stato sul controller SG5800::
 +
 --

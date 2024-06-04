@@ -18,7 +18,7 @@ Potrebbe essere necessario sostituire la centralina SG6100-CN se non funziona in
 * Sono presenti etichette per identificare ciascun cavo collegato al controller.
 * Il controller da sostituire nel data center è stato fisicamente posizionato.
 +
-link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+link:locating-sgf6112-in-data-center.html["Individuare il controller nel data center"]
 
 
 
@@ -45,7 +45,7 @@ Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
 .. Inserire: `*run-host-command ipmitool lan print*` Per visualizzare le configurazioni BMC correnti per l'appliance.
 
 
-. Se la centralina SG6100-CN funziona sufficientemente da consentire uno spegnimento controllato, link:power-sg6100-cn-controller-off-on.html#shut-down-sg6100-cn-controller["Spegnere la centralina SG6100-CN"].
+. Se la centralina SG6100-CN funziona sufficientemente da consentire uno spegnimento controllato, link:power-sgf6112-off-on.html["Spegnere la centralina SG6100-CN"].
 . Se una delle interfacce di rete di questo dispositivo StorageGRID è configurata per DHCP, potrebbe essere necessario aggiornare le assegnazioni permanenti del lease DHCP sui server DHCP per fare riferimento agli indirizzi MAC del dispositivo sostitutivo. L'aggiornamento garantisce che all'appliance siano assegnati gli indirizzi IP previsti.
 . Rimuovere e sostituire la centralina SG6100-CN:
 +
