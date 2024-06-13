@@ -1060,7 +1060,7 @@ Si connette alla rete da cui si accede a Gestore di sistema di SANtricity.
 +
 Sebbene questa connessione sia opzionale, si consiglia di facilitare il supporto.
 
-. Collegare le due porte di interconnessione di ciascun controller di storage alla porta 100GbE del controller SG6100-CN, utilizzando un cavo da 100-GbE GSFP28 a 4x25-GbE SFP28.
+. Collegare le due porte di interconnessione di ciascun controller di storage alla porta 100GbE del controller SG6100-CN, utilizzando un cavo da 100-GbE QSFP28 a 4x25-GbE SFP28.
 . Collegare le porte di rete dell'appliance agli switch di rete appropriati, utilizzando cavi twinax o cavi ottici e ricetrasmettitori.
 +
 [cols="2a,2a"]

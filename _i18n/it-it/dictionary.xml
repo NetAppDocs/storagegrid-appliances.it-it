@@ -4921,7 +4921,6 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="f3a0ab2289e5d894b80255c441fc9f46" category="list-text">Due porte 10 GbE/25GbE GbE su ciascuno storage controller</block>
   <block id="2e869104086dd4cd2c4b722cc80e77b6" category="paragraph">Collegare ogni storage controller al controller SG6100-CN.</block>
   <block id="776053d9d5cca53346c2eb33c73396bf" category="paragraph">5 TB (solo SG6160)</block>
-  <block id="d14bfbc5b95f245a7cd1ac38c7f3ce2d" category="list-text">Collegare le due porte di interconnessione di ciascun controller di storage alla porta 100GbE del controller SG6100-CN, utilizzando un cavo da 100-GbE GSFP28 a 4x25-GbE SFP28.</block>
   <block id="fcb7aea9a14248650fc2b4195b723923" category="cell">Velocità di collegamento (GbE)</block>
   <block id="20d4ad7302d59cc00a8fda9a9f549883" category="list-text">Le porte di rete Grid e Client possono essere eseguite a velocità diverse solo se è stata selezionata la funzione di negoziazione automatica come velocità di collegamento e se è stata selezionata la modalità di connessione fissa come modalità di connessione alla porta. In caso contrario, tutte e quattro le porte funzioneranno alla stessa velocità.</block>
   <block id="76caeddfbf7a30108ac0c230c0790b19" category="paragraph">Per i modelli SG6160, SG6000, SG5800 e SG5700, è possibile configurare Gestione di sistema di SANtricity. Il software SANtricity viene utilizzato per monitorare l'hardware di queste appliance.</block>
@@ -5506,4 +5505,5 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="1b137b50e38b53f7a19b8ae2f6114d7d" category="sidebar">Riposizionare nel rack</block>
   <block id="d1fc100be07ba82ec7383450a44baff8" category="list-text">Se la centralina SG6100-CN funziona sufficientemente da consentire uno spegnimento controllato, <block ref="0a3cf65437375f485bddbc72eccdb305" category="inline-link-macro-rx"></block>.</block>
   <block id="d0f113fd26d2007a359ab568d6af75eb" category="paragraph">I controller dell'apparecchio includono indicatori che consentono di determinare lo stato del controller dell'apparecchio. Utilizzare queste informazioni per ottenere assistenza <block ref="e0e94668a35b0e62f1c3c83bc6a3960d" category="inline-link-macro-rx"></block>.</block>
+  <block id="a0fdf2c022cdb2b6d6cca277318ea2b2" category="list-text">Collegare le due porte di interconnessione di ciascun controller di storage alla porta 100GbE del controller SG6100-CN, utilizzando un cavo da 100-GbE QSFP28 a 4x25-GbE SFP28.</block>
 </blocks>
