@@ -4870,12 +4870,7 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="03dcfd6af80c1707e647b3cee9c7ee65" category="list-text">Verificare che il LED sinistro del disco da sostituire sia di colore ambra lampeggiante. Se è stato segnalato un problema di unità nell'interfaccia utente di Grid Manager o BMC, HDD02 o HDD2 si riferiscono all'unità nello slot superiore e HDD03 o HDD3 si riferiscono all'unità nello slot inferiore.</block>
   <block id="445e825246156afbf483be98791c154f" category="inline-link-macro">SG5800</block>
   <block id="9cef5aeb63436914780167a988745b83" category="list-text"><block ref="9cef5aeb63436914780167a988745b83" category="inline-link-macro-rx"></block></block>
-  <block id="4a0e08b64a0e99d9fc5718e02a3dbd6e" category="list-text"><block ref="4a0e08b64a0e99d9fc5718e02a3dbd6e" category="inline-link-macro-rx"></block></block>
-  <block id="21a58e1a4af032d001a27795db0d1991" category="list-text">SG6160:</block>
   <block id="4826002acc5c2cf0bc57ac17b7533776" category="inline-link-macro">Centralina SG6100-CN</block>
-  <block id="d94471324a10ec4feaf9b5aba8950585" category="list-text"><block ref="d94471324a10ec4feaf9b5aba8950585" category="inline-link-macro-rx"></block></block>
-  <block id="f71cc57d77d2d28a9aca8f82d8285cec" category="inline-link-macro">shelf da 60 dischi</block>
-  <block id="0f28c7a7bebdc4296b957c50f5109e27" category="list-text"><block ref="0f28c7a7bebdc4296b957c50f5109e27" category="inline-link-macro-rx"></block></block>
   <block id="35a1de9a120ee7b7ee17d87136161686" category="list-text"><block ref="0c770b188189664197ca2af9c5ce06a6" category="inline-link-macro-rx"></block> (SG6160, SG5700, SG5800 E SG6000)</block>
   <block id="a90ef8c0f438b2f18dae8cadf3f093ea" category="inline-link-macro">Modifica della modalità RAID (SG6160, SG6000, SG5860 e SG5760)</block>
   <block id="7cec8a0453cf8f9f184906051a721920" category="list-text"><block ref="7cec8a0453cf8f9f184906051a721920" category="inline-link-macro-rx"></block></block>
@@ -5506,4 +5501,15 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="d1fc100be07ba82ec7383450a44baff8" category="list-text">Se la centralina SG6100-CN funziona sufficientemente da consentire uno spegnimento controllato, <block ref="0a3cf65437375f485bddbc72eccdb305" category="inline-link-macro-rx"></block>.</block>
   <block id="d0f113fd26d2007a359ab568d6af75eb" category="paragraph">I controller dell'apparecchio includono indicatori che consentono di determinare lo stato del controller dell'apparecchio. Utilizzare queste informazioni per ottenere assistenza <block ref="e0e94668a35b0e62f1c3c83bc6a3960d" category="inline-link-macro-rx"></block>.</block>
   <block id="a0fdf2c022cdb2b6d6cca277318ea2b2" category="list-text">Collegare le due porte di interconnessione di ciascun controller di storage alla porta 100GbE del controller SG6100-CN, utilizzando un cavo da 100-GbE QSFP28 a 4x25-GbE SFP28.</block>
+  <block id="9e7dc5e50079b6110ec51cbca50d44fe" category="list-text"><block ref="9e7dc5e50079b6110ec51cbca50d44fe" category="inline-link-macro-rx"></block></block>
+  <block id="c4b1be700972bb7155f754b021cbfdf3" category="summary">Per i modelli SG6160 e SGF6112, installare le guide nel cabinet o nel rack e far scorrere lo shelf del controller, gli eventuali shelf di espansione e il controller di calcolo sulle guide.</block>
+  <block id="2478d8f676c2270fca6568e32b435715" category="doc">Installazione nell'armadietto o nel rack (SG6100)</block>
+  <block id="3d43cb8b8779479b679e409a58a37b13" category="paragraph"><block ref="3d43cb8b8779479b679e409a58a37b13" category="inline-link-macro-rx"></block></block>
+  <block id="2dad6a8905ebee341d822de7647baebe" category="paragraph">SG6112</block>
+  <block id="75614aa894d0ca5e9fa6a08a4764411b" category="paragraph">shelf di appliance a 12 dischi</block>
+  <block id="839819d16f5099c0e2c98d685b4d857b" category="inline-link-macro">Installare shelf da 12 dischi</block>
+  <block id="d330ed5c95a514f37a8ada4a4e5c5e06" category="paragraph"><block ref="d330ed5c95a514f37a8ada4a4e5c5e06" category="inline-link-macro-rx"></block></block>
+  <block id="7c964abbff6a7b0bbf38565776b7d0b7" category="inline-link-macro">Installare il controller SG6100-CN</block>
+  <block id="0d86c1e5e36df2d42690db9bf7459e93" category="paragraph"><block ref="0d86c1e5e36df2d42690db9bf7459e93" category="inline-link-macro-rx"></block></block>
+  <block id="c587a2e85b76aabe41b2ff8e991a2c31" category="sidebar">Installare SG6100 nell'armadietto o nel rack</block>
 </blocks>

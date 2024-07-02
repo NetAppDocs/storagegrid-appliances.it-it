@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6100.html 
+sidebar: sidebar 
+keywords: install, sg6100, sg6112, expansion shelf, cabinet, rack, drives 
+summary: Per i modelli SG6160 e SGF6112, installare le guide nel cabinet o nel rack e far scorrere lo shelf del controller, gli eventuali shelf di espansione e il controller di calcolo sulle guide. 
+---
+= Installazione nell'armadietto o nel rack (SG6100)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per i modelli SG6160 e SGF6112, installare le guide nel cabinet o nel rack e far scorrere lo shelf del controller, gli eventuali shelf di espansione e il controller di calcolo sulle guide.
+
+[cols="1a,2a,2a"]
+|===
+| Modello | Installare | Per informazioni 
+
+
+ a| 
+SG6160
+ a| 
+shelf di controller da 60 dischi e qualsiasi shelf di espansione da 60 dischi
+ a| 
+link:sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["Installare shelf da 60 dischi"]
+
+
+
+ a| 
+SG6112
+ a| 
+shelf di appliance a 12 dischi
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6112.html["Installare shelf da 12 dischi"]
+
+
+
+ a| 
+SG6160
+ a| 
+Controller di calcolo SG6100-CN
+ a| 
+link:sg6100-cn-installing-into-cabinet-or-rack.html["Installare il controller SG6100-CN"]
+
+|===

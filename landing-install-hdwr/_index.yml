@@ -10,7 +10,7 @@ indexpage:
     - title: SG6000
       url: "../installconfig/installing-hardware-sg6000.html"
     - title: SG6100
-      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sgf6112.html"
+      url: "../installconfig/installing-hardware-sg6100.html"
   - title: Installare l'appliance per servizi in un armadietto o in un rack
     links:
     - title: SG100 e SG1000
