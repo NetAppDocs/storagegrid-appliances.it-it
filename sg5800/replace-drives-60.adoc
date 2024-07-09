@@ -24,7 +24,12 @@ Questa procedura si applica agli shelf di dischi DCM e DCM2.
 +
 ** Un'unità sostitutiva supportata da NetApp per lo shelf di controller o lo shelf di dischi.
 ** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
-** Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+** Accesso a Gestione sistema SANtricity:
++
+*** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+*** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
+
+
 
 
 

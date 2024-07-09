@@ -11,13 +11,13 @@ summary: 'L"appliance SG5800 StorageGRID è una piattaforma integrata di storage
 
 
 [role="lead"]
-L'appliance SG5800 StorageGRID è una piattaforma integrata di storage e calcolo che opera come nodo di storage in un grid StorageGRID.
+Le appliance StorageGRID della serie SG5800 sono piattaforme integrate di storage e calcolo che operano come nodi storage in un grid StorageGRID.
 
-L'appliance StorageGRID serie SG5800 offre le seguenti funzioni:
+Le appliance StorageGRID serie SG5800 offrono le seguenti caratteristiche:
 
 * Integrare gli elementi di storage e calcolo per un nodo di storage StorageGRID.
 * Includere il programma di installazione dell'appliance StorageGRID per semplificare l'implementazione e la configurazione del nodo di storage.
-* Include Gestione di sistema SANtricity e-Series per la gestione e il monitoraggio dell'hardware.
+* Include e-Series SANtricity System Manager per la gestione e il monitoring dell'hardware.
 * Supporta fino a quattro connessioni 10 GbE o 25 GbE alla rete grid e alla rete client StorageGRID.
 * Supporto di dischi FDE (Full Disk Encryption) o FIPS. Quando questi dischi vengono utilizzati con la funzione di protezione del disco in Gestione di sistema di SANtricity, viene impedito l'accesso non autorizzato ai dati.
 
@@ -274,7 +274,7 @@ Opzioni porta:
 
 *Nota*: Alcune funzionalità SANtricity opzionali, come la sincronizzazione NTP per timestamp del registro precisi, non sono disponibili quando si sceglie di lasciare la porta di gestione non cablata.
 
-*Nota*: StorageGRID 11,8 o superiore e SANtricity 11,8 o superiore sono necessari quando si lascia la gestione non cablata.
+*Nota*: StorageGRID 11,8 o superiore e SANtricity 11,8 o superiore sono necessari quando si lascia la porta di gestione non cablata.
 
 
 

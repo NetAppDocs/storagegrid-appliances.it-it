@@ -25,7 +25,7 @@ Le opzioni per modificare la configurazione del collegamento Ethernet del contro
 * Modifica di *Port Bond mode* da fisso ad aggregato o da aggregato a fisso
 * Modifica di *Network bond mode* da Active-Backup a LACP o da LACP a Active-Backup
 * Attivazione o disattivazione del tagging VLAN o modifica del valore di un tag VLAN
-* Modifica della velocità di collegamento da 10 GbE a 25 GbE o da 25 GbE a 10 GbE
+* Modifica della velocità di collegamento in o da Auto (scelta consigliata), 10-GbE o 25-GbE.
 
 
 .Fasi

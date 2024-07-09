@@ -22,7 +22,7 @@ NOTE: Questa procedura *non* si applica agli SSD NVMe nel SG6100-CN, che vengono
 * Lo hai fatto link:../commonhardware/placing-appliance-into-maintenance-mode.html["Attivazione della modalità di manutenzione dell'appliance StorageGRID"].
 +
 
-NOTE: Mentre l'appliance è in modalità di manutenzione, l'attività i/o (input/output) dello storage controller viene interrotta per rendere sicure le operazioni di storage che provocano interruzioni.
+NOTE: Mentre l'appliance è in modalità di manutenzione, l'attività i/o (input/output) verso gli storage controller viene interrotta per rendere sicure le operazioni di storage che interrompono le attività.
 
 
 

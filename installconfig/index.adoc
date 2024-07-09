@@ -59,7 +59,7 @@ Se si configurano e implementano più appliance, utilizzare lo strumento ConfigB
 
 
 . link:accessing-and-configuring-santricity-system-manager.html["Accedere e configurare Gestore di sistema di SANtricity"] (SG6160, SG5700, SG5800 E SG6000)
-. link:configuring-bmc-interface.html["Configurare l'interfaccia BMC"] (SG6000, SG6100 e Services Appliance)
+. link:configuring-bmc-interface.html["Configurare l'interfaccia BMC"] (SG6100, SG6000 e Services Appliance)
 . Eseguire la procedura di installazione opzionale
 +
 ** link:optional-enabling-node-encryption.html["Abilita crittografia di nodi o dischi"]

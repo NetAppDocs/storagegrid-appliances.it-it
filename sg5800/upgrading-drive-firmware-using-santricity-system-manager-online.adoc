@@ -26,9 +26,7 @@ I dischi vengono aggiornati uno alla volta mentre l'appliance esegue l'i/O. Ques
 
 [NOTE]
 ====
-Le unità appartenenti a volumi che non hanno ridondanza devono essere aggiornate utilizzando link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["metodo offline"]. Utilizzare il metodo offline per qualsiasi pool o gruppo di volumi attualmente degradato.
-
-È necessario utilizzare link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["metodo offline"] Quando si aggiornano le unità SSD.
+Le unità appartenenti a volumi che non hanno ridondanza devono essere aggiornate utilizzando link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["metodo offline"].
 
 ====
 .Fasi

@@ -80,6 +80,7 @@ Controller di calcolo:: Il controller SG6100-CN è un server a un rack (1U) che 
 * 256 GB DI RAM
 * Larghezza di banda Ethernet aggregata fino a 4 x 25 GbE (o fino a 4 x 100 GbE con SKU NIC 100g opzionale)
 * Interconnessione 1 x 100 GbE
+* Due SSD NVMe per la cache di lettura
 * Baseboard Management Controller (BMC) che semplifica la gestione dell'hardware
 * Alimentatori e ventole ridondanti
 
