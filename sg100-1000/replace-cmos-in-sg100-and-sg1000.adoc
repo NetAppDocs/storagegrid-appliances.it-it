@@ -1,0 +1,117 @@
+---
+permalink: sg100-1000/replace-cmos-in-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, admin node, admin appliance, replacing, replace, CMOS, battery 
+summary: Utilizzare questa procedura per sostituire la batteria a bottone CMOS sulla scheda di sistema. 
+---
+= Sostituire la batteria CMOS in un SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzare questa procedura per sostituire la batteria a bottone CMOS sulla scheda di sistema.
+
+Utilizzare queste procedure per:
+
+* Rimuovere la batteria CMOS
+* Reinstallare la batteria CMOS
+
+
+
+
+== Rimuovere la batteria CMOS
+
+.Prima di iniziare
+* Si dispone di link:verify-component-to-replace-sg100-and-sg1000.html["Verificato il SG100 o il SG1000 in cui la batteria CMOS deve essere sostituita"].
+* Si trova link:locating-controller-in-data-center.html["Situato fisicamente l'apparecchio SG100 o SG1000"] il punto in cui si sta sostituendo la batteria CMOS nel data center.
++
+
+NOTE: È necessario un link:shut-down-sg100-and-sg1000.html["spegnimento controllato dell'apparecchio"] prima di rimuovere l'apparecchio dal rack.
+
+* Tutti i cavi e sono stati scollegati link:reinstalling-sg100-and-sg1000-controller-cover.html["rimuovere il coperchio dell'apparecchio"].
+
+
+.A proposito di questa attività
+Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di memorizzazione siano collegati alla rete prima di iniziare la sostituzione della batteria CMOS o sostituire la batteria durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Consultare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
+
+.Fasi
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Individuare il gruppo riser a due slot sul retro dell'apparecchio.
++
+image::../media/sg6060_riser_assembly_location.jpg[Posizione del gruppo del montante]
+
+. Afferrare il gruppo riser attraverso i fori blu e sollevarlo con cautela verso l'alto. Spostare il gruppo riser verso la parte anteriore dello chassis mentre lo si solleva per consentire ai connettori esterni degli adattatori installati di liberare lo chassis.
+. Posizionare il riser su una superficie piana antistatica con il lato del telaio metallico rivolto verso il basso.
+. Individuare la batteria CMOS sulla scheda di sistema nella posizione sotto il gruppo riser rimosso.
+. Utilizzare un dito o un attrezzo per leva in plastica per spingere il fermo di fissaggio lontano dalla batteria e rimuoverlo dalla presa.
+. Rimuovere la batteria e smaltirla correttamente.
+
+
+
+
+== Reinstallare la batteria CMOS
+
+Installare la batteria CMOS sostitutiva nello zoccolo della scheda di sistema.
+
+.Prima di iniziare
+* Si dispone della batteria CMOS di ricambio corretta (CR2032).
+* La batteria CMOS guasta è stata rimossa.
+
+
+.Fasi
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Estrarre la batteria CMOS dalla confezione.
+. Premere la batteria sostitutiva nella presa vuota della scheda di sistema con il lato positivo (+) rivolto verso l'alto fino a quando la batteria non scatta in posizione.
+. Individuare il foro di allineamento sul gruppo riser (cerchiato) che si allinea con un perno guida sulla scheda di sistema per garantire il corretto posizionamento del gruppo riser.
++
+image::../media/sg6060_riser_alignment_hole.jpg[Foro di allineamento sul gruppo del riser]
+
+. Posizionare il gruppo riser nello chassis, assicurandosi che sia allineato con il connettore e il perno guida sulla scheda di sistema, quindi inserire il gruppo riser.
+. Premere con cautela il gruppo riser in posizione lungo la linea centrale, accanto ai fori blu, fino a posizionarlo completamente.
+. Se non si dispone di altre procedure di manutenzione da eseguire nell'apparecchio, reinstallare il coperchio dell'apparecchio, riposizionare l'apparecchio nel rack, collegare i cavi e alimentare.
+. Se l'appliance sostituita ha abilitato la crittografia del disco per le unità SED, è necessario link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["immettere la passphrase di crittografia dell'unità"] per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.
+. Se l'appliance sostituita utilizzava un server di gestione delle chiavi (KMS) per gestire le chiavi di crittografia per la crittografia dei nodi, potrebbe essere necessaria una configurazione aggiuntiva prima che il nodo possa unirsi al grid. Se il nodo non si unisce automaticamente alla griglia, assicurarsi che queste impostazioni di configurazione siano state trasferite alla nuova appliance e configurare manualmente le impostazioni che non hanno la configurazione prevista:
++
+** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configurare le connessioni StorageGRID"]
+** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
+
+
+. Accedere all'appliance:
++
+.. Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+.. Immettere la password elencata in `Passwords.txt` file.
+.. Immettere il seguente comando per passare a root: `su -`
+.. Immettere la password elencata in `Passwords.txt` file.
+
+
+. Ripristinare la connettività di rete BMC per l'appliance. Sono disponibili due opzioni:
++
+** Utilizzare IP statico, netmask e gateway
+** Utilizzare DHCP per ottenere un IP, una netmask e un gateway
++
+... Per ripristinare la configurazione BMC in modo che utilizzi un IP statico, una netmask e un gateway, immettere i seguenti comandi:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Per ripristinare la configurazione BMC in modo che utilizzi DHCP per ottenere un IP, una netmask e un gateway, immettere il seguente comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Dopo aver ripristinato la connettività di rete BMC, connettersi all'interfaccia BMC per controllare e ripristinare eventuali configurazioni BMC personalizzate aggiuntive applicate. Ad esempio, è necessario confermare le impostazioni per le destinazioni dei messaggi trap SNMP e le notifiche e-mail. Vedere link:../installconfig/configuring-bmc-interface.html["Configurare l'interfaccia BMC"].
+. Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
+

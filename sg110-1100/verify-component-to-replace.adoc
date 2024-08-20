@@ -19,7 +19,7 @@ In caso di dubbi sul componente hardware da sostituire nell'appliance, completar
 
 
 .A proposito di questa attività
-Utilizzare questa procedura per identificare l'apparecchio con l'hardware guasto e quali dei componenti hardware sostituibili non funzionano correttamente. I componenti che potrebbero essere identificati per la sostituzione includono:
+Utilizzare questa procedura per identificare l'apparecchio con l'hardware guasto e quali dei componenti hardware sostituibili non funzionano correttamente. I componenti che potrebbero essere identificati per la sostituzione possono includere:
 
 * Alimentatori
 * Ventole

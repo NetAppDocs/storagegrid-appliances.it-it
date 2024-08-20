@@ -1,0 +1,99 @@
+---
+permalink: sg100-1000/reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, appliance, install, installing, installation, cabinet, rack, controller, remove, removing, removal 
+summary: 'Rimuovere il SG100 o il SG1000 da un armadietto o da un rack per accedere al coperchio superiore o per spostare l"apparecchio in una posizione diversa, quindi reinstallarlo in un armadietto o in un rack quando la manutenzione hardware è completata.' 
+---
+= Riposizionare SG100 o SG1000 in un armadietto o in un rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rimuovete l'apparecchio SG100 o SG1000 da un armadietto o da un rack per accedere al coperchio superiore o per spostare l'apparecchio in una posizione diversa, quindi reinserite l'apparecchio in un armadietto o in un rack al termine della manutenzione hardware.
+
+
+
+== Rimuovere SG100 o SG1000 dal cabinet o dal rack
+
+Rimuovere il dispositivo SG100 o SG1000 da un armadietto o da un rack per accedere al coperchio superiore o per spostare l'apparecchio in una posizione diversa.
+
+.Prima di iniziare
+* Sono presenti etichette per identificare ciascun cavo collegato all'apparecchio SG100 o SG1000.
+* Hai fisicamente posizionato l'appliance SG100 o SG1000 in cui si stanno eseguendo interventi di manutenzione nel data center.
++
+link:locating-controller-in-data-center.html["Individuare l'appliance nel data center"]
+
+* Si dispone di link:shut-down-sg100-and-sg1000.html["Spegnete l'apparecchio SG100 o SG1000"].
++
+
+CAUTION: Non spegnere l'apparecchio utilizzando l'interruttore di alimentazione.
+
+
+
+.Fasi
+. Etichettare e scollegare i cavi di alimentazione del controller.
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Etichettare e scollegare i cavi dati del controller e i ricetrasmettitori SFP+ o SFP28.
++
+
+NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Allentare le due viti di fissaggio sul pannello anteriore del controller.
++
+image::../media/sg6060_rack_retaining_screws.png[Viti di fissaggio del rack SG6060]
+
+. Far scorrere l'apparecchio fuori dal rack finché le guide di montaggio non sono completamente estese e i fermi su entrambi i lati non scattano.
++
+Il coperchio superiore del controller è accessibile.
+
+. Opzionale: Se si sta rimuovendo completamente l'apparecchio dall'armadietto o dal rack, seguire le istruzioni del kit di guide per rimuovere l'apparecchio dalle guide.
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+
+
+
+== Reinstallare SG100 o SG1000 nell'armadietto o nel rack
+
+Una volta completata la manutenzione dell'hardware, reinserite l'apparecchio in un armadietto o in un rack.
+
+.Prima di iniziare
+Il coperchio dell'apparecchio è stato reinstallato.
+
+link:reinstalling-sg100-and-sg1000-controller-cover.html["Reinstallare il coperchio SG100 o SG1000"]
+
+.Fasi
+. Premere contemporaneamente la guida blu per sbloccare entrambe le guide del rack e far scorrere l'apparecchio nel rack finché non è completamente inserito.
++
+Se non è possibile spostare ulteriormente l'apparecchio, tirare i fermi blu su entrambi i lati del telaio per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[Apparecchio scorrevole su guide]
+
++
+
+NOTE: Non inserite la mascherina anteriore prima di aver acceso l'apparecchio.
+
+. Stringere le viti di fissaggio sul pannello anteriore dell'apparecchio per fissare l'apparecchio al rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Viti di fissaggio della cremagliera]
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Ricollegare i cavi dati del controller e i ricetrasmettitori SFP+ o SFP28.
++
+
+NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
++
+link:../installconfig/cabling-appliance.html["Apparecchio via cavo"]
+
+. Ricollegare i cavi di alimentazione dell'apparecchio.
++
+link:../installconfig/connecting-power-cords-and-applying-power.html["Collegare i cavi di alimentazione e applicare l'alimentazione (SG100 o SG1000)"]
+
+
+
+.Al termine
+L'apparecchio può essere riavviato.

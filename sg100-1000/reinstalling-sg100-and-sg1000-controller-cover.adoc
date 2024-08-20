@@ -1,0 +1,63 @@
+---
+permalink: sg100-1000/reinstalling-sg100-and-sg1000-controller-cover.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, cover, install, installing, installation, reinstall, reinstalling, reinstallation, remove, removing, removal 
+summary: 'Rimuovete il coperchio dell"apparecchio per accedere ai componenti interni e riposizionatelo al termine della manutenzione.' 
+---
+= Riposizionare il coperchio dell'apparecchio SG100 o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rimuovete il coperchio dell'apparecchio per accedere ai componenti interni e riposizionatelo al termine della manutenzione.
+
+
+
+== Rimuovere il coperchio dell'apparecchio SG100 o SG1000
+
+Rimuovete il coperchio dell'apparecchio per accedere ai componenti interni per la manutenzione.
+
+.Prima di iniziare
+Rimuovete l'apparecchio dal cabinet o dal rack per accedere al coperchio superiore.
+
+link:reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html["Rimuovere l'apparecchio SG100 o SG1000 dall'armadietto o dal rack"]
+
+.Fasi
+. Assicuratevi che il dispositivo di chiusura del coperchio dell'apparecchio non sia bloccato. Se necessario, ruotare di un quarto di giro il blocco di plastica blu nella direzione di sblocco, come mostrato sul blocco del dispositivo di chiusura.
+. Ruotare il dispositivo di chiusura verso l'alto e verso il retro del telaio dell'apparecchio fino a quando non si arresta, quindi sollevare con cautela il coperchio dal telaio e metterlo da parte.
++
+image::../media/sg6060_cover_latch_open.jpg[Dispositivo di chiusura del coperchio aperto]
+
++
+
+CAUTION: Avvolgere l'estremità del cinturino di un braccialetto antistatico intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche quando si lavora all'interno dell'apparecchio.
+
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+
+
+
+== Reinstallare il coperchio dell'apparecchio SG100 o SG1000
+
+Una volta completata la manutenzione dell'hardware interno, reinstallare il coperchio dell'apparecchio.
+
+.Prima di iniziare
+Tutte le procedure di manutenzione all'interno dell'apparecchio sono state completate.
+
+.Fasi
+. Con la chiusura a scatto del coperchio aperta, tenere il coperchio sopra il telaio e allineare il foro nella chiusura a scatto del coperchio superiore con il perno nel telaio. Una volta allineato il coperchio, abbassarlo sul telaio.
++
+image::../media/sg6060_cover_latch_alignment_pin.jpg[Perno di allineamento del dispositivo di chiusura del coperchio]
+
+. Ruotare il dispositivo di chiusura del coperchio in avanti e in basso fino a quando non si arresta e il coperchio non si inserisce completamente nel telaio. Verificare che non vi siano spazi vuoti lungo il bordo anteriore del coperchio.
++
+Se il coperchio non è completamente inserito, potrebbe non essere possibile inserire l'apparecchio nel rack.
+
+. Opzionale: Ruotare di un quarto di giro il fermo di plastica blu nella direzione di blocco, come mostrato sul fermo, per bloccarlo.
+
+
+.Al termine
+link:reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html["Reinstallate l'apparecchio nell'armadietto o nel rack."]
