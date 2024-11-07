@@ -17,7 +17,7 @@ Il LED blu di identificazione sulla parte anteriore e posteriore del controller 
 Si dispone dell'indirizzo IP BMC del controller che si desidera identificare.
 
 .Fasi
-. Accedere all'interfaccia BMC dell'appliance.
+. link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC dell'appliance"].
 . Selezionare *Server Identify* (identificazione server).
 +
 Viene selezionato lo stato corrente del LED di identificazione.
@@ -37,6 +37,6 @@ NOTE: Se sul controller è installato un pannello, potrebbe essere difficile ved
 
 
 .Informazioni correlate
-link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+* link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+* link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC"]
 
-link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC"]

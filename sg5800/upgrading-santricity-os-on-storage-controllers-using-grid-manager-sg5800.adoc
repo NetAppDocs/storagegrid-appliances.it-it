@@ -15,8 +15,8 @@ Per gli storage controller che attualmente utilizzano SANtricity OS 08.42.20.00 
 
 .Prima di iniziare
 * Se non è stata ottenuta la versione di SANtricity OS da cui si desidera eseguire l'aggiornamento https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^], è stata effettuata la consultazione https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^] o il https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp (IMT)"^] Per confermare che la versione di SANtricity OS utilizzata per l'aggiornamento è compatibile con l'appliance.
-* Hai il https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Autorizzazione di manutenzione o di accesso root"^].
-* Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* Si dispone di https://docs.netapp.com/us-en/storagegrid/admin/admin-group-permissions.html["Autorizzazione di manutenzione o di accesso root"^].
+* L'utente ha effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 * Si dispone della passphrase di provisioning.
 
 
@@ -32,7 +32,7 @@ CAUTION: I seguenti passaggi sono applicabili solo quando si utilizza Grid Manag
 NOTE: Questa procedura aggiornerà AUTOMATICAMENTE NVSRAM alla versione più recente associata all'aggiornamento del sistema operativo SANtricity. Non è necessario applicare un file di aggiornamento NVSRAM separato.
 
 
-NOTE: Assicurarsi di applicare la correzione rapida StorageGRID più recente prima di iniziare questa procedura. Vedere https://docs.netapp.com/us-en/storagegrid-118/maintain/storagegrid-hotfix-procedure.html["Procedura di hotfix StorageGRID"^] per ulteriori informazioni.
+NOTE: Assicurarsi di applicare la correzione rapida StorageGRID più recente prima di iniziare questa procedura. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["Procedura di hotfix StorageGRID"^].
 
 .Fasi
 . [[download-santricity-os]] Scarica il nuovo file del software SANtricity OS da https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^].
@@ -195,6 +195,6 @@ NOTE: Per i nodi con stato di attenzione alle esigenze, utilizzare la modalità 
 
 
 .Informazioni correlate
-https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^]
+* https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp"^]
+* link:upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html["Aggiornare il sistema operativo SANtricity sul controller E4000 usando la modalità di manutenzione"]
 
-link:upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html["Aggiornare il sistema operativo SANtricity sul controller E4000 usando la modalità di manutenzione"]

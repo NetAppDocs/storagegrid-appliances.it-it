@@ -20,7 +20,7 @@ Rimuovere il SGF6112 o il SG6100-CN da un armadietto o da un rack per accedere a
 .Prima di iniziare
 * Sono presenti etichette per identificare ciascun cavo collegato a SGF6112 o SG6100-CN.
 * Lo hai fatto link:locating-sgf6112-in-data-center.html["Situato fisicamente il SGF6112 o SG6100-CN"] dove si eseguono interventi di manutenzione nel data center,
-* Lo hai fatto link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Spegnere SGF6112 o SG6100-CN"].
+* Si dispone di link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Spegnere SGF6112 o SG6100-CN"].
 +
 
 CAUTION: Non spegnere l'apparecchio utilizzando l'interruttore di alimentazione.
@@ -81,4 +81,4 @@ NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o
 
 
 .Al termine
-link:power-sgf6112-off-on.html#power-on-sgf6112-and-verify-operation["Riavviare l'apparecchio"].
+link:power-sgf6112-off-on.html#power-on-sgf6112-or-sg6100-cn-and-verify-operation["Riavviare l'apparecchio"].

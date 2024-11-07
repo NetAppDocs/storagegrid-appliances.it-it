@@ -14,11 +14,10 @@ summary: È possibile, in via opzionale, rimappare le porte interne di un nodo a
 È possibile, in via opzionale, rimappare le porte interne di un nodo appliance a porte esterne diverse. Ad esempio, potrebbe essere necessario rimappare le porte a causa di un problema di firewall.
 
 .Prima di iniziare
-* In precedenza è stato effettuato l'accesso al programma di installazione dell'appliance StorageGRID.
-
+In precedenza è stato effettuato l'accesso al programma di installazione dell'appliance StorageGRID.
 
 .A proposito di questa attività
-Non è possibile utilizzare le porte rimappate per gli endpoint del bilanciamento del carico. Se è necessario rimuovere una porta rimappata, seguire la procedura descritta in https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Rimuovere i rimap delle porte"^].
+Non è possibile utilizzare le porte rimappate per gli endpoint del bilanciamento del carico. Se è necessario rimuovere una porta rimappata, seguire la procedura descritta in https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Rimuovere i rimap delle porte"^].
 
 .Fasi
 . Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura rete* > *Porte di rimappamento*.

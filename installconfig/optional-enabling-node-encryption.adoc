@@ -19,7 +19,7 @@ summary: 'È possibile attivare la crittografia a livello di nodo e di disco per
 
 È possibile eseguire entrambi i livelli di crittografia sulle unità supportate per una maggiore protezione.
 
-Vedere https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^] Per informazioni su tutti i metodi di crittografia disponibili per i dispositivi StorageGRID.
+Vedere https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^] per informazioni su tutti i metodi di crittografia disponibili per le appliance StorageGRID.
 
 
 
@@ -30,7 +30,7 @@ Se si attiva la crittografia dei nodi, i dischi dell'appliance possono essere pr
 Se si utilizza ConfigBuilder per generare un file JSON, è possibile attivare automaticamente la crittografia del nodo. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
 
 .Prima di iniziare
-Esaminare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurazione di KMS"^].
+Rivedere le informazioni su https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurazione di KMS"^].
 
 .A proposito di questa attività
 Un'appliance con crittografia dei nodi abilitata si connette al server di gestione delle chiavi (KMS) esterno configurato per il sito StorageGRID. Ogni KMS (o cluster KMS) gestisce le chiavi di crittografia per tutti i nodi appliance del sito. Queste chiavi crittografano e decrittare i dati su ciascun disco di un'appliance che ha attivato la crittografia dei nodi.
@@ -42,7 +42,7 @@ Un'appliance con crittografia dei nodi abilitata si connette al server di gestio
 
 
 
-CAUTION: Quando si installa un appliance con la crittografia dei nodi attivata, viene assegnata una chiave temporanea. I dati sull'appliance non sono protetti finché l'appliance non viene collegata al sistema di gestione delle chiavi (KMS) e non viene impostata una chiave di sicurezza KMS. Vedere https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html["Panoramica della configurazione dell'appliance KMS"^] per ulteriori informazioni.
+CAUTION: Quando si installa un appliance con la crittografia dei nodi attivata, viene assegnata una chiave temporanea. I dati sull'appliance non sono protetti finché l'appliance non viene collegata al sistema di gestione delle chiavi (KMS) e non viene impostata una chiave di sicurezza KMS. Per ulteriori informazioni, vedere la https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Panoramica della configurazione dell'appliance KMS"^] .
 
 Senza la chiave KMS necessaria per decrittare il disco, i dati sull'appliance non possono essere recuperati e vengono effettivamente persi. Questo accade quando non è possibile recuperare la chiave di decrittografia dal KMS. La chiave diventa inaccessibile se un cliente cancella la configurazione del KMS, scade una chiave KMS, la connessione al KMS viene persa o l'appliance viene rimossa dal sistema StorageGRID in cui sono installate le chiavi KMS.
 
@@ -107,7 +107,7 @@ La crittografia dei dischi non si applica ai dischi gestiti da SANtricity. Se si
 È possibile abilitare la crittografia dei dischi durante l'installazione iniziale dell'appliance prima di caricare Grid Manager. È inoltre possibile attivare la crittografia dei nodi o modificare la passphrase impostando l'appliance in modalità di manutenzione.
 
 .Prima di iniziare
-Esaminare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^].
+Rivedere le informazioni su https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^].
 
 .A proposito di questa attività
 Quando la crittografia dell'unità viene inizialmente attivata, viene impostata una passphrase. Se un nodo di elaborazione viene sostituito o se un SED crittografato viene spostato in un nuovo nodo di elaborazione, è necessario immettere nuovamente la passphrase manualmente.

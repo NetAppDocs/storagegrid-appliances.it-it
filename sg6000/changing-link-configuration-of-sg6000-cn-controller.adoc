@@ -41,7 +41,7 @@ NOTE: La connessione potrebbe andare persa se sono state apportate modifiche all
 `*https://_Appliance_Controller_IP_:8443*`
 
 +
-Se sono state apportate modifiche alle impostazioni della VLAN, la subnet dell'appliance potrebbe essere cambiata. Se è necessario modificare gli indirizzi IP dell'appliance, seguire la procedura https://docs.netapp.com/us-en/storagegrid-118/maintain/configuring-ip-addresses.html["Configurare gli indirizzi IP"^] istruzioni.
+Se sono state apportate modifiche alle impostazioni della VLAN, la subnet dell'appliance potrebbe essere cambiata. Se è necessario modificare gli indirizzi IP del dispositivo, seguire le https://docs.netapp.com/us-en/storagegrid/maintain/configuring-ip-addresses.html["Configurare gli indirizzi IP"^] istruzioni.
 
 +
 link:../installconfig/setting-ip-configuration.html["Configurare gli indirizzi IP StorageGRID"]

@@ -41,7 +41,7 @@ image::../media/sg6060_riser_alignment_hole.jpg[Foro di allineamento sul gruppo 
 . Se l'appliance sostituita utilizzava un server di gestione delle chiavi (KMS) per gestire le chiavi di crittografia per la crittografia dei nodi, potrebbe essere necessaria una configurazione aggiuntiva prima che il nodo possa unirsi al grid. Se il nodo non si unisce automaticamente alla griglia, assicurarsi che queste impostazioni di configurazione siano state trasferite alla nuova appliance e configurare manualmente le impostazioni che non hanno la configurazione prevista:
 +
 ** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configurare le connessioni StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
 
 
 . Accedere all'appliance:

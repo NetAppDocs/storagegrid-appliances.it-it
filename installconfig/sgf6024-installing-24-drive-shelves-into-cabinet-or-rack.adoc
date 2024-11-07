@@ -14,7 +14,7 @@ summary: 'Installare un set di guide per lo shelf del controller EF570 nel cabin
 Installare un set di guide per lo shelf del controller EF570 nel cabinet o nel rack, quindi far scorrere l'array sulle guide.
 
 .Prima di iniziare
-* Hai esaminato il documento Safety Notices incluso nella confezione e compreso le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Hai esaminato il https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"^] documento incluso nella confezione e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.
 * Le istruzioni sono fornite con il kit di guide.
 
 

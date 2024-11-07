@@ -30,7 +30,7 @@ Utilizzare queste informazioni per ottenere assistenza link:troubleshooting-hard
 Indicatori e pulsanti dell'apparecchio::
 +
 --
-La figura seguente mostra gli indicatori di stato e i pulsanti di SG100 e SG1000.
+La figura seguente mostra gli indicatori di stato e i pulsanti sulla parte anteriore dei modelli SG100 e SG1000.
 
 image::../media/sg6000_cn_front_indicators.gif[Indicatori anteriori - SG1000]
 
@@ -89,6 +89,39 @@ LED di allarme
 --
 
 
+La figura seguente mostra la posizione dell'alimentatore e identifica i LED sul retro di SG100 e SG1000. Ulteriori LED di stato e di attività si trovano sulle porte dell'appliance. Questi LED possono variare in base al modello di apparecchio.
+
+image::../media/q2023_rear_leds.png[LED posteriori SG100 e SG1000]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+|===
 [[general_boot_codes_SG100_1000]]
 Codici generali di boot::
 +
@@ -159,7 +192,7 @@ Utilizzare queste informazioni per ottenere assistenza link:troubleshooting-hard
 Indicatori e pulsanti dell'apparecchio::
 +
 --
-La figura seguente mostra gli indicatori e i pulsanti sugli apparecchi SG110 e SG1100.
+La figura seguente mostra gli indicatori e i pulsanti sulla parte anteriore degli apparecchi SG110 e SG1100.
 
 image::../media/sgf6112_front_indicators.png[Indicatori anteriori - SG110 e SG1100]
 
@@ -227,6 +260,39 @@ Questa luce non viene utilizzata dagli apparecchi SG110 e SG1100 e rimane spenta
 --
 
 
+La figura seguente mostra la posizione dell'alimentatore e identifica i LED sul retro di SG110 e SG1100. Ulteriori LED di stato e di attività si trovano sulle porte dell'appliance. Questi LED possono variare in base al modello di apparecchio.
+
+image::../media/q2024_rear_leds.png[LED posteriori SG110 e SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+|===
 [[general_boot_codes]]
 Codici generali di boot::
 +
@@ -475,6 +541,13 @@ Durante il normale avvio dell'appliance, il display a sette segmenti del control
 [cols="1a,3a"]
 |===
 | Codice | Indica 
+
+
+ a| 
+ALT
+ a| 
+Lo script di avvio principale è in attesa del completamento dell'avvio del sistema operativo.
+
 
 
  a| 
@@ -744,8 +817,7 @@ Verde lampeggiante: È presente un'attività Ethernet.
 
 
 .Informazioni correlate
-* https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^]
-
+link:https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^]
 
 --
 .SG6000
@@ -765,7 +837,7 @@ Indicatori di stato e pulsanti sul controller SG6000-CN::
 --
 Il controller SG6000-CN include indicatori che consentono di determinare lo stato del controller, inclusi i seguenti indicatori e pulsanti.
 
-La figura seguente mostra gli indicatori di stato e i pulsanti sul controller SG6000-CN.
+La figura seguente mostra gli indicatori di stato e i pulsanti sulla parte anteriore del controller SG6000-CN.
 
 image::../media/sg6000_cn_front_indicators.gif[Indicatori anteriori - SG6000-CN]
 
@@ -825,6 +897,39 @@ LED di allarme
 --
 
 
+La figura seguente mostra la posizione dell'alimentatore e identifica i LED sul retro del controller SG6000-CN. Ulteriori LED di stato e di attività si trovano sulle porte dell'appliance. Questi LED possono variare in base al modello di apparecchio.
+
+image::../media/q2023_rear_leds.png[LED posteriori SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+|===
 [[general_boot_codes_sg6000]]
 Codici generali di boot::
 +
@@ -889,7 +994,7 @@ Utilizzare queste informazioni per ottenere assistenza link:troubleshooting-hard
 Indicatori e pulsanti dell'apparecchio::
 +
 --
-La figura seguente mostra gli indicatori e i pulsanti sui dispositivi SG6100.
+La figura seguente mostra gli indicatori e i pulsanti sulla parte anteriore degli apparecchi SG6100.
 
 image::../media/sgf6112_front_indicators.png[Indicatori anteriori - SGF6112]
 
@@ -957,6 +1062,39 @@ Questa luce non viene utilizzata dagli apparecchi SG6100 e rimane spenta.
 --
 
 
+La figura seguente mostra la posizione dell'alimentatore e identifica i LED sul retro di SGF6112 e SG6100-CN. Ulteriori LED di stato e di attività si trovano sulle porte dell'appliance. Questi LED possono variare in base al modello di apparecchio.
+
+image::../media/q2024_rear_leds.png[LED posteriori SGF6112 e SG6100-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+|===
 [[general_boot_codes_SG6100]]
 Codici generali di boot::
 +
@@ -1013,8 +1151,7 @@ Blu (lampeggiante): Accesso all'unità in corso
 
 
 .Informazioni correlate
-* https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^]
-
+https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^]
 
 --
 ====

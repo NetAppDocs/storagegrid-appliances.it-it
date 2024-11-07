@@ -37,8 +37,7 @@ NOTE: Se sul controller è installato un pannello, potrebbe essere difficile ved
 
 
 .Informazioni correlate
-link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Verificare l'HBA Fibre Channel da sostituire"]
+* link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Verificare l'HBA Fibre Channel da sostituire"]
+* link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
+* link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC"]
 
-link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
-
-link:../installconfig/accessing-bmc-interface.html["Accedere all'interfaccia BMC"]

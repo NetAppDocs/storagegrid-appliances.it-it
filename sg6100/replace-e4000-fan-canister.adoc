@@ -50,7 +50,7 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 . Da Gestore di sistema di SANtricity, determinare quale filtro a carboni attivi della ventola si è guastato.
 +
 .. Selezionare *hardware*.
-.. Guardare la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] A destra degli elenchi a discesa *ripiano* per determinare quale dispositivo presenta il filtro della ventola guasto.
+.. Osservare l'icona della ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icona ventola"]a destra degli elenchi a discesa *ripiano* per determinare quale dispositivo presenta il filtro della ventola guasto.
 +
 In caso di guasto di un componente, questa icona è rossa.
 

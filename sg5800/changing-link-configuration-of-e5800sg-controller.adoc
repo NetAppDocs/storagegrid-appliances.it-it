@@ -47,7 +47,7 @@ NOTE: La connessione potrebbe andare persa se sono state apportate modifiche all
 Se sono state apportate modifiche alle impostazioni della VLAN, la subnet dell'appliance potrebbe essere cambiata. Se è necessario modificare gli indirizzi IP dell'appliance, seguire la procedura link:../installconfig/setting-ip-configuration.html["Configurare gli indirizzi IP StorageGRID"] istruzioni.
 
 . Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura rete* > *Test ping*.
-. Utilizzare lo strumento Ping Test per verificare la connettività agli indirizzi IP su qualsiasi rete che potrebbe essere stata interessata dalle modifiche apportate alla configurazione del collegamento in  <<change_link_configuration_sg5700,Modificare la configurazione del collegamento>> fase.
+. Utilizzare lo strumento Test ping per controllare la connettività agli indirizzi IP su tutte le reti che potrebbero essere state interessate dalle modifiche apportate alla configurazione del collegamento nel <<change_link_configuration_sg5800,Modificare la configurazione del collegamento>>passaggio.
 +
 Oltre a qualsiasi altro test che si sceglie di eseguire, verificare che sia possibile eseguire il ping dell'indirizzo IP della griglia del nodo di amministrazione primario e dell'indirizzo IP della griglia di almeno un altro nodo di storage. Se necessario, correggere eventuali problemi di configurazione del collegamento.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
 summary: 'Per garantire un funzionamento ottimale dello storage controller, è necessario eseguire l"aggiornamento alla versione di manutenzione più recente del sistema operativo SANtricity che sia qualificato per l"appliance StorageGRID.' 
 ---
-= Upgrade del sistema operativo SANtricity sugli storage controller SG6000
+= Informazioni sull'aggiornamento del sistema operativo SANtricity sugli storage controller SG6000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

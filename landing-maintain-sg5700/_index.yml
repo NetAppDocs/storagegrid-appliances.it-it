@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Gestire l'hardware dell'appliance di storage SG5700
+  summary: Manutenzione dell'hardware per l'appliance di storage SG5700.
+  keywords: maintain storagegrid sg5700
+  lead: Manutenzione dell'hardware per l'appliance di storage SG5700.
   tiles:
   - title: Procedure eseguite di frequente
     links:
@@ -7,8 +11,10 @@ indexpage:
       url: "../sg5700/changing-link-configuration-of-e5700sg-controller.html"
     - title: Upgrade SANtricity (Aggiorna server)
       url: "../sg5700/upgrading-santricity-os-on-storage-controller.html"
-    - title: Aggiornare il firmware del disco
-      url: "../sg5700/upgrading-drive-firmware-using-santricity-system-manager.html"
+    - title: Aggiornamento del firmware dell'unità (metodo online)
+      url: "../sg5700/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Aggiornamento del firmware dell'unità (metodo offline)
+      url: "../sg5700/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
   - title: Procedure hardware
     links:
     - title: Sostituzione dello storage controller serie E2800

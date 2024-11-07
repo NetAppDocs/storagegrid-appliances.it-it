@@ -26,14 +26,11 @@ NOTE: R link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-ap
 
 
 .A proposito di questa attività
-Per evitare interruzioni del servizio, verificare che tutti gli altri nodi storage siano collegati alla griglia prima di iniziare la sostituzione della ventola o sostituire la ventola durante una finestra di manutenzione programmata in caso di accettabili periodi di interruzione del servizio. Consultare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
-
-
-CAUTION: Se è stata utilizzata una regola ILM che crea solo una copia di un oggetto, è necessario sostituire la ventola durante una finestra di manutenzione pianificata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
+Per evitare interruzioni del servizio, verificare che tutti gli altri nodi storage siano collegati alla griglia prima di iniziare la sostituzione della ventola o sostituire la ventola durante una finestra di manutenzione programmata in caso di accettabili periodi di interruzione del servizio. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
 
 Il nodo dell'appliance non sarà accessibile durante la sostituzione della ventola.
 
-La fotografia mostra una ventola per l'apparecchio. Il connettore elettrico viene evidenziato. Le ventole di raffreddamento sono accessibili dopo aver aperto il coperchio superiore dell'apparecchio.
+L'immagine mostra una ventola per l'apparecchio con il connettore elettrico evidenziato. Le ventole di raffreddamento sono accessibili dopo aver aperto il coperchio superiore dell'apparecchio.
 
 
 NOTE: Ciascuna delle due unità di alimentazione contiene anche una ventola. Le ventole dell'alimentatore non sono incluse in questa procedura.
@@ -49,11 +46,8 @@ Le otto ventole si trovano nelle seguenti posizioni nello chassis (in figura è 
 +
 image::../media/SGF6112-fan-locations.png[Posizioni delle ventole]
 
-
-
++
 |===
-
-
 |  | Gruppo ventola 
 
 

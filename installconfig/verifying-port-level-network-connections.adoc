@@ -16,7 +16,7 @@ Per garantire che l'accesso tra il programma di installazione dell'appliance Sto
 .A proposito di questa attività
 Utilizzando l'elenco delle porte fornito nel programma di installazione dell'appliance StorageGRID, è possibile verificare la connettività tra l'appliance e gli altri nodi della rete grid.
 
-Inoltre, è possibile verificare la connettività sulle reti Admin e Client e sulle porte UDP, ad esempio quelle utilizzate per server NFS o DNS esterni. Per un elenco di queste porte, consultare https://docs.netapp.com/us-en/storagegrid-118/network/network-port-reference.html["riferimento porta di rete"^].
+Inoltre, è possibile verificare la connettività sulle reti Admin e Client e sulle porte UDP, ad esempio quelle utilizzate per server NFS o DNS esterni. Per un elenco di queste porte, vedere la https://docs.netapp.com/us-en/storagegrid/network/network-port-reference.html["riferimento porta di rete"^].
 
 
 NOTE: Le porte di rete elencate nella tabella di connettività delle porte sono valide solo per StorageGRID versione 11,7 o successiva. Per verificare quali porte sono corrette per ciascun tipo di nodo, consultare sempre le linee guida di rete per la versione di StorageGRID in uso.

@@ -14,8 +14,7 @@ summary: 'È possibile modificare la configurazione del collegamento Ethernet de
 È possibile modificare la configurazione del collegamento Ethernet dell'appliance, inclusa la modalità port bond, la modalità network bond e la velocità di collegamento.
 
 .Prima di iniziare
-* Lo hai fatto link:../commonhardware/placing-appliance-into-maintenance-mode.html["impostare l'apparecchio in modalità di manutenzione"].
-
+Lo hai fatto link:../commonhardware/placing-appliance-into-maintenance-mode.html["impostare l'apparecchio in modalità di manutenzione"].
 
 
 NOTE: In rari casi, l'attivazione della modalità di manutenzione di un'appliance StorageGRID potrebbe rendere l'appliance non disponibile per l'accesso remoto.
@@ -28,8 +27,7 @@ Per ulteriori informazioni sulle opzioni, vedere link:../installconfig/configuri
 
 +
 
-NOTE: Le modifiche alla configurazione IP apportate mentre l'appliance è in modalità di manutenzione non vengono applicate all'ambiente StorageGRID installato. Eseguire
-[`change-ip` Command] dopo aver riavviato l'appliance in StorageGRID.
+NOTE: Le modifiche alla configurazione IP apportate mentre l'appliance è in modalità di manutenzione non vengono applicate all'ambiente StorageGRID installato. Esegui il [`change-ip` comando] dopo aver riavviato l'appliance in StorageGRID.
 
 . Una volta selezionate le opzioni desiderate, fare clic su *Save* (Salva).
 +

@@ -21,7 +21,7 @@ Potrebbe essere necessario sostituire la batteria, l'unità, la ventola o l'alim
 .A proposito di questa attività
 Per sostituire la batteria nel controller E2800, vedere le istruzioni in queste istruzioni per link:replacing-e2800-controller.html["Sostituzione della centralina E2800"]. Queste istruzioni descrivono come rimuovere il controller dall'appliance, rimuovere la batteria dal controller, installare la batteria e sostituire il controller.
 
-Per sostituire un'unità, un contenitore della ventola, un contenitore della ventola, un contenitore dell'alimentazione o un cassetto dell'unità nell'appliance, accedere al http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedure e-Series per la manutenzione dell'hardware E2800"^].
+Per sostituire un'unità, un contenitore della ventola, un contenitore della ventola, un contenitore dell'alimentazione o un cassetto dell'unità nell'apparecchio, accedere a https://docs.netapp.com/us-en/e-series-family/index.html["Procedure e-Series per la manutenzione dell'hardware E2800"^].
 
 
 

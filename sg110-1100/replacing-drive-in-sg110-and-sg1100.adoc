@@ -29,9 +29,10 @@ IMPORTANT: Consultare le informazioni relative alla visualizzazione degli indica
 +
 Le unità si trovano nelle seguenti posizioni nello chassis (parte anteriore dello chassis con il pannello rimosso in figura):
 
-
-
++
 image::../media/sg1100_front_with_ssds.png[Posizioni di guida SG110 e SG1100]
+
+
 
 . Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
 . Disimballare l'unità sostitutiva e appoggiarla su una superficie piana e priva di elettricità statica vicino all'apparecchio.

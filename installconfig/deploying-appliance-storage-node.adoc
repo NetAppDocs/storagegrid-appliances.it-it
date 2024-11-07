@@ -38,8 +38,8 @@ NOTE: Se è necessario implementare più nodi di appliance contemporaneamente, �
 
 * Se si sta eseguendo un'operazione di espansione o ripristino, seguire le istruzioni appropriate:
 +
-** Per aggiungere un nodo di storage dell'appliance a un sistema StorageGRID esistente, consultare le istruzioni di https://docs.netapp.com/us-en/storagegrid-118/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["aggiunta di nodi griglia"^].
-** Per implementare un nodo di storage dell'appliance come parte di un'operazione di recovery, consultare le istruzioni https://docs.netapp.com/us-en/storagegrid-118/maintain/recovering-storagegrid-appliance-storage-node.html["Ripristino di un nodo di storage dell'appliance"^].
+** Per aggiungere un nodo di archiviazione appliance a un sistema StorageGRID esistente, vedere le istruzioni per https://docs.netapp.com/us-en/storagegrid/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["aggiunta di nodi griglia"^].
+** Per distribuire un nodo di archiviazione dell'appliance come parte di un'operazione di ripristino, vedere le istruzioni https://docs.netapp.com/us-en/storagegrid/maintain/recovering-storagegrid-appliance-storage-node.html["Ripristino di un nodo di storage dell'appliance"^].
 
 
 
@@ -50,8 +50,14 @@ NOTE: Se è necessario implementare più nodi di appliance contemporaneamente, �
 +
 Viene visualizzata la pagina iniziale del programma di installazione dell'appliance StorageGRID.
 
+. Selezionare il *tipo di nodo*. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/storagegrid/primer/what-storage-node-is.html#types-of-storage-nodes["Tipi di nodi storage"].
 +
-image::../media/appliance_installer_home_start_installation_enabled.gif[Pagina iniziale del programma di installazione dell'appliance per altri tipi di nodi (oltre ai nodi di amministrazione)]
+
+NOTE: È possibile selezionare solo i metadati durante l'implementazione dell'appliance. Se è selezionato solo metadati come tipo di nodo di archiviazione, non è possibile modificarlo dopo la distribuzione dell'appliance.
+
+. Nel campo *Node name* (Nome nodo), specificare il nome di sistema che si desidera utilizzare per il nodo dell'appliance e fare clic su *Save* (Salva).
++
+Il nome visualizzato qui corrisponde al nome di sistema del nodo dell'appliance. I nomi di sistema sono richiesti per le operazioni StorageGRID interne e non possono essere modificati.
 
 . Nella sezione *Primary Admin Node Connection* (connessione nodo amministratore primario), determinare se è necessario specificare l'indirizzo IP per il nodo amministratore primario.
 +
@@ -86,10 +92,6 @@ Rilevamento automatico di tutti i nodi amministrativi primari connessi
 
 
 |===
-. Nel campo *Node name* (Nome nodo), specificare il nome di sistema che si desidera utilizzare per il nodo dell'appliance e fare clic su *Save* (Salva).
-+
-Il nome visualizzato qui corrisponde al nome di sistema del nodo dell'appliance. I nomi di sistema sono richiesti per le operazioni StorageGRID interne e non possono essere modificati.
-
 . Nella sezione *Installazione*, verificare che lo stato corrente sia "Pronto per avviare l'installazione di `_node name_` Nella griglia con nodo di amministrazione primario `_admin_ip_` " E che il pulsante *Avvia installazione* sia attivato.
 +
 Se il pulsante *Avvia installazione* non è attivato, potrebbe essere necessario modificare la configurazione di rete o le impostazioni della porta. Per istruzioni, consultare le istruzioni di manutenzione dell'apparecchio.

@@ -33,7 +33,7 @@ NOTE: Non mischiare le PSU dei diversi tipi di tensione. Sostituire sempre come 
 ** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 ** Accesso a Gestione sistema SANtricity:
 +
-*** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+*** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"] .
 *** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
 
 
@@ -64,7 +64,7 @@ Queste informazioni sono disponibili nell'area Details (Dettagli) del Recovery G
 
 +
 .. Selezionare *hardware*.
-.. Guarda la potenza image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] e la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Icone a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.
+.. Osservare le icone dell'alimentazione image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icona di alimentazione"] e della ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icona ventola"]a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.
 +
 In caso di guasto di un componente, una o entrambe queste icone sono rosse.
 

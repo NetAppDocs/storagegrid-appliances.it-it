@@ -14,7 +14,7 @@ summary: 'Installare una serie di guide nell"armadietto o nel rack, quindi far s
 Installare una serie di guide nell'armadietto o nel rack, quindi far scorrere l'apparecchio sulle guide. Se si dispone di un sistema SG5760, installare le unità dopo l'installazione dell'apparecchio.
 
 .Prima di iniziare
-* Hai esaminato il documento Safety Notices incluso nella confezione e compreso le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Hai esaminato il https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"^] documento incluso nella confezione e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.
 * Le istruzioni sono fornite con il kit di guide.
 
 

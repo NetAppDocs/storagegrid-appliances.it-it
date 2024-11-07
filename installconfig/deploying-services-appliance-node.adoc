@@ -22,7 +22,7 @@ Quando si implementa un'appliance di servizi come nodo amministrativo primario, 
 .Prima di iniziare
 * L'apparecchio è stato installato in un rack o in un cabinet, collegato alla rete e acceso.
 * I collegamenti di rete, gli indirizzi IP e il rimapping delle porte (se necessario) sono stati configurati per l'appliance utilizzando il programma di installazione dell'appliance StorageGRID.
-* Si dispone di un laptop di assistenza con un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* Si dispone di un laptop di assistenza con un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 * Conosci uno degli indirizzi IP assegnati all'appliance. È possibile utilizzare l'indirizzo IP per qualsiasi rete StorageGRID collegata.
 
 
@@ -90,7 +90,7 @@ Quando si implementa un'appliance di servizi come nodo gateway o nodo amministra
 * I collegamenti di rete, gli indirizzi IP e il rimapping delle porte (se necessario) sono stati configurati per l'appliance utilizzando il programma di installazione dell'appliance StorageGRID.
 * Il nodo amministrativo primario per il sistema StorageGRID è stato implementato.
 * Tutte le subnet della rete griglia elencate nella pagina di configurazione IP del programma di installazione dell'appliance StorageGRID sono state definite nell'elenco delle subnet della rete griglia nel nodo di amministrazione principale.
-* Si dispone di un laptop di assistenza con un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* Si dispone di un laptop di assistenza con un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 * L'indirizzo IP assegnato all'appliance è noto. È possibile utilizzare l'indirizzo IP per qualsiasi rete StorageGRID collegata.
 
 

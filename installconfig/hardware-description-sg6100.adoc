@@ -199,6 +199,39 @@ Opzioni:
 
 
 |===
+Questa figura mostra la posizione dell'alimentatore e identifica i LED sul retro del SGF6112. Ulteriori LED di stato e di attività si trovano sulle porte dell'appliance. Questi LED possono variare in base al modello di apparecchio.
+
+image::../media/q2024_rear_leds.png[LED posteriori SGF6112]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+|===
 
 
 === SG6160 Vista frontale
@@ -290,6 +323,8 @@ NOTE: Il software StorageGRID non è preinstallato sull'appliance. Questo softwa
 * Si connette ai controller di storage e-Series e funziona come iniziatore.
 
 
+Questa figura mostra le porte sul retro del controller di calcolo SG6100-CN.
+
 image::../media/sg6100_cn_rear_connectors.png[Connettori posteriori SG6100-CN]
 
 [cols="1a,2a,2a,3a"]
@@ -302,7 +337,9 @@ image::../media/sg6100_cn_rear_connectors.png[Connettori posteriori SG6100-CN]
  a| 
 Porte di rete 1-4
  a| 
-10-GbE, 25-GbE o 100-GbE in base al tipo di ricetrasmettitore SFP o via cavo, alla velocità dello switch e alla velocità di collegamento configurata
+* 10/25-GbE basato sul tipo di cavo o ricetrasmettitore SFP (sono supportati i moduli SFP28 e SFP+), la velocità di commutazione e la velocità di collegamento configurata.
+* Con SKU NIC 100g opzionale (solo SG6160), 10/25/40/100-GbE in base al tipo di cavo o ricetrasmettitore, alla velocità dello switch e alla velocità di collegamento configurata. QSFP56 (limitato a 100GbE GbE/porta), QSFP28 (100GbE GbE) e QSFP+ (40GbE GbE) sono supportati a livello nativo. È possibile utilizzare i ricetrasmettitori SFP+ (10GbE) o SFP28 (25GbE) opzionali con una QSA (venduta separatamente).
+
  a| 
 Connettersi alla rete griglia e alla rete client per StorageGRID.
 
@@ -369,6 +406,39 @@ Porta di interconnessione
 100 GbE
  a| 
 Collegare la centralina SG6100-CN alle centraline E4000.
+
+|===
+Questa figura mostra la posizione dell'alimentatore e identifica i LED sul retro del controller di calcolo SG6100-CN. Ulteriori LED di stato e di attività si trovano sulle porte dell'appliance. Questi LED possono variare in base al modello di apparecchio.
+
+image::../media/q2023_rear_leds.png[LED posteriori SG6100-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
 
 |===
 

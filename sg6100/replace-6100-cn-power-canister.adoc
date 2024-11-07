@@ -52,7 +52,7 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 . Da Gestore di sistema di SANtricity, determinare quale contenitore di alimentazione si è guastato.
 +
 .. Selezionare *hardware*.
-.. Guarda la potenza image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] A destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta il contenitore di alimentazione guasto.
+.. Osservare l'icona di alimentazione a destra degli elenchi a discesa *ripiano* per determinare quale ripiano presenta il contenitore di alimentazione image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icona di alimentazione"]guasto.
 +
 In caso di guasto di un componente, questa icona è rossa.
 

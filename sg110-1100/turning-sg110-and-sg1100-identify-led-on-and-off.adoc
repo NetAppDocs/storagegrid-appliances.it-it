@@ -2,7 +2,7 @@
 permalink: sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html 
 sidebar: sidebar 
 keywords: sg110, sg1100, locate, find, locating, finding, identify, blue led, blue light 
-summary: 'Il LED blu di identificazione sulla parte anteriore dell"apparecchio può essere acceso per facilitare la localizzazione dell"apparecchio in un data center.' 
+summary: 'Il LED blu di identificazione sulla parte anteriore e posteriore dell"apparecchio può essere acceso per facilitare l"individuazione dell"apparecchio in un centro dati.' 
 ---
 = Accendere e spegnere il LED di identificazione SG110 o SG1100
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Il LED blu di identificazione sulla parte anteriore dell"apparecchio p
 
 
 [role="lead"]
-Il LED blu di identificazione sulla parte anteriore e posteriore dell'apparecchio può essere acceso per facilitare l'individuazione dell'apparecchio in un data center.
+Il LED blu di identificazione sulla parte anteriore e posteriore dell'apparecchio può essere acceso per facilitare l'individuazione dell'apparecchio in un centro dati.
 
 .Prima di iniziare
 Si dispone dell'indirizzo IP BMC del dispositivo che si desidera identificare.

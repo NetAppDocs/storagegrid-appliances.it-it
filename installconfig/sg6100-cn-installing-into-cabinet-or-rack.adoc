@@ -14,7 +14,7 @@ summary: È necessario installare un set di guide per il controller SG6100-CN ne
 È necessario installare un set di guide per il controller SG6100-CN nel cabinet o nel rack, quindi far scorrere il controller sulle guide.
 
 .Prima di iniziare
-* Hai esaminato il documento Safety Notices incluso nella confezione e compreso le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Hai esaminato il https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"^] documento incluso nella confezione e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.
 * Le istruzioni sono fornite con il kit di guide.
 * Hai installato lo shelf e i dischi del controller E4000.
 

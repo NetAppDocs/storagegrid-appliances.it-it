@@ -38,48 +38,9 @@ Quando si installa l'appliance sostitutiva, è necessario specificare gli indiri
 
 
 
-== Compatibilità con le appliance di destinazione
-
-Le appliance sostitutive devono essere dello stesso tipo del nodo di origine che stanno sostituendo ed entrambe devono far parte dello stesso sito logico StorageGRID.
-
-* Un'appliance di servizi sostitutiva può essere diversa dal nodo di amministrazione o dal nodo gateway che sta sostituendo.
-+
-** Puoi clonare un'appliance con nodi di origine SG100 su un'appliance con destinazione dei servizi SG110, SG1000 o SG1100. La clonazione di SG100 in un'appliance di destinazione dei servizi SG1000 o SG1100 offre una maggiore capacità al nodo amministrativo o al nodo gateway.
-** È possibile clonare un'appliance con nodo di origine SG110 in una destinazione di appliance con servizi SG1100 per fornire una maggiore funzionalità al nodo amministrativo o al nodo gateway.
-** Puoi clonare un'appliance con nodi di origine SG1000 su un'appliance con destinazione dei servizi SG100, SG110 o SG1100. Il cloning di SG1000 in un'appliance di destinazione dei servizi SG100 o SG110 consente di ridistribuire SG1000 per un'applicazione più complessa.
-** Puoi clonare un'appliance con nodi di origine SG1100 in un'appliance con destinazione dei servizi SG110 per reimplementare SG1100 in un'applicazione più complessa.
-+
-Ad esempio, se un'appliance con nodo di origine SG1100 o SG1000 viene utilizzata come nodo amministrativo e si desidera utilizzarla come nodo di bilanciamento del carico dedicato.
-
-** La sostituzione di un'appliance con nodo di origine SG1100 con un'appliance di destinazione dei servizi SG110 riduce la velocità massima delle porte di rete da 100-GbE a 25-GbE.
-** La sostituzione di un'appliance di nodo di origine SG1000 con un'appliance di destinazione dei servizi SG100 riduce la velocità massima delle porte di rete da 100 GbE a 25 GbE.
-** I dispositivi di servizi hanno connettori di rete diversi. La modifica del tipo di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
-
-
-* Un'appliance di storage sostitutiva deve avere una capacità superiore a quella del nodo di storage che sta sostituendo.
-+
-** Se l'appliance di storage di destinazione ha lo stesso numero di dischi del nodo di origine, i dischi dell'appliance di destinazione devono avere una capacità maggiore (in TB).
-** Se si intende utilizzare la stessa modalità RAID sul nodo di destinazione utilizzata sul nodo di origine, In caso di una modalità RAID meno efficiente in termini di storage (ad esempio, passando da RAID 6 a DDP), i dischi dell'appliance di destinazione devono essere più grandi (in TB) rispetto ai dischi dell'appliance di origine.
-** Se il numero di dischi standard installati in un'appliance di storage di destinazione è inferiore al numero di dischi nel nodo di origine, a causa dell'installazione di dischi a stato solido (SSD), la capacità di storage complessiva dei dischi standard nell'appliance di destinazione (in TB) Deve superare la capacità totale delle unità funzionali di tutti i dischi nel nodo di storage di origine.
-+
-Ad esempio, quando si esegue la clonazione di un'appliance Storage Node di origine SG5760 con 60 unità in un'appliance di destinazione SG6060 con 58 unità standard, è necessario installare unità più grandi nell'appliance di destinazione SG6060 prima di eseguire la clonazione per mantenere la capacità di storage. (I due slot per dischi contenenti SSD nell'appliance di destinazione non sono inclusi nella capacità di storage dell'appliance totale).
-
-+
-Tuttavia, se un'appliance di nodi di origine SG5760 da 60 dischi viene configurata con i pool di dischi dinamici SANtricity DDP-8, la configurazione di un'appliance di destinazione SG6060 da 58 dischi con le stesse dimensioni con DDP-16 potrebbe rendere l'appliance SG6060 una destinazione clona valida grazie alla sua efficienza dello storage migliorata.
-
-+
-È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *Storage* dell'appliance.
-
-
-
-* Il numero di volumi in un dispositivo di storage di destinazione deve essere maggiore o uguale al numero di volumi nel nodo di origine. Non è possibile clonare un nodo di origine con volumi di archivi di oggetti 16 (rangedb) in un'appliance di storage di destinazione con volumi di archivi di oggetti 12, anche se l'appliance di destinazione ha una capacità maggiore rispetto al nodo di origine. La maggior parte delle appliance di storage dispone di 16 volumi di archivi di oggetti, ad eccezione dell'appliance di storage SGF6112 che ha solo 12 volumi di archivi di oggetti.
-
-
-
-
 == Quali informazioni non vengono clonate?
 
-Le seguenti configurazioni dell'appliance non vengono trasferite all'appliance sostitutiva durante la clonazione. È necessario configurarli durante la configurazione iniziale dell'appliance sostitutiva.
+Le seguenti configurazioni dell'appliance non vengono trasferite all'appliance sostitutiva durante la clonazione. È necessario configurarli durante la configurazione iniziale dell'apparecchio sostitutivo.
 
 * Interfaccia BMC
 * Collegamenti di rete
@@ -101,3 +62,120 @@ Se durante la clonazione si verifica uno dei seguenti problemi, il processo di c
 
 
 Per continuare, è necessario risolvere ciascun problema.
+
+
+
+== Compatibilità con le appliance di destinazione
+
+Le appliance sostitutive devono essere dello stesso tipo del nodo di origine che stanno sostituendo ed entrambe devono far parte dello stesso sito logico StorageGRID.
+
+Prima di procedere alla clonazione, esaminare le considerazioni generali sulla clonazione, le informazioni e le restrizioni specifiche sulla clonazione per ciascun tipo di appliance.
+
+
+
+=== Considerazioni generali sulla clonazione delle appliance dei servizi
+
+* Un'appliance di servizi sostitutiva può avere un modello diverso da quello del nodo amministrativo o del nodo gateway da sostituire.
+* I dispositivi di servizi hanno connettori di rete diversi. La modifica del tipo di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
+
+
+
+
+=== Considerazioni generali sulla clonazione delle appliance di storage
+
+* Un'appliance di storage sostitutiva deve avere una capacità superiore a quella del nodo di storage che sta sostituendo.
++
+** Se l'appliance di storage di destinazione ha lo stesso numero di dischi del nodo di origine, i dischi dell'appliance di destinazione devono avere una capacità maggiore (in TB).
+** Se si intende utilizzare la stessa modalità RAID sul nodo di destinazione utilizzata sul nodo di origine, In caso di una modalità RAID meno efficiente in termini di storage (ad esempio, passando da RAID 6 a DDP), i dischi dell'appliance di destinazione devono essere più grandi (in TB) rispetto ai dischi dell'appliance di origine.
+** Le eccezioni alle considerazioni generali sulla clonazione delle appliance di storage includono:
++
+*** Se il numero di dischi standard installati in un'appliance di storage di destinazione è inferiore al numero di dischi nel nodo di origine, a causa dell'installazione di dischi a stato solido (SSD), la capacità di storage complessiva dei dischi standard nell'appliance di destinazione (in TB) Deve superare la capacità totale delle unità funzionali di tutti i dischi nel nodo di storage di origine.
++
+Ad esempio, quando si esegue la clonazione di un'appliance Storage Node di origine SG5760 con 60 unità in un'appliance di destinazione SG6060 con 58 unità standard, è necessario installare unità più grandi nell'appliance di destinazione SG6060 prima di eseguire la clonazione per mantenere la capacità di storage. (I due slot per dischi contenenti SSD nell'appliance di destinazione non sono inclusi nella capacità di storage dell'appliance totale).
+
++
+Tuttavia, se un'appliance con nodo di origine SG5760 a 60 dischi è configurata con SANtricity Dynamic Disk Pools DDP-8 (DDP), la configurazione di un'appliance di destinazione SG6060 con 58 dischi dello stesso formato e con DDP-16 potrebbe rendere l'appliance SG6060 un target clone valido, grazie alla migliorata efficienza dello storage.
+
++
+È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *Storage* dell'appliance.
+
+*** Il numero di volumi in un dispositivo di storage di destinazione deve essere maggiore o uguale al numero di volumi nel nodo di origine. Non è possibile clonare un nodo di origine con volumi di archivi di oggetti 16 (rangedb) in un'appliance di storage di destinazione con volumi di archivi di oggetti 12, anche se l'appliance di destinazione ha una capacità maggiore rispetto al nodo di origine. La maggior parte delle appliance di storage dispone di 16 volumi di archivi di oggetti, ad eccezione dell'appliance di storage SGF6112 che ha solo 12 volumi di archivi di oggetti.
+
+
+
+
+
+
+
+
+=== SG100 informazioni e restrizioni sulla clonazione delle appliance
+
+Puoi clonare un'appliance con nodi di origine SG100 su un'appliance con destinazione dei servizi SG110, SG1000 o SG1100. La clonazione di SG100 in un'appliance di destinazione dei servizi SG1000 o SG1100 offre una maggiore capacità al nodo amministrativo o al nodo gateway.
+
+
+
+=== SG110 informazioni e restrizioni sulla clonazione delle appliance
+
+È possibile clonare un'appliance con nodo di origine SG110 in una destinazione di appliance con servizi SG1100 per fornire una maggiore funzionalità al nodo amministrativo o al nodo gateway.
+
+
+
+=== SG1000 informazioni e restrizioni sulla clonazione delle appliance
+
+Puoi clonare un'appliance con nodi di origine SG1000 su un'appliance con destinazione dei servizi SG100, SG110 o SG1100.
+
+* Il cloning di SG1000 in un'appliance di destinazione dei servizi SG100 o SG110 consente di ridistribuire SG1000 per un'applicazione più complessa.
+* La sostituzione di un'appliance di nodo di origine SG1000 con un'appliance di destinazione dei servizi SG100 riduce la velocità massima delle porte di rete da 100 GbE a 25 GbE.
+
+
+
+
+=== SG1100 informazioni e restrizioni sulla clonazione delle appliance
+
+Puoi clonare un'appliance del nodo di origine SG1100 in un'appliance di destinazione dei servizi SG110.
+
+* La clonazione di SG1100 in un'appliance di destinazione dei servizi SG110 consente di ridistribuire SG1100 per un'applicazione più complessa. Ad esempio, se un'appliance SG1100 di nodi di origine viene utilizzata come nodo di amministrazione e si desidera utilizzarla come nodo di bilanciamento del carico dedicato.
+* La sostituzione di un'appliance con nodo di origine SG1100 con un'appliance di destinazione dei servizi SG110 riduce la velocità massima delle porte di rete da 100-GbE a 25-GbE.
+
+
+
+
+=== SG5712 informazioni e restrizioni sulla clonazione delle appliance
+
+È possibile clonare un'appliance del nodo di origine SG5712 configurata con DDP in un'appliance di destinazione storage SG5812.
+
+
+
+=== SG5760 informazioni e restrizioni sulla clonazione delle appliance
+
+* È possibile clonare un'appliance del nodo di origine SG5760 configurata con DDP16 su un'appliance di destinazione storage SG5860 configurata con DDP16.
+* Un'appliance con nodo di origine SG5760 configurata con DDP _non può_ essere clonata su un'appliance di destinazione storage SG5860 configurata con DDP.
+* Un'appliance con nodo di origine SG5760 configurata con DDP o DDP-16 _non può_ essere clonata in un'appliance di destinazione storage SG6160 con una modalità RAID corrispondente.
+
+
+
+
+=== SG5812 informazioni e restrizioni sulla clonazione delle appliance
+
+È possibile clonare correttamente un'appliance SG5812 come origine o destinazione.
+
+
+
+=== SG5860 informazioni e restrizioni sulla clonazione delle appliance
+
+È possibile clonare correttamente un'appliance SG5860 come origine o destinazione con alcune restrizioni (elencate nelle informazioni e nelle restrizioni sul cloning dell'appliance per ciascuna origine).
+
+
+
+=== SG6060 informazioni e restrizioni sulla clonazione delle appliance
+
+* Puoi clonare un'appliance con nodo di origine SG6060 configurata con DDP o DDP16 su un'appliance di destinazione storage SG5860 con una modalità RAID corrispondente.
+* Puoi clonare un'appliance del nodo di origine SG6060 senza shelf di espansione in un'appliance di destinazione storage SG6160 senza shelf di espansione, se le dimensioni dei dischi e le modalità RAID sono identiche.
+* Un'appliance con nodo di origine SG6060 e un numero qualsiasi di shelf di espansione _non può_ essere clonata in un'appliance di destinazione storage SG6160, anche se il numero di shelf di espansione, le dimensioni dei dischi e le modalità RAID sono identici.
+
+
+
+
+=== SG6160 informazioni e restrizioni sulla clonazione delle appliance
+
+È possibile clonare correttamente un'appliance SG6160 come origine o destinazione con alcune restrizioni (elencate nelle informazioni e nelle restrizioni sul cloning dell'appliance per ciascuna origine).

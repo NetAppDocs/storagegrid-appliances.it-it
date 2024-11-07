@@ -14,7 +14,7 @@ summary: Installare un set di guide per lo shelf del controller E2860 nel cabine
 Installare un set di guide per lo shelf del controller E2860 nel cabinet o nel rack, quindi far scorrere lo shelf del controller sulle guide. Se si installano shelf di espansione a 60 dischi, si applica la stessa procedura.
 
 .Prima di iniziare
-* Hai esaminato il documento Safety Notices incluso nella confezione e compreso le precauzioni per lo spostamento e l'installazione dell'hardware.
+* Hai esaminato il https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"^] documento incluso nella confezione e comprendere le precauzioni per lo spostamento e l'installazione dell'hardware.
 * Le istruzioni sono fornite con il kit di guide.
 
 

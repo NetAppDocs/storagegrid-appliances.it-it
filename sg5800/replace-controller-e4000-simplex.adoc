@@ -24,10 +24,10 @@ NOTE: Non fare affidamento sulle istruzioni e-Series per sostituire un controlle
 * Un braccialetto antistatico o sono state prese precauzioni antistatiche.
 * Etichette per identificare ciascun cavo collegato al controller.
 * Autorizzazioni di accesso specifiche.
-* È necessario accedere a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* È necessario accedere a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 * Accesso a Gestione sistema SANtricity:
 +
-** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"^] .
 ** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
 
 
@@ -180,12 +180,12 @@ image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Rimuovere la batteria 
 
 
  a| 
-image::../media/legend_icon_01.png[icona legenda 01]
+image::../media/legend_icon_01.png[Riferimento didascalia 1]
 | Linguetta di rilascio della batteria 
 
 
  a| 
-image::../media/legend_icon_02.png[icona legenda 02]
+image::../media/legend_icon_02.png[Riferimento didascalia 2]
 | Connettore di alimentazione della batteria 
 |===
 
@@ -229,12 +229,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Rimuovere i moduli DIMM.]
 
 
  a| 
-image::../media/legend_icon_01.png[icona legenda 01]
+image::../media/legend_icon_01.png[Riferimento didascalia 1]
 | Schede di espulsione DIMM 
 
 
  a| 
-image::../media/legend_icon_02.png[icona legenda 02]
+image::../media/legend_icon_02.png[Riferimento didascalia 2]
 | DIMM 
 |===
 

@@ -43,6 +43,39 @@ I due dischi a stato solido (SSD), indicati dal contorno arancione, vengono util
 
 Gli slot rimanenti sono vuoti.
 
+Questa figura mostra la posizione dell'alimentatore e identifica i LED sul retro di SG110 e SG1100. Ulteriori LED di stato e di attività si trovano sulle porte dell'appliance. Questi LED possono variare in base al modello di apparecchio.
+
+image::../media/q2024_rear_leds.png[LED posteriori SG110 e SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+|===
 
 
 == Connettori SG110
@@ -215,13 +248,13 @@ I seguenti esempi descrivono come massimizzare le funzionalità dell'appliance:
 * Utilizzare due appliance SG110 o due appliance SG1100 per fornire servizi gateway configurandoli come nodi gateway.
 +
 
-IMPORTANT: Non installare le appliance per i servizi SG110 e SG1100 nello stesso sito. Potrebbero verificarsi performance imprevedibili.
+IMPORTANT: L'utilizzo di appliance per servizi con livelli di performance diversi nello stesso sito, ad esempio SG100 o SG110 con SG1000 o SG1100, può causare risultati imprevedibili e incoerenti quando si utilizzano diversi nodi in un gruppo ad alta disponibilità o quando si esegue il bilanciamento del carico dei client tra più appliance di servizi
 
 * Utilizzare due dispositivi SG110 o due dispositivi SG1100 per fornire ridondanza di alcuni servizi di amministrazione della rete. A tale scopo, configurare ogni appliance come nodi di amministrazione.
 * Utilizza due appliance SG110 o due appliance SG1100 per fornire servizi di bilanciamento del carico e regolazione del traffico altamente disponibili, accessibili tramite uno o più indirizzi IP virtuali. A tale scopo, configurare le appliance come qualsiasi combinazione di nodi Admin o Gateway e aggiungere entrambi i nodi allo stesso gruppo ha.
 +
 
-IMPORTANT: Se si utilizzano nodi Admin e nodi Gateway nello stesso gruppo ha, la porta solo nodo Admin non eseguirà il failover. Consultare le istruzioni per https://docs.netapp.com/us-en/storagegrid-118/admin/configure-high-availability-group.html["Configurazione dei gruppi ha"^].
+IMPORTANT: Se si utilizzano nodi Admin e nodi Gateway nello stesso gruppo ha, la porta solo nodo Admin non eseguirà il failover. Vedere le istruzioni per https://docs.netapp.com/us-en/storagegrid/admin/configure-high-availability-group.html["Configurazione dei gruppi ha"^].
 
 
 

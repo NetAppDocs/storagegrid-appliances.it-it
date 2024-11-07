@@ -14,7 +14,7 @@ summary: 'Potrebbe essere necessario sostituire l"apparecchio se non funziona in
 Potrebbe essere necessario sostituire l'apparecchio se non funziona in modo ottimale o se si è guastato.
 
 .Prima di iniziare
-* Si dispone di un apparecchio sostitutivo con lo stesso codice prodotto dell'apparecchio che si sta sostituendo.
+* Si dispone di un apparecchio sostitutivo con lo stesso codice prodotto dell'apparecchio che si sta sostituendo. Controllare le etichette applicate sulla parte anteriore degli apparecchi per verificare che i numeri di parte corrispondano.
 * Sono presenti etichette per identificare ciascun cavo collegato all'apparecchio.
 * Lo hai fatto link:locating-controller-in-data-center.html["posizionato fisicamente l'apparecchio"].
 
@@ -112,6 +112,6 @@ Seguire le istruzioni fornite per la sostituzione di questi componenti.
 Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
 
 .Informazioni correlate
-link:../installconfig/viewing-status-indicators.html["Visualizzare gli indicatori di stato"]
+* link:../installconfig/viewing-status-indicators.html["Visualizzare gli indicatori di stato"]
+* link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Visualizzare i codici di avvio dell'appliance"]
 
-link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Visualizzare i codici di avvio dell'appliance"]

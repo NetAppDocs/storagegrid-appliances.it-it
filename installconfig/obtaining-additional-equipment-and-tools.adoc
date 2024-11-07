@@ -30,7 +30,7 @@ Cacciaviti::
 Braccialetto antistatico::
 +
 --
-* https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Browser Web supportato"^]
+* https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Browser Web supportato"^]
 * Client SSH, ad esempio putty
 * Porta 1-GbE (RJ-45)
 

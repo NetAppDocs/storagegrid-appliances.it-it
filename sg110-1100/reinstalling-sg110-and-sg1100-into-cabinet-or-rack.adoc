@@ -20,7 +20,7 @@ Rimuovere il dispositivo SG110 o SG1100 da un armadietto o da un rack per accede
 .Prima di iniziare
 * Sono presenti etichette per identificare ciascun cavo collegato a SG110 o SG1100.
 * Lo hai fatto link:locating-sg110-and-sg1100-in-data-center.html["Situato fisicamente il SG110 o SG1100"] dove si eseguono interventi di manutenzione nel data center,
-* Lo hai fatto link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Spegnere SG110 o SG1100"].
+* Si dispone di link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Spegnere SG110 o SG1100"].
 +
 
 CAUTION: Non spegnere l'apparecchio utilizzando l'interruttore di alimentazione.
@@ -83,4 +83,4 @@ IMPORTANT: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzic
 
 
 .Al termine
-link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Riavviare l'apparecchio"].
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation["Riavviare l'apparecchio"].

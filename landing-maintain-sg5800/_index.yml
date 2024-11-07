@@ -1,10 +1,14 @@
 ---
 indexpage:
+  title: Gestire l'hardware dell'appliance di storage SG5800
+  summary: Manutenzione dell'hardware per l'appliance di storage SG5800.
+  keywords: maintain storagegrid sg5800
+  lead: Manutenzione dell'hardware per l'appliance di storage SG5800.
   tiles:
   - title: Procedure eseguite di frequente
     links:
     - title: Modificare la configurazione del collegamento
-      url: "../sg5800/changing-link-configuration-of-sg5800-controller.html"
+      url: "../sg5800/changing-link-configuration-of-e5800sg-controller.html"
     - title: Upgrade SANtricity (Aggiorna server)
       url: "../sg5800/upgrading-santricity-os-on-storage-controller.html"
     - title: Aggiornare il firmware del disco
@@ -12,7 +16,7 @@ indexpage:
   - title: Procedure hardware
     links:
     - title: Sostituzione del compute controller SG5800
-      url: "../sg5800/replace-controller-sg5800.html"
+      url: "../sg5800/replace-controller-5800sg.html"
     - title: Sostituzione dello storage controller E4000
       url: "../sg5800/replace-controller-e4000-simplex.html"
     - title: Sostituire il filtro della ventola

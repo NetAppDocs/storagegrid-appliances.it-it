@@ -26,7 +26,7 @@ NOTE: Non fare affidamento sulle istruzioni e-Series per sostituire un controlle
 CAUTION: Non sarà possibile utilizzare l'apparecchio fino a quando non si sbloccano i dischi con la chiave salvata.
 
 * È necessario disporre di autorizzazioni di accesso specifiche.
-* È necessario accedere a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* È necessario accedere a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 
 
 .A proposito di questa attività

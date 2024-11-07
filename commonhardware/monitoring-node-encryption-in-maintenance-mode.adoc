@@ -13,7 +13,7 @@ summary: 'Se è stata attivata la crittografia dei nodi per l"appliance durante 
 [role="lead"]
 Se è stata attivata la crittografia dei nodi per l'appliance durante l'installazione, è possibile monitorare lo stato di crittografia dei nodi di ciascun nodo dell'appliance, inclusi i dettagli dello stato di crittografia dei nodi e del server di gestione delle chiavi (KMS).
 
-Vedere https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurare i server di gestione delle chiavi"^] Per informazioni sull'implementazione di KMS per appliance StorageGRID.
+Vedere https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurare i server di gestione delle chiavi"^] per informazioni sull'implementazione di KMS per dispositivi StorageGRID.
 
 .Prima di iniziare
 * È stata attivata la crittografia dei nodi per l'appliance durante l'installazione. Non è possibile attivare la crittografia dei nodi dopo l'installazione dell'appliance.
@@ -32,7 +32,7 @@ La pagina Node Encryption include tre sezioni:
 ** Encryption Status (Stato crittografia) indica se la crittografia del nodo è attivata o disattivata per l'appliance.
 ** Key Management Server Details (Dettagli server di gestione delle chiavi): Mostra le informazioni sul KMS utilizzato per crittografare l'appliance. È possibile espandere le sezioni del certificato del server e del client per visualizzare i dettagli e lo stato del certificato.
 +
-*** Per risolvere i problemi relativi ai certificati stessi, ad esempio il rinnovo dei certificati scaduti, consultare la https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Istruzioni per la configurazione di KMS"^].
+*** Per risolvere i problemi relativi ai certificati stessi, ad esempio il rinnovo dei certificati scaduti, vedere la https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Istruzioni per la configurazione di KMS"^].
 *** Se si verificano problemi imprevisti durante la connessione agli host KMS, verificare che link:../commonhardware/checking-dns-server-configuration.html["I server DNS sono corretti"] e questo link:../installconfig/configuring-network-links.html["la rete dell'appliance è configurata correttamente"].
 *** Se non si riesce a risolvere i problemi relativi al certificato, contattare il supporto tecnico.
 
@@ -73,7 +73,7 @@ Se è necessario conservare i dati sull'appliance, è necessario eseguire una pr
 
 CAUTION: Una volta cancellato il KMS, i dati dell'appliance verranno cancellati in modo permanente e non più accessibili. Questi dati non sono ripristinabili.
 
-https://docs.netapp.com/us-en/storagegrid-118/maintain/grid-node-decommissioning.html["Decommissionare il nodo"^] Per spostare i dati in esso contenuti in altri nodi in StorageGRID.
+https://docs.netapp.com/us-en/storagegrid/maintain/grid-node-decommissioning.html["Decommissionare il nodo"^] Per spostare i dati contenuti in altri nodi in StorageGRID.
 
 .A proposito di questa attività
 La cancellazione della configurazione KMS dell'appliance disattiva la crittografia dei nodi, rimuovendo l'associazione tra il nodo dell'appliance e la configurazione KMS per il sito StorageGRID. I dati sull'appliance vengono quindi cancellati e l'appliance viene lasciata in uno stato pre-installato. Questo processo non può essere invertito.
@@ -130,4 +130,4 @@ La crittografia del nodo non può essere riattivata sull'appliance fino a quando
 
 
 .Al termine
-Dopo aver riavviato l'appliance e aver verificato che il sistema KMS è stato cancellato e che l'appliance si trova in uno stato di preinstallazione, è possibile rimuoverlo fisicamente dal sistema StorageGRID. Vedere https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["istruzioni per la preparazione dell'apparecchio per la reinstallazione"^].
+Dopo aver riavviato l'appliance e aver verificato che il sistema KMS è stato cancellato e che l'appliance si trova in uno stato di preinstallazione, è possibile rimuoverlo fisicamente dal sistema StorageGRID. Consultare la https://docs.netapp.com/us-en/storagegrid/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["istruzioni per la preparazione dell'apparecchio per la reinstallazione"^].

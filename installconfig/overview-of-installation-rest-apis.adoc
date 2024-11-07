@@ -50,7 +50,8 @@ Per accedere alla documentazione API, accedere al programma di installazione del
 L'API di installazione dell'appliance StorageGRID include le seguenti sezioni:
 
 * *Clone*: Operazioni per configurare e controllare la clonazione del nodo.
-* *Encryption*: Operazioni per gestire la crittografia e visualizzare lo stato della crittografia.
+* *Drive-Encryption* (StorageGRID 11,8 e versioni successive): Operazioni per gestire la crittografia delle unità e visualizzare lo stato della crittografia delle unità.
+* *Crittografia*: Operazioni per gestire la crittografia dei nodi e visualizzare lo stato della crittografia dei nodi.
 * *Hardware config*: Operazioni per configurare le impostazioni di sistema sull'hardware collegato.
 * *Installazione*: Operazioni per avviare l'installazione dell'appliance e monitorare lo stato dell'installazione.
 * *Rete*: Operazioni relative alla configurazione di rete, amministrazione e client per un'appliance StorageGRID e le impostazioni delle porte dell'appliance.

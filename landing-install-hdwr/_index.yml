@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Installare l'hardware dell'appliance
+  summary: Installate l'hardware dell'appliance presso la vostra sede.
+  keywords: storagegrid install hardware, storagegrid install appliance
+  lead: Installate l'hardware dell'appliance presso la vostra sede.
   tiles:
   - title: Installare l'apparecchiatura di stoccaggio in un armadietto o in un rack
     links:

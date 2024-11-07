@@ -14,5 +14,9 @@ entries:
 - title: Aggiornamento dei riferimenti agli indirizzi MAC (SG100, SG1000, SGF6024
     e SG6060)
   url: "/commonhardware/locate-mac-address.html"
+- title: Gestire i dischi (SG110, SG1100, SGF6112 e SG6160)
+  url: "/commonhardware/manage-drives-tab.html"
 - title: Monitorare la crittografia dei nodi in modalità di manutenzione
   url: "/commonhardware/monitoring-node-encryption-in-maintenance-mode.html"
+- title: USA l'interfaccia BMC
+  url: "/commonhardware/use-bmc.html"

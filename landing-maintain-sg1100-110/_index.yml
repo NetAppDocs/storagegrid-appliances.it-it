@@ -1,9 +1,13 @@
 ---
 indexpage:
+  title: Manutenzione dell'hardware dell'appliance di servizi SG1100 e SG110
+  summary: Manutenzione dell'hardware per l'appliance di servizi SG1100 e SG110.
+  keywords: maintain storagegrid sg110, maintain storagegrid sg1100
+  lead: Manutenzione dell'hardware per l'appliance di servizi SG1100 e SG110.
   tiles:
   - title: Procedure eseguite di frequente
     links:
-    - title: Attivare o disattivare il LED di posizione
+    - title: Attivare o disattivare il LED di identificazione
       url: "../sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html"
     - title: Individuare l'appliance nel data center
       url: "../sg110-1100/locating-sg110-and-sg1100-in-data-center.html"

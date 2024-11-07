@@ -14,7 +14,7 @@ summary: Potrebbe essere necessario sostituire la centralina SG6100-CN se non fu
 Potrebbe essere necessario sostituire la centralina SG6100-CN se non funziona in modo ottimale o se non funziona correttamente.
 
 .Prima di iniziare
-* Si dispone di un controller sostitutivo con lo stesso numero di parte del controller che si sta sostituendo.
+* Si dispone di un controller sostitutivo con lo stesso numero di parte del controller che si sta sostituendo. Controllare le etichette attaccate alla parte anteriore delle centraline per confermare che i numeri di parte corrispondano.
 * Sono presenti etichette per identificare ciascun cavo collegato al controller.
 * Il controller da sostituire nel data center è stato fisicamente posizionato.
 +
@@ -65,7 +65,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 +
 ** link:../installconfig/configuring-network-links.html["Configurare i collegamenti di rete"]
 ** link:../installconfig/setting-ip-configuration.html["Configurare gli indirizzi IP StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
 
 
 . Accedere all'appliance con il controller sostituito:

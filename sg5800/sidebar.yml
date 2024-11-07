@@ -10,8 +10,10 @@ entries:
   pdf-filename: Procedure di configurazione della manutenzione - SG5800
   entries:
   - title: Aggiornare il sistema operativo SANtricity sul controller di storage
-    url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
     entries:
+    - title: Informazioni sull'aggiornamento del sistema operativo SANtricity su uno
+        storage controller SG5800
+      url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
     - title: Aggiorna il sistema operativo SANtricity sui controller di storage utilizzando
         Grid Manager
       url: "/sg5800/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html"
@@ -34,7 +36,7 @@ entries:
   pdf-filename: Procedure hardware - SG5800
   entries:
   - title: Sostituire la centralina SG5800
-    url: "/sg5800/replace-controller-sg5800.html"
+    url: "/sg5800/replace-controller-5800sg.html"
   - title: Sostituire la centralina E4000
     url: "/sg5800/replace-controller-e4000-simplex.html"
   - title: Sostituire la ventola (SG5860)

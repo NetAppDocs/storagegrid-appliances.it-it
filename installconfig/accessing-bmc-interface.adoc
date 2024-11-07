@@ -22,7 +22,7 @@ summary: 'È possibile accedere all"interfaccia BMC utilizzando l"indirizzo DHCP
 
 
 .Prima di iniziare
-* Il client di gestione utilizza un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* Il client di gestione utilizza un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 * La porta di gestione BMC dell'appliance è collegata alla rete di gestione che si intende utilizzare.
 +
 [role="tabbed-block"]

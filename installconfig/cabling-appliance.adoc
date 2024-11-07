@@ -987,8 +987,11 @@ Si connette alla rete da cui si accede all'interfaccia BMC.
  a| 
 2
  a| 
-Quattro porte di rete 10/25-GbE sull'appliance
+Quattro porte di rete sul controller SG6100-CN
  a| 
+* Quattro porte di rete 10/25-GbE sull'appliance
+* Quattro porte di rete 10/25/40/100-GbE con SKU NIC 100g opzionale (solo SG6160)
+
  a| 
 Connettersi alla rete griglia e alla rete client per StorageGRID. Vedere link:gathering-installation-information-sg6100.html#port-bond-modes["Modalità Port bond (SG6100)"]
 

@@ -1,5 +1,5 @@
 ---
-permalink: sg6100/replace-ocp-nic-in-sg6100-cn.html 
+permalink: sg6100/replace-ocp-nic-sg6100-cn.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, NIC, network interface card 
 summary: 'Potrebbe essere necessario sostituire una scheda di interfaccia di rete \(NIC\) in SG6100-CN se non funziona in modo ottimale o se non funziona correttamente.' 
@@ -28,17 +28,17 @@ image::../media/sg6100_cn_ocp_nic_location.png[Frontalino NIC.]
 * Lo hai fatto link:locating-sgf6112-in-data-center.html["Situato fisicamente nella centralina SG6100-CN"] Dove si sta sostituendo la scheda NIC nel centro dati.
 +
 
-NOTE: La sostituzione a caldo è *non* supportata per questa procedura. R link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["spegnimento controllato dell'apparecchio"] È necessario prima di scollegare i cavi e rimuovere la scheda di rete.
+NOTE: La sostituzione a caldo è *non* supportata per questa procedura. È necessario un link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["spegnimento controllato dell'apparecchio"]prima di scollegare i cavi e rimuovere la scheda di rete.
 
 * Sono stati scollegati tutti i cavi, compresi i due cavi di alimentazione sul SG6100-CN.
 * *Opzionale*: Il controller è stato rimosso dal rack, se richiesto dalle normative locali. La rimozione non è necessaria in quanto la scheda NIC è accessibile dall'esterno.
 
 
 .A proposito di questa attività
-Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di archiviazione siano collegati alla rete prima di avviare la sostituzione della scheda di interfaccia di rete (NIC) o sostituire la scheda durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Vedere le informazioni su link:https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["stati di connessione del nodo di monitoraggio"].
+Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di archiviazione siano collegati alla rete prima di avviare la sostituzione della scheda di interfaccia di rete (NIC) o sostituire la scheda durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Vedere informazioni su link:https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["stati di connessione del nodo di monitoraggio"].
 
 
-CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire la scheda di rete durante una finestra di manutenzione pianificata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere le informazioni su link:https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"].
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire la scheda di rete durante una finestra di manutenzione pianificata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere informazioni su link:https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"].
 
 
 

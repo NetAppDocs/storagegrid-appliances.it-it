@@ -14,8 +14,7 @@ summary: 'Spegnere l"appliance di servizi per eseguire la manutenzione dell"hard
 Spegnere l'appliance di servizi per eseguire la manutenzione dell'hardware.
 
 .Prima di iniziare
-* Hai fisicamente link:locating-controller-in-data-center.html["che si trova l'appliance per i servizi"] necessità di manutenzione nel data center.
-
+Hai fisicamente link:locating-controller-in-data-center.html["che si trova l'appliance per i servizi"] necessità di manutenzione nel data center.
 
 .A proposito di questa attività
 Per evitare interruzioni del servizio, arrestare l'appliance Services durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili.

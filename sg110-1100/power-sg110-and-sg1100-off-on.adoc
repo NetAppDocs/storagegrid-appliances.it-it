@@ -20,8 +20,7 @@ summary: 'È possibile spegnere l"apparecchio SGF6112 e riaccenderlo per eseguir
 Spegnere l'appliance per eseguire la manutenzione dell'hardware.
 
 .Prima di iniziare
-* Lo hai fatto link:locating-sg110-and-sg1100-in-data-center.html["posizionato fisicamente l'apparecchio"].
-
+Lo hai fatto link:locating-sg110-and-sg1100-in-data-center.html["posizionato fisicamente l'apparecchio"].
 
 .A proposito di questa attività
 Per evitare interruzioni del servizio, spegnere l'apparecchio durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili.

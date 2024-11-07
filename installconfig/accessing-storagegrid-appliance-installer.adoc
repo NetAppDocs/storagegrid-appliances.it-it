@@ -15,7 +15,7 @@ summary: 'È necessario accedere al programma di installazione dell"appliance St
 
 .Prima di iniziare
 * Si sta utilizzando qualsiasi client di gestione in grado di connettersi alla rete amministrativa di StorageGRID o si dispone di un laptop di assistenza.
-* Il client o il laptop di servizio dispone di un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* Il client o il laptop di assistenza dispone di un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 * L'appliance di servizi o il controller dell'appliance di storage sono connessi a tutte le reti StorageGRID che si intende utilizzare.
 * Su queste reti conosci l'indirizzo IP, il gateway e la subnet dell'appliance di servizi o del controller dell'appliance di storage.
 * Sono stati configurati gli switch di rete che si intende utilizzare.
@@ -110,7 +110,7 @@ L'avviso non verrà visualizzato al successivo accesso a questo URL.
 Viene visualizzata la pagina iniziale del programma di installazione dell'appliance StorageGRID. Le informazioni e i messaggi visualizzati al primo accesso a questa pagina dipendono dalla modalità di connessione dell'appliance alle reti StorageGRID. Potrebbero essere visualizzati messaggi di errore che verranno risolti nelle fasi successive.
 
 +
-image::../media/appliance_installer_home_5700_5600.png[Schermata della parte superiore della home page del programma di installazione dell'appliance StorageGRID webscale]
+image::../media/appliance_installer_home_5700_5600.png[Immagine della parte superiore della home page del programma di installazione dell'appliance StorageGRID]
 
 
 

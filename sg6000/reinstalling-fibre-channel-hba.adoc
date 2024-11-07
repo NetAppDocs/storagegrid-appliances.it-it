@@ -25,7 +25,7 @@ In caso di dubbi sull'adattatore bus host Fibre Channel (HBA) da sostituire, com
 
 NOTE: Se il numero di serie del dispositivo di storage contenente l'HBA Fibre Channel da sostituire inizia con la lettera Q, non verrà elencato in Grid Manager. È necessario controllare le etichette applicate sulla parte anteriore di ciascun controller SG6000-CN del data center fino a quando non si trova una corrispondenza.
 
-* Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* L'utente ha effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 
 
 .Fasi
@@ -70,11 +70,10 @@ CAUTION: Prima di rimuovere il controller dal rack, è necessario eseguire uno s
 
 
 .A proposito di questa attività
-Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di storage siano collegati alla rete prima di avviare la sostituzione dell'HBA Fibre Channel o sostituire l'adattatore durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Consultare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
+Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di storage siano collegati alla rete prima di avviare la sostituzione dell'HBA Fibre Channel o sostituire l'adattatore durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
 
 
-CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire l'HBA Fibre Channel durante una finestra di manutenzione pianificata. In caso contrario, è possibile che l'accesso a tali oggetti venga temporaneamente perso durante questa procedura. +
-Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire l'HBA Fibre Channel durante una finestra di manutenzione pianificata. In caso contrario, è possibile che l'accesso a tali oggetti venga temporaneamente perso durante questa procedura. + vedere le informazioni su https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
 
 .Fasi
 . Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.

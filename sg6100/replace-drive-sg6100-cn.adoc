@@ -57,7 +57,7 @@ CAUTION: Non esercitare una forza eccessiva durante la chiusura della maniglia.
 Quando l'unità è completamente inserita, si sente uno scatto.
 
 +
-Quando entrambe le unità SSD funzionano normalmente, il sistema ripristina automaticamente la funzionalità di cache in lettura. È possibile https://docs.netapp.com/us-en/storagegrid-118/monitor/running-diagnostics.html["eseguire la diagnostica"^] per monitorare la percentuale di accessi della cache in lettura. Poiché la cache è stata appena ricostruita, la velocità di accesso inizialmente potrebbe essere bassa, ma dovrebbe aumentare nel tempo poiché la cache viene ripopolata dai client che accedono ai dati degli oggetti.
+Quando entrambe le unità SSD funzionano normalmente, il sistema ripristina automaticamente la funzionalità di cache in lettura. È possibile https://docs.netapp.com/us-en/storagegrid/monitor/running-diagnostics.html["eseguire la diagnostica"^] monitorare la percentuale di accessi della cache in lettura. Poiché la cache è stata appena ricostruita, la velocità di accesso inizialmente potrebbe essere bassa, ma dovrebbe aumentare nel tempo poiché la cache viene ripopolata dai client che accedono ai dati degli oggetti.
 
 
 

@@ -196,7 +196,7 @@ image::../media/appliance_installer_reboot_complete.png[Riavvio completato]
 +
 .. In Grid Manager, selezionare *NODES* e verificare che l'icona del nodo di storage dell'appliance sia contrassegnata da un segno di spunta verde.
 +
-L'icona del segno di spunta verde indica che non sono attivi avvisi e che il nodo è connesso alla griglia. Per una descrizione delle icone dei nodi, vedere https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitorare gli stati di connessione del nodo"^].
+L'icona del segno di spunta verde indica che non sono attivi avvisi e che il nodo è connesso alla griglia. Per una descrizione delle icone dei nodi, vedere https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitorare gli stati di connessione del nodo"^].
 
 .. Selezionare la scheda *Storage* e verificare che nella tabella Storage oggetti siano visualizzati 16 nuovi archivi di oggetti per ogni shelf di espansione aggiunto.
 .. Verificare che ogni nuovo shelf di espansione abbia uno stato di shelf nominale e uno stato di configurazione configurato.

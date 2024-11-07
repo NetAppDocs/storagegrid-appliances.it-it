@@ -62,7 +62,7 @@ La configurazione dell'appliance mediante un file JSON caricato è spesso più e
 
 +
 
-NOTE: È possibile utilizzare direttamente gli script Python per l'automazione di StorageGRID oppure come esempi di come utilizzare l'API REST per l'installazione di StorageGRID nei tool di configurazione e distribuzione grid sviluppati da soli. Consultare le istruzioni per https://docs.netapp.com/us-en/storagegrid-118/maintain/downloading-and-extracting-storagegrid-installation-files.html["Download ed estrazione dei file di installazione di StorageGRID"^].
+NOTE: È possibile utilizzare direttamente gli script Python per l'automazione di StorageGRID oppure come esempi di come utilizzare l'API REST per l'installazione di StorageGRID nei tool di configurazione e distribuzione grid sviluppati da soli. Vedere le istruzioni per https://docs.netapp.com/us-en/storagegrid/maintain/downloading-and-extracting-storagegrid-installation-files.html["Download ed estrazione dei file di installazione di StorageGRID"^].
 
 
 
@@ -76,7 +76,7 @@ Dopo aver generato un file JSON, è possibile automatizzare la configurazione di
 * L'appliance è stata installata in un rack, collegata alla rete e accesa.
 * Lo hai fatto <<automation-options,Ha generato il file JSON>> Con la guida del tuo consulente NetApp Professional Services.
 * L'appliance contiene il firmware più recente compatibile con StorageGRID 11.5 o versioni successive.
-* Si è connessi al programma di installazione dell'appliance StorageGRID sull'appliance che si sta configurando utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* Si è connessi al programma di installazione dell'appliance StorageGRID sul dispositivo che si sta configurando mediante un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 
 
 .Fasi

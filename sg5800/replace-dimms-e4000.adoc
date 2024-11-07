@@ -29,7 +29,7 @@ Il nodo di archiviazione dell'appliance potrebbe non essere accessibile quando s
 
 * Accesso a Gestione sistema SANtricity:
 +
-** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
+** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"] .
 +
 
 NOTE: Durante alcuni passaggi di questa procedura, potrebbe non essere possibile accedere a Gestore di sistema di SANtricity utilizzando Gestione griglia. Se il controller SG5800 viene spento, sarà necessario accedere a Gestione sistema SANtricity utilizzando il browser.
@@ -167,12 +167,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Rimuovere i moduli DIMM.]
 
 
  a| 
-image::../media/legend_icon_01.png[icona legenda 01]
+image::../media/legend_icon_01.png[Riferimento didascalia 1]
 | Schede di espulsione DIMM 
 
 
  a| 
-image::../media/legend_icon_02.png[icona legenda 02]
+image::../media/legend_icon_02.png[Riferimento didascalia 2]
 | DIMM 
 |===
 . Rimuovere il modulo DIMM di ricambio dalla confezione antistatica, tenerlo per gli angoli e allinearlo allo slot.

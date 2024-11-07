@@ -14,7 +14,7 @@ summary: 'Prima di eseguire specifiche procedure di manutenzione, è necessario 
 Prima di eseguire specifiche procedure di manutenzione, è necessario attivare la modalità di manutenzione dell'apparecchio.
 
 .Prima di iniziare
-* Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* L'utente ha effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 * Si dispone dell'autorizzazione di accesso Maintenance o Root. Per ulteriori informazioni, consultare le istruzioni per l'amministrazione di StorageGRID.
 
 

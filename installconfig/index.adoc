@@ -22,7 +22,7 @@ Questo passaggio è facoltativo. Tuttavia, la semplificazione e l'automazione de
 . link:preparing-site.html["Preparare il sito"]
 . link:unpacking-boxes.html["Disimballare le scatole"]
 . link:obtaining-additional-equipment-and-tools.html["Procurarsi attrezzature e strumenti aggiuntivi"]
-. https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Verifica dei requisiti del browser Web"^]
+. https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Verifica dei requisiti del browser Web"^]
 . link:reviewing-appliance-network-connections.html["Raccogliere informazioni sulla rete"]
 
 

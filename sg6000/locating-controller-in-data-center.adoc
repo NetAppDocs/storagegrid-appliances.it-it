@@ -43,8 +43,7 @@ image::../media/sg6060_front_panel_service_led_on.jpg[LED di identificazione ant
 
 
 .Informazioni correlate
-link:reinstalling-fibre-channel-hba.html#remove-fibre-channel-hba["Rimuovere l'HBA Fibre Channel"]
+* link:reinstalling-fibre-channel-hba.html#remove-fibre-channel-hba["Rimuovere l'HBA Fibre Channel"]
+* link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html#remove-sg6000-cn-controller-from-cabinet-or-rack["Rimuovere il controller SG6000-CN dal cabinet o dal rack"]
+* link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Spegnere il controller SG6000-CN"]
 
-link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html#remove-sg6000-cn-controller-from-cabinet-or-rack["Rimuovere il controller SG6000-CN dal cabinet o dal rack"]
-
-link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Spegnere il controller SG6000-CN"]

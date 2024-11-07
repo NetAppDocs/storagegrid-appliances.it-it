@@ -1,24 +1,26 @@
 ---
-permalink: sg6100/manage-drives-tab.html 
+permalink: commonhardware/manage-drives-tab.html 
 sidebar: sidebar 
-keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
-summary: 'È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire le attività di risoluzione dei problemi e manutenzione sulle unità dell"appliance SGF6112.' 
+keywords: sgf6112, sg110, sg1100, sg6160, manage drives tab, locate drive, fail drive, logically replace drive 
+summary: È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire attività di risoluzione dei problemi e manutenzione sulle unità per le appliance che supportano questa funzione. 
 ---
-= Utilizzare la scheda Gestisci unità (SGF6112)
+= Utilizzare la scheda Gestisci unità (SG110, SG1100, SGF6112 e SG6160)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire le attività di risoluzione dei problemi e manutenzione sulle unità dell'appliance SGF6112.
+È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire attività di risoluzione dei problemi e manutenzione sulle unità per le appliance che supportano questa funzione.
 
 .Prima di iniziare
-* Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
-
+L'utente ha effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 
 .A proposito di questa attività
-Se si dispone di un apparecchio SGF6112 e di uno dei due https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Autorizzazione di accesso root o amministratore dell'appliance di storage"^], Viene visualizzata la scheda Gestisci unità nella pagina dei dettagli del dispositivo.
+Se si dispone di un dispositivo che supporta questa funzione e viene visualizzata la https://docs.netapp.com/us-en/storagegrid/admin/admin-group-permissions.html["Autorizzazione di accesso root o amministratore dell'appliance di storage"^] scheda Gestisci unità nella pagina dei dettagli del dispositivo.
+
+
+NOTE: Per StorageGRID 11,8, la scheda Gestisci unità è supportata solo per l'appliance SGF6112.
 
 La scheda Gestisci unità contiene le seguenti visualizzazioni:
 

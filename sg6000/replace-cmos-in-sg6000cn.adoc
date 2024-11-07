@@ -34,10 +34,10 @@ NOTE: È necessario un link:power-sg6000-cn-controller-off-on.html["spegnimento 
 
 
 .A proposito di questa attività
-Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di memorizzazione siano collegati alla rete prima di iniziare la sostituzione della batteria CMOS o sostituire la batteria durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Consultare le informazioni su https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
+Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di memorizzazione siano collegati alla rete prima di iniziare la sostituzione della batteria CMOS o sostituire la batteria durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
 
 
-CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire la batteria durante una finestra di manutenzione pianificata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire la batteria durante una finestra di manutenzione pianificata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere informazioni su https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
 
 .Fasi
 . Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
@@ -78,7 +78,7 @@ image::../media/sg6060_riser_alignment_hole.jpg[Foro di allineamento sul gruppo 
 . Se l'appliance sostituita utilizzava un server di gestione delle chiavi (KMS) per gestire le chiavi di crittografia per la crittografia dei nodi, potrebbe essere necessaria una configurazione aggiuntiva prima che il nodo possa unirsi al grid. Se il nodo non si unisce automaticamente alla griglia, assicurarsi che queste impostazioni di configurazione siano state trasferite alla nuova appliance e configurare manualmente le impostazioni che non hanno la configurazione prevista:
 +
 ** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configurare le connessioni StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
 
 
 . Accedere all'appliance:

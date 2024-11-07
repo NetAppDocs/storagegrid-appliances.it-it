@@ -107,9 +107,23 @@ NOTE: In alcuni casi, il nome utente predefinito per un dispositivo SG6000 potre
 
 
  a| 
+ALT
+ a| 
+Lo script di avvio principale è in attesa del completamento dell'avvio del sistema operativo.
+
+
+
+ a| 
 CIAO
  a| 
 Lo script di boot master è stato avviato.
+
+
+
+ a| 
+PP
+ a| 
+Il sistema sta verificando se l'FPGA deve essere aggiornato.
 
 
 
@@ -176,18 +190,48 @@ StorageGRID è in esecuzione.
 
 == Visualizzazione dei codici di errore (controller SG6000-CN)
 
-Se si verifica un errore hardware durante l'avvio del controller SG6000-CN, il BMC registra un codice di errore. Se necessario, è possibile visualizzare questi codici di errore utilizzando l'interfaccia BMC, quindi collaborare con il supporto tecnico per risolvere il problema.
+Se si verifica un errore hardware durante l'avvio del controller SG6000-CN, il BMC registra un codice di errore. Se necessario, è possibile visualizzare questi codici di errore utilizzando l'interfaccia BMC o la porta seriale dell'appliance, quindi collaborare con il supporto tecnico per risolvere il problema.
 
 .Prima di iniziare
-* Sai come fare link:accessing-bmc-interface.html["Accedere al dashboard BMC"].
+
+NOTE: Se il BMC non dispone di una voce di menu del codice POST del BIOS, accedere ai codici di errore utilizzando la porta seriale dell'apparecchio.
+
+* Se si utilizza BMC, si sa come fare link:accessing-bmc-interface.html["Accedere al dashboard BMC"].
+* Se si utilizza una porta seriale e un terminale, procurarsi i componenti necessari:
++
+** CAVO seriale DB-9
+** Terminale seriale virtuale
+
+
 
 
 .Fasi
-. Dalla dashboard BMC, selezionare *BIOS POST Code* (Codice POST BIOS).
-. Esaminare le informazioni visualizzate per il codice corrente e il codice precedente.
+. Accedere ai codici di errore utilizzando uno dei seguenti metodi.
 +
-Se viene visualizzato uno dei seguenti codici di errore, collaborare con il supporto tecnico per risolvere il problema.
+[role="tabbed-block"]
+====
+.BMC
+--
+Se si utilizza BMC, attenersi alla procedura illustrata di seguito:
 
+.. link:accessing-bmc-interface.html["Accedere alla dashboard BMC"].
+.. Dalla dashboard BMC, selezionare *BIOS POST Code* (Codice POST BIOS).
+.. Esaminare le informazioni visualizzate per il codice corrente e il codice precedente.
+
+
+--
+.Porta seriale
+--
+Se si utilizza una porta seriale e un terminale, procedere come segue per visualizzare i codici di errore. I codici POST del BIOS vengono visualizzati sulla console seriale quando l'apparecchio viene riavviato.
+
+.. Collegare alla porta seriale DB-9 sul retro dell'appliance.
+.. Utilizzare le impostazioni `115200 8-N-1`.
+.. Visualizzare i codici stampati sul terminale seriale.
+
+
+--
+====
+. Se viene visualizzato uno dei seguenti codici di errore, collaborare con il supporto tecnico per risolvere il problema.
 +
 [cols="1a,3a"]
 |===

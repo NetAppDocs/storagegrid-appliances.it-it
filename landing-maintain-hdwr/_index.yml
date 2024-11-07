@@ -1,5 +1,10 @@
 ---
 indexpage:
+  title: Gestire l'hardware dell'appliance
+  summary: Eseguire la manutenzione dell'hardware per l'appliance di storage o di
+    servizi.
+  keywords: maintain storagegrid hardware
+  lead: Eseguire la manutenzione dell'hardware per l'appliance di storage o di servizi.
   tiles:
   - title: Procedure eseguite di frequente
     links:
@@ -11,6 +16,8 @@ indexpage:
       url: "../commonhardware/checking-dns-server-configuration.html"
     - title: Update MAC address (Aggiorna indirizzo MAC)
       url: "../commonhardware/locate-mac-address.html"
+    - title: Gestire i dischi
+      url: "../commonhardware/manage-drives-tab.html"
     - title: Monitoraggio della crittografia dei nodi
       url: "../commonhardware/monitoring-node-encryption-in-maintenance-mode.html"
   - title: Cloning dei nodi

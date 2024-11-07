@@ -1,14 +1,18 @@
 ---
 indexpage:
+  title: Inizia subito con le appliance StorageGRID
+  summary: Informazioni sull'appliance di storage o di servizi nel sistema StorageGRID.
+  keywords: learn storagegrid appliances
+  lead: Informazioni sull'appliance di storage o di servizi nel sistema StorageGRID.
   tiles:
   - title: Inizia subito
     links:
     - title: Novità per le apparecchiature
       url: "../whats-new-appliances.html"
     - title: Scopri di più su StorageGRID
-      url: https://docs.netapp.com/us-en/storagegrid-118/primer/index.html
+      url: https://docs.netapp.com/us-en/storagegrid/primer/index.html
     - title: Avvio rapido di StorageGRID
-      url: https://docs.netapp.com/us-en/storagegrid-118/primer/quick-start.html
+      url: https://docs.netapp.com/us-en/storagegrid/primer/quick-start.html
     - title: Avvio rapido per l'installazione dell'apparecchio
       url: "../installconfig/index.html"
   - title: Ulteriori informazioni sulle appliance di storage

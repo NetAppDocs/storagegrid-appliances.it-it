@@ -1,0 +1,94 @@
+---
+permalink: commonhardware/use-bmc.html 
+sidebar: sidebar 
+keywords: storagegrid, bmc 
+summary: 'Alcune appliance StorageGRID includono un BMC (Baseboard Management Controller) che consente un accesso hardware di basso livello per la configurazione, il monitoraggio e la diagnosi dell"appliance.' 
+---
+= Utilizzo del BMC (Baseboard Management Controller) dell'appliance StorageGRID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alcune appliance StorageGRID includono un BMC (Baseboard Management Controller) che consente un accesso hardware di basso livello per la configurazione, il monitoraggio e la diagnosi dell'appliance.
+
+L'interfaccia BMC è supportata dai seguenti modelli di appliance StorageGRID:
+
+* SG100
+* SG110
+* SG1000
+* SG1100
+* SG6000
+* SG6100
+
+
+Per informazioni dettagliate sull'utilizzo dell'interfaccia BMC per questi dispositivi, consultare la https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["Guida utente di BMC"^] . È necessario accedere alle funzioni BMC _non_ documentate nella documentazione di StorageGRID solo quando richiesto dal supporto tecnico.
+
+La presente guida dell'utente di BMC si riferisce alla versione più recente del firmware BMC disponibile per alcuni dispositivi StorageGRID. Il dispositivo StorageGRID potrebbe disporre di una versione del firmware BMC leggermente diversa.
+
+* Il firmware BMC viene aggiornato durante gli aggiornamenti del software StorageGRID. Se non è in esecuzione la versione più recente del software StorageGRID, è possibile aggiornare il dispositivo alla versione più recente di StorageGRID per installare https://docs.netapp.com/us-en/storagegrid/upgrade/how-your-system-is-affected-during-upgrade.html#appliance-firmware-is-upgraded["La versione più recente del firmware BMC disponibile per l'appliance"] .
+* Se il BMC appare diverso prima o dopo un aggiornamento di StorageGRID, le informazioni contenute nella potrebbero essere utili per adattare le istruzioni alla versione di BMC in https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["Guida utente di BMC"^] uso.
+
+
+
+
+== Utilizzo di BMC per appliance StorageGRID
+
+Le seguenti procedure BMC sono documentate per l'uso con le appliance StorageGRID supportate:
+
+* link:../installconfig/accessing-bmc-interface.html["Accedere alla dashboard BMC"]
+* link:../installconfig/configuring-snmp-settings-for-bmc.html["Configurare le impostazioni SNMP di BMC"]
+* link:../installconfig/setting-up-email-notifications-for-alerts.html["Impostare le notifiche degli avvisi e-mail"]
+* Risoluzione dei problemi di installazione hardware:
++
+** link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html["SG1000 e SG100"]
+** link:../installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html["SG1100 e SG110"]
+** link:../installconfig/troubleshooting-hardware-installation.html["SG6000"]
+** link:../installconfig/troubleshooting-hardware-installation-sg6100.html["SG6100"]
+
+
+* Determinare lo stato di alimentazione dell'apparecchio:
++
+** link:../sg100-1000/shut-down-sg100-and-sg1000.html["SG1000 e SG100"]
+** link:../sg110-1100/power-sg110-and-sg1100-off-on.html["SG1100 e SG110"]
+** link:../sg6000/power-sg6000-cn-controller-off-on.html["SG6000"]
+** link:../sg6100/power-sgf6112-off-on.html["SG6100"]
+
+
+* Accendere e spegnere il LED di identificazione dell'apparecchio:
++
+** link:../sg100-1000/turning-controller-identify-led-on-and-off.html["SG1000 e SG100"]
+** link:../sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html["SG1100 e SG110"]
+** link:../sg6000/turning-controller-identify-led-on-and-off.html["SG6000"]
+** link:../sg6100/turning-sgf6112-identify-led-on-and-off.html["SG6100"]
+
+
+
+
+
+
+== Funzioni BMC non supportate per le appliance StorageGRID
+
+Le seguenti funzioni di BMC sono in conflitto con la configurazione specifica di StorageGRID e non devono essere utilizzate.
+
+* Impostazioni
++
+** Gestione RAID
+** Gestione IT SAS
+** Interfacce IPMI
+** Ridondanza a freddo
+** Selezione NIC
+
+
+* Reindirizzamento immagine
+* Diagnostica del sistema host
+* Manutenzione
++
+** Configurazione a doppia immagine
+** Firmware Information (informazioni firmware)
+** Firmware Update (aggiornamento firmware)
+** Ripristina impostazioni predefinite
+
+
+

@@ -32,7 +32,7 @@ Se il client o la rete amministrativa non sono stati configurati nel programma d
 Hai il `Passwords.txt` File per utilizzare lo strumento Change IP.
 
 .Fasi
-Accedere allo strumento Change IP e aggiornare le impostazioni MTU come descritto in https://docs.netapp.com/us-en/storagegrid-118/maintain/changing-nodes-network-configuration.html["Modificare la configurazione di rete del nodo"^].
+Accedere allo strumento Modifica IP e aggiornare le impostazioni MTU come descritto in https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html["Modificare la configurazione di rete del nodo"^].
 
 
 

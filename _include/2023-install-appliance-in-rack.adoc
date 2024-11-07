@@ -3,7 +3,7 @@
 
 
 .Prima di iniziare
-* È stato esaminato il documento Avvisi di sicurezza incluso nella confezione e si sono comprese le precauzioni per lo spostamento e l'installazione dell'hardware.
+* È stato esaminato il documento incluso nella confezione e si https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avvisi di sicurezza"^] sono comprese le precauzioni per lo spostamento e l'installazione dell'hardware.
 * Le istruzioni sono fornite con il kit di guide.
 
 

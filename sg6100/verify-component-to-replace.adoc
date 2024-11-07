@@ -15,7 +15,7 @@ In caso di dubbi sul componente hardware da sostituire nell'appliance, completar
 
 .Prima di iniziare
 * Si dispone del numero di serie dell'appliance di storage in cui è necessario sostituire il componente.
-* Hai effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["browser web supportato"^].
+* L'utente ha effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 
 
 .A proposito di questa attività
@@ -42,7 +42,7 @@ NOTE: Selezionare l'avviso, non l'intestazione di un gruppo di avvisi.
 
 .. Registrare il nome del nodo e l'etichetta identificativa univoca del componente guasto.
 +
-image::../media/nic-alert-sgf6112.jpg[Avviso con ID componente]
+image::../media/nic-alert-sgf6112.png[Avviso con ID componente]
 
 
 

@@ -35,7 +35,7 @@ Ad esempio, è possibile verificare il percorso tra il nodo dell'appliance e un 
 Se la connessione di rete è valida, viene visualizzato il messaggio "Test ping superato", con l'output del comando ping elencato.
 
 +
-image::../media/ping_test_passed.png[Risultati del test ping nel programma di installazione dell'appliance StorageGRID webscale]
+image::../media/ping_test_passed.png[Schermata dei risultati del test ping nel programma di installazione dell'appliance StorageGRID]
 
 
 

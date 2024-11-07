@@ -52,7 +52,7 @@ KVM
  a| 
 Porta seriale
  a| 
-** CAVO seriale DB-9
+** Cavo USB
 ** Terminale seriale virtuale
 
 
@@ -103,9 +103,23 @@ SOL
 
 
  a| 
+ALT
+ a| 
+Lo script di avvio principale è in attesa del completamento dell'avvio del sistema operativo.
+
+
+
+ a| 
 CIAO
  a| 
 Lo script di boot master è stato avviato.
+
+
+
+ a| 
+PP
+ a| 
+Il sistema sta verificando se l'FPGA deve essere aggiornato.
 
 
 
@@ -156,15 +170,21 @@ StorageGRID è in esecuzione.
 
 == Visualizzare i codici di errore
 
-Se si verifica un errore hardware durante l'avvio dell'appliance, BMC registra un codice di errore. Se necessario, è possibile visualizzare questi codici di errore utilizzando l'interfaccia BMC, quindi collaborare con il supporto tecnico per risolvere il problema.
+Se si verifica un errore hardware durante l'avvio dell'appliance, BMC registra un codice di errore. Se necessario, è possibile visualizzare questi codici di errore utilizzando la porta seriale del dispositivo, quindi collaborare con il supporto tecnico per risolvere il problema.
 
 .Prima di iniziare
-* Sai come fare link:accessing-bmc-interface.html["Accedere al dashboard BMC"].
+* Raccogliere l'attrezzatura richiesta:
++
+** Cavo USB
+** Terminale seriale virtuale
+
+
 
 
 .Fasi
-. Dalla dashboard BMC, selezionare *BIOS POST Code* (Codice POST BIOS).
-. Esaminare le informazioni visualizzate per il codice corrente e il codice precedente.
+. Collegare alla porta USB seriale sul retro dell'apparecchio.
+. Utilizzare le impostazioni `115200 8-N-1`.
+. Esaminare le informazioni stampate sul terminale seriale per il codice corrente e il codice precedente.
 +
 Se viene visualizzato uno dei seguenti codici di errore, collaborare con il supporto tecnico per risolvere il problema.
 

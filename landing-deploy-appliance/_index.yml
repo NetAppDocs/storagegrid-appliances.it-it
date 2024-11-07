@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Implementa un nodo di appliance
+  summary: Implementare un nodo di appliance StorageGRID e verificarne il funzionamento.
+  keywords: storagegrid deployment, deploy storagegrid
+  lead: Implementare un nodo di appliance StorageGRID e verificarne il funzionamento.
   tiles:
   - title: Implementa l'appliance
     links:

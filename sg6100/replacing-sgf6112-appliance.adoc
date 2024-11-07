@@ -14,7 +14,7 @@ summary: 'Potrebbe essere necessario sostituire l"apparecchio se non funziona in
 Potrebbe essere necessario sostituire l'apparecchio se non funziona in modo ottimale o se si è guastato.
 
 .Prima di iniziare
-* Si dispone di un apparecchio sostitutivo con lo stesso codice prodotto dell'apparecchio che si sta sostituendo.
+* Si dispone di un apparecchio sostitutivo con lo stesso codice prodotto dell'apparecchio che si sta sostituendo. Controllare le etichette applicate sulla parte anteriore degli apparecchi per verificare che i numeri di parte corrispondano.
 * Sono presenti etichette per identificare ciascun cavo collegato all'apparecchio.
 * Lo hai fatto link:locating-sgf6112-in-data-center.html["posizionato fisicamente l'apparecchio"].
 
@@ -42,7 +42,7 @@ Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
 .. Inserire: `*run-host-command ipmitool lan print*` Per visualizzare le configurazioni BMC correnti per l'appliance.
 
 
-. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Spegnere l'apparecchio"].
+. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Spegnere l'apparecchio"].
 . Se una delle interfacce di rete di questo dispositivo StorageGRID è configurata per DHCP, è necessario aggiornare le assegnazioni di lease DHCP permanenti sui server DHCP per fare riferimento agli indirizzi MAC del dispositivo sostitutivo. In questo modo si assicura che all'apparecchio siano assegnati gli indirizzi IP previsti.
 +
 Contattare l'amministratore della rete o del server DHCP per aggiornare le assegnazioni permanenti del lease DHCP. L'amministratore può determinare gli indirizzi MAC del dispositivo sostitutivo dai registri del server DHCP o esaminando le tabelle degli indirizzi MAC negli switch a cui sono collegate le porte Ethernet del dispositivo.
@@ -163,7 +163,7 @@ CAUTION: Se si desidera conservare i dati sui dischi, assicurarsi di inserire i 
 
 
 . Accendere l'apparecchio.
-. Se l'appliance sostituita ha abilitato la crittografia dell'unità hardware per le unità SED, è necessario link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["immettere la passphrase di crittografia dell'unità"] per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.
+. Se l'appliance sostituita ha attivato la crittografia dell'unità hardware per le unità SED, vedere link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["Accedere a un'unità crittografata"]. Segui le indicazioni per accedere al disco crittografato quando si avvia l'appliance sostitutiva per la prima volta. Per completare la procedura sarà necessario riavviare il sistema.
 . Attendete che l'apparecchio si unisca nuovamente alla griglia. Se l'appliance non si ricongiungerà alla griglia, seguire le istruzioni riportate nella home page del programma di installazione dell'appliance StorageGRID per risolvere eventuali problemi.
 +
 
@@ -172,7 +172,7 @@ WARNING: Per evitare la perdita di dati se il programma di installazione dell'ap
 . Se l'appliance sostituita utilizzava un server di gestione delle chiavi (KMS) per gestire le chiavi di crittografia per la crittografia dei nodi, potrebbe essere necessaria una configurazione aggiuntiva prima che il nodo possa unirsi al grid. Se il nodo non si unisce automaticamente alla griglia, assicurarsi che queste impostazioni di configurazione siano state trasferite alla nuova appliance e configurare manualmente le impostazioni che non hanno la configurazione prevista:
 +
 ** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configurare le connessioni StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
 
 
 . Accedere all'appliance sostituita:
@@ -217,6 +217,6 @@ WARNING: Per evitare la perdita di dati se il programma di installazione dell'ap
 Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
 
 .Informazioni correlate
-link:../installconfig/viewing-status-indicators.html["Visualizzare gli indicatori di stato"]
+* link:../installconfig/viewing-status-indicators.html["Visualizzare gli indicatori di stato"]
+* link:../installconfig/troubleshooting-hardware-installation-sg6100.html#view-boot-codes["Visualizzare i codici di avvio dell'appliance"]
 
-link:../installconfig/troubleshooting-hardware-installation-sg6100.html#view-error-codes["Visualizzare i codici di avvio dell'appliance"]

@@ -37,10 +37,10 @@ image::../media/sgf6112_power_supplies.png[Retro di SGF6112 o SG6100-CN con due 
 .Fasi
 . Se si sostituisce un solo alimentatore, non è necessario spegnere l'apparecchio. Accedere alla <<Unplug_the_power_cord,Scollegare il cavo di alimentazione>> fase. Se si stanno sostituendo entrambi gli alimentatori contemporaneamente, prima di scollegare i cavi di alimentazione procedere come segue:
 +
-.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Spegnere l'apparecchio"].
+.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Spegnere l'apparecchio"].
 +
 
-CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto e si stanno sostituendo entrambi gli alimentatori contemporaneamente, è necessario sostituire gli alimentatori durante una finestra di manutenzione programmata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto e si stanno sostituendo entrambi gli alimentatori contemporaneamente, è necessario sostituire gli alimentatori durante una finestra di manutenzione programmata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere informazioni su https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
 
 
 
