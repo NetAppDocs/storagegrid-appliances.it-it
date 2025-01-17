@@ -1124,6 +1124,7 @@ Grid Network
 
 
 . Se si intende utilizzare la rete di amministrazione per StorageGRID, collegare la porta della rete di amministrazione dell'appliance alla rete di amministrazione utilizzando un cavo Ethernet.
+. Se l'appliance include uno shelf di espansione, consultare la link:../sg6100/adding-expansion-shelf-to-deployed-sg6160.html["Istruzioni per l'aggiunta di uno shelf di espansione a un sistema SG6160 distribuito"] per informazioni sul cablaggio.
 
 
 --
