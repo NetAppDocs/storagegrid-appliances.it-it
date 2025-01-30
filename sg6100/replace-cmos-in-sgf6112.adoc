@@ -26,9 +26,25 @@ Utilizzare queste procedure per:
 .Prima di iniziare
 * Lo hai fatto link:verify-component-to-replace.html["Verificato l'apparecchio in cui è necessario sostituire la batteria CMOS"].
 * Lo hai fatto link:locating-sgf6112-in-data-center.html["Situato fisicamente l'apparecchio SGF6112 o il controller SG6100-CN"] Dove si sta sostituendo la batteria CMOS nel data center.
+* È stata registrata l'attuale configurazione BMC dell'appliance, se è ancora disponibile.
++
+.. Accedere all'apparecchio da sostituire:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Invio: `*run-host-command ipmitool lan print*` Consente di visualizzare la configurazione BMC corrente per il dispositivo.
 +
 
 NOTE: È necessario un link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["spegnimento controllato dell'apparecchio"] prima di rimuovere l'apparecchio dal rack.
+
+
 
 * Tutti i cavi sono stati scollegati e. link:reinstalling-sgf6112-cover.html["rimuovere il coperchio dell'apparecchio"].
 

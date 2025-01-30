@@ -26,9 +26,25 @@ Utilizzare queste procedure per:
 .Prima di iniziare
 * Si dispone di link:verify-component-to-replace-sg100-and-sg1000.html["Verificato il SG100 o il SG1000 in cui la batteria CMOS deve essere sostituita"].
 * Si trova link:locating-controller-in-data-center.html["Situato fisicamente l'apparecchio SG100 o SG1000"] il punto in cui si sta sostituendo la batteria CMOS nel data center.
+* È stata registrata l'attuale configurazione BMC dell'appliance, se è ancora disponibile.
++
+.. Accedere all'apparecchio da sostituire:
++
+... Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+... Immettere la password elencata in `Passwords.txt` file.
+... Immettere il seguente comando per passare a root: `su -`
+... Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+.. Invio: `*run-host-command ipmitool lan print*` Consente di visualizzare la configurazione BMC corrente per il dispositivo.
 +
 
 NOTE: È necessario un link:shut-down-sg100-and-sg1000.html["spegnimento controllato dell'apparecchio"] prima di rimuovere l'apparecchio dal rack.
+
+
 
 * Tutti i cavi e sono stati scollegati link:reinstalling-sg100-and-sg1000-controller-cover.html["rimuovere il coperchio dell'apparecchio"].
 
