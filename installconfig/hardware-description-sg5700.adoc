@@ -175,7 +175,7 @@ image::../media/sg5760_front_and_back_views.gif[Parte anteriore e posteriore del
 
 Il modello SG5760 include due controller, due contenitori per ventole e due contenitori di alimentazione.
 
-image::../media/sg5760_with_callouts.gif[Controller,fan canisters,and power canisters in SG5760 appliance]
+image::../media/sg5760_with_callouts.gif[Controller, taniche per ventole e taniche di alimentazione nell'appliance SG5760]
 
 [cols="1a,2a"]
 |===
@@ -223,7 +223,7 @@ image::../media/sg5760x_front_and_back_views.gif[Parte anteriore e posteriore de
 
 Il sistema SG5760X include due controller, due ventole e due filtri di alimentazione.
 
-image::../media/sg5760x_with_callouts.gif[Controller,fan canisters,and power canisters in SG5760X appliance]
+image::../media/sg5760x_with_callouts.gif[Controller, taniche per ventole e taniche di alimentazione nell'appliance SG5760X]
 
 [cols="1a,3a"]
 |===

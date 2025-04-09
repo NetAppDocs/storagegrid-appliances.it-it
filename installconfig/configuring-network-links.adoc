@@ -718,7 +718,7 @@ La figura mostra come le quattro porte di rete sono collegate in modalità aggre
 
 *SGF6112*:
 
-image::../media/sgf6112_aggregate_ports.png[SGF6112 modalità aggregata Port Bond]
+image::../media/sgf6112_aggregate_ports.png[Modalità Bond porta aggregata SGF6112]
 
 *SG6100*:
 

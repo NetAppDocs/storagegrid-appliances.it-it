@@ -57,7 +57,7 @@ Viene visualizzato il pannello dei dettagli dell'unità.
 
 . Selezionare *Turn Locator light on* (attiva luce localizzatore).
 +
-** Icona di una lampadina image:../media/icon_drive-light-bulb.png["lampadina luce di guida"] viene visualizzato per l'unità.
+** Per l'unità viene visualizzata l'icona di una lampadinaimage:../media/icon_drive-light-bulb.png["lampadina luce di guida"].
 ** Un LED giallo lampeggia sull'unità fisica.
 
 

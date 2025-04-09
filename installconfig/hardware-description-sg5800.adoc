@@ -114,7 +114,7 @@ image::../media/sg5860_front_and_back_views.png[Parte anteriore e posteriore del
 
 Il sistema SG5860 include due controller, due ventole e due filtri di alimentazione.
 
-image::../media/sg5860_with_callouts.png[Controller,fan canisters,and power canisters in SG5860 appliance]
+image::../media/sg5860_with_callouts.png[Controller, taniche per ventole e taniche di alimentazione nell'appliance SG5860]
 
 [cols="1a,2a"]
 |===

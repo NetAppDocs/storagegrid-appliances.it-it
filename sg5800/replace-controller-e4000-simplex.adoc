@@ -361,7 +361,7 @@ image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il control
 +
 L'apparecchio si riavvia e si ricongiunge alla griglia. Questo processo può richiedere fino a 20 minuti.
 
-. Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina Nodes (nodi) visualizzi uno stato normale (icona con segno di spunta verde) image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+. Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina dei nodi visualizzi uno stato normale (icona con un segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"]a sinistra del nome del nodo) per il nodo dell'appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
 +
 image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
 

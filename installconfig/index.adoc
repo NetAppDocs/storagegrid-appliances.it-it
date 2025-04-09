@@ -13,7 +13,7 @@ summary: 'Segui questa procedura di alto livello per installare e configurare un
 [role="lead"]
 Segui questa procedura di alto livello per installare e configurare un'appliance StorageGRID e implementarla come nodo nel tuo sistema StorageGRID.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Preparazione per l'installazione
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Prima dell'installazione
 [role="quick-margin-list"]
 . Collabora con il tuo consulente NetApp Professional Services per automatizzare l'installazione e la configurazione. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
 +
@@ -69,7 +69,7 @@ Se si configurano e implementano più appliance, utilizzare lo strumento ConfigB
 
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Implementare il nodo appliance
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Implementa il nodo dell'appliance
 [role="quick-margin-para"]
 Implementa l'appliance come nuovo nodo nel tuo sistema StorageGRID.
 

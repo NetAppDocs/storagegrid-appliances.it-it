@@ -23,7 +23,7 @@ Il programma di installazione dell'appliance StorageGRID indica lo stato fino al
 La pagina Monitor Installation (Installazione monitor) mostra lo stato di avanzamento dell'installazione.
 
 +
-image::../media/monitor_installation_configure_storage.gif[Questa immagine viene spiegata dal testo circostante.]
+image::../media/monitor_installation_configure_storage.gif[Pagina Installazione monitor]
 
 +
 La barra di stato blu indica l'attività attualmente in corso. Le barre di stato verdi indicano le attività completate correttamente.
@@ -47,7 +47,7 @@ In questa fase, il programma di installazione copia l'immagine del sistema opera
 
 . Continuare a monitorare lo stato di avanzamento dell'installazione fino a quando la fase *Install StorageGRID* (Installazione guidata) non viene interrotta e sulla console integrata viene visualizzato un messaggio che richiede di approvare questo nodo nel nodo di amministrazione utilizzando Gestione griglia. Passare alla fase successiva.
 +
-image::../media/monitor_installation_install_sgws.gif[Questa immagine viene spiegata dal testo circostante.]
+image::../media/monitor_installation_install_sgws.gif[Pagina Installazione monitor]
 
 . Accedere al Grid Manager del nodo Amministratore principale, approvare il nodo di storage in sospeso e completare il processo di installazione di StorageGRID.
 +
@@ -95,7 +95,7 @@ In questa fase, il programma di installazione copia l'immagine del sistema opera
 NOTE: Durante l'installazione di un nodo amministrativo primario dell'appliance, viene visualizzata una quinta fase per caricare il programma di installazione StorageGRID (la schermata di esempio mostra solo le prime quattro fasi). Se il caricamento del programma di installazione di StorageGRID (quinta fase) è in corso per più di 10 minuti, aggiornare manualmente la pagina Web.
 
 +
-image::../media/monitor_installation_install_sgws.gif[Questa immagine viene spiegata dal testo circostante.]
+image::../media/monitor_installation_install_sgws.gif[Pagina Installazione monitor]
 
 
 

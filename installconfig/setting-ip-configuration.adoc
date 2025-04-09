@@ -67,8 +67,8 @@ Se si dispone di subnet Grid, è necessario il gateway Grid Network. Tutte le su
 NOTE: Il percorso predefinito non è elencato. Se la rete client non è attivata, il percorso predefinito utilizzerà il gateway Grid Network.
 
 +
-*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
-*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"]a destra dell'ultima voce.
+*** Per rimuovere una subnet non utilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
 
 
 .. Fare clic su *Save* (Salva).
@@ -92,8 +92,8 @@ Se si dispone di subnet Grid, è necessario il gateway Grid Network. Tutte le su
 NOTE: Il percorso predefinito non è elencato. Se la rete client non è attivata, il percorso predefinito utilizzerà il gateway Grid Network.
 
 +
-*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
-*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"]a destra dell'ultima voce.
+*** Per rimuovere una subnet non utilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
 
 
 .. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.
@@ -148,8 +148,8 @@ Verificare che tutte le subnet possano essere raggiunte utilizzando il gateway f
 NOTE: Non è possibile eseguire il percorso predefinito per utilizzare il gateway Admin Network.
 
 +
-*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
-*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"]a destra dell'ultima voce.
+*** Per rimuovere una subnet non utilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
 
 
 .. Fare clic su *Save* (Salva).
@@ -173,8 +173,8 @@ Verificare che tutte le subnet possano essere raggiunte utilizzando il gateway f
 NOTE: Non è possibile eseguire il percorso predefinito per utilizzare il gateway Admin Network.
 
 +
-*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"] a destra dell'ultima voce.
-*** Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
+*** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"]a destra dell'ultima voce.
+*** Per rimuovere una subnet non utilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
 
 
 .. Se si desidera utilizzare i frame jumbo, impostare il campo MTU su un valore adatto per i frame jumbo, ad esempio 9000. In caso contrario, mantenere il valore predefinito 1500.

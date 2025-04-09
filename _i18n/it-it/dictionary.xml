@@ -34,7 +34,6 @@
   <block id="16e036b76973c9fbae0f82be319571c0" category="list-text">Selezionare *Reboot into Maintenance Mode* (Riavvia in modalità di manutenzione) per riavviare il controller con il nodo in modalità di manutenzione. (Questa opzione è disponibile solo quando il controller è in modalità di manutenzione). Selezionare questa opzione se sono necessarie ulteriori operazioni di manutenzione sul nodo prima di ricongiungersi alla griglia.</block>
   <block id="abae4054ff73709d783731ccc01cb620" category="image-alt">Riavviare il controller in modalità di manutenzione</block>
   <block id="3626aefc9cb2effa31b269c155b93cb3" category="inline-image-macro">segno di spunta verde</block>
-  <block id="4a7896c4df016b109cb969cdc361c49f" category="paragraph">Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina *NODES* dovrebbe visualizzare uno stato normale (icona con segno di spunta verde <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block> a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.</block>
   <block id="4a7717f111c2730f0f856e7f7bce4120" category="image-alt">Nodo appliance riconentrato in Grid</block>
   <block id="d302ab60418523bd0761c847d8a30df9" category="summary">Individuare il controller in modo da poter eseguire la manutenzione o gli aggiornamenti dell'hardware.</block>
   <block id="5a98db7f59331b6532861044538d04ed" category="doc">Individua SG100 TB o SG1000 PB di dati nel data center</block>
@@ -586,7 +585,6 @@
   <block id="d3b48700951a0b8b77b211e773016d08" category="paragraph">La figura mostra come le quattro porte di rete sono collegate in modalità Fixed Port Bond (configurazione predefinita).</block>
   <block id="9ee14927da820774398c3df40695487e" category="image-alt">Modalità Bond a SGF6112 porte fisse</block>
   <block id="38c9a563fec2225ed2a9f5d6933738cf" category="paragraph">La figura mostra come le quattro porte di rete sono collegate in modalità aggregate port bond.</block>
-  <block id="7a94e0e125ccb659b8287a71266ad626" category="image-alt">SGF6112 modalità aggregata Port Bond</block>
   <block id="911e75012e8614cfd0f98a9d0a4a1ded" category="image-alt">Porte di rete dell'amministratore collegate SGF6112</block>
   <block id="0739ae8aa2b43e4e7e5a0617281bed7e" category="list-text">Dalla barra dei menu del programma di installazione dell'appliance StorageGRID, fare clic su *Configura rete* &gt; *Configurazione del collegamento*.</block>
   <block id="243a7c2280790d37c7a538bdc19d52a0" category="paragraph">La pagina Network link Configuration (Configurazione collegamento di rete) visualizza un diagramma dell'appliance con le porte di rete e di gestione numerate.</block>
@@ -710,7 +708,6 @@
   <block id="0e152e55698c28ee0f75725b3f0f1f3a" category="image-alt">Parte anteriore e posteriore dell'appliance SG5760</block>
   <block id="0e9c6b4af603c29f7da7a818c51d0535" category="section-title">SG5760 componenti</block>
   <block id="cee3e5c26f498528ac4a0236cc79321a" category="paragraph">Il modello SG5760 include due controller, due contenitori per ventole e due contenitori di alimentazione.</block>
-  <block id="cbfb14f470701bf93424d757c624369a" category="image-alt">Controller</block>
   <block id="e14810f3f4c905323dafce88216fa5cc" category="paragraph">Filtro a carboni attivi della ventola (1 di 2)</block>
   <block id="a063d58fb5fae2bdfac1676614f7ee07" category="paragraph">Filtro a carboni attivi (1 di 2)</block>
   <block id="6b2b65ea7978b5b9a25b2cb94431e653" category="section-title">SG5760X viste anteriore e posteriore</block>
@@ -1070,7 +1067,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="f4f8856aa71072c7ffcae15cdd730581" category="open-title">Appliance di storage</block>
   <block id="2294b3e981e790cc87d4da57bd1cbbfb" category="list-text">Per monitorare l'avanzamento dell'installazione, fare clic su *Monitor Installation* (Installazione monitor).</block>
   <block id="5180436222e4cab27793145585243c85" category="paragraph">La pagina Monitor Installation (Installazione monitor) mostra lo stato di avanzamento dell'installazione.</block>
-  <block id="137110384a36d8791ecfd822e2cec069" category="image-alt">Questa immagine viene spiegata dal testo circostante.</block>
   <block id="de54811cbfae5b1dad2e97b4d2bc5d37" category="paragraph">La barra di stato blu indica l'attività attualmente in corso. Le barre di stato verdi indicano le attività completate correttamente.</block>
   <block id="242b3abd41f6ed6b0544bfba71c75862" category="admonition">Il programma di installazione garantisce che le attività completate in un'installazione precedente non vengano rieseguite. Se si esegue nuovamente un'installazione, tutte le attività che non devono essere rieseguite vengono visualizzate con una barra di stato verde e lo stato "`Skipped`".</block>
   <block id="500b135abdc51d28fdb66659c88a91cb" category="list-text">Esaminare i progressi delle prime due fasi di installazione.</block>
@@ -1346,7 +1342,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="f961c0bd93f3e244eccfb936f758a1b9" category="summary">Segui questa procedura di alto livello per installare e configurare un'appliance StorageGRID e implementarla come nodo nel tuo sistema StorageGRID.</block>
   <block id="93524d04199bd4798a3fe31a7af76e9b" category="doc">Avvio rapido per l'installazione dell'apparecchio</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Uno</block>
-  <block id="61d7360b301a1cb885e62542da3bb7d4" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Preparazione per l'installazione</block>
   <block id="729465e8ee73495ad13bac2190f3bf21" category="list-text">Collabora con il tuo consulente NetApp Professional Services per automatizzare l'installazione e la configurazione. Vedere <block ref="da9e5f931ee7f07fa7e39b6838d21cb5" category="inline-link-macro-rx"></block>.</block>
   <block id="61a31f57e1f0397cc5e4b75b9e9a8235" category="paragraph">Questo passaggio è facoltativo. Tuttavia, la semplificazione e l'automazione delle fasi di configurazione possono risparmiare tempo e garantire coerenza nella configurazione di più appliance.</block>
   <block id="908d6500c8720fda63973247d6cf6dd8" category="inline-link-macro">Preparare il sito</block>
@@ -1357,7 +1352,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="5b3bc2041b779a6eb06cd20122f89cea" category="inline-link-macro">Raccogliere informazioni sulla rete</block>
   <block id="adb08abc85034bf5521a8cf194dd40f7" category="list-text"><block ref="adb08abc85034bf5521a8cf194dd40f7" category="inline-link-macro-rx"></block></block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Due</block>
-  <block id="8277df7af5b96bf4a80b559c3ba178a8" category="list-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Installare l'hardware</block>
   <block id="5a4d04406745c2904f6018d2e497f94e" category="inline-link-macro">Registrare l'hardware</block>
   <block id="4f29770bc91ba4e0ac93deb8a75d6ab4" category="list-text"><block ref="4f29770bc91ba4e0ac93deb8a75d6ab4" category="inline-link-macro-rx"></block></block>
   <block id="925131ecbd4fcd6869a82902a137f0f5" category="list-text">Installazione nell'armadio o nel rack</block>
@@ -1368,7 +1362,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="d2ac588ca1c2e36ed5fe68add0ef2b5b" category="inline-link-macro">Visualizzare gli indicatori e i codici di stato</block>
   <block id="a858da9bda9e3877715430e0088bb5dc" category="list-text"><block ref="a858da9bda9e3877715430e0088bb5dc" category="inline-link-macro-rx"></block></block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tre</block>
-  <block id="c0d04cbe5d2a655bbb5f1f3f1e6451d9" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Configurare l'hardware</block>
   <block id="2accf2cbaee75c29a846d3926d71c01a" category="paragraph">Se si configurano e implementano più appliance, utilizzare lo strumento ConfigBuilder di NetApp per automatizzare le seguenti fasi di configurazione e implementazione. Per assistenza, contatta il tuo consulente NetApp Professional Services. Vedere <block ref="da9e5f931ee7f07fa7e39b6838d21cb5" category="inline-link-macro-rx"></block>.</block>
   <block id="689516ae21d375042165861bc9946283" category="list-text">Configurare le connessioni StorageGRID</block>
   <block id="7d96b927cf251ec29cb794b34748cc6f" category="list-text"><block ref="91a798f25e7b04bd5397635b1ec1a030" category="inline-link-macro-rx"></block> e verificare che sia in esecuzione la versione più recente</block>
@@ -1383,7 +1376,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="2171ee6f1f3ccc6f315dabf2a4d9915c" category="inline-link-macro">Rimappare le porte di rete</block>
   <block id="c34a1892850e29f57586c61eaab0d8f1" category="list-text"><block ref="c34a1892850e29f57586c61eaab0d8f1" category="inline-link-macro-rx"></block></block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quattro</block>
-  <block id="75be3472a8a2dba2c67b3d12a39d8714" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Implementare il nodo appliance</block>
   <block id="007b9954a5c681c7ea309c9471bd96d1" category="paragraph">Implementa l'appliance come nuovo nodo nel tuo sistema StorageGRID.</block>
   <block id="34fa5050343060315a25cd328438a2ce" category="inline-link-macro">Implementare l'appliance Storage Node</block>
   <block id="c1d39a1019e538dbace4710b28fbd450" category="list-text"><block ref="c1d39a1019e538dbace4710b28fbd450" category="inline-link-macro-rx"></block></block>
@@ -1475,9 +1467,7 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="1e5525a7408a5f05eab0a28d87fbf2b2" category="paragraph">Se si dispone di subnet Grid, è necessario il gateway Grid Network. Tutte le subnet della griglia specificate devono essere raggiungibili tramite questo gateway. Queste subnet della rete di griglia devono essere definite anche nell'elenco subnet della rete di griglia sul nodo di amministrazione primario quando si avvia l'installazione di StorageGRID.</block>
   <block id="95c601a1b60eb13cd59109591804d00a" category="admonition">Il percorso predefinito non è elencato. Se la rete client non è attivata, il percorso predefinito utilizzerà il gateway Grid Network.</block>
   <block id="408ea845582fc67ccb1d6fd994905d7e" category="inline-image-macro">inserire l'icona</block>
-  <block id="625b1517f7fc50c8790976add6a30b85" category="list-text">Per aggiungere una subnet, fare clic sull'icona di inserimento <block ref="0e4a78bb3476d4c9221dc56813d32390" category="inline-image-macro-rx" type="image"></block> a destra dell'ultima voce.</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">icona elimina</block>
-  <block id="20d1f9afba77fd8b189e95eebc04fa3c" category="list-text">Per rimuovere una subnet inutilizzata, fare clic sull'icona di eliminazione <block ref="ae4b0d0edca14814d378e9b1121d1fb3" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="a46bbb4dd037b68158879e9e446ba4ab" category="list-text">Se è stato selezionato *DHCP*, attenersi alla seguente procedura per configurare Grid Network:</block>
   <block id="140b4bda6d38a9f86842d22758d11a13" category="list-text">Dopo aver selezionato il pulsante di opzione *DHCP*, fare clic su *Save* (Salva).</block>
   <block id="a1563c17c233f64f135160e3aaf751c8" category="paragraph">I campi *IPv4 Address*, *Gateway* e *subnet* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.</block>
@@ -2596,7 +2586,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="235328827141e650f44c482c6868c490" category="list-text">*Più di 4 voci MEL critiche negli ultimi 7 giorni*</block>
   <block id="6b108eb8b08f0ff8a5a6e884a1ac6474" category="list-text">*Riavvia in StorageGRID*.</block>
   <block id="ff893ef835261129935a9f82f297a8d3" category="list-text">*Riavviare in modalità di manutenzione*. Riavviare il controller e mantenere il nodo in modalità di manutenzione. Selezionare questa opzione se si sono riscontrati errori durante la procedura e si desidera ricominciare. Al termine del riavvio del nodo in modalità di manutenzione, riavviare dalla fase appropriata della procedura che ha avuto esito negativo.</block>
-  <block id="c7c19b3cb79ee9f5fdbc22cfac916b00" category="paragraph">Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina Nodes (nodi) dovrebbe visualizzare uno stato normale (icona con segno di spunta verde) <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block> a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.</block>
   <block id="5d4d9bbd71eda7ec2ba074c8e6717b0b" category="list-text">Si dispone del numero di serie dell'appliance di storage in cui è necessario sostituire il componente.</block>
   <block id="620e2edf2db0c3c3cad57aeb246c6bfe" category="list-text">Alimentatori</block>
   <block id="4604f841b0b16d3013cac1e2078e5b1b" category="list-text">Ventole</block>
@@ -3255,15 +3244,12 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="ebd9bec4d70abc789d439c1f136b0538" category="list-text">Layout</block>
   <block id="a92cd291617f14a6abada995fa7b9a3f" category="list-text">Layout delle unità per lo storage dei dati nell'appliance. Selezionare un'unità per visualizzare i dettagli dell'unità.</block>
   <block id="802e7305dd85cea6e2113cfcd28efcc4" category="inline-image-macro">Visualizzazione del layout della scheda Gestisci unità</block>
-  <block id="d27c8e7332b9c04db30add2b10a3b985" category="paragraph"><block ref="d27c8e7332b9c04db30add2b10a3b985" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51c45b795d5d18a3e4e0c37e8b20a141" category="list-text">Tabella</block>
   <block id="bb9b3538a9d87d44908bc9e32d8d569f" category="list-text">Elenca le informazioni per ciascuna unità. Selezionare un'unità per visualizzare i dettagli dell'unità.</block>
   <block id="a3dca7d34e55df93c7cde51419b56b4d" category="inline-image-macro">Scheda Gestisci unità, vista Tabella</block>
-  <block id="c6a460c7204d47ea03281d6c34b4082c" category="paragraph"><block ref="c6a460c7204d47ea03281d6c34b4082c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7839b3083725aa9cf29f17e556f51b13" category="list-text">Dettagli dell'unità</block>
   <block id="f1fcb7890d507bd18507b76b7fac911e" category="list-text">Riepilogo per ciascuna unità. Selezionare il pulsante di attività appropriato, come descritto nei passaggi seguenti.</block>
   <block id="41bba69dcc44894611fbb8408556ecf0" category="inline-image-macro">Scheda Gestisci unità Dettagli unità</block>
-  <block id="b20d6e66b629a10a6645afcf7cdaea19" category="paragraph"><block ref="b20d6e66b629a10a6645afcf7cdaea19" category="inline-image-macro-rx" type="image"></block></block>
   <block id="75388568d69331a73edddf1bb8200063" category="section-title">Accendere o spegnere la spia del localizzatore</block>
   <block id="eee8e9d047abcc6f2a1bd835ce94940f" category="paragraph">Per individuare fisicamente un'unità nell'apparecchio:</block>
   <block id="c32ef8b996f19c9a382163fff2884c3e" category="list-text">Da Grid Manager, selezionare *NODI* &gt; *_data center_*.</block>
@@ -3271,7 +3257,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="2ec674c0e23e478f263eb7f0dd38dcfa" category="paragraph">Viene visualizzato il pannello dei dettagli dell'unità.</block>
   <block id="91a78dae50662df15b3511db31bb992d" category="list-text">Selezionare *Turn Locator light on* (attiva luce localizzatore).</block>
   <block id="4b2ae8cd6761e598cde2ed97ebfc2c52" category="inline-image-macro">lampadina luce di guida</block>
-  <block id="7702526375f4228115e6c43395e88831" category="list-text">Icona di una lampadina <block ref="94ab247b1d8795573f258b884cbb3205" category="inline-image-macro-rx" type="image"></block> viene visualizzato per l'unità.</block>
   <block id="388c626a588c91ea293598aef2749584" category="list-text">Un LED giallo lampeggia sull'unità fisica.</block>
   <block id="1abcc8c99c25daaf0201a5a5f9f76f0c" category="list-text">Se si desidera disattivare la spia del localizzatore, selezionare *Disattiva luce localizzatore*.</block>
   <block id="936feabbf1d089b08420a3d98b966130" category="section-title">[[logicamente-replace-drive]]sostituire logicamente l'unità</block>
@@ -3367,7 +3352,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="d795e8cd8371a6b73f2b41ac93cd4af7" category="list-text">Riportare l'apparecchio alla normale modalità operativa. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* &gt; *Riavvia controller*, quindi selezionare *Riavvia in StorageGRID*.</block>
   <block id="3e66fa5bf36f76d2fc581f1ef343369d" category="list-text">Durante il riavvio, monitorare lo stato del nodo per determinare quando si è riconentrato nella griglia.</block>
   <block id="8086a95cfc7eadf19603caa0b59c297b" category="paragraph">L'apparecchio si riavvia e si ricongiunge alla griglia. Questo processo può richiedere fino a 20 minuti.</block>
-  <block id="92509bf687a8af21fffd7107378de538" category="list-text">Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina Nodes (nodi) visualizzi uno stato normale (icona con segno di spunta verde) <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block> a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.</block>
   <block id="f2c451e5cfa0cef9d6f648da8cc4b64d" category="list-text">Da Gestore di sistema di SANtricity, verificare che il nuovo controller sia ottimale e raccogliere i dati di supporto.</block>
   <block id="f838b84263c45aeb4f1be3728754e3ad" category="summary">Potrebbe essere necessario sostituire il controller E5700SG se non funziona in modo ottimale o se si è verificato un guasto.</block>
   <block id="add9671f6034ac41fcd287a17504e8bd" category="doc">Sostituzione del compute controller E5700SG</block>
@@ -3808,7 +3792,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="0411119e4f79ad1707ac7d0f4dcfe1f9" category="sidebar">Procedure eseguite di frequente</block>
   <block id="aefc32c543633d03426c4468621c16d0" category="sidebar">Spegnere e riaccendere l'apparecchio</block>
   <block id="a676111fb737fcb72e7e7c965f76150f" category="sidebar">Upgrade SANtricity (Aggiorna server)</block>
-  <block id="c55b834e11341e1ae1654b547833e156" category="sidebar">Aggiornare il firmware del disco</block>
   <block id="4ca89cce8de48db97e7da87c4da0f321" category="sidebar">Procedure rack</block>
   <block id="e2a9fe764a1470ce20c66da753bdd352" category="sidebar">Sostituire il controller nel rack</block>
   <block id="ee483790c835a22a06c38b59fd4f5d99" category="sidebar">Aggiunta di shelf di espansione</block>
@@ -4092,7 +4075,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="3646dc64c9984fb8e4916b069a738c4d" category="list-text"><block ref="3646dc64c9984fb8e4916b069a738c4d" category="inline-link-macro-rx"></block></block>
   <block id="1eb5174a3405ee92fa2cb06763568414" category="paragraph">Le figure mostrano come le quattro porte di rete su SG1100 o SG110 sono collegate in modalità di collegamento a porta fissa (configurazione predefinita).</block>
   <block id="80373303baca203e4e14cdd9e3730d3a" category="image-alt">Modalità Bond porta aggregata SG1100</block>
-  <block id="d724879fa330fae85100664fb33bd284" category="image-alt">Modalità Bond porta aggregata SG110</block>
   <block id="c185e2af57eb486402a7055cd7b9584b" category="image-alt">Porte di rete dell'amministratore collegate SG1100</block>
   <block id="168fbbc8217ae40bd5086de4e4935611" category="image-alt">Porte di rete dell'amministratore collegate SG110</block>
   <block id="835d59e48069a93606ecd047daaf1f61" category="summary">L'appliance di servizi StorageGRID SG110 e l'appliance di servizi SG1100 possono funzionare come nodo gateway e come nodo amministrativo per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).</block>
@@ -4724,9 +4706,6 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="b35ee31644277b926d6f67755bed8262" category="list-text">Evitare i campi magnetici:</block>
   <block id="4f6fd854157171bc29496e1302686c0d" category="list-text">Tenere le unità lontano da dispositivi magnetici.</block>
   <block id="f66258d021b41e6fa19a1649533ef172" category="paragraph">I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.</block>
-  <block id="c43f428e44c60919263219fc69f78b27" category="doc">Aggiornamento del firmware dei dischi SG5800 con SANtricity System Manager</block>
-  <block id="f92e54d30593fb7cc6d4478240b8477c" category="paragraph">Aggiornare il firmware dei dischi dell'appliance per assicurarsi di disporre delle ultime funzionalità e delle correzioni dei bug.</block>
-  <block id="cc65b159b524b20be43aac2014954759" category="paragraph">Direttiva non risolta in &lt;stdin&gt; - include:./_include/upgrade-drive-firmware-using-santricity-system-manager.adoc[]</block>
   <block id="03dcfd6af80c1707e647b3cee9c7ee65" category="list-text">Verificare che il LED sinistro del disco da sostituire sia di colore ambra lampeggiante. Se è stato segnalato un problema di unità nell'interfaccia utente di Grid Manager o BMC, HDD02 o HDD2 si riferiscono all'unità nello slot superiore e HDD03 o HDD3 si riferiscono all'unità nello slot inferiore.</block>
   <block id="445e825246156afbf483be98791c154f" category="inline-link-macro">SG5800</block>
   <block id="9cef5aeb63436914780167a988745b83" category="list-text"><block ref="9cef5aeb63436914780167a988745b83" category="inline-link-macro-rx"></block></block>
@@ -5024,7 +5003,6 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="6a39f57ac2d1612428addd88ffb4531c" category="image-alt">Immagine che mostra come le porte 10/25-GbE sul controller SG5800 sono collegate in modalità fissa</block>
   <block id="4036333a04d1013d0a2ff245b1743cf3" category="image-alt">Immagine che mostra come le porte 10/25-GbE sul controller SG5800 sono unite in modalità aggregata</block>
   <block id="21beafac072af3624f5cf77d3c470a43" category="paragraph">*SG6100*:</block>
-  <block id="0fdec1cb4e0f4aebdbf64754e3c5c26a" category="image-alt">Modalità Bond porta aggregata SG6100-CN</block>
   <block id="cc5f703bb883e7b54c8db00321eecaae" category="paragraph">Questa figura mostra come le due porte di gestione 1-GbE sono collegate in modalità di connessione di rete Active-Backup per la rete di amministrazione.</block>
   <block id="6cb92c0d4f550369b07be209fb280050" category="image-alt">Porte di rete amministrative collegate SG6100-CN</block>
   <block id="dc5df6ed37801dd73543ef70db9fc07c" category="paragraph">Se si prevede di utilizzare la velocità di collegamento 25-GbE per le porte di rete SG6100, SG6000, SG5800 o SG5700:</block>
@@ -5097,7 +5075,6 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="73b8548764adcb2d821a3a30eee387e8" category="list-text">Se necessario, ridistribuire tutti i volumi al proprietario preferito utilizzando Gestione di sistema di SANtricity.</block>
   <block id="829a1819c04fe8b6abc000f5eaa2f3da" category="list-text">Selezionare *archiviazione › volumi*.</block>
   <block id="8a63702912777d73eaad4a55fa4ab3fc" category="list-text">Selezionare *More › redistribuisci volumi*.</block>
-  <block id="a1ed4021c752a35d3fbd57d904dce03b" category="list-text">Se l'apparecchio è stato impostato in modalità di manutenzione durante questa procedura, uscire dalla modalità di manutenzione e attendere il riavvio del nodo e riconnettersi alla griglia. Questo processo può richiedere fino a 20 minuti. Quindi, in Grid Manager, verificare che la pagina dei nodi visualizzi uno stato normale (icona con un segno di spunta verde) <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block> a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.</block>
   <block id="f64ac56cef1f5e4f7896043e6750dc53" category="paragraph">La sostituzione del controller è completata. È possibile riprendere le normali operazioni.</block>
   <block id="af8eaf0890f6f3a0074f43cec79c1e06" category="doc">Sostituire i DIMM negli shelf del controller di storage (SG6160)</block>
   <block id="7a49dba6d57fb82bb002544c4cff4173" category="paragraph">È possibile sostituire un modulo DIMM nel modulo E4000 se è presente una mancata corrispondenza della memoria o se si è verificato un errore nel modulo DIMM.</block>
@@ -5155,7 +5132,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="125aeb33ae4459fc8222ee9ed2b717aa" category="doc">Sostituzione del disco nello shelf dello storage controller o nello shelf di espansione (SG6160)</block>
   <block id="5ee472a2b6b33fddd49024587c88b2f3" category="paragraph">Puoi sostituire un disco in uno shelf di storage controller SG6160 o in uno shelf di espansione (DE460C).</block>
   <block id="e2b67368d81a86fe4528ce75a038bafd" category="paragraph">StorageGRID Grid Manager monitora lo stato degli storage array e genera avvisi in caso di guasti al disco.  Quando il gestore di rete genera un avviso o in qualsiasi momento, è possibile utilizzare il guru del ripristino in Gestione di sistema di SANtricity per ottenere ulteriori informazioni sull'unità specifica che ha avuto un errore.  In caso di guasto di un disco, il LED di attenzione di colore ambra si accende. È possibile sostituire a caldo un disco guasto mentre lo storage array riceve i/O.</block>
-  <block id="1cdc03d12ae7d748296aee00f5109883" category="doc">Aggiornamento del firmware dei dischi SG6160 con SANtricity System Manager</block>
   <block id="994ab9a6584338b6df623d7d022d41de" category="doc">Aggiornamento del sistema operativo SANtricity sul controller E4000 in modalità di manutenzione (SG6160)</block>
   <block id="67ecfade4f78d4256e50f887e4676271" category="list-text">Per aggiornare il firmware e il NVSRAM del controller E4000, seguire le istruzioni riportate nella _Guida all'aggiornamento del firmware e del software SANtricity E4000 e E5800_ o nella Guida in linea di Gestione di sistema di SANtricity.</block>
   <block id="45f3c485a67ff8478a381e767f0f6661" category="doc">Aggiornamento del firmware delle unità SG6100 utilizzando il metodo online Gestione sistema SANtricity (SG6160)</block>
@@ -5291,7 +5267,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="f3d66eb150682e2a60af093e5d16adc7" category="sidebar">SG5800 appliance di storage</block>
   <block id="6cce22fcbeb08d45ad6d5da04f7403d3" category="sidebar">SG5800 informazioni di rete</block>
   <block id="f8d63b4eb5f7dd79754fe681c6077d13" category="sidebar">Aggiornamento SANtricity (SG6160)</block>
-  <block id="bb16bf046b2fd7560a2b14a7f9ad9e54" category="sidebar">Aggiornamento del firmware dei dischi (SG6160)</block>
   <block id="1dc91b81c3c8c4d17ed44a4e5d4339f6" category="sidebar">Sostituire la centralina SG6100-CN (SG6160)</block>
   <block id="e96b749f34b2756fc2a0b8eac5a9e783" category="sidebar">Sostituzione del controller dello storage (SG6160)</block>
   <block id="4b1c1ad38150ad91104a761cfb5a1382" category="sidebar">Sostituzione dell'alimentatore negli shelf dello storage controller o negli shelf di espansione (SG6160)</block>
@@ -5708,10 +5683,7 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="0757f3b26ab245447cc41936cd3afefe" category="image-alt">Riferimento didascalia 2</block>
   <block id="3cbfcbda43179f1df024e2d6051f5271" category="list-text">Da Gestione griglia, selezionare *NODI* &gt; *_appliance node_* &gt; *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su<block ref="5f7e3517d1392ee1637563255b3cc9f7" category="inline-link-rx"></block> .</block>
   <block id="dd3e050849166c9b784e0ff7ea3bc78b" category="inline-image-macro">Icona ventola</block>
-  <block id="54e682c1e932dd0c4bfed689b5838167" category="list-text">Osservare l'icona della ventola <block ref="d8ed16a4ae23dc8d3334a7f3c4e05005" category="inline-image-macro-rx" type="image"></block>a destra degli elenchi a discesa *ripiano* per determinare quale ripiano presenta il filtro della ventola guasto.</block>
   <block id="192a91d56dc6ef980c24ab2e0ae1423b" category="inline-image-macro">Icona di alimentazione</block>
-  <block id="0b1e2ac5c16b80c880fa2636f10e31c2" category="list-text">Osservare l'icona di alimentazione a destra degli elenchi a discesa *ripiano* per determinare quale ripiano presenta il contenitore di alimentazione <block ref="2acf1b34d22964e8dbaecf0651bd6755" category="inline-image-macro-rx" type="image"></block>guasto.</block>
-  <block id="d5dc60c63c442be4b800edee5dfd7825" category="list-text">Osservare le icone dell'alimentazione <block ref="2acf1b34d22964e8dbaecf0651bd6755" category="inline-image-macro-rx" type="image"></block> e della ventola <block ref="d8ed16a4ae23dc8d3334a7f3c4e05005" category="inline-image-macro-rx" type="image"></block>a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.</block>
   <block id="385670e63395d954db81d385b46f8236" category="doc">Informazioni sull'aggiornamento del sistema operativo SANtricity su uno storage controller SG5800</block>
   <block id="461fe7b94ee4ef21c8144bcd702f1c6b" category="paragraph">Per determinare la versione più recente del sistema operativo SANtricity che è stata qualificata per l'uso sull'appliance StorageGRID, consultare e scaricare l'applicazione<block ref="17b838622e0459e6c950b0d070de6b4f" category="inline-link-rx"></block> se necessario.</block>
   <block id="b87441e57987f2ad30acc24d0989a299" category="paragraph">L'icona del segno di spunta verde indica che non sono attivi avvisi e che il nodo è connesso alla griglia. Per una descrizione delle icone dei nodi, vedere<block ref="9d01e9b7dd507e2d1821030b4fd4830d" category="inline-link-rx"></block>.</block>
@@ -5731,7 +5703,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="c844d01687ddbc9954f7c427da1d4706" category="paragraph"><block ref="865edf77b3eba053e29e61ca4d9fc799" category="inline-link-macro-rx"></block>.</block>
   <block id="9a221fc8827a4991817e2b249cd1cf3d" category="admonition">È necessario un <block ref="441002811e4fb104a452cffe39690fc5" category="inline-link-macro-rx"></block> prima di rimuovere l'apparecchio dal rack.</block>
   <block id="638734fcdf0d50595d78d81bb639fd1b" category="paragraph">Quando entrambe le unità SSD funzionano normalmente, il sistema ripristina automaticamente la funzionalità di cache in lettura. È possibile<block ref="735aff2661f88efa8f6e8cceeb96bac0" category="inline-link-rx"></block> monitorare la percentuale di accessi della cache in lettura. Poiché la cache è stata appena ricostruita, la velocità di accesso inizialmente potrebbe essere bassa, ma dovrebbe aumentare nel tempo poiché la cache viene ripopolata dai client che accedono ai dati degli oggetti.</block>
-  <block id="ae4fa539a7c5cac501cec6d0e59f538b" category="list-text">Osservare l'icona della ventola <block ref="d8ed16a4ae23dc8d3334a7f3c4e05005" category="inline-image-macro-rx" type="image"></block>a destra degli elenchi a discesa *ripiano* per determinare quale dispositivo presenta il filtro della ventola guasto.</block>
   <block id="b8e55daf0cd7d7e3973b1e259f86f0cd" category="admonition">Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto, è necessario sostituire la scheda di rete durante una finestra di manutenzione pianificata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere informazioni su<block ref="7b41c2a82ff7a44a340b8559b6012e92" category="inline-link-rx"></block>.</block>
   <block id="7da93c6e68a43a9bce834b5ab317044f" category="admonition">La sostituzione a caldo è *non* supportata per questa procedura. È necessario un <block ref="441002811e4fb104a452cffe39690fc5" category="inline-link-macro-rx"></block>prima di scollegare i cavi e rimuovere la scheda di rete.</block>
   <block id="f23564587172dfdbfe2370e00a02a9e5" category="paragraph">Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di archiviazione siano collegati alla rete prima di avviare la sostituzione della scheda di interfaccia di rete (NIC) o sostituire la scheda durante una finestra di manutenzione programmata quando i periodi di interruzione del servizio sono accettabili. Vedere informazioni su <block ref="5059dc4531f4f3adf649d818b95a89ff" category="inline-link-macro-rx"></block>.</block>
@@ -5765,4 +5736,30 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="813eb6e57b4706c7df0e13ae0defacd8" category="list-text">Se l'appliance include uno shelf di espansione, consultare la <block ref="ba1bb7195a934f0a465563dc7e705dd7" category="inline-link-macro-rx"></block> per informazioni sul cablaggio.</block>
   <block id="c6ce792d1a06c8b72936713f0001140a" category="list-text">È stata registrata l'attuale configurazione BMC dell'appliance, se è ancora disponibile.</block>
   <block id="df5c8b40026819d555dd6dbdc002fb3e" category="list-text">Invio:<block ref="73a1c7bb6f54767f7e51d6973cad4923" prefix=" " category="inline-code"></block> Consente di visualizzare la configurazione BMC corrente per il dispositivo.</block>
+  <block id="b79224966bc8b470ef537d5ffb51ff44" category="paragraph">Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina dei nodi dovrebbe visualizzare uno stato normale (icona con un segno di spunta verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>a sinistra del nome del nodo) per il nodo dell'appliance, ad indicare che non sono attivi avvisi e che il nodo è connesso alla griglia.</block>
+  <block id="df14b12403607f270bd6e168ec91f2c5" category="paragraph">Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina *NODI* dovrebbe visualizzare uno stato normale (icona con un segno di spunta verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>a sinistra del nome del nodo) per il nodo dell'appliance, indicando che non sono attivi avvisi e che il nodo è collegato alla griglia.</block>
+  <block id="e1a4e21f94e19d24dcb24587293cd8bc" category="paragraph"><block ref="e1a4e21f94e19d24dcb24587293cd8bc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a071a7c175c6fede0936ac6e354e5055" category="paragraph"><block ref="a071a7c175c6fede0936ac6e354e5055" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="97d53609a22bc5ffa749725baf5ee763" category="paragraph"><block ref="97d53609a22bc5ffa749725baf5ee763" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="37a27ac52f6f7bdf04dde9ad07bfbadf" category="list-text">Per l'unità viene visualizzata l'icona di una lampadina<block ref="7c1d5f8a3cb7dab00bcff0bcc128dacf" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="498ddb51986797c3286426de2dd0f64e" category="image-alt">Modalità Bond porta aggregata SG110</block>
+  <block id="51a72060d29230ddba01b8db16fadc81" category="image-alt">Modalità Bond porta aggregata SGF6112</block>
+  <block id="1728dd14177dbcdd0a6fa80cf61b4898" category="image-alt">Modalità Bond porta aggregata SG6100-CN</block>
+  <block id="80e3a4394232e9dc2d44663fd4b2fc7f" category="image-alt">Controller, taniche per ventole e taniche di alimentazione nell'appliance SG5760</block>
+  <block id="f8f749c27179878518aca7ac5b2d8019" category="image-alt">Controller, taniche per ventole e taniche di alimentazione nell'appliance SG5760X</block>
+  <block id="4b0ead52797d3c32e845ecdb0b2845a2" category="image-alt">Controller, taniche per ventole e taniche di alimentazione nell'appliance SG5860</block>
+  <block id="f6885ee1bb99909b74bae4b3f3d7d0ca" category="list-title"><block ref="db1e9f09207f66d8c28f6f11a8cd6159" category="inline-image-macro-rx" type="image"></block> Prima dell'installazione</block>
+  <block id="575c830a8a4bb78c31fc0a83c2e1be15" category="list-title"><block ref="5b54f0079909bf49360d9930352446ad" category="inline-image-macro-rx" type="image"></block> Installare l'hardware</block>
+  <block id="5d66e252151466a967a4fe44fa8bd12f" category="paragraph-title"><block ref="f665cdd22f26f5f1a45b361806d94264" category="inline-image-macro-rx" type="image"></block> Configurare l'hardware</block>
+  <block id="c97913a5c47ca1aaefcb605790ba744c" category="paragraph-title"><block ref="dc7abc674acbb1b3c1270fc1cf1b983a" category="inline-image-macro-rx" type="image"></block> Implementa il nodo dell'appliance</block>
+  <block id="95714c5faee0a7ee22897ffb9bb27d46" category="list-text">Per aggiungere una subnet, fare clic sull'icona di inserimento <block ref="04a444892ecdd89bfdaa29bcbf799187" category="inline-image-macro-rx" type="image"></block>a destra dell'ultima voce.</block>
+  <block id="9a70a6ae35e21c6544b20ca5f08a7c77" category="list-text">Per rimuovere una subnet non utilizzata, fare clic sull'icona di eliminazione <block ref="382e1d9aa4a1ad456c931180513d817a" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="a260587fbb1d0830942f420048880c97" category="list-text">Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina dei nodi visualizzi uno stato normale (icona con un segno di spunta verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>a sinistra del nome del nodo) per il nodo dell'appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.</block>
+  <block id="997a5fbd7bf48a6f361ad63bb5c3ea8b" category="list-text">Osservare l'icona della ventola <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>a destra degli elenchi a discesa *ripiano* per determinare quale ripiano presenta il filtro della ventola guasto.</block>
+  <block id="4679124015a3fb5a2b9a8d50c4bec768" category="list-text">Osservare l'icona di alimentazione a destra degli elenchi a discesa *ripiano* per determinare quale ripiano presenta il contenitore di alimentazione <block ref="34a51d44013a1ce73b6f6d4343cad0e8" category="inline-image-macro-rx" type="image"></block>guasto.</block>
+  <block id="73a5f23e1326c160cea1d64fb296d381" category="list-text">Osservare le icone dell'alimentazione <block ref="34a51d44013a1ce73b6f6d4343cad0e8" category="inline-image-macro-rx" type="image"></block> e della ventola <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.</block>
+  <block id="5be5b200ea87bda5139c19d04ce77e9d" category="list-text">Se l'apparecchio è stato impostato in modalità di manutenzione durante questa procedura, uscire dalla modalità di manutenzione e attendere il riavvio del nodo e riconnettersi alla griglia. Questo processo può richiedere fino a 20 minuti. Quindi, in Grid Manager, verificare che la pagina dei nodi visualizzi uno stato normale (icona con un segno di spunta verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>a sinistra del nome del nodo) per il nodo dell'appliance, indicando che non sono attivi avvisi e che il nodo è connesso alla griglia.</block>
+  <block id="0160256cfe219f6b22fa00049dc8b08b" category="list-text">Osservare l'icona della ventola <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>a destra degli elenchi a discesa *ripiano* per determinare quale dispositivo presenta il filtro della ventola guasto.</block>
+  <block id="1a41776500a52e28aa05db3c32dfc47a" category="sidebar">Aggiornamento del firmware dell'unità (metodo online SG6160)</block>
+  <block id="2c8a2ef75a9a05ce84a4b89f17f20322" category="sidebar">Aggiornamento del firmware dell'unità (metodo SG6160 offline)</block>
 </blocks>

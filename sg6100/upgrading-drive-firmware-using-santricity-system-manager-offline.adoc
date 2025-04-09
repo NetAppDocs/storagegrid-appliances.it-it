@@ -145,7 +145,7 @@ link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html[
 ** *Riavvia in StorageGRID*.
 ** *Riavviare in modalità di manutenzione*. Riavviare il controller e mantenere il nodo in modalità di manutenzione. Selezionare questa opzione se si sono riscontrati errori durante la procedura e si desidera ricominciare. Al termine del riavvio del nodo in modalità di manutenzione, riavviare dalla fase appropriata della procedura che ha avuto esito negativo.
 +
-Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina Nodes (nodi) dovrebbe visualizzare uno stato normale (icona con segno di spunta verde) image:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo) per il nodo appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina dei nodi dovrebbe visualizzare uno stato normale (icona con un segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"]a sinistra del nome del nodo) per il nodo dell'appliance, ad indicare che non sono attivi avvisi e che il nodo è connesso alla griglia.
 
 +
 image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
