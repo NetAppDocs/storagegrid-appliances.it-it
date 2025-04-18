@@ -2865,7 +2865,6 @@ Dopo aver completato l'aggiornamento corrente, scaricare il file SANtricity OS c
   <block id="9bb391312ffed336cc1adbf60045dba8" category="list-text">Verificare che il codice del ricambio corrisponda a quello riportato sulle etichette applicate sulla parte anteriore dell'apparecchio per verificare di aver trovato l'apparecchio corretto.</block>
   <block id="d3cb531b4f9c05d46c6be8f0489a9b86" category="list-text">Rimuovere il pannello anteriore, se installato, per accedere ai comandi e agli indicatori del pannello anteriore.</block>
   <block id="8727881150b0ace8b598a648cdfcd4e1" category="summary">NetApp StorageGRID è una suite di storage a oggetti software-defined che supporta un'ampia gamma di casi di utilizzo in ambienti multicloud pubblici, privati e ibridi. StorageGRID offre il supporto nativo per l'API Amazon S3 e offre innovazioni leader del settore come la gestione automatica del ciclo di vita per memorizzare, proteggere, proteggere e conservare i dati non strutturati in modo conveniente per lunghi periodi.</block>
-  <block id="4fab2171e21f4258294a2a074494fa18" category="doc">Documentazione sull'appliance StorageGRID</block>
   <block id="2e1c8345a49fcd97288e52caaad82a49" category="summary">In alcuni casi potrebbe essere necessario aggiornare i riferimenti degli indirizzi MAC dopo la sostituzione di un'appliance.</block>
   <block id="8731fac4810f4eee46647147bd16bf3d" category="paragraph">Se una delle interfacce di rete di un'appliance da sostituire è configurata per DHCP, potrebbe essere necessario aggiornare le assegnazioni permanenti del lease DHCP sui server DHCP per fare riferimento agli indirizzi MAC dell'appliance sostitutiva. L'aggiornamento garantisce che all'appliance sostitutiva vengano assegnati gli indirizzi IP previsti.</block>
   <block id="5d98e441c401a29a6e5bb2f1212a7a15" category="list-text">Individuare l'etichetta sulla parte anteriore dell'apparecchio. L'etichetta elenca l'indirizzo MAC per la porta di gestione BMC dell'appliance.</block>
@@ -3865,7 +3864,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="8ef596bf4eb7277f78ad1d7ad4cc04de" category="sidebar">Knowledge base di StorageGRID</block>
   <block id="c2d388654878e1108f99fdeaa465fcac" category="sidebar">Blog di NetApp</block>
   <block id="a310588c148d934b9b30c31802d4a30b" category="sidebar">Community di NetApp</block>
-  <block id="69d1c297210c956cee51bf4ccf9dc0d1" category="sidebar">Documentazione sull'appliance StorageGRID</block>
   <block id="42201415720ad552ae0536ddda18b94e" category="sidebar">Ulteriori informazioni sulle appliance StorageGRID</block>
   <block id="b7cd29c1531745149a88d6056a6c42c4" category="sidebar">Cloning del nodo dell'appliance</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">Panoramica</block>
@@ -5762,4 +5760,5 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="0160256cfe219f6b22fa00049dc8b08b" category="list-text">Osservare l'icona della ventola <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>a destra degli elenchi a discesa *ripiano* per determinare quale dispositivo presenta il filtro della ventola guasto.</block>
   <block id="1a41776500a52e28aa05db3c32dfc47a" category="sidebar">Aggiornamento del firmware dell'unità (metodo online SG6160)</block>
   <block id="2c8a2ef75a9a05ce84a4b89f17f20322" category="sidebar">Aggiornamento del firmware dell'unità (metodo SG6160 offline)</block>
+  <block id="d07792f91c33735c12a1ce89b21df7a3" category="sidebar">Documentazione dell'appliance StorageGRID</block>
 </blocks>
