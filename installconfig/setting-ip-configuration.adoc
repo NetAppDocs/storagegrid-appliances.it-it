@@ -28,6 +28,26 @@ Per modificare la configurazione del collegamento, consultare le istruzioni segu
 * link:../sg6100/changing-link-configuration-of-sgf6112-appliance.html["Modificare la configurazione del collegamento dell'appliance SG6100"]
 
 
+[NOTE]
+====
+Non utilizzare subnet che contengono i seguenti indirizzi IPv4 per la rete Grid, la rete di amministrazione o la rete client di alcun nodo:
+
+* 192.168.130.101
+* 192.168.131.101
+* 192.168.130.102
+* 192.168.131.102
+* 198.51.100.2
+* 198.51.100.4
+
+
+Ad esempio, non utilizzare i seguenti intervalli di subnet per la rete Grid, la rete amministrativa o la rete client di alcun nodo:
+
+* 192.168.130.0/24 perché questo intervallo di subnet contiene gli indirizzi IP 192.168.130.101 e 192.168.130.102
+* 192.168.131.0/24 perché questo intervallo di subnet contiene gli indirizzi IP 192.168.131.101 e 192.168.131.102
+* 198.51.100.0/24 perché questo intervallo di subnet contiene gli indirizzi IP 198.51.100.2 e 198.51.100.4
+
+
+====
 .Fasi
 . Nel programma di installazione dell'appliance StorageGRID, selezionare *Configura rete* > *Configurazione IP*.
 +
