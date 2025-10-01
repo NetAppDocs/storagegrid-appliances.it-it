@@ -31,12 +31,12 @@ Se si intende utilizzare la modalità aggregate port bond, LACP network bond mod
 
 
 .A proposito di questa attività
-Se si desidera utilizzare un'impostazione non predefinita, è necessario configurare le impostazioni nella pagina di configurazione del collegamento.
+È necessario configurare le impostazioni nella pagina Configurazione collegamento solo se si desidera utilizzare valori diversi da<<default_values,impostazioni predefinite>> .
 
 
-NOTE: Il criterio hash di trasmissione LACP è layer2+3.
+NOTE: Le modifiche alla velocità della PDU LACP apportate seguendo queste istruzioni rimangono persistenti nell'ambiente StorageGRID .  Per apportare modifiche temporanee alla velocità LACP PDU durante l'esecuzione di operazioni di manutenzione sui componenti di rete installati nell'appliance, vedere https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html#temporarily-changing-the-lacp-pdu-rate["Modifica temporanea della velocità PDU LACP"^] .
 
-Le figure e le tabelle riepilogano le opzioni per la modalità port bond e la modalità network bond per ciascun appliance. Per ulteriori informazioni, vedere quanto segue:
+[[port_config_tables]]Le figure e le tabelle riepilogano le opzioni per la modalità di collegamento porta e la modalità di collegamento rete per ciascun dispositivo.  Per maggiori informazioni vedere quanto segue:
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modalità Port bond (SG1000 e SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modalità Port bond (SG1100 e SG110)"]
@@ -85,7 +85,7 @@ La tabella riassume le opzioni per la configurazione delle quattro porte di rete
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -109,11 +109,13 @@ LACP (802.3ad)
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 non vengono utilizzate.
 * Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
 * I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
 
 
 |===
@@ -146,7 +148,7 @@ La tabella riassume le opzioni per la configurazione delle quattro porte di rete
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -154,10 +156,12 @@ Solo LACP (802.3ad)
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
 * Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
 * Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
 
 |===
@@ -216,7 +220,7 @@ La tabella riassume le opzioni per la configurazione delle quattro porte di rete
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -240,11 +244,13 @@ LACP (802.3ad)
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 non vengono utilizzate.
 * Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
 * I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
 
 
 |===
@@ -277,7 +283,7 @@ La tabella riassume le opzioni per la configurazione delle porte di rete. Se si 
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -285,10 +291,12 @@ Solo LACP (802.3ad)
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
 * Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
 * Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
 
 |===
@@ -341,7 +349,7 @@ La tabella riassume le opzioni per la configurazione delle quattro porte 10/25-G
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -365,11 +373,13 @@ LACP (802.3ad)
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 non vengono utilizzate.
 * Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
 * I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
 
 
 |===
@@ -396,7 +406,7 @@ La tabella riassume le opzioni per la configurazione delle quattro porte 10/25-G
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -404,10 +414,12 @@ Solo LACP (802.3ad)
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
 * Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
 * Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
 
 |===
@@ -454,7 +466,7 @@ La tabella riassume le opzioni per la configurazione delle quattro porte 10/25-G
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -478,11 +490,13 @@ LACP (802.3ad)
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 non vengono utilizzate.
 * Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
 * I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
 
 
 |===
@@ -509,7 +523,7 @@ La tabella riassume le opzioni per la configurazione delle quattro porte 10/25-G
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -517,10 +531,12 @@ Solo LACP (802.3ad)
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
 * Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
 * Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
 
 |===
@@ -559,7 +575,7 @@ La tabella riassume le opzioni per la configurazione delle porte di rete. Se si 
 
 [cols="1a,3a,3a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -583,11 +599,13 @@ LACP (802.3ad)
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 non vengono utilizzate.
 * Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
 * I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
 
 
 |===
@@ -614,7 +632,7 @@ La tabella riassume le opzioni per la configurazione delle porte di rete. Se si 
 
 [cols="1a,3a,3a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -622,10 +640,12 @@ Solo LACP (802.3ad)
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
 * Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
 * Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
 
 |===
@@ -678,7 +698,7 @@ La tabella riassume le opzioni per la configurazione delle porte di rete. Se si 
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -702,11 +722,13 @@ LACP (802.3ad)
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 non vengono utilizzate.
 * Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
 * Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
 * I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
 
 
 |===
@@ -739,7 +761,7 @@ La tabella riassume le opzioni per la configurazione delle porte di rete. Se si 
 
 [cols="1a,2a,2a"]
 |===
-| Network bond mode (modalità bond di | Client Network disabled (rete client disattivata) (impostazione predefinita) | Rete client abilitata 
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
 
 
  a| 
@@ -747,10 +769,12 @@ Solo LACP (802.3ad)
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
 * Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
  a| 
 * Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
 * Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
 
 
 |===
@@ -782,14 +806,20 @@ La pagina Network link Configuration (Configurazione collegamento di rete) visua
 La tabella link Status (Stato collegamento) elenca lo stato del collegamento, la velocità del collegamento e altre statistiche delle porte numerate.
 
 +
-La prima volta che si accede a questa pagina:
+
+NOTE: Per SG5800, lo stato del collegamento per la porta 1 non è disponibile nel software e deve essere verificato fisicamente tramite il LED di stato sul controller SG5800.
+
++
+[[default_values]]La prima volta che accedi a questa pagina, i valori predefiniti sono:
 
 +
 ** *Velocità di collegamento* impostata su *Auto*.
 ** *Port bond mode* è impostato su *Fixed*.
+** *La policy hash di trasmissione LACP* è impostata su *Layer2+3*.
+** *La velocità PDU LACP* è impostata su *Veloce*.
 ** *Network bond mode* è impostato su *Active-Backup* per Grid Network.
 ** L'opzione *Admin Network* (rete amministrativa) è attivata e la modalità Network bond (bond di rete) è impostata su *Independent* (indipendente).
-** La *rete client* è disattivata.
+** La *Rete client* è abilitata.
 
 
 . Selezionare la velocità di collegamento per le porte di rete dall'elenco a discesa *velocità di collegamento*.
@@ -817,17 +847,9 @@ Vengono visualizzate le impostazioni di rete client per le porte NIC dati.
 
 
 
-. Fare riferimento alla tabella e configurare la modalità Port bond e la modalità Network bond.
+. Fare riferimento al<<port_config_tables,tabella di configurazione della modalità di legame porta fissa e aggregata>> per ogni tipo di appliance e configurare la modalità di bonding della porta e la modalità di bonding della rete in modo che corrispondano alla configurazione della rete.
 +
-Questo esempio mostra:
-
-+
-** *Aggregate* e *LACP* selezionati per le reti Grid e Client. È necessario specificare un tag VLAN univoco per ciascuna rete. È possibile selezionare valori compresi tra 0 e 4095.
-** *Active-Backup* selezionato per la rete di amministrazione.
-+
-image::../media/sg1000_network_link_configuration_aggregate.png[Aggregato Network link Configuration]
-
-
+È necessario specificare tag VLAN univoci per la griglia e le reti client.  È possibile selezionare valori compresi tra 0 e 4095.
 
 . Una volta selezionate le opzioni desiderate, fare clic su *Save* (Salva).
 +

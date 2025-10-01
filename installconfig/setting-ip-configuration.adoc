@@ -11,14 +11,14 @@ summary: 'Il programma di installazione dell"appliance StorageGRID consente di c
 
 
 [role="lead"]
-Il programma di installazione dell'appliance StorageGRID consente di configurare gli indirizzi IP e le informazioni di routing utilizzati per l'appliance di servizi o il nodo di storage dell'appliance nelle reti StorageGRID Grid, Admin e Client.
+Utilizzare StorageGRID Appliance Installer per configurare gli indirizzi IP e il routing per l'appliance dei servizi o il nodo di archiviazione sulle reti Grid, Admin e Client.
 
 Se si utilizza ConfigBuilder per generare un file JSON, è possibile configurare automaticamente gli indirizzi IP. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
 
 .A proposito di questa attività
-È necessario assegnare un indirizzo IP statico all'appliance su ciascuna rete connessa o un lease permanente per l'indirizzo sul server DHCP.
+È necessario assegnare un indirizzo IP statico per l'appliance su ogni rete Grid o Admin connessa oppure assegnare un lease permanente per l'indirizzo sul server DHCP.  L'indirizzo IP statico o la configurazione DHCP sono facoltativi per una rete client connessa.
 
-Per modificare la configurazione del collegamento, consultare le istruzioni seguenti:
+Per abilitare o disabilitare un collegamento o modificarne la configurazione, consultare le seguenti istruzioni:
 
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG100 o SG1000"]
 * link:../sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG110 o SG1100"]
@@ -53,9 +53,14 @@ Ad esempio, non utilizzare i seguenti intervalli di subnet per la rete Grid, la 
 +
 Viene visualizzata la pagina IP Configuration (Configurazione IP).
 
-. Per configurare Grid Network, selezionare *Static* o *DHCP* nella sezione *Grid Network* della pagina.
-. Se si seleziona *Static*, attenersi alla seguente procedura per configurare la rete di rete:
+. Per configurare la rete Grid, seleziona *Statico* o *DHCP* nella sezione *Rete Grid* della pagina, quindi inserisci le impostazioni di rete.
 +
+[role="tabbed-block"]
+====
+.Statico
+--
+Se si seleziona *Static*, attenersi alla seguente procedura per configurare la rete di rete:
+
 .. Inserire l'indirizzo IPv4 statico utilizzando la notazione CIDR.
 .. Accedere al gateway.
 +
@@ -84,18 +89,20 @@ Se si dispone di subnet Grid, è necessario il gateway Grid Network. Tutte le su
 
 +
 
-NOTE: Il percorso predefinito non è elencato. Se la rete client non è attivata, il percorso predefinito utilizzerà il gateway Grid Network.
+NOTE: Se la rete client non è abilitata, il percorso predefinito utilizzerà il gateway Grid Network.
 
 +
 *** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"]a destra dell'ultima voce.
 *** Per rimuovere una subnet non utilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
 
 
-.. Fare clic su *Save* (Salva).
 
 
-. Se è stato selezionato *DHCP*, attenersi alla seguente procedura per configurare Grid Network:
-+
+--
+.DHCP
+--
+Se è stato selezionato *DHCP*, attenersi alla seguente procedura per configurare Grid Network:
+
 .. Dopo aver selezionato il pulsante di opzione *DHCP*, fare clic su *Save* (Salva).
 +
 I campi *IPv4 Address*, *Gateway* e *subnet* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.
@@ -109,7 +116,7 @@ Se si dispone di subnet Grid, è necessario il gateway Grid Network. Tutte le su
 
 +
 
-NOTE: Il percorso predefinito non è elencato. Se la rete client non è attivata, il percorso predefinito utilizzerà il gateway Grid Network.
+NOTE: Se la rete client non è abilitata, il percorso predefinito utilizzerà il gateway Grid Network.
 
 +
 *** Per aggiungere una subnet, fare clic sull'icona di inserimento image:../media/icon_plus_sign_black_on_white.gif["inserire l'icona"]a destra dell'ultima voce.
@@ -128,19 +135,23 @@ NOTE: Per ottenere le migliori performance di rete, tutti i nodi devono essere c
 .. Fare clic su *Save* (Salva).
 
 
-. Per configurare la rete amministrativa, selezionare *Static* o *DHCP* nella sezione *Admin Network* della pagina.
+--
+====
+. Per configurare la rete di amministrazione, seleziona *Statico* o *DHCP* nella sezione *Rete di amministrazione* della pagina, quindi inserisci le impostazioni di rete.
 +
 
 NOTE: Per configurare la rete amministrativa, attivare la rete amministrativa nella pagina link Configuration (Configurazione collegamento).
 
 +
-image::../media/admin_network_static.png[IP di rete amministratore]
+[role="tabbed-block"]
+====
+.Statico
+--
+Se si seleziona *Static*, attenersi alla seguente procedura per configurare la rete amministrativa:
 
-. Se si seleziona *Static*, attenersi alla seguente procedura per configurare la rete amministrativa:
-+
 .. Inserire l'indirizzo IPv4 statico, utilizzando la notazione CIDR, per la porta di gestione 1 sull'appliance.
 +
-La porta di gestione 1 si trova a sinistra delle due porte RJ45 da 1 GbE sul lato destro dell'appliance.
+Vederelink:../installconfig/cabling-appliance.html["Apparecchio via cavo"] per la posizione della porta di gestione 1 sul tuo dispositivo.
 
 .. Accedere al gateway.
 +
@@ -172,11 +183,13 @@ NOTE: Non è possibile eseguire il percorso predefinito per utilizzare il gatewa
 *** Per rimuovere una subnet non utilizzata, fare clic sull'icona di eliminazione image:../media/icon_nms_delete_new.gif["icona elimina"].
 
 
-.. Fare clic su *Save* (Salva).
 
 
-. Se è stato selezionato *DHCP*, attenersi alla seguente procedura per configurare la rete amministrativa:
-+
+--
+.DHCP
+--
+Se è stato selezionato *DHCP*, attenersi alla seguente procedura per configurare la rete amministrativa:
+
 .. Dopo aver selezionato il pulsante di opzione *DHCP*, fare clic su *Save* (Salva).
 +
 I campi *IPv4 Address*, *Gateway* e *subnet* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.
@@ -205,16 +218,20 @@ CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla
 .. Fare clic su *Save* (Salva).
 
 
-. Per configurare la rete client, selezionare *Static* o *DHCP* nella sezione *Client Network* della pagina.
+--
+====
+. Per configurare la rete client, seleziona *Statico*, *DHCP* o *Nessuno* nella sezione *Rete client* della pagina, quindi inserisci le impostazioni di rete.
 +
 
-NOTE: Per configurare la rete client, attivare la rete client nella pagina link Configuration (Configurazione collegamento).
+NOTE: Per configurare la rete client, assicurarsi che la rete client sia abilitata nella pagina Configurazione collegamento.
 
 +
-image::../media/client_network_static.png[IP di rete del client]
+[role="tabbed-block"]
+====
+.Statico
+--
+Se si seleziona *Static* (statico), attenersi alla seguente procedura per configurare la rete client:
 
-. Se si seleziona *Static* (statico), attenersi alla seguente procedura per configurare la rete client:
-+
 .. Inserire l'indirizzo IPv4 statico utilizzando la notazione CIDR.
 .. Fare clic su *Save* (Salva).
 .. Verificare che l'indirizzo IP del gateway di rete client sia corretto.
@@ -230,8 +247,11 @@ CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla
 .. Fare clic su *Save* (Salva).
 
 
-. Se si seleziona *DHCP*, seguire questa procedura per configurare la rete client:
-+
+--
+.DHCP
+--
+Se si seleziona *DHCP*, seguire questa procedura per configurare la rete client:
+
 .. Dopo aver selezionato il pulsante di opzione *DHCP*, fare clic su *Save* (Salva).
 +
 I campi *IPv4 Address* e *Gateway* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.
@@ -251,4 +271,11 @@ CAUTION: Il valore MTU della rete deve corrispondere al valore configurato sulla
 
 
 
+--
+.Nessuno
+--
+Selezionare *Nessuno* per abilitare la rete client senza specificare un indirizzo IP.  La rete client necessita solo di un indirizzo IP per l'accesso diretto.  Abilitando la rete client senza un indirizzo IP è possibile configurare le interfacce VLAN della rete client in StorageGRID.
+
+--
+====
 

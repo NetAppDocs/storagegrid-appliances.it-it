@@ -115,7 +115,7 @@ image::../media/fan_removal.png[Rimozione della ventola]
 
 . Far scorrere la ventola sostitutiva nello slot aperto dello chassis.
 +
-Assicurarsi di allineare il connettore della ventola con la presa della scheda a circuiti stampati.
+Allineare il connettore sulla ventola con la presa sulla scheda del circuito.
 
 . Premere con decisione il connettore della ventola nella scheda a circuiti stampati (presa evidenziata).
 +

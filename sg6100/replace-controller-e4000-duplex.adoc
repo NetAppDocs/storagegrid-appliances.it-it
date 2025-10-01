@@ -311,9 +311,11 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 
 
 
-. Se l'apparecchio è stato impostato in modalità di manutenzione durante questa procedura, uscire dalla modalità di manutenzione e attendere il riavvio del nodo e riconnettersi alla griglia. Questo processo può richiedere fino a 20 minuti. Quindi, in Grid Manager, verificare che la pagina dei nodi visualizzi uno stato normale (icona con un segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"]a sinistra del nome del nodo) per il nodo dell'appliance, indicando che non sono attivi avvisi e che il nodo è connesso alla griglia.
+. Se durante questa procedura l'appliance è stata messa in modalità di manutenzione, uscire dalla modalità di manutenzione e attendere che il nodo si riavvii e si ricolleghi alla rete.  Questo processo può richiedere fino a 20 minuti.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 +
-image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
+.. Nel Grid Manager, seleziona *NODI*.
+.. Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
+
 
 
 

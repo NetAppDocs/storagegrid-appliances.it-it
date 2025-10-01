@@ -118,6 +118,8 @@ Puoi clonare un'appliance con nodi di origine SG100 su un'appliance con destinaz
 
 È possibile clonare un'appliance con nodo di origine SG110 in una destinazione di appliance con servizi SG1100 per fornire una maggiore funzionalità al nodo amministrativo o al nodo gateway.
 
+La clonazione dei nodi non è supportata da un'appliance del nodo sorgente SG110 senza crittografia dei nodi a un'appliance di destinazione SG110 con crittografia dei nodi.
+
 
 
 === SG1000 informazioni e restrizioni sulla clonazione delle appliance
@@ -137,6 +139,8 @@ Puoi clonare un'appliance del nodo di origine SG1100 in un'appliance di destinaz
 * La clonazione di SG1100 in un'appliance di destinazione dei servizi SG110 consente di ridistribuire SG1100 per un'applicazione più complessa. Ad esempio, se un'appliance SG1100 di nodi di origine viene utilizzata come nodo di amministrazione e si desidera utilizzarla come nodo di bilanciamento del carico dedicato.
 * La sostituzione di un'appliance con nodo di origine SG1100 con un'appliance di destinazione dei servizi SG110 riduce la velocità massima delle porte di rete da 100-GbE a 25-GbE.
 
+
+La clonazione dei nodi non è supportata da un'appliance del nodo sorgente SG1100 senza crittografia dei nodi a un'appliance di destinazione SG1100 con crittografia dei nodi.
 
 
 
@@ -173,6 +177,12 @@ Puoi clonare un'appliance del nodo di origine SG1100 in un'appliance di destinaz
 * Puoi clonare un'appliance del nodo di origine SG6060 senza shelf di espansione in un'appliance di destinazione storage SG6160 senza shelf di espansione, se le dimensioni dei dischi e le modalità RAID sono identiche.
 * Un'appliance con nodo di origine SG6060 e un numero qualsiasi di shelf di espansione _non può_ essere clonata in un'appliance di destinazione storage SG6160, anche se il numero di shelf di espansione, le dimensioni dei dischi e le modalità RAID sono identici.
 
+
+
+
+=== Informazioni e restrizioni sulla clonazione dell'appliance SGF6112
+
+La clonazione dei nodi non è supportata da un'appliance del nodo sorgente SGF6112 senza crittografia dei nodi a un'appliance di destinazione SGF6112 con crittografia dei nodi.
 
 
 

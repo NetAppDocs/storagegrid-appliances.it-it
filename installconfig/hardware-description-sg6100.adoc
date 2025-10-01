@@ -32,6 +32,7 @@ NOTE: A seconda dei criteri ILM configurati, le richieste di oggetti localmente 
 
 * Completamente ripristinabile, durante il servizio, da guasti SSD che non causano danni estremi al RAID che ospita il volume root del nodo (il sistema operativo StorageGRID).
 * Se più guasti agli SSD comportano una perdita di dati locale, i dati degli oggetti possono essere ripristinati automaticamente dalle copie o da blocchi con erasure coding su altri nodi.
+* Capacità di operare come https://docs.netapp.com/us-en/storagegrid/admin/managing-load-balancing.html["Nodo gateway con memorizzazione nella cache"^] .
 
 
 Il sistema SG6160 offre le seguenti funzioni di protezione dei dati:

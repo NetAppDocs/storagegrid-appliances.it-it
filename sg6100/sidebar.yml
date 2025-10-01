@@ -17,13 +17,16 @@ entries:
     - title: Aggiornare il sistema operativo SANtricity sul controller SG6160 usando
         la modalità di manutenzione
       url: "/sg6100/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6160.html"
-  - title: Aggiornamento del firmware dei dischi con Gestione sistemi SANtricity (SG6160)
+  - title: Aggiorna il firmware dell'unità (SG6160)
     entries:
-    - title: Aggiornare il firmware delle unità SG6100 utilizzando il metodo online
-        Gestione sistema di SANtricity
+    - title: Aggiorna automaticamente il firmware dell'unità SG6160 durante il riavvio
+        dell'appliance
+      url: "/sg6100/upgrading-drive-firmware-using-auto-reboot.html"
+    - title: Aggiorna il firmware dell'unità SG6160 utilizzando il metodo online SANtricity
+        System Manager
       url: "/sg6100/upgrading-drive-firmware-using-santricity-system-manager-online.html"
-    - title: Aggiornare il firmware delle unità SG6100 utilizzando il metodo offline
-        di Gestione sistema di SANtricity
+    - title: Aggiorna il firmware dell'unità SG6160 utilizzando il metodo offline
+        di SANtricity System Manager
       url: "/sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
     - title: Risolvere gli errori di aggiornamento del firmware del disco
       url: "/sg6100/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
@@ -62,9 +65,9 @@ entries:
       url: "/sg6100/replace-6160-drives-60.html"
   - title: Sostituire la scheda NIC
     entries:
-    - title: Scheda di rete interna (SGF6112 e SG6160)
+    - title: NIC interna (SGF6112 o SG6100-CN)
       url: "/sg6100/replace-nic-in-sgf6112.html"
-    - title: NIC esterna (SG6160)
+    - title: NIC esterna (SG6100-CN)
       url: "/sg6100/replace-ocp-nic-sg6100-cn.html"
   - title: Sostituire la batteria CMOS
     url: "/sg6100/replace-cmos-in-sgf6112.html"

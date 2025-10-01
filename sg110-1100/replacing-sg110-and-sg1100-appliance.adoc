@@ -86,7 +86,7 @@ Seguire le istruzioni di manutenzione fornite per reinstallare i componenti sost
 
 +
 
-CAUTION: Se si desidera conservare i dati sui dischi, assicurarsi di inserire i dischi SSD negli stessi slot occupati nell'appliance guasta. In caso contrario, il programma di installazione dell'appliance visualizza un messaggio di avviso, quindi è necessario inserire le unità negli slot corretti e riavviare l'appliance prima che l'appliance possa ricongiungersi alla griglia.
+CAUTION: Se si desidera conservare i dati sulle unità, inserire le unità SSD negli stessi slot che occupavano nell'appliance guasta.  In caso contrario, l'Appliance Installer visualizzerà un avviso e sarà necessario inserire le unità negli slot corretti e riavviare l'appliance prima che possa riconnettersi alla rete.
 
 .. link:reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html["Installare l'apparecchio sostitutivo nell'armadietto o nel rack"].
 .. Sostituire i cavi e i ricetrasmettitori ottici.

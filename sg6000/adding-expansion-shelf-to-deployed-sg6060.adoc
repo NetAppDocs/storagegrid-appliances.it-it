@@ -138,16 +138,16 @@ IOM B per shelf di espansione 2
 In circa cinque minuti, gli shelf di espansione finiscono di accendersi e vengono rilevati dal sistema. La pagina iniziale mostra il numero di nuovi shelf di espansione rilevati e il pulsante Avvia espansione è attivato.
 
 +
-La schermata mostra alcuni esempi dei messaggi che potrebbero essere visualizzati nella home page, a seconda del numero di shelf di espansione esistenti o nuovi, come segue:
+Esempi di messaggi che potrebbero apparire nella Home page, a seconda del numero di scaffali di espansione esistenti o nuovi:
 
 +
-** Il banner cerchiato nella parte superiore della pagina indica il numero totale di shelf di espansione rilevati.
+** Un banner visualizzato nella parte superiore della pagina indica il numero totale di ripiani di espansione rilevati.
 +
 *** Il banner indica il numero totale di shelf di espansione, sia che gli shelf siano configurati e implementati, sia che siano nuovi e non configurati.
 *** Se non vengono rilevati shelf di espansione, il banner non viene visualizzato.
 
 
-** Il messaggio cerchiato nella parte inferiore della pagina indica che l'espansione è pronta per essere avviata.
+** Un messaggio in fondo alla pagina indica che un'espansione è pronta per essere avviata.
 +
 *** Il messaggio indica il numero di nuovi shelf di espansione rilevati da StorageGRID. "`Attached`" indica che lo shelf è stato rilevato. "`unconfigured`" indica che lo shelf è nuovo e non ancora configurato utilizzando il programma di installazione dell'appliance StorageGRID.
 +
@@ -155,9 +155,6 @@ La schermata mostra alcuni esempi dei messaggi che potrebbero essere visualizzat
 NOTE: Gli shelf di espansione già implementati non sono inclusi in questo messaggio. Sono inclusi nel conteggio nel banner nella parte superiore della pagina.
 
 *** Il messaggio non viene visualizzato se non vengono rilevati nuovi shelf di espansione.
-+
-image::../media/appl_installer_home_expansion_shelf_ready_to_install.png[Installazione shelf di espansione]
-
 
 
 
@@ -177,9 +174,6 @@ NOTE: Se i nuovi shelf di espansione non sono stati rilevati, verificare che sia
 Le barre di avanzamento vengono visualizzate sulla pagina Web, proprio come durante l'installazione iniziale.
 
 +
-image::../media/monitor_expansion_for_new_appliance_shelf.png[Configurazione shelf di espansione monitor]
-
-+
 Una volta completata la configurazione, l'appliance si riavvia automaticamente per uscire dalla modalità di manutenzione e ricongiungersi alla griglia. Questo processo può richiedere fino a 20 minuti.
 
 +
@@ -187,10 +181,7 @@ Una volta completata la configurazione, l'appliance si riavvia automaticamente p
 NOTE: Per riprovare la configurazione dello shelf di espansione in caso di errore, accedere al programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare *Riavvia in modalità di manutenzione*. Una volta riavviato il nodo, riprovare <<start_expansion,configurazione dello shelf di espansione>>.
 
 +
-Al termine del riavvio, la scheda *Tasks* appare come la seguente schermata:
-
-+
-image::../media/appliance_installer_reboot_complete.png[Riavvio completato]
+Al termine del riavvio, viene visualizzata la scheda *Attività* con le opzioni per riavviare il nodo o mettere l'appliance in modalità di manutenzione.
 
 . Verificare lo stato del nodo di storage dell'appliance e dei nuovi shelf di espansione.
 +

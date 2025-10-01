@@ -48,18 +48,14 @@ Se possibile, utilizzare l'URL contenente l'indirizzo IP della porta Admin Netwo
 NOTE: Se si dispone di una connessione diretta alla porta di gestione dell'appliance, utilizzare `+https://169.254.0.1:8443+` Per accedere alla pagina del programma di installazione dell'appliance StorageGRID.
 
 . Dal programma di installazione dell'appliance StorageGRID, verificare che l'appliance sia in modalità di manutenzione.
-+
-image::../media/maintenance_mode_notification_bar.png[messaggio della modalità di manutenzione]
-
 . Eseguire le attività di manutenzione richieste.
 . Dopo aver completato le attività di manutenzione, uscire dalla modalità di manutenzione e riprendere il normale funzionamento del nodo. Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Riavvia controller*, quindi selezionare *Riavvia in StorageGRID*.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il controller in modalità di manutenzione]
+Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina *NODI* dovrebbe visualizzare uno stato normale (icona con un segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"]a sinistra del nome del nodo) per il nodo dell'appliance, indicando che non sono attivi avvisi e che il nodo è collegato alla griglia.
+.. Nel Grid Manager, seleziona *NODI*.
+.. Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
-+
-image::../media/nodes_menu.png[Stato normale della pagina nodi]
 
 

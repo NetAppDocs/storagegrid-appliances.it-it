@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, E5700sg, controller, remove, removing, removal, install, installing, installation 
 summary: Potrebbe essere necessario sostituire il controller E5700SG se non funziona in modo ottimale o se si è verificato un guasto. 
 ---
-= Sostituzione del compute controller E5700SG
+= Sostituisci il controller di elaborazione StorageGRID E5700SG
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,13 +18,13 @@ Potrebbe essere necessario sostituire il controller E5700SG se non funziona in m
 * Sono state scaricate le istruzioni e-Series per la sostituzione di un controller E5700 guasto.
 +
 
-NOTE: Utilizzare le istruzioni e-Series come riferimento solo se sono necessari ulteriori dettagli per eseguire una fase specifica. Non fare affidamento sulle istruzioni e-Series per sostituire un controller nell'appliance StorageGRID, perché le procedure non sono le stesse. Ad esempio, le istruzioni e-Series per il controller E5700 descrivono come rimuovere la batteria e la scheda di interfaccia host (HIC) da un controller guasto e installarli in un controller sostitutivo. Questi passaggi non si applicano al controller E5700SG.
+NOTE: Per ulteriori dettagli su passaggi specifici, fare riferimento solo alle istruzioni della serie E.  Non utilizzarli per sostituire un controller nell'appliance StorageGRID , poiché le procedure sono diverse.  Ad esempio, le istruzioni della serie E per il controller E5700 descrivono come rimuovere la batteria e la scheda di interfaccia host (HIC) da un controller guasto e installarle in un controller sostitutivo.  Questi passaggi non si applicano al controller StorageGRID E5700SG.
 
 * Sono presenti etichette per identificare ciascun cavo collegato al controller.
 
 
 .A proposito di questa attività
-Il nodo di storage dell'appliance non sarà accessibile quando si sostituisce il controller. Se il controller E5700SG funziona a sufficienza, è possibile eseguire un arresto controllato all'inizio di questa procedura.
+Non sarà possibile accedere al nodo di archiviazione dell'appliance quando si sostituisce il controller.  Se il controller E5700SG funziona correttamente, è possibile eseguire uno spegnimento controllato all'inizio di questa procedura.
 
 
 NOTE: Se si sostituisce il controller prima di installare il software StorageGRID, potrebbe non essere possibile accedere al programma di installazione dell'appliance StorageGRID subito dopo aver completato questa procedura. Sebbene sia possibile accedere al programma di installazione dell'appliance StorageGRID da altri host sulla stessa sottorete dell'appliance, non è possibile accedervi da host su altre subnet. Questa condizione dovrebbe risolversi entro 15 minuti (quando qualsiasi voce della cache ARP per il timeout del controller originale), oppure è possibile cancellare immediatamente la condizione cancellando manualmente le vecchie voci della cache ARP dal router o gateway locale.
@@ -43,29 +43,16 @@ Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
 
 
 
-.. Spegnere il controller E5700SG: +
-`*shutdown -h now*`
-.. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
-+
-Il LED verde cache Active (cache attiva) sul retro del controller E2800 è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
 
 
-
-. Spegnere l'alimentazione.
-+
-.. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
-.. Verificare che tutte le operazioni siano state completate.
-.. Spegnere entrambi gli interruttori di alimentazione dell'apparecchio.
-.. Attendere che tutti i LED si spenga.
-
-
+. Spegnere il controller E5700SG:*`shutdown -h now` *
 . Se le reti StorageGRID collegate al controller utilizzano server DHCP:
 +
 .. Annotare gli indirizzi MAC delle porte del controller sostitutivo (indicati sulle etichette del controller).
 .. Chiedere all'amministratore di rete di aggiornare le impostazioni dell'indirizzo IP del controller originale in modo che riflettano gli indirizzi MAC del controller sostitutivo.
 +
 
-CAUTION: Assicurarsi che gli indirizzi IP del controller originale siano stati aggiornati prima di alimentare il controller sostitutivo. In caso contrario, il controller otterrà nuovi indirizzi IP DHCP all'avvio e potrebbe non essere in grado di riconnettersi a StorageGRID. Questo passaggio si applica a tutte le reti StorageGRID collegate al controller.
+CAUTION: Prima di inserire il controller sostitutivo nell'appliance, è necessario assicurarsi che gli indirizzi IP del controller originale siano stati aggiornati.  In caso contrario, il controller otterrà nuovi indirizzi IP DHCP all'avvio e potrebbe non essere in grado di riconnettersi a StorageGRID.  Questo passaggio si applica a tutte le reti StorageGRID collegate al controller.
 
 
 
@@ -93,10 +80,7 @@ CAUTION: Utilizzare sempre due mani per sostenere il peso del controller.
 .. Sostituire i cavi e gli SFP.
 
 
-. Accendere l'apparecchio e monitorare i LED del controller e i display a sette segmenti.
-+
-Una volta avviato correttamente i controller, i display a sette segmenti dovrebbero visualizzare quanto segue:
-
+. Una volta avviato correttamente i controller, i display a sette segmenti dovrebbero visualizzare quanto segue:
 +
 ** Controller serie E2800:
 +
@@ -108,7 +92,7 @@ Lo stato finale è `HA`.
 
 
 
-. Verificare che il nodo di storage dell'appliance sia visualizzato in Grid Manager e che non vengano visualizzati allarmi.
+. Dopo che l'appliance si è ricollegata alla rete, verificare che il nodo di archiviazione dell'appliance sia visualizzato in Grid Manager e che non siano visualizzati allarmi.
 
 
 Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

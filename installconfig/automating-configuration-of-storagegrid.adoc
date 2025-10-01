@@ -38,6 +38,9 @@ File di configurazione vuoto da utilizzare con lo script
 * È stato creato un `configure-storagegrid.json` file di configurazione. Per creare questo file, è possibile modificare il file di configurazione di esempio (`configure-storagegrid.sample.json`) o il file di configurazione vuoto (`configure-storagegrid.blank.json`).
 
 
+
+CAUTION: Memorizzare la password di gestione e la passphrase di provisioning dalla sezione password del file modificato `configure-storagegrid.json` file di configurazione in un luogo sicuro.  Queste password sono necessarie per le procedure di installazione, espansione e manutenzione.  Dovresti anche eseguire il backup del file modificato `configure-storagegrid.json` file di configurazione e salvarlo in un luogo sicuro.
+
 .A proposito di questa attività
 È possibile utilizzare `configure-storagegrid.py` Script Python e il `configure-storagegrid.json` File di configurazione per automatizzare la configurazione del sistema StorageGRID.
 

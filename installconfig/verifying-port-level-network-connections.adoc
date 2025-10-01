@@ -33,40 +33,22 @@ La tabella di connettività delle porte elenca i tipi di nodo che richiedono la 
 È possibile verificare la connettività tra le porte dell'appliance elencate nella tabella e gli altri nodi della rete Grid.
 
 . Dal menu a discesa *Network* (rete), selezionare la rete che si desidera testare: *Grid*, *Admin* o *Client*.
-. Specificare un intervallo di indirizzi IPv4 per gli host su tale rete.
-+
-Ad esempio, è possibile verificare il gateway sulla rete o sul nodo di amministrazione primario.
-
-+
-Specificare un intervallo utilizzando un trattino, come illustrato nell'esempio.
-
+. Specificare un elenco separato da spazi o un intervallo di indirizzi IPv4 per gli host su quella rete.
 . Inserire un numero di porta TCP, un elenco di porte separate da virgole o un intervallo di porte.
-+
-image::../media/port_connectivity_test_start.png[Test di connettività della porta]
-
 . Fare clic su *Test Connectivity* (verifica connettività).
 +
-** Se le connessioni di rete a livello di porta selezionate sono valide, viene visualizzato il messaggio "`Port Connectivity test passed`" (Test di connettività porta superato) in un banner verde. L'output del comando nmap è elencato sotto il banner.
-+
-image::../media/port_connectivity_test_passed.png[Test di connettività della porta superato]
-
-** Se viene stabilita una connessione di rete a livello di porta all'host remoto, ma l'host non è in ascolto su una o più porte selezionate, viene visualizzato il messaggio "`Port Connectivity test failed`" (Test di connettività porta non riuscito) in un banner giallo. L'output del comando nmap è elencato sotto il banner.
+** Se le connessioni di rete a livello di porta selezionate sono valide, viene visualizzato il messaggio "`Test di connettività della porta superato`" in un banner verde.  L'output del comando nmap è elencato sotto il banner.  Gli host non raggiungibili non appariranno nell'output del comando nmap.
+** Se viene stabilita una connessione di rete a livello di porta all'host remoto, ma l'host non è in ascolto su una o più porte selezionate, viene visualizzato il messaggio "`Test di connettività della porta non riuscito`" in un banner giallo.  L'output del comando nmap è elencato sotto il banner.  Gli host non raggiungibili non appariranno nell'output del comando nmap.
 +
 Tutte le porte remote che l'host non sta ascoltando hanno uno stato "`chiuso`". Ad esempio, questo banner giallo potrebbe essere visualizzato quando il nodo a cui si sta tentando di connettersi è preinstallato e il servizio NMS StorageGRID non è ancora in esecuzione su tale nodo.
 
-+
-image::../media/nmap_test_yellow_banner.png[Banner giallo di prova NMAP]
-
-** Se non è possibile stabilire una connessione di rete a livello di porta per una o più porte selezionate, viene visualizzato il messaggio "`Port Connectivity test failed`" (Test di connettività porta non riuscito) in un banner rosso. L'output del comando nmap è elencato sotto il banner.
+** Se non è possibile stabilire una connessione di rete a livello di porta per una o più porte selezionate, viene visualizzato il messaggio "`Test di connettività della porta non riuscito`" in un banner rosso.  L'output del comando nmap è elencato sotto il banner.  Gli host non raggiungibili non appariranno nell'output del comando nmap.
 +
 Il banner rosso indica che è stato eseguito un tentativo di connessione TCP a una porta dell'host remoto, ma non è stato restituito nulla al mittente. Quando non viene restituita alcuna risposta, la porta ha uno stato "filtrato" e probabilmente è bloccata da un firewall.
 
 +
 
 NOTE: Vengono elencate anche le porte con "`closed`".
-
-+
-image::../media/nmap_test_red_banner.png[Banner rosso di prova NMAP]
 
 
 

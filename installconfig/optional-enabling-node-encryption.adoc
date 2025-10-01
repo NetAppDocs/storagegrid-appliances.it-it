@@ -29,6 +29,8 @@ Se si attiva la crittografia dei nodi, i dischi dell'appliance possono essere pr
 
 Se si utilizza ConfigBuilder per generare un file JSON, è possibile attivare automaticamente la crittografia del nodo. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
 
+Inoltre, quando si abilita la modalità FIPS dopo aver abilitato la crittografia dei nodi, il modulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 viene utilizzato per la crittografia dei dati inattivi. Fare riferimento a https://review.docs.netapp.com/us-en/storagegrid_storagegrid-120-dev/admin/manage-tls-ssh-policy.html#select-a-security-policy["Seleziona una politica di sicurezza"^] per maggiori informazioni.
+
 .Prima di iniziare
 Rivedere le informazioni su https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurazione di KMS"^].
 
@@ -42,7 +44,7 @@ Un'appliance con crittografia dei nodi abilitata si connette al server di gestio
 
 
 
-CAUTION: Quando si installa un appliance con la crittografia dei nodi attivata, viene assegnata una chiave temporanea. I dati sull'appliance non sono protetti finché l'appliance non viene collegata al sistema di gestione delle chiavi (KMS) e non viene impostata una chiave di sicurezza KMS. Per ulteriori informazioni, vedere la https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Panoramica della configurazione dell'appliance KMS"^] .
+CAUTION: Quando un dispositivo viene installato con la crittografia dei nodi abilitata, viene assegnata una chiave temporanea.  I dati presenti sull'appliance non sono protetti finché l'appliance non è connessa al Key Management System (KMS) e non è impostata una chiave di sicurezza KMS.  Fare riferimento al https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Panoramica della configurazione dell'appliance KMS"^] per ulteriori informazioni.
 
 Senza la chiave KMS necessaria per decrittare il disco, i dati sull'appliance non possono essere recuperati e vengono effettivamente persi. Questo accade quando non è possibile recuperare la chiave di decrittografia dal KMS. La chiave diventa inaccessibile se un cliente cancella la configurazione del KMS, scade una chiave KMS, la connessione al KMS viene persa o l'appliance viene rimossa dal sistema StorageGRID in cui sono installate le chiavi KMS.
 
@@ -62,9 +64,6 @@ Viene visualizzata la pagina iniziale del programma di installazione dell'applia
 CAUTION: Dopo aver crittografato l'appliance con una chiave KMS, i dischi dell'appliance non possono essere decifrati senza utilizzare la stessa chiave KMS.
 
 . Selezionare *Configura hardware* > *crittografia nodo*.
-+
-image::../media/kms_fde_enabled.png[KMS FDE attivato]
-
 . Selezionare *Enable node Encryption* (attiva crittografia nodo).
 +
 Prima dell'installazione dell'appliance, è possibile deselezionare l'opzione *Enable node Encryption* (attiva crittografia del nodo) senza rischi di perdita di dati. All'avvio dell'installazione, il nodo appliance accede alle chiavi di crittografia KMS nel sistema StorageGRID e avvia la crittografia del disco. Non è possibile disattivare la crittografia dei nodi dopo l'installazione dell'appliance.
@@ -104,7 +103,9 @@ I SED crittografati si bloccano automaticamente quando l'appliance viene spenta 
 
 La crittografia dei dischi non si applica ai dischi gestiti da SANtricity. Se si dispone di un'appliance StorageGRID con SED e controller SANtricity, è possibile abilitare la sicurezza delle unità in link:../installconfig/accessing-and-configuring-santricity-system-manager.html["Gestore di sistema di SANtricity"].
 
-È possibile abilitare la crittografia dei dischi durante l'installazione iniziale dell'appliance prima di caricare Grid Manager. È inoltre possibile attivare la crittografia dei nodi o modificare la passphrase impostando l'appliance in modalità di manutenzione.
+Quando si abilita la crittografia dell'unità per un dispositivo StorageGRID con unità FIPS, la crittografia FIPS fornita dalle unità FIPS viene utilizzata per la crittografia dei dati inattivi.
+
+È possibile abilitare la crittografia dell'unità durante l'installazione iniziale dell'appliance prima di caricare Grid Manager.  È anche possibile abilitare la crittografia dell'unità o modificare la passphrase impostando l'appliance in modalità di manutenzione.
 
 .Prima di iniziare
 Rivedere le informazioni su https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Metodi di crittografia StorageGRID"^].
@@ -121,14 +122,14 @@ CAUTION: Assicurarsi di memorizzare la passphrase di crittografia dell'unità in
 
 . Accedere al programma di installazione dell'appliance StorageGRID.
 +
-** Durante l'installazione iniziale dell'appliance, aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione dell'appliance.
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
+** Aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
 
 +
 `_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
 
-** Per un'appliance StorageGRID esistente, link:../commonhardware/placing-appliance-into-maintenance-mode.html["mettete l'apparecchio in modalità di manutenzione"].
 
 
 . Nella pagina iniziale del programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia unità*.
@@ -169,6 +170,7 @@ Salvare la passphrase e il testo visualizzato nella passphrase in un luogo sicur
 
 . Accedere al programma di installazione dell'appliance StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
 ** Aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -176,7 +178,6 @@ Salvare la passphrase e il testo visualizzato nella passphrase in un luogo sicur
 +
 `_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
 
 
 . Dal programma di installazione dell'appliance StorageGRID, selezionare il collegamento *crittografia unità* nel banner di avviso.
@@ -199,6 +200,7 @@ I banner di avvertenza non vengono più visualizzati quando le unità sono sbloc
 
 . Accedere al programma di installazione dell'appliance StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
 ** Aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -206,7 +208,6 @@ I banner di avvertenza non vengono più visualizzati quando le unità sono sbloc
 +
 `_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
 
 
 . Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia unità*.
@@ -230,6 +231,7 @@ CAUTION: Dopo aver impostato una nuova passphrase, le unità crittografate non p
 
 . Accedere al programma di installazione dell'appliance StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
 ** Aprire un browser e immettere uno degli indirizzi IP per il controller di elaborazione del dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -237,7 +239,6 @@ CAUTION: Dopo aver impostato una nuova passphrase, le unità crittografate non p
 +
 `_Controller_IP_` È l'indirizzo IP del controller di calcolo (non dello storage controller) su una qualsiasi delle tre reti StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
 
 
 . Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia unità*.

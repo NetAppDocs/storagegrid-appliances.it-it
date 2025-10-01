@@ -20,8 +20,7 @@ summary: È possibile spegnere il controller SG6000-CN e riaccenderlo per esegui
 Spegnere il controller SG6000-CN per eseguire la manutenzione dell'hardware.
 
 .Prima di iniziare
-* Il controller SG6000-CN è stato fisicamente posizionato e richiede manutenzione nel data center. Vedere link:locating-controller-in-data-center.html["Individuare il controller nel data center"].
-
+Il controller SG6000-CN è stato fisicamente posizionato e richiede manutenzione nel data center. Vedere link:locating-controller-in-data-center.html["Individuare il controller nel data center"].
 
 .A proposito di questa attività
 Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di storage siano collegati alla rete prima di spegnere il controller o spegnere il controller durante una finestra di manutenzione programmata quando sono accettabili periodi di interruzione del servizio. Vedere le informazioni su https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitoraggio degli stati di connessione del nodo"^].
@@ -84,7 +83,7 @@ image::../media/bmc_power_control_page_controller_off.png[Pagina BMC Power Contr
 
 
 
-== Accendere il controller SG6000-CN e verificarne il funzionamento
+== [[poweron]]Accendere il controller SG6000-CN e verificarne il funzionamento
 
 Accendere il controller dopo aver completato la manutenzione.
 

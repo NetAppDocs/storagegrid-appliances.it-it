@@ -109,9 +109,6 @@ L'avviso non verrà visualizzato al successivo accesso a questo URL.
 +
 Viene visualizzata la pagina iniziale del programma di installazione dell'appliance StorageGRID. Le informazioni e i messaggi visualizzati al primo accesso a questa pagina dipendono dalla modalità di connessione dell'appliance alle reti StorageGRID. Potrebbero essere visualizzati messaggi di errore che verranno risolti nelle fasi successive.
 
-+
-image::../media/appliance_installer_home_5700_5600.png[Immagine della parte superiore della home page del programma di installazione dell'appliance StorageGRID]
-
 
 
 . Se non è possibile ottenere un indirizzo IP utilizzando DHCP, è possibile utilizzare una connessione link-local.
@@ -205,7 +202,4 @@ Dopo aver effettuato l'accesso al programma di installazione dell'appliance Stor
 link:verifying-and-upgrading-storagegrid-appliance-installer-version.html["Verificare e aggiornare la versione del programma di installazione dell'appliance StorageGRID"]
 
 * Esaminare tutti i messaggi visualizzati nella home page del programma di installazione dell'appliance StorageGRID e configurare la configurazione del collegamento e dell'IP, secondo necessità.
-+
-image::../media/appliance_installer_home_services_appliance.png[Installazione dell'appliance Home]
-
 

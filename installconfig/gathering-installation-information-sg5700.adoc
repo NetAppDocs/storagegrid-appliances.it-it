@@ -464,6 +464,5 @@ image::../media/e5700sg_bonded_management_ports.gif[E5700SG Bonded Management Po
 
 .Informazioni correlate
 * link:cabling-appliance-sg5700.html["Apparecchio via cavo (SG5700)"]
-* link:gathering-installation-information-sg5700.html#port-bond-modes["Modalità di collegamento porte (controller E5700SG)"]
 * link:configuring-hardware.html["Configurare l'hardware (SG5700)"]
 

@@ -1,0 +1,59 @@
+---
+permalink: sg6000/replacing-fan-in-sg6000cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000-cn, storage node, storage appliance, replacing, replace, fan, remove, removing, removal, install, installing, installation 
+summary: Il controller di elaborazione SG6000-CN è dotato di otto ventole di raffreddamento.  Se una delle ventole si guasta, è necessario sostituirla il prima possibile per garantire il corretto raffreddamento del controller. 
+---
+= Sostituire la ventola nel controller di elaborazione SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il controller di elaborazione SG6000-CN è dotato di otto ventole di raffreddamento.  Se una delle ventole si guasta, è necessario sostituirla il prima possibile per garantire il corretto raffreddamento del controller.
+
+.Prima di iniziare
+* La ventola sostitutiva è stata disimballata.
+* Lo hai fatto link:locating-controller-in-data-center.html["posizionato fisicamente l'apparecchio"].
+* Hai confermato che le altre ventole sono installate e in esecuzione.
+
+
+.A proposito di questa attività
+Il nodo di archiviazione non sarà accessibile mentre si sostituisce la ventola.
+
+La fotografia mostra una ventola per il controller di elaborazione SG6000-CN.  Le ventole di raffreddamento sono accessibili dopo aver rimosso il coperchio superiore del controller.
+
+
+NOTE: Ciascuna delle due unità di alimentazione contiene anche una ventola. Queste ventole non sono incluse in questa procedura.
+
+image::../media/fan_fru.png[FRU della ventola]
+
+.Fasi
+. link:power-sg6000-cn-controller-off-on.html["Spegnere il controller SG6000-CN"] .
+. Sollevare il dispositivo di chiusura sul coperchio superiore e rimuovere il coperchio dall'apparecchio.
+. Individuare la ventola guasta.
++
+image::../media/fan_location.png[Ubicazione ventole]
+
+. Estrarre la ventola guasta dal telaio.
++
+image::../media/fan_removal.png[Rimozione della ventola]
+
+. Far scorrere la ventola sostitutiva nello slot aperto dello chassis.
++
+Allineare il bordo della ventola con il perno di guida. Il perno è cerchiato nella fotografia.
+
++
+image::../media/fan_guide_pin.png[Pin della guida della ventola]
+
+. Premere con decisione il connettore della ventola nella scheda a circuito stampato.
++
+image::../media/fan_connector_check.png[Controllo del connettore della ventola]
+
+. Riposizionate il coperchio superiore sull'apparecchio e premete il dispositivo di chiusura per fissare il coperchio in posizione.
+. link:power-sg6000-cn-controller-off-on.html#poweron["Accendere il controller SG6000-CN"] .
+. Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.

@@ -18,9 +18,6 @@ Verificare che sia possibile accedere alle reti StorageGRID utilizzate dall'appl
 +
 Viene visualizzata la pagina Ping and MTU Test (Test Ping e MTU).
 
-+
-image::../media/ping_test_start.png[Opzione di test ping e MTU nel programma di installazione dell'appliance StorageGRID]
-
 . Dalla casella a discesa *Network* (rete), selezionare la rete che si desidera testare: Grid (rete), Admin (Amministratore) o Client (Client).
 . Inserire l'indirizzo IPv4 o il nome di dominio completo (FQDN) per un host su tale rete.
 +
@@ -33,9 +30,6 @@ Ad esempio, è possibile verificare il percorso tra il nodo dell'appliance e un 
 . Fare clic su *Test Connectivity* (verifica connettività).
 +
 Se la connessione di rete è valida, viene visualizzato il messaggio "Test ping superato", con l'output del comando ping elencato.
-
-+
-image::../media/ping_test_passed.png[Schermata dei risultati del test ping nel programma di installazione dell'appliance StorageGRID]
 
 
 

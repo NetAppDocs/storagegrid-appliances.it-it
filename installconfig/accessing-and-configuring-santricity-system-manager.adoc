@@ -121,7 +121,7 @@ Per le appliance di storage SG5700 e SG5800 seguono i passaggi di alto livello n
 --
 .SG6060
 --
-Per l'appliance di storage SG6060, la sicurezza dei dischi può essere attivata automaticamente sulle unità SSD solo se la gestione delle chiavi è stata configurata prima dell'installazione dell'appliance di storage.
+Per l'appliance di archiviazione SG6060, la sicurezza dell'unità può essere abilitata automaticamente sulle unità SSD solo se la gestione delle chiavi è stata configurata prima di installare l'appliance di archiviazione.
 
 .. Dotare il vostro storage array di dischi sicuri (dischi FDE o dischi FIPS).
 +
@@ -130,7 +130,7 @@ Per l'appliance di storage SG6060, la sicurezza dei dischi può essere attivata 
 *** Non è possibile aggiungere o utilizzare un'unità FDE come riserva in un gruppo di volumi o pool All-FIPS.
 
 
-.. Per lo shelf del controller E4000, creare una chiave di sicurezza (una stringa di caratteri condivisi dal controller e dalle unità per l'accesso in lettura e scrittura).
+.. Per lo scaffale del controller E2800, creare una chiave di sicurezza (una stringa di caratteri condivisa dal controller e dalle unità per l'accesso in lettura e scrittura).
 +
 *** È possibile https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["creare una chiave interna"^] dalla memoria persistente del controller o utilizzare una chiave esterna fornita da un server di gestione delle chiavi.
 *** Per utilizzare una chiave esterna fornita da un server di gestione delle chiavi, è necessario prima https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["stabilire l'autenticazione con un server di gestione delle chiavi"^] in Gestione sistema SANtricity.
@@ -250,9 +250,6 @@ DHCP è il metodo predefinito per assegnare un indirizzo IP alla porta di gestio
 
 NOTE: La visualizzazione dei valori DHCP potrebbe richiedere alcuni minuti.
 
-+
-image::../media/storage_controller_network_config_ipv4.gif[Config. Rete controller storage IPv4]
-
 . Facoltativamente, impostare un indirizzo IP statico per la porta di gestione del controller di storage.
 +
 
@@ -262,9 +259,6 @@ NOTE: È necessario assegnare un indirizzo IP statico alla porta di gestione o u
 .. Selezionare *statico*.
 .. Inserire l'indirizzo IPv4 utilizzando la notazione CIDR.
 .. Inserire il gateway predefinito.
-+
-image::../media/storage_controller_ipv4_and_def_gateway.gif[Storage Controller Network Config IPv4 e Default Gateway]
-
 .. Fare clic su *Save* (Salva).
 +
 L'applicazione delle modifiche potrebbe richiedere alcuni minuti.

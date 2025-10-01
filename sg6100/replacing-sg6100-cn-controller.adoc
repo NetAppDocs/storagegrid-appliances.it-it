@@ -54,9 +54,42 @@ Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
 
 CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
 
-.. Rimuovere il controller guasto dal cabinet o dal rack.
-.. Installare il controller sostitutivo nel cabinet o nel rack.
-.. Sostituire i cavi.
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Rimuovere il controller guasto dall'armadio o dal rack"] .
+.. Notare la posizione dei componenti sostituibili (due alimentatori, tre schede di rete e due SSD) nel controller guasto.
++
+Le due unità si trovano nelle seguenti posizioni nello chassis (parte anteriore dello chassis con il pannello rimosso in figura):
+
++
+image::../media/sg6100cn_ssds_locations.png[Posizioni delle unità]
+
++
+|===
+|  | Disco 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+|===
+.. Trasferire i componenti sostituibili al controller sostitutivo.
++
+Seguire le istruzioni di manutenzione fornite per reinstallare i componenti sostituibili.
+
++
+
+CAUTION: Se si desidera conservare i dati sulle unità, inserire le unità SSD negli stessi slot che occupavano nell'appliance guasta.  In caso contrario, l'Appliance Installer visualizzerà un avviso e sarà necessario inserire le unità negli slot corretti e riavviare il controller prima che questo possa riconnettersi alla rete.
+
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Installare il controller sostitutivo nell'armadio o nel rack"] .
+.. Sostituire i cavi e i ricetrasmettitori ottici.
 .. Accendere il controller e controllare i LED del controller.
 
 

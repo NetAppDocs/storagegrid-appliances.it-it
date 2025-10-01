@@ -17,6 +17,10 @@ Dopo aver installato e configurato l'appliance di storage, è possibile implemen
 * Se si sta clonando un nodo appliance, continuare a seguire la procedura descritta in link:../commonhardware/appliance-node-cloning-procedure.html["cloning del nodo dell'appliance"] processo.
 * L'apparecchio è stato installato in un rack o in un cabinet, collegato alla rete e acceso.
 * I collegamenti di rete, gli indirizzi IP e il rimapping delle porte (se necessario) sono stati configurati per l'appliance utilizzando il programma di installazione dell'appliance StorageGRID.
++
+
+NOTE: Il supporto per la rimappatura delle porte è obsoleto e verrà rimosso in una versione futura.  Per rimuovere le porte rimappate, fare riferimento a https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Rimuovere le rimappature delle porte sugli apparecchi StorageGRID"^] .
+
 * Conosci uno degli indirizzi IP assegnati al controller di calcolo dell'appliance. È possibile utilizzare l'indirizzo IP per qualsiasi rete StorageGRID collegata.
 * Il nodo amministrativo primario per il sistema StorageGRID è stato implementato.
 * Tutte le subnet della rete griglia elencate nella pagina di configurazione IP del programma di installazione dell'appliance StorageGRID sono state definite nell'elenco delle subnet della rete griglia nel nodo di amministrazione principale.
@@ -57,7 +61,7 @@ NOTE: È possibile selezionare solo i metadati durante l'implementazione dell'ap
 
 . Nel campo *Node name* (Nome nodo), specificare il nome di sistema che si desidera utilizzare per il nodo dell'appliance e fare clic su *Save* (Salva).
 +
-Il nome visualizzato qui corrisponde al nome di sistema del nodo dell'appliance. I nomi di sistema sono richiesti per le operazioni StorageGRID interne e non possono essere modificati.
+Il nome visualizzato qui sarà il nome di sistema del nodo appliance.  I nomi di sistema sono necessari per le operazioni interne StorageGRID e non possono essere modificati.  Per modificare il nome visualizzato di un nodo appliance, vedere https://docs.netapp.com/us-en/storagegrid/maintain/rename-grid-site-node.html#how-to-rename-grid-sites-or-nodes["Come rinominare la griglia, i siti o i nodi"^] .
 
 . Nella sezione *Primary Admin Node Connection* (connessione nodo amministratore primario), determinare se è necessario specificare l'indirizzo IP per il nodo amministratore primario.
 +

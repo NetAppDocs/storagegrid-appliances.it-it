@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sostituire la centralina SG5800
+= Sostituire il controller StorageGRID SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,7 +19,7 @@ Potrebbe essere necessario sostituire il controller SG5800 se non funziona in mo
 
 
 .A proposito di questa attività
-Il nodo di storage dell'appliance non sarà accessibile quando si sostituisce il controller. Se la centralina SG5800 funziona a sufficienza, è possibile eseguire un arresto controllato all'inizio di questa procedura.
+Non sarà possibile accedere al nodo di archiviazione dell'appliance quando si sostituisce il controller.  Se il controller SG5800 funziona correttamente, è possibile eseguire uno spegnimento controllato all'inizio di questa procedura.
 
 
 NOTE: Se si sostituisce il controller prima di installare il software StorageGRID, potrebbe non essere possibile accedere al programma di installazione dell'appliance StorageGRID subito dopo aver completato questa procedura. Sebbene sia possibile accedere al programma di installazione dell'appliance StorageGRID da altri host sulla stessa sottorete dell'appliance, non è possibile accedervi dagli host presenti su altre sottoreti. Questa condizione dovrebbe risolversi entro 15 minuti (quando qualsiasi voce della cache ARP per il timeout del controller originale), oppure è possibile cancellare immediatamente la condizione cancellando manualmente le vecchie voci della cache ARP dal router o gateway locale.
@@ -38,23 +38,11 @@ Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
 
 
 
-.. Arrestare il controller SG5800:
+
+
+. Arrestare il controller SG5800:
 +
 *`shutdown -h now`*
-
-.. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
-+
-Il LED verde cache Active sul retro del controller E4000 è acceso quando i dati memorizzati nella cache devono essere scritti sulle unità. Attendere che il LED si spenga.
-
-
-
-. Spegnere l'alimentazione.
-+
-.. Nella pagina iniziale di Gestione di sistema di SANtricity, selezionare Visualizza operazioni in corso.
-.. Verificare che tutte le operazioni siano state completate.
-.. Spegnere entrambi gli interruttori di alimentazione dell'apparecchio.
-.. Attendere che tutti i LED si spenga.
-
 
 . Se le reti StorageGRID collegate al controller utilizzano server DHCP:
 +
@@ -62,7 +50,7 @@ Il LED verde cache Active sul retro del controller E4000 è acceso quando i dati
 .. Chiedere all'amministratore di rete di aggiornare le impostazioni dell'indirizzo IP del controller originale in modo che riflettano gli indirizzi MAC del controller sostitutivo.
 +
 
-NOTE: Assicurarsi che gli indirizzi IP del controller originale siano stati aggiornati prima di alimentare il controller sostitutivo. In caso contrario, il controller otterrà nuovi indirizzi IP DHCP all'avvio e potrebbe non essere in grado di riconnettersi a StorageGRID. Questo passaggio si applica a tutte le reti StorageGRID collegate al controller.
+NOTE: Prima di inserire il controller sostitutivo nell'appliance, è necessario assicurarsi che gli indirizzi IP del controller originale siano stati aggiornati.  In caso contrario, il controller otterrà nuovi indirizzi IP DHCP all'avvio e potrebbe non essere in grado di riconnettersi a StorageGRID.  Questo passaggio si applica a tutte le reti StorageGRID collegate al controller.
 
 
 
@@ -90,8 +78,7 @@ NOTE: Utilizzare sempre due mani per sostenere il peso del controller.
 .. Sostituire i cavi.
 
 
-. Accendere l'apparecchio e controllare i LED del controller.
-. Verificare che il nodo di storage dell'appliance sia visualizzato in Grid Manager e che non vengano visualizzati allarmi.
+. Dopo il riavvio del controller e la reintegrazione dell'appliance nella griglia, verificare che il nodo di archiviazione dell'appliance sia visualizzato in Grid Manager e che non siano presenti allarmi.
 
 
 Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"] per ulteriori informazioni.

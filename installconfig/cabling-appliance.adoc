@@ -680,6 +680,10 @@ Porta di interconnessione 2 sul controller SG5800
 |===
 . In alternativa, collegare la porta di gestione 1 (P1) sul controller E4000 (la porta RJ-45 sulla sinistra) alla rete di gestione per SANtricity System Manager utilizzando un cavo Ethernet.
 . Se si intende utilizzare la rete amministrativa per StorageGRID, collegare la porta di gestione 1 del controller SG5800 (la porta RJ-45 a sinistra) alla rete amministrativa, utilizzando un cavo Ethernet.
++
+
+NOTE: Lo stato del collegamento fisico per la porta 1 non è disponibile nel software e deve essere verificato in questo momento utilizzando il LED di stato sul controller SG5800.
+
 . Collegare le porte 10/25-GbE del controller SG5800 agli switch di rete appropriati, utilizzando cavi in rame o cavi ottici e ricetrasmettitori SFP+ o SFP28.
 +
 

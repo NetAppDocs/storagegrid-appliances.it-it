@@ -23,7 +23,7 @@ Per i controller di storage che attualmente utilizzano SANtricity OS 08.42.20.00
 .A proposito di questa attività
 Non è possibile eseguire altri aggiornamenti software (aggiornamento software StorageGRID o hotfix) mentre è in corso un aggiornamento del sistema operativo SANtricity. Se si tenta di avviare una correzione rapida o un aggiornamento del software StorageGRID prima che il processo di aggiornamento del sistema operativo SANtricity sia terminato, si viene reindirizzati alla pagina di aggiornamento del sistema operativo SANtricity.
 
-La procedura non sarà completa fino a quando l'aggiornamento del sistema operativo SANtricity non sarà stato applicato correttamente a tutti i nodi applicabili selezionati per l'aggiornamento. Potrebbero essere necessari più di 30 minuti per caricare il sistema operativo SANtricity su ciascun nodo (in sequenza) e fino a 90 minuti per riavviare ogni appliance di storage StorageGRID. Tutti i nodi della griglia che non utilizzano SANtricity OS non saranno interessati da questa procedura.
+La procedura non sarà completata finché l'aggiornamento del sistema operativo SANtricity non sarà stato applicato correttamente a tutti i nodi applicabili selezionati per l'aggiornamento.  Potrebbero essere necessari più di 30 minuti per caricare il sistema operativo SANtricity su ciascun nodo (in sequenza) e fino a 90 minuti per riavviare ciascun dispositivo di archiviazione StorageGRID .  I nodi nella griglia che non utilizzano SANtricity OS non saranno interessati da questa procedura.
 
 
 CAUTION: I seguenti passaggi sono applicabili solo quando si utilizza Grid Manager per eseguire l'aggiornamento. Non è possibile aggiornare i controller di storage dell'appliance utilizzando Grid Manager se i controller utilizzano sistemi operativi SANtricity precedenti alla 08.42.20.00 (11.42).
@@ -32,12 +32,12 @@ CAUTION: I seguenti passaggi sono applicabili solo quando si utilizza Grid Manag
 NOTE: Questa procedura aggiornerà AUTOMATICAMENTE NVSRAM alla versione più recente associata all'aggiornamento del sistema operativo SANtricity. Non è necessario applicare un file di aggiornamento NVSRAM separato.
 
 
-NOTE: Assicurarsi di applicare la correzione rapida StorageGRID più recente prima di iniziare questa procedura. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["Procedura di hotfix StorageGRID"^].
+NOTE: Prima di iniziare questa procedura, applicare l'ultimo hotfix StorageGRID . Vedere https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["Procedura di hotfix StorageGRID"^] per i dettagli.
 
 .Fasi
 . [[download-santricity-os]] Scarica il nuovo file del software SANtricity OS da https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^].
 +
-Assicurarsi di scegliere la versione del sistema operativo SANtricity per i controller di storage.
+Scegli la versione del sistema operativo SANtricity per i tuoi controller di storage.
 
 . Selezionare *MANUTENZIONE* > *sistema* > *aggiornamento software*.
 +
@@ -187,14 +187,14 @@ NOTE: I nodi già approvati e aggiornati senza errori rimangono aggiornati.
 
 
 
-. Ripetere questa procedura di aggiornamento per tutti i nodi con una fase di completamento che richiedono un file di aggiornamento del sistema operativo SANtricity diverso.
+. Ripetere questa procedura di aggiornamento per i nodi con una fase Completata che richiedono un file di aggiornamento del sistema operativo SANtricity diverso.
 +
 
-NOTE: Per i nodi con stato di attenzione alle esigenze, utilizzare la modalità di manutenzione per eseguire l'aggiornamento.
+NOTE: Per i nodi con stato "Necessita attenzione", utilizzare la modalità di manutenzione per eseguire l'aggiornamento.
 
 
 
 .Informazioni correlate
-* link:https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^]
+* https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^]
 * link:upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html["Aggiornare il sistema operativo SANtricity sul controller E2800 utilizzando la modalità di manutenzione"]
 

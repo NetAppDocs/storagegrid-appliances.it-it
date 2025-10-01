@@ -4,7 +4,7 @@ permalink: whats-new-appliances.html
 keywords: storagegrid, appliance, whats new 
 summary: Scopri le novità di questo sito di documentazione. 
 ---
-= Novità per le appliance
+= Novità negli apparecchi StorageGRID
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,28 +14,40 @@ summary: Scopri le novità di questo sito di documentazione.
 
 
 [role="lead"]
-Scoprite le novità per le appliance StorageGRID.
+Scopri le novità sugli appliance StorageGRID .
+
+
+
+== La rete client può essere configurata senza un indirizzo IP
+
+Ora è possibile abilitare la rete client senza specificare un indirizzo IP.  Ciò consente alla rete client di avere interfacce VLAN configurate in StorageGRID senza richiedere un indirizzo IP aggiuntivo per l'interfaccia stessa. Fare riferimento a link:.//installconfig/setting-ip-configuration.html["Configurare gli indirizzi IP StorageGRID"] .
+
+
+
+== Numeri di versione per il software StorageGRID e Appliance Installer allineati
+
+Con la versione 12.0 di StorgeGRID, il numero di versione di StorageGRID Appliance Installer corrisponde alla versione del software StorageGRID .  Gli utenti non devono più capire quali versioni funzionano insieme. Fare riferimento a link:./installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html["Verificare e aggiornare la versione del programma di installazione dell'appliance StorageGRID"] .
 
 
 
 == Informazioni BMC
 
-Sono ora disponibili informazioni dettagliate sull'utilizzo dell'interfaccia BMC dell'appliance StorageGRID. Vedere link:./commonhardware/use-bmc.html["Utilizzo del BMC (Baseboard Management Controller) dell'appliance StorageGRID"].
+Sono ora disponibili informazioni dettagliate sull'utilizzo dell'interfaccia BMC dell'appliance StorageGRID . Fare riferimento a link:./commonhardware/use-bmc.html["Utilizzo del BMC (Baseboard Management Controller) dell'appliance StorageGRID"] .
 
 
 
 == Appliance SG5812 e SG5860
 
-Le nuove appliance StorageGRID SG5812 e SG5860 sono piattaforme integrate di storage e calcolo che operano come nodi storage in un grid StorageGRID. Per ulteriori informazioni, consultare la link:./installconfig/hardware-description-sg5800.html["Appliance SG5800: Panoramica"]sezione.
+Gli apparecchi StorageGRID SG5812 e SG5860 sono piattaforme di archiviazione e di elaborazione integrate che operano come nodi di archiviazione in una griglia StorageGRID .  Fare riferimento allink:./installconfig/hardware-description-sg5800.html["Appliance SG5800: Panoramica"] per saperne di più.
 
 
 
 == Appliance SG6160
 
-La nuova appliance StorageGRID SG6160 include un controller di calcolo e uno shelf dello storage controller che contiene due storage controller e dischi da 60 TB, oltre a due dischi SSD NVMe per il caching. In alternativa, è possibile aggiungere shelf di espansione da 60 dischi a SG6160. Per ulteriori informazioni, vederelink:./installconfig/hardware-description-sg6100.html["Appliance SGF6100: Panoramica"].
+Il nuovo dispositivo StorageGRID SG6160 include un controller di elaborazione e uno scaffale per controller di archiviazione che contiene due controller di archiviazione e 60 unità, oltre a due unità SSD NVMe per la memorizzazione nella cache.  Facoltativamente, è possibile aggiungere ripiani di espansione da 60 unità al modello SG6160.  Fare riferimento alink:./installconfig/hardware-description-sg6100.html["Appliance SGF6100: Panoramica"] per saperne di più.
 
 
 
 == Appliance per i servizi SG110 e SG1100
 
-Le nuove appliance per i servizi StorageGRID SG110 e SG1100 sono un aggiornamento hardware evolutivo che fornisce migliori prestazioni amministrative e di bilanciamento del carico. Vedere link:./installconfig/hardware-description-sg110-and-1100.html["Appliance per i servizi SG110 e SG1100: Panoramica"].
+I nuovi dispositivi di servizio StorageGRID SG110 e SG1100 rappresentano un aggiornamento hardware evolutivo che garantisce prestazioni amministrative e di bilanciamento del carico migliorate. Fare riferimento a link:./installconfig/hardware-description-sg110-and-1100.html["Appliance per i servizi SG110 e SG1100: Panoramica"] .

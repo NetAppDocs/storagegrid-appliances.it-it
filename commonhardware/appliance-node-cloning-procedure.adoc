@@ -40,9 +40,6 @@ Per mantenere le performance di rete e la disponibilità dei dati di StorageGRID
 +
 La sezione Primary Admin Node Connection viene sostituita con la sezione Clone target node Connection.
 
-+
-image::../media/clone_peer_node_connection_section.png[Clonare la sezione di connessione del nodo di destinazione]
-
 . Per *Clone target node IP*, immettere l'indirizzo IP temporaneo assegnato al nodo di destinazione per la rete da utilizzare per il traffico di trasferimento dati clone, quindi selezionare *Save* (Salva).
 +
 In genere, si inserisce l'indirizzo IP per Grid Network, ma se si desidera utilizzare una rete diversa per il traffico di trasferimento dati clone, immettere l'indirizzo IP del nodo di destinazione su tale rete.
@@ -64,9 +61,6 @@ Quando l'opzione *Avvia clonazione* è attivata, lo stato *corrente* indica la r
 . Monitorare l'avanzamento della clonazione utilizzando il programma di installazione dell'appliance StorageGRID sul nodo di origine o di destinazione.
 +
 Il programma di installazione dell'appliance StorageGRID su entrambi i nodi di origine e destinazione indica uno stato simile.
-
-+
-image::../media/cloning_progress.png[Progresso della clonazione]
 
 +
 La pagina Monitor Cloning fornisce informazioni dettagliate sui progressi di ciascuna fase del processo di cloning:

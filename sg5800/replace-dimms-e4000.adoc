@@ -263,9 +263,14 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 
 
 
-. Verificare che il riavvio sia completo e che il nodo sia stato riconentrato nella griglia. In Grid Manager, verificare che la pagina *nodi* visualizzi uno stato normale (segno di spunta verde a sinistra del nome del nodo) per il nodo dell'appliance, che indica che non sono attivi avvisi e che il nodo è connesso alla griglia.
+. Conferma che il riavvio è completo e che il nodo si è riunito alla griglia:
++
+.. Nel Grid Manager, seleziona *NODI*.
+.. Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 +
 
-NOTE: Potrebbero essere necessari 20 minuti dall'accensione degli interruttori di alimentazione a quando il nodo si ricongiunge alla griglia e visualizza uno stato normale in Grid Manager."
+NOTE: potrebbero volerci 20 minuti dal momento in cui si accendono gli interruttori di alimentazione al momento in cui il nodo si riconnette alla rete e visualizza uno stato normale in Grid Manager.
+
+
 
 

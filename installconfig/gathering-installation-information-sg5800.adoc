@@ -423,6 +423,5 @@ NOTE: Se si sceglie di utilizzare meno di quattro porte, tenere presente che, do
 
 .Informazioni correlate
 * link:cabling-appliance.html["Capocorda (SG5800)"]
-* link:gathering-installation-information-sg5800.html#port-bond-modes["Modalità di collegamento porte (controller SG5800)"]
 * link:configuring-hardware.html["Configurare l'hardware (SG5800)"]
 

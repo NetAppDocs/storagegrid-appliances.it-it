@@ -20,8 +20,11 @@ entries:
     - title: Aggiornare il sistema operativo SANtricity sul controller E4000 usando
         la modalità di manutenzione
       url: "/sg5800/upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html"
-  - title: Aggiornare il firmware del disco utilizzando Gestione di sistema di SANtricity
+  - title: Aggiorna il firmware dell'unità
     entries:
+    - title: Aggiorna automaticamente il firmware dell'unità SG5800 durante il riavvio
+        dell'appliance
+      url: "/sg5800/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Aggiornare il firmware delle unità SG5800 utilizzando il metodo online
         Gestione sistema di SANtricity
       url: "/sg5800/upgrading-drive-firmware-using-santricity-system-manager-online.html"

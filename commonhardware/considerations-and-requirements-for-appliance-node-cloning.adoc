@@ -14,6 +14,9 @@ summary: Prima di clonare un nodo appliance, è necessario comprendere le consid
 Prima di clonare un nodo appliance, è necessario comprendere le considerazioni e i requisiti.
 
 
+TIP: La clonazione del nodo è disabilitata per i nodi gateway.  Per sostituire un Gateway Node, è necessario dismetterlo e quindi eseguire un'espansione per aggiungere un nuovo Gateway Node dell'appliance.  La procedura di dismissione ed espansione è molto più rapida per un nodo gateway rispetto a un nodo di archiviazione.
+
+
 
 == Requisiti hardware per l'appliance sostitutiva
 
@@ -21,11 +24,11 @@ Assicurarsi che l'apparecchio sostitutivo soddisfi i seguenti criteri:
 
 * Il nodo di origine (appliance da sostituire) e l'appliance di destinazione (nuova) devono essere dello stesso tipo di appliance:
 +
-** È possibile clonare solo un'appliance Admin Node o un'appliance Gateway Node su una nuova appliance di servizi.
+** È possibile clonare un'appliance Admin Node solo su una nuova appliance di servizi.
 ** È possibile clonare un'appliance Storage Node solo su una nuova appliance di storage.
 
 
-* Per le appliance nodo amministrativo o nodo gateway, l'appliance del nodo di origine e l'appliance di destinazione non devono necessariamente essere dello stesso modello di appliance; tuttavia, la modifica del modello di appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
+* Per un'appliance Admin Node, l'appliance del nodo sorgente e quella di destinazione non devono necessariamente avere lo stesso modello; tuttavia, la modifica del modello dell'appliance potrebbe richiedere la sostituzione dei cavi o dei moduli SFP.
 +
 Ad esempio, è possibile sostituire un'appliance a nodi SG1000 con un SG100 o un'appliance SG100 con un'appliance SG1000.
 
@@ -37,7 +40,7 @@ Ad esempio, è possibile sostituire un'appliance a nodi SG5700 con un'appliance 
 
 ** L'appliance di destinazione deve avere un numero uguale o maggiore di volumi di storage a oggetti rispetto all'appliance di origine.
 +
-Ad esempio, non è possibile sostituire un'appliance SG6000 nodi (volumi di oggetti 16 GB) con un'appliance SGF6112 (volumi di oggetti 12 GB).
+Ad esempio, non è possibile sostituire un'appliance nodo SG6000 (16 volumi di archiviazione oggetti) con un'appliance SGF6112 (12 volumi di archiviazione oggetti).
 
 
 
@@ -60,9 +63,18 @@ Gli indirizzi IP temporanei si trovano normalmente sulla stessa subnet dell'appl
 
 NOTE: L'utilizzo della rete di amministrazione 1-GbE per il trasferimento dei dati dei cloni comporta un rallentamento della clonazione.
 
-* Determinare se la crittografia del nodo utilizzando un server di gestione delle chiavi (KMS) verrà utilizzata sull'appliance di destinazione, in modo da poter attivare la crittografia del nodo durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. È possibile verificare se la crittografia del nodo è attivata sul nodo dell'appliance di origine, come descritto in link:../installconfig/optional-enabling-node-encryption.html["abilitazione della crittografia del nodo"].
+* Determina se utilizzerai la crittografia dei nodi tramite un server di gestione delle chiavi (KMS) sull'appliance di destinazione, in modo da poter abilitare la crittografia dei nodi durante l'installazione iniziale dell'appliance di destinazione prima della clonazione.  È possibile verificare se la crittografia del nodo è abilitata sul nodo dell'appliance di origine come descritto inlink:../installconfig/optional-enabling-node-encryption.html["abilitazione della crittografia del nodo"] .
 +
-Il nodo di origine e l'appliance di destinazione possono avere diverse impostazioni di crittografia del nodo. La decrittografia e la crittografia dei dati vengono eseguite automaticamente durante il trasferimento dei dati e quando il nodo di destinazione viene riavviato e si unisce alla griglia.
+Il nodo di origine e l'appliance di destinazione possono avere impostazioni di crittografia dei nodi diverse, con le seguenti eccezioni.  La clonazione dei nodi non è supportata da origini con nodi non crittografati a destinazioni con nodi crittografati per i seguenti dispositivi:
+
++
+** Un dispositivo nodo SGF6112 senza crittografia nodo a un dispositivo SGF6112 con crittografia nodo
+** Un dispositivo nodo SG1100 senza crittografia nodo a un dispositivo SG1100 con crittografia nodo
+** Un dispositivo nodo SG110 senza crittografia nodo a un dispositivo SG110 con crittografia nodo
+
+
++
+La decrittazione e la crittografia dei dati vengono eseguite automaticamente durante il trasferimento dei dati e quando il nodo di destinazione si riavvia e si unisce alla griglia.
 
 * Determinare se la modalità RAID sull'appliance di destinazione deve essere modificata rispetto all'impostazione predefinita, in modo da poter specificare queste informazioni durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *hardware* per l'apparecchio.
 +

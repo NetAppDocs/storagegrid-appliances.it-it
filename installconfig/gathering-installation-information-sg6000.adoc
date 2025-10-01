@@ -552,7 +552,6 @@ La porta a sinistra è collegata alla rete di amministrazione. La porta a destra
 .Informazioni correlate
 * link:../installconfig/hardware-description-sg6000.html#sg6000-controllers["Controller SG6000"]
 * link:../installconfig/reviewing-appliance-network-connections.html["Determinare le connessioni di rete dell'appliance"]
-* link:../installconfig/gathering-installation-information-sg6000.html#port-bond-modes["Modalità Port Bond (controller SG6000-CN)"]
 * link:cabling-appliance.html["Apparecchio via cavo"]
 * link:../installconfig/setting-ip-configuration.html["Configurare gli indirizzi IP StorageGRID"]
 

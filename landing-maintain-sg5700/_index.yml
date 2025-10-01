@@ -11,6 +11,8 @@ indexpage:
       url: "../sg5700/changing-link-configuration-of-e5700sg-controller.html"
     - title: Upgrade SANtricity (Aggiorna server)
       url: "../sg5700/upgrading-santricity-os-on-storage-controller.html"
+    - title: Aggiorna il firmware dell'unità (metodo di riavvio automatico)
+      url: "../sg5700/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Aggiornamento del firmware dell'unità (metodo online)
       url: "../sg5700/upgrading-drive-firmware-using-santricity-system-manager-online.html"
     - title: Aggiornamento del firmware dell'unità (metodo offline)

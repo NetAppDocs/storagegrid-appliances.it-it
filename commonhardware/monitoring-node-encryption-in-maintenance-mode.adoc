@@ -23,9 +23,6 @@ Vedere https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Con
 .Fasi
 . Dal programma di installazione dell'appliance StorageGRID, selezionare *Configura hardware* > *crittografia del nodo*.
 +
-image::../media/fde_monitor_in_maint_mode.png[CONFIGURAZIONE chiara DI KMS]
-
-+
 La pagina Node Encryption include tre sezioni:
 
 +
@@ -49,13 +46,12 @@ CAUTION: La cancellazione della configurazione KMS elimina i dati dall'appliance
 ** Selezionare *Riavvia in StorageGRID* per riavviare il controller con il nodo che si ricongiunge alla griglia. Selezionare questa opzione se si è terminato di lavorare in modalità di manutenzione e si è pronti per ripristinare il normale funzionamento del nodo.
 ** Selezionare *Reboot into Maintenance Mode* (Riavvia in modalità di manutenzione) per riavviare il controller con il nodo in modalità di manutenzione. (Questa opzione è disponibile solo quando il controller è in modalità di manutenzione). Selezionare questa opzione se sono necessarie ulteriori operazioni di manutenzione sul nodo prima di ricongiungersi alla griglia.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Riavviare il controller in modalità di manutenzione]
+Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-Il riavvio dell'appliance e il ricongiungersi alla griglia possono richiedere fino a 20 minuti. Per confermare che il riavvio è stato completato e che il nodo ha ricongiungersi alla griglia, tornare a Grid Manager. La pagina *NODI* dovrebbe visualizzare uno stato normale (icona con un segno di spunta verde image:../media/icon_alert_green_checkmark.png["segno di spunta verde"]a sinistra del nome del nodo) per il nodo dell'appliance, indicando che non sono attivi avvisi e che il nodo è collegato alla griglia.
+... Nel Grid Manager, seleziona *NODI*.
+... Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
-+
-image::../media/nodes_menu.png[Nodo appliance riconentrato in Grid]
 
 
 
@@ -87,7 +83,7 @@ CAUTION: Non cancellare la configurazione KMS se si intende reinstallare un nodo
 
 * Prima di poter ripristinare e reinstallare un nodo in cui la configurazione KMS è stata persa e la chiave KMS non è ripristinabile.
 * Prima di restituire qualsiasi apparecchio precedentemente in uso presso il sito.
-* Dopo la disattivazione di un'appliance con crittografia del nodo attivata.
+* Dopo aver dismesso un dispositivo in cui era abilitata la crittografia dei nodi.
 
 
 
@@ -112,7 +108,7 @@ CAUTION: Se la configurazione KMS viene cancellata, i dati sull'appliance verran
 . Nella parte inferiore della finestra, selezionare *Clear KMS Key and Delete Data* (Cancella chiave KMS e Elimina dati).
 . Se si è certi di voler cancellare la configurazione KMS, digitare `*clear*` Nella finestra di dialogo di avviso, selezionare *Clear KMS Key and Delete Data* (Cancella chiave KMS e Elimina dati).
 +
-La chiave di crittografia KMS e tutti i dati vengono cancellati dal nodo e l'appliance viene riavviata. Questa operazione può richiedere fino a 20 minuti.
+La chiave di crittografia KMS e tutti i dati vengono eliminati dal nodo e l'appliance si riavvia.  Durante il riavvio dell'appliance, che può richiedere fino a 20 minuti, viene visualizzata una finestra di dialogo.
 
 . Aprire un browser e inserire uno degli indirizzi IP del controller di elaborazione dell'appliance. +
 `*https://_Controller_IP_:8443*`

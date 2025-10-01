@@ -78,21 +78,15 @@ Viene visualizzata la pagina iniziale del programma di installazione dell'applia
 
 . Selezionare *Configura hardware* > *Configurazione BMC*.
 +
-image::../media/bmc_configuration_page.gif[Schermata con l'opzione Advanced > BMC Configuration (Avanzate > Configurazione BMC)]
-
-+
 Viene visualizzata la pagina Baseboard Management Controller Configuration.
 
-. Annotare l'indirizzo IPv4 visualizzato automaticamente.
+. Nelle impostazioni IP LAN, prendi nota dell'indirizzo IPv4 che viene visualizzato automaticamente.
 +
 DHCP è il metodo predefinito per assegnare un indirizzo IP a questa porta.
 
 +
 
 NOTE: La visualizzazione dei valori DHCP potrebbe richiedere alcuni minuti.
-
-+
-image::../media/bmc_configuration_dhcp_address.gif[Pagina di configurazione del controller di gestione Basement che mostra l'indirizzo DHCP]
 
 . Facoltativamente, impostare un indirizzo IP statico per la porta di gestione BMC.
 +
@@ -103,9 +97,6 @@ NOTE: È necessario assegnare un indirizzo IP statico alla porta di gestione BMC
 .. Selezionare *statico*.
 .. Inserire l'indirizzo IPv4 utilizzando la notazione CIDR.
 .. Inserire il gateway predefinito.
-+
-image::../media/bmc_configuration_static_ip.gif[Baseboard Management Controller Configuration Static Option (opzione statica)]
-
 .. Fare clic su *Save* (Salva).
 +
 L'applicazione delle modifiche potrebbe richiedere alcuni minuti.

@@ -24,6 +24,7 @@ Utilizzando i tool NetApp StorageGRID, è possibile automatizzare l'installazion
 ** Modalità Port Bond
 ** Network bond mode (modalità bond di
 ** Velocità di collegamento
+** Politica hash di trasmissione LACP e velocità PDU
 
 
 
@@ -81,16 +82,13 @@ Dopo aver generato un file JSON, è possibile automatizzare la configurazione di
 
 .Fasi
 . Nel programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Aggiorna configurazione dell'appliance*. Viene visualizzata la pagina Update Appliance Configuration (Aggiorna configurazione appliance).
-. Cercare e selezionare il file JSON con la configurazione che si desidera caricare.
+. Nella sezione Carica JSON, cerca e seleziona il file di configurazione JSON che desideri caricare.
 +
 Il file viene caricato e validato. Una volta completato il processo di convalida, il nome del file viene visualizzato accanto a un segno di spunta verde.
 
 +
 
 NOTE: Se la configurazione del file JSON include sezioni per, si potrebbe perdere la connessione all'appliance `link_config`, `networks`, o entrambi. Se non si riesce a riconnettersi entro 1 minuto, immettere nuovamente l'URL dell'appliance utilizzando uno degli altri indirizzi IP assegnati all'appliance.
-
-+
-image::../media/update_appliance_configuration_valid_json.png[Aggiornamento della configurazione dell'appliance JSON caricato]
 
 +
 Il menu a discesa *Node name* (Nome nodo) contiene i nomi dei nodi di primo livello definiti nel file JSON.
