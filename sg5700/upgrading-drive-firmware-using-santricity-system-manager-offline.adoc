@@ -11,7 +11,7 @@ summary: Il firmware del disco viene aggiornato per assicurarsi di disporre dell
 
 
 [role="lead"]
-Utilizzare il metodo online Gestione di sistema di SANtricity per aggiornare il firmware sulle unità dell'appliance per assicurarsi di disporre di tutte le funzioni e delle correzioni di bug più recenti.
+Utilizzare il metodo offline di Gestione di sistema di SANtricity per aggiornare il firmware sulle unità dell'appliance per assicurarsi di disporre di tutte le funzioni e delle correzioni di bug più recenti.
 
 .Prima di iniziare
 * Lo stato dell'appliance di storage è ottimale.

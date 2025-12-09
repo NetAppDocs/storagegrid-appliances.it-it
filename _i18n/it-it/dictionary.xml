@@ -4685,7 +4685,6 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="023a03630e96cd25b69d134411531e8c" category="paragraph">Alimentatore (1 di 2) per controller di calcolo SG6100-CN</block>
   <block id="471615f4f3a518f7bbbe1d1ef8f319de" category="paragraph">Connettori per controller di elaborazione SG6100-CN</block>
   <block id="cc53c11094cddf3f51bd4537e9e7158b" category="paragraph">Fan (1 di 2) per shelf controller E4000</block>
-  <block id="e5a8c894ca52500bc6bcb77e429cb813" category="paragraph">Storage controller e-Series E400 (1 di 2) e connettori</block>
   <block id="8e6dd71ab1d82f641fffaf74f1a6f6b8" category="paragraph">Alimentatore (1 di 2) per shelf di controller E4000</block>
   <block id="7f515b7b271e2f2650ab9205041ae23a" category="section-title">SG6100 controller</block>
   <block id="e095a9ee88152254e105acb911c6ddc3" category="section-title">Controller di calcolo SG6100-CN</block>
@@ -5808,4 +5807,5 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="883368f2f68b2c26ebcfb31f09f529d5" category="sidebar">Aggiorna il firmware dell'unità SG6160 utilizzando il metodo offline di SANtricity System Manager</block>
   <block id="58abe205d3265bf2555ee7c37bee89cb" category="sidebar">NIC interna (SGF6112 o SG6100-CN)</block>
   <block id="b883da35aa37ea53f8afe4d94c8d01ee" category="sidebar">NIC esterna (SG6100-CN)</block>
+  <block id="45d6f533deefe293ac89312b73991e3c" category="paragraph">Controller di archiviazione E-Series E4000 (1 di 2) e connettori</block>
 </blocks>

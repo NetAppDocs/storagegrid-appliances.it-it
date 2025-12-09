@@ -296,7 +296,7 @@ Fan (1 di 2) per shelf controller E4000
  a| 
 4
  a| 
-Storage controller e-Series E400 (1 di 2) e connettori
+Controller di archiviazione E-Series E4000 (1 di 2) e connettori
 
 
 
