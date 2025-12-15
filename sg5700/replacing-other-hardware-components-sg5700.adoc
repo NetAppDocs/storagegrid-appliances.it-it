@@ -35,14 +35,14 @@ Per sostituire un'unità, un contenitore della ventola, un contenitore della ven
  a| 
 Disco
  a| 
-Sostituzione di un disco negli shelf E2800 a 12 o 24 dischi
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Sostituzione di un disco negli shelf E2800 a 12 o 24 dischi"^]
 
 
 
  a| 
 Filtro a carboni attivi della ventola di alimentazione
  a| 
-Sostituzione di un contenitore della ventola di alimentazione negli shelf E2800
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Sostituzione di un contenitore della ventola di alimentazione negli shelf E2800"^]
 
 |===
 
@@ -57,27 +57,27 @@ Sostituzione di un contenitore della ventola di alimentazione negli shelf E2800
  a| 
 Disco
  a| 
-Sostituzione di un disco negli shelf E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Sostituzione di un disco negli shelf E2860"^]
 
 
 
  a| 
 Filtro a carboni attivi
  a| 
-Sostituzione di un contenitore di alimentazione negli shelf E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-60-replace-power-task.html["Sostituzione di un contenitore di alimentazione negli shelf E2860"^]
 
 
 
  a| 
 Filtro della ventola
  a| 
-Sostituzione di un contenitore della ventola negli shelf E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Sostituzione di un contenitore della ventola negli shelf E2860"^]
 
 
 
  a| 
 Cassetto dell'unità
  a| 
-Sostituzione di un cassetto per dischi negli shelf E2860
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html["Sostituzione di un cassetto per dischi negli shelf E2860"^]
 
 |===

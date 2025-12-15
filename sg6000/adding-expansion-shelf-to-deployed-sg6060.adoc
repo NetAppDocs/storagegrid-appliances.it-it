@@ -16,7 +16,7 @@ Per aumentare la capacità di storage, è possibile aggiungere uno o due shelf d
 .Prima di iniziare
 * È necessario disporre della passphrase di provisioning.
 * È necessario eseguire StorageGRID 11.4 o versione successiva.
-* Si dispone dello shelf di espansione e di due cavi SAS per ogni shelf di espansione.
+* Sono disponibili il ripiano di espansione e quattro cavi SAS per ogni ripiano di espansione.
 * L'appliance di storage è stata fisicamente posizionata in cui si sta aggiungendo lo shelf di espansione nel data center.
 +
 link:locating-controller-in-data-center.html["Individuare il controller nel data center"]
