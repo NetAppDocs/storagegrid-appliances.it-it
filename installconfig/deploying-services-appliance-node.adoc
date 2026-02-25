@@ -184,3 +184,6 @@ NOTE: Per accedere manualmente alla pagina Installazione monitor, fare clic su *
 
 . Se la griglia include più nodi appliance, ripetere i passaggi precedenti per ogni appliance.
 
+
+.Quali sono le prossime novità?
+Scopri link:https://docs.netapp.com/us-en/storagegrid/swnodes/navigating-to-grid-manager.html["configurare la griglia e completare l'installazione"^] e link:monitoring-appliance-installation.html["monitoraggio dell'installazione dell'appliance"].

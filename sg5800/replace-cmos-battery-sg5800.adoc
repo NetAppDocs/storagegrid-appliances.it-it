@@ -1,0 +1,106 @@
+---
+permalink: sg5800/replace-cmos-battery-sg5800.html 
+sidebar: sidebar 
+keywords: cmos, battery, replace, sg5800, controller 
+summary: Potrebbe essere necessario sostituire la batteria CMOS nel controller SG5800 affinché i servizi e le applicazioni del sistema abbiano una sincronizzazione oraria precisa e continuino a funzionare normalmente. 
+---
+= Sostituire la batteria CMOS nel controller SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire la batteria CMOS nel controller SG5800 affinché i servizi e le applicazioni del sistema abbiano una sincronizzazione oraria precisa e continuino a funzionare normalmente.
+
+.A proposito di questa attività
+Non sarà possibile accedere al nodo di archiviazione dell'appliance quando si sostituisce la batteria CMOS. Per evitare interruzioni del servizio, verificare che tutti gli altri nodi di archiviazione siano collegati alla grid prima di iniziare la sostituzione della batteria CMOS oppure sostituire la batteria durante una finestra di manutenzione programmata, quando i periodi di interruzione del servizio sono accettabili.
+
+
+
+== Passaggio 1: spegnere il controller SG5800
+
+.Fasi
+. Accedere al nodo Grid:
++
+.. Immettere il seguente comando: `ssh admin@grid_node_IP`
+.. Immettere la password elencata in `Passwords.txt` file.
+.. Immettere il seguente comando per passare a root: `su -`
+.. Immettere la password elencata in `Passwords.txt` file.
++
+Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
+
+
+
+. Arrestare il controller SG5800:
++
+*`shutdown -h now`*
+
+
+
+
+
+== Passaggio 2: rimuovere il controller dall'appliance
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare i cavi, quindi scollegarli.
++
+
+NOTE: Per evitare un degrado delle prestazioni, non torcere, piegare, pizzicare o calpestare i cavi.
+
+. Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura della camma fino a rilasciarlo, quindi aprire l'impugnatura della camma verso destra.
+. Estrarre il controller dall'apparecchio con due mani e la maniglia della camma.
++
+
+NOTE: Utilizzare sempre due mani per sostenere il peso del controller.
+
+. Capovolgere il modulo controller e posizionarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del modulo controller, quindi ruotare il coperchio verso l'alto e rimuoverlo dal modulo controller.
++
+image::../media/drw_sg5800_open_controller_module_cover_IEOPS-695.svg[Apri il coperchio del modulo controller SG5800]
+
+
+
+
+
+== Passaggio 3: sostituire la batteria CMOS
+
+.Fasi
+. Individuare la batteria CMOS.
++
+image::../media/drw_sg5800_replace_rtc_battery_IEOPS-701.svg[Sostituire la posizione della batteria CMOS nel controller SG5800]
+
++
+
+NOTE: Il controller potrebbe avere un aspetto diverso da quello mostrato nell'illustrazione. Tuttavia, la posizione della batteria CMOS è la stessa.
+
+. Spingere delicatamente e ruotare la batteria per allontanarla dal supporto, quindi sollevarla dall'apparecchio.
++
+
+NOTE: Nota la polarità della batteria mentre la rimuovi dal supporto. La batteria è contrassegnata con un segno più e deve essere posizionata correttamente nel supporto. Un segno più vicino al supporto indica come la batteria deve essere posizionata.
+
+. Rimuovere la batteria di ricambio dalla busta antistatica per la spedizione.
+. Individuare il portabatteria vuoto nel modulo controller.
+. Prestare attenzione alla polarità della batteria CMOS, quindi inserirla nel supporto inclinando la batteria e spingendola verso il basso.
+. Ispezionare visivamente la batteria per accertarsi che sia completamente installata nel supporto e che la polarità sia corretta.
+. Reinstallare il coperchio del controller.
+
+
+
+
+== Passaggio 4: Reinstallare il controller nell'apparecchio
+
+.Fasi
+. Installare il controller nell'apparecchio:
++
+.. Girare il controller in modo che la copertura rimovibile sia rivolta verso il basso.
+.. Con la maniglia della camma in posizione aperta, far scorrere il controller fino in fondo nell'apparecchio.
+.. Spostare la maniglia della camma verso sinistra per bloccare il controller in posizione.
+.. Ricollega i cavi.
+
+
+. Dopo il riavvio del controller e la reintegrazione dell'appliance nella griglia, verificare che il nodo di archiviazione dell'appliance sia visualizzato in Grid Manager e che non siano presenti allarmi.
+
+
+Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"] per ulteriori informazioni.

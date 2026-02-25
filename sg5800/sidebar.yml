@@ -38,10 +38,12 @@ entries:
 - title: Procedure hardware
   pdf-filename: Procedure hardware - SG5800
   entries:
-  - title: Sostituire la centralina SG5800
+  - title: Sostituire il controller SG5800
     url: "/sg5800/replace-controller-5800sg.html"
   - title: Sostituire la centralina E4000
     url: "/sg5800/replace-controller-e4000-simplex.html"
+  - title: Sostituire la batteria CMOS
+    url: "/sg5800/replace-cmos-battery-sg5800.html"
   - title: Sostituire la ventola (SG5860)
     url: "/sg5800/replace-fan-canister.html"
   - title: Sostituire l'alimentatore (SG5812)

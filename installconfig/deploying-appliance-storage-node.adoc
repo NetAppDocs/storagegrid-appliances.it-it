@@ -119,3 +119,6 @@ NOTE: Per accedere manualmente alla pagina Installazione monitor, fare clic su *
 NOTE: Se è necessario implementare più nodi di storage di appliance contemporaneamente, è possibile automatizzare il processo di installazione utilizzando il collegamento:./installconfig/automaticing-appliance-installation-and-Configuration.html#automatizza-with-configure-sga-py-script[`configure-sga.py` Script di installazione dell'appliance].
 
 
+
+.Quali sono le prossime novità?
+Scopri link:https://docs.netapp.com/us-en/storagegrid/swnodes/navigating-to-grid-manager.html["configurare la griglia e completare l'installazione"^] e link:monitoring-appliance-installation.html["monitoraggio dell'installazione dell'appliance"].

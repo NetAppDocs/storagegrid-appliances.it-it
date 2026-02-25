@@ -23,6 +23,8 @@ indexpage:
       url: "../sg5800/replace-controller-5800sg.html"
     - title: Sostituzione dello storage controller E4000
       url: "../sg5800/replace-controller-e4000-simplex.html"
+    - title: Sostituire la batteria CMOS
+      url: "../sg5800/replace-cmos-battery-sg5800.html"
     - title: Sostituire il filtro della ventola
       url: "../sg5800/replace-fan-canister.html"
     - title: Sostituire il filtro a carboni attivi
