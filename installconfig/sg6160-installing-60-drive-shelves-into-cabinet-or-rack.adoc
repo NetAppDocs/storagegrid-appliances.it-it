@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
 summary: È necessario installare un set di guide per il ripiano del controller E4000 nel cabinet o nel rack, quindi far scorrere il ripiano del controller sulle guide. Se si installano shelf di espansione a 60 dischi, si applica la stessa procedura. 
 ---
-= Installazione di shelf da 60 dischi (SG6160)
+= Installare gli shelf da 60 unità per un SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

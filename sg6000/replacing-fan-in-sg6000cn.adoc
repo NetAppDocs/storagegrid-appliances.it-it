@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000-cn, storage node, storage appliance, replacing, replace, fan, remove, removing, removal, install, installing, installation 
 summary: Il controller di elaborazione SG6000-CN è dotato di otto ventole di raffreddamento.  Se una delle ventole si guasta, è necessario sostituirla il prima possibile per garantire il corretto raffreddamento del controller. 
 ---
-= Sostituire la ventola nel controller di elaborazione SG6000-CN
+= Sostituire una ventola nel controller di calcolo SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -56,4 +56,4 @@ image::../media/fan_connector_check.png[Controllo del connettore della ventola]
 . Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

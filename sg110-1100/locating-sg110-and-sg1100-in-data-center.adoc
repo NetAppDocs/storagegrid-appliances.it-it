@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, appliance, locate, find, locating, finding, identify, blue led, blue light 
 summary: 'Individuare l"appliance in modo da eseguire la manutenzione o gli aggiornamenti dell"hardware.' 
 ---
-= Individua SG110 TB o SG1100 PB di dati nel data center
+= Individuare un SG110 o un SG1100 in un data center
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

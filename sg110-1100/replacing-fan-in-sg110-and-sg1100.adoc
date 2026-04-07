@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, admin appliance, replacing, replace, fan, remove, removing, removal, install, installing 
 summary: 'Gli apparecchi SG110 o SG1100 sono dotati di otto ventole di raffreddamento. Se una delle ventole si guasta, è necessario sostituirla il prima possibile per assicurarsi che l"apparecchio sia raffreddato correttamente.' 
 ---
-= Sostituire la ventola in un SG110 o SG1100
+= Sostituisci una ventola in un SG110 o SG1100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -129,4 +129,4 @@ Utilizzare l'interfaccia BMC per monitorare lo stato di avvio.
 . Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

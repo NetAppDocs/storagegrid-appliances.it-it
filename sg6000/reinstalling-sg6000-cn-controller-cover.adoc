@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6000-cn, controller, cover, install, installing, installation, reinstall, reinstalling, reinstallation, remove, removing, removal 
 summary: 'Rimuovete il coperchio dell"apparecchio per accedere ai componenti interni e riposizionatelo al termine della manutenzione.' 
 ---
-= Sostituire il coperchio del controller SG6000
+= Sostituire il coperchio del controller SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,7 +36,7 @@ CAUTION: Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare 
 
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.
 
 
 

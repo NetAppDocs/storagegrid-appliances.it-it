@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Il firmware del disco viene aggiornato per assicurarsi di disporre delle funzionalità più recenti e delle correzioni dei bug. 
 ---
-= Aggiornare il firmware delle unità SG5800 utilizzando il metodo online Gestione sistema di SANtricity
+= Aggiorna il firmware del disco SG5800 utilizzando il metodo online di SANtricity System Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ Le unità appartenenti a volumi che non hanno ridondanza devono essere aggiornat
 . Accedere a Gestore di sistema di SANtricity utilizzando uno dei seguenti metodi:
 +
 ** Utilizzare il programma di installazione dell'appliance StorageGRID e selezionare *Avanzate* > *Gestore di sistema SANtricity*
-** Utilizzare il Gestore griglia e selezionare *NODI* > *_nodo di storage_* > *Gestore di sistema SANtricity*
+** Utilizzare Grid Manager e selezionare *Nodi* > *_Storage Node_* > *SANtricity System Manager*
 ** Utilizza Gestione sistema di SANtricity navigando all'IP dello storage controller:
 +
 `*https://_Storage_Controller_IP_*`

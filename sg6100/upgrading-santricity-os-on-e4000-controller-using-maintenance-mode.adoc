@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, controller, e4000, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: È possibile utilizzare la modalità di manutenzione per aggiornare il sistema operativo SANtricity sul controller E4000. 
 ---
-= Aggiornamento del sistema operativo SANtricity sul controller E4000 in modalità di manutenzione (SG6160)
+= Aggiorna il sistema operativo SANtricity su un SG6160 E4000 in modalità di manutenzione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: Attivare immediatamente i file di aggiornamento. Non rinviare l'attivazion
 Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-... Nel Grid Manager, seleziona *NODI*.
+... Nel Grid Manager, selezionare *Nodi*.
 ... Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
 

@@ -114,7 +114,7 @@ CAUTION: Non approvare l'aggiornamento del sistema operativo SANtricity per un n
 
 NOTE: Se l'ordine in cui i nodi vengono aggiornati è importante, approvare i nodi o i gruppi di nodi uno alla volta e attendere il completamento dell'aggiornamento su ciascun nodo prima di approvare il nodo successivo.
 
-** Selezionare uno o più pulsanti *approva* per aggiungere uno o più nodi alla coda di aggiornamento del sistema operativo SANtricity. Il pulsante *approva* è disattivato se lo stato non è nominale.
+** Selezionare uno o più pulsanti *Approva* per aggiungere uno o più nodi alla coda di aggiornamento del sistema operativo SANtricity. Il pulsante *Approva* è disabilitato se lo stato non è Nominale.
 +
 Dopo aver selezionato *Approve*, il processo di aggiornamento determina se il nodo può essere aggiornato. Se è possibile aggiornare un nodo, questo viene aggiunto alla coda di aggiornamento.
 
@@ -167,7 +167,7 @@ Il nodo non dispone di un controller di storage che può essere gestito dal sist
 
 
  a| 
-Il file del sistema operativo SANtricity non è compatibile con questo nodo.
+Il file SANtricity OS non è compatibile con questo nodo.
  a| 
 Il nodo richiede un file SANtricity OS diverso da quello selezionato.
 Dopo aver completato l'aggiornamento corrente, scaricare il file SANtricity OS corretto per il nodo e ripetere il processo di aggiornamento.

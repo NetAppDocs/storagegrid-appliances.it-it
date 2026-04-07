@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
 summary: 'Spegnere l"appliance di servizi per eseguire la manutenzione dell"hardware.' 
 ---
-= Spegnere SG100 o SG1000
+= Spegnere l'apparecchio di servizio SG100 o SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

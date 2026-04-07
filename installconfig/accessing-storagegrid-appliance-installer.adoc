@@ -13,6 +13,9 @@ summary: 'È necessario accedere al programma di installazione dell"appliance St
 [role="lead"]
 È necessario accedere al programma di installazione dell'appliance StorageGRID per verificare la versione del programma di installazione e configurare le connessioni tra l'appliance e le tre reti StorageGRID: Rete griglia, rete amministrativa (opzionale) e rete client (opzionale).
 
+.A proposito di questa attività
+Per accedere inizialmente al programma di installazione dell'appliance StorageGRID, è possibile utilizzare l'indirizzo IP assegnato da DHCP per la porta di rete Admin sul dispositivo di servizi o sul controller dell'appliance di storage (purché sia connesso alla rete amministrativa), in alternativa, è possibile collegare un laptop di assistenza direttamente al controller dell'appliance di servizi o dell'appliance di storage.
+
 .Prima di iniziare
 * Si sta utilizzando qualsiasi client di gestione in grado di connettersi alla rete amministrativa di StorageGRID o si dispone di un laptop di assistenza.
 * Il client o il laptop di assistenza dispone di un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
@@ -20,9 +23,6 @@ summary: 'È necessario accedere al programma di installazione dell"appliance St
 * Su queste reti conosci l'indirizzo IP, il gateway e la subnet dell'appliance di servizi o del controller dell'appliance di storage.
 * Sono stati configurati gli switch di rete che si intende utilizzare.
 
-
-.A proposito di questa attività
-Per accedere inizialmente al programma di installazione dell'appliance StorageGRID, è possibile utilizzare l'indirizzo IP assegnato da DHCP per la porta di rete Admin sul dispositivo di servizi o sul controller dell'appliance di storage (purché sia connesso alla rete amministrativa), in alternativa, è possibile collegare un laptop di assistenza direttamente al controller dell'appliance di servizi o dell'appliance di storage.
 
 .Fasi
 . Se possibile, utilizzare l'indirizzo DHCP per la porta Admin Network sul controller dell'appliance di servizi o dell'appliance di storage. La porta Admin Network viene evidenziata nella figura seguente. (Utilizzare l'indirizzo IP sulla rete griglia se la rete di amministrazione non è connessa).
@@ -39,6 +39,11 @@ image::../media/sg100_admin_network_port.png[Admin Network Port (porta di rete a
 image::../media/sg6100_admin_network_port.png[Porta di rete Admin sul SG110]
 
 --
+.SG120
+--
+image::../media/sg120_admin_network_port.png[Porta di rete amministrativa sull'SG120]
+
+--
 .SG1000
 --
 image::../media/sg1000_admin_network_port.png[Porta di rete Admin sul SG1000]
@@ -47,6 +52,11 @@ image::../media/sg1000_admin_network_port.png[Porta di rete Admin sul SG1000]
 .SG1100
 --
 image::../media/sg1100_admin_network_port.png[Porta di rete Admin sul SG1100]
+
+--
+.SG1200
+--
+image::../media/sg1200_admin_network_port.png[Porta di rete amministrativa su SG1200]
 
 --
 .E5700SG
@@ -89,9 +99,19 @@ image::../media/sg6000_cn_admin_network_port.png[Admin Network port sul controll
 image::../media/sg6100_cn_admin_network_port.png[Admin Network port sul controller SG6000-CN]
 
 --
+.SG6200-CN
+--
+image::../media/sg6200_cn_admin_network_port.png[Porta di rete amministrativa sul controller SG6200-CN]
+
+--
 .SGF6112
 --
 image::../media/sg6100_admin_network_port.png[Porta di rete Admin sul SGF6112]
+
+--
+.SGF6212
+--
+image::../media/sgf6212_admin_network_port.png[Porta di rete amministrativa sull'SGF6212]
 
 --
 ====
@@ -129,6 +149,13 @@ Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra de
 image::../media/sg6100_link_local_port.png[SG110 collegamento locale]
 
 --
+.SG120
+--
+Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance, utilizzando un cavo Ethernet.
+
+image::../media/sg120_link_local_port.png[Connessione link-local SG120]
+
+--
 .SG1000
 --
 Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance di servizi, utilizzando un cavo Ethernet.
@@ -141,6 +168,13 @@ image::../media/sg1000_link_local_port.png[SG1000 collegamento locale]
 Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance, utilizzando un cavo Ethernet.
 
 image::../media/sg1100_link_local_port.png[SG1100 collegamento locale]
+
+--
+.SG1200
+--
+Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance, utilizzando un cavo Ethernet.
+
+image::../media/sg1200_link_local_port.png[Connessione link-local SG1200]
 
 --
 .E5700SG
@@ -171,11 +205,25 @@ Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra de
 image::../media/sg6100_cn_link_local_port.png[Ubicazione della porta di gestione per SG6100-CN]
 
 --
+.SG6200-CN
+--
+Collegare un laptop di servizio direttamente alla porta RJ-45 più a destra del controller SG6200-CN, utilizzando un cavo Ethernet.
+
+image::../media/sg6200_cn_link_local_port.png[Posizione della porta di gestione per SG6200-CN]
+
+--
 .SGF6112
 --
 Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance, utilizzando un cavo Ethernet.
 
 image::../media/sg6100_link_local_port.png[Connessione link-Local SGF6112]
+
+--
+.SGF6212
+--
+Collegare un laptop di assistenza direttamente alla porta RJ-45 più a destra dell'appliance, utilizzando un cavo Ethernet.
+
+image::../media/sgf6212_link_local_port.png[Connessione Link-Local SGF6212]
 
 --
 ====

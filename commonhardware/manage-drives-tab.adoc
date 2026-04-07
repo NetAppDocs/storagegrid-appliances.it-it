@@ -1,10 +1,10 @@
 ---
 permalink: commonhardware/manage-drives-tab.html 
 sidebar: sidebar 
-keywords: sgf6112, sg110, sg1100, sg6160, manage drives tab, locate drive, fail drive, logically replace drive 
+keywords: sgf6112, sg110, sg1100, sg6160, sg6200, sg6260, sgf6212 manage drives tab, locate drive, fail drive, logically replace drive 
 summary: È possibile utilizzare la scheda Gestisci unità in Grid Manager per eseguire attività di risoluzione dei problemi e manutenzione sulle unità per le appliance che supportano questa funzione. 
 ---
-= Utilizzare la scheda Gestisci unità (SG110, SG1100, SGF6112 e SG6160)
+= Utilizzare la scheda Gestisci unità per gli appliance StorageGRID SG110, SG120, SG1100, SG1200, SG6100 e SG6200
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,7 +50,7 @@ image:../media/manage_drives_tab_details.png["Scheda Gestisci unità Dettagli un
 
 Per individuare fisicamente un'unità nell'apparecchio:
 
-. Da Grid Manager, selezionare *NODI* > *_data center_*.
+. Dal Grid Manager, selezionare *Nodi* > *_data center_*.
 . Selezionare *_appliance storage node_* > *Manage drives* > *Layout* > *_drive_*.
 +
 Viene visualizzato il pannello dei dettagli dell'unità.
@@ -70,7 +70,7 @@ Viene visualizzato il pannello dei dettagli dell'unità.
 
 Se è necessario ricostruire o reinizializzare un'unità nell'appliance di archiviazione:
 
-. Da Grid Manager, selezionare *NODI* > *_data center_*.
+. Dal Grid Manager, selezionare *Nodi* > *_data center_*.
 . Selezionare *_appliance storage node_* > *Manage drives* > *Layout* > *_drive_*.
 +
 Viene visualizzato il pannello dei dettagli dell'unità.
@@ -87,7 +87,7 @@ Nel pannello dei dettagli dell'unità, lo stato dell'unità indica _ricostruzion
 
 Per la risoluzione dei problemi, è possibile "guastare" manualmente un'unità che si sospetta sia difettosa. Il sistema verrà quindi eseguito senza tale unità.
 
-. Da Grid Manager, selezionare *NODI* > *_data center_*.
+. Dal Grid Manager, selezionare *Nodi* > *_data center_*.
 . Selezionare *_appliance storage node_* > *Manage drives* > *Layout* > *_drive_*.
 +
 Viene visualizzato il pannello dei dettagli dell'unità.

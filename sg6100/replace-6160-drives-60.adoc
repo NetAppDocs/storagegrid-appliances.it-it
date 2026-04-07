@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, sg6160, sg6100cn 
 summary: Sostituisci un disco in un E4000 con uno shelf da 60 dischi. 
 ---
-= Sostituzione del disco nello shelf dello storage controller o nello shelf di espansione (SG6160)
+= Sostituire un disco in uno shelf storage controller SG6160 o in uno shelf di espansione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,7 +24,7 @@ StorageGRID Grid Manager monitora lo stato degli storage array e genera avvisi i
 ** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 ** Accesso a Gestione sistema SANtricity:
 +
-*** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"] .
+*** Da Grid Manager, selezionare *Nodi* > *nodo dell'appliance* > *SANtricity System Manager*. Le informazioni del controller si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
 *** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, appliance, locate, find, locating, finding, identify, blue led, blue light 
 summary: 'Individuare l"appliance in modo da eseguire la manutenzione o gli aggiornamenti dell"hardware.' 
 ---
-= Individua l'appliance SGF6112 o il controller SG6100-CN nel data center
+= Individuare un appliance SGF6112 o un controller SG6100-CN in un data center
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: È possibile sostituire un alimentatore nel SG5812. 
 ---
-= Sostituire l'alimentatore in SG5812
+= Sostituire l'alimentatore nell'SG5812
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ NOTE: Non mischiare le PSU dei diversi tipi di tensione. Sostituire sempre come 
 ** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 ** Accesso a Gestione sistema SANtricity:
 +
-*** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"] .
+*** Da Grid Manager, selezionare *Nodi* > *nodo dell'appliance* > *SANtricity System Manager*. Le informazioni del controller si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
 *** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
 
 

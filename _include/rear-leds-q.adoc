@@ -27,7 +27,7 @@ Identificare il LED
  a| 
 * Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
 * Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
-* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+* Spento: l'appliance non è visivamente identificabile all'interno del cabinet o del rack.
 
 
 |===

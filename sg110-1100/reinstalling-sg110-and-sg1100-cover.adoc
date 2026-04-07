@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, storage node, admin appliance, cover, install, installing, installation, reinstall, reinstalling, reinstallation 
 summary: 'Rimuovete il coperchio dell"apparecchio per accedere ai componenti interni e riposizionatelo al termine della manutenzione.' 
 ---
-= Riposizionare il coperchio SG110 e SG1100
+= Sostituire il coperchio di un'appliance SG110 o SG1100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,7 +21,7 @@ Rimuovete il coperchio dell'apparecchio per accedere ai componenti interni e rip
 link:reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html["Rimuovete l'apparecchio dal cabinet o dal rack"] per accedere al coperchio superiore.
 
 .Fasi
-. Assicuratevi che il dispositivo di chiusura del coperchio dell'apparecchio non sia bloccato. Se necessario, ruotare di un quarto di giro il blocco di plastica blu nella direzione di sblocco, come mostrato sul blocco del dispositivo di chiusura.
+. Assicurarsi che il fermo del coperchio dell'apparecchio non sia bloccato. Se necessario, ruotare il fermo di plastica blu di un quarto di giro in direzione di sblocco, come indicato sul fermo stesso.
 . Ruotare il dispositivo di chiusura verso l'alto e verso il retro del telaio dell'apparecchio fino a quando non si arresta, quindi sollevare con cautela il coperchio dal telaio e metterlo da parte.
 +
 image::../media/sg6060_cover_latch_open.jpg[Dispositivo di chiusura del coperchio dell'apparecchio aperto]
@@ -46,7 +46,7 @@ image::../media/sg6060_cover_latch_alignment_pin.jpg[Perno di allineamento del f
 
 . Ruotare il dispositivo di chiusura del coperchio in avanti e in basso fino a quando non si arresta e il coperchio non si inserisce completamente nel telaio. Verificare che non vi siano spazi vuoti lungo il bordo anteriore del coperchio.
 +
-Se il coperchio non è completamente inserito, potrebbe non essere possibile inserire l'apparecchio nel rack.
+Se il coperchio non è completamente in posizione, potrebbe non essere possibile inserire l'appliance nel rack.
 
 . Opzionale: Ruotare di un quarto di giro il fermo di plastica blu nella direzione di blocco, come mostrato sul fermo, per bloccarlo.
 

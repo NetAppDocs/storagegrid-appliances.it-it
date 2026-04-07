@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6100-cn, rail, rails, sg6160 
 summary: È necessario installare un set di guide per il controller SG6100-CN nel cabinet o nel rack, quindi far scorrere il controller sulle guide. 
 ---
-= Installare la centralina SG6100-CN (SG6160)
+= Installare il controller SG6100-CN per un SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

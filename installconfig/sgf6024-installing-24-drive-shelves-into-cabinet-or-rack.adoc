@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, drive shelf, drive shelves, 24-drive, shelf, shelves, rail, rails 
 summary: 'Installare un set di guide per lo shelf del controller EF570 nel cabinet o nel rack, quindi far scorrere l"array sulle guide.' 
 ---
-= Installazione di shelf da 24 dischi (SGF6024)
+= Installare le shelf da 24 unità per un SGF6024
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

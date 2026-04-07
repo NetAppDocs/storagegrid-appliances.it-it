@@ -1,0 +1,80 @@
+---
+permalink: sg6200/replacing-one-or-more-power-supplies-in-sg6200-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, sgf6212, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
+summary: 'L"appliance SGF6212 e il nodo di calcolo SG6200-CN dispongono di due alimentatori per garantire ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per assicurare che l"appliance abbia alimentazione ridondante. Entrambi gli alimentatori presenti nell"appliance devono essere dello stesso modello e wattaggio.' 
+---
+= Sostituire uno o entrambi gli alimentatori nei modelli SGF6212 o SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance SGF6212 e il nodo di calcolo SG6200-CN dispongono di due alimentatori per garantire ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per assicurare che l'appliance abbia alimentazione ridondante. Entrambi gli alimentatori presenti nell'appliance devono essere dello stesso modello e wattaggio.
+
+.A proposito di questa attività
+La figura mostra la posizione dei due alimentatori. Gli alimentatori sono accessibili dal retro dell'apparecchio.
+
+image::../media/sgf6212_power_supplies.png[Parte posteriore di SGF6212 o SG6200-CN con due alimentatori]
+
++ NOTA: L'immagine mostra l'appliance SGF6212, ma gli alimentatori si trovano nella stessa posizione sul nodo di calcolo SG6200-CN.
+
+.Prima di iniziare
+* Hai link:locating-sg6200-in-data-center.html["posizionato fisicamente l'apparecchio"] con l'alimentatore da sostituire.
+* Lo hai fatto link:verify-component-to-replace.html["determinata la posizione dell'alimentatore da sostituire"].
+* Se si sta sostituendo un solo alimentatore:
++
+** L'alimentatore sostitutivo è stato disimballato e si è assicurato che sia dello stesso modello e wattaggio dell'alimentatore che si sta sostituendo.
+** Hai confermato che l'altro alimentatore è installato e funzionante.
+
+
+* Se si stanno sostituendo entrambi gli alimentatori contemporaneamente:
++
+** Le unità di alimentazione sostitutive sono state disimballate e si sono assicurate che siano dello stesso modello e della stessa potenza.
+
+
+
+
+.Fasi
+. Se si sostituisce un solo alimentatore, non è necessario spegnere l'apparecchio. Accedere alla <<Unplug_the_power_cord,Scollegare il cavo di alimentazione>> fase. Se si stanno sostituendo entrambi gli alimentatori contemporaneamente, prima di scollegare i cavi di alimentazione procedere come segue:
++
+.. link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["Spegnere l'apparecchio"].
++
+
+CAUTION: Se è stata utilizzata una regola ILM che crea una sola copia di un oggetto e si stanno sostituendo entrambi gli alimentatori contemporaneamente, è necessario sostituire gli alimentatori durante una finestra di manutenzione programmata poiché durante questa procedura potrebbe essere temporaneamente perso l'accesso a tali oggetti. Vedere informazioni su https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"^].
+
+
+
+. [[scollega_il_cavo_di_alimentazione, start=2]]scollegare il cavo di alimentazione da ogni alimentatore da sostituire.
++
+Guardando dal retro dell'apparecchio, l'alimentatore A (PSU0) si trova a destra e l'alimentatore B (PSU1) a sinistra.
+
+. Sollevare la maniglia del primo materiale di consumo da sostituire.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Sollevare la maniglia per rimuovere l'alimentatore]
+
+. Premere il fermo blu ed estrarre l'alimentatore.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Rimozione di un alimentatore]
+
+. Con il fermo blu a destra, far scorrere l'alimentatore sostitutivo nel telaio.
++
+
+NOTE: Entrambi gli alimentatori installati devono essere dello stesso modello e dello stesso wattaggio.
+
++
+Assicurarsi che il fermo blu si trovi sul lato destro quando si inserisce l'unità sostitutiva.
+
++
+Quando l'alimentatore è bloccato in posizione, si avverte uno scatto.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Alimentatore scorrevole]
+
+. Spingere la maniglia verso il basso contro il corpo dell'alimentatore.
+. Se si stanno sostituendo entrambi gli alimentatori, ripetere i passi da 2 a 6 per sostituire il secondo alimentatore.
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Collegare i cavi di alimentazione alle unità sostituite e collegare l'alimentazione"].
+
+
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Il firmware del disco viene aggiornato per assicurarsi di disporre delle funzionalità più recenti e delle correzioni dei bug. 
 ---
-= Aggiornare il firmware dell'unità SG6000 utilizzando Gestione di sistema di SANtricity utilizzando il metodo online
+= Aggiorna il firmware del disco SG6000 con il metodo online di SANtricity System Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ Esistono due tipi di unità: SSD e HDD. È necessario utilizzare link:upgrading-
 . Accedere a Gestore di sistema di SANtricity utilizzando uno dei seguenti metodi:
 +
 ** Utilizzare il programma di installazione dell'appliance StorageGRID e selezionare *Avanzate* > *Gestore di sistema SANtricity*
-** Utilizzare il Gestore griglia e selezionare *NODI* > *_nodo di storage_* > *Gestore di sistema SANtricity*
+** Utilizzare Grid Manager e selezionare *Nodi* > *_Storage Node_* > *SANtricity System Manager*
 ** Utilizza Gestione sistema di SANtricity navigando all'IP dello storage controller:
 +
 `*https://_Storage_Controller_IP_*`

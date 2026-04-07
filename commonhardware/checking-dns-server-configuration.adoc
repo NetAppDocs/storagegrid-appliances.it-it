@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: DNS, server, servers, check, checking, change, changing, modify, modifying, modification 
 summary: 'È possibile controllare e modificare temporaneamente i server DNS attualmente in uso dal nodo dell"appliance.' 
 ---
-= Controllare la configurazione del server DNS
+= Verifica la configurazione del DNS server per un'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: Quando il nodo viene riavviato e ricongiunge la griglia, utilizza i server
 Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-... Nel Grid Manager, seleziona *NODI*.
+... Nel Grid Manager, selezionare *Nodi*.
 ... Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
 

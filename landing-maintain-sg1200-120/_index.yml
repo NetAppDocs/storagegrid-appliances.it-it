@@ -1,0 +1,39 @@
+---
+indexpage:
+  title: Manutenzione dell'hardware degli apparecchi di servizio SG120 e SG1200
+  summary: Eseguire la manutenzione dell'hardware per l'appliance di servizi SG120
+    e SG1200.
+  keywords: maintain storagegrid sg120, maintain storagegrid sg1200
+  lead: Eseguire la manutenzione dell'hardware per l'appliance di servizi SG120 e
+    SG1200.
+  tiles:
+  - title: Procedure eseguite di frequente
+    links:
+    - title: Attivare o disattivare il LED di identificazione
+      url: "../sg120-1200/turning-sg120-and-sg1200-identify-led-on-and-off.html"
+    - title: Individuare l'appliance nel data center
+      url: "../sg120-1200/locating-sg120-and-sg1200-in-data-center.html"
+    - title: Spegnere e riaccendere l'apparecchio
+      url: "../sg120-1200/power-sg120-and-sg1200-off-on.html"
+    - title: Modificare la configurazione del collegamento
+      url: "../sg120-1200/changing-link-configuration-of-sg120-and-sg1200-appliance.html"
+  - title: Procedure rack
+    links:
+    - title: Sostituire l'appliance SG120 o SG1200
+      url: "../sg120-1200/replacing-sg120-and-sg1200-appliance.html"
+    - title: Spostare SG120 o SG1200 in un rack
+      url: "../sg120-1200/reinstalling-sg120-and-sg1200-into-cabinet-or-rack.html"
+  - title: Procedure hardware
+    links:
+    - title: Riposizionare il coperchio
+      url: "../sg120-1200/reinstalling-sg120-and-sg1200-cover.html"
+    - title: Sostituire l'alimentatore
+      url: "../sg120-1200/replacing-one-or-more-power-supplies-in-sg120-and-sg1200-appliance.html"
+    - title: Sostituire la ventola
+      url: "../sg120-1200/replacing-fan-in-sg120-and-sg1200.html"
+    - title: Sostituire l'unità
+      url: "../sg120-1200/replacing-drive-in-sg120-and-sg1200.html"
+    - title: Sostituire la scheda NIC
+      url: "../sg120-1200/replace-nic-in-sg120-and-sg1200.html"
+    - title: Sostituire le batterie CMOS
+      url: "../sg120-1200/replace-cmos-in-sg120-and-sg1200.html"

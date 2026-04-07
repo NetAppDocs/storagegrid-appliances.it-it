@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unpack, unbox, prepare, inventory, components, contents 
 summary: 'Prima di installare l"appliance StorageGRID, disimballare tutte le confezioni e confrontare il contenuto con gli elementi riportati sulla confezione.' 
 ---
-= Disimballare le scatole
+= Disimballare le scatole dell'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,6 +72,42 @@ Pannello anteriore::
 image::../media/sgf_6112_front_bezel.png[Pannello anteriore]
 
 --
+
+
+* *Cavi di alimentazione*
++
+
+TIP: Il cabinet potrebbe essere dotato di cavi di alimentazione speciali utilizzati al posto dei cavi di alimentazione forniti con l'apparecchio.
+
++
+Due cavi di alimentazione per il tuo paese::
++
+--
+image::../media/power_cords.gif[Cavi di alimentazione]
+
+--
+
+
+
+
+--
+.SG120 e SG1200
+--
+* *Hardware*
++
+SG120 o SG1200::
++
+--
+image::../media/sg120_front_view.png[Unità frontali SG120 e SG1200 appliance]
+
+--
+Kit di guide con istruzioni::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+Ghiera frontale (non mostrata)::
 
 
 * *Cavi di alimentazione*
@@ -518,6 +554,128 @@ Pannello anteriore::
 image::../media/sgf_6112_front_bezel.png[Pannello anteriore]
 
 --
+
+
+* *Cavi di alimentazione*
++
+
+TIP: Il cabinet potrebbe essere dotato di cavi di alimentazione speciali utilizzati al posto dei cavi di alimentazione forniti con l'apparecchio.
+
++
+Due cavi di alimentazione per il tuo paese::
++
+--
+image::../media/power_cords.gif[Cavi di alimentazione]
+
+--
+
+
+
+
+--
+.SG6200
+--
+* *Hardware SG6260*
++
+Controller SG6200-CN::
++
+--
+image::../media/s25_front_with_ssds.png[Controller SG6200-CN]
+
+--
+Shelf del controller E4000 senza dischi installati::
++
+--
+image::../media/de460c_table_size.gif[Controller E4000 4U]
+
+--
+Due cornici frontali (non mostrate)::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+Dischi NL-SAS da 60 TB::
++
+--
+image::../media/sg5760_drive.gif[Dischi NL-SAS da 60 TB]
+
+--
+Quattro maniglie::
++
+--
+image::../media/handles.gif[Maniglie E4000]
+
+--
+Staffe posteriori e dadi a gabbia per l'installazione in rack a foro quadrato::
++
+--
+image::../media/back_brackets_table_size.gif[Staffe posteriori e dadi a gabbia per SG5860]
+
+--
+Un cavo di interconnessione breakout da 100 GbE a 4x25GbE::
++
+--
+image::../media/sg6100_4x25gbe_spf28_cable.png[Cavo breakout da 100 GbE a 4x25GbE]
+
+--
+Quattro cavi di alimentazione per il tuo paese::
++
+--
+image::../media/power_cords.gif[Cavi di alimentazione]
+
+--
+
+
+* *SG6260 shelf di espansione*
++
+Shelf di espansione senza dischi installati::
++
+--
+image::../media/de460c_table_size.gif[Controller E4000 4U]
+
+--
+Ghiera frontale (non mostrata)::
++
+--
+image::../media/sg5760_drive.gif[Disco]
+
+--
+Un kit di guide con istruzioni::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+Quattro maniglie::
++
+--
+image::../media/handles.gif[Maniglie E4000]
+
+--
+Staffe posteriori e dadi a gabbia per l'installazione in rack a foro quadrato::
++
+--
+image::../media/back_brackets_table_size.gif[Staffe posteriori e dadi a gabbia per SG5860]
+
+--
+
+
+* *Hardware SGF6212*
++
+SGF6212::
++
+--
+image::../media/s25_front_with_ssds.png[Unità front dell'appliance SGF6212]
+
+--
+Kit di guide con istruzioni::
++
+--
+image::../media/rail_kit.gif[Kit di guide]
+
+--
+Ghiera frontale (non mostrata)::
 
 
 * *Cavi di alimentazione*

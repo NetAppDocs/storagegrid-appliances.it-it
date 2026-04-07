@@ -3,7 +3,7 @@
 
 
 .Fasi
-. Assicuratevi che il dispositivo di chiusura del coperchio dell'apparecchio non sia bloccato. Se necessario, ruotare di un quarto di giro il blocco di plastica blu nella direzione di sblocco, come mostrato sul blocco del dispositivo di chiusura.
+. Assicurarsi che il fermo del coperchio dell'apparecchio non sia bloccato. Se necessario, ruotare il fermo di plastica blu di un quarto di giro in direzione di sblocco, come indicato sul fermo stesso.
 . Ruotare il dispositivo di chiusura verso l'alto e verso il retro del telaio dell'apparecchio fino a quando non si arresta, quindi sollevare con cautela il coperchio dal telaio e metterlo da parte.
 +
 image::../media/sg6060_cover_latch_open.jpg[Dispositivo di chiusura del coperchio dell'apparecchio aperto]
@@ -28,7 +28,7 @@ image::../media/sg6060_cover_latch_alignment_pin.jpg[Perno di allineamento del f
 
 . Ruotare il dispositivo di chiusura del coperchio in avanti e in basso fino a quando non si arresta e il coperchio non si inserisce completamente nel telaio. Verificare che non vi siano spazi vuoti lungo il bordo anteriore del coperchio.
 +
-Se il coperchio non è completamente inserito, potrebbe non essere possibile inserire l'apparecchio nel rack.
+Se il coperchio non è completamente in posizione, potrebbe non essere possibile inserire l'appliance nel rack.
 
 . Opzionale: Ruotare di un quarto di giro il fermo di plastica blu nella direzione di blocco, come mostrato sul fermo, per bloccarlo.
 

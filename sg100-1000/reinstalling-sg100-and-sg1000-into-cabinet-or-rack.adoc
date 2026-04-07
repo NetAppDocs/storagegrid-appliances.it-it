@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, appliance, install, installing, installation, cabinet, rack, controller, remove, removing, removal 
 summary: 'Rimuovere il SG100 o il SG1000 da un armadietto o da un rack per accedere al coperchio superiore o per spostare l"apparecchio in una posizione diversa, quindi reinstallarlo in un armadietto o in un rack quando la manutenzione hardware è completata.' 
 ---
-= Riposizionare SG100 o SG1000 in un armadietto o in un rack
+= Spostare un SG100 o un SG1000 in un armadio o in un rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -51,7 +51,7 @@ Il coperchio superiore del controller è accessibile.
 . Opzionale: Se si sta rimuovendo completamente l'apparecchio dall'armadietto o dal rack, seguire le istruzioni del kit di guide per rimuovere l'apparecchio dalle guide.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.
 
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
 summary: 'Il processo di cloning potrebbe richiedere diversi giorni per trasferire i dati tra il nodo di origine (appliance da sostituire) e l"appliance di destinazione.' 
 ---
-= Nodo appliance clone
+= Clonare un nodo appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: L'utilizzo della rete di amministrazione 1-GbE per il trasferimento dei da
 Dopo aver configurato e validato l'appliance di destinazione, nella sezione Installazione, sul nodo di origine viene attivato *Avvia clonazione*.
 
 +
-Se si verificano problemi che impediscono la clonazione, *Avvia clonazione* non è abilitato e i problemi da risolvere vengono elencati come *Stato connessione*. Questi problemi sono elencati nella home page del programma di installazione dell'appliance StorageGRID del nodo di origine e dell'appliance di destinazione. Viene visualizzato un solo problema alla volta e lo stato si aggiorna automaticamente quando cambiano le condizioni. Risolvi tutti i problemi di clonazione per attivare *Avvia clonazione*.
+Se esistono problemi che impediscono la clonazione, *Avvia clonazione* non è abilitata e i problemi da risolvere vengono elencati come *Stato della connessione*. Questi problemi sono elencati nella pagina iniziale di StorageGRID Appliance Installer sia del nodo di origine che dell'appliance di destinazione. Viene visualizzato un solo problema alla volta e lo stato si aggiorna automaticamente al variare delle condizioni. Risolvere tutti i problemi di clonazione per abilitare *Avvia clonazione*.
 
 +
 Quando l'opzione *Avvia clonazione* è attivata, lo stato *corrente* indica la rete StorageGRID selezionata per la clonazione del traffico, insieme alle informazioni sull'utilizzo della connessione di rete. Vedere link:considerations-and-requirements-for-appliance-node-cloning.html["Considerazioni e requisiti per la clonazione del nodo dell'appliance"].

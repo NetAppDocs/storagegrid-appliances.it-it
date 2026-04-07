@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, troubleshoot, troubleshooting, hardware, install, installation, boot codes, boot-up codes, start codes, codes, boot, start, error codes, errors, error, codes, bmc, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection 
 summary: 'In caso di problemi durante l"installazione, potrebbe essere utile consultare le informazioni per la risoluzione dei problemi relativi alla configurazione dell"hardware e alla connettività.' 
 ---
-= Risoluzione dei problemi relativi all'installazione dell'hardware (SG100 e SG1000)
+= Risoluzione dei problemi di installazione hardware per SG100 e SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

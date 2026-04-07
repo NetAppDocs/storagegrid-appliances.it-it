@@ -73,14 +73,14 @@ Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del di
 . Capovolgere il controller per verificare che la batteria sia installata correttamente.
 +
 
-CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte anteriore della batteria deve essere inserita completamente nello slot del controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, causando danni.
+CAUTION: *Possibile danno all'hardware* -- La flangia metallica nella parte anteriore della batteria deve essere completamente inserita nello slot sul controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, causando danni.
 
 +
 ** *Esatto -- la flangia metallica della batteria è completamente inserita nello slot del controller:*
 +
 image::../media/e2800_battery_flange_ok.gif[Flangia della batteria corretta]
 
-** *Errato -- la flangia metallica della batteria non è inserita nello slot del controller:*
+** *Errato - La flangia metallica della batteria non è inserita nell'apposito slot sul controller:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Flangia della batteria non corretta]
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, deploy node, deploying node, node, deploy, deploying 
 summary: 'Dopo aver installato e configurato l"appliance di storage, è possibile implementarla come nodo di storage in un sistema StorageGRID. Quando si implementa un"appliance come nodo di storage, si utilizza il programma di installazione dell"appliance StorageGRID incluso nell"appliance.' 
 ---
-= Implementare l'appliance Storage Node
+= Distribuisci un nodo di storage dell'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

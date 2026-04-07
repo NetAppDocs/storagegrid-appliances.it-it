@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
 summary: 'Potrebbe essere necessario eseguire le procedure di manutenzione sull"appliance SG6000. Le procedure descritte in questa sezione presuppongono che l"appliance sia già stata implementata come nodo di storage in un sistema StorageGRID.' 
 ---
-= Manutenzione dell'appliance SG6000
+= Eseguire la manutenzione sull'appliance SG6000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

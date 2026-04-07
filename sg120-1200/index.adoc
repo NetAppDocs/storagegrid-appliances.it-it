@@ -1,0 +1,20 @@
+---
+permalink: sg120-1200/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, service appliance, services appliance, gateway Node, admin node, maintain, maintaining, hardware, procedures, tasks 
+summary: 'Potrebbe essere necessario eseguire le procedure di manutenzione dell"apparecchio. Le procedure descritte in questa sezione presuppongono che l"appliance sia già stata implementata come nodo gateway o nodo amministratore in un sistema StorageGRID.' 
+---
+= Manutenzione degli apparecchi SG120 e SG1200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario eseguire le procedure di manutenzione dell'apparecchio. Le procedure descritte in questa sezione presuppongono che l'appliance sia già stata implementata come nodo gateway o nodo amministratore in un sistema StorageGRID.
+
+In questa sezione sono riportate le procedure specifiche per la manutenzione del tuo appliance SG120 o SG1200.
+
+Vedere link:../commonhardware/index.html["Procedure comuni"] per le procedure di manutenzione utilizzate da tutti gli appliance.
+
+Vedere link:../installconfig/configuring-hardware.html["Configurare l'hardware"] per le procedure di manutenzione eseguite anche durante l'installazione e la configurazione iniziale dell'appliance.

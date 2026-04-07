@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, rail, rails 
 summary: Installare un set di guide per il controller SG6000-CN nel cabinet o nel rack, quindi far scorrere il controller sulle guide. 
 ---
-= Installazione del controller SG6000-CN (SG6060 e SG6024)
+= Installare il controller SG6000-CN per SG6060 e SG6024
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

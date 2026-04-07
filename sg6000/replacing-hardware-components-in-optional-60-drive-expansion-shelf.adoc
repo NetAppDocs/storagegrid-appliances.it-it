@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, i/o module, input/output module, power supply, fan, 60-drive expansion shelf, expansion shelf 
 summary: Potrebbe essere necessario sostituire un modulo di input/output, un alimentatore o una ventola nello shelf di espansione. 
 ---
-= Sostituzione dei componenti hardware nello shelf di espansione opzionale a SG6000 60 dischi
+= Sostituire i componenti hardware nello shelf di espansione opzionale SG6000 a 60 dischi
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: site prep, site preparation, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
 summary: 'Prima di installare l"apparecchio, assicurarsi che il sito e l"armadietto o il rack che si intende utilizzare soddisfino le specifiche di un"appliance StorageGRID.' 
 ---
-= Preparare il sito
+= Preparare il sito per l'installazione dell'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,6 +33,13 @@ Da 120 a 240 V CA
 SG110 e SG1100
  a| 
 Da 100 a 240 volt CA
+
+
+
+ a| 
+SG120 e SG1200
+ a| 
+240 volt CA
 
 
 
@@ -90,12 +97,22 @@ SG6160
  a| 
 240 V CA
 
+
+
+ a| 
+SGF6212
+ a| 
+240 volt CA
+
+
+
+ a| 
+SG6260
+ a| 
+240 volt CA
+
 |===
 . Verificare che la propria posizione soddisfi i requisiti di alimentazione per l'apparecchio:
-+
-
-NOTE: Gli alimentatori degli apparecchi StorageGRID sono classificati per watt significativamente più elevati rispetto agli utilizzi dell'hardware dell'appliance StorageGRID, anche durante i periodi di massimo consumo energetico. NetApp consiglia di utilizzare i numeri riportati nella seguente tabella per determinare se il layout di rack proposto che include apparecchiature StorageGRID è compatibile con il budget di alimentazione dei rack.
-
 +
 [cols="1a,1a,1a"]
 |===
@@ -135,6 +152,24 @@ SG1100
 422
  a| 
 700
+
+
+
+ a| 
+SG120
+ a| 
+432
+ a| 
+519
+
+
+
+ a| 
+SG1200
+ a| 
+557
+ a| 
+668
 
 
 
@@ -208,7 +243,29 @@ SG6160
  a| 
 1800
 
+
+
+ a| 
+SGF6212
+ a| 
+673
+ a| 
+808
+
+
+
+ a| 
+SG6260
+ a| 
+580
+ a| 
+696
+
 |===
++
+
+NOTE: Gli alimentatori negli appliance StorageGRID sono progettati per potenze significativamente superiori rispetto a quelle utilizzate dall'hardware degli appliance StorageGRID, anche durante i periodi di massimo consumo di energia. NetApp consiglia di utilizzare il  https://hwu.netapp.com["NetApp Hardware Universe"^] per determinare se una configurazione rack proposta che include appliance StorageGRID è compatibile con il budget di alimentazione del rack.
+
 . Procurarsi un cabinet da 19" (48.3 cm) o un rack per gli scaffali delle seguenti dimensioni (senza cavi).
 +
 [role="tabbed-block"]
@@ -262,6 +319,55 @@ SG6160
 43,83 libbre
 
 (19,88 kg)
+
+|===
+--
+.SG120 e SG1200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modello di appliance | Altezza | Larghezza | Profondità | Peso massimo 
+
+
+ a| 
+SG120
+ a| 
+1,70 poll.
+
+(4,32 cm)
+ a| 
+18,98 poll.
+
+(48,21 cm)
+ a| 
+30,56 in.
+
+(77,62 cm)
+ a| 
+42,13 lb.
+
+(19,11 kg)
+
+
+
+ a| 
+SG1200
+ a| 
+1,70 poll.
+
+(4,32 cm)
+ a| 
+18,98 poll.
+
+(48,21 cm)
+ a| 
+30,56 in.
+
+(77,62 cm)
+ a| 
+43,43 lb.
+
+(19,70 kg)
 
 |===
 --
@@ -553,15 +659,90 @@ Ripiano di espansione (SG6160) - opzionale
 
 |===
 --
+.SG6200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modello di appliance/tipo di shelf | Altezza | Larghezza | Profondità | Peso massimo 
+
+
+ a| 
+Appliance SGF6212
+ a| 
+1,70 in. (4,32 cm)
+ a| 
+18,98 pollici (48,21 cm)
+ a| 
+30,56 pollici (77,62 cm)
+ a| 
+55,98 lb. (25,39 kg)
+
+
+
+ a| 
+Controller di calcolo SG6200-CN (SG6260)
+ a| 
+1,70 in. (4,32 cm)
+ a| 
+18,98 pollici (48,21 cm)
+ a| 
+30,56 pollici (77,62 cm)
+ a| 
+44,0 lb. (19,70 kg)
+
+
+
+ a| 
+Shelf controller E4060 (SG6260)
+ a| 
+6,87 poll.
+
+(17,45 cm)
+ a| 
+17,64 poll.
+
+(44,8 cm)
+ a| 
+36,3 poll.
+
+(97,16 cm)
+ a| 
+223,58 libbre
+
+(101,42 kg)
+
+
+
+ a| 
+Shelf di espansione (SG6260) - Opzionale
+ a| 
+6,87 poll.
+
+(17,45 cm)
+ a| 
+17,64 poll.
+
+(44,8 cm)
+ a| 
+36,3 poll.
+
+(97,16 cm)
+ a| 
+223,58 libbre
+
+(101,42 kg)
+
+|===
+--
 ====
 . Decidere dove installare l'appliance.
 +
 
-CAUTION: Quando si installa lo shelf del controller E2860 o E4000 o gli shelf di espansione opzionali, installare la bulloneria dal basso verso la parte superiore del rack o dell'armadietto per evitare che l'apparecchiatura si ribalti. Per assicurarsi che l'apparecchiatura più pesante si trovi nella parte inferiore dell'armadio o del rack, installare il controller SG6000-CN o SG6100-CN sopra lo shelf del controller E2860 o E4000 e gli shelf di espansione.
+CAUTION: Quando si installa il ripiano del controller E2860 o E4000 o i ripiani di espansione opzionali, installare l'hardware dal basso verso l'alto del rack o dell'armadio per evitare che l'apparecchiatura si ribalti. Per garantire che l'apparecchiatura più pesante si trovi nella parte inferiore dell'armadio o del rack, installare il controller SG6000-CN, SG6100-CN o SG6200-CN sopra il ripiano del controller E2860 o E4000 e i ripiani di espansione.
 
 +
 
-NOTE: Prima di eseguire l'installazione, verificare che i cavi forniti con un apparecchio SG6000 o SG6100, o i cavi forniti, siano sufficientemente lunghi per il layout pianificato.
+NOTE: Prima di procedere con l'installazione, verificare che i cavi forniti con un SG6000, SG6100 o SG6200, oppure i cavi forniti dall'utente, siano sufficientemente lunghi per la configurazione prevista.
 
 . Installare gli switch di rete necessari. Vedere link:https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp"^] per informazioni sulla compatibilità.
 

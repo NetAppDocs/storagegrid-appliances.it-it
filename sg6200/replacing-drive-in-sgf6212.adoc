@@ -1,0 +1,170 @@
+---
+permalink: sg6200/replacing-drive-in-sgf6212.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6212, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: 'L"appliance di storage SGF6212 contiene 12 unità SSD. I dati presenti sulle unità sono protetti da uno schema RAID che consente all"appliance di ripristinare i dati in caso di guasto di un disco singolo, senza dover copiare i dati da un altro nodo.' 
+---
+= Sostituire le unità nel SGF6212
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'appliance di storage SGF6212 contiene 12 SSD drive. Per un SGF6212 che opera come storage node, i dati sui drive sono protetti da uno schema RAID che consente all'appliance di recuperare da un guasto di un disco singolo senza dover copiare i dati da un altro nodo. Per un SGF6212 che opera come gateway node, un guasto di un disco singolo comporta una riduzione della capacità della cache.
+
+Se l'SGF6212 opera come storage node, il guasto di un secondo disco prima che il guasto iniziale sia stato risolto potrebbe richiedere la copia dei dati da altri nodi per ripristinare la ridondanza. Questo ripristino della ridondanza può richiedere più tempo e potrebbe risultare impossibile se sono in uso o sono state utilizzate in passato regole ILM a copia singola, oppure se la ridondanza è stata compromessa da guasti su altri nodi. Pertanto, se uno dei dischi dell'SGF6212 si guasta, è necessario sostituirlo il prima possibile per garantire la ridondanza.
+
+Se l'SGF6212 opera come nodo gateway, ogni guasto di un'unità disco in un SGF6212 comporta un'ulteriore riduzione della capacità della cache. Inoltre, tutti i dati memorizzati nella cache sull'unità guasta non saranno più memorizzati nella cache. Ulteriori guasti alle unità disco possono causare un guasto del sistema operativo, quindi è necessario sostituire un'unità guasta il prima possibile per garantire la disponibilità.
+
+
+CAUTION: Se si verificano guasti a tre o più unità, il nodo potrebbe non essere più in grado di eseguire StorageGRID. Uscirà dalla grid, si riavvierà e avvierà il StorageGRID Appliance Installer per facilitare la diagnosi e la riparazione del problema di storage.
+
+.Prima di iniziare
+* Hai link:locating-sg6200-in-data-center.html["posizionato fisicamente l'apparecchio"].
+* Hai verificato quale disco ha avuto un guasto notando che il LED sinistro del disco è di colore ambra fisso o utilizzando Grid Manager per link:verify-component-to-replace.html["visualizzare l'avviso causato dal disco guasto"].
++
+
+NOTE: Consultare le informazioni relative alla visualizzazione degli indicatori di stato per verificare l'errore.
+
+* È stato ottenuto il disco sostitutivo.
+* Hai ottenuto una protezione ESD adeguata.
+
+
+.Fasi
+. Verificare che il LED di errore sinistro dell'unità sia di colore ambra o utilizzare l'ID dello slot dell'unità visualizzato nell'avviso per individuare l'unità.
++
+Le dodici unità si trovano nelle seguenti posizioni nello chassis (nella parte anteriore dello chassis con il pannello rimosso):
+
++
+image::../media/sgf6212_front_with_ssds.png[Posizioni delle unità]
+
++
+|===
+| Posizione | Disco 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+
+
+ a| 
+3
+ a| 
+HDD02
+
+
+
+ a| 
+4
+ a| 
+HDD03
+
+
+
+ a| 
+5
+ a| 
+HDD04
+
+
+
+ a| 
+6
+ a| 
+HDD05
+
+
+
+ a| 
+7
+ a| 
+HDD06
+
+
+
+ a| 
+8
+ a| 
+HDD07
+
+
+
+ a| 
+9
+ a| 
+HDD08
+
+
+
+ a| 
+10
+ a| 
+HDD09
+
+
+
+ a| 
+11
+ a| 
+HDD10
+
+
+
+ a| 
+12
+ a| 
+HDD11
+
+|===
++
+È possibile utilizzare anche Grid Manager per monitorare lo stato delle unità SSD. Selezionare *Nodi*. Quindi selezionare  `*Storage Node*` > *Hardware*. Se un'unità si è guastata, il campo Modalità RAID di archiviazione contiene un messaggio che indica quale unità si è guastata.
+
+
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Disimballare l'unità sostitutiva e appoggiarla su una superficie piana e priva di elettricità statica vicino all'apparecchio.
++
+Conservare tutti i materiali di imballaggio.
+
+. Premere il pulsante di rilascio sul disco guasto.
++
+image:../media/drw_s2025_drive_replace_ieops-2553.svg["Rimozione di un'unità dal chassis"]
+
++
+La maniglia delle molle del disco si apre parzialmente e il disco si libera dallo slot.
+
+. Aprire la maniglia, estrarre l'unità e posizionarla su una superficie piana e priva di scariche elettrostatiche.
+. Premere il pulsante di rilascio sull'unità sostitutiva prima di inserirla nello slot.
++
+Le molle del dispositivo di chiusura si aprono.
+
+. Inserire l'unità sostitutiva nello slot, quindi chiudere la maniglia dell'unità.
++
+
+NOTE: Non esercitare una forza eccessiva durante la chiusura della maniglia.
+
++
+Quando l'unità è completamente inserita, si sente uno scatto.
+
++
+L'unità sostituita viene automaticamente ricostruita con dati mirrorati dai dischi funzionanti. Il LED del disco dovrebbe lampeggiare inizialmente, ma poi smettere di lampeggiare non appena il sistema rileva che il disco ha una capacità sufficiente ed è funzionante.
+
++
+È possibile controllare lo stato della ricostruzione utilizzando Grid Manager.
+
+. Se l'SGF6212 funziona come storage node e più di un drive si è guastato ed è stato sostituito, potrebbero comparire degli avvisi che indicano che alcuni volumi necessitano di un ripristino dei dati. In caso di avviso, prima di tentare il ripristino del volume, selezionare *Nodes* > `*appliance Storage Node*` > *Hardware*. Nella sezione StorageGRID Appliance della pagina, verificare che la modalità Storage RAID sia integra o in fase di ricostruzione. Se lo stato indica uno o più drive guasti, correggere questa condizione prima di tentare il ripristino del volume.
+. Nel Grid Manager, vai su *Nodi* > `*appliance Storage Node*` > *Hardware*. Nella sezione StorageGRID Appliance della pagina, verifica che la modalità Storage RAID sia integra.
+
+
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

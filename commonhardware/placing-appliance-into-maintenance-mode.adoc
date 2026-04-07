@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, maintenance mode 
 summary: 'Prima di eseguire specifiche procedure di manutenzione, è necessario attivare la modalità di manutenzione dell"apparecchio.' 
 ---
-= Impostare l'apparecchio in modalità di manutenzione
+= Mettere un'appliance StorageGRID in modalità di manutenzione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ In rari casi, l'attivazione della modalità di manutenzione di un'appliance Stor
 NOTE: La password dell'account admin e le chiavi host SSH per un'appliance StorageGRID in modalità di manutenzione rimangono le stesse di quando l'appliance era in servizio.
 
 .Fasi
-. Da Grid Manager, selezionare *NODES*.
+. Dal Grid Manager, selezionare *Nodi*.
 . Dalla vista ad albero della pagina Nodes (nodi), selezionare il nodo di storage dell'appliance.
 . Selezionare *Tasks*.
 . Selezionare *modalità di manutenzione*. Viene visualizzata una finestra di dialogo di conferma.
@@ -54,7 +54,7 @@ NOTE: Se si dispone di una connessione diretta alla porta di gestione dell'appli
 Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-.. Nel Grid Manager, seleziona *NODI*.
+.. Nel Grid Manager, selezionare *Nodi*.
 .. Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
 

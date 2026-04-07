@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, sg6100-cn, sg6160, storage appliance, Replacing, replace, fan, remove, removing, removal, install, installing 
 summary: 'L"appliance SGF6112 e il controller SG6100-CN sono dotati di otto ventole di raffreddamento. Se una delle ventole si guasta, è necessario sostituirla il prima possibile per assicurarsi che l"apparecchio sia raffreddato correttamente.' 
 ---
-= Sostituire la ventola in un SGF6112 o SG6100-CN (SG6160)
+= Sostituire una ventola in SGF6112 o SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -132,4 +132,4 @@ Utilizzare l'interfaccia BMC per monitorare lo stato di avvio.
 . Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

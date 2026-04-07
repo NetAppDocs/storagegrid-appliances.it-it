@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sostituire il controller StorageGRID SG5800
+= Sostituire il controller SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

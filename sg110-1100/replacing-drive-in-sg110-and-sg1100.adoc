@@ -63,8 +63,8 @@ IMPORTANT: Non esercitare una forza eccessiva durante la chiusura della maniglia
 Quando l'unità è completamente inserita, si sente uno scatto.
 
 +
-L'unità sostituita viene ricostruita automaticamente con dati speculari dall'unità di lavoro.  È possibile controllare lo stato della ricostruzione utilizzando Grid Manager. Andare a *NODI* > `*Appliance Node*` > *hardware*. Il campo Storage RAID Mode (modalità Storage RAID) contiene un messaggio di "ricostruzione" fino a quando l'unità non viene completamente ricostruita.
+L'unità sostituita viene ricostruita automaticamente con dati mirrorati dall'unità funzionante. Puoi verificare lo stato della ricostruzione utilizzando il Grid Manager. Vai su *Nodi* > `*Appliance Node*` > *Hardware*. Il campo Modalità RAID di Storage contiene il messaggio “in fase di ricostruzione” finché l'unità non è completamente ricostruita.
 
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

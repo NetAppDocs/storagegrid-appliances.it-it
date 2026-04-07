@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, e2800, controller, remove, removing, removal, install, installing, installation 
 summary: Potrebbe essere necessario sostituire il controller E2800 se non funziona in modo ottimale o se è guasto. 
 ---
-= Sostituire il controller storage della serie E2800 nell'unità SG5700
+= Sostituire lo storage controller della serie E2800 nell'SG5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -224,14 +224,14 @@ Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del di
 . Capovolgere il controller per verificare che la batteria sia installata correttamente.
 +
 
-CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte anteriore della batteria deve essere inserita completamente nello slot del controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, causando danni.
+CAUTION: *Possibile danno all'hardware* -- La flangia metallica nella parte anteriore della batteria deve essere completamente inserita nello slot sul controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, causando danni.
 
 +
 ** *Esatto -- la flangia metallica della batteria è completamente inserita nello slot del controller:*
 +
 image::../media/e2800_battery_flange_ok.gif[Flangia della batteria corretta]
 
-** *Errato -- la flangia metallica della batteria non è inserita nello slot del controller:*
+** *Errato - La flangia metallica della batteria non è inserita nell'apposito slot sul controller:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Flangia della batteria non corretta]
 
@@ -381,11 +381,11 @@ L'apparecchio si riavvia e si ricongiunge alla griglia. Questo processo può ric
 
 . Conferma che il riavvio è completo e che il nodo si è riunito alla griglia:
 +
-.. Nel Grid Manager, seleziona *NODI*.
+.. Nel Grid Manager, selezionare *Nodi*.
 .. Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
 
 . Da Gestore di sistema di SANtricity, verificare che il nuovo controller sia ottimale e raccogliere i dati di supporto.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

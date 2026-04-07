@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: node encryption, encryption, kms, key management server, drive encryption, self-encrypting drives, sed, full-disk encryption, fde 
 summary: 'È possibile attivare la crittografia a livello di nodo e di disco per proteggere i dischi dell"appliance da perdite fisiche o rimozione dal sito.' 
 ---
-= Opzionale: Abilitare la crittografia del nodo o del disco
+= Abilita la crittografia del nodo o dell'unità per gli appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -92,11 +92,11 @@ NOTE: Le appliance vengono inizialmente configurate con una chiave di crittograf
 
 La crittografia del disco viene gestita sull'hardware del disco con crittografia automatica (SED) durante i processi di scrittura e lettura. L'accesso ai dati su queste unità è controllato da una passphrase definita dall'utente.
 
-La crittografia dell'unità può essere utilizzata per qualsiasi unità SSD SED installata in un'unità SG100, SG1000, SG110, SG1100, SGF6112, o SG6100-CN nodo di calcolo o controller.
+La crittografia dell'unità può essere utilizzata per qualsiasi SSD SED installato in un SG100, SG1000, SG110, SG1100, SG120, SG1200, SGF6112, SGF6212, SG6100-CN o SG6200-CN compute node o controller.
 
 * Per le appliance per i servizi, gli SSD sono i dischi root del nodo.
-* In un controller SG6100-CN, gli SSD vengono utilizzati per il caching.
-* In un sistema SGF6112, gli SSD sono i dischi root del nodo e vengono utilizzati per lo storage primario dei dati degli oggetti.
+* Nei controller SG6100-CN o SG6200-CN, le unità SSD vengono utilizzate per la memorizzazione nella cache.
+* Nei dispositivi SGF6112 o SGF6212, le unità SSD sono i dischi radice del nodo e vengono utilizzate per lo storage primario dei dati degli oggetti.
 
 
 I SED crittografati si bloccano automaticamente quando l'appliance viene spenta o quando l'unità viene rimossa dall'appliance. Un SED crittografato rimane bloccato dopo il ripristino dell'alimentazione fino all'immissione della passphrase corretta. Per consentire l'accesso ai dischi senza reinserire manualmente la passphrase, la passphrase viene memorizzata nell'appliance StorageGRID per sbloccare i dischi crittografati che rimangono nell'appliance al riavvio dell'appliance. Le unità crittografate con una passphrase SED sono accessibili a chiunque conosca la passphrase.

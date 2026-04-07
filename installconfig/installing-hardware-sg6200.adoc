@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6200.html 
+sidebar: sidebar 
+keywords: install, sg6200, sg6212, expansion shelf, cabinet, rack, drives 
+summary: 'Per i modelli SG6260 e SGF6212, è necessario installare delle guide nell"armadio o nel rack e far scorrere il ripiano del controller, gli eventuali ripiani di espansione e il controller di calcolo sulle guide.' 
+---
+= Installare l'SG6200 in un armadio o in un rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per i modelli SG6260 e SGF6212, è necessario installare delle guide nell'armadio o nel rack e far scorrere il ripiano del controller, gli eventuali ripiani di espansione e il controller di calcolo sulle guide.
+
+[cols="1a,2a,2a"]
+|===
+| Modello | Installare | Per informazioni 
+
+
+ a| 
+SG6260
+ a| 
+shelf di controller da 60 dischi e qualsiasi shelf di espansione da 60 dischi
+ a| 
+link:sg6260-installing-60-drive-shelves-into-cabinet-or-rack.html["Installare shelf da 60 dischi"]
+
+
+
+ a| 
+SG6212
+ a| 
+shelf di appliance a 12 dischi
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6212.html["Installare shelf da 12 dischi"]
+
+
+
+ a| 
+SG6260
+ a| 
+Controller di calcolo SG6200-CN
+ a| 
+link:sg6200-cn-installing-into-cabinet-or-rack.html["Installare il controller SG6200-CN"]
+
+|===

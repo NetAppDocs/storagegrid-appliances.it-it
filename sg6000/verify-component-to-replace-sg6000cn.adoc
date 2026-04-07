@@ -14,12 +14,12 @@ summary: 'In caso di dubbi sul componente hardware da sostituire nell"appliance,
 In caso di dubbi sul componente hardware da sostituire nell'appliance, completare questa procedura per identificare il componente e la posizione dell'appliance nel data center.
 
 .Prima di iniziare
-* Si dispone del numero di serie dell'appliance di storage in cui è necessario sostituire il componente.
+* Hai a disposizione il numero di serie dell'appliance in cui è necessario sostituire il componente.
 * L'utente ha effettuato l'accesso a Grid Manager utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
 
 
 .A proposito di questa attività
-Utilizzare questa procedura per identificare l'apparecchio con l'hardware guasto e quali dei componenti hardware sostituibili non funzionano correttamente. I componenti che potrebbero essere identificati per la sostituzione possono includere:
+Utilizzare questa procedura per identificare l'appliance con hardware guasto e quale dei componenti hardware sostituibili non funziona correttamente. I componenti che potrebbero essere identificati per la sostituzione includono:
 
 * Alimentatori
 * Ventole
@@ -48,14 +48,14 @@ image::../media/nic-alert-sgf6112.png[Avviso con ID componente]
 
 . Identificare il telaio con il componente che deve essere sostituito.
 +
-.. Da Grid Manager, selezionare *NODES*.
-.. Dalla tabella della pagina Nodes (nodi), selezionare il nome del nodo di storage dell'appliance con il componente guasto.
+.. Dal Grid Manager, selezionare *Nodi*.
+.. Dalla tabella nella pagina Nodi, selezionare il nome dell'appliance StorageGRID con il componente guasto.
 .. Selezionare la scheda *hardware*.
 +
 Controllare il numero di serie del controller di calcolo nella sezione dell'appliance StorageGRID. Verificare che il numero di serie corrisponda al numero di serie del dispositivo di storage in cui si sta sostituendo il componente. Se il numero di serie corrisponde, è stato trovato l'apparecchio corretto.
 
 +
-*** Se la sezione dell'appliance StorageGRID in Gestione griglia non viene visualizzata, il nodo selezionato non è un'appliance StorageGRID. Selezionare un nodo diverso dalla vista ad albero.
+*** Se la sezione StorageGRID Appliance in Grid Manager non viene visualizzata, il nodo selezionato non è un'appliance StorageGRID. Selezionare un nodo diverso dalla visualizzazione ad albero.
 *** Se i numeri seriali non corrispondono, selezionare un nodo diverso dalla vista ad albero.
 
 

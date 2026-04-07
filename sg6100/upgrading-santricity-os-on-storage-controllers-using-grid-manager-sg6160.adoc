@@ -2,16 +2,16 @@
 permalink: sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html 
 sidebar: sidebar 
 keywords: storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
-summary: 'Per gli storage controller che attualmente utilizzano SANtricity OS 08.42.20.00 \(11,42\) o versione successiva, è possibile utilizzare il Grid Manager o la modalità di manutenzione per applicare un aggiornamento.' 
+summary: È possibile utilizzare Grid Manager o la modalità di manutenzione per applicare un aggiornamento. 
 ---
-= Aggiorna il sistema operativo SANtricity sugli storage controller SG6100 usando Grid Manager
+= Aggiorna il sistema operativo SANtricity sugli storage controller SG6160 utilizzando Grid Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per gli storage controller che attualmente utilizzano SANtricity OS 08.42.20.00 (11,42) o versione successiva, è possibile utilizzare il Grid Manager o la modalità di manutenzione per applicare un aggiornamento.
+È possibile utilizzare Grid Manager o la modalità di manutenzione per applicare un aggiornamento.
 
 .Prima di iniziare
 * Se non è stata ottenuta la versione di SANtricity OS da cui si desidera eseguire l'aggiornamento https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^], è stata effettuata la consultazione https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Download NetApp: Appliance StorageGRID"^] o il https://imt.netapp.com/matrix/#welcome["Tool di matrice di interoperabilità NetApp (IMT)"^] Per confermare che la versione di SANtricity OS utilizzata per l'aggiornamento è compatibile con l'appliance.
@@ -114,7 +114,7 @@ CAUTION: Non approvare l'aggiornamento del sistema operativo SANtricity per un n
 
 NOTE: Se l'ordine in cui i nodi vengono aggiornati è importante, approvare i nodi o i gruppi di nodi uno alla volta e attendere il completamento dell'aggiornamento su ciascun nodo prima di approvare il nodo successivo.
 
-** Selezionare uno o più pulsanti *approva* per aggiungere uno o più nodi alla coda di aggiornamento del sistema operativo SANtricity. Il pulsante *approva* è disattivato se lo stato non è nominale.
+** Selezionare uno o più pulsanti *Approva* per aggiungere uno o più nodi alla coda di aggiornamento del sistema operativo SANtricity. Il pulsante *Approva* è disabilitato se lo stato non è Nominale.
 +
 Dopo aver selezionato *Approve*, il processo di aggiornamento determina se il nodo può essere aggiornato. Se è possibile aggiornare un nodo, questo viene aggiunto alla coda di aggiornamento.
 
@@ -167,7 +167,7 @@ Il nodo non dispone di un controller di storage che può essere gestito dal sist
 
 
  a| 
-Il file del sistema operativo SANtricity non è compatibile con questo nodo.
+Il file SANtricity OS non è compatibile con questo nodo.
  a| 
 Il nodo richiede un file SANtricity OS diverso da quello selezionato.
 Dopo aver completato l'aggiornamento corrente, scaricare il file SANtricity OS corretto per il nodo e ripetere il processo di aggiornamento.

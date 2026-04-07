@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remap appliance ports, network, internal to external port mapping 
 summary: È possibile, in via opzionale, rimappare le porte interne di un nodo appliance a porte esterne diverse. Ad esempio, potrebbe essere necessario rimappare le porte a causa di un problema di firewall. 
 ---
-= Opzionale: Consente di rimappare le porte di rete per l'appliance
+= Riconfigurare le porte di rete per gli apparati StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

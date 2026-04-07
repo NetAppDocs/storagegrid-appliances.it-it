@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Modificare la configurazione del collegamento del controller SG5800
+= Modificare la configurazione del collegamento di un controller SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,7 +54,7 @@ Oltre a qualsiasi altro test che si sceglie di eseguire, verificare che sia poss
 Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-.. Nel Grid Manager, seleziona *NODI*.
+.. Nel Grid Manager, selezionare *Nodi*.
 .. Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
 

@@ -1,0 +1,84 @@
+---
+permalink: sg6200/reinstalling-sg6200-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6212, sg6200, sg6200cn, storage node, storage appliance, install, installing, installation, cabinet, rack 
+summary: 'Rimuovere l"apparecchio SGF6212 da un armadio o rack per accedere al coperchio superiore o per spostare l"apparecchio in un"altra posizione, quindi reinstallare l"apparecchio in un armadio o rack quando la manutenzione hardware è completata.' 
+---
+= Ricollocare SGF6212 o SG6200-CN in un armadio o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rimuovere l'unità SGF6212 o SG6200-CN da un armadio o rack per accedere al coperchio superiore o per spostare l'apparecchio in un'altra posizione, quindi reinstallare l'apparecchio in un armadio o rack al termine della manutenzione hardware.
+
+
+
+== Rimuovere SGF6212 o SG6200-CN dall'armadio o dal rack
+
+.Prima di iniziare
+* Sono presenti etichette per identificare ciascun cavo collegato al modello SGF6212 o SG6200-CN.
+* Ti trovi link:locating-sg6200-in-data-center.html["localizzato fisicamente l'SGF6212 o l'SG6200-CN"] dove stai eseguendo la manutenzione nel data center.
+* Hai link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["Spegnere SGF6212 o SG6200-CN"].
++
+
+CAUTION: Non spegnere l'apparecchio utilizzando l'interruttore di alimentazione.
+
+
+
+.Fasi
+. Etichettare e scollegare i cavi di alimentazione dell'apparecchio.
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Etichettare e scollegare i cavi dati dell'appliance e i ricetrasmettitori SFP+ o SFP28.
++
+
+NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Allentare le due viti di fissaggio sul pannello anteriore dell'apparecchio.
++
+image::../media/s25_rack_retaining_screws.png[Viti di fissaggio per rack SGF6212 o SG6200-CN]
+
+. Far scorrere l'unità SGF6212 o SG6200-CN fuori dal rack fino a quando le guide di montaggio non sono completamente estese e si sente lo scatto dei fermi su entrambi i lati.
++
+Il coperchio superiore dell'apparecchio è accessibile.
+
+. Opzionale: Se si sta rimuovendo completamente l'apparecchio dall'armadietto o dal rack, seguire le istruzioni del kit di guide per rimuovere l'apparecchio dalle guide.
+
+
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.
+
+
+
+== Reinstallare SGF6212 o SG6200-CN nell'armadio o nel rack
+
+.Prima di iniziare
+Hai link:reinstalling-sg6200-cover.html["reinstallato il coperchio dell'apparecchio"].
+
+.Fasi
+. Premere la guida blu per sbloccare contemporaneamente entrambe le guide del rack e far scorrere l’SGF6212 o SG6200-CN nel rack fino a quando non è completamente inserito.
++
+Se non è possibile spostare ulteriormente il controller, tirare i fermi blu su entrambi i lati dello chassis per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 scorrevole sulle guide]
+
++
+
+NOTE: Non collegare il pannello anteriore fino a quando non si accende il controller.
+
+. Serrare le viti di fissaggio sul pannello anteriore del controller per fissare il controller nel rack.
++
+image::../media/s25_rack_retaining_screws.png[Viti di fissaggio del rack SG6060]
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. link:../installconfig/cabling-appliance.html["Ricollegare i cavi dati del controller e tutti i ricetrasmettitori SFP+, SFP28, QSFP+, QSFP28 o QSFP56"].
++
+
+NOTE: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Ricollegare i cavi di alimentazione del controller"].
+
+
+.Al termine
+link:power-sg6200-off-on.html#power-on-sgf6212-or-sg6200-cn-and-verify-operation["Riavviare l'apparecchio"].

@@ -1,0 +1,22 @@
+= Passaggio 2: Reinstallare il coperchio
+:allow-uri-read: 
+
+
+. Sblocca il fermo del coperchio premendo il pulsante di blocco blu presente sul coperchio dell'apparecchio.
++
+image:../media/drw_s2025_cover_replace_ieops-2559.svg["Sblocco e rimozione del coperchio dell'apparecchio"]
+
+. Ruotare il dispositivo di chiusura verso l'alto e verso il retro del telaio dell'apparecchio fino a quando non si arresta, quindi sollevare con cautela il coperchio dal telaio e metterlo da parte.
+
+
+
+
+== Passaggio 2: Reinstallare il coperchio
+
+.Fasi
+. Con il fermo del coperchio aperto, allineare il coperchio sopra lo chassis e abbassarlo con cautela.
+. Ruotare il dispositivo di chiusura del coperchio in avanti e in basso fino a quando non si arresta e il coperchio non si inserisce completamente nel telaio. Verificare che non vi siano spazi vuoti lungo il bordo anteriore del coperchio.
++
+Se il coperchio non è completamente inserito, potrebbe non essere possibile inserire l'apparecchio nel rack.
+
+

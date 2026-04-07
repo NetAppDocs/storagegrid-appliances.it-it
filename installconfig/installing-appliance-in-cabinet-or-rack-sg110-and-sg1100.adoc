@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, storage node, install, installing, installation, cabinet, rack, rail, rails 
 summary: 'Installare un set di guide per l"apparecchio nel cabinet o nel rack, quindi far scorrere l"apparecchio sulle guide.' 
 ---
-= Installazione in cabinet o rack (SG110 o SG1100)
+= Installare l'SG110 o l'SG1100 in un armadio o rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

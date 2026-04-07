@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: email, notifications, alerts, set up, setup, configure, configuration, bmc 
 summary: 'Se si desidera che le notifiche e-mail vengano inviate quando si verificano avvisi, utilizzare l"interfaccia BMC per configurare le impostazioni SMTP, gli utenti, le destinazioni LAN, i criteri di avviso e i filtri degli eventi.' 
 ---
-= Impostare le notifiche e-mail per gli avvisi BMC
+= Configura le notifiche e-mail per gli avvisi BMC su un'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

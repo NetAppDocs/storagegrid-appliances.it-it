@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
 summary: Dopo aver installato lo shelf da 60 dischi in un cabinet o rack, installare tutti i 60 dischi nello shelf. La spedizione per lo shelf del controller E2860 include due unità SSD, che è necessario installare nel cassetto superiore dello shelf del controller. Ogni shelf di espansione opzionale include 60 dischi HDD e nessun disco SSD. 
 ---
-= Installare i dischi (SG6060)
+= Installare le unità negli shelf di dischi SG6060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sostituire i DIMM negli shelf del controller di storage (SG6160)
+= Sostituire i moduli DIMM in uno shelf di storage controller SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ Per sostituire un DIMM, verificare le dimensioni della cache del controller, pos
 ** Etichette per identificare ciascun cavo collegato al contenitore del controller.
 ** Accesso a Gestione sistema SANtricity:
 +
-*** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"] .
+*** Da Grid Manager, selezionare *Nodi* > *nodo dell'appliance* > *SANtricity System Manager*. Le informazioni del controller si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
 *** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, storage node, install, installing, installation, cabinet, rack, rail, rails 
 summary: 'Installare un set di guide per l"apparecchio nel cabinet o nel rack, quindi far scorrere l"apparecchio sulle guide.' 
 ---
-= Installazione in cabinet o rack (SGF6112)
+= Installare l'SGF6112 in un armadio o in un rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6160, storage node, storage appliance, upgrade, firmware, drive, disk, automatic 
 summary: 'StorageGRID Appliance Installer installa automaticamente i file firmware più recenti dell"unità E-Series durante il riavvio dell"appliance.' 
 ---
-= Aggiorna automaticamente il firmware dell'unità SG6160 durante il riavvio dell'appliance
+= Aggiornare il firmware del disco SG6160 durante il riavvio dell'appliance
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

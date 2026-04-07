@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, locate, find, locating, finding, identify, blue led, blue light 
 summary: 'Individuare il controller in modo da poter eseguire la manutenzione o gli aggiornamenti dell"hardware.' 
 ---
-= Individua SG100 TB o SG1000 PB di dati nel data center
+= Individuare un SG100 o un SG1000 in un data center
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

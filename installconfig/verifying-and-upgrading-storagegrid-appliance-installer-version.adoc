@@ -13,13 +13,13 @@ summary: 'La versione del programma di installazione dell"appliance StorageGRID 
 [role="lead"]
 La versione del programma di installazione dell'appliance StorageGRID deve corrispondere alla versione software installata sul sistema StorageGRID per garantire che tutte le funzioni StorageGRID siano supportate.
 
-.Prima di iniziare
-È stato effettuato l'accesso al programma di installazione dell'appliance StorageGRID.
-
 .A proposito di questa attività
 Le appliance StorageGRID vengono fornite dalla fabbrica preinstallata con il programma di installazione dell'appliance StorageGRID. Se si aggiunge un'appliance a un sistema StorageGRID aggiornato di recente, potrebbe essere necessario aggiornare manualmente il programma di installazione dell'appliance StorageGRID prima di installare l'appliance come nuovo nodo.
 
 Il programma di installazione dell'appliance StorageGRID viene aggiornato automaticamente quando si esegue l'aggiornamento a una nuova versione di StorageGRID. Non è necessario aggiornare il programma di installazione dell'appliance StorageGRID sui nodi dell'appliance installati. Questa procedura è necessaria solo quando si installa un'appliance che contiene una versione precedente del programma di installazione dell'appliance StorageGRID.
+
+.Prima di iniziare
+È stato effettuato l'accesso al programma di installazione dell'appliance StorageGRID.
 
 .Fasi
 . Dal programma di installazione dell'appliance StorageGRID, selezionare *Avanzate* > *Aggiorna firmware*.

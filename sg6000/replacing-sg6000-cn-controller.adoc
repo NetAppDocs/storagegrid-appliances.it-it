@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, controller, remove, removing, removal, install, installing, installation 
 summary: Potrebbe essere necessario sostituire la centralina SG6000-CN se non funziona in modo ottimale o se non funziona correttamente. 
 ---
-= Sostituire la centralina SG6000-CN
+= Sostituire un controller SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -119,7 +119,7 @@ NOTE: In alcune fasi del processo di installazione, potrebbe non essere disponib
 . Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.
 
 .Informazioni correlate
 * link:../installconfig/sg6000-cn-installing-into-cabinet-or-rack.html["Installare SG6000-CN nell'armadietto o nel rack"]

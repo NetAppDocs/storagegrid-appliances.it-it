@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, sg6000, sg6060, sgf6024, expansion shelf, cabinet, rack, drives 
 summary: Per i modelli SG6060 e SGF6024, installare le guide nel cabinet o nel rack e far scorrere lo shelf del controller, gli eventuali shelf di espansione e il controller di calcolo sulle guide. Per il sistema SG6060, non installare i dischi in ogni shelf fino a quando non vengono installati gli shelf. 
 ---
-= Installazione nell'armadietto o nel rack (SG6000)
+= Installare l'SG6000 in un armadio o in un rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

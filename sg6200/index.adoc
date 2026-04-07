@@ -1,0 +1,45 @@
+---
+permalink: sg6200/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200 storage appliance, SGF6212 storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: Potrebbe essere necessario eseguire procedure di manutenzione sul vostro appliance. Le procedure specifiche per la manutenzione del vostro appliance sg6200 sono descritte in questa sezione. 
+---
+= Manutenzione dell'appliance SG6200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario eseguire procedure di manutenzione sull'appliance. Le procedure specifiche per la manutenzione della tua appliance SG6200 sono descritte in questa sezione.
+
+Le procedure descritte in questa sezione presuppongono che l'appliance sia già stata implementata come nodo di storage in un sistema StorageGRID.
+
+Le *procedure di configurazione manutenzione* vengono eseguite utilizzando l'Installazione appliance, Grid Manager o l'interfaccia BMC. Queste procedure includono:
+
+* link:turning-sg6200-identify-led-on-and-off.html["Accendere e spegnere il LED di identificazione dell'appliance"]
+* link:locating-sg6200-in-data-center.html["Individuare l'appliance nel data center"]
+* link:power-sg6200-off-on.html["Spegnere l'apparecchio"]
+* link:changing-link-configuration-of-sg6200-appliance.html["Modificare la configurazione del collegamento dell'appliance"]
+
+
+Le *procedure di manutenzione hardware* richiedono la manipolazione fisica di specifici componenti SGF6212 o SG6260.
+
+
+
+== Aggiornamento del firmware del disco
+
+Il firmware delle unità nell'SG6260 viene controllato automaticamente a ogni riavvio dell'appliance. Quando necessario, il firmware viene aggiornato automaticamente alla versione prevista dalla release corrente di StorageGRID. Di solito, gli aggiornamenti del firmware avvengono durante gli aggiornamenti del software StorageGRID. Eventuali aggiornamenti necessari del firmware delle unità per le versioni esistenti di StorageGRID saranno inclusi negli hotfix. Seguire le istruzioni fornite con ciascun hotfix per assicurarsi che l'aggiornamento venga applicato a tutte le unità che potrebbero trarne vantaggio.
+
+Inoltre, le unità nell'SG6260 possono essere aggiornate tramite SANtricity utilizzando le procedure link:upgrading-drive-firmware-using-santricity-system-manager-online.html["SANtricity System Manager online"] o link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["SANtricity System Manager offline"].
+
+
+NOTE: SANtricity System Manager non è necessario per la manutenzione dell'appliance SGF6212.
+
+
+
+== Procedure generali di manutenzione
+
+Vedere link:../commonhardware/index.html["Procedure di manutenzione comuni"] per le procedure identiche per tutte le appliance, ad esempio l'applicazione di una correzione rapida, il ripristino di un nodo o di un sito e la manutenzione della rete.
+
+Vedere link:../installconfig/configuring-hardware.html["Configurare l'hardware dell'appliance"] per le procedure di manutenzione dell'appliance eseguite anche durante l'installazione e la configurazione iniziale dell'appliance.

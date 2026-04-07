@@ -1,0 +1,66 @@
+---
+permalink: sg120-1200/replacing-one-or-more-power-supplies-in-sg120-and-sg1200-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
+summary: 'Gli apparecchi SG120 e SG1200 sono dotati di due alimentatori per ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per garantire che l"apparecchio abbia alimentazione ridondante. Entrambi gli alimentatori presenti nell"apparecchio devono essere dello stesso modello e con la stessa potenza.' 
+---
+= Sostituire uno o entrambi gli alimentatori nell'SG120 o nell'SG1200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli apparecchi SG120 e SG1200 sono dotati di due alimentatori per ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per garantire che l'apparecchio abbia alimentazione ridondante. Entrambi gli alimentatori presenti nell'apparecchio devono essere dello stesso modello e wattaggio.
+
+.A proposito di questa attività
+La figura mostra i due alimentatori per i modelli SG120 e SG1200. Gli alimentatori sono accessibili dal retro dell'apparecchio.
+
+image::../media/sg120_sg1200_power_supplies.png[Parte posteriore di SG120/SG1200 con due alimentatori]
+
+.Prima di iniziare
+* Hai link:locating-sg120-and-sg1200-in-data-center.html["posizionato fisicamente l'apparecchio"] l'alimentatore da sostituire.
+* Lo hai fatto link:verify-component-to-replace.html["determinata la posizione dell'alimentatore da sostituire"].
+* Se si sta sostituendo un solo alimentatore:
++
+** L'alimentatore sostitutivo è stato disimballato e si è assicurato che sia dello stesso modello e wattaggio dell'alimentatore che si sta sostituendo.
+** Hai confermato che l'altro alimentatore è installato e funzionante.
+
+
+* Se si sostituiscono entrambi gli alimentatori contemporaneamente, assicurarsi che siano dello stesso modello e della stessa potenza.
+
+
+.Fasi
+. Se stai sostituendo un solo alimentatore, non è necessario spegnere l'apparecchio. Passa al <<Unplug_the_power_cord,Scollegare il cavo di alimentazione>> passaggio. Se stai sostituendo entrambi gli alimentatori contemporaneamente, link:power-sg120-and-sg1200-off-on.html#shut-down-the-sg120-or-sg1200-appliance["Spegnere l'apparecchio"] prima di scollegare i cavi di alimentazione.
+. [[scollega_il_cavo_di_alimentazione, start=2]]scollegare il cavo di alimentazione da ogni alimentatore da sostituire.
++
+Guardando dal retro dell'apparecchio, l'alimentatore A (PSU0) si trova a destra e l'alimentatore B (PSU1) a sinistra.
+
+. Sollevare la maniglia del primo materiale di consumo da sostituire.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Sollevare la maniglia per rimuovere l'alimentatore]
+
+. Premere il fermo blu ed estrarre l'alimentatore.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Rimozione di un alimentatore]
+
+. Con il fermo blu a destra, far scorrere l'alimentatore sostitutivo nel telaio.
++
+
+IMPORTANT: Entrambi gli alimentatori installati devono essere dello stesso modello e dello stesso wattaggio.
+
++
+Assicurarsi che il fermo blu si trovi sul lato destro quando si inserisce l'unità sostitutiva.
+
++
+Quando l'alimentatore è bloccato in posizione, si avverte uno scatto.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Alimentatore scorrevole]
+
+. Spingere la maniglia verso il basso contro il corpo dell'alimentatore.
+. Se si stanno sostituendo entrambi gli alimentatori, ripetere i passi da 2 a 6 per sostituire il secondo alimentatore.
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Collegare i cavi di alimentazione alle unità sostituite e collegare l'alimentazione"].
+
+
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

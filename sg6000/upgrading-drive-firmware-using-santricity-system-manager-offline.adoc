@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Il firmware del disco viene aggiornato per assicurarsi di disporre delle funzionalità più recenti e delle correzioni dei bug. 
 ---
-= Aggiornare il firmware dell'unità SG6000 utilizzando Gestione di sistema di SANtricity utilizzando il metodo offline
+= Aggiorna il firmware dei dischi SG6000 utilizzando il metodo offline di SANtricity System Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -43,7 +43,7 @@ NOTE: Se si sta aggiornando il firmware nelle unità SSD che fanno parte di un g
 . Accedere a Gestore di sistema di SANtricity utilizzando uno dei seguenti metodi:
 +
 ** Utilizzare il programma di installazione dell'appliance StorageGRID e selezionare *Avanzate* > *Gestore di sistema SANtricity*
-** Utilizzare il Gestore griglia e selezionare *NODI* > *_nodo di storage_* > *Gestore di sistema SANtricity*
+** Utilizzare Grid Manager e selezionare *Nodi* > *_Storage Node_* > *SANtricity System Manager*
 ** Utilizza Gestione sistema di SANtricity navigando all'IP dello storage controller:
 +
 `*https://_Storage_Controller_IP_*`
@@ -152,7 +152,7 @@ link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html[
 Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-... Nel Grid Manager, seleziona *NODI*.
+... Nel Grid Manager, selezionare *Nodi*.
 ... Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
 

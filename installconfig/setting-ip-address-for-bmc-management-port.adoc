@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: BMC, baseboard management controller, configure, setup, set up, IP, IP address. management port 
 summary: 'Prima di poter accedere all"interfaccia BMC, è necessario configurare l"indirizzo IP della porta di gestione BMC sul controller SG6000-CN o sull"appliance di servizi.' 
 ---
-= Impostare l'indirizzo IP per la porta di gestione BMC
+= Impostare l'indirizzo IP della porta di gestione BMC su un'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,12 @@ summary: 'Prima di poter accedere all"interfaccia BMC, è necessario configurare
 Prima di accedere all'interfaccia BMC, configurare l'indirizzo IP per la porta di gestione BMC sul controller SGF6112, SG6000-CN, SG6100-CN o sulle appliance di servizi.
 
 Se si utilizza ConfigBuilder per generare un file JSON, è possibile configurare automaticamente gli indirizzi IP. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
+
+.A proposito di questa attività
+A scopo di supporto, la porta di gestione BMC consente un accesso hardware di basso livello.
+
+
+NOTE: Collegare questa porta solo a una rete di gestione interna sicura e affidabile. Se tale rete non è disponibile, lasciare la porta BMC disconnessa o bloccata, a meno che non venga richiesta una connessione BMC dal supporto tecnico.
 
 .Prima di iniziare
 * Il client di gestione utilizza un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
@@ -32,6 +38,11 @@ image::../media/sg100_bmc_management_port.png[SG100 porta di gestione BMC]
 image::../media/sgf6112_cn_bmc_management_port.png[Porta di gestione BMC SG110]
 
 --
+.SG120
+--
+image::../media/sg120_bmc_management_port.png[Porta di gestione BMC SG120]
+
+--
 .SG1000
 --
 image::../media/sg1000_bmc_management_port.png[Porta di gestione BMC SG1000]
@@ -40,6 +51,11 @@ image::../media/sg1000_bmc_management_port.png[Porta di gestione BMC SG1000]
 .SG1100
 --
 image::../media/sg1100_bmc_management_port.png[Porta di gestione BMC SG1100]
+
+--
+.SG1200
+--
+image::../media/sg1200_bmc_management_port.png[Porta di gestione BMC SG1200]
 
 --
 .SG6000
@@ -58,14 +74,19 @@ _SG6100-CN_:
 image::../media/sg6100_cn_bmc_management_port.png[Porta di gestione BMC SG610-CN]
 
 --
+.SG6200
+--
+_SGF6212_:
+
+image::../media/sgf6212_bmc_management_port.png[Porta di gestione BMC SGF6212]
+
+_SG6200-CN_:
+
+image::../media/sg6200_cn_bmc_management_port.png[Porta di gestione BMC SG6200-CN]
+
+--
 ====
 
-
-.A proposito di questa attività
-A scopo di supporto, la porta di gestione BMC consente un accesso hardware di basso livello.
-
-
-NOTE: Collegare questa porta solo a una rete di gestione interna sicura e affidabile. Se tale rete non è disponibile, lasciare la porta BMC disconnessa o bloccata, a meno che non venga richiesta una connessione BMC dal supporto tecnico.
 
 .Fasi
 . Dal client, immettere l'URL del programma di installazione dell'appliance StorageGRID: +

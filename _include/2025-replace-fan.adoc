@@ -1,0 +1,76 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Individuare la ventola da sostituire.
++
+Le sette ventole sono nelle seguenti posizioni nello chassis (metà anteriore dell'appliance StorageGRID con il coperchio superiore rimosso mostrata):
+
++
+image::../media/drw_fan_position_ieops-2614.svg[Posizioni delle ventole nello chassis StorageGRID]
+
++
+|===
+| Posizione del chassis | Gruppo ventola 
+
+
+ a| 
+1
+ a| 
+Fan_SYS0
+
+
+
+ a| 
+2
+ a| 
+Fan_SYS1
+
+
+
+ a| 
+3
+ a| 
+Fan_SYS2
+
+
+
+ a| 
+4
+ a| 
+Fan_SYS3
+
+
+
+ a| 
+5
+ a| 
+Fan_SYS4
+
+
+
+ a| 
+6
+ a| 
+Fan_SYS5
+
+
+
+ a| 
+7
+ a| 
+Fan_SYS6
+
+|===
+. Utilizzando le linguette blu sulla ventola, estrarre la ventola guasta dal telaio.
++
+image:../media/drw_s2025_fan_replace_ieops-2552.svg["Rimozione di una ventola dal chassis"]
+
+. Far scorrere la ventola sostitutiva nello slot aperto dello chassis.
++
+Allineare il connettore sulla ventola con la presa sulla scheda del circuito.
+
+. Premere con decisione il connettore della ventola nella scheda a circuito stampato.
+

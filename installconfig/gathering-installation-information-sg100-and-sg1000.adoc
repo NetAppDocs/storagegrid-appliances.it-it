@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, independent, active-backup, active backup, management, management port, management ports 
 summary: 'Utilizzando le tabelle, registrare le informazioni richieste per ciascuna rete collegata all"appliance. Questi valori sono necessari per installare e configurare l"hardware.' 
 ---
-= Raccogliere informazioni sulla rete (SG100 e SG1000)
+= Raccogli informazioni di rete per SG100 e SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

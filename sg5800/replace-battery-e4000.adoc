@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Sostituire la batteria in E4000 (SG5800)
+= Sostituire la batteria nel controller E4000 in un SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,7 +23,7 @@ Se si intende sostituire una batteria guasta, è necessario disporre di:
 * Etichette per identificare ciascun cavo collegato al contenitore del controller.
 * Accesso a Gestione sistema SANtricity:
 +
-** Da Gestione griglia, selezionare *NODI* > *_appliance node_* > *Gestione sistema SANtricity*. Le informazioni sulla centralina si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"] .
+** Da Grid Manager, selezionare *Nodi* > *nodo dell'appliance* > *SANtricity System Manager*. Le informazioni del controller si trovano su https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Scheda Gestore di sistema di SANtricity"].
 ** Puntare un browser nella stazione di gestione al nome di dominio o all'indirizzo IP del controller.
 
 
@@ -245,7 +245,7 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 
 . Conferma che il riavvio è completo e che il nodo si è riunito alla griglia:
 +
-.. Nel Grid Manager, seleziona *NODI*.
+.. Nel Grid Manager, selezionare *Nodi*.
 .. Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 +
 

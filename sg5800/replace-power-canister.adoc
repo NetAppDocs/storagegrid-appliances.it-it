@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: 'Sostituire uno shelf di controller da 60 dischi o uno shelf di dischi, che include due contenitori di alimentazione per la ridondanza dell"alimentazione.' 
 ---
-= Sostituire il filtro a carboni attivi in SG5860
+= Sostituire un contenitore di alimentazione nell'SG5860
 :allow-uri-read: 
 :experimental: 
 :icons: font

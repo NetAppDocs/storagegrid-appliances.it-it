@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, mtu, test, testing 
 summary: 'Verificare che sia possibile accedere alle reti StorageGRID utilizzate dall"appliance. Per convalidare il routing attraverso i gateway di rete, è necessario verificare la connettività tra il programma di installazione dell"appliance StorageGRID e gli indirizzi IP su diverse subnet. È inoltre possibile verificare l"impostazione MTU.' 
 ---
-= Verificare le connessioni di rete
+= Verificare le connessioni di rete sugli appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

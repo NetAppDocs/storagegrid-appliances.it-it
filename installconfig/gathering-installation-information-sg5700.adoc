@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, e5700sg, independent, active-backup, active backup, 1-gbe, 1 gbe 
 summary: 'Utilizzando le tabelle, registrare le informazioni richieste per ciascuna rete collegata all"appliance. Questi valori sono necessari per installare e configurare l"hardware.' 
 ---
-= Raccogliere informazioni sulla rete (SG5700)
+= Raccogli le informazioni di rete per l'SG5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

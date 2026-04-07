@@ -1,0 +1,65 @@
+---
+permalink: sg6200/replace-ocp-nic-sg6200-cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, storage node, storage appliance, Replacing, replace, NIC, network interface card 
+summary: 'Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) nel SG6200-CN se non funziona in modo ottimale o se si è guastata.' 
+---
+= Sostituire la scheda di rete esterna nel SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) esterna nel SG6200-CN se non funziona in modo ottimale o se si è guastata.
+
+.A proposito di questa attività
+Per evitare interruzioni del servizio, verificare che tutti gli altri Storage Node siano connessi al grid prima di iniziare la sostituzione della scheda di interfaccia di rete (NIC) oppure sostituire la NIC durante una finestra di manutenzione programmata in cui i periodi di interruzione del servizio sono accettabili. Vedere le informazioni su link:https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["stati di connessione del nodo di monitoraggio"].
+
+
+CAUTION: Se hai mai utilizzato una regola ILM che crea una sola copia di un oggetto, devi sostituire la scheda di rete durante una finestra di manutenzione perché potresti perdere temporaneamente l'accesso a tali oggetti durante questa procedura. Vedi informazioni su link:https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["perché non utilizzare la replica a copia singola"].
+
+.Prima di iniziare
+* Si dispone della scheda NIC sostitutiva corretta.
+* È stato determinato il link:verify-component-to-replace.html["Posizione della scheda di rete da sostituire"].
++
+image::../media/sg6200_cn_ocp_nic_location.png[Frontalino NIC.]
+
+* Ti trovi link:locating-sg6200-in-data-center.html["individuare fisicamente il controller SG6200-CN"] nella situazione in cui stai sostituendo la scheda di rete nel data center.
++
+
+NOTE: La sostituzione a caldo *non* è supportata per questa procedura. Un link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["spegnimento controllato dell'apparecchio"] è necessario prima di scollegare i cavi e rimuovere la scheda di rete.
+
+* Hai scollegato tutti i cavi, inclusi i due cavi di alimentazione sullo SG6200-CN.
+* *Opzionale*: Il controller è stato rimosso dal rack, se richiesto dalle normative locali. La rimozione non è necessaria in quanto la scheda NIC è accessibile dall'esterno.
+
+
+
+
+== Passaggio 1: Rimuovere la scheda di rete esterna
+
+.Fasi
+. Avvolgere l'estremità del cinturino di un braccialetto antistatico intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Utilizzare un cacciavite per allentare la vite sulla mascherina della scheda di interfaccia di rete.
++
+
+CAUTION: La sostituzione a caldo è *non* supportata per questa procedura. Prima di rimuovere la scheda di interfaccia di rete, è necessario scollegare il controller dall'alimentazione.
+
+. Rimuovere con cautela la scheda NIC tirando la maniglia della mascherina. Posizionare la scheda di interfaccia di rete su una superficie piana antistatica.
+
+
+
+
+== Passaggio 2: Reinstallare la scheda di rete esterna
+
+.Fasi
+. Avvolgere l'estremità del cinturino di un braccialetto antistatico intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Rimuovere la scheda di rete sostitutiva dalla confezione.
+. Allineare la scheda di interfaccia di rete con l'apertura nel telaio e spingerla con cautela fino a insediarla completamente.
+. Serrare la vite sulla mascherina della scheda di interfaccia di rete.
+
+
+.Al termine
+Se nell'apparecchio non è necessario eseguire altre procedure di manutenzione, riponete l'apparecchio nel rack, se è stato rimosso, collegate i cavi e accendete l'apparecchio.
+
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

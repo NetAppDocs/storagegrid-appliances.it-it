@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, setup, set up, IP, IP address 
 summary: 'Il programma di installazione dell"appliance StorageGRID consente di configurare gli indirizzi IP e le informazioni di routing utilizzati per l"appliance di servizi o il nodo di storage dell"appliance nelle reti StorageGRID Grid, Admin e Client.' 
 ---
-= Configurare gli indirizzi IP StorageGRID
+= Configurare gli indirizzi IP dell'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,10 +22,12 @@ Per abilitare o disabilitare un collegamento o modificarne la configurazione, co
 
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG100 o SG1000"]
 * link:../sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG110 o SG1100"]
+* link:../sg120-1200/changing-link-configuration-of-sg120-and-sg1200-appliance.html["Modificare la configurazione del collegamento dell'appliance di servizi SG120 o SG1200"]
 * link:../sg5700/changing-link-configuration-of-e5700sg-controller.html["Modificare la configurazione del collegamento del controller E5700SG"]
 * link:../sg5800/changing-link-configuration-of-sg5800-controller.html["Modificare la configurazione del collegamento del controller SG5800"]
 * link:../sg6000/changing-link-configuration-of-sg6000-cn-controller.html["Modificare la configurazione del collegamento della centralina SG6000-CN"]
 * link:../sg6100/changing-link-configuration-of-sgf6112-appliance.html["Modificare la configurazione del collegamento dell'appliance SG6100"]
+* link:../sg6200/changing-link-configuration-of-sg6200-appliance.html["Modificare la configurazione del collegamento dell'appliance SG6200"]
 
 
 [NOTE]

@@ -1,0 +1,71 @@
+---
+permalink: sg120-1200/replacing-drive-in-sg120-and-sg1200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
+summary: Gli appliance di servizio SG120 e SG1200 contengono due unità SSD. Le unità sono configurate in RAID1 per ridondanza. Se una delle unità si guasta, è necessario sostituirla il prima possibile per garantire la ridondanza. 
+---
+= Sostituire le unità nei modelli SG120 o SG1200
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli appliance di servizio SG120 e SG1200 contengono due unità SSD. Le unità sono configurate in RAID1 per garantire ridondanza. In caso di guasto di una delle unità, è necessario sostituirla il prima possibile per assicurare ridondanza.
+
+.Prima di iniziare
+* Hai link:locating-sg120-and-sg1200-in-data-center.html["posizionato fisicamente l'apparecchio"].
+* Hai verificato quale disco ha avuto un guasto notando che il LED sinistro del disco è di colore ambra fisso o utilizzando Grid Manager per link:verify-component-to-replace.html["visualizzare l'avviso causato dal disco guasto"].
++
+
+IMPORTANT: Consultare le informazioni relative alla visualizzazione degli indicatori di stato per verificare l'errore.
+
+* È stato ottenuto il disco sostitutivo.
+* Hai ottenuto una protezione ESD adeguata.
+
+
+.Fasi
+. Verificare che il LED di errore sinistro dell'unità sia di colore ambra o utilizzare l'ID dello slot dell'unità visualizzato nell'avviso per individuare l'unità.
++
+Le unità si trovano nelle seguenti posizioni nello chassis (parte anteriore dello chassis con il pannello rimosso in figura):
+
++
+image::../media/sg120_sg1200_front_with_ssds.png[Posizioni delle unità SG120 e SG1200]
+
+
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Disimballare l'unità sostitutiva e appoggiarla su una superficie piana e priva di elettricità statica vicino all'apparecchio.
++
+Conservare tutti i materiali di imballaggio.
+
+. Premere il pulsante di rilascio sul disco guasto.
++
+image::../media/drw_s2025_drive_replace_ieops-2553.svg[Rimozione di un'unità dal chassis]
+
++
+La maniglia delle molle del disco si apre parzialmente e il disco si libera dallo slot.
+
+. Aprire la maniglia, estrarre l'unità e posizionarla su una superficie piana e priva di scariche elettrostatiche.
++
+
+NOTE: Verificare che la maniglia del vassoio sia completamente aperta prima di tentare di rimuovere l'unità.
+
+. Premere il pulsante di rilascio sull'unità sostitutiva prima di inserirla nello slot.
++
+Le molle del dispositivo di chiusura si aprono.
+
+. Inserire l'unità sostitutiva nello slot, quindi chiudere la maniglia dell'unità.
++
+
+IMPORTANT: Non esercitare una forza eccessiva durante la chiusura della maniglia.
+
++
+Quando l'unità è completamente inserita, si sente uno scatto.
+
++
+L'unità sostituita viene ricostruita automaticamente con dati mirrorati dall'unità funzionante. Puoi verificare lo stato della ricostruzione utilizzando il Grid Manager. Vai su *Nodi* > `*Appliance Node*` > *Hardware*. Il campo Modalità RAID di Storage contiene il messaggio “in fase di ricostruzione” finché l'unità non è completamente ricostruita.
+
+
+
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

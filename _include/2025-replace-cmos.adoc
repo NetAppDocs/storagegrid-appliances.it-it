@@ -1,0 +1,68 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Rimuovere la prima batteria CMOS.
++
+.. Individua la batteria CMOS sulla scheda madre.
+.. Utilizzare un dito o un attrezzo per leva in plastica per spingere il fermo di fissaggio lontano dalla batteria e rimuoverlo dalla presa.
++
+image::../media/drw_s2025_cmos_battery_replace_ieops-2558.svg[Rimozione della batteria CMOS dalla scheda madre]
+
+.. Rimuovere la batteria e smaltirla correttamente.
+
+
+. Installare la batteria CMOS di ricambio.
++
+.. Estrarre la batteria CMOS di ricambio dalla sua confezione.
+.. Premere la batteria sostitutiva nella presa vuota della scheda di sistema con il lato positivo (+) rivolto verso l'alto fino a quando la batteria non scatta in posizione.
+
+
+. Ripeti questi passaggi per la seconda batteria CMOS.
+. Se non si dispone di altre procedure di manutenzione da eseguire nell'apparecchio, reinstallare il coperchio dell'apparecchio, riposizionare l'apparecchio nel rack, collegare i cavi e alimentare.
+. Se l'appliance sostituita ha abilitato la crittografia del disco per le unità SED, è necessario link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["immettere la passphrase di crittografia dell'unità"] per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.
+. Se l'appliance sostituita utilizzava un server di gestione delle chiavi (KMS) per gestire le chiavi di crittografia per la crittografia dei nodi, potrebbe essere necessaria una configurazione aggiuntiva prima che il nodo possa unirsi al grid. Se il nodo non si unisce automaticamente alla griglia, assicurarsi che queste impostazioni di configurazione siano state trasferite alla nuova appliance e configurare manualmente le impostazioni che non hanno la configurazione prevista:
++
+** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configurare le connessioni StorageGRID"]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configurare la crittografia dei nodi per l'appliance"^]
+
+
+. Accedere all'appliance:
++
+.. Immettere il seguente comando: `ssh admin@_grid_node_IP_`
+.. Immettere la password elencata in `Passwords.txt` file.
+.. Immettere il seguente comando per passare a root: `su -`
+.. Immettere la password elencata in `Passwords.txt` file.
+
+
+. Ripristina la connettività di rete BMC per l'appliance utilizzando una delle seguenti opzioni:
++
+** Utilizzare IP statico, netmask e gateway
+** Utilizzare DHCP per ottenere un IP, una netmask e un gateway
++
+... Per ripristinare la configurazione BMC in modo che utilizzi un IP statico, una netmask e un gateway, immettere i seguenti comandi:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Per ripristinare la configurazione BMC in modo che utilizzi DHCP per ottenere un IP, una netmask e un gateway, immettere il seguente comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Dopo aver ripristinato la connettività di rete BMC, connettersi all'interfaccia BMC per controllare e ripristinare eventuali configurazioni BMC personalizzate aggiuntive applicate. Ad esempio, è necessario confermare le impostazioni per le destinazioni dei messaggi trap SNMP e le notifiche e-mail. Vedere link:../installconfig/configuring-bmc-interface.html["Configurare l'interfaccia BMC"].
+. Verificare che il nodo appliance sia visualizzato in Grid Manager e che non vengano visualizzati avvisi.
+

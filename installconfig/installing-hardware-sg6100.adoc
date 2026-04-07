@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, sg6100, sg6112, expansion shelf, cabinet, rack, drives 
 summary: Per i modelli SG6160 e SGF6112, installare le guide nel cabinet o nel rack e far scorrere lo shelf del controller, gli eventuali shelf di espansione e il controller di calcolo sulle guide. 
 ---
-= Installazione nell'armadietto o nel rack (SG6100)
+= Installare l'SG6100 in un armadio o in un rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, storage controller shelf, Battery, Drive, Power canister, power supply, Fan canister, fan, Drive drawer 
 summary: Se si verifica un problema hardware, potrebbe essere necessario sostituire un componente nello shelf dello storage controller. 
 ---
-= Sostituisci i componenti hardware nello shelf dello storage controller SG6000
+= Sostituire i componenti hardware nello shelf di espansione dello storage controller SG6000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -73,4 +73,4 @@ Cassetto unità (solo shelf da 60 dischi)
 E-Series: Sostituire il cassetto dell'unità (60 dischi)
 
 |===
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

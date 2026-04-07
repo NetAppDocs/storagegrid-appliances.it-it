@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Rivedere i tipi e i requisiti del filtro a carboni attivi E4000. 
 ---
-= Sostituire il filtro a carboni attivi della ventola in SG5860
+= Sostituire il contenitore della ventola nell'SG5860
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

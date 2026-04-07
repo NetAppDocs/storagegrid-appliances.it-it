@@ -1,0 +1,80 @@
+---
+permalink: sg120-1200/reinstalling-sg120-and-sg1200-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, admin node, admin appliance, install, installing, installation, cabinet, rack 
+summary: 'Rimuovere l"SG120 o l"SG1200 da un armadio o rack per accedere al coperchio superiore o per spostare l"apparecchio in un"altra posizione, quindi reinstallare l"apparecchio in un armadio o rack al termine della manutenzione hardware.' 
+---
+= Ricollocare SG120 e SG1200 in un cabinet o rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Rimuovere l'SG120 o l'SG1200 da un armadio o rack per accedere al coperchio superiore o per spostare l'apparecchio in un'altra posizione, quindi reinstallare l'apparecchio in un armadio o rack al termine della manutenzione hardware.
+
+.Prima di iniziare
+* Sono presenti delle etichette per identificare ciascun cavo collegato all'SG120 o all'SG1200.
+* Ti trovi link:locating-sg120-and-sg1200-in-data-center.html["localizzato fisicamente l'SG120 o l'SG1200"] dove stai eseguendo manutenzione nel data center.
+* Hai link:power-sg120-and-sg1200-off-on.html#shut-down-the-sg120-or-sg1200-appliance["spegnere l'SG120 o l'SG1200"].
++
+
+CAUTION: Non spegnere l'apparecchio utilizzando l'interruttore di alimentazione.
+
+
+
+
+
+== Passaggio 1: Rimuovere SG120 o SG1200 dall'armadio o dal rack
+
+.Fasi
+. Etichettare e scollegare i cavi di alimentazione dell'apparecchio.
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. Etichettare e quindi scollegare i cavi dati dell'apparecchio e tutti i ricetrasmettitori SFP+, SFP28 o SFP56.
++
+
+IMPORTANT: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Allentare le due viti di fissaggio sul pannello anteriore dell'apparecchio.
++
+image::../media/sg120_sg1200_rack_retaining_screws.png[Viti di fissaggio del rack SG120 o SG1200]
+
+. Far scorrere l'SG120 o l'SG1200 in avanti fuori dal rack fino a quando le guide di montaggio non sono completamente estese e si sente lo scatto dei fermi su entrambi i lati.
++
+Il coperchio superiore dell'apparecchio è accessibile.
+
++
+
+NOTE: Se si rimuove completamente l'appliance dal cabinet o dal rack, seguire le istruzioni del kit di guide per rimuovere l'appliance dalle guide.
+
+
+
+
+
+== Passaggio 2: Reinstallare SG120 o SG1200 nell'armadio o nel rack
+
+.Fasi
+. Premere contemporaneamente i pulsanti di sblocco blu su entrambe le guide del rack e far scorrere l'SG120 o l'SG1200 nel rack fino a quando non è completamente inserito.
++
+Se non è possibile spostare ulteriormente il controller, tirare i fermi blu su entrambi i lati dello chassis per farlo scorrere completamente all'interno.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG120 o SG1200 scorrevoli su binari]
+
++
+
+NOTE: Non collegare il pannello anteriore fino a quando non si accende il controller.
+
+. Serrare le viti di fissaggio sul pannello anteriore del controller per fissare il controller nel rack.
++
+image::../media/sg120_sg1200_rack_retaining_screws.png[Viti di fissaggio del rack SG120 o SG1200]
+
+. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità del fermaglio a una messa a terra metallica per evitare scariche elettrostatiche.
+. link:../installconfig/cabling-appliance.html["Ricollegare i cavi dati del controller e gli eventuali ricetrasmettitori SFP"].
++
+
+IMPORTANT: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Ricollegare i cavi di alimentazione del controller"].
+. link:power-sg120-and-sg1200-off-on.html#power-on-sg120-or-sg1200-and-verify-operation["Riavviare l'apparecchio"].
+

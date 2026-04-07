@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, controller, e2800, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: 'Per i controller storage che attualmente utilizzano SANtricity OS precedente alla 08.42.20.00 (11.42), è necessario utilizzare la procedura della modalità di manutenzione per applicare un aggiornamento.' 
 ---
-= Aggiornare il sistema operativo SANtricity sul controller E4000 usando la modalità di manutenzione
+= Aggiorna il sistema operativo SANtricity sul controller SG5800 E4000 utilizzando la modalità di manutenzione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: 'Per i controller storage che attualmente utilizzano SANtricity OS prec
 
 [role="lead"]
 È possibile utilizzare la modalità di manutenzione per aggiornare il sistema operativo SANtricity sul controller E4000.
-
-Per i controller storage che attualmente utilizzano SANtricity OS precedente alla 08.42.20.00 (11.42), è necessario utilizzare la procedura della modalità di manutenzione per applicare un aggiornamento.
 
 
 NOTE: Per gli storage controller che attualmente utilizzano un sistema operativo SANtricity più recente della versione 08.42.20.00 (11,42), si consiglia di farlo link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Utilizzare Grid Manager per applicare un aggiornamento"]. Tuttavia, è possibile utilizzare la procedura della modalità di manutenzione se si preferisce o se è stato richiesto dal supporto tecnico.
@@ -54,7 +52,7 @@ NOTE: Attivare immediatamente i file di aggiornamento. Non rinviare l'attivazion
 Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e si riconnetta alla rete.  Per confermare che il riavvio è completo e che il nodo si è riunito alla griglia:
 
 +
-... Nel Grid Manager, seleziona *NODI*.
+... Nel Grid Manager, selezionare *Nodi*.
 ... Verificare che il nodo dell'appliance abbia uno stato normale (icona del segno di spunta verdeimage:../media/icon_alert_green_checkmark.png["segno di spunta verde"] a sinistra del nome del nodo), che indica che non ci sono avvisi attivi e che il nodo è connesso alla rete.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, clone appliance node, cloning appliance node 
 summary: Prima di clonare un nodo appliance, è necessario comprendere le considerazioni e i requisiti. 
 ---
-= Considerazioni e requisiti per la clonazione del nodo dell'appliance
+= Requisiti per la clonazione del nodo dell'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -65,18 +65,20 @@ NOTE: L'utilizzo della rete di amministrazione 1-GbE per il trasferimento dei da
 
 * Determina se utilizzerai la crittografia dei nodi tramite un server di gestione delle chiavi (KMS) sull'appliance di destinazione, in modo da poter abilitare la crittografia dei nodi durante l'installazione iniziale dell'appliance di destinazione prima della clonazione.  È possibile verificare se la crittografia del nodo è abilitata sul nodo dell'appliance di origine come descritto inlink:../installconfig/optional-enabling-node-encryption.html["abilitazione della crittografia del nodo"] .
 +
-Il nodo di origine e l'appliance di destinazione possono avere impostazioni di crittografia dei nodi diverse, con le seguenti eccezioni.  La clonazione dei nodi non è supportata da origini con nodi non crittografati a destinazioni con nodi crittografati per i seguenti dispositivi:
+Il nodo sorgente e l'appliance di destinazione possono avere impostazioni di crittografia del nodo diverse, con le seguenti eccezioni. La clonazione del nodo non è supportata da sorgenti con nodi non crittografati a destinazioni con nodi crittografati per le seguenti appliance:
 
 +
 ** Un dispositivo nodo SGF6112 senza crittografia nodo a un dispositivo SGF6112 con crittografia nodo
 ** Un dispositivo nodo SG1100 senza crittografia nodo a un dispositivo SG1100 con crittografia nodo
+** Da un'appliance nodo SG1200 senza crittografia del nodo a un'appliance nodo SG1200 con crittografia del nodo
 ** Un dispositivo nodo SG110 senza crittografia nodo a un dispositivo SG110 con crittografia nodo
+** Da un dispositivo nodo SG120 senza crittografia del nodo a un dispositivo nodo SG120 con crittografia del nodo
 
 
 +
 La decrittazione e la crittografia dei dati vengono eseguite automaticamente durante il trasferimento dei dati e quando il nodo di destinazione si riavvia e si unisce alla griglia.
 
-* Determinare se la modalità RAID sull'appliance di destinazione deve essere modificata rispetto all'impostazione predefinita, in modo da poter specificare queste informazioni durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. È possibile visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *NODES* in Grid Manager. Selezionare la scheda *hardware* per l'apparecchio.
+* Determina se la modalità RAID sull'appliance di destinazione deve essere modificata rispetto all'impostazione predefinita, in modo da poter specificare queste informazioni durante l'installazione iniziale dell'appliance di destinazione prima della clonazione. Puoi visualizzare le informazioni sulla modalità RAID corrente del nodo dell'appliance di origine nella pagina *Nodi* di Grid Manager. Seleziona la scheda *Hardware* per l'appliance.
 +
 Il nodo di origine e l'appliance di destinazione possono avere impostazioni RAID diverse.
 

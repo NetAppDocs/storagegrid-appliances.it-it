@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing, installation 
 summary: Il controller SG6000-CN dispone di due alimentatori per la ridondanza. In caso di guasto di uno degli alimentatori, è necessario sostituirlo il prima possibile per garantire che il controller di calcolo disponga di alimentazione ridondante. 
 ---
-= Sostituire l'alimentatore del controller SG6000-CN
+= Sostituire l'alimentatore in un controller SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

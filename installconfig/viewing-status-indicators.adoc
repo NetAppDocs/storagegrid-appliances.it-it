@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: status, indicators, lights, leds, light, led, display, switch , button, power, reset, identify, alarm, ssd, indicator, boot codes, boot, code, start, startup, start up, start-up, progress 
 summary: 'Gli appliance e i controller includono indicatori che consentono di determinare lo stato dei componenti dell"appliance.' 
 ---
-= Visualizzare gli indicatori e i codici di stato
+= Visualizza gli indicatori di stato e i codici sui dispositivi StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -118,7 +118,7 @@ Identificare il LED
  a| 
 * Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
 * Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
-* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+* Spento: l'appliance non è visivamente identificabile all'interno del cabinet o del rack.
 
 
 |===
@@ -289,7 +289,7 @@ Identificare il LED
  a| 
 * Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
 * Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
-* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+* Spento: l'appliance non è visivamente identificabile all'interno del cabinet o del rack.
 
 
 |===
@@ -315,6 +315,176 @@ Indicatori SSD::
 +
 --
 La figura seguente mostra gli indicatori SSD sugli appliance SG110 e SG1100.
+
+image::../media/ssd_indicators.png[Indicatori SSD]
+
+[cols="1a,2a,2a"]
+|===
+| LED | Display | Stato 
+
+
+ a| 
+1
+ a| 
+Stato/guasto del disco
+ a| 
+* Blu (fisso): L'unità è in linea
+* Ambra (fisso): Guasto al disco
+* OFF: Slot vuoto
+
+
+
+
+ a| 
+2
+ a| 
+Disco attivo
+ a| 
+Blu (lampeggiante): Accesso all'unità in corso
+
+|===
+--
+
+
+--
+.SG120 e SG1200
+--
+L'appliance include indicatori che consentono di determinare lo stato del controller dell'appliance e degli SSD:
+
+* <<appliance_indicators_sg120_sg1200,Indicatori e pulsanti dell'apparecchio>>
+* <<general_boot_codes_sg120_sg1200,Codici generali di boot>>
+* <<ssd_indicators_sg120_sg1200,Indicatori SSD>>
+
+
+Utilizza queste informazioni per aiutare link:troubleshooting-hardware-installation-sg120-and-sg1200.html["Risoluzione dei problemi di installazione hardware di SG120 e SG1200"].
+
+[[appliance_indicators_sg120_sg1200]]
+Indicatori e pulsanti dell'apparecchio::
++
+--
+La figura seguente mostra gli indicatori e i pulsanti presenti sulla parte frontale degli apparecchi SG120 e SG1200.
+
+image::../media/sg120_sg1200_front_indicators.png[Indicatori frontali - SG120 e SG1200]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | Display | Stato 
+
+
+ a| 
+1
+ a| 
+Pulsante di accensione
+ a| 
+* Blu: L'apparecchio è acceso.
+* Spento: L'apparecchio è spento.
+
+
+
+
+ a| 
+2
+ a| 
+Pulsante di reset
+ a| 
+Utilizzare questo pulsante per eseguire un hard reset del controller.
+
+
+
+ a| 
+3
+ a| 
+Identificare il pulsante
+ a| 
+Utilizzando BMC, questo pulsante può essere impostato su lampeggiante, acceso (fisso) o spento.
+
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+
+
+ a| 
+4
+ a| 
+LED di stato
+ a| 
+* Ambra, fisso: Si è verificato un errore.
++
+*Nota:* per visualizzare i codici di avvio e di errore, link:accessing-bmc-interface.html["Accedere all'interfaccia BMC"].
+
+* OFF: Non sono presenti errori.
+
+
+
+
+ a| 
+5
+ a| 
+PFR
+ a| 
+Questa spia non viene utilizzata dagli apparecchi SG120 e SG1200 e rimane spenta.
+
+|===
+--
+
+
+La figura seguente mostra la posizione dell'alimentatore e identifica i LED sul retro dei modelli SG120 e SG1200. Ulteriori LED di stato e di attività sono presenti sulle porte dell'appliance. Questi LED possono variare a seconda del modello dell'appliance.
+
+image::../media/sg120_sg1200_rear_leds.png[LED posteriori SG120 e SG1200]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* Spento: l'appliance non è visivamente identificabile all'interno del cabinet o del rack.
+
+
+|===
+[[general_boot_codes_sg120_sg1200]]
+Codici generali di boot::
++
+--
+Durante l'avvio o dopo una reimpostazione a freddo dell'appliance, si verifica quanto segue:
+
+. Il BMC (Baseboard Management Controller) registra i codici per la sequenza di avvio, inclusi gli eventuali errori che si verificano.
+. Il pulsante di alimentazione si illumina.
+. Se si verificano errori durante l'avvio, il LED di allarme si accende.
++
+Per visualizzare i codici di avvio e di errore, link:accessing-bmc-interface.html["Accedere all'interfaccia BMC"].
+
+
+
+--
+
+
+[[ssd_indicators_sg120_sg1200]]
+Indicatori SSD::
++
+--
+La figura seguente mostra gli indicatori SSD sugli appliance SG120 e SG1200.
 
 image::../media/ssd_indicators.png[Indicatori SSD]
 
@@ -926,7 +1096,7 @@ Identificare il LED
  a| 
 * Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
 * Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
-* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+* Spento: l'appliance non è visivamente identificabile all'interno del cabinet o del rack.
 
 
 |===
@@ -1091,7 +1261,7 @@ Identificare il LED
  a| 
 * Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
 * Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
-* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+* Spento: l'appliance non è visivamente identificabile all'interno del cabinet o del rack.
 
 
 |===
@@ -1136,6 +1306,181 @@ Stato/guasto del disco
 
 
 *Nota:* se una nuova unità SSD funzionante viene inserita in un nodo SGF6112 o SG6160 StorageGRID funzionante, i LED sull'unità SSD dovrebbero lampeggiare inizialmente, ma smettono di lampeggiare non appena il sistema determina che l'unità ha sufficiente capacità ed è funzionante.
+
+
+
+ a| 
+2
+ a| 
+Disco attivo
+ a| 
+Blu (lampeggiante): Accesso all'unità in corso
+
+|===
+--
+
+
+.Informazioni correlate
+https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^]
+
+--
+.SG6200
+--
+L'appliance include indicatori che consentono di determinare lo stato del controller dell'appliance e degli SSD:
+
+* <<appliance_indicators_SG6200,Indicatori e pulsanti dell'apparecchio>>
+* <<general_boot_codes_SG6200,Codici generali di boot>>
+* <<ssd_indicators_SG6200,Indicatori SSD>>
+
+
+Utilizza queste informazioni per aiutare link:troubleshooting-hardware-installation-sg6200.html["Risoluzione dei problemi di installazione hardware SG6200"].
+
+[[appliance_indicators_SG6200]]
+Indicatori e pulsanti dell'apparecchio::
++
+--
+La figura seguente mostra gli indicatori e i pulsanti presenti sulla parte frontale degli apparecchi SG6200.
+
+image::../media/s25_front_indicators.png[Indicatori frontali - SG6200]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | Display | Stato 
+
+
+ a| 
+1
+ a| 
+Pulsante di accensione
+ a| 
+* Blu: L'apparecchio è acceso.
+* Spento: L'apparecchio è spento.
+
+
+
+
+ a| 
+2
+ a| 
+Pulsante di reset
+ a| 
+Utilizzare questo pulsante per eseguire un hard reset del controller.
+
+
+
+ a| 
+3
+ a| 
+Identificare il pulsante
+ a| 
+Utilizzando BMC, questo pulsante può essere impostato su lampeggiante, acceso (fisso) o spento.
+
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* OFF: L'apparecchio non è identificabile visivamente nell'armadio o nel rack.
+
+
+
+
+ a| 
+4
+ a| 
+LED di stato
+ a| 
+* Ambra, fisso: Si è verificato un errore.
++
+*Nota:* per visualizzare i codici di avvio e di errore, link:accessing-bmc-interface.html["Accedere all'interfaccia BMC"].
+
+* OFF: Non sono presenti errori.
+
+
+
+
+ a| 
+5
+ a| 
+PFR
+ a| 
+Questa spia non viene utilizzata dagli apparecchi SG6200 e rimane spenta.
+
+|===
+--
+
+
+La figura seguente mostra la posizione dell'alimentatore e dei LED di identificazione sul retro dei modelli SGF6212 e SG6200-CN. Ulteriori LED di stato e di attività sono presenti sulle porte dell'appliance. Questi LED possono variare a seconda del modello dell'appliance.
+
+image::../media/s25_rear_leds.png[LED posteriori SGF6212 e SG6200-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Didascalia | LED | Stato 
+
+
+ a| 
+1
+ a| 
+LED dell'alimentatore
+ a| 
+* Verde, fisso: Alimentazione applicata all'apparecchio, pulsante di accensione acceso.
+* Verde lampeggiante: Alimentazione applicata all'apparecchio, pulsante di accensione spento.
+* Spento: L'apparecchio non è alimentato.
+* Ambra: Guasto all'alimentazione.
+
+
+
+
+ a| 
+2
+ a| 
+Identificare il LED
+ a| 
+* Blu, lampeggiante: Identifica l'apparecchio nell'armadio o nel rack.
+* Blu, fisso: Identifica l'apparecchio nell'armadio o nel rack.
+* Spento: l'appliance non è visivamente identificabile all'interno del cabinet o del rack.
+
+
+|===
+[[general_boot_codes_SG6200]]
+Codici generali di boot::
++
+--
+Durante l'avvio o dopo una reimpostazione a freddo dell'appliance, si verifica quanto segue:
+
+. Il BMC (Baseboard Management Controller) registra i codici per la sequenza di avvio, inclusi gli eventuali errori che si verificano.
+. Il pulsante di alimentazione si illumina.
+. Se si verificano errori durante l'avvio, il LED di allarme si accende.
++
+Per visualizzare i codici di avvio e di errore, link:accessing-bmc-interface.html["Accedere all'interfaccia BMC"].
+
+
+
+--
+
+
+[[ssd_indicators_SG6200]]
+Indicatori SSD::
++
+--
+La figura seguente mostra gli indicatori SSD sull'appliance SGF6212 o SG6260.
+
+image::../media/ssd_indicators.png[Indicatori SSD]
+
+[cols="1a,2a,2a"]
+|===
+| LED | Display | Stato 
+
+
+ a| 
+1
+ a| 
+Stato/guasto del disco
+ a| 
+* Blu (fisso): L'unità è in linea
+* Ambra (fisso): Guasto al disco
+* OFF: Slot vuoto
+
+
+*Nota:* Se si inserisce un nuovo SSD funzionante in un nodo StorageGRID SGF6212 o SG6260 funzionante, i LED sull'SSD dovrebbero iniziare a lampeggiare, ma smetteranno di lampeggiare non appena il sistema determina che l'unità ha una capacità sufficiente ed è funzionante.
 
 
 

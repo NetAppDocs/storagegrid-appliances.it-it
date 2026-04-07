@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: links, network links, configure, setup, set up, grid network connections, grid network connection, link speed, bond mode 
 summary: 'È possibile configurare i collegamenti di rete per le porte utilizzate per collegare l"appliance a Grid Network, Client Network e Admin Network. È possibile impostare la velocità di collegamento e le modalità di connessione di rete e porta.' 
 ---
-= Configurare i collegamenti di rete
+= Configurare i collegamenti di rete per un'appliance StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,10 +40,12 @@ NOTE: Le modifiche alla velocità della PDU LACP apportate seguendo queste istru
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modalità Port bond (SG1000 e SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modalità Port bond (SG1100 e SG110)"]
+* link:gathering-installation-information-sg120-and-sg1200.html#port-bond-modes["Modalità di collegamento delle porte (SG1200 e SG120)"]
 * link:gathering-installation-information-sg5700.html#port-bond-modes["Modalità Port bond (E5700SG)"]
 * link:gathering-installation-information-sg5800.html#port-bond-modes["Modalità Port bond (SG5800)"]
 * link:gathering-installation-information-sg6000.html#port-bond-modes["Modalità Port Bond (SG6000-CN)"]
 * link:gathering-installation-information-sg6100.html#port-bond-modes["Modalità Port bond (SGF6112 e SG6100-CN)"]
+* link:gathering-installation-information-sg6200.html#port-bond-modes["Modalità di collegamento delle porte (SGF6212 e SG6200-CN)"]
 
 
 [role="tabbed-block"]
@@ -313,6 +315,141 @@ image::../media/sg1100_bonded_management_ports.png[Porte di rete dell'amministra
 SG110:
 
 image::../media/sgf6112_bonded_management_ports.png[Porte di rete dell'amministratore collegate SG110]
+
+--
+
+
+--
+.SG120 e SG1200
+--
+Modalità Fixed port bond (predefinita)::
++
+--
+Le figure mostrano come le quattro porte di rete degli SG120 e SG1200 siano aggregate in modalità di aggregazione a porta fissa (configurazione predefinita).
+
+SG120:
+
+image::../media/sg120_fixed_port.png[Modalità di bond delle porte fisse SG120]
+
+SG1200:
+
+image::../media/sg1200_fixed_port.png[Modalità di collegamento a porta fissa SG1200]
+
+[cols="1a,3a"]
+|===
+| Didascalia | Quali porte sono collegate 
+
+
+ a| 
+C.
+ a| 
+Le porte 1 e 3 sono collegate tra loro per la rete client, se viene utilizzata questa rete.
+
+
+
+ a| 
+G
+ a| 
+Le porte 2 e 4 sono collegate tra loro per la rete Grid.
+
+|===
+La tabella riassume le opzioni per la configurazione delle quattro porte di rete. Se si desidera utilizzare un'impostazione non predefinita, è necessario configurare le impostazioni nella pagina di configurazione del collegamento.
+
+[cols="1a,2a,2a"]
+|===
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
+
+
+ a| 
+Active-Backup (impostazione predefinita)
+ a| 
+* Le porte 2 e 4 utilizzano un bond di backup attivo per Grid Network.
+* Le porte 1 e 3 non vengono utilizzate.
+* Un tag VLAN è opzionale.
+
+ a| 
+* Le porte 2 e 4 utilizzano un bond di backup attivo per Grid Network.
+* Le porte 1 e 3 utilizzano un bond di backup attivo per la rete client.
+* I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+* Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
+* Le porte 1 e 3 non vengono utilizzate.
+* Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
+
+ a| 
+* Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
+* Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
+* I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
+
+
+|===
+--
+Modalità aggregate port bond::
++
+--
+Queste figure mostrano come le quattro porte di rete sono collegate in modalità aggregate port bond.
+
+SG120:
+
+image::../media/sg120_aggregate_ports.png[Modalità di collegamento della porta aggregata SG120]
+
+SG1200:
+
+image::../media/sg1200_aggregate_ports.png[Modalità di collegamento della porta aggregata SG1200]
+
+[cols="1a,3a"]
+|===
+| Didascalia | Quali porte sono collegate 
+
+
+ a| 
+1
+ a| 
+Tutte e quattro le porte sono raggruppate in un unico collegamento LACP, consentendo l'utilizzo di tutte le porte per il traffico Grid Network e Client Network.
+
+|===
+La tabella riassume le opzioni per la configurazione delle porte di rete. Se si desidera utilizzare un'impostazione non predefinita, è necessario configurare le impostazioni nella pagina di configurazione del collegamento.
+
+[cols="1a,2a,2a"]
+|===
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
+
+
+ a| 
+Solo LACP (802.3ad)
+ a| 
+* Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
+* Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
+
+ a| 
+* Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
+* Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
+
+
+|===
+--
+Modalità bond di rete Active-Backup per le porte di gestione::
++
+--
+Queste figure mostrano come le due porte di gestione 1-GbE sulle appliance sono collegate in modalità bond di rete Active-Backup per la rete di amministrazione.
+
+SG120:
+
+image::../media/sg120_bonded_management_ports.png[Porte di rete amministrative aggregate SG120]
+
+SG1200:
+
+image::../media/sg1200_bonded_management_ports.png[Porte di rete amministrative aggregate SG1200]
 
 --
 
@@ -796,6 +933,141 @@ image::../media/sg6100_cn_bonded_management_ports.png[Porte di rete amministrati
 
 
 --
+.SG6200
+--
+Modalità Fixed port bond (predefinita)::
++
+--
+La figura mostra come le quattro porte di rete sono collegate in modalità Fixed Port Bond (configurazione predefinita).
+
+*SGF6212*:
+
+image::../media/sgf6212_fixed_port.png[Modalità di bond delle porte fisse SGF6212]
+
+*SG6200-CN*:
+
+image::../media/sg6200_cn_fixed_port.png[SG6200-CN Modalità di collegamento a porta fissa]
+
+[cols="1a,3a"]
+|===
+| Didascalia | Quali porte sono collegate 
+
+
+ a| 
+C.
+ a| 
+Le porte 1 e 3 sono collegate tra loro per la rete client, se viene utilizzata questa rete.
+
+
+
+ a| 
+G
+ a| 
+Le porte 2 e 4 sono collegate tra loro per la rete Grid.
+
+|===
+La tabella riassume le opzioni per la configurazione delle porte di rete. Se si desidera utilizzare un'impostazione non predefinita, è necessario configurare le impostazioni nella pagina di configurazione del collegamento.
+
+[cols="1a,2a,2a"]
+|===
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
+
+
+ a| 
+Active-Backup (impostazione predefinita)
+ a| 
+* Le porte 2 e 4 utilizzano un bond di backup attivo per Grid Network.
+* Le porte 1 e 3 non vengono utilizzate.
+* Un tag VLAN è opzionale.
+
+ a| 
+* Le porte 2 e 4 utilizzano un bond di backup attivo per Grid Network.
+* Le porte 1 e 3 utilizzano un bond di backup attivo per la rete client.
+* I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+
+
+
+
+ a| 
+LACP (802.3ad)
+ a| 
+* Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
+* Le porte 1 e 3 non vengono utilizzate.
+* Un tag VLAN è opzionale.
+* Nella sezione Rete Grid è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
+
+ a| 
+* Le porte 2 e 4 utilizzano un collegamento LACP per la rete Grid.
+* Le porte 1 e 3 utilizzano un collegamento LACP per la rete client.
+* I tag VLAN possono essere specificati per entrambe le reti per comodità dell'amministratore di rete.
+* I valori della velocità PDU LACP e della policy hash di trasmissione LACP possono essere specificati nelle sezioni Rete Grid e Rete Client.
+
+
+|===
+--
+Modalità aggregate port bond::
++
+--
+La figura mostra come le quattro porte di rete sono collegate in modalità aggregate port bond.
+
+*SGF6212*:
+
+image::../media/sgf6212_aggregate_ports.png[Modalità di collegamento aggregato della porta SGF6212]
+
+*SG6200*:
+
+image::../media/sg6200_cn_aggregate_ports.png[Modalità di collegamento aggregato della porta SG6200-CN]
+
+[cols="1a,3a"]
+|===
+| Didascalia | Quali porte sono collegate 
+
+
+ a| 
+1
+ a| 
+Tutte e quattro le porte sono raggruppate in un unico collegamento LACP, consentendo l'utilizzo di tutte le porte per il traffico Grid Network e Client Network.
+
+|===
+La tabella riassume le opzioni per la configurazione delle porte di rete. Se si desidera utilizzare un'impostazione non predefinita, è necessario configurare le impostazioni nella pagina di configurazione del collegamento.
+
+[cols="1a,2a,2a"]
+|===
+| Network bond mode (modalità bond di | Rete client disabilitata | Rete client abilitata (predefinita) 
+
+
+ a| 
+Solo LACP (802.3ad)
+ a| 
+* Le porte 1-4 utilizzano un unico collegamento LACP per la rete Grid.
+* Un singolo tag VLAN identifica i pacchetti Grid Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
+
+ a| 
+* Le porte 1-4 utilizzano un unico collegamento LACP per Grid Network e Client Network.
+* Due tag VLAN consentono di separare i pacchetti Grid Network dai pacchetti Client Network.
+* Nella sezione Impostazioni collegamento è possibile specificare i valori della velocità PDU LACP e della policy hash di trasmissione LACP.
+
+
+|===
+--
+Modalità bond di rete Active-Backup per le porte di gestione::
++
+--
+Questa figura mostra come le due porte di gestione 1-GbE sono collegate in modalità di connessione di rete Active-Backup per la rete di amministrazione.
+
+*SGF6212*:
+
+image::../media/sgf6212_bonded_management_ports.png[Porte di rete amministrative aggregate SGF6212]
+
+*SG6200*:
+
+image::../media/sg6200_cn_bonded_management_ports.png[Porte di rete amministrative aggregate SG6200-CN]
+
+--
+
+
+--
 ====
 .Fasi
 . Dalla barra dei menu del programma di installazione dell'appliance StorageGRID, fare clic su *Configura rete* > *Configurazione del collegamento*.
@@ -827,12 +1099,12 @@ NOTE: Per SG5800, lo stato del collegamento per la porta 1 non è disponibile ne
 Anche gli switch di rete utilizzati per la rete di rete e la rete client devono supportare ed essere configurati per questa velocità. È necessario utilizzare gli adattatori o i ricetrasmettitori appropriati per la velocità di collegamento configurata. Se possibile, utilizza la velocità di collegamento automatica perché questa opzione negozia sia la velocità di collegamento che la modalità FEC (Forward Error Correction) con il partner di collegamento.
 
 +
-Se si prevede di utilizzare la velocità di collegamento 25-GbE per le porte di rete SG6100, SG6000, SG5800 o SG5700:
+Se si prevede di utilizzare la velocità di collegamento 25-GbE per le porte di rete SG6200, SG6100, SG6000, SG5800 o SG5700:
 
 +
 ** Utilizzare i ricetrasmettitori SFP28 e i cavi twinax SFP28 o i cavi ottici.
 ** Per SG5700, selezionare *25GbE* dall'elenco a discesa *velocità di collegamento*.
-** Per SG5800, SG6000 o SG6100, selezionare *Auto* dall'elenco a discesa *velocità collegamento*.
+** Per i modelli SG5800, SG6000, SG6100 o SG6200, selezionare *Auto* dall'elenco a discesa *Velocità di collegamento*.
 
 
 . Attivare o disattivare le reti StorageGRID che si intende utilizzare.

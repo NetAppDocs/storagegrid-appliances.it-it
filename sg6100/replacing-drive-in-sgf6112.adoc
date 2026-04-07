@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
 summary: 'L"appliance di storage SGF6112 contiene 12 unità SSD. I dati sui dischi sono protetti da uno schema RAID che consente all"appliance di eseguire il ripristino da qualsiasi guasto a un singolo disco senza dover copiare i dati da un altro nodo. ' 
 ---
-= Sostituisci le unità nel SGF6112
+= Sostituire le unità in un SGF6112
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -123,7 +123,7 @@ HDD11
 
 |===
 +
-È inoltre possibile utilizzare Grid Manager per monitorare lo stato dei dischi SSD. Selezionare *NODI*. Quindi selezionare `*Storage Node*` > *hardware*. In caso di guasto di un disco, il campo Storage RAID Mode (modalità RAID storage) contiene un messaggio relativo al disco guasto.
+È possibile utilizzare anche Grid Manager per monitorare lo stato delle unità SSD. Selezionare *Nodi*. Quindi selezionare  `*Storage Node*` > *Hardware*. Se un'unità si è guastata, il campo Modalità RAID di archiviazione contiene un messaggio che indica quale unità si è guastata.
 
 
 
@@ -161,8 +161,8 @@ L'unità sostituita viene automaticamente ricostruita con dati mirrorati dai dis
 +
 È possibile controllare lo stato della ricostruzione utilizzando Grid Manager.
 
-. Se più di un disco si è guastato ed è stato sostituito, potrebbero essere visualizzati avvisi che indicano che alcuni volumi devono essere ripristinati. Se si riceve un avviso, prima di tentare il ripristino del volume, selezionare *NODI* > `*appliance Storage Node*` > *hardware*. Nella sezione dell'appliance StorageGRID della pagina, verificare che la modalità RAID dello storage sia funzionante o in fase di ricostruzione. Se lo stato elenca uno o più dischi guasti, correggere questa condizione prima di tentare il ripristino del volume.
-. In Grid Manager, andare a *NODES* > `*appliance Storage Node*` > *hardware*. Nella sezione dell'appliance StorageGRID della pagina, verificare che la modalità RAID dello storage sia corretta.
+. Se più di un'unità si è guastata ed è stata sostituita, potrebbero comparire degli avvisi che indicano la necessità di ripristinare i dati su alcuni volumi. In caso di avviso, prima di tentare il ripristino del volume, selezionare *Nodi* > `*appliance Storage Node*` > *Hardware*. Nella sezione StorageGRID Appliance della pagina, verificare che la modalità Storage RAID sia integra o in fase di ricostruzione. Se lo stato indica una o più unità guaste, correggere questa condizione prima di tentare il ripristino del volume.
+. Nel Grid Manager, vai su *Nodi* > `*appliance Storage Node*` > *Hardware*. Nella sezione StorageGRID Appliance della pagina, verifica che la modalità Storage RAID sia integra.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

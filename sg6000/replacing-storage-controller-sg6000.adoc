@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, storage controller, e2800, ef570, controller, remove, removing, removal, install, installing, installation 
 summary: Potrebbe essere necessario sostituire un controller E2800 o EF570 se non funziona in modo ottimale o se si è verificato un guasto. 
 ---
-= Sostituire il controller storage in SG6000
+= Sostituire uno storage controller nell'SG6000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -238,14 +238,14 @@ Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del di
 . Capovolgere il controller per verificare che la batteria sia installata correttamente.
 +
 
-CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte anteriore della batteria deve essere inserita completamente nello slot del controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, causando danni.
+CAUTION: *Possibile danno all'hardware* -- La flangia metallica nella parte anteriore della batteria deve essere completamente inserita nello slot sul controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, causando danni.
 
 +
 ** *Esatto -- la flangia metallica della batteria è completamente inserita nello slot del controller:*
 +
 image::../media/e2800_battery_flange_ok.gif[Flangia della batteria corretta]
 
-** *Errato -- la flangia metallica della batteria non è inserita nello slot del controller:*
+** *Errato - La flangia metallica della batteria non è inserita nell'apposito slot sul controller:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Flangia della batteria non corretta]
 
@@ -395,4 +395,4 @@ NOTE: Se il controller originale non ha utilizzato DHCP per l'indirizzo IP, il n
 . Verificare che il nuovo controller sia ottimale e raccogliere i dati di supporto.
 
 
-Dopo aver sostituito il componente, restituire il componente guasto a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Vedere https://mysupport.netapp.com/site/info/rma[" di restituzione della parte; sostituzioni"^] per ulteriori informazioni.
+Dopo aver sostituito il componente, restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzione dei pezzi"^] pagina per ulteriori informazioni.

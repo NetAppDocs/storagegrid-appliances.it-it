@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, sg5812, sg5860, install, cabinet, rack, rails, drives 
 summary: 'Installare una serie di guide nell"armadietto o nel rack, quindi far scorrere l"apparecchio sulle guide. Se si dispone di un sistema SG5760, installare le unità dopo l"installazione dell"apparecchio.' 
 ---
-= Installazione nell'armadietto o nel rack (SG5800)
+= Installare l'SG5800 in un armadio o in un rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
