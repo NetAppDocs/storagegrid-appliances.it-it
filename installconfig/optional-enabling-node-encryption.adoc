@@ -29,7 +29,7 @@ Se si attiva la crittografia dei nodi, i dischi dell'appliance possono essere pr
 
 Se si utilizza ConfigBuilder per generare un file JSON, è possibile attivare automaticamente la crittografia del nodo. Vedere link:automating-appliance-installation-and-configuration.html["Automazione dell'installazione e della configurazione delle appliance"].
 
-Inoltre, quando si abilita la modalità FIPS dopo aver abilitato la crittografia dei nodi, il modulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 viene utilizzato per la crittografia dei dati inattivi. Fare riferimento a https://review.docs.netapp.com/us-en/storagegrid_storagegrid-120-dev/admin/manage-tls-ssh-policy.html#select-a-security-policy["Seleziona una politica di sicurezza"^] per maggiori informazioni.
+Inoltre, quando si abilita la modalità FIPS dopo aver abilitato la crittografia del nodo, il modulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 viene utilizzato per la crittografia dei dati a riposo. Consultare  https://docs.netapp.com/us-en/storagegrid/admin/manage-tls-ssh-policy.html#select-a-security-policy["Seleziona una politica di sicurezza"^] per ulteriori informazioni.
 
 .Prima di iniziare
 Rivedere le informazioni su https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurazione di KMS"^].
