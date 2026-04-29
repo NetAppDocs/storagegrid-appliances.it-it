@@ -83,7 +83,7 @@ image::../media/bmc_power_control_page_controller_off.png[Pagina BMC Power Contr
 
 
 
-== Accendere il controller SG6000-CN e verificarne il funzionamento
+== [[poweron]]Accendere il controller SG6000-CN e verificarne il funzionamento
 
 Accendere il controller dopo aver completato la manutenzione.
 

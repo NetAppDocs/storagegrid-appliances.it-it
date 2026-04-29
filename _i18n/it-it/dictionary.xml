@@ -6586,4 +6586,5 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="2ba40bc143304c6482f4d84aed967cc7" category="sidebar">Controllore SG6200-CN (SG6260)</block>
   <block id="966b0abd256df531996f5779b0267572" category="sidebar">Controllore E4000 (SG6260)</block>
   <block id="7a6eea70e2a063993169b9f20b674a54" category="paragraph">Inoltre, quando si abilita la modalità FIPS dopo aver abilitato la crittografia del nodo, il modulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 viene utilizzato per la crittografia dei dati a riposo. Consultare <block ref="fb536484ccdd3f2f62bef4c60558bb81" category="inline-link-rx"></block> per ulteriori informazioni.</block>
+  <block id="8eca4ebb793a1236eac6e1dd47dd0f10" category="section-title">[[poweron]]Accendere il controller SG6000-CN e verificarne il funzionamento</block>
 </blocks>
