@@ -330,6 +330,7 @@ Stato/guasto del disco
  a| 
 * Blu (fisso): L'unità è in linea
 * Ambra (fisso): Guasto al disco
+* Ambra (lampeggiante): La spia del localizzatore dell'unità è accesa
 * OFF: Slot vuoto
 
 
@@ -1302,6 +1303,7 @@ Stato/guasto del disco
  a| 
 * Blu (fisso): L'unità è in linea
 * Ambra (fisso): Guasto al disco
+* Ambra (lampeggiante): La spia del localizzatore dell'unità è accesa
 * OFF: Slot vuoto
 
 
