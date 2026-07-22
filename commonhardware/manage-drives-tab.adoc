@@ -46,6 +46,7 @@ image:../media/manage_drives_tab_details.png["Scheda Gestisci unità Dettagli un
 
 
 
+[[turn-locator-light-on-or-off]]
 == Accendere o spegnere la spia del localizzatore
 
 Per individuare fisicamente un'unità nell'apparecchio:
@@ -66,6 +67,7 @@ Viene visualizzato il pannello dei dettagli dell'unità.
 
 
 
+[[logically-replace-drivelogically-replace-drive]]
 == [[logicamente-replace-drive]]sostituire logicamente l'unità
 
 Se è necessario ricostruire o reinizializzare un'unità nell'appliance di archiviazione:
@@ -83,6 +85,7 @@ Nel pannello dei dettagli dell'unità, lo stato dell'unità indica _ricostruzion
 
 
 
+[[fail-drive]]
 == Disco guasto
 
 Per la risoluzione dei problemi, è possibile "guastare" manualmente un'unità che si sospetta sia difettosa. Il sistema verrà quindi eseguito senza tale unità.

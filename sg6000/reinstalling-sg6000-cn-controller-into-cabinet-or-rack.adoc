@@ -15,6 +15,7 @@ Rimuovere il controller SG6000-CN da un armadietto o da un rack per accedere al 
 
 
 
+[[remove-sg6000-cn-controller-from-cabinet-or-rack]]
 == Rimuovere il controller SG6000-CN dal cabinet o dal rack
 
 Rimuovere il controller SG6000-CN da un cabinet o rack per accedere al coperchio superiore o per spostare il controller in una posizione diversa.
@@ -55,6 +56,7 @@ Dopo aver sostituito il componente, restituire il componente difettoso a NetApp,
 
 
 
+[[reinstall-sg6000-cn-controller-into-cabinet-or-rack]]
 == Reinstallare il controller SG6000-CN nel cabinet o nel rack
 
 Una volta completata la manutenzione dell'hardware, reinstallare il controller in un cabinet o rack.

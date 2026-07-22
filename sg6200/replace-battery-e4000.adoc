@@ -32,6 +32,7 @@ Se si intende sostituire una batteria guasta, è necessario disporre di:
 
 
 
+[[step-1-prepare-to-replace-battery]]
 == Fase 1: Preparazione alla sostituzione della batteria
 
 È necessario mettere il controller interessato fuori linea in modo da poter rimuovere in sicurezza la batteria guasta. Il controller che non si sta mettendo offline deve essere in linea (nello stato ottimale).
@@ -100,6 +101,7 @@ NOTE: Se si accede a Gestore di sistema di SANtricity utilizzando il controller 
 
 
 
+[[step-2-remove-e4000-controller-canister]]
 == Fase 2: Rimuovere il contenitore della centralina E4000
 
 È necessario rimuovere il contenitore del controller dallo shelf del controller, in modo da poter rimuovere la batteria.
@@ -124,6 +126,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 
 
 
+[[step-3-install-the-new-battery]]
 == Fase 3: Installare la nuova batteria
 
 È necessario rimuovere la batteria guasta e sostituirla.
@@ -180,6 +183,7 @@ Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda ma
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Fase 4: Reinstallare il contenitore del controller
 
 Dopo aver sostituito i componenti nel contenitore della centralina, reinstallarlo nel telaio.
@@ -212,6 +216,7 @@ Il controller inizia ad avviarsi non appena viene inserito nello chassis.
 
 
 
+[[step-5-complete-battery-replacement]]
 == Fase 5: Completare la sostituzione della batteria
 
 Posizionare il controller online.

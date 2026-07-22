@@ -17,6 +17,7 @@ In alternativa, è possibile aggiungere shelf di espansione da 60 dischi a entra
 
 
 
+[[sg6060-and-sg6060x-components]]
 == Componenti SG6060 e SG6060X
 
 Le appliance SG6060 e SG6060X includono i seguenti componenti:
@@ -64,12 +65,14 @@ L'enclosure della e-Series DE460C è uno shelf 4U che include:
 
 
 
+[[sg6060-and-sg6060x-diagrams]]
 == Schemi SG6060 e SG6060X
 
 I fronti di SG6060 e SG6060X sono identici.
 
 
 
+[[sg6060-or-sg6060x-front-view]]
 === Vista frontale di SG6060 o SG6060X
 
 Questa figura mostra la parte anteriore di SG6060 o SG6060X, che include un controller di calcolo 1U e uno shelf 4U contenente due controller di storage e 60 dischi in cinque cassetti.
@@ -143,6 +146,7 @@ Identificare il LED
 |===
 
 
+[[sg6060-rear-view]]
 === SG6060 Vista posteriore
 
 Questa figura mostra il retro del sistema SG6060, inclusi controller di calcolo e storage, ventole e alimentatori.
@@ -190,6 +194,7 @@ Alimentatore (1 di 2) per shelf di controller E2860
 |===
 
 
+[[sg6060x-rear-view]]
 === SG6060X Vista posteriore
 
 Questa figura mostra il retro del sistema SG6060X.
@@ -237,6 +242,7 @@ Alimentatore (1 di 2) per shelf di controller E2860
 |===
 
 
+[[expansion-shelf]]
 === Shelf di espansione
 
 Questa figura mostra il retro dello shelf di espansione opzionale per SG6060 e SG6060X, inclusi i moduli di input/output (IOM), le ventole e gli alimentatori. Ciascun SG6060 può essere installato con uno o due shelf di espansione, che possono essere inclusi nell'installazione iniziale o aggiunti successivamente.
@@ -270,12 +276,14 @@ Alimentatore (1 di 2) per shelf di espansione
 |===
 
 
+[[sg6000-controllers]]
 == Controller SG6000
 
 Ciascun modello di appliance StorageGRID SG6000 include un controller di calcolo SG6000-CN in un'enclosure 1U e controller di storage duplex e-Series in un'enclosure 2U o 4U, a seconda del modello. Consulta i diagrammi per saperne di più su ciascun tipo di controller.
 
 
 
+[[sg6000-cn-compute-controller]]
 === Controller di calcolo SG6000-CN
 
 * Fornisce risorse di calcolo per l'appliance.
@@ -374,6 +382,7 @@ Opzioni:
 |===
 
 
+[[sgf6024-ef570-storage-controllers]]
 === SGF6024: Storage controller EF570
 
 * Due controller per il supporto del failover.
@@ -447,6 +456,7 @@ Ethernet da 1 GB (RJ-45)
 |===
 
 
+[[sg6060-and-sg6060x-e2800-storage-controllers]]
 === SG6060 e SG6060X: Storage controller E2800
 
 * Due controller per il supporto del failover.
@@ -632,6 +642,7 @@ Collegare le porte alle porte di espansione del disco sugli IOM nello shelf di e
 |===
 
 
+[[sg6060-and-sg6060x-ioms-for-optional-expansion-shelves]]
 === SG6060 e SG6060X: IOM per shelf di espansione opzionali
 
 Lo shelf di espansione contiene due moduli di input/output (IOM) che si collegano ai controller di storage o ad altri shelf di espansione.

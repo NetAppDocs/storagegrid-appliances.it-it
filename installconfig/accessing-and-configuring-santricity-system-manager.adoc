@@ -49,9 +49,23 @@ NOTE: Devi configurare e avere accesso a SANtricity System Manager se la funzion
 
 
 
+[[set-up-and-access-santricity-system-manager]]
 == Configurare e accedere a Gestore di sistema di SANtricity
 
 Potrebbe essere necessario accedere a Gestore di sistema di SANtricity sul controller di storage per monitorare l'hardware nello shelf del controller di storage o per configurare e-Series AutoSupport.
+
+.Prima di iniziare
+* Si sta utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
+* Per accedere a Gestore di sistema di SANtricity tramite Gestione griglia, è stato installato StorageGRID e si dispone dell'autorizzazione di amministratore dell'appliance di storage o dell'autorizzazione di accesso root.
+* Per accedere a Gestione di sistema di SANtricity utilizzando il programma di installazione dell'appliance di StorageGRID, si dispone del nome utente e della password dell'amministratore di Gestione di sistema di SANtricity.
+* Per accedere direttamente a Gestore di sistema di SANtricity utilizzando un browser Web, si dispone del nome utente e della password dell'amministratore di Gestione di sistema di SANtricity.
+
+
+
+NOTE: È necessario disporre del firmware SANtricity 8.70 o superiore per accedere a Gestione sistema SANtricity utilizzando Gestione griglia o il programma di installazione dell'appliance StorageGRID. È possibile verificare la versione del firmware utilizzando il programma di installazione dell'appliance StorageGRID e selezionando *Guida* > *informazioni*.
+
+
+NOTE: L'accesso a Gestione di sistema SANtricity da Gestione griglia o dal programma di installazione dell'appliance è generalmente destinato solo al monitoraggio dell'hardware e alla configurazione di e-Series AutoSupport. Molte funzionalità e operazioni di Gestione sistema di SANtricity, come l'aggiornamento del firmware, non si applicano al monitoraggio dell'appliance StorageGRID. Per evitare problemi, seguire sempre le istruzioni di installazione e manutenzione dell'hardware dell'appliance.
 
 .A proposito di questa attività
 Esistono tre modi per accedere a Gestore di sistema di SANtricity, a seconda della fase del processo di installazione e configurazione in cui ci si trova:
@@ -69,37 +83,6 @@ Questa procedura include i passaggi per l'accesso iniziale a Gestore di sistema 
 
 
 NOTE: L'utilizzo di Gestione griglia o del programma di installazione dell'appliance StorageGRID consente di accedere a Gestione di sistema SANtricity senza dover configurare o collegare la porta di gestione dell'appliance.
-
-Si utilizza Gestore di sistema di SANtricity per monitorare quanto segue:
-
-* Dati sulle performance come performance a livello di array storage, latenza i/o, utilizzo della CPU e throughput
-* Stato dei componenti hardware
-* Funzioni di supporto, inclusa la visualizzazione dei dati diagnostici
-
-
-È possibile utilizzare Gestore di sistema di SANtricity per configurare le seguenti impostazioni:
-
-* Avvisi e-mail, SNMP o syslog per i componenti nello shelf dello storage controller
-* Impostazioni AutoSupport e-Series per i componenti nello shelf dello storage controller.
-+
-Per ulteriori informazioni su e-Series AutoSupport, consultare https://docs.netapp.com/us-en/e-series-family/index.html["Documentazione di NetApp e-Series"^] .
-
-* Drive Security keys, necessari per sbloccare dischi protetti (questa operazione è necessaria se la funzione Drive Security è attivata)
-* Password dell'amministratore per accedere a Gestione di sistema di SANtricity
-
-
-.Prima di iniziare
-* Si sta utilizzando un https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["browser web supportato"^].
-* Per accedere a Gestore di sistema di SANtricity tramite Gestione griglia, è stato installato StorageGRID e si dispone dell'autorizzazione di amministratore dell'appliance di storage o dell'autorizzazione di accesso root.
-* Per accedere a Gestione di sistema di SANtricity utilizzando il programma di installazione dell'appliance di StorageGRID, si dispone del nome utente e della password dell'amministratore di Gestione di sistema di SANtricity.
-* Per accedere direttamente a Gestore di sistema di SANtricity utilizzando un browser Web, si dispone del nome utente e della password dell'amministratore di Gestione di sistema di SANtricity.
-
-
-
-NOTE: È necessario disporre del firmware SANtricity 8.70 o superiore per accedere a Gestione sistema SANtricity utilizzando Gestione griglia o il programma di installazione dell'appliance StorageGRID. È possibile verificare la versione del firmware utilizzando il programma di installazione dell'appliance StorageGRID e selezionando *Guida* > *informazioni*.
-
-
-NOTE: L'accesso a Gestione di sistema SANtricity da Gestione griglia o dal programma di installazione dell'appliance è generalmente destinato solo al monitoraggio dell'hardware e alla configurazione di e-Series AutoSupport. Molte funzionalità e operazioni di Gestione sistema di SANtricity, come l'aggiornamento del firmware, non si applicano al monitoraggio dell'appliance StorageGRID. Per evitare problemi, seguire sempre le istruzioni di installazione e manutenzione dell'hardware dell'appliance.
 
 .Fasi
 . Effettuare una delle seguenti operazioni:
@@ -212,6 +195,7 @@ L'appliance di storage SG6260 può essere equipaggiata con unità conformi allo 
 
 
 
+[[review-hardware-status-in-santricity-system-manager]]
 == Esaminare lo stato dell'hardware in Gestore di sistema di SANtricity
 
 È possibile utilizzare Gestione di sistema di SANtricity per monitorare e gestire i singoli componenti hardware nello shelf dello storage controller e per esaminare informazioni ambientali e diagnostiche dell'hardware, come la temperatura dei componenti, nonché i problemi relativi ai dischi.
@@ -263,6 +247,7 @@ Se lo stato di un componente richiede attenzione, seguire la procedura descritta
 
 
 
+[[set-ip-addresses-for-storage-controllers-using-storagegrid-appliance-installer]]
 == Impostare gli indirizzi IP per i controller di storage utilizzando il programma di installazione dell'appliance StorageGRID
 
 La porta di gestione 1 di ciascun controller di storage collega l'appliance alla rete di gestione per Gestione di sistema di SANtricity. Se non è possibile accedere a Gestione di sistema SANtricity dal programma di installazione dell'appliance StorageGRID, impostare un indirizzo IP statico per ciascun controller di storage per assicurarsi di non perdere la connessione di gestione all'hardware e al firmware del controller nello shelf del controller.

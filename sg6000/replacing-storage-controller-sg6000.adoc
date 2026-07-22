@@ -57,6 +57,7 @@ NOTE: I controller di storage nella maggior parte dei modelli di appliance non i
 
 
 
+[[step-1-prepare-the-replacement-controller]]
 == Fase 1: Preparare la centralina sostitutiva
 
 Preparare il controller E2800A o E2800B sostitutivo.
@@ -114,6 +115,7 @@ La scheda HIC (host Interface Card) a 4 porte. Questa scheda deve essere spostat
 |===
 
 
+[[step-2-take-the-controller-offline]]
 == Passaggio 2: Portare il controller offline
 
 Prepararsi a rimuovere il controller guasto e a portarlo offline.
@@ -146,6 +148,7 @@ NOTE: La raccolta dei dati di supporto prima e dopo la sostituzione di un compon
 
 
 
+[[step-3-remove-the-controller]]
 == Passo 3: Rimuovere la centralina
 
 Rimuovere il controller guasto dall'appliance.
@@ -169,6 +172,7 @@ CAUTION: Utilizzare sempre due mani per sostenere il peso del controller.
 
 
 
+[[step-4-move-battery-to-the-new-controller]]
 == Passo 4: Spostare la batteria sulla nuova centralina
 
 Rimuovere la batteria dalla centralina guasta e installarla nella centralina sostitutiva.
@@ -256,6 +260,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Flangia della batteria non corre
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Fase 5: Spostare l'HIC sulla nuova centralina, se necessario
 
 Se il controller guasto include una scheda di interfaccia host (HIC), spostare l'HIC dal controller guasto al controller sostitutivo.
@@ -364,6 +369,8 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A viti de
 ====
 
 
+[[step-6-replace-controller]]
+[[step6_replace_controller]]
 == Fase 6: Sostituire la centralina
 
 Installare la centralina sostitutiva e verificare che sia stata ricollegata alla griglia.

@@ -15,6 +15,7 @@ Prima di sostituire un'unità in un SG5812 o SG5860, rivedere i requisiti e le c
 
 
 
+[[drive-handling]]
 == Gestione dei dischi
 
 Le unità dell'apparecchio sono fragili. Una gestione errata del disco è la causa principale del guasto del disco.

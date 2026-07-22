@@ -34,6 +34,7 @@ Durante l'esecuzione di questa attività, l'altro contenitore di alimentazione a
 
 
 
+[[step-1-prepare-to-replace-power-canister]]
 == Fase 1: Preparazione alla sostituzione del contenitore di alimentazione
 
 Preparare la sostituzione di un filtro a carboni attivi.
@@ -80,6 +81,7 @@ NOTE: È inoltre possibile trovare informazioni sul contenitore di alimentazione
 
 
 
+[[step-2-remove-failed-power-canister]]
 == Fase 2: Rimuovere il contenitore di alimentazione guasto
 
 Rimuovere un contenitore di alimentazione guasto in modo da poterlo sostituire con uno nuovo.
@@ -102,6 +104,7 @@ CAUTION: Quando si rimuove un filtro a carboni attivi, utilizzare sempre due man
 
 
 
+[[step-3-install-new-power-canister]]
 == Fase 3: Installare un nuovo filtro a carboni attivi
 
 Installare un nuovo filtro a carboni attivi per sostituire quello guasto.
@@ -120,6 +123,7 @@ CAUTION: Non esercitare una forza eccessiva quando si fa scorrere il contenitore
 
 
 
+[[step-4-complete-power-canister-replacement]]
 == Fase 4: Sostituzione completa del filtro a carboni attivi
 
 Verificare che il nuovo power taniche funzioni correttamente, raccogliere i dati di supporto e riprendere le normali operazioni.

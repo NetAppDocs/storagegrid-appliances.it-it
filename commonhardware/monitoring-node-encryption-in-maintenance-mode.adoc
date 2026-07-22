@@ -2,7 +2,7 @@
 permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
 sidebar: sidebar 
 keywords: kms, key management server, monitor, monitoring, status, encryption 
-summary: 'Se è stata attivata la crittografia dei nodi per l"appliance durante l"installazione, è possibile monitorare lo stato di crittografia dei nodi di ciascun nodo dell"appliance, inclusi i dettagli relativi allo stato di crittografia dei nodi e al server di gestione delle chiavi (KMS).' 
+summary: 'Se è stata attivata la crittografia dei nodi per l"appliance durante l"installazione, è possibile monitorare lo stato di crittografia dei nodi di ciascun nodo dell"appliance, inclusi i dettagli dello stato di crittografia dei nodi e del server di gestione delle chiavi (KMS).' 
 ---
 = Monitorare la crittografia dei nodi per un'appliance StorageGRID in modalità di manutenzione
 :allow-uri-read: 
@@ -59,6 +59,7 @@ Potrebbero essere necessari fino a 20 minuti affinché l'appliance si riavvii e 
 
 
 
+[[clear-key-management-server-configuration]]
 == Cancellare la configurazione del server di gestione delle chiavi
 
 La cancellazione della configurazione del server di gestione delle chiavi (KMS) disattiva la crittografia dei nodi sull'appliance. Dopo aver cancellato la configurazione KMS, i dati dell'appliance vengono cancellati in modo permanente e non sono più accessibili. Questi dati non sono ripristinabili.

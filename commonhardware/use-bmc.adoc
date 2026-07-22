@@ -36,11 +36,14 @@ La presente guida dell'utente di BMC si riferisce alla versione più recente del
 
 
 
+[[bmc-use-for-storagegrid-appliances]]
 == Utilizzo di BMC per appliance StorageGRID
 
 Le seguenti procedure BMC sono documentate per l'uso con le appliance StorageGRID supportate:
 
 * link:../installconfig/accessing-bmc-interface.html["Accedere alla dashboard BMC"]
+* https://docs.netapp.com/us-en/storagegrid/harden/hardening-guidelines-for-storagegrid-nodes.html#change-appliance-bmc-password["Cambia la password BMC dell'appliance in Grid Manager"^]
+* https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html#change-appliance-node-bmc-lan-ip-settings["Configura le impostazioni IP LAN di BMC"^]
 * link:../installconfig/configuring-snmp-settings-for-bmc.html["Configurare le impostazioni SNMP di BMC"]
 * link:../installconfig/setting-up-email-notifications-for-alerts.html["Impostare le notifiche degli avvisi e-mail"]
 * Risoluzione dei problemi di installazione hardware:
@@ -77,6 +80,7 @@ Le seguenti procedure BMC sono documentate per l'uso con le appliance StorageGRI
 
 
 
+[[bmc-features-not-supported-for-storagegrid-appliances]]
 == Funzioni BMC non supportate per le appliance StorageGRID
 
 Le seguenti funzioni di BMC sono in conflitto con la configurazione specifica di StorageGRID e non devono essere utilizzate.

@@ -23,6 +23,7 @@ image::../media/SGF6112-battery-cmos.png[Clip per batteria CMOS]
 
 
 
+[[reinstall-the-cmos-battery]]
 == Reinstallare la batteria CMOS
 
 Installare la batteria CMOS sostitutiva nello zoccolo della scheda di sistema.

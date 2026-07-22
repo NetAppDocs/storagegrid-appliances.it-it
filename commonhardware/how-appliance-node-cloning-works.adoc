@@ -17,6 +17,7 @@ La clonazione dei nodi dell'appliance consente di sostituire facilmente un nodo 
 
 
 
+[[why-clone-an-appliance-node]]
 == Perché clonare un nodo appliance?
 
 È possibile clonare un nodo appliance se è necessario:
@@ -30,6 +31,7 @@ La clonazione dei nodi dell'appliance consente di sostituire facilmente un nodo 
 
 
 
+[[which-storagegrid-network-is-used]]
 == Quale rete StorageGRID viene utilizzata?
 
 La clonazione trasferisce i dati dal nodo di origine direttamente all'appliance di destinazione su una qualsiasi delle tre reti StorageGRID. In genere viene utilizzata la rete Grid, ma è anche possibile utilizzare la rete Admin o la rete Client se l'appliance di origine è collegata a queste reti. Scegliere la rete da utilizzare per clonare il traffico che offre le migliori prestazioni di trasferimento dei dati senza compromettere le prestazioni della rete StorageGRID o la disponibilità dei dati.
@@ -38,6 +40,7 @@ Quando si installa l'appliance sostitutiva, è necessario specificare gli indiri
 
 
 
+[[what-information-is-not-cloned]]
 == Quali informazioni non vengono clonate?
 
 Le seguenti configurazioni dell'appliance non vengono trasferite all'appliance sostitutiva durante la clonazione. È necessario configurarli durante la configurazione iniziale dell'apparecchio sostitutivo.
@@ -51,20 +54,27 @@ Le seguenti configurazioni dell'appliance non vengono trasferite all'appliance s
 
 
 
+[[what-issues-prevent-cloning]]
 == Quali problemi impediscono la clonazione?
 
 Se durante la clonazione si verifica uno dei seguenti problemi, il processo di clonazione si interrompe e viene generato un messaggio di errore:
 
+* Cloning già in corso
 * Configurazione di rete errata
+* L'appliance di destinazione non riesce a raggiungere il nodo amministrativo primario
 * Mancanza di connettività tra le appliance di origine e di destinazione
-* Incompatibilità tra appliance di origine e di destinazione
-* Per i nodi di storage, un'appliance sostitutiva con capacità insufficiente
+* Gli apparecchi di origine e di destinazione non sono compatibili
+* Gli appliance di origine e di destinazione sono in stati di modalità di manutenzione diversi
+* Le versioni di StorageGRID Appliance Installer sugli appliance di origine e di destinazione non corrispondono
+* Per i nodi di archiviazione, l'appliance di destinazione ha uno storage incompatibile o capacità insufficiente
+* Il dispositivo di destinazione non è pronto
 
 
 Per continuare, è necessario risolvere ciascun problema.
 
 
 
+[[target-appliance-compatibility]]
 == Compatibilità con le appliance di destinazione
 
 Le appliance sostitutive devono essere dello stesso tipo del nodo di origine che stanno sostituendo ed entrambe devono far parte dello stesso sito logico StorageGRID.
@@ -73,6 +83,7 @@ Prima di procedere alla clonazione, esaminare le considerazioni generali sulla c
 
 
 
+[[general-services-appliance-cloning-considerations]]
 === Considerazioni generali sulla clonazione delle appliance dei servizi
 
 * Un'appliance di servizi sostitutiva può avere un modello diverso da quello del nodo amministrativo o del nodo gateway da sostituire.
@@ -81,6 +92,7 @@ Prima di procedere alla clonazione, esaminare le considerazioni generali sulla c
 
 
 
+[[general-storage-appliance-cloning-considerations]]
 === Considerazioni generali sulla clonazione delle appliance di storage
 
 * Un'appliance di storage sostitutiva deve avere una capacità superiore a quella del nodo di storage che sta sostituendo.
@@ -109,12 +121,14 @@ Tuttavia, se un'appliance con nodo di origine SG5760 a 60 dischi è configurata 
 
 
 
+[[sg100-appliance-cloning-information-and-restrictions]]
 === SG100 informazioni e restrizioni sulla clonazione delle appliance
 
 Puoi clonare un'appliance con nodi di origine SG100 su un'appliance con destinazione dei servizi SG110, SG1000 o SG1100. La clonazione di SG100 in un'appliance di destinazione dei servizi SG1000 o SG1100 offre una maggiore capacità al nodo amministrativo o al nodo gateway.
 
 
 
+[[sg110-appliance-cloning-information-and-restrictions]]
 === SG110 informazioni e restrizioni sulla clonazione delle appliance
 
 È possibile clonare un'appliance con nodo di origine SG110 in una destinazione di appliance con servizi SG1100 per fornire una maggiore funzionalità al nodo amministrativo o al nodo gateway.
@@ -123,6 +137,7 @@ La clonazione dei nodi non è supportata da un'appliance del nodo sorgente SG110
 
 
 
+[[sg120-appliance-cloning-information-and-restrictions]]
 === Informazioni e restrizioni sulla clonazione del dispositivo SG120
 
 È possibile clonare un'appliance nodo sorgente SG120 su un'appliance di servizi SG1200 di destinazione per conferire maggiori funzionalità al nodo Admin o al nodo Gateway.
@@ -131,6 +146,7 @@ La clonazione dei nodi non è supportata da un'appliance SG120 di origine senza 
 
 
 
+[[sg1000-appliance-cloning-information-and-restrictions]]
 === SG1000 informazioni e restrizioni sulla clonazione delle appliance
 
 Puoi clonare un'appliance con nodi di origine SG1000 su un'appliance con destinazione dei servizi SG100, SG110 o SG1100.
@@ -141,6 +157,7 @@ Puoi clonare un'appliance con nodi di origine SG1000 su un'appliance con destina
 
 
 
+[[sg1100-appliance-cloning-information-and-restrictions]]
 === SG1100 informazioni e restrizioni sulla clonazione delle appliance
 
 Puoi clonare un'appliance del nodo di origine SG1100 in un'appliance di destinazione dei servizi SG110.
@@ -153,6 +170,7 @@ La clonazione dei nodi non è supportata da un'appliance del nodo sorgente SG110
 
 
 
+[[sg1200-appliance-cloning-information-and-restrictions]]
 === Informazioni e restrizioni sulla clonazione dell'appliance SG1200
 
 È possibile clonare un'appliance nodo sorgente SG1200 su un'appliance di destinazione servizi SG120.
@@ -165,12 +183,14 @@ La clonazione dei nodi non è supportata da un'appliance SG1200 di origine senza
 
 
 
+[[sg5712-appliance-cloning-information-and-restrictions]]
 === SG5712 informazioni e restrizioni sulla clonazione delle appliance
 
 È possibile clonare un'appliance del nodo di origine SG5712 configurata con DDP in un'appliance di destinazione storage SG5812.
 
 
 
+[[sg5760-appliance-cloning-information-and-restrictions]]
 === SG5760 informazioni e restrizioni sulla clonazione delle appliance
 
 * È possibile clonare un'appliance del nodo di origine SG5760 configurata con DDP16 su un'appliance di destinazione storage SG5860 configurata con DDP16.
@@ -180,18 +200,21 @@ La clonazione dei nodi non è supportata da un'appliance SG1200 di origine senza
 
 
 
+[[sg5812-appliance-cloning-information-and-restrictions]]
 === SG5812 informazioni e restrizioni sulla clonazione delle appliance
 
 È possibile clonare correttamente un'appliance SG5812 come origine o destinazione.
 
 
 
+[[sg5860-appliance-cloning-information-and-restrictions]]
 === SG5860 informazioni e restrizioni sulla clonazione delle appliance
 
 È possibile clonare correttamente un'appliance SG5860 come origine o destinazione con alcune restrizioni (elencate nelle informazioni e nelle restrizioni sul cloning dell'appliance per ciascuna origine).
 
 
 
+[[sg6060-appliance-cloning-information-and-restrictions]]
 === SG6060 informazioni e restrizioni sulla clonazione delle appliance
 
 * Puoi clonare un'appliance con nodo di origine SG6060 configurata con DDP o DDP16 su un'appliance di destinazione storage SG5860 con una modalità RAID corrispondente.
@@ -201,12 +224,14 @@ La clonazione dei nodi non è supportata da un'appliance SG1200 di origine senza
 
 
 
+[[sgf6112-appliance-cloning-information-and-restrictions]]
 === Informazioni e restrizioni sulla clonazione dell'appliance SGF6112
 
 La clonazione dei nodi non è supportata da un'appliance di origine SGF6112 senza crittografia dei nodi a un'appliance di destinazione SGF6112 o SGF6212 con crittografia dei nodi.
 
 
 
+[[sg6160-and-sg6260-appliance-cloning-information-and-restrictions]]
 === Informazioni e restrizioni sulla clonazione degli appliance SG6160 e SG6260
 
 È possibile clonare correttamente un'appliance SG6160 come origine o destinazione con alcune restrizioni (elencate nelle informazioni e nelle restrizioni sul cloning dell'appliance per ciascuna origine).

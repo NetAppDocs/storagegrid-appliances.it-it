@@ -31,11 +31,12 @@ Utilizzando i tool NetApp StorageGRID, è possibile automatizzare l'installazion
 
 
 
+[[automation-options]]
 == Opzioni di automazione
 
 Per automatizzare l'installazione e la configurazione dell'appliance, utilizzare una o più delle seguenti opzioni:
 
-* Generare un file JSON contenente i dettagli di configurazione. Collabora con il tuo consulente NetApp Professional Services per utilizzare link:https://configbuilder.netapp.com/index.aspx["Tool NetApp ConfigBuilder"^] per completare questi passaggi:
+* Genera un file JSON contenente i dettagli di configurazione. Collabora con il tuo consulente NetApp Professional Services per utilizzare link:https://configbuilder.netapp.com/Index.aspx["Tool NetApp ConfigBuilder"^] (accesso richiesto) per completare questi passaggi:
 +
 .. Per ottenere il numero d'ordine di vendita, rivolgiti ai Professional Services di NetApp.
 .. Scaricare la cartella di lavoro da ConfigBuilder.
@@ -69,6 +70,8 @@ NOTE: È possibile utilizzare direttamente gli script Python per l'automazione d
 
 
 
+[[automate-appliance-configuration-using-storagegrid-appliance-installer]]
+[[automate-with-appliance-installer]]
 == Automatizza la configurazione dell'appliance con il programma di installazione dell'appliance StorageGRID
 
 Dopo aver generato un file JSON, è possibile automatizzare la configurazione di una o più appliance utilizzando il programma di installazione dell'appliance StorageGRID per caricare il file JSON.
@@ -109,6 +112,8 @@ La configurazione viene applicata al nodo selezionato.
 
 
 
+[[automate-appliance-installation-and-configuration-using-configure-sga-py-script]]
+[[automate-with-configure-sga-py-script]]
 == Automatizza l'installazione e la configurazione delle appliance utilizzando lo script configure-sga.py
 
 Se si è utenti esperti, è possibile utilizzare `configure-sga.py` Script per automatizzare molte delle attività di installazione e configurazione per i nodi dell'appliance StorageGRID, inclusa l'installazione e la configurazione di un nodo amministratore primario. Questo script può essere utile se si dispone di un gran numero di appliance da configurare.

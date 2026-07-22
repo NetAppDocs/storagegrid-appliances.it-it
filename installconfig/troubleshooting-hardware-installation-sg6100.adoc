@@ -15,6 +15,7 @@ In caso di problemi durante l'installazione, potrebbe essere utile consultare le
 
 
 
+[[view-boot-codesview-boot-up-codes-sgf6112-and-sg6160-only]]
 == [[view-boot-codes]]Visualizza i codici di avvio (solo SGF6112 e SG6160)
 
 Quando si alimenta l'appliance, il BMC registra una serie di codici di avvio. È possibile visualizzare questi codici su una console grafica collegata alla porta di gestione BMC.
@@ -188,6 +189,7 @@ StorageGRID è in esecuzione.
 
 
 
+[[view-error-codesview-error-codes-sgf6112-and-sg6160-only]]
 == [[view-error-codes]]visualizzazione dei codici di errore (solo SGF6112 e SG6160)
 
 Se si verifica un errore hardware durante l'avvio dell'appliance, BMC registra un codice di errore. Se necessario, è possibile visualizzare questi codici di errore utilizzando la porta seriale del dispositivo, quindi collaborare con il supporto tecnico per risolvere il problema.
@@ -560,6 +562,8 @@ MRC: ERR_INTERLEAVE_FAILURE
 
 
 
+[[hardware-setup-appears-to-hang]]
+[[hardware-setup-hangs]]
 == L'installazione dell'hardware sembra bloccarsi
 
 Il programma di installazione dell'appliance StorageGRID potrebbe non essere disponibile se errori hardware o di cablaggio impediscono all'appliance di completare l'elaborazione di avvio.
@@ -571,10 +575,12 @@ Il programma di installazione dell'appliance StorageGRID potrebbe non essere dis
 
 
 
+[[connection-issues]]
 == Problemi di connessione
 
 
 
+[[expansion-shelves-dont-appear-in-appliance-installer-sg6160]]
 === Gli shelf di espansione non vengono visualizzati in Appliance Installer (SG6160)
 
 Se sono stati installati shelf di espansione che non vengono visualizzati nel programma di installazione dell'appliance StorageGRID, è necessario verificare che gli shelf siano stati completamente installati e accesi.
@@ -599,6 +605,7 @@ Se le pagine del programma di installazione dell'appliance StorageGRID non indic
 
 
 
+[[unable-to-connect-to-appliance]]
 === Impossibile connettersi all'appliance
 
 Se non è possibile connettersi all'appliance di archiviazione, potrebbe essersi verificato un problema di rete o l'installazione dell'hardware potrebbe non essere stata completata correttamente.

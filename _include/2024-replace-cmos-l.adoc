@@ -17,6 +17,7 @@ image::../media/sg6060_riser_assembly_location.jpg[Posizione del gruppo del mont
 
 
 
+[[reinstall-the-cmos-battery]]
 == Reinstallare la batteria CMOS
 
 Installare la batteria CMOS sostitutiva nello zoccolo della scheda di sistema.

@@ -116,6 +116,9 @@ CAUTION: Se si desidera conservare i dati sulle unità, inserire le unità SSD n
 +
 ... Per ripristinare la configurazione BMC in modo che utilizzi un IP statico, una netmask e un gateway, immettere i seguenti comandi:
 +
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
 `*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
 
 +

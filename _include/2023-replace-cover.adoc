@@ -16,6 +16,7 @@ CAUTION: Avvolgere l'estremità del cinturino di un braccialetto antistatico int
 
 
 
+[[reinstall-cover]]
 == Reinstallare il coperchio
 
 .Prima di iniziare

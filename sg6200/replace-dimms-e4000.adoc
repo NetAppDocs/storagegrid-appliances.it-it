@@ -35,6 +35,7 @@ Per sostituire un DIMM, verificare le dimensioni della cache del controller, pos
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Fase 1: Determinare se è necessario sostituire un DIMM
 
 Verificare le dimensioni della cache del controller prima di sostituire i DIMM.
@@ -52,6 +53,7 @@ Verificare le dimensioni della cache del controller prima di sostituire i DIMM.
 
 
 
+[[step-2-place-controller-offline]]
 == Passaggio 2: Mettere il controller offline
 
 Posizionare il controller offline in modo da poter rimuovere e sostituire i DIMM in modo sicuro.
@@ -100,6 +102,7 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
 
 
 
+[[step-3-remove-controller-canister]]
 == Fase 3: Rimuovere il contenitore della centralina
 
 Rimuovere il filtro a carboni attivi della centralina dal sistema, quindi rimuovere il coperchio del filtro a carboni attivi della centralina.
@@ -121,6 +124,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Aprire il c
 
 
 
+[[step-4-replace-the-dimms]]
 == Fase 4: Sostituire i DIMM
 
 Individuare il modulo DIMM all'interno del controller, rimuoverlo e sostituirlo.
@@ -192,6 +196,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 
 
+[[step-5-reinstall-the-controller-canister]]
 == Fase 5: Reinstallare il contenitore della centralina
 
 Rimontare il contenitore della centralina nel telaio.
@@ -225,6 +230,7 @@ Il controller inizia ad avviarsi non appena viene inserito nello chassis.
 
 
 
+[[step-6-complete-dimms-replacement]]
 == Fase 6: Completare la sostituzione dei DIMM
 
 Posizionare il controller online, raccogliere i dati di supporto e riprendere le operazioni.

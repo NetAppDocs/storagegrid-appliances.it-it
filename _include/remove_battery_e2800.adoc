@@ -4,6 +4,7 @@
 
 
 
+[[step-4-move-battery-to-the-new-controller]]
 == Passo 4: Spostare la batteria sulla nuova centralina
 
 Rimuovere la batteria dalla centralina guasta e installarla nella centralina sostitutiva.

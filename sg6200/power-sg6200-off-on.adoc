@@ -15,6 +15,7 @@ summary: 'È possibile spegnere l"apparecchio SG6200 e riaccenderlo per eseguire
 
 
 
+[[shut-down-the-sgf6212-appliance-or-sg6200-cn-controller]]
 == Spegnere l'appliance SGF6212 o il controller SG6200-CN
 
 Spegnere l'appliance per eseguire la manutenzione dell'hardware.
@@ -60,6 +61,7 @@ Il completamento di questo comando potrebbe richiedere fino a 10 minuti.
 
 
 
+[[power-on-sgf6212-or-sg6200-cn-and-verify-operation]]
 == Accendere SGF6212 o SG6200-CN e verificarne il funzionamento
 
 Accendere il controller dopo aver completato la manutenzione.

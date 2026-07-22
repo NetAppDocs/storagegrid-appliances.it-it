@@ -2,7 +2,7 @@
 permalink: installconfig/deploying-services-appliance-node.html 
 sidebar: sidebar 
 keywords: storagegrid, sg110, sg1100, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
-summary: 'È possibile implementare un"appliance di servizi come nodo di amministrazione primario, nodo di amministrazione non primario o nodo gateway. Tutte le appliance di servizi possono funzionare contemporaneamente come nodi gateway e nodi amministrativi \(primari o non primari\).' 
+summary: 'È possibile implementare un"appliance di servizi come nodo di amministrazione primario, nodo di amministrazione non primario o nodo gateway. Tutte le appliance per i servizi possono operare contemporaneamente come nodi gateway e nodi amministrativi (primari o non primari).' 
 ---
 = Distribuisci un nodo dell'appliance di servizi StorageGRID
 :allow-uri-read: 
@@ -15,6 +15,7 @@ summary: 'È possibile implementare un"appliance di servizi come nodo di amminis
 
 
 
+[[deploy-services-appliance-as-primary-admin-node]]
 == Implementare l'appliance di servizi come nodo di amministrazione primario
 
 Quando si implementa un'appliance di servizi come nodo amministrativo primario, si utilizza il programma di installazione dell'appliance StorageGRID incluso nell'appliance per installare il software StorageGRID oppure si carica la versione software che si desidera installare. È necessario installare e configurare il nodo di amministrazione primario prima di installare altri tipi di nodo dell'appliance. Un nodo amministratore primario può connettersi alla rete griglia e alla rete amministrativa e alla rete client opzionali, se sono configurati uno o entrambi.
@@ -79,6 +80,7 @@ NOTE: Per accedere manualmente alla pagina Installazione monitor, fare clic su *
 
 
 
+[[deploy-services-appliance-as-gateway-or-non-primary-admin-node]]
 == Implementare l'appliance di servizi come gateway o nodo di amministrazione non primario
 
 Quando si implementa un'appliance di servizi come nodo gateway o nodo amministratore non primario, si utilizza il programma di installazione dell'appliance StorageGRID incluso nell'appliance.

@@ -31,10 +31,47 @@ Le tre schede di rete (NIC) presenti nell'apparecchio sono alloggiate in tre ris
 +
 image::../media/drw_s2025_io_numbers_ieops-2554.svg[Posizioni delle schede di rete interne nello chassis StorageGRID]
 
++
+[cols="1a,3a,5a"]
+|===
+|  | Nome del dispositivo o della parte | Descrizione 
+
+
+ a| 
+1
+ a| 
+NIC 1 nell'assemblaggio riser a singolo slot
+ a| 
+Porte di rete Ethernet 10/25-GbE per Grid e Client Networks
+
+
+
+ a| 
+2
+ a| 
+NIC 2 nell'assemblaggio riser a singolo slot
+ a| 
+Porte di rete Ethernet 1/10-GbE per Admin Network
+
+
+
+ a| 
+3
+ a| 
+NIC 3 nell'assemblaggio riser a singolo slot
+ a| 
+Porte di rete Ethernet 10/25-GbE per Grid e Client Networks
+
+|===
++
+
+NOTE: L'appliance SG1200 supporta porte di rete ad alta velocità e potrebbe avere NIC ad alta velocità installate.
 
 
 
 
+
+[[step-1-remove-the-nic]]
 == Passaggio 1: Rimuovere la scheda di rete
 
 [role="tabbed-block"]
@@ -79,6 +116,7 @@ image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Rimozione di una scheda
 ====
 
 
+[[step-2-reinstall-the-internal-nic]]
 == Passaggio 2: Reinstallare la scheda di rete interna
 
 Installare la scheda NIC sostitutiva nella stessa posizione di quella rimossa.

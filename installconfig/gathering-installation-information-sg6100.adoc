@@ -18,6 +18,7 @@ TIP: Invece di utilizzare le tabelle, utilizzare la guida fornita con ConfigBuil
 
 
 
+[[check-storagegrid-version]]
 == Controllare la versione di StorageGRID
 
 Prima di installare un'appliance SGF6112 o SG6160, verificare che il sistema StorageGRID utilizzi una versione richiesta del software StorageGRID.
@@ -42,6 +43,7 @@ SG6160
 |===
 
 
+[[connect-to-santricity-system-manager]]
 == Connettersi a Gestore di sistema di SANtricity
 
 Collegando i controller di storage dell'appliance SG6160 alla rete di gestione da utilizzare per SANtricity System Manager, La centralina A si trova nella parte superiore e la centralina B nella parte inferiore.
@@ -142,6 +144,7 @@ Deve essere:
 |===
 
 
+[[administration-and-maintenance-ports]]
 == Porte di amministrazione e manutenzione
 
 La rete amministrativa per StorageGRID è una rete opzionale utilizzata per l'amministrazione e la manutenzione del sistema. L'appliance si collega alla rete amministrativa utilizzando le seguenti porte 1/10-GbE sull'appliance.
@@ -222,6 +225,7 @@ Subnet di rete amministrativa (CIDR)
 |===
 
 
+[[networking-ports]]
 == Porte di rete
 
 Le quattro porte di rete dell'appliance si collegano alla rete StorageGRID Grid e alla rete client opzionale.
@@ -281,6 +285,7 @@ Porta dello switch per la porta 4 (Grid Network per la modalità fissa)
 |===
 
 
+[[grid-network-ports]]
 == Porte Grid Network
 
 La rete grid per StorageGRID è una rete richiesta, utilizzata per tutto il traffico StorageGRID interno. L'appliance si collega alla rete Grid tramite le quattro porte di rete.
@@ -352,6 +357,7 @@ Impostazione MTU (Maximum Transmission Unit) (opzionale). È possibile utilizzar
 |===
 
 
+[[client-network-ports]]
 == Porte di rete client
 
 La rete client per StorageGRID è una rete opzionale, generalmente utilizzata per fornire l'accesso del protocollo client alla griglia. L'appliance si connette alla rete client utilizzando le quattro porte di rete.
@@ -422,6 +428,7 @@ Indirizzo IP statico che si intende utilizzare per il nodo appliance sulla rete 
 |===
 
 
+[[bmc-management-network-ports]]
 == Porte di rete per la gestione BMC
 
 È possibile accedere all'interfaccia BMC dell'appliance utilizzando la porta di gestione 1-GbE cerchiata nel diagramma. Questa porta supporta la gestione remota dell'hardware del controller su Ethernet utilizzando lo standard IPMI (Intelligent Platform Management Interface).
@@ -471,12 +478,14 @@ Indirizzo IP statico che si intende utilizzare per la porta di gestione BMC
 |===
 
 
+[[port-bond-modes]]
 == Modalità Port bond
 
 Quando link:configuring-network-links.html["configurazione dei collegamenti di rete"] Per l'appliance SGF6112, è possibile utilizzare il bonding di porta per le porte che si collegano alla rete Grid e alla rete client opzionale e per le porte di gestione da 1/10-GbE che si collegano alla rete amministrativa opzionale. Il port bonding consente di proteggere i dati fornendo percorsi ridondanti tra le reti StorageGRID e l'appliance.
 
 
 
+[[network-bond-modes]]
 === Network Bond
 
 Le porte di rete dell'appliance supportano la modalità Fixed Port Bond o aggregate Port Bond per le connessioni Grid Network e Client Network.
@@ -562,6 +571,7 @@ NOTE: Se si sceglie di utilizzare meno di quattro porte di rete, è possibile ch
 
 
 
+[[network-bond-modes-for-management-ports]]
 === Network bond mode per le porte di gestione
 
 Per le due porte di gestione 1/10-GbE, è possibile scegliere la modalità Independent network bond o la modalità Active-Backup network bond per connettersi alla rete amministrativa opzionale.

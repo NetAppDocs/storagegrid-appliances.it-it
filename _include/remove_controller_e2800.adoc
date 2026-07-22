@@ -4,6 +4,7 @@
 
 
 
+[[step-3-remove-the-controller]]
 == Passo 3: Rimuovere la centralina
 
 Rimuovere il controller guasto dall'appliance.

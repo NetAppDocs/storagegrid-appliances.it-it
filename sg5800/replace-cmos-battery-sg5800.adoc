@@ -18,6 +18,7 @@ Non sarà possibile accedere al nodo di archiviazione dell'appliance quando si s
 
 
 
+[[step-1-shut-down-the-sg5800-controller]]
 == Passaggio 1: spegnere il controller SG5800
 
 .Fasi
@@ -40,6 +41,7 @@ Una volta effettuato l'accesso come root, il prompt cambia da `$` a. `#`.
 
 
 
+[[step-2-remove-the-controller-from-the-appliance]]
 == Passaggio 2: rimuovere il controller dall'appliance
 
 .Fasi
@@ -64,6 +66,7 @@ image::../media/drw_sg5800_open_controller_module_cover_IEOPS-695.svg[Apri il co
 
 
 
+[[step-3-replace-the-cmos-battery]]
 == Passaggio 3: sostituire la batteria CMOS
 
 .Fasi
@@ -89,6 +92,7 @@ NOTE: Nota la polarità della batteria mentre la rimuovi dal supporto. La batter
 
 
 
+[[step-4-reinstall-the-controller-into-the-appliance]]
 == Passaggio 4: Reinstallare il controller nell'apparecchio
 
 .Fasi

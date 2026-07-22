@@ -45,10 +45,12 @@ Il sistema SG6160 offre le seguenti funzioni di protezione dei dati:
 
 
 
+[[sg6100-hardware-components]]
 == SG6100 componenti hardware
 
 
 
+[[sgf6112-appliance]]
 === Appliance SGF6112
 
 L'apparecchio SGF6112 comprende i seguenti componenti:
@@ -70,6 +72,7 @@ Piattaforma di calcolo e storage:: Un server con un'unità rack (1U) che include
 
 
 
+[[sg6160-appliance]]
 === Appliance SG6160
 
 L'apparecchio SG6160 comprende i seguenti componenti:
@@ -114,10 +117,12 @@ L'enclosure della e-Series DE460C è uno shelf 4U che include:
 
 
 
+[[sgf6112-and-sg6160-diagrams]]
 == Schemi SGF6112 e SG6160
 
 
 
+[[sgf6112-front-view]]
 === Vista frontale di SGF6112
 
 Questa figura mostra la parte anteriore di SGF6112 senza il pannello. L'appliance include una piattaforma di calcolo e storage 1U che contiene 12 unità SSD.
@@ -126,6 +131,7 @@ image::../media/sgf6112_front_with_ssds.png[SGF6112 Vista frontale]
 
 
 
+[[sgf6112-rear-view]]
 === Vista posteriore di SGF6112
 
 Questa figura mostra la parte posteriore di SGF6112, incluse le porte, le ventole e gli alimentatori.
@@ -235,6 +241,7 @@ Identificare il LED
 |===
 
 
+[[sg6160-front-view]]
 === SG6160 Vista frontale
 
 Questa figura mostra la parte anteriore di SG6160, che include un controller di calcolo 1U e uno shelf 4U con due storage controller e 60 dischi in cinque cassetti.
@@ -261,6 +268,7 @@ Shelf del controller E4000 con pannello anteriore rimosso (lo shelf di espansion
 |===
 
 
+[[sg6160-rear-view]]
 === SG6160 Vista posteriore
 
 Questa figura mostra la parte posteriore di SG6160, inclusi controller di calcolo e storage, ventole e alimentatori.
@@ -308,10 +316,12 @@ Alimentatore (1 di 2) per shelf di controller E4000
 |===
 
 
+[[sg6100-controllers]]
 == SG6100 controller
 
 
 
+[[sg6100-cn-compute-controller]]
 === Controller di calcolo SG6100-CN
 
 * Fornisce risorse di calcolo per l'appliance.
@@ -444,6 +454,7 @@ Identificare il LED
 |===
 
 
+[[sg6160-e4000-storage-controller]]
 === SG6160: Storage controller E4000
 
 * Due controller per il supporto del failover.
@@ -519,6 +530,7 @@ Sono presenti quattro collegamenti alla centralina SG6100-CN (due da ogni E4000)
 |===
 
 
+[[sg6160-ioms-for-optional-expansion-shelves]]
 === SG6160: IOM per shelf di espansione opzionali
 
 Lo shelf di espansione contiene due moduli di input/output (IOM) che si collegano ai controller di storage o ad altri shelf di espansione.

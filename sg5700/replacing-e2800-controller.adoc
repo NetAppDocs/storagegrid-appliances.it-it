@@ -45,6 +45,7 @@ NOTE: I controller di storage nella maggior parte dei modelli di appliance non i
 
 
 
+[[step-1-prepare-to-remove-the-controller]]
 == Passo 1: Preparazione per la rimozione del controller
 
 Queste figure mostrano il controller E2800A e il controller E2800B. La procedura per la sostituzione dei controller della serie E2800 e del controller EF570 è identica.
@@ -115,6 +116,7 @@ NOTE: La raccolta dei dati di supporto prima e dopo la sostituzione di un compon
 
 
 
+[[step-2-take-the-controller-offline]]
 == Passaggio 2: Portare il controller offline
 
 Portare il controller fuori linea e verificare che tutte le operazioni siano state completate.
@@ -132,6 +134,7 @@ Portare il controller fuori linea e verificare che tutte le operazioni siano sta
 
 
 
+[[step-3-remove-the-controller]]
 == Passo 3: Rimuovere la centralina
 
 Rimuovere il controller guasto dall'appliance.
@@ -155,6 +158,7 @@ CAUTION: Utilizzare sempre due mani per sostenere il peso del controller.
 
 
 
+[[step-4-move-battery-to-the-new-controller]]
 == Passo 4: Spostare la batteria sulla nuova centralina
 
 Rimuovere la batteria dalla centralina guasta e installarla nella centralina sostitutiva.
@@ -242,6 +246,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Flangia della batteria non corre
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Fase 5: Spostare l'HIC sulla nuova centralina, se necessario
 
 Se il controller guasto include una scheda di interfaccia host (HIC), spostare l'HIC dal controller guasto al controller sostitutivo.
@@ -350,6 +355,8 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A viti de
 ====
 
 
+[[step-6-replace-controller]]
+[[step6_replace_controller]]
 == Fase 6: Sostituire la centralina
 
 Installare la centralina sostitutiva e verificare che sia stata ricollegata alla griglia.

@@ -2,7 +2,7 @@
 permalink: commonhardware/appliance-node-cloning-procedure.html 
 sidebar: sidebar 
 keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
-summary: 'Il processo di cloning potrebbe richiedere diversi giorni per trasferire i dati tra il nodo di origine (appliance da sostituire) e l"appliance di destinazione.' 
+summary: 'Il processo di clonazione potrebbe richiedere diversi giorni per trasferire i dati tra il nodo di origine (appliance da sostituire) e l"appliance di destinazione (nuova).' 
 ---
 = Clonare un nodo appliance StorageGRID
 :allow-uri-read: 
@@ -19,6 +19,7 @@ Il processo di clonazione potrebbe richiedere diversi giorni per trasferire i da
 * L'appliance di destinazione è stata configurata, inclusa la configurazione delle connessioni StorageGRID, di Gestore di sistema SANtricity (solo appliance di storage) e dell'interfaccia BMC.
 +
 ** Quando si configurano le connessioni StorageGRID, utilizzare gli indirizzi IP temporanei.
+** Se abiliti il DHCP su qualsiasi porta del nodo di destinazione che era configurata come statica sul nodo di origine, assicurati che non ci siano lease DHCP permanenti per nessuno degli indirizzi MAC del nodo di origine. Se non lo fai, potrebbe verificarsi un conflitto di indirizzi IP al termine del processo di cloning.
 ** Quando si configurano i collegamenti di rete, utilizzare la configurazione finale del collegamento.
 
 
@@ -88,6 +89,10 @@ Al termine della clonazione:
 * I nodi di origine e di destinazione scambiano gli indirizzi IP:
 +
 ** Il nodo di destinazione ora utilizza gli indirizzi IP originariamente assegnati al nodo di origine per le reti Grid, Admin e Client.
++
+
+NOTE: Se al termine del processo di cloning riscontri un conflitto di indirizzi IP, assicurati che non siano stati assegnati lease DHCP permanenti a nessuno degli indirizzi MAC delle porte che avevano IP statici sul nodo di origine e che sono state abilitate per il DHCP sul nodo di destinazione. Rimuovi o aggiorna i lease DHCP permanenti sul server DHCP per risolvere questo conflitto.
+
 ** Il nodo di origine ora utilizza l'indirizzo IP temporaneo inizialmente assegnato al nodo di destinazione.
 
 

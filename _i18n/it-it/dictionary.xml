@@ -202,7 +202,6 @@
   <block id="5b3b1684d4744d60d0ea559befae0b79" category="doc">Gestire l'hardware dell'appliance di storage SG6000</block>
   <block id="a8f1846e6f8184bc3046276498b961f1" category="summary">Preparare il sito per l'installazione di un sistema StorageGRID.</block>
   <block id="8f58a5361471a29bd4cd009b10ad3e55" category="doc">Prima dell'installazione di StorageGRID</block>
-  <block id="7ed8cfd7589ccb16457b793b3fcdbe4a" category="summary">È possibile implementare un'appliance di servizi come nodo di amministrazione primario, nodo di amministrazione non primario o nodo gateway. Tutte le appliance di servizi possono funzionare contemporaneamente come nodi gateway e nodi amministrativi \(primari o non primari\).</block>
   <block id="336299dd63542543d20b9e2473db44b8" category="doc">Implementare il nodo dell'appliance di servizi</block>
   <block id="c6e7000dc5b49d6aeef69c46f89c0fda" category="paragraph">È possibile implementare un'appliance di servizi come nodo di amministrazione primario, nodo di amministrazione non primario o nodo gateway. Tutte le appliance per i servizi possono operare contemporaneamente come nodi gateway e nodi amministrativi (primari o non primari).</block>
   <block id="5982956d1cd896b46b04ee40aafef91c" category="section-title">Implementare l'appliance di servizi come nodo di amministrazione primario</block>
@@ -433,7 +432,6 @@
   <block id="637d84093e47a2d311f70c16efd1fbaf" category="section-title">Opzioni di automazione</block>
   <block id="860c87a182ca31f44cc41655b6ef0e38" category="paragraph">Per automatizzare l'installazione e la configurazione dell'appliance, utilizzare una o più delle seguenti opzioni:</block>
   <block id="580a5e0ce39ae2ec5351c812bce2c0fd" category="inline-link-macro">Tool NetApp ConfigBuilder</block>
-  <block id="37d45de60b7a8ed97f4f0abd5b1f4fe7" category="list-text">Generare un file JSON contenente i dettagli di configurazione. Collabora con il tuo consulente NetApp Professional Services per utilizzare <block ref="6e01088b801244abaf1606b43aa333bc" category="inline-link-macro-rx"></block> per completare questi passaggi:</block>
   <block id="47d00aac8daab338422a3465a9886690" category="list-text">Per ottenere il numero d'ordine di vendita, rivolgiti ai Professional Services di NetApp.</block>
   <block id="28f34d834b7a27ef978d9d87c9083c40" category="list-text">Scaricare la cartella di lavoro da ConfigBuilder.</block>
   <block id="f927657604cba8e17d1d86e40d1cf59f" category="list-text">Per completare questo opuscolo, rivolgiti ai Professional Services.</block>
@@ -621,7 +619,6 @@
   <block id="0fee0f52421181527dca342e62631904" category="list-text">Creare filtri per ogni evento di cui si desidera che venga inviata una notifica al gruppo di criteri di avviso.</block>
   <block id="be3213e417fd502705643e4549968d50" category="list-text">È possibile creare filtri per eventi per azioni di alimentazione, eventi specifici dei sensori o tutti gli eventi.</block>
   <block id="5119bbd8747a73ede6231374d0ae78d9" category="list-text">In caso di dubbi sugli eventi da monitorare, selezionare *tutti i sensori* per tipo di sensore e *tutti gli eventi* per Opzioni evento. Se si ricevono notifiche indesiderate, è possibile modificare le selezioni in un secondo momento.</block>
-  <block id="fcf672ea93cdf70821fc498932b88f50" category="summary">L'appliance SG5700 StorageGRID è una piattaforma di storage e calcolo integrata che opera come nodo di storage in un grid StorageGRID. L'appliance può essere utilizzata in un ambiente di grid ibrido che combina nodi di storage dell'appliance e nodi di storage virtuali (basati su software).</block>
   <block id="9988d2e8cbe0869dd21d6284c017b853" category="paragraph">L'appliance SG5700 StorageGRID è una piattaforma di storage e calcolo integrata che opera come nodo di storage in un grid StorageGRID. L'appliance può essere utilizzata in un ambiente di grid ibrido che combina nodi storage dell'appliance e nodi storage virtuali (basati su software).</block>
   <block id="bfdc9d1fb0dc76b1f5af63251ca8d737" category="paragraph">L'appliance StorageGRID serie SG5700 offre le seguenti funzionalità:</block>
   <block id="63c4aebff5dcf4232c42fbc5ca0e270e" category="list-text">Integrare gli elementi di storage e calcolo per un nodo di storage StorageGRID.</block>
@@ -1154,7 +1151,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="ccff858e243f2d310a8c9501d4e241f9" category="paragraph">È possibile utilizzare Gestore di sistema di SANtricity per configurare le seguenti impostazioni:</block>
   <block id="7480b3d5b96758e9706895f9f09074a6" category="list-text">Avvisi e-mail, SNMP o syslog per i componenti nello shelf dello storage controller</block>
   <block id="2afb5eeba8ea3c04fefb11c5aac8aaa0" category="list-text">Impostazioni AutoSupport e-Series per i componenti nello shelf dello storage controller.</block>
-  <block id="0d50ff542a20edfdc030f87225abed8a" category="list-text">Drive Security keys, necessari per sbloccare dischi protetti (questa operazione è necessaria se la funzione Drive Security è attivata)</block>
   <block id="ee9d34135078ea9745c7862276886545" category="list-text">Password dell'amministratore per accedere a Gestione di sistema di SANtricity</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Effettuare una delle seguenti operazioni:</block>
   <block id="d88448093f00932101bdf21de1585cc1" category="list-text">Utilizzare il programma di installazione dell'appliance StorageGRID e selezionare *Avanzate* &gt; *Gestore di sistema SANtricity*</block>
@@ -1213,7 +1209,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="79658e10ca015f24acdccf34e6840296" category="list-text">Inserire il gateway predefinito.</block>
   <block id="3c7ae12db7024ffd08d2bca474f5ed35" category="paragraph">L'applicazione delle modifiche potrebbe richiedere alcuni minuti.</block>
   <block id="fa819e302c806f17c39d49ed55f0265d" category="paragraph">Quando ci si connette a Gestore di sistema di SANtricity, si utilizzerà il nuovo indirizzo IP statico come URL: +<block ref="29c66d4541758aec7932976994c3319a" prefix=" " category="inline-code"></block></block>
-  <block id="16eb8283e310826145f33fe6116ba3eb" category="summary">L'appliance di servizi StorageGRID SG100 e l'appliance di servizi SG1000 possono operare come nodo gateway e come nodo amministratore per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).</block>
   <block id="6d0ade2fa24dcd390db4eebf8a1390df" category="paragraph">L'appliance di servizi StorageGRID SG100 e l'appliance di servizi SG1000 possono operare come nodo gateway e come nodo amministratore per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).</block>
   <block id="07c7e7e8da60c1194366cb92a963b708" category="section-title">Caratteristiche dell'appliance</block>
   <block id="b9d4703bd7bc28d5d3523eb88d7e2146" category="paragraph">Entrambi i modelli di appliance di servizi offrono le seguenti funzionalità:</block>
@@ -1417,7 +1412,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="05da532ab893fe35781cf6f2b75bf763" category="list-text">Se si seleziona *DHCP*, seguire questa procedura per configurare la rete client:</block>
   <block id="c66bca512904c85a57880fa47eaa3ce9" category="paragraph">I campi *IPv4 Address* e *Gateway* vengono compilati automaticamente. Se il server DHCP è impostato per assegnare un valore MTU, il campo *MTU* viene popolato con tale valore e il campo diventa di sola lettura.</block>
   <block id="d80dcce5a45b36200579b2180aa0d922" category="list-text">Verificare che il gateway sia corretto.</block>
-  <block id="f68ea530857d41d84c76df868f9eb7d9" category="summary">È possibile accedere all'interfaccia BMC utilizzando l'indirizzo DHCP o l'indirizzo IP statico per la porta di gestione BMC sui seguenti modelli di appliance: </block>
   <block id="b2c25fe42d77ac47cb90bf69bf420964" category="paragraph">È possibile accedere all'interfaccia BMC utilizzando l'indirizzo DHCP o l'indirizzo IP statico per la porta di gestione BMC sui seguenti modelli di appliance:</block>
   <block id="2883e46b0cc053610a740a38d3926f04" category="list-text">La porta di gestione BMC dell'appliance è collegata alla rete di gestione che si intende utilizzare.</block>
   <block id="4be2dcfae6d0da21daf5c0d492c93112" category="image-alt">SG100 porta di gestione BMC</block>
@@ -1780,7 +1774,6 @@ Nell'API di gestione griglia, utilizzare l'endpoint privato:<block ref="d6808dc8
   <block id="60b8ced56b242b43efe07a671368d5a7" category="list-text">Dopo aver installato le prime 12 unità, far scorrere nuovamente il cassetto spingendo al centro e chiudendo delicatamente entrambe le leve.</block>
   <block id="3202a3d2f21835931c6e615b4e441dec" category="list-text">Ripetere questa procedura per gli altri quattro cassetti.</block>
   <block id="f0e4d108bd327aa0295d08fc98aaafd0" category="list-text">Fissare il pannello anteriore.</block>
-  <block id="f8f92f8e3df4caaa331a15ebf21c66fe" category="summary">È necessario accedere al programma di installazione dell'appliance StorageGRID per verificare la versione del programma di installazione e configurare le connessioni tra l'appliance e le tre reti StorageGRID: Rete di rete, rete amministrativa (opzionale) e rete client (opzionale).</block>
   <block id="5ec7f22d3e51b38237d9e49f06df79c2" category="paragraph">È necessario accedere al programma di installazione dell'appliance StorageGRID per verificare la versione del programma di installazione e configurare le connessioni tra l'appliance e le tre reti StorageGRID: Rete griglia, rete amministrativa (opzionale) e rete client (opzionale).</block>
   <block id="be86e83cca4c5d05fe7d5b6b9a6e55ee" category="list-text">L'appliance di servizi o il controller dell'appliance di storage sono connessi a tutte le reti StorageGRID che si intende utilizzare.</block>
   <block id="17afffb34f67dd060b9cdff4dad524cf" category="list-text">Su queste reti conosci l'indirizzo IP, il gateway e la subnet dell'appliance di servizi o del controller dell'appliance di storage.</block>
@@ -2749,7 +2742,6 @@ Dopo aver completato l'aggiornamento corrente, scaricare il file SANtricity OS c
   <block id="a79e81724891718056b140bfa1a514de" category="list-text">Chiedere all'amministratore di rete di associare il DNS/rete e l'indirizzo IP dell'appliance rimosso con l'indirizzo MAC dell'appliance sostitutiva.</block>
   <block id="8953cf6acd035e33305d53707b5a433b" category="admonition">Prima di alimentare l'appliance sostitutiva, è necessario assicurarsi che tutti gli indirizzi IP dell'appliance originale siano stati aggiornati. In caso contrario, l'appliance otterrà nuovi indirizzi IP DHCP all'avvio e potrebbe non essere in grado di riconnettersi a StorageGRID. Questo passaggio si applica a tutte le reti StorageGRID collegate all'appliance.</block>
   <block id="e94bdaef0d9cae7ec49505ca7dc2034e" category="admonition">Se l'appliance originale utilizzava un indirizzo IP statico, il nuovo appliance adotterà automaticamente gli indirizzi IP dell'appliance rimossa.</block>
-  <block id="5848604b5fe59288c4b2e70e183c15f3" category="summary">Il processo di cloning potrebbe richiedere diversi giorni per trasferire i dati tra il nodo di origine (appliance da sostituire) e l'appliance di destinazione.</block>
   <block id="2dfb9b9fe663376184bfd65a4deb94fd" category="doc">Nodo appliance clone</block>
   <block id="0235e20f203c294d37deda19de63884d" category="paragraph">Il processo di clonazione potrebbe richiedere diversi giorni per trasferire i dati tra il nodo di origine (appliance da sostituire) e l'appliance di destinazione (nuova).</block>
   <block id="47e8652b2101615daf061495f94fd6e3" category="list-text">L'appliance di destinazione compatibile è stata installata in un cabinet o rack, sono stati collegati tutti i cavi e l'alimentazione è stata applicata.</block>
@@ -2831,8 +2823,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="5662450490d384590a15e305a3d7dbf1" category="paragraph">Se durante la clonazione si verifica uno dei seguenti problemi, il processo di clonazione si interrompe e viene generato un messaggio di errore:</block>
   <block id="6b6698841d4a344fe258deb6bde48008" category="list-text">Configurazione di rete errata</block>
   <block id="b330203392074bd8387d32b32cbd4c30" category="list-text">Mancanza di connettività tra le appliance di origine e di destinazione</block>
-  <block id="59d2f54bed9c6d1ff315a058a4a52671" category="list-text">Incompatibilità tra appliance di origine e di destinazione</block>
-  <block id="89e16c9efc1a3195a41f4ac0343ca036" category="list-text">Per i nodi di storage, un'appliance sostitutiva con capacità insufficiente</block>
   <block id="82a441e64c838645d368374b712e97b3" category="paragraph">Per continuare, è necessario risolvere ciascun problema.</block>
   <block id="e4652cabe8177b6898c3fceccf7e0889" category="summary">Seguire queste istruzioni per eseguire la manutenzione del sistema StorageGRID.</block>
   <block id="0eb7986c87b6853bd0db330cbf27b26c" category="section-title">A proposito di queste istruzioni</block>
@@ -2869,7 +2859,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="665b2ee84b3ce1addec753e47812a753" category="list-text">Pianificare un tempo sufficiente per completare il processo di clonazione del nodo. Potrebbero essere necessari diversi giorni per trasferire i dati da un nodo di storage operativo a un'appliance di destinazione. Pianifica la clonazione in un momento che minimizza l'impatto sul tuo business.</block>
   <block id="ed44cdb4d3e080dee6b895b78592b4b8" category="list-text">È necessario clonare un solo nodo appliance alla volta. La clonazione può impedire l'esecuzione contemporanea di altre funzioni di manutenzione di StorageGRID.</block>
   <block id="3bb09eb481180921ee13fa6049a488e0" category="list-text">Dopo aver clonato un nodo appliance, è possibile utilizzare l'appliance di origine che è stata restituita in uno stato pre-installazione come destinazione per clonare un'altra appliance di nodi compatibile.</block>
-  <block id="e485a2bb58eff1a96bc2f6c877e4c6e8" category="summary">Se è stata attivata la crittografia dei nodi per l'appliance durante l'installazione, è possibile monitorare lo stato di crittografia dei nodi di ciascun nodo dell'appliance, inclusi i dettagli relativi allo stato di crittografia dei nodi e al server di gestione delle chiavi (KMS).</block>
   <block id="a7a12ea1a4c80643b85cc22b459bd606" category="paragraph">Se è stata attivata la crittografia dei nodi per l'appliance durante l'installazione, è possibile monitorare lo stato di crittografia dei nodi di ciascun nodo dell'appliance, inclusi i dettagli dello stato di crittografia dei nodi e del server di gestione delle chiavi (KMS).</block>
   <block id="91fba6642e220c9d6b627c272ca1f4b0" category="inline-link">Configurare i server di gestione delle chiavi</block>
   <block id="629dd4a72c9a27968c541923d0344da9" category="list-text">È stata attivata la crittografia dei nodi per l'appliance durante l'installazione. Non è possibile attivare la crittografia dei nodi dopo l'installazione dell'appliance.</block>
@@ -3151,7 +3140,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="4ebeeaa7ee87ac8b2673d03aa209528d" category="list-text"><block ref="44281fb68d37f427e8563b8bb64bc984" category="inline-link-macro-rx"></block>e premere il fermo verso il basso per fissare il coperchio in posizione.</block>
   <block id="e8cbcebfd4a0149b15a9fe6fe6bfb926" category="inline-link-macro">Accendere l'apparecchio</block>
   <block id="1b0eb2545518d0e0366e6b971f537a44" category="list-text"><block ref="417f185b431b470ffef7aa3d838054f4" category="inline-link-macro-rx"></block> E monitorare i LED dell'apparecchio e i codici di avvio.</block>
-  <block id="bf04cfba5d2cd0ba1be7c4d7cde79fba" category="summary">Potrebbe essere necessario sostituire una scheda di interfaccia di rete (NIC) in SGF6112 se non funziona in modo ottimale o se si è verificato un guasto.</block>
   <block id="025553a609b217df0cc104ad958d9e8c" category="list-text">Rimuovere la scheda NIC</block>
   <block id="d492c7ad8ff60caffa0e7efaeedbb9a4" category="inline-link-macro">Posizione della scheda di rete da sostituire</block>
   <block id="54f61529cc51ad6624acceb851e19e96" category="list-text">È stato determinato il <block ref="157fb39ae4912c0305e48246cdfc5cc6" category="inline-link-macro-rx"></block>.</block>
@@ -3243,7 +3231,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="459b2d61785b202f6e87131bca916dcc" category="list-text">Se lo storage controller utilizza una versione di SANtricity OS precedente alla 08.42.20.00 (11.42), utilizzare la modalità di manutenzione per eseguire l'aggiornamento.</block>
   <block id="c29cf29a2bce34e5013e1a82ec72ef4a" category="inline-link-macro">Aggiornare il sistema operativo SANtricity sul controller E2800 utilizzando la modalità di manutenzione</block>
   <block id="646d87e1de76b95beee2ac952a5c5653" category="paragraph"><block ref="646d87e1de76b95beee2ac952a5c5653" category="inline-link-macro-rx"></block></block>
-  <block id="d1bb1de66e65ddf766b2dc80cb3a706c" category="summary">Per i controller storage che attualmente utilizzano SANtricity OS precedente alla 08.42.20.00 (11.42), è necessario utilizzare la procedura della modalità di manutenzione per applicare un aggiornamento.</block>
   <block id="fe39b5535f4e6df2b9e600318b2459d3" category="paragraph">Per i controller storage che attualmente utilizzano SANtricity OS precedente alla 08.42.20.00 (11.42), è necessario utilizzare la procedura della modalità di manutenzione per applicare un aggiornamento.</block>
   <block id="4ff199beae6291bec2f5557a8578779a" category="list-text">Inserire il controller E5700SG in <block ref="66517df9b2a708b9947fc0143b4273f5" category="inline-link-macro-rx"></block>, Che interrompe la connessione al controller E2800.</block>
   <block id="5bd0791bf672edd73937c100b2f0ddfc" category="paragraph">Non aggiornare il sistema operativo SANtricity o NVSRAM nel controller e-Series su più appliance StorageGRID alla volta.</block>
@@ -3255,7 +3242,6 @@ Per riavviare la clonazione del nodo di origine, riavviare il processo di clonaz
   <block id="ccb1df2c12036c342b870e4c64ece899" category="list-text">Seguire le istruzioni della _Guida all'aggiornamento del software e del firmware E2800 e E5700 SANtricity_ o della Guida in linea di Gestore di sistema SANtricity per aggiornare il firmware e L'NVSRAM del controller E2800.</block>
   <block id="8d6b5bef60ff6bcada8bf246bf494e34" category="admonition">Attivare immediatamente i file di aggiornamento. Non rinviare l'attivazione.</block>
   <block id="63842e9ce414fd5ee413e3082d8d6932" category="list-text">Selezionare *Reboot into Maintenance Mode* (Riavvia in modalità di manutenzione) per riavviare il controller con il nodo in modalità di manutenzione.  Selezionare questa opzione se si verificano errori durante la procedura e si desidera ricominciare.  Al termine del riavvio del nodo in modalità di manutenzione, riavviare dalla fase appropriata della procedura che ha avuto esito negativo.</block>
-  <block id="9742999f9fee77777cbda7af8a8b8ebc" category="summary">Per i controller storage che attualmente utilizzano SANtricity OS 08.42.20.00 (11.42) o versioni successive, è necessario utilizzare Grid Manager per applicare un aggiornamento.</block>
   <block id="73e6ae3c7ecd9bcb5330f9692132c087" category="doc">Aggiorna il sistema operativo SANtricity sugli storage controller SG5700 usando Grid Manager</block>
   <block id="be5478803b1a452fb672a118c66f1f8e" category="paragraph">Per i controller di storage che attualmente utilizzano SANtricity OS 08.42.20.00 (11.42) o versione successiva, è necessario utilizzare Grid Manager per applicare un aggiornamento.</block>
   <block id="29c81145f8df4c302d2a5db797d28b64" category="paragraph"><block ref="29c81145f8df4c302d2a5db797d28b64" category="inline-link-rx"></block></block>
@@ -3880,7 +3866,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="80373303baca203e4e14cdd9e3730d3a" category="image-alt">Modalità Bond porta aggregata SG1100</block>
   <block id="c185e2af57eb486402a7055cd7b9584b" category="image-alt">Porte di rete dell'amministratore collegate SG1100</block>
   <block id="168fbbc8217ae40bd5086de4e4935611" category="image-alt">Porte di rete dell'amministratore collegate SG110</block>
-  <block id="835d59e48069a93606ecd047daaf1f61" category="summary">L'appliance di servizi StorageGRID SG110 e l'appliance di servizi SG1100 possono funzionare come nodo gateway e come nodo amministrativo per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).</block>
   <block id="df039f5a970acf6d438e3773b9545296" category="paragraph">L'appliance di servizi StorageGRID SG110 e l'appliance di servizi SG1100 possono funzionare come nodo gateway e come nodo amministrativo per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambe le appliance possono operare contemporaneamente come nodi gateway e nodi di amministrazione (primari o non primari).</block>
   <block id="78fe9ec70c03c307edaf827b55bf78d3" category="list-text">SG110 supporta fino a quattro connessioni 10 o 25 GbE alla rete Grid e alla rete client.</block>
   <block id="da5b95c24564c9b901b35d67fe3e06f9" category="list-text">Il modello SG1100 supporta fino a quattro connessioni 10, 25, 40 o 100 GbE alla rete Grid e alla rete client.</block>
@@ -3933,7 +3918,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="0a5b0b97f6329c71c665a41fb8e50546" category="paragraph"><block ref="0a5b0b97f6329c71c665a41fb8e50546" category="inline-link-macro-rx"></block></block>
   <block id="17f139a2fd45164bf31db4cbc506794e" category="paragraph"><block ref="94283cdb05b445a973e84301f97caf0b" category="inline-link-macro-rx"></block> per accedere al coperchio superiore.</block>
   <block id="a216695ce5b47cfaec12a1b19ae3fb60" category="paragraph"><block ref="1b46dbdc1359715fefc31e850941339c" category="inline-link-macro-rx"></block>.</block>
-  <block id="4cac03fe582c6e9c7b00f6150d8de44e" category="summary">Potrebbe essere necessario sostituire una scheda di interfaccia di rete \(NIC\) in SG110 o SG1100 se non funziona in modo ottimale o se non funziona correttamente.</block>
   <block id="4c68b0943e79e049731958e525193bbd" category="paragraph">Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) di SG110 o SG1100 se non funziona correttamente o se presenta un guasto.</block>
   <block id="927be83d9035c123f8d7d9e8cfafeb94" category="inline-link-macro">Situato fisicamente l'apparecchio SG110 o SG1100</block>
   <block id="24bf7ce85a6fb58803cea8f5c88ca74b" category="list-text">Lo hai fatto <block ref="452dbc820d5040c6f7a26972163c857d" category="inline-link-macro-rx"></block> Dove si sta sostituendo la scheda NIC nel centro dati.</block>
@@ -4759,7 +4743,6 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="21beafac072af3624f5cf77d3c470a43" category="paragraph">*SG6100*:</block>
   <block id="cc5f703bb883e7b54c8db00321eecaae" category="paragraph">Questa figura mostra come le due porte di gestione 1-GbE sono collegate in modalità di connessione di rete Active-Backup per la rete di amministrazione.</block>
   <block id="6cb92c0d4f550369b07be209fb280050" category="image-alt">Porte di rete amministrative collegate SG6100-CN</block>
-  <block id="dcba35698266a429ba97a9df72d33ecb" category="summary">L'appliance SG5800 StorageGRID è una piattaforma integrata di storage e calcolo che opera come nodo di storage in un grid StorageGRID. L'appliance può essere utilizzata in un ambiente di grid ibrido che combina nodi di storage dell'appliance e nodi di storage virtuali (basati su software).</block>
   <block id="bc0affc4503a133a51781ca78ac8bdaa" category="paragraph">L'appliance SG5800 è disponibile in due modelli: SG5812 e SG5860.</block>
   <block id="1d59ebac544f15dc4241a8a4af7a618d" category="section-title">SG5800 componenti</block>
   <block id="5581a20a3b85686c910dfa4dab223387" category="paragraph">I modelli SG5800 includono i seguenti componenti:</block>
@@ -4950,7 +4933,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="77442a88ebd7cb0929276245bb6fa261" category="doc">Sostituire uno o entrambi gli alimentatori del SGF6112 o del SG6100-CN</block>
   <block id="b40f48980b91f6eeeaca45a02098961f" category="paragraph">La figura mostra le due unità di alimentazione per l'appliance SGF6112 o il nodo di calcolo SG6100-CN. Gli alimentatori sono accessibili dal retro dell'apparecchio.</block>
   <block id="56347f82384b21f0e089b756280bf350" category="image-alt">Retro di SGF6112 o SG6100-CN con due alimentatori</block>
-  <block id="45c26226adb5ac780361eb67562102b4" category="summary">Potrebbe essere necessario sostituire una scheda di interfaccia di rete \(NIC\) in SG6100-CN se non funziona in modo ottimale o se non funziona correttamente.</block>
   <block id="68389729ef500c851bd175b61c435629" category="paragraph">Potrebbe essere necessario sostituire una scheda di interfaccia di rete (NIC) esterna nel SG6100-CN se non funziona in modo ottimale o se non funziona correttamente.</block>
   <block id="873f4e1b6b1acfd0f6ea7fc4a7cee73c" category="image-alt">Frontalino NIC.</block>
   <block id="a906778e494f0b40580e1e85dcb33e85" category="inline-link-macro">Situato fisicamente nella centralina SG6100-CN</block>
@@ -4969,7 +4951,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="b362454c1b783a548faa935e3a1610de" category="paragraph">Se nell'apparecchio non è necessario eseguire altre procedure di manutenzione, riponete l'apparecchio nel rack, se è stato rimosso, collegate i cavi e accendete l'apparecchio.</block>
   <block id="f40a968e022f47cf01d4d58ef9437f0c" category="summary">L'appliance SGF6112 e il controller SG6100-CN sono dotati di otto ventole di raffreddamento. Se una delle ventole si guasta, è necessario sostituirla il prima possibile per assicurarsi che l'apparecchio sia raffreddato correttamente.</block>
   <block id="dff98198bff06709975037453d00df52" category="list-text">Lo hai fatto <block ref="8a600a3d3695735e4213dc5c6fac3a3e" category="inline-link-macro-rx"></block> dove si sta sostituendo la ventola nel centro dati.</block>
-  <block id="7a70e2c3c98205b7029ea7982add5e80" category="summary">Per gli storage controller che attualmente utilizzano SANtricity OS 08.42.20.00 \(11,42\) o versione successiva, è possibile utilizzare il Grid Manager o la modalità di manutenzione per applicare un aggiornamento.</block>
   <block id="80bcdb369c1aaaea9daefaf6cf5773ae" category="inline-link-macro">Aggiornare il sistema operativo SANtricity sul controller SG6160 usando la modalità di manutenzione</block>
   <block id="75bae77bd5a1e5d5a3fa60c2123780ca" category="summary">Potrebbe essere necessario sostituire la centralina SG6100-CN se non funziona in modo ottimale o se non funziona correttamente.</block>
   <block id="001591654095885fb8e8bae93eba4b37" category="paragraph">Il nodo di archiviazione dell'appliance non sarà accessibile quando si sostituisce il controller SG6100-CN. Se la centralina SG6100-CN funziona a sufficienza, è possibile eseguire uno spegnimento controllato all'inizio di questa procedura.</block>
@@ -5578,8 +5559,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="8fce7c0144a940f37356de4b05f9ac03" category="list-text"><block ref="20c889cb497b19c6d78c457067272345" category="inline-link-macro-rx"></block> .</block>
   <block id="8ac73f13e2902ea7b6ebc3206cf4e576" category="doc">Aggiorna automaticamente il firmware dell'unità SG6160 durante il riavvio dell'appliance</block>
   <block id="a53555787eb9101bec73830602e0bb62" category="list-text">Durante un<block ref="b3a7463520c62d140f81699021ea94dc" category="inline-link-macro-rx"></block> utilizzando la modalità di manutenzione</block>
-  <block id="b7daca44acbdce2ad9adb9ec5b318f4b" category="inline-link">Documentazione StorageGRID 12.0</block>
-  <block id="9dfc67a67b34935b9d51d04e94d0bd2f" category="paragraph">Vai a<block ref="b9e47dcffd0e3534b2aa2e23c80b77c4" category="inline-link-rx"></block> per imparare a configurare e utilizzare un sistema StorageGRID 12.0.</block>
   <block id="63e3b64d9d602e40bbccab8712d1918a" category="list-text"><block ref="63e3b64d9d602e40bbccab8712d1918a" category="inline-link-rx"></block></block>
   <block id="4acae57d3119f0b81d2bfd14c9585f13" category="doc">Soluzioni e risorse StorageGRID</block>
   <block id="7a4f669ff4b9f9df5860c2049386e61b" category="paragraph">Vai a<block ref="f382e11c205630073ea43ce3c4862094" category="inline-link-rx"></block> per scoprire come testare e abilitare le applicazioni nel tuo ambiente StorageGRID .</block>
@@ -5832,7 +5811,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="aad8333d9e08949cd787302910775fbd" category="inline-link-macro">Istruzioni per l'aggiunta di un shelf di espansione a un SG6200 già installato</block>
   <block id="77541c94006da9bb86a8b552d9150ad3" category="list-text">Se l'apparecchio include un shelf di espansione, consultare la <block ref="3c6d222471db8085e113525c8d296c6e" category="inline-link-macro-rx"></block> per informazioni sul cablaggio.</block>
   <block id="0b778849bc67a68c1504430e6f89c910" category="doc">Modificare la password di amministratore o di root del BMC su un'appliance StorageGRID</block>
-  <block id="1e4d0568052c73aee41b0cb2ff1595bd" category="summary">L'interfaccia utente del controller di gestione della scheda madre (BMC) su SG6200, SG6100, SG6000 o sull'appliance di servizio fornisce informazioni sullo stato dell'hardware e consente di configurare le impostazioni SNMP e altre opzioni per le appliance.</block>
   <block id="adf9a7e2462899f094ee8d99eacd965c" category="doc">Interfaccia BMC per gli appliance StorageGRID SG6000, SG6100 e SG6200 e per gli appliance di servizi</block>
   <block id="75fa8c64fee9e263091f2aabe5ba9979" category="paragraph">L'interfaccia utente del controller di gestione della scheda madre (BMC) fornisce informazioni sullo stato dell'hardware e consente l'accesso di basso livello all'hardware per la configurazione, il monitoraggio e la diagnostica dell'appliance.</block>
   <block id="1b198eee3944850f4a8e4e9951682d03" category="paragraph">È possibile utilizzare il BMC per:</block>
@@ -5953,7 +5931,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="1338bd416f1abedfada7187cbfb63e8d" category="image-alt">Porte di gestione di rete SG6200-CN</block>
   <block id="3148745e05a92a83fbcdbccae31be2ff" category="doc">StorageGRID SG100 e SG1000 appliances</block>
   <block id="8a9e7a4a0ba3117db1340bac2975d997" category="doc">StorageGRID SG110 e SG1100 appliance</block>
-  <block id="54dff7bc9e8851c674baa85e0141c6e2" category="summary">Gli appliance di servizi StorageGRID SG120 e SG1200 possono funzionare come Gateway Node e come Admin Node per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambi gli appliance possono funzionare contemporaneamente come Gateway Node e Admin Node (primari o non primari).</block>
   <block id="72d14a85defc92fd5fda26789faa138e" category="doc">StorageGRID SG120 e SG1200 appliances</block>
   <block id="570d10e11394117783d8c8dab12bf825" category="paragraph">Gli appliance di servizi StorageGRID SG120 e SG1200 possono funzionare sia come Gateway Node che come Admin Node per fornire servizi di bilanciamento del carico ad alta disponibilità in un sistema StorageGRID. Entrambi gli appliance possono funzionare contemporaneamente come Gateway Node e Admin Node (primari o non primari).</block>
   <block id="d5df4584b0480b86b0b995c289936913" category="paragraph">Gli apparecchi SG120 e SG1200 offrono le seguenti caratteristiche:</block>
@@ -5999,7 +5976,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="3d925e4ac6c7edb56daad072a9390dbf" category="section-title">Componenti hardware SG6200</block>
   <block id="483be79b3dc8c7471d09aae41e9bdf85" category="section-title">Appliance SGF6212</block>
   <block id="cef36d6e2f38b36fe14bff6966550a5a" category="paragraph">Il dispositivo SGF6212 comprende i seguenti componenti:</block>
-  <block id="af670023b4c4ecbebf3b7158d7faf276" category="list-text">Unità di avvio interna da 240 GB (include StorageGRID software)</block>
   <block id="a1e9cd3e861e4270eeaaad03d992621e" category="list-text">4 × porte Ethernet 10/25/40/100GbE per traffico di rete Grid/Client (oppure 4 × 200GbE con scheda di rete 200 GbE opzionale)</block>
   <block id="625a5060aef941dce2ab4f1a83799fff" category="list-text">12 SSD NVMe per l'archiviazione dei dati</block>
   <block id="3b0c38c561c81b8b7610b9dce48319ec" category="section-title">Appliance SG6260</block>
@@ -6025,7 +6001,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="24c4f54304a2b2a1f8221451d3337f81" category="image-alt">Vista posteriore SG6260</block>
   <block id="652eb9f76a7f5eb8d212f34d0750c8fc" category="paragraph">Alimentatore (1 di 2) per controller di calcolo SG6200-CN</block>
   <block id="78029a54d37a7b9067334796ad30c931" category="paragraph">Connettori per il controller di calcolo SG6200-CN</block>
-  <block id="e5a8c894ca52500bc6bcb77e429cb813" category="paragraph">E-Series E400 storage controller (1 di 2) e connettori</block>
   <block id="d753a76a0baf8f1c6857bce395567f76" category="section-title">Controllori SG6200</block>
   <block id="aac0c58f7aca8c4f08a48de6a596c61d" category="section-title">Controller di calcolo SG6200-CN</block>
   <block id="a09cfb881650bb87069f49e82edd9a62" category="paragraph">Questa figura mostra le porte sul retro del controller di calcolo SG6200-CN.</block>
@@ -6249,7 +6224,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="d623147a5f7d75bb8912c700c2393455" category="list-text">Ti trovi <block ref="1f791f788031021f9297b1694c7fd1de" category="inline-link-macro-rx"></block> dove stai sostituendo le batterie CMOS nel data center.</block>
   <block id="21530853daff50ee68eb3826cbdc3d23" category="admonition">A <block ref="aacef6b8aacbdb58a17a36f8322c5fa8" category="inline-link-macro-rx"></block> è necessario prima di rimuovere l'apparecchio dal rack.</block>
   <block id="7bd65d76c2104f3111ba3e70e63f679b" category="list-text">Hai scollegato tutti i cavi e <block ref="c69f25429c7763eb6c3c9bf0c5f5c46e" category="inline-link-macro-rx"></block>.</block>
-  <block id="2a2e917b8f70968ad6c8b3c645b9a2bc" category="summary">Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) negli SG120 o SG1200 se non funziona in modo ottimale o se si è guastata.</block>
   <block id="9e7295186913519c3b66f256adc3bcbc" category="doc">Sostituire la NIC in un SG120 o SG1200</block>
   <block id="e5c0747c33f9c713cf1e76eeac41700c" category="paragraph">Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) negli SG120 o SG1200 se non funziona in modo ottimale o se si è guastata.</block>
   <block id="ad2860de0ccbcf99211869ef137b43df" category="list-text">Ti trovi <block ref="1f791f788031021f9297b1694c7fd1de" category="inline-link-macro-rx"></block> nella situazione in cui stai sostituendo la scheda di rete nel data center.</block>
@@ -6454,13 +6428,11 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="7ec81f7c59287b2ec24608a13dbeef87" category="paragraph">È possibile sostituire il contenitore della ventola in un SG6260.</block>
   <block id="401ba8db4cfce3b1103d073d1ca8e572" category="doc">Sostituire il contenitore di alimentazione nello storage controller shelf o shelf di espansione (SG6260)</block>
   <block id="1e0769c0e45b3c53ce145d67fc0fa62a" category="paragraph">È possibile sostituire un alimentatore in uno shelf storage controller SG6260 o in uno shelf di espansione (DE460C).</block>
-  <block id="c85adbc7b90b709c79f5f11a6473e485" category="summary">Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) nell'SGF6212 se non funziona in modo ottimale o se si è guastata.</block>
   <block id="e1c697f14a5f48d1180fc721ee2847f8" category="doc">Sostituire la scheda di rete interna nei modelli SGF6212 o SG6200-CN</block>
   <block id="aadb26ed1258e60d5437e37df86b363b" category="paragraph">Potrebbe essere necessario sostituire una scheda di interfaccia di rete (NIC) interna nel SGF6212 o SG6200-CN se non funziona in modo ottimale o se si è guastata.</block>
   <block id="e90ea74cdd5b93d7b4771e731f1e1a12" category="list-text">Ti trovi <block ref="a553a7500f49ff052d8271ae45ee79db" category="inline-link-macro-rx"></block> nella situazione in cui stai sostituendo la scheda di rete nel data center.</block>
   <block id="a10d08d1cc67ca2a00e50e2c259fd686" category="inline-image-macro">Posizione delle schede di rete nell'appliance</block>
   <block id="a5509df1d5502655fac5ba26da0f1f0e" category="paragraph"><block ref="a5509df1d5502655fac5ba26da0f1f0e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0480b9d04998086ac97bce91f3527114" category="summary">Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) nel SG6200-CN se non funziona in modo ottimale o se si è guastata.</block>
   <block id="d34c29ed7eba5e18d02dde98ce165589" category="doc">Sostituire la scheda di rete esterna nel SG6200-CN</block>
   <block id="8525225888042219b00b3182f1404adb" category="paragraph">Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) esterna nel SG6200-CN se non funziona in modo ottimale o se si è guastata.</block>
   <block id="f23564587172dfdbfe2370e00a02a9e5" category="paragraph">Per evitare interruzioni del servizio, verificare che tutti gli altri Storage Node siano connessi al grid prima di iniziare la sostituzione della scheda di interfaccia di rete (NIC) oppure sostituire la NIC durante una finestra di manutenzione programmata in cui i periodi di interruzione del servizio sono accettabili. Vedere le informazioni su <block ref="5059dc4531f4f3adf649d818b95a89ff" category="inline-link-macro-rx"></block>.</block>
@@ -6587,4 +6559,44 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="966b0abd256df531996f5779b0267572" category="sidebar">Controllore E4000 (SG6260)</block>
   <block id="7a6eea70e2a063993169b9f20b674a54" category="paragraph">Inoltre, quando si abilita la modalità FIPS dopo aver abilitato la crittografia del nodo, il modulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 viene utilizzato per la crittografia dei dati a riposo. Consultare <block ref="fb536484ccdd3f2f62bef4c60558bb81" category="inline-link-rx"></block> per ulteriori informazioni.</block>
   <block id="8eca4ebb793a1236eac6e1dd47dd0f10" category="section-title">[[poweron]]Accendere il controller SG6000-CN e verificarne il funzionamento</block>
+  <block id="a02c04f57c9d24a09341ad188ad5056d" category="list-text">Se abiliti il DHCP su qualsiasi porta del nodo di destinazione che era configurata come statica sul nodo di origine, assicurati che non ci siano lease DHCP permanenti per nessuno degli indirizzi MAC del nodo di origine. Se non lo fai, potrebbe verificarsi un conflitto di indirizzi IP al termine del processo di cloning.</block>
+  <block id="96478ad56343da4a15ef813226b04122" category="admonition">Se al termine del processo di cloning riscontri un conflitto di indirizzi IP, assicurati che non siano stati assegnati lease DHCP permanenti a nessuno degli indirizzi MAC delle porte che avevano IP statici sul nodo di origine e che sono state abilitate per il DHCP sul nodo di destinazione. Rimuovi o aggiorna i lease DHCP permanenti sul server DHCP per risolvere questo conflitto.</block>
+  <block id="59f7e3046921d51c539dddae36c2f01e" category="list-text">Cloning già in corso</block>
+  <block id="898b0a39f4fcce4a02baaef85f8249ed" category="list-text">L'appliance di destinazione non riesce a raggiungere il nodo amministrativo primario</block>
+  <block id="ada492f01e47b0cf2cb0325cfb6b126b" category="list-text">Gli apparecchi di origine e di destinazione non sono compatibili</block>
+  <block id="d891b9ae76665fdd65302619a8cab907" category="list-text">Gli appliance di origine e di destinazione sono in stati di modalità di manutenzione diversi</block>
+  <block id="a1d0f709a30e4dd825cc3f94604ddc58" category="list-text">Le versioni di StorageGRID Appliance Installer sugli appliance di origine e di destinazione non corrispondono</block>
+  <block id="5bfb9b8aced7a740a38c3bd0db4afb0f" category="list-text">Per i nodi di archiviazione, l'appliance di destinazione ha uno storage incompatibile o capacità insufficiente</block>
+  <block id="c5cf1be6c0cbbea4909300064ca7fda2" category="list-text">Il dispositivo di destinazione non è pronto</block>
+  <block id="ec0af0bbc716d1a5abbaca3cb637701b" category="inline-link">Cambia la password BMC dell'appliance in Grid Manager</block>
+  <block id="7cd10a307ffaa778f670752af271bec0" category="list-text"><block ref="7cd10a307ffaa778f670752af271bec0" category="inline-link-rx"></block></block>
+  <block id="aa0d1628396078d94f836e15c538d5f9" category="inline-link">Configura le impostazioni IP LAN di BMC</block>
+  <block id="1b40980b31e6fbd345cb7b3dfbdcc7e2" category="list-text"><block ref="1b40980b31e6fbd345cb7b3dfbdcc7e2" category="inline-link-rx"></block></block>
+  <block id="7f6a4921bb59e8bb7057d8d99f29ceba" category="summary">Puoi accedere all'interfaccia BMC utilizzando l'indirizzo IP DHCP o statico per la porta di gestione BMC su alcuni modelli di appliance.</block>
+  <block id="5c295dca198e2a97205f66e0540b51da" category="summary">Devi accedere al programma di installazione di StorageGRID Appliance per verificare la versione dell'installer e configurare le connessioni tra l'appliance e le tre reti StorageGRID: la Grid Network, la Admin Network (opzionale) e la Client Network (opzionale).</block>
+  <block id="f923e1c5f5f06ed886029456eda68f25" category="list-text">Genera un file JSON contenente i dettagli di configurazione. Collabora con il tuo consulente NetApp Professional Services per utilizzare <block ref="cb38605f979ad15fdfe0937bcdfa8b06" category="inline-link-macro-rx"></block> (accesso richiesto) per completare questi passaggi:</block>
+  <block id="030b6039a516e96f184d0033c5814913" category="summary">L'interfaccia utente del controller di gestione della scheda madre (BMC) su SG6200, SG6100, SG6000 o sull'appliance di servizi fornisce informazioni sullo stato dell'hardware e ti permette di configurare le impostazioni SNMP e altre opzioni per le appliance.</block>
+  <block id="ce3beac288ae30a03c252463cd88a868" category="list-text">Un processore AMD da 3,65 GHz che offre 16 core (32 thread)</block>
+  <block id="d7b98c4ffe3354b92b68c3db83a903b6" category="summary">L'appliance SG5800 StorageGRID è una piattaforma integrata di storage ed elaborazione che funziona come Storage Node in una grid StorageGRID. L'appliance può essere utilizzata in un ambiente grid ibrido che combina Storage Node appliance e Storage Node virtuali (basati su software).</block>
+  <block id="54230842be04c518b856973c6c5538dd" category="list-text">Un processore AMD da 3,55 GHz che offre 32 core (64 thread)</block>
+  <block id="966a50ab5dd74b514ad3fc94147789aa" category="list-text">Unità di avvio interna da 256 GB (include StorageGRID software)</block>
+  <block id="13fb2c57cf2bf7b44f9e7cd6f877ca18" category="summary">StorageGRID fornisce due API REST per l'esecuzione delle attività di installazione, la StorageGRID Installation API e la StorageGRID Appliance Installer API.</block>
+  <block id="46c643cc3d01be44e67474011d1dd8b3" category="list-text">*password temporanea*: Operazioni sulla password temporanea per proteggere la mgmt-api durante l'installazione.</block>
+  <block id="8c4a2e17b81ab2d77d98df9bed08e6b9" category="paragraph"><block ref="8c4a2e17b81ab2d77d98df9bed08e6b9" category="inline-link-rx"></block></block>
+  <block id="282418dc956670d70cbccc928ae61570" category="paragraph">NIC 1 nell'assemblaggio riser a singolo slot</block>
+  <block id="c95e915262dda80ae4ee7b439321663d" category="paragraph">Porte di rete Ethernet 10/25-GbE per Grid e Client Networks</block>
+  <block id="9ca0a6cf757875ae6fac7bb5191dd0d2" category="paragraph">NIC 2 nell'assemblaggio riser a singolo slot</block>
+  <block id="2568c6c63541d1ca1e03cf2d69d3b8f6" category="paragraph">Porte di rete Ethernet 1/10-GbE per Admin Network</block>
+  <block id="d96661054a63102b40cffbc0a3c80934" category="paragraph">NIC 3 nell'assemblaggio riser a singolo slot</block>
+  <block id="24b89649152883ff93478293160852c4" category="admonition">L'appliance SG1200 supporta porte di rete ad alta velocità e potrebbe avere NIC ad alta velocità installate.</block>
+  <block id="8c088bcedd8df5fd658d18dd1f766f49" category="summary">Potresti dover sostituire la scheda di interfaccia di rete (NIC) nell’SGF6112 se non funziona in modo ottimale o se si è guastata.</block>
+  <block id="29c5953fe558bfdf13f8371d885e60da" category="summary">Potresti dover sostituire la scheda di interfaccia di rete (NIC) nell’SG6100-CN se non funziona in modo ottimale o se si è guastata.</block>
+  <block id="b03c6be97f39c7f0ba4c6b57360c5c24" category="summary">Potresti dover sostituire la scheda di interfaccia di rete (NIC) nell’SGF6212 se non funziona in modo ottimale o se si è guastata.</block>
+  <block id="ea0f3ca004bd8c54c135a08d619fd276" category="admonition">Alcuni dispositivi supportano porte di rete ad alta velocità e potrebbero avere NIC ad alta velocità installate.</block>
+  <block id="09edbf13f6b5850cdc6dfc569bc775ad" category="summary">Potresti dover sostituire la scheda di interfaccia di rete (NIC) nell’SG6200-CN se non funziona in modo ottimale o se si è guastata.</block>
+  <block id="73b13828240be2d4ed9ff2f029c5ac9c" category="summary">Per i controller di storage che utilizzano attualmente SANtricity OS 08.42.20.00 (11.42) o versioni successive, puoi usare Grid Manager o la modalità di manutenzione per applicare un aggiornamento.</block>
+  <block id="3d2cdd02c109aa569f1302e572d040ba" category="inline-link">Documentazione di StorageGRID 12.1</block>
+  <block id="04d321322c8bed5ea3ecf52d0cc925ff" category="paragraph">Vai su <block ref="96bdbd25d3882b5d0b14b10ec28bb02d" category="inline-link-rx"></block> per scoprire come configurare e usare un sistema StorageGRID 12.1.</block>
+  <block id="db37c78d5faa7061d7b5039209b440c1" category="list-text"><block ref="db37c78d5faa7061d7b5039209b440c1" category="inline-link-rx"></block></block>
+  <block id="d70a1ab70742f2af598f9acb795fc0f2" category="sidebar">Documentazione di StorageGRID 12.1</block>
 </blocks>

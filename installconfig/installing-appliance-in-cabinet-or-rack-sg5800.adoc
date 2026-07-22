@@ -20,6 +20,7 @@ Installare una serie di guide nell'armadietto o nel rack, quindi far scorrere l'
 
 
 
+[[install-sg5812]]
 == Installare SG5812
 
 Per installare un'appliance SG5812 in un rack o in un cabinet, procedere come segue.
@@ -40,6 +41,7 @@ CAUTION: Installare l'hardware dalla parte inferiore del rack, dell'armadio o de
 
 
 
+[[install-sg5860]]
 == Installare SG5860
 
 Per installare un'appliance SG5860 ed eventuali shelf di espansione in un rack o in un cabinet, procedere come segue.

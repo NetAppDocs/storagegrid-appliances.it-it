@@ -2,7 +2,7 @@
 permalink: sg6100/replace-nic-in-sgf6112.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, NIC, network interface card 
-summary: 'Potrebbe essere necessario sostituire una scheda di interfaccia di rete (NIC) in SGF6112 se non funziona in modo ottimale o se si è verificato un guasto.' 
+summary: 'Potresti dover sostituire la scheda di interfaccia di rete (NIC) nell’SGF6112 se non funziona in modo ottimale o se si è guastata.' 
 ---
 = Sostituire la scheda di rete interna in un SGF6112 o SG6100-CN
 :allow-uri-read: 
@@ -21,6 +21,7 @@ Utilizzare queste procedure per:
 
 
 
+[[remove-the-internal-nic]]
 == Rimuovere la scheda di interfaccia di rete interna
 
 .Prima di iniziare
@@ -118,6 +119,7 @@ image::../media/one-slot-assembly-sgf6112.png[NIC nel gruppo riser a uno slot]
 
 
 
+[[reinstall-the-internal-nic]]
 == Reinstallare la scheda di rete interna
 
 Installare la scheda NIC sostitutiva nella stessa posizione di quella rimossa.

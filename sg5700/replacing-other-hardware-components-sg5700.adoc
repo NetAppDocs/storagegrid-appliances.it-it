@@ -25,6 +25,7 @@ Per sostituire un'unità, un contenitore della ventola, un contenitore della ven
 
 
 
+[[sg5712-component-replacement-instructions]]
 == Istruzioni per la sostituzione dei componenti SG5712
 
 [cols="1a,3a"]
@@ -47,6 +48,7 @@ link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supe
 |===
 
 
+[[sg5760-component-replacement-instructions]]
 == SG5760 istruzioni per la sostituzione dei componenti
 
 [cols="1a,3a"]

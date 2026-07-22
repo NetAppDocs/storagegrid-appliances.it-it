@@ -4,6 +4,7 @@
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Fase 5: Spostare l'HIC sulla nuova centralina, se necessario
 
 Se il controller guasto include una scheda di interfaccia host (HIC), spostare l'HIC dal controller guasto al controller sostitutivo.

@@ -23,6 +23,7 @@ Vedere https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-enc
 
 
 
+[[enable-node-encryption]]
 == Abilitare la crittografia del nodo
 
 Se si attiva la crittografia dei nodi, i dischi dell'appliance possono essere protetti mediante crittografia KMS (Secure Key Management Server) contro la perdita fisica o la rimozione dal sito. È necessario selezionare e attivare la crittografia dei nodi durante l'installazione dell'appliance. Non è possibile disattivare la crittografia del nodo dopo l'avvio del processo di crittografia KMS.
@@ -88,6 +89,7 @@ NOTE: Le appliance vengono inizialmente configurate con una chiave di crittograf
 
 
 
+[[drive-encryption]]
 == Crittografia dischi
 
 La crittografia del disco viene gestita sull'hardware del disco con crittografia automatica (SED) durante i processi di scrittura e lettura. L'accesso ai dati su queste unità è controllato da una passphrase definita dall'utente.
@@ -118,6 +120,7 @@ CAUTION: Assicurarsi di memorizzare la passphrase di crittografia dell'unità in
 
 
 
+[[enable-drive-encryption]]
 === Attiva la crittografia delle unità
 
 . Accedere al programma di installazione dell'appliance StorageGRID.
@@ -156,6 +159,7 @@ Salvare la passphrase e il testo visualizzato nella passphrase in un luogo sicur
 
 
 
+[[view-drive-encryption-status]]
 === Visualizzare lo stato della crittografia dell'unità
 
 . link:../commonhardware/placing-appliance-into-maintenance-mode.html["Impostare l'apparecchio in modalità di manutenzione"].
@@ -164,6 +168,7 @@ Salvare la passphrase e il testo visualizzato nella passphrase in un luogo sicur
 
 
 
+[[access-an-encrypted-drive]]
 === Accedere a un'unità crittografata
 
 È necessario immettere la passphrase per accedere a un disco crittografato dopo la sostituzione del nodo di elaborazione o dopo lo spostamento di un disco in un nuovo nodo di elaborazione.
@@ -196,6 +201,7 @@ I banner di avvertenza non vengono più visualizzati quando le unità sono sbloc
 
 
 
+[[change-the-drive-encryption-passphrase]]
 === Modificare la passphrase di crittografia dell'unità
 
 . Accedere al programma di installazione dell'appliance StorageGRID.
@@ -227,6 +233,7 @@ CAUTION: Dopo aver impostato una nuova passphrase, le unità crittografate non p
 
 
 
+[[disable-drive-encryption]]
 === Disattivare la crittografia delle unità
 
 . Accedere al programma di installazione dell'appliance StorageGRID.

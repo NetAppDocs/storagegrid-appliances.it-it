@@ -43,6 +43,7 @@ NOTE: Non mischiare le PSU dei diversi tipi di tensione. Sostituire sempre come 
 
 
 
+[[step-1-prepare-to-replace-power-supply]]
 == Fase 1: Preparazione alla sostituzione dell'alimentatore
 
 Preparare la sostituzione di un alimentatore in uno shelf o uno shelf di controller da 12 o 24 dischi.
@@ -88,6 +89,7 @@ CAUTION: Se il secondo contenitore dell'alimentatore nello shelf non ha lo stato
 
 
 
+[[step-2-remove-failed-power-supply]]
 == Fase 2: Rimuovere l'alimentatore guasto
 
 Rimuovere un alimentatore guasto per poterlo sostituire con uno nuovo.
@@ -114,6 +116,7 @@ CAUTION: Quando si rimuove un alimentatore, utilizzare sempre due mani per soste
 
 
 
+[[step-3-install-new-power-supply]]
 == Fase 3: Installare un nuovo alimentatore
 
 Installare un nuovo alimentatore per sostituire quello guasto.
@@ -140,6 +143,7 @@ CAUTION: Non esercitare una forza eccessiva quando si inserisce l'alimentatore n
 
 
 
+[[step-4-complete-power-supply-replacement]]
 == Fase 4: Sostituzione completa dell'alimentatore
 
 Verificare che il nuovo alimentatore funzioni correttamente, raccogliere i dati di supporto e riprendere le normali operazioni.

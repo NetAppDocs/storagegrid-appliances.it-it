@@ -80,6 +80,7 @@ image::../media/one-slot-assembly-sgf6112.png[NIC nel gruppo riser a uno slot]
 
 
 
+[[reinstall-the-internal-nic]]
 == Reinstallare la scheda di rete interna
 
 Installare la scheda NIC sostitutiva nella stessa posizione di quella rimossa.

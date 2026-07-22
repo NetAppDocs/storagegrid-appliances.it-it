@@ -2,7 +2,7 @@
 permalink: sg6200/replace-nic-in-sg6200.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6200, storage node, storage appliance, Replacing, replace, NIC, network interface card 
-summary: 'Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) nell"SGF6212 se non funziona in modo ottimale o se si è guastata.' 
+summary: 'Potresti dover sostituire la scheda di interfaccia di rete (NIC) nell’SGF6212 se non funziona in modo ottimale o se si è guastata.' 
 ---
 = Sostituire la scheda di rete interna nei modelli SGF6212 o SG6200-CN
 :allow-uri-read: 
@@ -34,10 +34,47 @@ Le tre schede di rete (NIC) presenti nell'apparecchio sono alloggiate in tre ris
 +
 image:../media/drw_s2025_io_numbers_ieops-2554.svg["Posizione delle schede di rete nell'appliance"]
 
++
+[cols="1a,3a,5a"]
+|===
+|  | Nome del dispositivo o della parte | Descrizione 
+
+
+ a| 
+1
+ a| 
+NIC 1 nell'assemblaggio riser a singolo slot
+ a| 
+Porte di rete Ethernet 10/25-GbE per Grid e Client Networks
+
+
+
+ a| 
+2
+ a| 
+NIC 2 nell'assemblaggio riser a singolo slot
+ a| 
+Porte di rete Ethernet 1/10-GbE per Admin Network
+
+
+
+ a| 
+3
+ a| 
+NIC 3 nell'assemblaggio riser a singolo slot
+ a| 
+Porte di rete Ethernet 10/25-GbE per Grid e Client Networks
+
+|===
++
+
+NOTE: Alcuni dispositivi supportano porte di rete ad alta velocità e potrebbero avere NIC ad alta velocità installate.
 
 
 
 
+
+[[step-1-remove-the-nic]]
 == Passaggio 1: Rimuovere la scheda di rete
 
 [role="tabbed-block"]
@@ -82,6 +119,7 @@ image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Rimozione di una scheda
 ====
 
 
+[[step-2-reinstall-the-internal-nic]]
 == Passaggio 2: Reinstallare la scheda di rete interna
 
 Installare la scheda NIC sostitutiva nella stessa posizione di quella rimossa.

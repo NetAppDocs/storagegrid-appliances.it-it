@@ -2,7 +2,7 @@
 permalink: installconfig/configuring-bmc-interface.html 
 sidebar: sidebar 
 keywords: BMC, baseboard management controller, configure, setup, set up 
-summary: 'L"interfaccia utente del controller di gestione della scheda madre (BMC) su SG6200, SG6100, SG6000 o sull"appliance di servizio fornisce informazioni sullo stato dell"hardware e consente di configurare le impostazioni SNMP e altre opzioni per le appliance.' 
+summary: 'L"interfaccia utente del controller di gestione della scheda madre (BMC) su SG6200, SG6100, SG6000 o sull"appliance di servizi fornisce informazioni sullo stato dell"hardware e ti permette di configurare le impostazioni SNMP e altre opzioni per le appliance.' 
 ---
 = Interfaccia BMC per gli appliance StorageGRID SG6000, SG6100 e SG6200 e per gli appliance di servizi
 :allow-uri-read: 

@@ -49,6 +49,7 @@ NOTE: Se il secondo controller nello shelf non ha uno stato ottimale o se il Rec
 
 
 
+[[step-1-prepare-the-replacement-controller]]
 == Fase 1: Preparare la centralina sostitutiva
 
 Preparare la centralina E4000 sostitutiva.
@@ -63,6 +64,7 @@ Conservare il materiale di imballaggio da utilizzare per la spedizione del contr
 
 
 
+[[step-2-take-the-controller-offline]]
 == Passaggio 2: Portare il controller offline
 
 Prepararsi a rimuovere il controller guasto e a portarlo offline. È possibile utilizzare Gestione di sistema di SANtricity per eseguire questa procedura.
@@ -108,6 +110,7 @@ Se si verifica un problema durante la rimozione di un controller, è possibile u
 
 
 
+[[step-3-remove-controller-canister]]
 == Fase 3: Rimuovere il contenitore della centralina
 
 Rimuovere un contenitore del controller.
@@ -127,6 +130,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 
 
 
+[[step-4-determine-parts-to-transfer-to-replacement-controller]]
 == Fase 4: Determinare le parti da trasferire alla centralina sostitutiva
 
 Il controller sostitutivo potrebbe essere fornito con componenti preinstallati. Determinare quali parti devono essere trasferite al contenitore della centralina di ricambio.
@@ -143,6 +147,8 @@ Il controller sostitutivo potrebbe essere fornito con componenti preinstallati. 
 
 
 
+[[step-5-remove-the-battery]]
+[[step5_remove_battery]]
 == Fase 5: Rimuovere la batteria
 
 Rimuovere la batteria dalla centralina danneggiata e installarla nella centralina di sostituzione, se necessario.
@@ -181,6 +187,8 @@ image::../media/legend_icon_02.png[Riferimento didascalia 2]
 
 
 
+[[step-6-move-the-dimms]]
+[[step6_remove_dimm]]
 == Fase 6: Spostare i DIMM
 
 Rimuovere i moduli DIMM dal contenitore del controller danneggiato e installarli nel contenitore del controller sostitutivo.
@@ -239,6 +247,8 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 
 
 
+[[step-7-install-the-battery]]
+[[step7_install_battery]]
 == Fase 7: Installare la batteria
 
 Installare la batteria nel contenitore del controller di ricambio.
@@ -255,6 +265,8 @@ Assicurarsi che la spina sia bloccata nella presa della batteria sulla scheda ma
 
 
 
+[[step-8-replace-controller]]
+[[step8_replace_controller]]
 == Fase 8: Sostituire la centralina
 
 Installare il controller sostitutivo e verificare che il nodo sia rientrato nella griglia.

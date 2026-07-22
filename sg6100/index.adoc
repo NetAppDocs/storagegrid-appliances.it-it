@@ -27,6 +27,7 @@ Le *procedure di configurazione manutenzione* vengono eseguite utilizzando l'Ins
 
 
 
+[[drive-firmware-upgrade]]
 == Aggiornamento del firmware del disco
 
 Il firmware dei dischi di SGF6112 viene controllato automaticamente ogni volta che si riavvia l'appliance. Se necessario, il firmware viene aggiornato automaticamente alla versione prevista dalla release corrente di StorageGRID. In genere, gli aggiornamenti del firmware si verificano durante gli aggiornamenti del software StorageGRID. Gli eventuali aggiornamenti del firmware del disco necessari per le versioni StorageGRID esistenti verranno inclusi nelle hotfix. Seguire le istruzioni fornite con ogni hotfix per assicurarsi che l'aggiornamento venga applicato a tutti i dischi che potrebbero trarne beneficio.
@@ -36,6 +37,7 @@ NOTE: Per la manutenzione dell'appliance SGF6112 non è necessario Gestione di s
 
 
 
+[[general-maintenance-procedures]]
 == Procedure generali di manutenzione
 
 Vedere link:../commonhardware/index.html["Procedure di manutenzione comuni"] per le procedure identiche per tutte le appliance, ad esempio l'applicazione di una correzione rapida, il ripristino di un nodo o di un sito e la manutenzione della rete.

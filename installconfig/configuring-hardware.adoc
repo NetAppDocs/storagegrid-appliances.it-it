@@ -15,10 +15,12 @@ Dopo aver alimentato l'appliance, configurare le connessioni di rete che verrann
 
 
 
+[[required-hardware-configurations]]
 == Configurazioni hardware richieste
 
 
 
+[[network-connections]]
 === Connessioni di rete
 
 È necessario configurare e verificare le connessioni di rete richieste per tutti gli apparecchi:
@@ -30,6 +32,7 @@ Dopo aver alimentato l'appliance, configurare le connessioni di rete che verrann
 
 
 
+[[bmc-interface]]
 === Interfaccia BMC
 
 È necessario link:../installconfig/configuring-bmc-interface.html["configurare l'interfaccia del controller di gestione della scheda madre (BMC)"] se si sta installando uno dei seguenti apparecchi:
@@ -54,10 +57,12 @@ Per ulteriori informazioni sulle funzionalità utilizzabili con il BMC, consulta
 
 
 
+[[optional-hardware-configurations]]
 == Configurazioni hardware opzionali
 
 
 
+[[santricity-system-manager]]
 === Gestore di sistema di SANtricity
 
 Puoi link:../installconfig/accessing-and-configuring-santricity-system-manager.html["configurare SANtricity System Manager"] se possiedi uno dei seguenti appliance:
@@ -81,12 +86,14 @@ Il software SANtricity System Manager consente di:
 
 
 
+[[enable-node-or-drive-encryption]]
 === Abilita crittografia di nodi o dischi
 
 È possibile link:../installconfig/optional-enabling-node-encryption.html["abilita la crittografia del nodo o dell'unità"] proteggere le unità e i dischi presenti nell'apparecchio.
 
 
 
+[[change-raid-mode]]
 === Modifica modalità RAID
 
 È possibile link:../installconfig/optional-changing-raid-mode.html["modificare la modalità RAID del dispositivo di archiviazione"] per soddisfare le proprie esigenze di archiviazione e ripristino.
@@ -103,6 +110,7 @@ I seguenti dispositivi supportano la modifica della modalità RAID:
 
 
 
+[[remap-network-ports]]
 === Rimappare le porte di rete
 
 È possibile link:../installconfig/optional-remapping-network-ports-for-appliance.html["rimappa le porte di rete sul tuo dispositivo"] ottimizzare le connessioni di rete.

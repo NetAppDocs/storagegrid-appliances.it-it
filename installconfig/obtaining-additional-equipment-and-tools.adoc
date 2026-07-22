@@ -15,6 +15,7 @@ Prima di installare un'appliance StorageGRID, verificare di disporre di tutte le
 
 
 
+[[all-appliances]]
 == Tutti gli appliance
 
 Per installare e configurare tutte le appliance sono necessarie le seguenti apparecchiature.
@@ -53,6 +54,7 @@ Strumenti opzionali::
 
 
 
+[[appliance-specific-equipment-and-tools]]
 == Apparecchiature e strumenti specifici per l'appliance
 
 [role="tabbed-block"]

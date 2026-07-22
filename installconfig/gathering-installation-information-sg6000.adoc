@@ -18,6 +18,7 @@ TIP: Invece di utilizzare le tabelle, utilizzare la guida fornita con ConfigBuil
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-storage-controllers]]
 == Informazioni necessarie per la connessione a Gestore di sistema SANtricity sui controller di storage
 
 Entrambi i controller storage dell'appliance (controller della serie E2800 o EF570) vengono collegati alla rete di gestione che verrà utilizzata per Gestione di sistema SANtricity. I controller si trovano in ogni appliance nel modo seguente:
@@ -122,6 +123,7 @@ Deve essere:
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-admin-network]]
 == Informazioni necessarie per collegare il controller SG6000-CN alla rete di amministrazione
 
 La rete amministrativa per StorageGRID è una rete opzionale utilizzata per l'amministrazione e la manutenzione del sistema. L'appliance si connette alla rete di amministrazione utilizzando le seguenti porte di gestione 1-GbE sul controller SG6000-CN.
@@ -204,6 +206,7 @@ Subnet di rete amministrativa (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-sg6000-cn-controller]]
 == Informazioni necessarie per collegare e configurare le porte 10/25-GbE su un controller SG6000-CN
 
 Le quattro porte 10/25-GbE del controller SG6000-CN si collegano alla rete di rete StorageGRID e alla rete client opzionale.
@@ -261,6 +264,7 @@ Porta dello switch per la porta 4 (Grid Network per la modalità fissa)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-grid-network]]
 == Informazioni necessarie per collegare il controller SG6000-CN alla rete Grid
 
 La rete grid per StorageGRID è una rete richiesta, utilizzata per tutto il traffico StorageGRID interno. L'appliance si collega alla rete Grid utilizzando le porte 10/25-GbE del controller SG6000-CN.
@@ -326,6 +330,7 @@ Subnet Grid Network (CIDR)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-client-network]]
 == Informazioni necessarie per collegare il controller SG6000-CN alla rete client
 
 La rete client per StorageGRID è una rete opzionale, generalmente utilizzata per fornire l'accesso del protocollo client alla griglia. L'appliance si connette alla rete client utilizzando le porte 10/25-GbE del controller SG6000-CN.
@@ -396,6 +401,7 @@ Indirizzo IP statico che si intende utilizzare per il nodo di storage dell'appli
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-bmc-management-network]]
 == Informazioni necessarie per collegare il controller SG6000-CN alla rete di gestione BMC
 
 È possibile accedere all'interfaccia BMC sul controller SG6000-CN utilizzando la seguente porta di gestione 1-GbE. Questa porta supporta la gestione remota dell'hardware del controller su Ethernet utilizzando lo standard IPMI (Intelligent Platform Management Interface).
@@ -437,12 +443,14 @@ Indirizzo IP statico che si intende utilizzare per la porta di gestione BMC
 |===
 
 
+[[port-bond-modes]]
 == Modalità Port bond
 
 Quando link:configuring-network-links.html["configurazione dei collegamenti di rete"] Per il controller SG6000-CN, è possibile utilizzare il port bonding per le porte 10/25-GbE che si collegano alla rete Grid e alla rete client opzionale, nonché per le porte di gestione 1-GbE che si collegano alla rete amministrativa opzionale. Il port bonding consente di proteggere i dati fornendo percorsi ridondanti tra le reti StorageGRID e l'appliance.
 
 
 
+[[network-bond-modes-for-1025-gbe-ports]]
 === Modalità Network Bond per porte 10/25-GbE
 
 Le porte di rete 10/25-GbE sul controller SG6000-CN supportano la modalità di collegamento a porta fissa o la modalità di collegamento a porta aggregata per le connessioni di rete grid e di rete client.
@@ -518,6 +526,7 @@ NOTE: Se si sceglie di utilizzare meno di quattro porte, tenere presente che, do
 
 
 
+[[network-bond-modes-for-1-gbe-management-ports]]
 === Modalità Network Bond per porte di gestione a 1 GbE
 
 Per le due porte di gestione 1-GbE sul controller SG6000-CN, è possibile scegliere la modalità Independent network bond o la modalità Active-Backup network bond per connettersi alla rete Admin opzionale.

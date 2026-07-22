@@ -15,6 +15,7 @@ Seguire queste istruzioni per eseguire la manutenzione del sistema StorageGRID.
 
 
 
+[[about-these-instructions]]
 == A proposito di queste istruzioni
 
 Queste istruzioni descrivono le procedure comuni a tutti i nodi, ad esempio come applicare una correzione rapida del software, ripristinare i nodi della griglia, ripristinare un sito guasto, decommissionare i nodi della griglia o un intero sito, eseguire la manutenzione della rete, eseguire le procedure di manutenzione del middleware e a livello di host ed eseguire le procedure dei nodi della griglia.
@@ -24,6 +25,7 @@ NOTE: In queste istruzioni, "`Linux'" si riferisce a una distribuzione di Red Ha
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 * Hai una vasta conoscenza del sistema StorageGRID.
@@ -34,6 +36,7 @@ NOTE: In queste istruzioni, "`Linux'" si riferisce a una distribuzione di Red Ha
 
 
 
+[[maintenance-procedures-for-appliances]]
 == Procedure di manutenzione per le appliance
 
 Le procedure di manutenzione specifiche per ciascun tipo di appliance StorageGRID sono riportate nelle sezioni relative alla manutenzione dell'appliance:

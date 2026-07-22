@@ -15,6 +15,8 @@ Rimuovere il dispositivo SG110 o SG1100 da un armadietto o da un rack per accede
 
 
 
+[[remove-sg110-or-sg1100-from-cabinet-or-rack]]
+[[remove-from-rack]]
 == Rimuovere SG110 o SG1100 dal cabinet o dal rack
 
 .Prima di iniziare
@@ -50,6 +52,7 @@ Dopo aver sostituito il componente, restituire il componente difettoso a NetApp,
 
 
 
+[[reinstall-sg110-or-sg1100-into-cabinet-or-rack]]
 == Reinstallare SG110 o SG1100 nell'armadietto o nel rack
 
 .Prima di iniziare

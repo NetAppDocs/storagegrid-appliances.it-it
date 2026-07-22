@@ -2,7 +2,7 @@
 permalink: sg110-1100/replace-nic-in-sg110-and-sg1100.html 
 sidebar: sidebar 
 keywords: storagegrid, sg110, sg1100, admin node, admin appliance, replacing, replace, NIC, network interface card 
-summary: 'Potrebbe essere necessario sostituire una scheda di interfaccia di rete \(NIC\) in SG110 o SG1100 se non funziona in modo ottimale o se non funziona correttamente.' 
+summary: 'Potrebbe essere necessario sostituire la scheda di interfaccia di rete (NIC) di SG110 o SG1100 se non funziona correttamente o se presenta un guasto.' 
 ---
 = Sostituire una scheda di rete in un SG110 o SG1100
 :allow-uri-read: 
@@ -21,6 +21,7 @@ Utilizzare queste procedure per:
 
 
 
+[[remove-the-nic]]
 == Rimuovere la scheda NIC
 
 .Prima di iniziare
@@ -115,6 +116,7 @@ image::../media/one-slot-assembly-sgf6112.png[NIC nel gruppo riser a uno slot]
 
 
 
+[[reinstall-the-internal-nic]]
 == Reinstallare la scheda di rete interna
 
 Installare la scheda NIC sostitutiva nella stessa posizione di quella rimossa.

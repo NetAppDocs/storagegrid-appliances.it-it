@@ -18,6 +18,7 @@ TIP: La clonazione del nodo è disabilitata per i nodi gateway.  Per sostituire 
 
 
 
+[[hardware-requirements-for-the-replacement-appliance]]
 == Requisiti hardware per l'appliance sostitutiva
 
 Assicurarsi che l'apparecchio sostitutivo soddisfi i seguenti criteri:
@@ -50,6 +51,7 @@ Contatta il tuo rappresentante commerciale StorageGRID per assistenza nella scel
 
 
 
+[[prepare-to-clone-an-appliance-node]]
 == Preparare la clonazione di un nodo appliance
 
 Prima di clonare un nodo appliance, è necessario disporre delle seguenti informazioni:
@@ -58,6 +60,7 @@ Prima di clonare un nodo appliance, è necessario disporre delle seguenti inform
 +
 Gli indirizzi IP temporanei si trovano normalmente sulla stessa subnet dell'appliance del nodo di origine clonata e non sono necessari al termine della clonazione. Per stabilire una connessione di clonazione, le appliance di origine e di destinazione devono essere collegate al nodo di amministrazione principale di StorageGRID.
 
+* Se abiliti il DHCP su qualsiasi porta del nodo di destinazione che era configurata come statica sul nodo di origine, assicurati che non ci siano lease DHCP permanenti per nessuno degli indirizzi MAC del nodo di origine. Se non lo fai, potrebbe verificarsi un conflitto di indirizzi IP al termine del processo di cloning.
 * Determinare quale rete utilizzare per clonare il traffico di trasferimento dei dati in grado di fornire le migliori prestazioni di trasferimento dei dati senza compromettere le prestazioni della rete StorageGRID o la disponibilità dei dati.
 +
 

@@ -15,6 +15,7 @@ L'appliance di servizi StorageGRID SG100 e l'appliance di servizi SG1000 possono
 
 
 
+[[appliance-features]]
 == Caratteristiche dell'appliance
 
 Entrambi i modelli di appliance di servizi offrono le seguenti funzionalità:
@@ -33,6 +34,7 @@ Entrambi i modelli di appliance di servizi offrono le seguenti funzionalità:
 
 
 
+[[sg100-and-sg1000-diagrams]]
 == Diagrammi SG100 e SG1000
 
 Questa figura mostra la parte anteriore di SG100 e SG1000 con il pannello rimosso. Dalla parte anteriore, i due apparecchi sono identici, ad eccezione del nome del prodotto sul pannello.
@@ -78,6 +80,7 @@ Identificare il LED
 |===
 
 
+[[sg100-connectors]]
 == Connettori SG100
 
 Questa figura mostra i connettori sul retro del SG100.
@@ -153,6 +156,7 @@ Opzioni:
 |===
 
 
+[[sg1000-connectors]]
 == Connettori SG1000
 
 Questa figura mostra i connettori sul retro del SG1000.
@@ -228,6 +232,7 @@ Opzioni:
 |===
 
 
+[[sg100-and-sg1000-applications]]
 == Applicazioni SG100 e SG1000
 
 È possibile configurare le appliance dei servizi StorageGRID in vari modi per fornire servizi gateway e ridondanza di alcuni servizi di amministrazione grid.

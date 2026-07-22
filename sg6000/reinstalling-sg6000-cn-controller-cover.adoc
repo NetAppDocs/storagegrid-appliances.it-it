@@ -15,6 +15,7 @@ Rimuovete il coperchio dell'apparecchio per accedere ai componenti interni e rip
 
 
 
+[[remove-sg6000-cn-controller-cover]]
 == Rimuovere il coperchio del controller SG6000-CN
 
 Rimuovere il coperchio del controller per accedere ai componenti interni per la manutenzione.
@@ -40,6 +41,7 @@ Dopo aver sostituito il componente, restituire il componente difettoso a NetApp,
 
 
 
+[[reinstall-sg6000-cn-controller-cover]]
 == Reinstallare il coperchio del controller SG6000-CN
 
 Al termine della manutenzione dell'hardware interno, reinstallare il coperchio del controller.

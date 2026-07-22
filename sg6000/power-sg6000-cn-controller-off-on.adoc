@@ -15,6 +15,7 @@ summary: È possibile spegnere il controller SG6000-CN e riaccenderlo per esegui
 
 
 
+[[shut-down-sg6000-cn-controller]]
 == Spegnere il controller SG6000-CN
 
 Spegnere il controller SG6000-CN per eseguire la manutenzione dell'hardware.
@@ -83,6 +84,7 @@ image::../media/bmc_power_control_page_controller_off.png[Pagina BMC Power Contr
 
 
 
+[[poweronpower-on-sg6000-cn-controller-and-verify-operation]]
 == [[poweron]]Accendere il controller SG6000-CN e verificarne il funzionamento
 
 Accendere il controller dopo aver completato la manutenzione.

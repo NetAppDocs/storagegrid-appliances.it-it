@@ -2,7 +2,7 @@
 permalink: sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html 
 sidebar: sidebar 
 keywords: storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
-summary: 'Per i controller storage che attualmente utilizzano SANtricity OS 08.42.20.00 (11.42) o versioni successive, è necessario utilizzare Grid Manager per applicare un aggiornamento.' 
+summary: 'Per i controller di storage che attualmente utilizzano SANtricity OS 08.42.20.00 (11.42) o versione successiva, è necessario utilizzare Grid Manager per applicare un aggiornamento.' 
 ---
 = Aggiorna il sistema operativo SANtricity sugli storage controller SG5700 usando Grid Manager
 :allow-uri-read: 

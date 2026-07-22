@@ -34,6 +34,7 @@ StorageGRID Grid Manager monitora lo stato dell'appliance e genera avvisi in cas
 
 
 
+[[step-1-prepare-to-replace-drive]]
 == Fase 1: Preparazione alla sostituzione del disco
 
 Preparare la sostituzione di un disco controllando il guru del ripristino in Gestore di sistema di SANtricity e completando i passaggi necessari. Quindi, individuare il componente guasto.
@@ -63,6 +64,7 @@ NOTE: Se si sostituisce un'unità in uno shelf dotato di pannello, rimuovere il 
 
 
 
+[[step-2-remove-failed-drive]]
 == Fase 2: Rimuovere il disco guasto
 
 Rimuovere un disco guasto per sostituirlo con uno nuovo.
@@ -86,6 +88,7 @@ NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 30 secondi
 
 
 
+[[step-3-install-new-drive]]
 == Fase 3: Installare un nuovo disco
 
 Installare un nuovo disco per sostituire quello guasto.
@@ -108,6 +111,7 @@ NOTE: A seconda della configurazione, il controller potrebbe ricostruire automat
 
 
 
+[[step-4-complete-drive-replacement]]
 == Fase 4: Sostituzione completa del disco
 
 Completare la sostituzione del disco per verificare che il nuovo disco funzioni correttamente.

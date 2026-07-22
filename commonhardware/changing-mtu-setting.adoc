@@ -26,6 +26,7 @@ Se il client o la rete amministrativa non sono stati configurati nel programma d
 
 
 
+[[change-the-mtu-setting-using-the-change-ip-tool]]
 == Modificare l'impostazione MTU utilizzando lo strumento Change IP
 
 .Prima di iniziare
@@ -36,6 +37,7 @@ Accedere allo strumento Modifica IP e aggiornare le impostazioni MTU come descri
 
 
 
+[[change-the-mtu-setting-using-maintenance-mode]]
 == Modificare l'impostazione MTU utilizzando la modalità di manutenzione
 
 Modificare l'impostazione MTU utilizzando la modalità di manutenzione se non si riesce ad accedere a queste impostazioni utilizzando lo strumento Change IP.

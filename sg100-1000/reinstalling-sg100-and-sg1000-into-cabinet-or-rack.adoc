@@ -15,6 +15,7 @@ Rimuovete l'apparecchio SG100 o SG1000 da un armadietto o da un rack per acceder
 
 
 
+[[remove-sg100-or-sg1000-from-cabinet-or-rack]]
 == Rimuovere SG100 o SG1000 dal cabinet o dal rack
 
 Rimuovere il dispositivo SG100 o SG1000 da un armadietto o da un rack per accedere al coperchio superiore o per spostare l'apparecchio in una posizione diversa.
@@ -55,6 +56,7 @@ Dopo aver sostituito il componente, restituire il componente difettoso a NetApp,
 
 
 
+[[reinstall-sg100-or-sg1000-into-cabinet-or-rack]]
 == Reinstallare SG100 o SG1000 nell'armadietto o nel rack
 
 Una volta completata la manutenzione dell'hardware, reinserite l'apparecchio in un armadietto o in un rack.

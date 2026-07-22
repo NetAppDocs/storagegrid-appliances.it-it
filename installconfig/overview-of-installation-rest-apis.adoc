@@ -2,7 +2,7 @@
 permalink: installconfig/overview-of-installation-rest-apis.html 
 sidebar: sidebar 
 keywords: installation REST API, REST API, installation REST APIs, REST APIs, Appliance Installer API, Appliance Installer APIs, Install API, Install APIs, Installer API, Installer APIs, Installation API, Installation APIs, api, apis 
-summary: 'StorageGRID fornisce due API REST per eseguire le attività di installazione: L"API di installazione di StorageGRID e l"API di installazione di appliance StorageGRID.' 
+summary: 'StorageGRID fornisce due API REST per l"esecuzione delle attività di installazione, la StorageGRID Installation API e la StorageGRID Appliance Installer API.' 
 ---
 = StorageGRID API REST per l'installazione di StorageGRID
 :allow-uri-read: 
@@ -22,6 +22,7 @@ Ogni comando REST API include l'URL dell'API, un'azione HTTP, qualsiasi parametr
 
 
 
+[[storagegrid-installation-api]]
 == API di installazione StorageGRID
 
 L'API di installazione di StorageGRID è disponibile solo quando si configura inizialmente il sistema StorageGRID e se è necessario eseguire un ripristino primario del nodo di amministrazione. È possibile accedere all'API di installazione tramite HTTPS da Grid Manager.
@@ -37,10 +38,12 @@ L'API di installazione di StorageGRID include le seguenti sezioni:
 * *Recovery*: Operazioni di recovery primarie del nodo di amministrazione. È possibile ripristinare le informazioni, caricare il pacchetto di ripristino, avviare il ripristino e visualizzare lo stato dell'operazione di ripristino.
 * *Recovery-package*: Operazioni per il download del Recovery Package.
 * *Siti*: Operazioni di configurazione a livello di sito. È possibile creare, visualizzare, eliminare e modificare un sito.
+* *password temporanea*: Operazioni sulla password temporanea per proteggere la mgmt-api durante l'installazione.
 
 
 
 
+[[storagegrid-appliance-installer-api]]
 == API di installazione dell'appliance StorageGRID
 
 È possibile accedere all'API del programma di installazione dell'appliance StorageGRID tramite HTTPS da `_Controller_IP_:8443`.
