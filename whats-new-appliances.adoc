@@ -49,7 +49,7 @@ Ora è possibile abilitare la rete client senza specificare un indirizzo IP.  Ci
 [[version-numbers-for-storagegrid-software-and-appliance-installer-aligned]]
 == Numeri di versione per il software StorageGRID e Appliance Installer allineati
 
-Con la versione 12.0 di StorgeGRID, il numero di versione di StorageGRID Appliance Installer corrisponde alla versione del software StorageGRID .  Gli utenti non devono più capire quali versioni funzionano insieme. Fare riferimento a link:./installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html["Verificare e aggiornare la versione del programma di installazione dell'appliance StorageGRID"] .
+Con la versione 12.0 di StorageGRID, il numero di versione di StorageGRID Appliance Installer corrisponde alla versione del software StorageGRID. Non devi più capire quali versioni funzionano insieme. Fai riferimento a link:./installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html["Verificare e aggiornare la versione del programma di installazione dell'appliance StorageGRID"].
 
 
 

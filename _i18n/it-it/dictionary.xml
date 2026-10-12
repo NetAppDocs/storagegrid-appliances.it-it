@@ -3460,7 +3460,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="ac4aec48ca363c61bde0b90a6357d2e0" category="list-text">Disimballare il nuovo controller e impostarlo su una superficie piana e priva di elettricità statica.</block>
   <block id="71e69069470b78afcfd4256b5538ddde" category="paragraph">Conservare il materiale di imballaggio da utilizzare per la spedizione del controller guasto.</block>
   <block id="e5a03effd8c40e9251d96a430d99a606" category="list-text">Individuare le etichette dell'indirizzo MAC e del numero di parte FRU sul retro del controller sostitutivo.</block>
-  <block id="e8eb7bc58567e1c605a82158f0f62428" category="list-text">Prepararsi a rimuovere il controller. Per eseguire questa procedura, utilizzare Gestione di sistema di SANtricity.</block>
   <block id="270d6e2086af600326a1899c14eefca1" category="list-text">Verificare che il numero di parte sostitutivo del controller guasto sia lo stesso del numero di parte FRU del controller sostitutivo.</block>
   <block id="3a3cd7aeaa367cf5f0aa0b6e9c59f5d6" category="paragraph">Quando un controller presenta un guasto e deve essere sostituito, il codice del ricambio viene visualizzato nell'area Details (Dettagli) del Recovery Guru. Se è necessario trovare questo numero manualmente, consultare la scheda *base* del controller.</block>
   <block id="96f2b7281e6f62383360de5bc3626f95" category="admonition">*Possibile perdita di accesso ai dati e n. 8212;* se i due codici ricambio non sono gli stessi, non tentare questa procedura.</block>
@@ -3734,7 +3733,6 @@ Vedere le informazioni sulla gestione degli oggetti con la gestione del ciclo di
   <block id="b2f9b08b9c77fd0d4c43b02ecac55483" category="paragraph">Installare la centralina sostitutiva e verificare che sia stata ricollegata alla griglia.</block>
   <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Alimentazione sullo shelf del controller.</block>
   <block id="944f002f126d9f60a7abfb7abb8b19a6" category="section-title">Fase 1: Preparare la centralina sostitutiva</block>
-  <block id="7dc8820948fbd0653bf70cd43dd02d4c" category="paragraph">Prepararsi a rimuovere il controller guasto e a portarlo offline.</block>
   <block id="eb10eb07d3a38a1d82d1975eb3a3c409" category="list-text">Se l'appliance sostituita ha abilitato la crittografia dell'unità hardware per le unità SED, è necessario <block ref="f97e47907b7e5dda63e0ea22475313d7" category="inline-link-macro-rx"></block> per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.</block>
   <block id="b01853030b7f0a28704ab7f8c1c35ee8" category="list-text">Se l'appliance sostituita ha abilitato la crittografia del disco per le unità SED, è necessario <block ref="f97e47907b7e5dda63e0ea22475313d7" category="inline-link-macro-rx"></block> per accedere ai dischi crittografati al primo avvio dell'appliance sostitutiva.</block>
   <block id="f98925abc6cb4377ae64ff1ac4820659" category="paragraph">Se il controller guasto include una scheda di interfaccia host (HIC), spostare l'HIC dal controller guasto al controller sostitutivo.</block>
@@ -4792,7 +4790,6 @@ Rilasciare il controller dall'apparecchio premendo il fermo sull'impugnatura del
   <block id="4172e18c4b5f5ded61ea837b6d174a70" category="paragraph">Potrebbe essere necessario sostituire un controller E4000 se non funziona in modo ottimale o se è guasto.</block>
   <block id="58bdf6822075a4522e563db052cfb6b5" category="list-text">Un avviso di Grid Manager indica una condizione di errore dello storage controller e il responsabile del ripristino (o il responsabile del sistema di SANtricity) chiede di sostituire il controller.</block>
   <block id="6699424a5a659b766310c519be0f253d" category="paragraph">Preparare la centralina E4000 sostitutiva.</block>
-  <block id="360f56d807bee32cc6fcc9d9bfb9b6f5" category="paragraph">Prepararsi a rimuovere il controller guasto e a portarlo offline. È possibile utilizzare Gestione di sistema di SANtricity per eseguire questa procedura.</block>
   <block id="fe4869120ffec76b394daa282d99bd5b" category="paragraph">Rimuovere un contenitore del controller.</block>
   <block id="1a2315b8628ae30414325b0eac31bb35" category="paragraph">Rimuovere la batteria dalla centralina danneggiata e installarla nella centralina di sostituzione, se necessario.</block>
   <block id="29f964bec5ac520e4a2bd92eb3884f71" category="list-text">Spostare la batteria sul contenitore della centralina di ricambio e montarla:</block>
@@ -5568,7 +5565,6 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="9cb2effa5447f497640162f9043211b9" category="section-title">La rete client può essere configurata senza un indirizzo IP</block>
   <block id="9b21fb91c113bca08c0dafc981fbde3c" category="paragraph">Ora è possibile abilitare la rete client senza specificare un indirizzo IP.  Ciò consente alla rete client di avere interfacce VLAN configurate in StorageGRID senza richiedere un indirizzo IP aggiuntivo per l'interfaccia stessa. Fare riferimento a <block ref="eed0824756b778339518fbc737f79ca8" category="inline-link-macro-rx"></block> .</block>
   <block id="35fbd63802091eabd711a8d6c290ea7e" category="section-title">Numeri di versione per il software StorageGRID e Appliance Installer allineati</block>
-  <block id="07df4015289344b98ba5f422f4375357" category="paragraph">Con la versione 12.0 di StorgeGRID, il numero di versione di StorageGRID Appliance Installer corrisponde alla versione del software StorageGRID .  Gli utenti non devono più capire quali versioni funzionano insieme. Fare riferimento a <block ref="d2475d6316f915c8f13cbc6042a2740a" category="inline-link-macro-rx"></block> .</block>
   <block id="cc40ed7be5c299ae5a8b275911b0f977" category="paragraph">Sono ora disponibili informazioni dettagliate sull'utilizzo dell'interfaccia BMC dell'appliance StorageGRID . Fare riferimento a <block ref="df528c7928eba5c1226970c2705dfb3a" category="inline-link-macro-rx"></block> .</block>
   <block id="7fb4dbe99c9c5f63516376b6bf611317" category="sidebar">Documentazione StorageGRID 12.0</block>
   <block id="ca92eb1bedb20765e52302f985f5f837" category="sidebar">Aggiorna il firmware dell'unità (metodo di riavvio automatico)</block>
@@ -6599,4 +6595,8 @@ Viene visualizzato Sì, ad indicare che è possibile rimuovere questo componente
   <block id="04d321322c8bed5ea3ecf52d0cc925ff" category="paragraph">Vai su <block ref="96bdbd25d3882b5d0b14b10ec28bb02d" category="inline-link-rx"></block> per scoprire come configurare e usare un sistema StorageGRID 12.1.</block>
   <block id="db37c78d5faa7061d7b5039209b440c1" category="list-text"><block ref="db37c78d5faa7061d7b5039209b440c1" category="inline-link-rx"></block></block>
   <block id="d70a1ab70742f2af598f9acb795fc0f2" category="sidebar">Documentazione di StorageGRID 12.1</block>
+  <block id="773b50832a8313c20ea7f7ec3cb3c5e4" category="paragraph">Preparati a rimuovere il controller guasto e a metterlo offline. Utilizza SANtricity System Manager per eseguire questi passaggi.</block>
+  <block id="5e4e9f34966ee54cc6cc4af50cd4835c" category="paragraph">Potresti dover sostituire un controller E4000 se non funziona in modo ottimale o se si è guastato.</block>
+  <block id="d23e59635824c5cc5d1b8b63a31f939f" category="paragraph">Preparati a rimuovere il controller guasto e a metterlo offline. Puoi utilizzare SANtricity System Manager per eseguire questi passaggi.</block>
+  <block id="46d7056058f07da95a8d94d297493eb9" category="paragraph">Con la versione 12.0 di StorageGRID, il numero di versione di StorageGRID Appliance Installer corrisponde alla versione del software StorageGRID. Non devi più capire quali versioni funzionano insieme. Fai riferimento a <block ref="d2475d6316f915c8f13cbc6042a2740a" category="inline-link-macro-rx"></block>.</block>
 </blocks>

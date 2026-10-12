@@ -118,12 +118,10 @@ La scheda HIC (host Interface Card) a 4 porte. Questa scheda deve essere spostat
 [[step-2-take-the-controller-offline]]
 == Passaggio 2: Portare il controller offline
 
-Prepararsi a rimuovere il controller guasto e a portarlo offline.
+Preparati a rimuovere il controller guasto e a metterlo offline. Utilizza SANtricity System Manager per eseguire questi passaggi.
 
 .Fasi
-. Prepararsi a rimuovere il controller. Per eseguire questa procedura, utilizzare Gestione di sistema di SANtricity.
-+
-.. Verificare che il numero di parte sostitutivo del controller guasto sia lo stesso del numero di parte FRU del controller sostitutivo.
+. Verificare che il numero di parte sostitutivo del controller guasto sia lo stesso del numero di parte FRU del controller sostitutivo.
 +
 Quando un controller presenta un guasto e deve essere sostituito, il codice del ricambio viene visualizzato nell'area Details (Dettagli) del Recovery Guru. Se è necessario trovare questo numero manualmente, consultare la scheda *base* del controller.
 
@@ -131,19 +129,16 @@ Quando un controller presenta un guasto e deve essere sostituito, il codice del 
 
 CAUTION: *Possibile perdita di accesso ai dati e n. 8212;* se i due codici ricambio non sono gli stessi, non tentare questa procedura.
 
-.. Eseguire il backup del database di configurazione.
+. Eseguire il backup del database di configurazione.
 +
 Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione.
 
-.. Raccogliere i dati di supporto per l'appliance.
+. Raccogliere i dati di supporto per l'appliance.
 +
 
 NOTE: La raccolta dei dati di supporto prima e dopo la sostituzione di un componente consente di inviare una serie completa di registri al supporto tecnico se la sostituzione non risolve il problema.
 
-.. Portare offline il controller che si intende sostituire.
-
-
-. Spegnere il ripiano del controller.
+. Portare offline il controller che si intende sostituire.
 
 
 

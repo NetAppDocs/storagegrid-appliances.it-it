@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-Potrebbe essere necessario sostituire un controller E4000 se non funziona in modo ottimale o se è guasto.
+Potresti dover sostituire un controller E4000 se non funziona in modo ottimale o se si è guastato.
 
 .Prima di iniziare
 * Si dispone di un controller sostitutivo con lo stesso numero di parte del controller che si sta sostituendo.
@@ -67,7 +67,7 @@ Conservare il materiale di imballaggio da utilizzare per la spedizione del contr
 [[step-2-take-the-controller-offline]]
 == Passaggio 2: Portare il controller offline
 
-Prepararsi a rimuovere il controller guasto e a portarlo offline. È possibile utilizzare Gestione di sistema di SANtricity per eseguire questa procedura.
+Preparati a rimuovere il controller guasto e a metterlo offline. Puoi utilizzare SANtricity System Manager per eseguire questi passaggi.
 
 .Fasi
 . Verificare che il numero di parte sostitutivo del controller guasto sia lo stesso del numero di parte FRU del controller sostitutivo.
@@ -135,6 +135,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 
 Il controller sostitutivo potrebbe essere fornito con componenti preinstallati. Determinare quali parti devono essere trasferite al contenitore della centralina di ricambio.
 
+.Fasi
 . Posizionare il controller sostitutivo su una superficie piana e priva di elettricità statica con il coperchio rimovibile rivolto verso l'alto.
 . Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
 . Determinare se il controller sostitutivo contiene una batteria e/o DIMM. In caso contrario, reinstallare il coperchio del controller e passare a. <<step8_replace_controller,Fase 8: Sostituire la centralina>>. Altrimenti:

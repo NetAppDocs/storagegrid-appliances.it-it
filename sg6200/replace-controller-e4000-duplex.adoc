@@ -67,7 +67,7 @@ Conservare il materiale di imballaggio da utilizzare per la spedizione del contr
 [[step-2-take-the-controller-offline]]
 == Passaggio 2: Portare il controller offline
 
-Prepararsi a rimuovere il controller guasto e a portarlo offline. È possibile utilizzare Gestione di sistema di SANtricity per eseguire questa procedura.
+Preparati a rimuovere il controller guasto e a metterlo offline. Puoi utilizzare SANtricity System Manager per eseguire questi passaggi.
 
 .Fasi
 . Verificare che il numero di parte sostitutivo del controller guasto sia lo stesso del numero di parte FRU del controller sostitutivo.
